@@ -86,7 +86,7 @@ func void DIA_Ricelord_Arbeit_Info()
 	AI_Output(other,self,"DIA_Ricelord_Arbeit_15_00"); //Máš pro mě nějakou práci?
 //	AI_Output(self,other,"DIA_Ricelord_Arbeit_12_01"); //Go and see Lefty. He's usually to the right of the shed.
 //	AI_Output(self,other,"DIA_Ricelord_Arbeit_12_01"); //Geh zu Lefty. Er ist meistens hier vorne rechts neben der Scheune.
-	AI_Output(self,other,"DIA_Ricelord_Arbeit_12_01"); //Běž za Leem. Obvykle bývá napravo od haly.
+	AI_Output(self,other,"DIA_Ricelord_Arbeit_12_01"); //Běž za Leftym. Obvykle bývá napravo od stodoly.
 };
 
 // ************************************************************
@@ -198,7 +198,8 @@ func void DIA_Ricelord_GetWater_Info()
 		AI_Output(self,other,"DIA_Ricelord_GetWater_12_01"); //Dobře. Tady je tucet láhví vody.
 //		AI_Output(self,other,"DIA_Ricelord_GetWater_12_02"); //There's about twice that amount of peasants, so make sure you share it out evenly.
 //		AI_Output(self,other,"DIA_Ricelord_GetWater_12_02"); //Es gibt etwa doppelt so viele Bauern, also verteil sie gleichmäßig.
-		AI_Output(self,other,"DIA_Ricelord_GetWater_12_02"); //Je toho asi dvakrát víc než potřebují, tak dávej pozor, aby se rozdělila rovnoměrně.
+//		AI_Output(self,other,"DIA_Ricelord_GetWater_12_02"); //Je toho asi dvakrát víc než potřebují, tak dávej pozor, aby se rozdělila rovnoměrně.
+		AI_Output(self,other,"DIA_Ricelord_GetWater_12_02"); //Je tu asi dvakrát víc rolníků, tak dávej pozor, abys ji rozdělil rovnoměrně.
 
 		CreateInvItems(self,ItFo_Potion_Water_01, 12);
 		B_GiveInvItems(self,other,ItFo_Potion_Water_01, 12);
@@ -206,7 +207,7 @@ func void DIA_Ricelord_GetWater_Info()
 		Ricelord_AskedForWater = FALSE;
 //		B_LogEntry(CH1_CarryWater,"The Rice Lord gave me a dozen water bottles.");
 //		B_LogEntry(CH1_CarryWater,"Der Reislord gab mir ein Dutzend Wasserflaschen.");
-		B_LogEntry(CH1_CarryWater,"Rýžový lord mi dal tucet nádob na vodu.");
+		B_LogEntry(CH1_CarryWater,"Rýžový lord mi dal tucet lahví s vodou.");
 
 		AI_StopProcessInfos(self);
 	}

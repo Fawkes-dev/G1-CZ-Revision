@@ -73,7 +73,7 @@ func void Info_GornFM_WAIT_Info()
 	AI_Output(hero,self,"Info_GornFM_WAIT_15_01"); //Hlídej tuhle pozici, já obhlédnu situaci!
 //	AI_Output(self,hero,"Info_GornFM_WAIT_09_02"); //Alright. I'll wait at the entrance to the mine and make sure nobody tries anything.
 //	AI_Output(self,hero,"Info_GornFM_WAIT_09_02"); //Ist gut. Ich warte am Mineneingang und sorge dafür, dass dir niemand in den Rücken fällt!
-	AI_Output(self,hero,"Info_GornFM_WAIT_09_02"); //Dobře. Počkám u vchodu do dolu a ty dohlídni, aby se nikdo o nic nepokusil.
+	AI_Output(self,hero,"Info_GornFM_WAIT_09_02"); //Dobře. Počkám u vchodu do dolu a dohlédnu no to, aby nám nikdo nevpadl do zad!
 
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	Npc_ExchangeRoutine(self,"wait");

@@ -800,7 +800,7 @@ func void Info_Gorn_RUINWALL_Info()
 	AI_Output(self,other,"Info_Gorn_RUINWALL_09_01"); //Ta proklatá brána. Říká se, že ji nikdo z kolonie nedokáže otevřít.
 //	AI_Output(self,other,"Info_Gorn_RUINWALL_09_02"); //The little beasts over there seem to be the only ones who have managed to get into the inner yard.
 //	AI_Output(self,other,"Info_Gorn_RUINWALL_09_02"); //Die kleinen Biester da drüben scheinen die Einzigen zu sein, die es geschafft haben, in den Innenhof zu gelangen.
-	AI_Output(self,other,"Info_Gorn_RUINWALL_09_02"); //Ty malé bestie jsou zřejmě jediné, co se dokáže dostat do vnitřního prostoru.
+	AI_Output(self,other,"Info_Gorn_RUINWALL_09_02"); //Ty malé bestie jsou zřejmě jediné, které se dokáží dostat na nádvoří.
 
 //	B_LogEntry(CH3_MonasteryRuin,"We're right in front of a closed gate. Looks like it can't be opened from the outside.");
 //	B_LogEntry(CH3_MonasteryRuin,"Wir stehen vor einem verschlossenen Tor. Man scheint es von außen nicht öffnen zu können.");
@@ -822,7 +822,7 @@ instance Info_Gorn_RUINWALLWHAT(C_INFO)
 	permanent = 1;
 //	description = "What happens now?";
 //	description = "Wie geht es nun weiter?";
-	description = "Jak to dopadlo?";
+	description = "Co se bude dít?";
 };                       
 
 func int Info_Gorn_RUINWALLWHAT_Condition()
@@ -838,7 +838,7 @@ func void Info_Gorn_RUINWALLWHAT_Info()
 {
 //	AI_Output(other,self,"Info_Gorn_RUINWALLWHAT_15_01"); //What happens now?
 //	AI_Output(other,self,"Info_Gorn_RUINWALLWHAT_15_01"); //Wie geht es nun weiter?
-	AI_Output(other,self,"Info_Gorn_RUINWALLWHAT_15_01"); //Co se děje?
+	AI_Output(other,self,"Info_Gorn_RUINWALLWHAT_15_01"); //Co se bude dít?
 //	AI_Output(self,other,"Info_Gorn_RUINWALLWHAT_09_02"); //You have to find a way to get to the other side of the gate.
 //	AI_Output(self,other,"Info_Gorn_RUINWALLWHAT_09_02"); //Du musst einen Weg finden, auf die andere Seite des Tors zu gelangen.
 	AI_Output(self,other,"Info_Gorn_RUINWALLWHAT_09_02"); //Musíš najít cestu na druhou stranu brány.
@@ -1034,7 +1034,7 @@ func void Info_Gorn_RUINSUCCESS_Info()
 	AI_Output(other,self,"Info_Gorn_RUINSUCCESS_15_02"); //Ano. Musím ohnisko předat mágům Vody. Potřebují ho.
 //	AI_Output(self,other,"Info_Gorn_RUINSUCCESS_09_03"); //I'll accompany you for a while.
 //	AI_Output(self,other,"Info_Gorn_RUINSUCCESS_09_03"); //Ich werde dich noch etwas begleiten.
-	AI_Output(self,other,"Info_Gorn_RUINSUCCESS_09_03"); //Budu tě chvíli doprovázet.
+	AI_Output(self,other,"Info_Gorn_RUINSUCCESS_09_03"); //Budu tě ještě chvíli doprovázet.
 
 //	B_LogEntry(CH3_MonasteryRuin,"I found the focus in a kind of study room. Gorn will accompany me some more.");
 //	B_LogEntry(CH3_MonasteryRuin,"Ich habe den Fokus in einer Art Studienraum gefunden. Gorn will mich noch etwas begleiten.");
@@ -1073,7 +1073,7 @@ func void Info_Gorn_RUINTROLL_Info()
 
 //	AI_Output(self,other,"Info_Gorn_RUINTROLL_09_01"); //OH HELL!!! What monster's that over there?
 //	AI_Output(self,other,"Info_Gorn_RUINTROLL_09_01"); //ACH DU SCHEISSE!!! Was ist das für ein Riesenvieh dort drüben?
-	AI_Output(self,other,"Info_Gorn_RUINTROLL_09_01"); //K ČERTU!!! Co je to tady za příšeru?
+	AI_Output(self,other,"Info_Gorn_RUINTROLL_09_01"); //K ČERTU!!! Co je to tam za obrovskou příšeru?
 //	AI_Output(other,self,"Info_Gorn_RUINTROLL_15_02"); //Where did THAT come from?
 //	AI_Output(other,self,"Info_Gorn_RUINTROLL_15_02"); //Wo kommt DAS denn her???
 	AI_Output(other,self,"Info_Gorn_RUINTROLL_15_02"); //Kde se TO tu vzalo?
@@ -1082,7 +1082,7 @@ func void Info_Gorn_RUINTROLL_Info()
 	AI_Output(self,other,"Info_Gorn_RUINTROLL_09_03"); //Vypadá to jako jeden z těch nepřemožitelných trolů. Jen trochu menší!
 //	AI_Output(self,other,"Info_Gorn_RUINTROLL_09_04"); //Whatever, if we want to get out of here, we have to get past that beast.
 //	AI_Output(self,other,"Info_Gorn_RUINTROLL_09_04"); //Wie auch immer, wenn wir hier raus wollen, müssen wie an diesem Biest vorbei.
-	AI_Output(self,other,"Info_Gorn_RUINTROLL_09_04"); //Jestli se ale chceme odtud dostat, musíme každopádně přes tu příšeru přejít.
+	AI_Output(self,other,"Info_Gorn_RUINTROLL_09_04"); //Jestli se odtud ale chceme dostat, musíme každopádně přes tu příšeru přejít.
 
 	AI_StopProcessInfos(self);
 
@@ -1124,10 +1124,10 @@ func void Info_Gorn_RUINVICTORY_Info()
 	AI_Output(self,other,"Info_Gorn_RUINVICTORY_09_01"); //To byla dřina.
 //	AI_Output(other,self,"Info_Gorn_RUINVICTORY_15_02"); //Yeah, we defeated that monster. But if that was just a young troll...
 //	AI_Output(other,self,"Info_Gorn_RUINVICTORY_15_02"); //Ja, wir haben das Monster bezwungen. Doch wenn das nur ein junger Troll war ...
-	AI_Output(other,self,"Info_Gorn_RUINVICTORY_15_02"); //Dobře, porazili jsme tu příšeru. Jestli to ale byl jenom mladý trol...
+	AI_Output(other,self,"Info_Gorn_RUINVICTORY_15_02"); //Jo, porazili jsme tu příšeru. Jestli to ale byl jenom mladý trol...
 //	AI_Output(self,other,"Info_Gorn_RUINVICTORY_09_03"); //... then you'd rather not bump into its parents, huh?
 //	AI_Output(self,other,"Info_Gorn_RUINVICTORY_09_03"); //... dann willst du wohl einem ausgewachsenen Exemplar lieber nicht zwischen die Finger geraten.
-	AI_Output(self,other,"Info_Gorn_RUINVICTORY_09_03"); //...pak bysme se raději neměli potkat s jeho rodiči, co?
+	AI_Output(self,other,"Info_Gorn_RUINVICTORY_09_03"); //...pak bychom se raději neměli potkat s jeho rodiči, co?
 //	AI_Output(other,self,"Info_Gorn_RUINVICTORY_15_04"); //Something like that.
 //	AI_Output(other,self,"Info_Gorn_RUINVICTORY_15_04"); //So in etwa.
 	AI_Output(other,self,"Info_Gorn_RUINVICTORY_15_04"); //Tak nějak.
@@ -1140,7 +1140,7 @@ func void Info_Gorn_RUINVICTORY_Info()
 
 //	B_LogEntry(CH3_MonasteryRuin,"On the way back into the monastery courtyard, we met a young troll. It was a hard fight, but we've won it.");
 //	B_LogEntry(CH3_MonasteryRuin,"Wir sind auf dem Rückweg in den Hof der Klosterruine auf einen jungen Troll gestoßen. Es war ein harter Kampf aber wir haben ihn gewonnen.");
-	B_LogEntry(CH3_MonasteryRuin,"Na zpáteční cestě na klášternímu nádvoří jsme potkali mladého trola. Došlo k tvrdému boji, ve kterém jsme však zvítězili.");
+	B_LogEntry(CH3_MonasteryRuin,"Na zpáteční cestě na klášternímu nádvoří jsme narazili mladého trola. Byl to tvrdý boj, ale zvítězili jsme.");
 //	B_LogEntry(CH3_MonasteryRuin,"My way with Gorn has ended now. I have a feeling that I'll be meeting him again soon.");
 //	B_LogEntry(CH3_MonasteryRuin,"Die Wege von Gorn und mir trennen sich nun. Mein Gefühl sagt mir, dass ich ihn bald wiedersehen werde.");
 	B_LogEntry(CH3_MonasteryRuin,"Má pouť s Gornem nyní skončila. Mám pocit, že jej zase brzy potkám.");
@@ -1170,7 +1170,7 @@ instance Info_Gorn_DIEGOMILTEN(C_INFO)
 	permanent = 0;
 //	description = "I met Diego and Milten in front of the Old Camp!";
 //	description = "Ich habe Diego und Milten vor dem Alten Lager getroffen!";
-	description = "Potkal jsem přes Starým táborem Diega a Miltena!";
+	description = "Potkal jsem před Starým táborem Diega a Miltena!";
 };                       
 
 func int Info_Gorn_DIEGOMILTEN_Condition()
@@ -1185,19 +1185,19 @@ func void Info_Gorn_DIEGOMILTEN_Info()
 {
 //	AI_Output(hero,self,"Info_Gorn_DIEGOMILTEN_15_01"); //I met Diego and Milten in front of the Old Camp!
 //	AI_Output(hero,self,"Info_Gorn_DIEGOMILTEN_15_01"); //Ich habe Diego und Milten vor dem Alten Lager getroffen!
-	AI_Output(hero,self,"Info_Gorn_DIEGOMILTEN_15_01"); //Potkal jsem přes Starým táborem Diega a Miltena!
+	AI_Output(hero,self,"Info_Gorn_DIEGOMILTEN_15_01"); //Potkal jsem před Starým táborem Diega a Miltena!
 //	AI_Output(self,hero,"Info_Gorn_DIEGOMILTEN_09_02"); //That's good news!
 //	AI_Output(self,hero,"Info_Gorn_DIEGOMILTEN_09_02"); //Eine gute Nachricht!
 	AI_Output(self,hero,"Info_Gorn_DIEGOMILTEN_09_02"); //To jsou dobré zprávy!
 //	AI_Output(hero,self,"Info_Gorn_DIEGOMILTEN_15_03"); //They want to meet you and Lester. At your usual rendezvous.
 //	AI_Output(hero,self,"Info_Gorn_DIEGOMILTEN_15_03"); //Sie wollen sich mit dir und Lester treffen. An eurem üblichen Treffpunkt.
-	AI_Output(hero,self,"Info_Gorn_DIEGOMILTEN_15_03"); //Chtějí navštívit tebe a Lestera. Na vašem obvyklém místě.
+	AI_Output(hero,self,"Info_Gorn_DIEGOMILTEN_15_03"); //Chtějí se s tebou a s Lesterem setkat. Na vašem obvyklém místě.
 //	AI_Output(self,hero,"Info_Gorn_DIEGOMILTEN_09_04"); //Thanks. There's nothing more valuable than good friends in troubled times like these.
 //	AI_Output(self,hero,"Info_Gorn_DIEGOMILTEN_09_04"); //Danke. In diesen turbulenten Zeiten sind gute Freunde unersetzlich.
 	AI_Output(self,hero,"Info_Gorn_DIEGOMILTEN_09_04"); //Díky. Ve špatných časech, jako jsou teď, není nic cennějšího než dobří přátelé.
 //	AI_Output(self,hero,"Info_Gorn_DIEGOMILTEN_09_05"); //You're almost one of us by now. You're reliable!
 //	AI_Output(self,hero,"Info_Gorn_DIEGOMILTEN_09_05"); //Auch du gehörst mittlerweile schon fast zu uns. Auf dich ist Verlass!
-	AI_Output(self,hero,"Info_Gorn_DIEGOMILTEN_09_05"); //Teď už jsi téměř jedním z nás. Jsi spolehlivý!
+	AI_Output(self,hero,"Info_Gorn_DIEGOMILTEN_09_05"); //Teď už jsi téměř jedním z nás. Je na tebe spoleh!
 
 	B_GiveXP(XP_MessageForGorn);
 
@@ -1255,10 +1255,10 @@ func void Info_Gorn_FREEMINE_Info()
 	AI_Output(self,hero,"Info_Gorn_FREEMINE_09_04"); //Zahlédl jsem akorát několik strážců, kteří se opevnili u vchodu do dolu.
 //	AI_Output(hero,self,"Info_Gorn_FREEMINE_15_05"); //How could so many mercenaries be defeated by only two dozen guards?
 //	AI_Output(hero,self,"Info_Gorn_FREEMINE_15_05"); //Wie konnten so viele Söldner zwei Dutzend Gardisten unterliegen?
-	AI_Output(hero,self,"Info_Gorn_FREEMINE_15_05"); //Jak mohly pouhé dva tucty stráží porazit tolik žoldáků?
+	AI_Output(hero,self,"Info_Gorn_FREEMINE_15_05"); //Jak mohly jen dva tucty stráží porazit tolik žoldáků?
 //	AI_Output(self,hero,"Info_Gorn_FREEMINE_09_06"); //It looked like an ambush to me. Nobody would have expected attackers to cross the mountains.
 //	AI_Output(self,hero,"Info_Gorn_FREEMINE_09_06"); //Sah mir sehr nach einem Angriff aus dem Hinterhalt aus! Niemand hätte erwartet, dass Angreifer über die Berge kommen würden.
-	AI_Output(self,hero,"Info_Gorn_FREEMINE_09_06"); //Připadalo mi to jako léčka. Nikdo nepředpokládal, že by útočníci překročili hory.
+	AI_Output(self,hero,"Info_Gorn_FREEMINE_09_06"); //Připadalo mi to jako léčka. Nikdo nečekal, že by útočníci přišli přes hory.
 //	AI_Output(self,hero,"Info_Gorn_FREEMINE_09_07"); //The element of surprise can multiply the force of a troop.
 //	AI_Output(self,hero,"Info_Gorn_FREEMINE_09_07"); //Das Überraschungsmoment kann die Stärke einer Truppe vervielfachen.
 	AI_Output(self,hero,"Info_Gorn_FREEMINE_09_07"); //Prvek překvapení může mnohonásobně zvýšit sílu bojovníka.
@@ -1394,7 +1394,7 @@ instance Info_Gorn_TAKEBACK(C_INFO)
 	permanent = 0;
 //	description = "You're planning to retake it with just four men?";
 //	description = "Eine Rückeroberung mit vier Mann? Wo sind all die anderen Söldner?";
-	description = "Plánuješ jeho převzetí jenom se čtyřmi muži? Kde jsou všichni žoldáci?";
+	description = "Plánuješ jeho převzetí jenom se čtyřmi muži? Kde jsou ostatní žoldáci?";
 };                       
 
 func int Info_Gorn_TAKEBACK_Condition()
@@ -1409,13 +1409,13 @@ func void Info_Gorn_TAKEBACK_Info()
 {
 //	AI_Output(hero,self,"Info_Gorn_TAKEBACK_15_01"); //You're planning to retake it with just four men? Where are all the mercenaries?
 //	AI_Output(hero,self,"Info_Gorn_TAKEBACK_15_01"); //Eine Rückeroberung mit vier Mann? Wo sind all die anderen Söldner?
-	AI_Output(hero,self,"Info_Gorn_TAKEBACK_15_01"); //Plánuješ jeho převzetí jenom se čtyřmi muži? Kde jsou všichni žoldáci?
+	AI_Output(hero,self,"Info_Gorn_TAKEBACK_15_01"); //Plánuješ jeho převzetí jenom se čtyřmi muži? Kde jsou ostatní žoldáci?
 //	AI_Output(self,hero,"Info_Gorn_TAKEBACK_09_02"); //A frontal attack is no good! Gomez' people are too well entrenched for that!
 //	AI_Output(self,hero,"Info_Gorn_TAKEBACK_09_02"); //Ein frontaler Angriff bringt nichts! Dafür sind Gomez' Leute zu gut verschanzt!
 	AI_Output(self,hero,"Info_Gorn_TAKEBACK_09_02"); //Čelní útok není dobrý! Gomezovi lidé jsou na to příliš dobře opevnění!
 //	AI_Output(self,hero,"Info_Gorn_TAKEBACK_09_03"); //But we could run a stealth mission, eliminating one man after another - that could work.
 //	AI_Output(self,hero,"Info_Gorn_TAKEBACK_09_03"); //Aber eine verdeckte Operation, bei der wir Mann für Mann ausschalten, könnte gelingen!
-	AI_Output(self,hero,"Info_Gorn_TAKEBACK_09_03"); //Mohli bysme ale zahájit tajnou misi a likvidovat jednoho muže po druhém - to by fungovalo.
+	AI_Output(self,hero,"Info_Gorn_TAKEBACK_09_03"); //Mohli bysme ale zahájit tajnou misi a likvidovat jednoho muže po druhém - to by mohlo fungovat.
 //	AI_Output(self,hero,"Info_Gorn_TAKEBACK_09_04"); //Lee asked me to give you a message.
 //	AI_Output(self,hero,"Info_Gorn_TAKEBACK_09_04"); //Lee bat mich, dir etwas auszurichten.
 	AI_Output(self,hero,"Info_Gorn_TAKEBACK_09_04"); //Lee mě požádal, abych ti předal zprávu.
@@ -1426,7 +1426,7 @@ func void Info_Gorn_TAKEBACK_Info()
 	{
 //		AI_Output(self,hero,"Info_Gorn_TAKEBACK_09_05"); //As one of our best mercenaries, you have been chosen to carry out this mission.
 //		AI_Output(self,hero,"Info_Gorn_TAKEBACK_09_05"); //Als einer unserer besten Söldner wurdest du bestimmt, die Operation durchzuführen!
-		AI_Output(self,hero,"Info_Gorn_TAKEBACK_09_05"); //Jako jeden ze čtyř nejlepších žoldáků jsi byl vybrán, abys vykonal tuhle misi.
+		AI_Output(self,hero,"Info_Gorn_TAKEBACK_09_05"); //Jako jeden z našich nejlepších žoldáků jsi byl vybrán, abys vykonal tuhle misi.
 	}
 	else if (guild == GIL_KDW)
 	{
@@ -1484,10 +1484,10 @@ func void Info_Gorn_SECOND_Info()
 	AI_Output(hero,self,"Info_Gorn_SECOND_15_01"); //První fáze? Co bude druhá?
 //	AI_Output(self,hero,"Info_Gorn_SECOND_09_02"); //As soon as the mine is ours again, we'll start looking for the mountain pass that Gomez' people used in the raid!
 //	AI_Output(self,hero,"Info_Gorn_SECOND_09_02"); //Sobald die Mine wieder in unserem Besitz ist, werden wir den Pass über die Berge suchen, den Gomez' Leute für den Überfall benutzt haben!
-	AI_Output(self,hero,"Info_Gorn_SECOND_09_02"); //Jakmile bude důl zase náš, začneme hledat horský průsmyk, přes který přešli Gomezovi lidé, aby nás napadli!
+	AI_Output(self,hero,"Info_Gorn_SECOND_09_02"); //Jakmile bude důl zase náš, začneme hledat horský průsmyk, který použili Gomezovi lidé, aby se sem dostali!
 //	AI_Output(self,hero,"Info_Gorn_SECOND_09_03"); //When the pass is closed, the situation will be under control again.
 //	AI_Output(self,hero,"Info_Gorn_SECOND_09_03"); //Wenn der Pass dicht gemacht wurde, haben wir die Situation wieder im Griff.
-	AI_Output(self,hero,"Info_Gorn_SECOND_09_03"); //Když bude ten průsmyk uzavřený, situace bude zase pod naší kontrolou.
+	AI_Output(self,hero,"Info_Gorn_SECOND_09_03"); //Když bude ten průsmyk uzavřený, situace bude zase pod kontrolou.
 //	AI_Output(hero,self,"Info_Gorn_SECOND_15_04"); //I see.
 //	AI_Output(hero,self,"Info_Gorn_SECOND_15_04"); //Verstehe.
 	AI_Output(hero,self,"Info_Gorn_SECOND_15_04"); //Aha.
@@ -1526,7 +1526,7 @@ func void Info_Gorn_WHYME_Info()
 	AI_Output(self,hero,"Info_Gorn_WHYME_09_02"); //Už jsi vícekrát dokázal, že jsi současně odvážný i chytrý!
 //	AI_Output(self,hero,"Info_Gorn_WHYME_09_03"); //Besides, you know the Old Camp and the guards better than most of us.
 //	AI_Output(self,hero,"Info_Gorn_WHYME_09_03"); //Außerdem kennst du das Alte Lager und die Gardisten besser als die meisten von uns.
-	AI_Output(self,hero,"Info_Gorn_WHYME_09_03"); //A kromě toho znáš Starý tábor a jeho stráže líp než kdokoliv z nás.
+	AI_Output(self,hero,"Info_Gorn_WHYME_09_03"); //A kromě toho znáš Starý tábor a jeho stráže lépe než kdokoliv z nás.
 //	AI_Output(self,hero,"Info_Gorn_WHYME_09_04"); //You are the best man for this difficult job!
 //	AI_Output(self,hero,"Info_Gorn_WHYME_09_04"); //Du bist der beste Mann für diesen schwierigen Job!
 	AI_Output(self,hero,"Info_Gorn_WHYME_09_04"); //Pro tenhle úkol jsi nejlepší muž!
@@ -1643,12 +1643,19 @@ func void Info_Gorn_WOLF_Info()
 	AI_Output(self,hero,"Info_Gorn_WOLF_09_02"); //Bandita Wolf chce s tebou nutně mluvit, ještě než odejdeš do dolu.
 
 	Info_ClearChoices(Info_Gorn_WOLF);
-	Info_AddChoice(Info_Gorn_WOLF,"He can wait, we have more important things to do.", Info_Gorn_WOLF_FM); 
-	Info_AddChoice(Info_Gorn_WOLF,"Then I'd better go there now.", Info_Gorn_WOLF_WOLF); 
-
+	
+//	Info_AddChoice(Info_Gorn_WOLF, "He can wait, we have more important things to do.", Info_Gorn_WOLF_FM);
+//	Info_AddChoice(Info_Gorn_WOLF, "Er kann warten, wir haben jetzt wichtigeres zu tun!", Info_Gorn_WOLF_FM);
+	Info_AddChoice(Info_Gorn_WOLF, "Může počkat, máme na práci důležitější věci.",Info_Gorn_WOLF_FM);
+	
+//	Info_AddChoice(Info_Gorn_WOLF, "Then I'd better go there now.", Info_Gorn_WOLF_WOLF);
+//	Info_AddChoice(Info_Gorn_WOLF, "Dann werde ihn besser noch vorher aufsuchen!", Info_Gorn_WOLF_WOLF);
+	Info_AddChoice(Info_Gorn_WOLF, "Pak tam raději půjdu hned.",Info_Gorn_WOLF_WOLF);
+	
+		
 //	B_LogEntry(CH4_UluMulu,"Wolf, the rogue, wants to speak to me again before we make our way to the mine. I'm to look in on him.");
 //	B_LogEntry(CH4_UluMulu,"Wolf der Bandit will mich unbedingt nochmal sprechen, bevor wir zur Mine aufbrechen. Ich sollte bei ihm vorbeischauen.");
-	B_LogEntry(CH4_UluMulu,"Bandita Wolf chce se mnou mluvit ještě předtím, než se vydáme na cestu do dolu. Půjdu ho navštívit.");
+	B_LogEntry(CH4_UluMulu,"Bandita Wolf se mnou chce mluvit ještě předtím, než se vydáme na cestu do dolu. Půjdu ho navštívit.");
 	Gorn_GotoWolf = TRUE;
 };
 
@@ -1670,7 +1677,7 @@ func void Info_Gorn_WOLF_WOLF()
 	AI_Output(hero,self,"Info_Gorn_WOLF_15_06"); //Pak tam raději půjdu hned.
 //	AI_Output(self,hero,"Info_Gorn_WOLF_09_07"); //You do that. I'll wait for you right here.
 //	AI_Output(self,hero,"Info_Gorn_WOLF_09_07"); //Tu das. Ich warte hier am Wachposten auf dich!
-	AI_Output(self,hero,"Info_Gorn_WOLF_09_07"); //Udělej to. Počkám tady na tebe.
+	AI_Output(self,hero,"Info_Gorn_WOLF_09_07"); //Udělej to. Počkám na tebe tady u strážnice.
 
 	Gorn_JoinedForFM = FALSE;
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
@@ -1714,7 +1721,7 @@ func void Info_Gorn_LEAVEFORPOST_Info()
 	{
 //		AI_Output(self,hero,"Info_Gorn_LEAVEFORPOST_09_02"); //This is the wrong direction! We have to go to the mine!
 //		AI_Output(self,hero,"Info_Gorn_LEAVEFORPOST_09_02"); //Du läufst in die falsche Richtung! Wir müssen zur Mine!
-		AI_Output(self,hero,"Info_Gorn_LEAVEFORPOST_09_02"); //To je špatný směr! Musíme jít k dolu!
+		AI_Output(self,hero,"Info_Gorn_LEAVEFORPOST_09_02"); //Běžíš špatným směrem! Musíme jít k dolu!
 	};
 //	AI_Output(self,hero,"Info_Gorn_LEAVEFORPOST_09_03"); //I'll wait for you at the provisional guardpost!
 //	AI_Output(self,hero,"Info_Gorn_LEAVEFORPOST_09_03"); //Ich warte am provisorischen Wachposten auf dich!
@@ -1796,13 +1803,13 @@ func void Info_Gorn_RAZOR_Info()
 
 //	AI_Output(self,hero,"Info_Gorn_RAZOR_09_01"); //WATCH OUT, RAZORS!!!
 //	AI_Output(self,hero,"Info_Gorn_RAZOR_09_01"); //VORSICHT, RAZORS!!!
-	AI_Output(self,hero,"Info_Gorn_RAZOR_09_01"); //POZOR, NEBEZPEČÍ!!!
+	AI_Output(self,hero,"Info_Gorn_RAZOR_09_01"); //POZOR, BŘITVY!!!
 //	AI_Output(self,hero,"Info_Gorn_RAZOR_09_02"); //They hunt in packs like snappers, but they bite much harder!
 //	AI_Output(self,hero,"Info_Gorn_RAZOR_09_02"); //Die arbeiten genauso in Rudeln wie die Snapper, nur dass sie viel heftiger zubeißen!
-	AI_Output(self,hero,"Info_Gorn_RAZOR_09_02"); //Loví ve smečkách jako kousavci, ale koušou daleko hůř!
+	AI_Output(self,hero,"Info_Gorn_RAZOR_09_02"); //Loví ve smečkách jako chňapavce, ale koušou daleko hůř!
 //	AI_Output(self,hero,"Info_Gorn_RAZOR_09_03"); //We should do away with them. You know me, I like to know what's at my back.
 //	AI_Output(self,hero,"Info_Gorn_RAZOR_09_03"); //Wir sollten sie aus dem Weg räumen! Du weißt ja, ich habe gerne einen freien Rücken!
-	AI_Output(self,hero,"Info_Gorn_RAZOR_09_03"); //Měli bysme je sprovodit ze světa. Znáš mě, mám rád, když vím, co mám za zády.
+	AI_Output(self,hero,"Info_Gorn_RAZOR_09_03"); //Měli bychom je sprovodit ze světa. Znáš mě, mám rád, když vím, co mám za zády.
 
 	AI_StopProcessInfos(self);
 };
@@ -1837,10 +1844,10 @@ func void Info_Gorn_FMCENTRANCE_Info()
 	AI_Output(self,hero,"Info_Gorn_FMCENTRANCE_09_01"); //Zadrž, vidíš všechny ty mrtvoly?
 //	AI_Output(self,hero,"Info_Gorn_FMCENTRANCE_09_02"); //You go down to the entrance to the mine, I'll stay here and make sure that we don't get a nasty surprise thrown at us from behind.
 //	AI_Output(self,hero,"Info_Gorn_FMCENTRANCE_09_02"); //Geh du runter zum Mineneingang, ich bleib' erst mal hier oben und stelle sicher, dass es keine Überraschung von hinten gibt.
-	AI_Output(self,hero,"Info_Gorn_FMCENTRANCE_09_02"); //Jdi ke vchodu do dolu, já zůstanu tady a ohlídám, abysme nebyli zezadu nemile zaskočeni.
+	AI_Output(self,hero,"Info_Gorn_FMCENTRANCE_09_02"); //Jdi ke vchodu do dolu, já zůstanu tady a ohlídám, abychom nebyli zezadu nemile zaskočeni.
 //	AI_Output(self,hero,"Info_Gorn_FMCENTRANCE_09_03"); //When you're down there, I'll follow.
 //	AI_Output(self,hero,"Info_Gorn_FMCENTRANCE_09_03"); //Wenn du unten bist, komme ich nach.
-	AI_Output(self,hero,"Info_Gorn_FMCENTRANCE_09_03"); //Až budeš dole, půjdu za tebou.
+	AI_Output(self,hero,"Info_Gorn_FMCENTRANCE_09_03"); //Až budeš dole, příjdu za tebou.
 
 	Npc_ExchangeRoutine(self,"WaitFMC");
 	AI_StopProcessInfos(self);
@@ -1921,7 +1928,7 @@ func void Info_Gorn_AFTERFM_Info()
 	AI_Output(hero,self,"Info_Gorn_AFTERFM_15_03"); //Hlavní je, že jsme je vyhnali z našeho dolu.
 //	AI_Output(self,hero,"Info_Gorn_AFTERFM_09_04"); //I'll stay here and make sure it stays that way!
 //	AI_Output(self,hero,"Info_Gorn_AFTERFM_09_04"); //Ich werde hier bleiben und dafür sorgen, dass das auch so bleibt!
-	AI_Output(self,hero,"Info_Gorn_AFTERFM_09_04"); //Jsem pořád tady a hlídám situaci!
+	AI_Output(self,hero,"Info_Gorn_AFTERFM_09_04"); //Já tu zůstanu a postarám se o to, aby to tak zůstalo!
 
 	B_Story_LeftFM();
 
@@ -1963,10 +1970,10 @@ func void Info_Gorn_FMWATCH_Info()
 	AI_Output(self,hero,"Info_Gorn_FMWATCH_09_02"); //Všude klid. Ve Svobodném dole se nic neděje.
 //	AI_Output(self,hero,"Info_Gorn_FMWATCH_09_03"); //It can't be long now till Lee sends reinforcements up here.
 //	AI_Output(self,hero,"Info_Gorn_FMWATCH_09_03"); //Es kann nicht mehr lange dauern, bis Lee die Verstärkung hier hoch schickt.
-	AI_Output(self,hero,"Info_Gorn_FMWATCH_09_03"); //Už to nebude dlouho trvat, než sem dorazí posily, které vyslal Lee.
+	AI_Output(self,hero,"Info_Gorn_FMWATCH_09_03"); //Nemůže dlouho trvat, než sem dorazí posily, které vyslal Lee.
 //	AI_Output(self,hero,"Info_Gorn_FMWATCH_09_04"); //I'll just make myself at home until then.
 //	AI_Output(self,hero,"Info_Gorn_FMWATCH_09_04"); //So lange werde ich es mir hier gemütlich machen.
-	AI_Output(self,hero,"Info_Gorn_FMWATCH_09_04"); //Do té doby bych už byl dávno doma.
+	AI_Output(self,hero,"Info_Gorn_FMWATCH_09_04"); //Do té doby bych se tu měl uvelebit.
 };
 
 //---------------------------------------------------------------------

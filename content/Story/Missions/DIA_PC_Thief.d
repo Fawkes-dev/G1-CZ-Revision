@@ -37,7 +37,7 @@ func void Info_Diego_Gamestart_Info()
 	AI_Output(self,hero,"Info_Diego_Gamestart_11_02"); //Nezajímá mě, kdo jsi. Právě jsi přišel. Dohlížím na nové příchozí. To je zatím všechno.
 //	AI_Output(self,hero,"Info_Diego_Gamestart_11_03"); //If you plan to stay alive for a while, you should talk to me. But of course I won't keep you from choosing your own destruction. Well, what do you think?
 //	AI_Output(self,hero,"Info_Diego_Gamestart_11_03"); //Wenn du vorhast, länger zu leben, solltest du dich ein bißchen mit mir unterhalten. Ich werde dich allerdings nicht daran hindern, in dein Verderben zu rennen. Also, wie sieht's aus?
-	AI_Output(self,hero,"Info_Diego_Gamestart_11_03"); //Jestli se tu chystáš nějakou chvíli zůstat, možná bychom si mohli trochu důvěřovat. Samozřejmě ti ale nebudu bránit, když se budeš chtít zničit. Tak co si myslíš?
+	AI_Output(self,hero,"Info_Diego_Gamestart_11_03"); //Jestli máš v úmyslu zůstat na živu, měl by ses bavit se mnou. Samozřejmě ti ale nebudu bránit, když se budeš chtít zničit. Tak co si myslíš?
 
 	B_Kapitelwechsel(1); //WICHTIG!!!
 };
@@ -161,7 +161,7 @@ func void Info_Diego_Brief_Info()
 	AI_Output(self,hero,"Info_Diego_Brief_11_01"); //Opravdu...?
 //	AI_Output(hero,self,"Info_Diego_Brief_15_02"); //I was given it by a mage shortly before they threw me in here.
 //	AI_Output(hero,self,"Info_Diego_Brief_15_02"); //Ein Magier hat ihn mir gegeben, kurz bevor sie mich reingeworfen haben.
-	AI_Output(hero,self,"Info_Diego_Brief_15_02"); //Dal mi ho jeden mág krátce předtím, než mě sem vyslal.
+	AI_Output(hero,self,"Info_Diego_Brief_15_02"); //Dal mi ho jeden mág krátce předtím, než mě sem shodili.
 //	AI_Output(self,hero,"Info_Diego_Brief_11_03"); //You're lucky I can't afford to show my face around the mages any more. Anyone else would gladly slit your throat for that letter.
 //	AI_Output(self,hero,"Info_Diego_Brief_11_03"); //Du kannst von Glück sagen, dass ich mich bei den Magiern nicht mehr blicken lassen kann. Jeder andere wird dir mit Freude für diesen Brief die Kehle durchschneiden.
 	AI_Output(self,hero,"Info_Diego_Brief_11_03"); //Máš štěstí, že už se před mágy nesmím nikdy ukázat. Kdokoliv jiný by tě kvůli tomu dopisu s chutí podřezal.
@@ -214,7 +214,7 @@ func void Info_Diego_WarumGeholfen_Info()
 	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_01"); //Protože jsi potřeboval pomoc, jinak by tě Bullit a jeho chlapi mohli zabít.
 //	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_02"); //And I couldn't just stand by and watch. 'Cos I came all this way to make a suggestion.
 //	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_02"); //Und das konnte ich nicht mit ansehen. Schließlich bin ich den ganzen weiten Weg gekommen um dir einen Vorschlag zu machen.
-	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_02"); //A já bych nemohl stát a přihlížet. Takhle ti mohu udělat nabídku.
+	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_02"); //A já bych nemohl stát a přihlížet. Protože jsem přišel až sem, abych ti učinil nabídku.
 //	AI_Output(hero,self,"Info_Diego_WarumGeholfen_15_03"); //A suggestion...
 //	AI_Output(hero,self,"Info_Diego_WarumGeholfen_15_03"); //Einen Vorschlag...
 	AI_Output(hero,self,"Info_Diego_WarumGeholfen_15_03"); //Nabídku?
@@ -223,7 +223,7 @@ func void Info_Diego_WarumGeholfen_Info()
 	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_04"); //Ano. Po tom malém incidentu s Bullitem a jeho chlapy by ti mělo být jasné, že potřebuješ ochranu.
 //	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_05"); //Everyone who arrives here has a choice. There are three camps in the colony, and you'll have to join one of them. 
 //	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_05"); //Jeder, der hier ankommt, wird vor eine Wahl gestellt. Es gibt drei Lager in der Kolonie, und einem davon wirst du dich anschließen müssen.
-	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_05"); //Každý, kdo sem přijde, má možnost volby. V kolonii jsou tři tábory a ty se budeš muset přidat k jednomu z nich.
+	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_05"); //Každý, kdo sem přijde, má možnost volby. V kolonii jsou tři tábory a ty se budeš muset k jednomu z nich přidat.
 //	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_06"); //I'm here to show the new ones that the Old Camp is the best place for them.
 //	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_06"); //Ich bin hier, um Neuen wie dir klarzumachen, dass sie bei uns im alten Lager am besten aufgehoben sind.
 	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_06"); //Jsem tu proto, abych přesvědčil nováčky, že Starý tábor je pro ně to nejlepší místo.
@@ -258,7 +258,7 @@ func void Info_Diego_Bullit_Info()
 	AI_Output(hero,self,"Info_Diego_Bullit_15_02"); //Kde je teď Bullit?
 //	AI_Output(self,hero,"Info_Diego_Bullit_11_03"); //He and the others bring the goods from the outside world into the Camp. You'll find him there.
 //	AI_Output(self,hero,"Info_Diego_Bullit_11_03"); //Er und die anderen bringen die Waren aus der Außenwelt ins alte Lager. Dort kannst du ihn finden.
-	AI_Output(self,hero,"Info_Diego_Bullit_11_03"); //Přenesl se svými druhy zboží z vnějšího světa do Starého tábora. Tam ho najdeš.
+	AI_Output(self,hero,"Info_Diego_Bullit_11_03"); //Přenesl se svými druhy zboží z vnějšího světa do Starého tábora. Tam ho můžeš najít.
 //	AI_Output(self,hero,"Info_Diego_Bullit_11_04"); //But if you plan to fight him, be careful. He's an experienced warrior.
 //	AI_Output(self,hero,"Info_Diego_Bullit_11_04"); //Aber wenn du vorhast, dich mit ihm anzulegen, sei vorsichtig. Er ist ein erfahrener Kämpfer.
 	AI_Output(self,hero,"Info_Diego_Bullit_11_04"); //Jestli s ním ale chceš bojovat, buď opatrný. Je to zkušený bojovník.
@@ -295,13 +295,13 @@ func void Info_Diego_Kolonie_Info()
 	AI_Output(hero,self,"Info_Diego_Kolonie_15_00"); //Dobrá, co bych měl vědět vědět o tomhle místě?
 //	AI_Output(self,hero,"Info_Diego_Kolonie_11_01"); //We call it the colony. You'll know already that we produce ore for the King. 
 //	AI_Output(self,hero,"Info_Diego_Kolonie_11_01"); //Wir nennen es die Kolonie. Du wirst sicher schon gehört haben, dass wir hier Erz für den König fördern.
-	AI_Output(self,hero,"Info_Diego_Kolonie_11_01"); //Říkáme mu kolonie. Určitě už jsi slyšel, že tu těžíme rudu pro krále.
+	AI_Output(self,hero,"Info_Diego_Kolonie_11_01"); //Říkáme mu Kolonie. Určitě už jsi slyšel, že tu těžíme rudu pro krále.
 //	AI_Output(self,hero,"Info_Diego_Kolonie_11_02"); //Well, at least we do - in the Old Camp.
 //	AI_Output(self,hero,"Info_Diego_Kolonie_11_02"); //Nun - zumindest wir vom alten Lager.
 	AI_Output(self,hero,"Info_Diego_Kolonie_11_02"); //Dobře, to děláme my - ve Starém táboře.
 //	AI_Output(self,hero,"Info_Diego_Kolonie_11_03"); //There are three camps within the Barrier. The Old Camp is the biggest, and it was the first.
 //	AI_Output(self,hero,"Info_Diego_Kolonie_11_03"); //Es gibt drei Lager innerhalb der Barriere. Das alte Lager ist das größte von ihnen. Es war auch das erste.
-	AI_Output(self,hero,"Info_Diego_Kolonie_11_03"); //Uvnitř Bariéry jsou tři tábory. Starý tábor je největší a nejstarší.
+	AI_Output(self,hero,"Info_Diego_Kolonie_11_03"); //Uvnitř Bariéry jsou tři tábory. Starý tábor je největší a také tu byl první.
 };
 
 // -----------------------------------------------------------------------
@@ -336,10 +336,10 @@ func void Info_Diego_Barriere_Info()
 	AI_Output(self,hero,"Info_Diego_Barriere_11_01"); //Není toho moc. Je neproniknutelná.
 //	AI_Output(hero,self,"Info_Diego_Barriere_15_02"); //What happens if I just walk out of here?
 //	AI_Output(hero,self,"Info_Diego_Barriere_15_02"); //Was passiert, wenn ich hier einfach wieder rausspaziere?
-	AI_Output(hero,self,"Info_Diego_Barriere_15_02"); //Co by se stalo, kdybych šel odtud pryč?
+	AI_Output(hero,self,"Info_Diego_Barriere_15_02"); //Co by se stalo, kdybych odtud jednoduše odešel pryč?
 //	AI_Output(self,hero,"Info_Diego_Barriere_11_03"); //The last one who tried that reached the other side a dead man. This damned Barrier let's you in, but you'll never get out of here.
 //	AI_Output(self,hero,"Info_Diego_Barriere_11_03"); //Der Letzte, der das versucht hat, ist tot auf der anderen Seite angekommen. Diese verdammte Barriere lässt dich zwar rein, aber raus kommst du hier nicht mehr.
-	AI_Output(self,hero,"Info_Diego_Barriere_11_03"); //Poslední, kdo se pokusil projít na druhou stranu, je mrtvý. Ta proklatá Bariéra tě nechá vstoupit dovnitř, ale nikdy už tě nepustí ven.
+	AI_Output(self,hero,"Info_Diego_Barriere_11_03"); //Poslední, kdo se o to pokusil dorazil na druhou stranu mrtvý. Ta proklatá Bariéra tě nechá vstoupit dovnitř, ale nikdy už tě nepustí ven.
 //	AI_Output(hero,self,"Info_Diego_Barriere_15_04"); //If there's a way out, I'll find it.
 //	AI_Output(hero,self,"Info_Diego_Barriere_15_04"); //Wenn es einen Weg hier raus gibt, werde ich ihn finden.
 	AI_Output(hero,self,"Info_Diego_Barriere_15_04"); //Jestli existuje nějaká cesta ven, najdu ji.
@@ -378,7 +378,7 @@ func void Info_Diego_OtherCamps_Info()
 	AI_Output(hero,self,"Info_Diego_OtherCamps_15_00"); //A co ty dva ostatní tábory?
 //	AI_Output(self,hero,"Info_Diego_OtherCamps_11_01"); //The two other camps split up to pursue their crazy escape plans.
 //	AI_Output(self,hero,"Info_Diego_OtherCamps_11_01"); //Die beiden anderen Lager haben sich abgespalten, um ihren schwachsinnigen Ausbruchsplänen nachzugehen.
-	AI_Output(self,hero,"Info_Diego_OtherCamps_11_01"); //Ostatní dva tábory jsou rozdělené kvůli svým šíleným plánům na únik.
+	AI_Output(self,hero,"Info_Diego_OtherCamps_11_01"); //Ostatní dva tábory se oddělily, aby mohly následovat své šílené plány na únik.
 //	AI_Output(self,hero,"Info_Diego_OtherCamps_11_02"); //There's the New Camp in the west of the colony, where the mages think they can just detonate the Barrier as soon as they've scraped enough ore together.
 //	AI_Output(self,hero,"Info_Diego_OtherCamps_11_02"); //Es gibt das neue Lager im Westen der Kolonie. Die Magier dort meinen, wenn sie genug Erz zusammengekratzt haben, können sie die Barriere einfach sprengen.  
 	AI_Output(self,hero,"Info_Diego_OtherCamps_11_02"); //Nový tábor je na západě kolonie a jeho mágové si myslí, že můžou prolomit Bariéru, jakmile se jim podaří nashromáždit dostatečné množství magické rudy.
@@ -387,7 +387,7 @@ func void Info_Diego_OtherCamps_Info()
 	AI_Output(self,hero,"Info_Diego_OtherCamps_11_03"); //A potom jsou tu na východě sektářští blázni. Jejich tábor leží uprostřed bažin, kde se modlí ke svému idolu, aby je osvobodil.
 //	AI_Output(self,hero,"Info_Diego_OtherCamps_11_04"); //He hasn't responded so far.
 //	AI_Output(self,hero,"Info_Diego_OtherCamps_11_04"); //Bis jetzt hat er sich noch nicht gemeldet.
-	AI_Output(self,hero,"Info_Diego_OtherCamps_11_04"); //Nejsou už dlouho svéprávní.
+	AI_Output(self,hero,"Info_Diego_OtherCamps_11_04"); //Zatím jim neodpovděl.
 //	AI_Output(self,hero,"Info_Diego_OtherCamps_11_05"); //If I were you, I wouldn't waste my time on those madcaps.
 //	AI_Output(self,hero,"Info_Diego_OtherCamps_11_05"); //Wenn ich du wäre, würde ich meine Zeit nicht mit den Spinnern verschwenden.
 	AI_Output(self,hero,"Info_Diego_OtherCamps_11_05"); //Být tebou, tak bych se těmi vyšinutými mozky nezabýval.
@@ -422,10 +422,10 @@ func void Info_Diego_OldCamp_Info()
 	AI_Output(hero,self,"Info_Diego_OldCamp_15_00"); //Řekni mi něco o Starém táboře.
 //	AI_Output(self,hero,"Info_Diego_OldCamp_11_01"); //It's the biggest and most powerful of the three camps. Gomez and his guys control the Camp and thereby the whole ore trade.
 //	AI_Output(self,hero,"Info_Diego_OldCamp_11_01"); //Es ist das größte und mächtigste der drei Lager. Gomez und seine Jungs kontrollieren das Lager und damit den ganzen Erzaustausch.
-	AI_Output(self,hero,"Info_Diego_OldCamp_11_01"); //Je to největší a nejstarší ze všech tří táborů. Gomez a jeho chlapi mají tábor pod kontrolou, a proto tedy i celý obchod s rudou.
+	AI_Output(self,hero,"Info_Diego_OldCamp_11_01"); //Je to největší a nejmocnější ze všech tří táborů. Gomez a jeho chlapi mají tábor pod kontrolou, a s tím i celý obchod s rudou.
 //	AI_Output(self,hero,"Info_Diego_OldCamp_11_02"); //Once a month, the King sends us everything we need. We've got the old guy in our grip, you understand?
 //	AI_Output(self,hero,"Info_Diego_OldCamp_11_02"); //Einmal im Monat schickt der König uns alles, was wir fordern. Wir haben den alten Sack in der Hand, verstehst du? Er ist auf das Erz angewiesen.
-	AI_Output(self,hero,"Info_Diego_OldCamp_11_02"); //Jednou za měsíc nám král pošle všechno, co potřebujeme. Máme toho starého páprdu na háku, chápeš?
+	AI_Output(self,hero,"Info_Diego_OldCamp_11_02"); //Jednou za měsíc nám král pošle všechno, co potřebujeme. Máme toho starého páprdu v hrsti, chápeš?
 //	AI_Output(self,hero,"Info_Diego_OldCamp_11_03"); //He sends us wine, bread, meat, weapons... everything.
 //	AI_Output(self,hero,"Info_Diego_OldCamp_11_03"); //Er schickt uns Wein, Brot, Fleisch, Waffen, einfach alles.
 	AI_Output(self,hero,"Info_Diego_OldCamp_11_03"); //Posílá nám víno, chleba, maso, zbraně... prostě všechno.
@@ -434,7 +434,7 @@ func void Info_Diego_OldCamp_Info()
 	{ 
 //	AI_Output(self,hero,"Info_Diego_OldCamp_11_04"); //You can also get some of it. All you have to do is join Gomez' people.
 //	AI_Output(self,hero,"Info_Diego_OldCamp_11_04"); //Du kannst auch deinen Teil davon bekommen. Alles, was du tun mußt, ist dich Gomez' Leuten anzuschließen.
-	AI_Output(self,hero,"Info_Diego_OldCamp_11_04"); //Také z toho můžeš něco dostat. Akorát se musíš přidat ke Gomezovi.
+	AI_Output(self,hero,"Info_Diego_OldCamp_11_04"); //Také z toho můžeš něco dostat. JEdiné, co musíš udělat je přidat ke Gomezovi.
 	};
 };
 
@@ -469,7 +469,7 @@ func void Info_Diego_WhosGomez_Info()
 	AI_Output(hero,self,"Info_Diego_WhosGomez_15_00"); //Kdo je Gomez?
 //	AI_Output(self,hero,"Info_Diego_WhosGomez_11_01"); //Gomez is the most powerful Ore Baron. He's the boss of the Old Camp - the most powerful man in the colony.
 //	AI_Output(self,hero,"Info_Diego_WhosGomez_11_01"); //Gomez ist der oberste Erzbaron. Der Boss des Alten Lagers. Der mächtigste Mann in der Kolonie.
-	AI_Output(self,hero,"Info_Diego_WhosGomez_11_01"); //Gomez je nejmocnější Rudobaron. Je to šéf Starého tábora - nejmocnější muž v kolonii.
+	AI_Output(self,hero,"Info_Diego_WhosGomez_11_01"); //Gomez je nejmocnější Rudobaron. Je to šéf Starého tábora - nejmocnější muž v Kolonii.
 }; 
 
 // ************************************************************
@@ -513,7 +513,7 @@ func void Info_Diego_JoinOldcamp_Info()
 	Log_SetTopicStatus(CH1_JoinOC,LOG_RUNNING);
 //	B_LogEntry(CH1_JoinOC,"To be allowed to join Gomez' people in the Old Camp, I need to see Thorus.");
 //	B_LogEntry(CH1_JoinOC,"Um bei Gomez Leuten im Alten Lager aufgenommen zu werden, soll ich mich bei Thorus melden.");
-	B_LogEntry(CH1_JoinOC,"Abych se mohl spojit s Gomezovými lidmi ve Starém táboře, potřebuji navštívit Thoruse.");
+	B_LogEntry(CH1_JoinOC,"Měl bych se hlásit u Thoruse, abych se mohl přidat ke Gomezovým lidem ve Starém táboře.");
 }; 
 
 // ************************************************************
@@ -584,7 +584,7 @@ func void Info_Diego_WoWaffe_Info()
 	AI_Output(hero,self,"Info_Diego_WoWaffe_15_00"); //Kde bych mohl sehnat nějakou zbraň?
 //	AI_Output(self,hero,"Info_Diego_WoWaffe_11_01"); //When you get to the Old Mine, have a look around. I'm sure you'll find something useful.
 //	AI_Output(self,hero,"Info_Diego_WoWaffe_11_01"); //Wenn du an der verlassenen Mine vorbeikommst, sieh dich mal ein bißchen um. Du findest bestimmt was Brauchbares.
-	AI_Output(self,hero,"Info_Diego_WoWaffe_11_01"); //Až dorazíš k zavalenému dolu, porozhlédni se kolem. Určitě najdeš něco užitečného.
+	AI_Output(self,hero,"Info_Diego_WoWaffe_11_01"); //Až dorazíš k opuštěnému dolu, porozhlédni se kolem. Určitě najdeš něco užitečného.
 //	AI_Output(self,hero,"Info_Diego_WoWaffe_11_02"); //The mine is easy to find, it's just a few meters along the canyon. 
 //	AI_Output(self,hero,"Info_Diego_WoWaffe_11_02"); //Die Mine ist leicht zu finden, nur ein paar Meter die Schlucht entlang.
 	AI_Output(self,hero,"Info_Diego_WoWaffe_11_02"); //Ten důl najdeš snadno, je to jenom pár metrů od kaňonu.
@@ -627,10 +627,10 @@ func void Info_Diego_ThorusSays_Info()
 	AI_Output(hero,self,"Info_Diego_ThorusSays_15_02"); //Říká, že se můžu přidat ke Starému táboru, pokud TY uznáš, že na to mám.
 //	AI_Output(self,hero,"Info_Diego_ThorusSays_11_03"); //Looks like I have myself a new job.
 //	AI_Output(self,hero,"Info_Diego_ThorusSays_11_03"); //Sieht so aus, als hätte ich einen neuen Job.
-	AI_Output(self,hero,"Info_Diego_ThorusSays_11_03"); //Vypadá to, že mám novou funkci.
+	AI_Output(self,hero,"Info_Diego_ThorusSays_11_03"); //Vypadá to, že mám novou práci.
 //	AI_Output(hero,self,"Info_Diego_ThorusSays_15_04"); //Do we start right now?
 //	AI_Output(hero,self,"Info_Diego_ThorusSays_15_04"); //Fangen wir direkt an?
-	AI_Output(hero,self,"Info_Diego_ThorusSays_15_04"); //Můžeme už začít?
+	AI_Output(hero,self,"Info_Diego_ThorusSays_15_04"); //Můžeme rovnou začít?
 //	AI_Output(self,hero,"Info_Diego_ThorusSays_11_05"); //First there are a few things you should know.
 //	AI_Output(self,hero,"Info_Diego_ThorusSays_11_05"); //Vorher solltest du ein paar Sachen wissen.
 	AI_Output(self,hero,"Info_Diego_ThorusSays_11_05"); //Nejdříve by ses měl dovědět pár věcí.
@@ -670,17 +670,17 @@ func void Info_Diego_Rules_Info()
 	AI_Output(self,hero,"Info_Diego_Rules_11_01"); //Jestli se chceš přidat do tábora, budeš muset získat pár kladných bodů.
 //	AI_Output(self,hero,"Info_Diego_Rules_11_02"); //There're a few influential people in the Outer Ring. Most of them are Shadows. If you manage to impress them, it'll earn you a few brownie points.
 //	AI_Output(self,hero,"Info_Diego_Rules_11_02"); //Es gibt einige einflussreiche Leute hier im Außenring. Die meisten davon sind Schatten. Wenn du es schaffst, sie zu beeindrucken, bringt dir das Pluspunkte ein.
-	AI_Output(self,hero,"Info_Diego_Rules_11_02"); //Ve Vnějším kruhu je několik vlivných lidí. Většina z nich jsou Stíny. Pokud se ti podaří udělat na ně dojem, získáš pár kladných bodů.
+	AI_Output(self,hero,"Info_Diego_Rules_11_02"); //Ve Vnějším kruhu je několik vlivných lidí. Většina z nich jsou Stínové. Pokud se ti podaří udělat na ně dojem, získáš pár kladných bodů.
 //	AI_Output(self,hero,"Info_Diego_Rules_11_03"); //Then you'll have to stand the test of faith.
 //	AI_Output(self,hero,"Info_Diego_Rules_11_03"); //Dann mußt du eine Prüfung des Vertrauens ablegen.
-	AI_Output(self,hero,"Info_Diego_Rules_11_03"); //Pak budeš moci složit zkoušku oddanosti.
+	AI_Output(self,hero,"Info_Diego_Rules_11_03"); //Pak budeš mtaké muset složit zkoušku oddanosti.
 //	AI_Output(self,hero,"Info_Diego_Rules_11_04"); //Besides there are a lot of skills every new arrival has to learn. The more you learn, the more valuable you'll be for us.
 //	AI_Output(self,hero,"Info_Diego_Rules_11_04"); //Außerdem gibt es für einen Neuen wie dich jede Menge neuer Talente zu lernen. Je mehr du lernst, desto wertvoller bist du für uns.
-	AI_Output(self,hero,"Info_Diego_Rules_11_04"); //Pak je tu ještě řada dovedností, které se každý nováček musí naučit. Je toho k učení spousta, spousta. Čím víc se toho naučíš, tím větší cenu pro nás budeš mít.
+	AI_Output(self,hero,"Info_Diego_Rules_11_04"); //Mimo jiné je tu ještě řada dovedností, které se musí každý nováček naučit. Čím víc se toho naučíš, tím větší cenu pro nás budeš mít.
 
 //	B_LogEntry(CH1_JoinOC,"To be allowed to join, I need to impress important people in the Outer Ring and to absolve a test of faith with Diego.");
 //	B_LogEntry(CH1_JoinOC,"Um aufgenommen zu werden, muss ich wichtige Leute im Aussenring beeindrucken und eine Prüfung des Vertrauens bei Diego ablegen.");
-	B_LogEntry(CH1_JoinOC,"Abych se mohl přidat, musím udělat dojem na lidi z Vnějšího okruhu a podstoupit Diegovu zkoušku poctivosti.");
+	B_LogEntry(CH1_JoinOC,"Abych se mohl přidat, musím udělat dojem na lidi z Vnějšího okruhu a složit Diegovu zkoušku poctivosti.");
 };
 
 // ************************************************************
@@ -757,13 +757,13 @@ func void Info_Diego_Teachers_Info()
 	AI_Output(self,hero,"Info_Diego_Teachers_11_01"); //Začni s Fingersem. Ten je z nás nejzručnější.
 //	AI_Output(self,hero,"Info_Diego_Teachers_11_02"); //If you keep your eyes peeled, you'll find other people who can teach you.
 //	AI_Output(self,hero,"Info_Diego_Teachers_11_02"); //Wenn du die Augen aufhältst, wirst du noch andere Leute finden, die dir etwas beibringen können.
-	AI_Output(self,hero,"Info_Diego_Teachers_11_02"); //Když budeš mít oči na stopkách. najdeš další lidi, kteří tě budou moci učit.
+	AI_Output(self,hero,"Info_Diego_Teachers_11_02"); //Když budeš mít oči na stopkách, najdeš další lidi, kteří tě budou moci nečemu naučit.
 //	AI_Output(hero,self,"Info_Diego_Teachers_15_03"); //Where can I find Fingers?
 //	AI_Output(hero,self,"Info_Diego_Teachers_15_03"); //Wo finde ich diesen Fingers?
 	AI_Output(hero,self,"Info_Diego_Teachers_15_03"); //Kde najdu Fingerse?
 //	AI_Output(self,hero,"Info_Diego_Teachers_11_04"); //His hut's kind of hidden. It's next to the castle wall. Just start out here and go towards the arena.
 //	AI_Output(self,hero,"Info_Diego_Teachers_11_04"); //Seine Hütte liegt etwas zurück, direkt an der Burgmauer, wenn du von hier zur Arena gehst.
-	AI_Output(self,hero,"Info_Diego_Teachers_11_04"); //Jeho chatrč je trochu zpátky. Stojí přímo proti hradní zdi, když půjdeš odsud směrem k aréně.
+	AI_Output(self,hero,"Info_Diego_Teachers_11_04"); //Jeho chatrč je trošku schovaná. Stojí přímo vedle hradní zdi, když půjdeš odsud směrem k aréně.
 //	AI_Output(self,hero,"Info_Diego_Teachers_11_05"); //When you're at the castle gate, go down to the left and you'll be heading for the arena.
 //	AI_Output(self,hero,"Info_Diego_Teachers_11_05"); //Wenn du vorm Burgtor stehst, geh links runter, da geht's Richtung Arena.
 	AI_Output(self,hero,"Info_Diego_Teachers_11_05"); //Když budeš u hradní brány, pokračuj doleva, až dojdeš k aréně.
@@ -773,7 +773,7 @@ func void Info_Diego_Teachers_Info()
 		Log_CreateTopic(GE_TeacherOC,LOG_NOTE);
 //		B_LogEntry(GE_TeacherOC,"Fingers can teach PICKPOCKETING and how to OPEN LOCKS. He lives in a hut near the arena, slightly secluded, by the castle walls.");
 //		B_LogEntry(GE_TeacherOC,"Fingers kann mir TASCHENDIEBSTAHL und SCHLÖSSER ÖFFNEN beibringen, er wohnt in einer Hütte nahe der Arena, etwas zurükliegend an der Burgmauer.");
-		B_LogEntry(GE_TeacherOC,"Fingers mě může naučit VYBÍRÁNÍ KAPES. Žije nedaleko arény, poněkud stranou u hradních zdí.");
+		B_LogEntry(GE_TeacherOC,"Fingers mě může naučit VYBÍRÁNÍ KAPES a OTEVÍRÁNÍ ZÁMKŮ. Žije nedaleko arény, poněkud stranou u hradních zdí.");
 	};
 };
 
@@ -854,7 +854,7 @@ func void Info_Diego_Teach_BACK()
 	};
 //	AI_Output(self,hero,"Info_Diego_Teach_BACK_11_02"); //Come back soon - there are many things you need to learn!
 //	AI_Output(self,hero,"Info_Diego_Teach_BACK_11_02"); //Komm bald wieder - es gibt viel zu lernen!
-	AI_Output(self,hero,"Info_Diego_Teach_BACK_11_02"); //Vrať se brzy - ještě se toho musíš hodně naučit!
+	AI_Output(self,hero,"Info_Diego_Teach_BACK_11_02"); //Brzy se vrať - ještě se toho musíš hodně naučit!
 	Info_ClearChoices(Info_Diego_Teach);
 };
 
@@ -960,7 +960,7 @@ func void Info_Diego_BringList_Offer_Info()
 	AI_Output(self,hero,"Info_Diego_BringList_Offer_11_01"); //Musíš jít do Starého dolu. Tam najdeš chlapíka jménem Ian. Ten ti dá seznam.
 //	AI_Output(self,hero,"Info_Diego_BringList_Offer_11_02"); //This list is important. It contains all the items the guys in the mine need from us.
 //	AI_Output(self,hero,"Info_Diego_BringList_Offer_11_02"); //Diese Liste ist wichtig. Da steht drauf, was die Jungs in der Mine von uns brauchen.
-	AI_Output(self,hero,"Info_Diego_BringList_Offer_11_02"); //Ten seznam je důležitý. Obsahuje všechny věci, které od nás potřebují chlapi tam v dole.
+	AI_Output(self,hero,"Info_Diego_BringList_Offer_11_02"); //Ten seznam je důležitý. Obsahuje všechny věci, které od nás chlapi v dole potřebují.
 //	AI_Output(self,hero,"Info_Diego_BringList_Offer_11_03"); //They'll get the stuff with the next convoy!
 //	AI_Output(self,hero,"Info_Diego_BringList_Offer_11_03"); //Das schicken wir ihnen dann mit dem nächsten Convoy!
 	AI_Output(self,hero,"Info_Diego_BringList_Offer_11_03"); //Dostanou zásoby z příštího konvoje.
@@ -969,7 +969,7 @@ func void Info_Diego_BringList_Offer_Info()
 	AI_Output(hero,self,"Info_Diego_BringList_Offer_15_04"); //To není problém!
 //	AI_Output(self,hero,"Info_Diego_BringList_Offer_11_05"); //Yes, there is a problem! The New Camp must not get that list!
 //	AI_Output(self,hero,"Info_Diego_BringList_Offer_11_05"); //Oh, doch! Das ist ein Problem. Das Neue Lager darf auf keinen Fall die Liste in die Finger bekommen!
-	AI_Output(self,hero,"Info_Diego_BringList_Offer_11_05"); //Jeden problém by tady byl! Ten seznam se nesmí dostat do Nového tábora!
+	AI_Output(self,hero,"Info_Diego_BringList_Offer_11_05"); //Jeden problém by tady byl! Ten seznam se nesmí dostat do rukou Nového tábora!
 //	AI_Output(self,hero,"Info_Diego_BringList_Offer_11_06"); //Like I said: The list is important. If you do it right, you'll get much further.
 //	AI_Output(self,hero,"Info_Diego_BringList_Offer_11_06"); //Wie ich schon sagte, die Liste ist wichtig. Wenn du die Sache gut machst, bringt dich das einen großen Schritt weiter.
 	AI_Output(self,hero,"Info_Diego_BringList_Offer_11_06"); //Jak jsem řekl: ten seznam je důležitý. Když to provedeš dobře, pokročíš dál.
@@ -1155,10 +1155,10 @@ func void Info_Diego_JoinAnalyze_Info()
 	AI_Output(hero,self,"Info_Diego_JoinAnalyze_15_00"); //A co má vážnost v táboře?
 //	AI_Output(self,hero,"Info_Diego_JoinAnalyze_11_01"); //I've talked to a few people...
 //	AI_Output(self,hero,"Info_Diego_JoinAnalyze_11_01"); //Ich hab' mal mit ein paar Leuten geredet...
-	AI_Output(self,hero,"Info_Diego_JoinAnalyze_11_01"); //Mluvil jsem s několika lidmi.
+	AI_Output(self,hero,"Info_Diego_JoinAnalyze_11_01"); //Mluvil jsem s několika lidmi...
 //	AI_Output(hero,self,"Info_Diego_JoinAnalyze_15_02"); //And?
 //	AI_Output(hero,self,"Info_Diego_JoinAnalyze_15_02"); //Und?
-	AI_Output(hero,self,"Info_Diego_JoinAnalyze_15_02"); //No a?
+	AI_Output(hero,self,"Info_Diego_JoinAnalyze_15_02"); //A?
 	// -----------------------------------------------------------
 	Points_OC = 0;
 	// -----------------------------------------------------------
@@ -1173,7 +1173,7 @@ func void Info_Diego_JoinAnalyze_Info()
 	{
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Scatty_11_02"); //Scatty told me you let Kirgo beat you. He didn't seem to be very enthusiastic.
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Scatty_11_02"); //Scatty hat mir gesagt, du hast gegen Kirgo verloren. Er hat sich nicht seher begeistert angehört.
-		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Scatty_11_02"); //Scatty mi řekl, že tě porazil Kirgo. Nevypadal moc nadšeně.
+		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Scatty_11_02"); //Scatty mi řekl, že tě Kirgo porazil. Nevypadal moc nadšeně.
 		Points_OC = Points_OC - 1;
 	}
 	else if (Scatty_ChargeKirgo == LOG_RUNNING)
@@ -1187,7 +1187,7 @@ func void Info_Diego_JoinAnalyze_Info()
 	{
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Scatty_11_04"); //But he was impressed by you having the courage to fight against Kharim, even though you've been defeated.
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Scatty_11_04"); //Aber dass du den Mumm gehabt hast, gegen Kharim anzutreten hat ihm imponiert, obwohl du verloren hast.
-		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Scatty_11_04"); //Ale udělalo na něj dojem, že jsi se postavil Kharimovi - ikdyž tě porazil.
+		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Scatty_11_04"); //Ale udělalo na něj dojem, že jsi se postavil Kharimovi - ikdyž jsi byl poražen.
 		Points_OC = Points_OC + 2;
 	}
 	else if (Scatty_ChargeKharim == LOG_SUCCESS)
@@ -1208,7 +1208,7 @@ func void Info_Diego_JoinAnalyze_Info()
 	{
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Whistler_11_01"); //Whistler told me the story about Fisk... Well, if I was you I would have taken the ore and cleared off. But anyway - he thinks a great deal of you.
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Whistler_11_01"); //Whistler hat mir von der Sache mit Fisk erzählt... Also ich an deiner Stelle wäre ja mit dem Erz durchgebrannt. Aber egal - er hält jedenfalls große Stücke auf dich.
-		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Whistler_11_01"); //Whistler mi vyprávěl příběh o Fiskovi... Dobrá, být tebou, vzal bych tu rudu a zmizel - myslí si, že s tebou udělal velký obchod.
+		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Whistler_11_01"); //Whistler mi vyprávěl příběh o Fiskovi... No, být tebou, vzal bych tu rudu a zmizel. Mluvil o tobě velice kladně.
 		Points_OC = Points_OC + 3;
 	}
 	else if ((Whistler_BuyMySword == LOG_FAILED) || ((Whistler_BuyMySword==LOG_RUNNING)&&(Whistler_BuyMySword_Day<=(Wld_GetDay()-2))))
@@ -1282,7 +1282,7 @@ func void Info_Diego_JoinAnalyze_Info()
 	{
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Thorus_11_02"); //Thorus says we could make use of someone like you - that's very good for you.
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Thorus_11_02"); //Thorus sagt, so einen wie dich können wir brauchen - das allein ist schon verdammt viel Wert für dich.
-		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Thorus_11_02"); //Thorus říká, že bysme mohli potřebovat někoho, jako jsi ty - to je pro tebe velmi dobré.
+		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Thorus_11_02"); //Thorus říká, že bychom mohli potřebovat někoho, jako jsi ty - to je pro tebe velmi dobré.
 		Points_OC = Points_OC + 5;
 	}
 	else if (Thorus_MordragKo == LOG_FAILED)
@@ -1324,8 +1324,8 @@ func void Info_Diego_JoinAnalyze_Info()
 
 				Log_SetTopicStatus(CH1_JoinOC,LOG_SUCCESS);
 //				B_LogEntry(CH1_JoinOC,"Diego got me an audience with Gomez. Now I can become one of Gomez' people and enter the castle, I only need to see Thorus first.");
-//				B_LogEntry(CH1_JoinOC,"Scatty ist beeindruckt von meinem Kampf gegen Kirgo.");
-				B_LogEntry(CH1_JoinOC,"Scatty byl zaujat mým bojem proti Kirgovi.");
+//				B_LogEntry(CH1_JoinOC, "Diego hat mir eine Audienz bei Gomez verschafft. Jetzt kann ich einer von Gomez Leuten werden und die Burg betreten, ich muss nur noch zu Thorus gehen.");
+				B_LogEntry(CH1_JoinOC,"Diego mi zařídil slyšení u Gomeze. Nyní jsem jedním z Gomezových lidí a mám přístup na hrad, jen musím nejdříve navštívit Thoruse.");
 			}
 			else
 			{
@@ -1343,7 +1343,7 @@ func void Info_Diego_JoinAnalyze_Info()
 	{
 //		AI_Output(self,hero,"Info_Diego_Points_11_10"); //All things considered, that's not too bad for a newcomer.
 //		AI_Output(self,hero,"Info_Diego_Points_11_10"); //Alles in allem schon nicht so schlecht für eine Neuen.
-		AI_Output(self,hero,"Info_Diego_Points_11_10"); //Všechno nasvědčuje, že to na nováčka nebylo tak zlé.
+		AI_Output(self,hero,"Info_Diego_Points_11_10"); //Konec konců to nebylo zlé, na nováčka.
 	}
 	else if points_oc >= 0
 	{
@@ -1396,7 +1396,7 @@ instance Info_Diego_WhatToSayToGomez(C_INFO)
 	permanent = 0;
 //	description = "What do I have to do when I meet Gomez?";
 //	description = "Was soll ich machen, wenn ich bei Gomez bin?";
-	description = "Co musím udělat, abych se dostal ke Gomezovi?";
+	description = "Co musím udělat, až se setkám s Gomezem?";
 };                       
 
 func int Info_Diego_WhatToSayToGomez_Condition()
@@ -1411,13 +1411,13 @@ func void Info_Diego_WhatToSayToGomez_Info()
 {
 //	AI_Output(hero,self,"Info_Diego_WhatToSayToGomez_Info_15_00"); //What do I have to do when I meet Gomez?
 //	AI_Output(hero,self,"Info_Diego_WhatToSayToGomez_Info_15_00"); //Was soll ich machen, wenn ich bei Gomez bin?
-	AI_Output(hero,self,"Info_Diego_WhatToSayToGomez_Info_15_00"); //Co musím udělat, abych se dostal ke Gomezovi?
+	AI_Output(hero,self,"Info_Diego_WhatToSayToGomez_Info_15_00"); //Co musím udělat, až se setkám s Gomezem?
 //	AI_Output(self,hero,"Info_Diego_WhatToSayToGomez_Info_11_01"); //Gomez' decisions are made from gut instinct. He'll look at your mug and then he'll make up his mind if you can join.
 //	AI_Output(self,hero,"Info_Diego_WhatToSayToGomez_Info_11_01"); //Gomez entscheidet aus dem Bauch heraus. Wenn ihm deine Visage passt, bist du dabei.
 	AI_Output(self,hero,"Info_Diego_WhatToSayToGomez_Info_11_01"); //Gomez se rozhoduje pomocí vnitřního instinktu. Podívá se ti na kukuč, a pak se rozhodne, jestli se můžeš přidat, nebo ne.
 //	AI_Output(self,hero,"Info_Diego_WhatToSayToGomez_Info_11_02"); //From now on you'll have to get by on your own - make the best of it! Good luck.
 //	AI_Output(self,hero,"Info_Diego_WhatToSayToGomez_Info_11_02"); //Ab jetzt bist du auf dich allein gestellt - Mach das Beste draus! Viel Glück.
-	AI_Output(self,hero,"Info_Diego_WhatToSayToGomez_Info_11_02"); //Od teďka si budeš muset jít po svých - dělej, jak nejlíp umíš. Bůh s tebou.
+	AI_Output(self,hero,"Info_Diego_WhatToSayToGomez_Info_11_02"); //Od teďka si budeš muset jít po svých - dělej, jak nejlíp umíš. Hodně štěstí.
 };
 
 //#####################################################################
@@ -1459,12 +1459,12 @@ func void PC_Thief_ARMOR_Info()
 		AI_Output(hero,self,"PC_Thief_ARMOR_Info_15_01"); //Můžu mít takovou zbroj jako ty?
 //		AI_Output(self,hero,"PC_Thief_ARMOR_Info_11_02"); //Do you have enough ore?
 //		AI_Output(self,hero,"PC_Thief_ARMOR_Info_11_02"); //Hast du das nötige Erz in der Tasche?
-		AI_Output(self,hero,"PC_Thief_ARMOR_Info_11_02"); //Máš dost rudy?
+		AI_Output(self,hero,"PC_Thief_ARMOR_Info_11_02"); //Máš dostatek rudy?
 
 		CreateInvItem(hero,STT_ARMOR_H);
 		B_GiveInvItems(hero,self,ItMinugget, VALUE_STT_ARMOR_H);
 
-		//hier nur ein Text für die Bildschirmausgabe
+		//hier nur ein Text für die Bildschirmausgabe - čuňárna :D
 		CreateInvItem(self,ItAmArrow);
 		B_GiveInvItems(self,hero,ItAmArrow,1);
 		Npc_RemoveInvItem(hero,ItAmArrow);
@@ -1473,7 +1473,7 @@ func void PC_Thief_ARMOR_Info()
 	{
 //		AI_Output(self,hero,"PC_Thief_ARMOR_Info_11_03"); //Get the ore, then you'll get the armor.
 //		AI_Output(self,hero,"PC_Thief_ARMOR_Info_11_03"); //Besorge dir das Erz, dann bekommst du die Rüstung.
-		AI_Output(self,hero,"PC_Thief_ARMOR_Info_11_03"); //Dej rudu, pak dostaneš výzbroj.
+		AI_Output(self,hero,"PC_Thief_ARMOR_Info_11_03"); //Obstarej si rudu, pak dostaneš výzbroj.
 	};
 };  
 
@@ -1516,34 +1516,34 @@ func void PC_Thief_MEETAGAIN_Info()
 	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_01"); //Občas mám taky ten pocit.
 //	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_02"); //A lot of things have happened since we last met. I hear you've contributed a great deal to the final invocation.
 //	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_02"); //Seit unserem ersten Treffen ist einiges passiert. Ich hörte, du warst nicht ganz unbeteiligt daran, dass die große Beschwörung stattfinden konnte. 
-	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_02"); //Od našeho posledního setkání se stalo hodně věcí. Slyšel jsem, že ses hodně podílel na posledním vzývání.
+	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_02"); //Od našeho posledního setkání se stalo hodně věcí. Slyšel jsem, že ses hodně podílel na hlavním vzývání.
 //	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_03"); //Obviously you're quite well informed.
 //	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_03"); //Du kriegst ja anscheinend eine ganze Menge mit.
 	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_03"); //Jako obvykle jsi dobře informován.
 //	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_04"); //Better than you think... Now you're looking for the focus?
 //	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_04"); //Mehr als du denkst... Jetzt bist du auf Fokus Suche?
-	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_04"); //Líp, než si myslíš... Hledáš teď ohnisko?
+	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_04"); //Lépe, než si myslíš... Hledáš teď ohnisko?
 //	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_05"); //Yes. There must be one somewhere around here.
 //	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_05"); //Ja. Hier in der Gegend muss es irgendwo einen geben.
 	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_05"); //Ano. Musí tady někde být.
 //	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_06"); //I know where to find one. There's just one problem.
 //	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_06"); //Ich weiß, wo einer liegt. Es gibt da nur ein Problem...
-	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_06"); //Vím, kde ho najdeš. Je tu ale jeden problém.
+	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_06"); //Vím, kde ho najdeš. Je tu ale jeden problém...
 //	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_07"); //I see. What do you want?
 //	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_07"); //Ich verstehe. Was willst du haben?
-	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_07"); //Rozumím. Co chceš dělat?
+	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_07"); //Rozumím. Co chceš?
 //	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_08"); //You've really learnt your lesson, but that's not what I meant.
 //	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_08"); //Du hast tatsächlich gelernt, aber das meine ich nicht.
-	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_08"); //Hodně ses toho naučil, ale to není to, co mám na mysli.
+	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_08"); //Opravdu ses toho hodně naučil, ale to není to, co mám na mysli.
 //	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_09"); //No? What's the problem then?
 //	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_09"); //Nein? Was ist dann dein Problem?
-	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_09"); //Ne? A v čem je ten problém?
+	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_09"); //Ne? A v čem je tedy problém?
 //	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_10"); //It's three tons of a problem.
 //	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_10"); //Ein drei Tonnen schweres Problem. 
-	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_10"); //Je tady hromada problémů.
+	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_10"); //Je tu jeden třítunový problémů.
 //	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_11"); //Let's go. You'll understand in a moment.
 //	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_11"); //Lass uns gehen. Du wirst es gleich verstehen.
-	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_11"); //Tak dobře. Pochopíš to hned.
+	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_11"); //Pojďme. Hned to pochopíš.
 
  	self.aivar[AIV_PARTYMEMBER] = TRUE;
 	Npc_ExchangeRoutine(self,"GuideTroll");
@@ -1552,10 +1552,10 @@ func void PC_Thief_MEETAGAIN_Info()
 	Log_SetTopicStatus(CH3_TrollCanyon,LOG_RUNNING);
 //	B_LogEntry(CH3_TrollCanyon,"When I approached the focus place in the north, I surprisingly bumped into Diego. He warned me of something 'big' awaiting me at the end of the canyon.");
 //	B_LogEntry(CH3_TrollCanyon,"Bei der Annäherung zum nördlichsten Fokusort traf ich überraschenderweise Diego wieder. Er warnte mich vor irgendetwas 'Großem' dass am Ende der Schlucht auf mich warten soll.");
-	B_LogEntry(CH3_TrollCanyon,"Když jsem se přiblížil k ohniskovému místu na severu, ke svému překvapení jsem narazil na Diega. Varoval mě před čímsi 'velikým', co mě čeká na konci kaňonu.");
+	B_LogEntry(CH3_TrollCanyon,"Když jsem se přiblížil k ohniskovému místu na severu, narazil jsem ke svému překvapení na Diega. Varoval mě před čímsi 'velikým', co mě čeká na konci kaňonu.");
 //	B_LogEntry(CH3_TrollCanyon,"Somehow he knew about my activities in the swamp camp as well as about my search for the focus. We'll now go on together.");
 //	B_LogEntry(CH3_TrollCanyon,"Irgendwoher wußte er sowohl über meine Aktivitäten im Sumpflager als auch von meiner Fokussuche. Wir setzen unseren Weg nun gemeinsam fort.");
-	B_LogEntry(CH3_TrollCanyon,"Nějak se dozvěděl o mé činnosti v Táboře v bažinách, stejně jako o tom, že hledám ohnisko. Budeme pokračovat společně.");
+	B_LogEntry(CH3_TrollCanyon,"Nějak se dozvěděl o mé činnosti v Táboře v bažinách, stejně jako o tom, že hledám ohnisko. Dále budeme pokračovat společně.");
 
 	AI_StopProcessInfos(self);
 };
@@ -1588,20 +1588,20 @@ func void PC_Thief_SHOWFOCUS_Info()
 
 //	AI_Output(self,hero,"PC_Thief_SHOWFOCUS_Info_11_01"); //On the left side of this canyon lies the entrance to a cave that leads to the location of the focus.
 //	AI_Output(self,hero,"PC_Thief_SHOWFOCUS_Info_11_01"); //Auf der linken Seite dieser Schlucht gibt es einen Höhlengang, der zum Fokusplatz führt.
-	AI_Output(self,hero,"PC_Thief_SHOWFOCUS_Info_11_01"); //Na levé straně kaňonu je vchod  do jeskyně, odkud vede cesta k ohnisku.
+	AI_Output(self,hero,"PC_Thief_SHOWFOCUS_Info_11_01"); //Na levé straně kaňonu je vchod do jeskyně, která vede až k ohnisku.
 //	AI_Output(hero,self,"PC_Thief_SHOWFOCUS_Info_15_02"); //Alright. But first we have to get rid of that monster over there.
 //	AI_Output(hero,self,"PC_Thief_SHOWFOCUS_Info_15_02"); //Alles klar. Doch zunächst sollten wir dieses Ungetüm da drüben loswerden.
 	AI_Output(hero,self,"PC_Thief_SHOWFOCUS_Info_15_02"); //Dobře. Nejdřív se ale musíme zbavit těch příšer, které se tam kolem potulují.
 //	AI_Output(self,hero,"PC_Thief_SHOWFOCUS_Info_11_03"); //Try to find a weak point or another possibility to defeat the troll.
 //	AI_Output(self,hero,"PC_Thief_SHOWFOCUS_Info_11_03"); //Versuche, eine Schwachstelle oder irgendeine Möglichkeit zu finden, wie wir den Troll kleinkriegen können. 
-	AI_Output(self,hero,"PC_Thief_SHOWFOCUS_Info_11_03"); //Zkus najít slabé místo trola. Nebo nějaký jiný způsob, jak ho porazit.
+	AI_Output(self,hero,"PC_Thief_SHOWFOCUS_Info_11_03"); //Zkus najít slabinu toho trola. Nebo nějaký jiný způsob, jak ho porazit.
 //	AI_Output(self,hero,"PC_Thief_SHOWFOCUS_Info_11_04"); //I'll attract his attention.
 //	AI_Output(self,hero,"PC_Thief_SHOWFOCUS_Info_11_04"); //Ich lenke seine Aufmerksamkeit auf mich.
 	AI_Output(self,hero,"PC_Thief_SHOWFOCUS_Info_11_04"); //Upoutám jeho pozornost.
 
 //	B_LogEntry(CH3_TrollCanyon,"We've come across a huge troll blocking our way. Diego wants to divert it, while I need to find a way to take it apart.");
 //	B_LogEntry(CH3_TrollCanyon,"Wir haben einen riesigen Troll entdeckt, der unseren weiteren Weg versperrt. Diego will ihn ablenken während ich nach einem Weg finden muss, den Troll klein zu kriegen.");
-	B_LogEntry(CH3_TrollCanyon,"Přešli jsme napříč velkým trolím zátarasem, který nám stál v cestě. Diego ho odstraní a já zatím musím najít způsob, jak porazit trola.");
+	B_LogEntry(CH3_TrollCanyon,"Narazili jsme na obrovského trola, který nám stojí v cestě. Diego ho zabaví a já zatím musím najít způsob, jak ho porazit.");
 
 	Npc_ExchangeRoutine(self,"WaitAtWheel");
 
@@ -1639,14 +1639,14 @@ func void PC_Thief_AFTERTROLL_Info()
 	AI_GotoNpc(self,hero);
 //	AI_Output(self,hero,"PC_Thief_AFTERTROLL_Info_11_01"); //That was fantastic. You're really good. And now, go get the focus.
 //	AI_Output(self,hero,"PC_Thief_AFTERTROLL_Info_11_01"); //Das war fantastisch. Mann, du hast ja einiges drauf. So, jetzt hol dir den Fokus. 
-	AI_Output(self,hero,"PC_Thief_AFTERTROLL_Info_11_01"); //To bylo fantastické. Jsi opravdu dobrý. A teď si pojď vzít to ohnisko.
+	AI_Output(self,hero,"PC_Thief_AFTERTROLL_Info_11_01"); //To bylo fantastické. Chlape, jsi opravdu dobrý. A teď si pojď vzít to ohnisko.
 //	AI_Output(self,hero,"PC_Thief_AFTERTROLL_Info_11_02"); //I'll make sure that there won't be any other awkward surprises.
 //	AI_Output(self,hero,"PC_Thief_AFTERTROLL_Info_11_02"); //Ich passe auf, dass keine weiteren unangenehmen Überraschungen auf uns zu kommen.
-	AI_Output(self,hero,"PC_Thief_AFTERTROLL_Info_11_02"); //Ujistím se, že nás tu nečeká žádné nepříjemné překvapení.
+	AI_Output(self,hero,"PC_Thief_AFTERTROLL_Info_11_02"); //Ujistím se, že nás tu nečekají žádná nepříjemná překvapení.
 
 //	B_LogEntry(CH3_TrollCanyon,"The troll has been defeated. Now I can see to the winch that moves the grid to the focus platform.");
 //	B_LogEntry(CH3_TrollCanyon,"Der Troll ist besiegt. Nun kann ich mich mit der Winde beschäftigen, die das Gitter zur Fokusplattform bewegen kann.");
-	B_LogEntry(CH3_TrollCanyon,"Trol byl poražen. Teď vidím naviják, který spouští mříž na ohniskovou plošinu.");
+	B_LogEntry(CH3_TrollCanyon,"Trol byl poražen. Nyní si můžu poradit s navijákem, který spouští mříž na ohniskovou plošinu.");
 
 	AI_StopProcessInfos(self);
 };
@@ -1675,7 +1675,7 @@ func void PC_Thief_WHEEL_Info()
 {
 //	AI_Output(self,hero,"PC_Thief_WHEEL_Info_11_01"); //The winch seems to be jammed.
 //	AI_Output(self,hero,"PC_Thief_WHEEL_Info_11_01"); //Die Winde scheint zu klemmen.
-	AI_Output(self,hero,"PC_Thief_WHEEL_Info_11_01"); //Ten naviják se asi zasekl.
+	AI_Output(self,hero,"PC_Thief_WHEEL_Info_11_01"); //Vypadá to, že se ten naviják zasekl.
 //	AI_Output(self,hero,"PC_Thief_WHEEL_Info_11_02"); //Let me see, maybe I can fix it!
 //	AI_Output(self,hero,"PC_Thief_WHEEL_Info_11_02"); //Lass mich mal, vielleicht kann ich da was machen!
 	AI_Output(self,hero,"PC_Thief_WHEEL_Info_11_02"); //Já se na to podívám, třeba se mi ho podaří opravit!
@@ -1709,12 +1709,12 @@ func void PC_Thief_FIXWHEEL_Info()
 {
 //	AI_Output(self,hero,"PC_Thief_FIXWHEEL_Info_11_01"); //Well, it ought to work now.
 //	AI_Output(self,hero,"PC_Thief_FIXWHEEL_Info_11_01"); //So, jetzt sollte es eigentlich wieder gehen.
-	AI_Output(self,hero,"PC_Thief_FIXWHEEL_Info_11_01"); //Dobrý, teď by měl pracovat.
+	AI_Output(self,hero,"PC_Thief_FIXWHEEL_Info_11_01"); //Tak, teď už by měl zase fungovat.
 	Troll_Wheel = 2; // Winde repariert!
 
 //	B_LogEntry(CH3_TrollCanyon,"Diego has repaired the stuck winch. Now there's nothing in my way any more.");
 //	B_LogEntry(CH3_TrollCanyon,"Diego hat die verklemmte Winde repariert. Nun steht mir nichts mehr im Weg.");
-	B_LogEntry(CH3_TrollCanyon,"Diego opravil porouchaný naviják. Teď už nám nic nestojí v cestě.");
+	B_LogEntry(CH3_TrollCanyon,"Diego opravil zaseknutý naviják. Teď už mi nic nestojí v cestě.");
 
 	Npc_ExchangeRoutine(self,"WaitAtFocus");
 
@@ -1747,7 +1747,7 @@ func void PC_Thief_WAITATFOCUS_Info()
 
 //	AI_Output(self,hero,"PC_Thief_WAITATFOCUS_Info_11_01"); //Get the focus and I'll wait for you here!
 //	AI_Output(self,hero,"PC_Thief_WAITATFOCUS_Info_11_01"); //Hol dir den Fokus, ich warte hier!
-	AI_Output(self,hero,"PC_Thief_WAITATFOCUS_Info_11_01"); //Vezmi to ohnisko a já na tebe počkám tady!
+	AI_Output(self,hero,"PC_Thief_WAITATFOCUS_Info_11_01"); //Běž pro to ohnisko, já tu na tebe počkám!
 
 	AI_StopProcessInfos(self);
 };
@@ -1779,7 +1779,7 @@ func void PC_Thief_GOTIT_Info()
 
 //	AI_Output(self,hero,"PC_Thief_GOTIT_Info_11_01"); //Hey, you've found the focus. Very good.
 //	AI_Output(self,hero,"PC_Thief_GOTIT_Info_11_01"); //Hey, du hast den Fokus also gefunden. Sehr gut.
-	AI_Output(self,hero,"PC_Thief_GOTIT_Info_11_01"); //Našel jsi to ohnisko. Výborně.
+	AI_Output(self,hero,"PC_Thief_GOTIT_Info_11_01"); //Hej, našel jsi to ohnisko. Výborně.
 //	AI_Output(self,hero,"PC_Thief_GOTIT_Info_11_02"); //I think it's time for me to stop by at the Old Camp again. Good luck.
 //	AI_Output(self,hero,"PC_Thief_GOTIT_Info_11_02"); //Ich werde mal wieder die Lage im Alten Lager prüfen. Viel Glück noch.
 	AI_Output(self,hero,"PC_Thief_GOTIT_Info_11_02"); //Myslím, že je čas zastavit se zase ve Starém táboře. Hodně štěstí.
@@ -1792,10 +1792,10 @@ func void PC_Thief_GOTIT_Info()
 
 //	B_LogEntry(CH3_TrollCanyon,"The focus is mine. But I still need to convince some harpies to let me keep it.");
 //	B_LogEntry(CH3_TrollCanyon,"Der Fokus ist mein. Ich mußte allerdings noch einige Harpien davon überzeugen, ihn mir zu überlassen.");
-	B_LogEntry(CH3_TrollCanyon,"Ohnisko je mé. Musím však ještě domluvit několika harpyjím, aby mě jej nechaly sebrat.");
+	B_LogEntry(CH3_TrollCanyon,"Ohnisko je mé. Musel jsem ale  domluvit několika harpyjím, aby mě jej nechaly sebrat.");
 //	B_LogEntry(CH3_TrollCanyon,"Diego's returning to the Old Camp. I'm quite sure we'll meet again.");
 //	B_LogEntry(CH3_TrollCanyon,"Diego kehrt zum Alten Lager zurück. Es sollte mich wundern, wenn wir uns nicht irgendwann mal wieder über den Weg laufen sollten.");
-	B_LogEntry(CH3_TrollCanyon,"Diego se vrací do Starého tábora. Jsem si jistý, že se s ním opět shledám.");
+	B_LogEntry(CH3_TrollCanyon,"Diego se vrací do Starého tábora. Byl bych překvapený, kdybychom se někdy ještě nepotkali.");
 
  	self.aivar[AIV_PARTYMEMBER] = FALSE;
 
@@ -1841,19 +1841,19 @@ func void Info_Diego_OCWARN_Info()
 	{
 //		AI_Output(hero,self,"Info_Diego_OCWARN_15_02"); //Hello, Diego, I've already talked to Milten on the other side of the Camp!
 //		AI_Output(hero,self,"Info_Diego_OCWARN_15_02"); //Hallo, Diego, ich habe Milten auf der anderen Seite des Lagers schon gesprochen!
-		AI_Output(hero,self,"Info_Diego_OCWARN_15_02"); //Nazdar, Diego, už jsem mluvil s Miltenem na druhém konci tábora!
+		AI_Output(hero,self,"Info_Diego_OCWARN_15_02"); //Ahoj, Diego, už jsem mluvil s Miltenem na druhém konci tábora!
 //		AI_Output(self,hero,"Info_Diego_OCWARN_11_03"); //Okay, so you already know what happened.
 //		AI_Output(self,hero,"Info_Diego_OCWARN_11_03"); //Gut, dann weißt du ja schon, was passiert ist.
 		AI_Output(self,hero,"Info_Diego_OCWARN_11_03"); //Dobře, tak už víš, co se stalo.
 //		AI_Output(self,hero,"Info_Diego_OCWARN_11_04"); //But did you also hear about the planned raid on the Free Mine?
 //		AI_Output(self,hero,"Info_Diego_OCWARN_11_04"); //Aber weißt du auch von dem geplanten Überfall auf die Freie Mine?
-		AI_Output(self,hero,"Info_Diego_OCWARN_11_04"); //Ale slyšel jsi také o plánovaném útoku na Svobodný důl?
+		AI_Output(self,hero,"Info_Diego_OCWARN_11_04"); //Ale víš také o plánovaném útoku na Svobodný důl?
 	}
 	else
 	{
 //		AI_Output(hero,self,"Info_Diego_OCWARN_15_05"); //Hello, Diego, what's the meaning of all this hide-and-seek business?
 //		AI_Output(hero,self,"Info_Diego_OCWARN_15_05"); //Hallo, Diego, warum dieses Versteckspiel?
-		AI_Output(hero,self,"Info_Diego_OCWARN_15_05"); //Nazdar, Diego, co má znamenat ta hra na schovávanou?
+		AI_Output(hero,self,"Info_Diego_OCWARN_15_05"); //Ahoj, Diego, co má znamenat ta hra na schovávanou?
 //		AI_Output(self,hero,"Info_Diego_OCWARN_11_06"); //Haven't you heard?
 //		AI_Output(self,hero,"Info_Diego_OCWARN_11_06"); //Hast du es noch nicht gehört?
 		AI_Output(self,hero,"Info_Diego_OCWARN_11_06"); //Tys to ještě neslyšel?
@@ -1920,7 +1920,7 @@ instance Info_Diego_OCKDF(C_INFO)
 	permanent = 0;
 //	description = "Why are the fire mages dead?";
 //	description = "Wieso sind die Feuermagier tot?";
-	description = "Proč zemřeli mágové?";
+	description = "Proč zemřeli mágové Ohně?";
 };
 
 func int Info_Diego_OCKDF_Condition()
@@ -1935,7 +1935,7 @@ func void Info_Diego_OCKDF_Info()
 {
 //	AI_Output(hero,self,"Info_Diego_OCKDF_15_01"); //Why are the fire mages dead?
 //	AI_Output(hero,self,"Info_Diego_OCKDF_15_01"); //Wieso sind die Feuermagier tot?
-	AI_Output(hero,self,"Info_Diego_OCKDF_15_01"); //Proč zemřeli mágové?
+	AI_Output(hero,self,"Info_Diego_OCKDF_15_01"); //Proč zemřeli mágové Ohně?
 //	AI_Output(self,hero,"Info_Diego_OCKDF_11_02"); //That's a long story.
 //	AI_Output(self,hero,"Info_Diego_OCKDF_11_02"); //Das ist eine etwas längere Geschichte.
 	AI_Output(self,hero,"Info_Diego_OCKDF_11_02"); //To je dlouhý příběh.
@@ -2004,16 +2004,16 @@ func void Info_Diego_OCSTORY_Info()
 	AI_Output(hero,self,"Info_Diego_OCSTORY_15_01"); //Jen mi o tom řekni! Nebude to první dlouhý příběh, který vyslechnu!
 //	AI_Output(self,hero,"Info_Diego_OCSTORY_11_02"); //Well then. Luckily, I was in the Ore Barons' house when they got the news that the mine had collapsed.
 //	AI_Output(self,hero,"Info_Diego_OCSTORY_11_02"); //Nun gut. Ich hatte das Glück, mich beim Eintreffen der Nachricht vom Einsturz der Mine im Haus der Erzbarone aufzuhalten.
-	AI_Output(self,hero,"Info_Diego_OCSTORY_11_02"); //Dobrá. Když jsme dostali zprávu o zatopení dolu, byl jsem naštěstí doma u Rudobaronů.
+	AI_Output(self,hero,"Info_Diego_OCSTORY_11_02"); //Dobrá. Měl jsem štěstí, že jsem zrovna byl v sále Rudobaronů, když jsme dostali zprávu o zatopení dolu.
 //	AI_Output(self,hero,"Info_Diego_OCSTORY_11_03"); //Gomez was hopping mad when he heard about the accident and he was afraid that his position could be at stake.
 //	AI_Output(self,hero,"Info_Diego_OCSTORY_11_03"); //Gomez war über das Unglück völlig außer sich und sah dadurch sofort seine Machtposition gefährdet.
-	AI_Output(self,hero,"Info_Diego_OCSTORY_11_03"); //Gomez vyskakoval jako šílený, když se doslechl o tom neštěstí a začal se obávat, že bude jeho postavení ohroženo.
+	AI_Output(self,hero,"Info_Diego_OCSTORY_11_03"); //Gomez byl vzteky bez sebe, když se doslechl o tom neštěstí a začal se bát o své postavení.
 //	AI_Output(hero,self,"Info_Diego_OCSTORY_15_04"); //Of course. Who controls the ore controls the colony as well!
 //	AI_Output(hero,self,"Info_Diego_OCSTORY_15_04"); //Klar. Wer das Erz kontrolliert, kontrolliert die Kolonie!
-	AI_Output(hero,self,"Info_Diego_OCSTORY_15_04"); //Samozřejmě. Kdo řídí obchod s rudou, ovládá kolonii!
+	AI_Output(hero,self,"Info_Diego_OCSTORY_15_04"); //Samozřejmě. Kdo řídí obchod s rudou, ovládá Kolonii!
 //	AI_Output(self,hero,"Info_Diego_OCSTORY_11_05"); //That's right. Since he has no source of income any more, the goods from the outside world won't come in any more, either.
 //	AI_Output(self,hero,"Info_Diego_OCSTORY_11_05"); //Richtig. Nun, da er von seiner einzigen Einnahmequelle abgeschnitten ist, wird auch der Warenfluß von der Außenwelt bald stoppen.
-	AI_Output(self,hero,"Info_Diego_OCSTORY_11_05"); //To je pravda. Protože už neměl žádný zdroj příjmů, zboží z vnějšího světa už nebylo za co nakupovat.
+	AI_Output(self,hero,"Info_Diego_OCSTORY_11_05"); //To je pravda. Teď, když přišel o jediný zdroj příjmů, nebude mít za co nakupovat zboží z vnějšího světa.
 //	AI_Output(self,hero,"Info_Diego_OCSTORY_11_06"); //Nobody will work for him if he doesn't get another source of income soon.
 //	AI_Output(self,hero,"Info_Diego_OCSTORY_11_06"); //Niemand wird mehr für ihn arbeiten wollen, wenn nicht bald eine andere Einnahmequelle aufgetrieben wird.
 	AI_Output(self,hero,"Info_Diego_OCSTORY_11_06"); //Nikdo už pro něj nebude pracovat, pokud brzy nenajde jiný zdroj příjmů.
@@ -2022,7 +2022,7 @@ func void Info_Diego_OCSTORY_Info()
 	AI_Output(hero,self,"Info_Diego_OCSTORY_15_07"); //A to je ten důvod útoku na Svobodný důl?
 //	AI_Output(self,hero,"Info_Diego_OCSTORY_11_08"); //To be honest, that's Gomez' only chance to maintain his power.
 //	AI_Output(self,hero,"Info_Diego_OCSTORY_11_08"); //Das ist - neutral betrachtet - die einzige Chance, die Gomez hat, seine Macht zu erhalten.
-	AI_Output(self,hero,"Info_Diego_OCSTORY_11_08"); //Popravdě řečeno - je to jediná  Gomezova šance, jak si zachovat svou moc.
+	AI_Output(self,hero,"Info_Diego_OCSTORY_11_08"); //Popravdě řečeno - je to jediná šance, jak si může Gomez zachovat svou moc.
 //	AI_Output(self,hero,"Info_Diego_OCSTORY_11_09"); //Two hours ago two dozen guards set out for the Free Mine.
 //	AI_Output(self,hero,"Info_Diego_OCSTORY_11_09"); //Vor einigen Stunden sind zwei Dutzend Gardisten in Richtung Freie Mine aufgebrochen.
 	AI_Output(self,hero,"Info_Diego_OCSTORY_11_09"); //Před dvěma hodinami obsadily dva tucty strážců Svobodný důl.
@@ -2060,13 +2060,13 @@ func void Info_Diego_OCWARNNC_Info()
 	AI_Output(hero,self,"Info_Diego_OCWARNNC_15_01"); //To je šílené! Musím varovat Nový tábor.
 //	AI_Output(self,hero,"Info_Diego_OCWARNNC_11_02"); //Then you must hurry up! They'll have almost reached the Free Mine.
 //	AI_Output(self,hero,"Info_Diego_OCWARNNC_11_02"); //Dann solltest du dich beeilen, denn sie dürften die Freie Mine schon fast erreicht haben.
-	AI_Output(self,hero,"Info_Diego_OCWARNNC_11_02"); //Pak si musíš pospíšit! Už téměř dorazili ke Svobodnému dolu!
+	AI_Output(self,hero,"Info_Diego_OCWARNNC_11_02"); //Pak si musíš pospíšit! Už určitě skoro dorazili ke Svobodnému dolu!
 //	AI_Output(hero,self,"Info_Diego_OCWARNNC_15_03"); //But they never get through the fortifications of the New Camp.
 //	AI_Output(hero,self,"Info_Diego_OCWARNNC_15_03"); //Aber sie würden niemals an den Befestigungen des Neuen Lagers vorbeikommen.
 	AI_Output(hero,self,"Info_Diego_OCWARNNC_15_03"); //Nikdy se ale nedostanou přes opevnění Nového tábora.
 //	AI_Output(self,hero,"Info_Diego_OCWARNNC_11_04"); //They don't need to get through them. A few months ago, they found a path that leads over the mountains and right to the Free Mine - and nobody else knows about it.
 //	AI_Output(self,hero,"Info_Diego_OCWARNNC_11_04"); //Das ist nicht nötig. Schon vor einigen Monaten haben sie einen Weg über die Berge zur Freien Mine gefunden, den niemand sonst kennt.
-	AI_Output(self,hero,"Info_Diego_OCWARNNC_11_04"); //Nepotřebují se přes něj dostat. Před pár měsíci našli průchod horami přímo ke Svobodnému dolu, který nikdo jiný neznal.
+	AI_Output(self,hero,"Info_Diego_OCWARNNC_11_04"); //Nepotřebují se přes něj dostat. Před pár měsíci našli cestu přes hory přímo ke Svobodnému dolu, který dosud nikdo jiný neznal.
 };
 
 //***************************************************************************
@@ -2099,7 +2099,7 @@ func void Info_Diego_OCGUARDS_Info()
 	AI_Output(hero,self,"Info_Diego_OCGUARDS_15_01"); //Viděl jsem stráže před zamčenou bránou.
 //	AI_Output(self,hero,"Info_Diego_OCGUARDS_11_02"); //Stay away from them. They'll attack anybody approaching the Camp.
 //	AI_Output(self,hero,"Info_Diego_OCGUARDS_11_02"); //Halt dich bloß von ihnen fern. Sie greifen jeden an, der sich dem Lager nähert.
-	AI_Output(self,hero,"Info_Diego_OCGUARDS_11_02"); //Drž se odtamtud dál. Napadnou každého, kdo se přiblíží k táboru.
+	AI_Output(self,hero,"Info_Diego_OCGUARDS_11_02"); //Drž se odtamtud dál. Napadnou každého, kdo se k táboru přiblíží.
 //	AI_Output(self,hero,"Info_Diego_OCGUARDS_11_03"); //They are afraid of somebody avenging the raid on the Free Mine.
 //	AI_Output(self,hero,"Info_Diego_OCGUARDS_11_03"); //Sie haben wohl Angst vor den Vergeltungsmaßnahmen nach dem Überfall auf die Freie Mine.
 	AI_Output(self,hero,"Info_Diego_OCGUARDS_11_03"); //Mají strach, že se jim někdo pomstí za útok na Svobodný důl.
@@ -2144,7 +2144,7 @@ func void Info_Diego_OCMURDER_Info()
 	AI_Output(hero,self,"Info_Diego_OCMURDER_15_04"); //Oni ZAKÁZALI Gomezovi zaútočit na Svobodný důl?
 //	AI_Output(self,hero,"Info_Diego_OCMURDER_11_05"); //Well, yes, Corristo and the others shouldn't have been so self-confident. Gomez didn't trust them any more and had them perfidiously assassinated.
 //	AI_Output(self,hero,"Info_Diego_OCMURDER_11_05"); //Tja, Corristo und die anderen hätten wohl weniger forsch auftreten sollen. Gomez verlor das Vertrauen zu ihnen und ließ sie hinterrücks niederstrecken.
-	AI_Output(self,hero,"Info_Diego_OCMURDER_11_05"); //Přesně tak. Corristo a ostatní si neměli být tak sebejistí. Gomez jim přestal důvěřovat, a tak je nechal sprostě zavraždit.
+	AI_Output(self,hero,"Info_Diego_OCMURDER_11_05"); //Přesně tak. Corristo a ostatní si neměli být tak sebejistí. Gomez jim přestal důvěřovat, a nechal je sprostě zavraždit.
 };
 
 //***************************************************************************
@@ -2195,7 +2195,7 @@ instance Info_Diego_OCFAVOR(C_INFO)
 	permanent = 0;
 //	description = "Consider it done. Tell me what you want!";
 //	description = "Ist schon so gut wie erledigt. Sprich!";
-	description = "Rozhodně ano. Řekni, co ode mě chceš!";
+	description = "Považuj ji za splněnou. Řekni, co potřebuješ!";
 };
 
 func int Info_Diego_OCFAVOR_Condition()
@@ -2210,7 +2210,7 @@ func void Info_Diego_OCFAVOR_Info()
 {
 //	AI_Output(hero,self,"Info_Diego_OCFAVOR_15_01"); //Consider it done. Tell me what you want!
 //	AI_Output(hero,self,"Info_Diego_OCFAVOR_15_01"); //Ist schon so gut wie erledigt. Sprich!
-	AI_Output(hero,self,"Info_Diego_OCFAVOR_15_01"); //Rozhodně ano. Řekni, co ode mě chceš!
+	AI_Output(hero,self,"Info_Diego_OCFAVOR_15_01"); //Považuj ji za splněnou. Řekni, co potřebuješ!
 //	AI_Output(self,hero,"Info_Diego_OCFAVOR_11_02"); //Look out for Lester and Gorn. They need to know what happened here.
 //	AI_Output(self,hero,"Info_Diego_OCFAVOR_11_02"); //Suche Lester und Gorn. Sie müssen wissen, was hier passiert ist.
 	AI_Output(self,hero,"Info_Diego_OCFAVOR_11_02"); //Zajdi za Lesterem a Gornem. Musí se dozvědět, co se tu stalo.

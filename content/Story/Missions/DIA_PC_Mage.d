@@ -22,7 +22,7 @@ func void DIA_Milten_EXIT_Info()
 	{
 //		AI_Output(self,hero,"DIA_Milten_EXIT_02_00"); //On we go.
 //		AI_Output(self,hero,"DIA_Milten_EXIT_02_00"); //Weiter geht's.
-		AI_Output(self,hero,"DIA_Milten_EXIT_02_00"); //Jdeme.
+		AI_Output(self,hero,"DIA_Milten_EXIT_02_00"); //Pokračujeme.
 	}
 	else
 	{
@@ -137,8 +137,7 @@ func void DIA_Milten_GotoCorristo_Info()
 //		//AI_Output(self,other,"DIA_Milten_Letter_02_01"); //Bist du ein Bote aus der Außenwelt?
 //		//AI_Output(self,other,"DIA_Milten_Letter_02_01"); //Jsi kurýr z vnějšího světa?
 //		//AI_Output(other,self,"DIA_Milten_Letter_15_02"); //Ja. Ein Magier gab mir den Brief, kurz bevor sie mich in die Kolonie geworfen haben.
-//		//AI_Output(other,self,"DIA_Milten_Letter_15_02"); //Ano. Mágové mi dali ten dopis krátce předtím, než mě poslali do téhle kolonie.
-		//Ano. Mágové mi dali ten dopis krátce předtím, než mě poslali do téhle kolonie.
+//		//AI_Output(other,self,"DIA_Milten_Letter_15_02"); //Ano. Jeden mág mi dal tento dopis krátce předtím, než mě poslali do Kolonie.
 //		AI_Output(self,other,"DIA_Milten_Letter_02_03"); //Show me the letter.
 //		AI_Output(self,other,"DIA_Milten_Letter_02_03"); //Zeig mir den Brief.
 		AI_Output(self,other,"DIA_Milten_Letter_02_03"); //Ukaž mi ten dopis.
@@ -165,10 +164,10 @@ func void DIA_Milten_GotoCorristo_Info()
 
 //	AI_Output(self,other,"DIA_Milten_GotoCorristo_02_01"); //We have heard what you achieved in the Old Mine. Without the minecrawlers, ore mining has become much safer.
 //	AI_Output(self,other,"DIA_Milten_GotoCorristo_02_01"); //Wir haben von deiner Leistung in der Alten Mine gehört. Ohne die Minecrawler ist der Erzabbau viel sicherer geworden.
-	AI_Output(self,other,"DIA_Milten_GotoCorristo_02_01"); //Slyšeli jsme, co jste dokázali ve Starém dole. Bez důlních červů se ruda získává daleko snadněji.
+	AI_Output(self,other,"DIA_Milten_GotoCorristo_02_01"); //Slyšeli jsme, co jsi dokázal ve Starém dole. Bez důlních červů se ruda získává daleko snadněji.
 //	AI_Output(self,other,"DIA_Milten_GotoCorristo_02_02"); //Corristo knows of your achievements, too. He wishes to speak to you. Go to him.
 //	AI_Output(self,other,"DIA_Milten_GotoCorristo_02_02"); //Auch Corristo weiß davon. Er wünscht dich zu sprechen. Geh zu ihm.
-	AI_Output(self,other,"DIA_Milten_GotoCorristo_02_02"); //Corristo o vašem úspěchu taky ví. Chce s tebou mluvit. Jdi za ním.
+	AI_Output(self,other,"DIA_Milten_GotoCorristo_02_02"); //Corristo také ví o tvém úspěchu. Chce s tebou mluvit. Jdi za ním.
 };
 
 //*********************************************
@@ -208,7 +207,7 @@ func void DIA_Milten_Letter_Info()
 	AI_Output(self,other,"DIA_Milten_Letter_02_01"); //Jsi kurýr z vnějšího světa?
 //	AI_Output(other,self,"DIA_Milten_Letter_15_02"); //Yes. A magician gave me the letter shortly before they threw me into the colony.
 //	AI_Output(other,self,"DIA_Milten_Letter_15_02"); //Ja. Ein Magier gab mir den Brief, kurz bevor sie mich in die Kolonie geworfen haben.
-	AI_Output(other,self,"DIA_Milten_Letter_15_02"); //Ano. Mágové mi dali ten dopis krátce předtím, než mě poslali do téhle kolonie.
+	AI_Output(other,self,"DIA_Milten_Letter_15_02"); //Ano. Jeden mág mi dal tento dopis krátce předtím, než mě poslali do Kolonie.
 //	AI_Output(self,other,"DIA_Milten_Letter_02_03"); //Show me the letter.
 //	AI_Output(self,other,"DIA_Milten_Letter_02_03"); //Zeig mir den Brief.
 	AI_Output(self,other,"DIA_Milten_Letter_02_03"); //Ukaž mi ten dopis.
@@ -231,19 +230,19 @@ func void DIA_Milten_Letter_Give()
 	B_GiveXP(XP_XardasLetter);
 //	AI_Output(self,other,"DIA_Milten_Letter_Give_02_03"); //This letter is addressed to Xardas!
 //	AI_Output(self,other,"DIA_Milten_Letter_Give_02_03"); //Das ist ein Brief an Xardas!
-	AI_Output(self,other,"DIA_Milten_Letter_Give_02_03"); //Ten dopis je adresován Xardasovi.
+	AI_Output(self,other,"DIA_Milten_Letter_Give_02_03"); //Ten dopis je adresován Xardasovi!
 //	AI_Output(other,self,"DIA_Milten_Letter_Give_15_04"); //What's so exciting about that?
 //	AI_Output(other,self,"DIA_Milten_Letter_Give_15_04"); //Und was ist daran so aufregend?
 	AI_Output(other,self,"DIA_Milten_Letter_Give_15_04"); //A co je na tom tak divného?
 //	AI_Output(self,other,"DIA_Milten_Letter_Give_02_05"); //Xardas has not been a servant of Innos for ages. He left us some years ago and turned towards black magic.
 //	AI_Output(self,other,"DIA_Milten_Letter_Give_02_05"); //Xardas ist schon lange kein Diener Innos mehr. Vor einigen Jahren hat er uns verlassen und sich der schwarzen Magie zugewandt.
-	AI_Output(self,other,"DIA_Milten_Letter_Give_02_05"); //Xardas už není dlouho Innosův služebník. Odešel od nás už před celými věky a dal se na černou magii.
+	AI_Output(self,other,"DIA_Milten_Letter_Give_02_05"); //Xardas už dlouho není Innosovým služebníkem. Odešel od nás už před celými věky a dal se na černou magii.
 //	AI_Output(self,other,"DIA_Milten_Letter_Give_02_06"); //He lives in a tower in the middle of the Orc land and concentrates on his studies.
 //	AI_Output(self,other,"DIA_Milten_Letter_Give_02_06"); //Er lebt in einem Turm mitten im Orkgebiet und widmet sich dort seinen Studien.
-	AI_Output(self,other,"DIA_Milten_Letter_Give_02_06"); //Žije ve věži uprostřed skřetího území a soustředí se na studium.
+	AI_Output(self,other,"DIA_Milten_Letter_Give_02_06"); //Žije ve věži uprostřed skřetího území a soustředí se na svá studia.
 //	AI_Output(self,other,"DIA_Milten_Letter_Give_02_07"); //He said he would go his own way to find out what went wrong with the Barrier.
 //	AI_Output(self,other,"DIA_Milten_Letter_Give_02_07"); //Er sagte, er wolle auf seine Art herausfinden, was mit der Barriere nicht stimmt.
-	AI_Output(self,other,"DIA_Milten_Letter_Give_02_07"); //Řekl, že by mohl přijít na to, co se pokazilo na Bariéře.
+	AI_Output(self,other,"DIA_Milten_Letter_Give_02_07"); //Říkal, že chce sám přijít na to, co se pokazilo na Bariéře.
 
 //	AI_Output(self,other,"DIA_Milten_Letter_Give_02_08"); //Wait here. I'll be back in a moment.
 //	AI_Output(self,other,"DIA_Milten_Letter_Give_02_08"); //Warte hier. Ich bin gleich wieder da.
@@ -271,14 +270,14 @@ func void DIA_Milten_Letter_NO()
 	AI_Output(other,self,"DIA_Milten_Letter_NO_15_00"); //Nejdřív chci svoji odměnu.
 //	AI_Output(self,other,"DIA_Milten_Letter_NO_02_01"); //Corristo will ask Torrez to give it to you as soon as he has the letter.
 //	AI_Output(self,other,"DIA_Milten_Letter_NO_02_01"); //Corristo wird Torrez anweisen, sie dir zu geben, sobald er den Brief erhalten hat.
-	AI_Output(self,other,"DIA_Milten_Letter_NO_02_01"); //Corristo řekne Torrezovi, aby ti ji dal, jakmile dostane ten dopis.
+	AI_Output(self,other,"DIA_Milten_Letter_NO_02_01"); //Corristo dá vědět Torrezovi, aby ti ji dal, hned jak dostane ten dopis.
 //	AI_Output(self,other,"DIA_Milten_Letter_NO_02_02"); //I'm a servant of Innos - I never lie. Now give me the letter.
 //	AI_Output(self,other,"DIA_Milten_Letter_NO_02_02"); //Ich bin ein Diener Innos - ich lüge niemals. Gib mir den Brief jetzt.
 	AI_Output(self,other,"DIA_Milten_Letter_NO_02_02"); //Jsem Innosův služebník - nikdy nelžu. Teď mi dej ten dopis.
 	Info_ClearChoices(DIA_Milten_Letter);
 //	Info_AddChoice(DIA_Milten_Letter,"I'd rather give the letter to Torrez himself.",DIA_Milten_Letter_NO_AGAIN);
 //	Info_AddChoice(DIA_Milten_Letter,"Ich möchte den Brief lieber Torrez direkt geben.",DIA_Milten_Letter_NO_AGAIN);
-	Info_AddChoice(DIA_Milten_Letter,"Raději bych ten dopis dal Torrezovi sám.",DIA_Milten_Letter_NO_AGAIN);
+	Info_AddChoice(DIA_Milten_Letter,"Raději bych ten dopis dal přímo Torrezovi.",DIA_Milten_Letter_NO_AGAIN);
 //	Info_AddChoice(DIA_Milten_Letter,"Here it is.",DIA_Milten_Letter_Give);
 //	Info_AddChoice(DIA_Milten_Letter,"Hier ist er.",DIA_Milten_Letter_Give);
 	Info_AddChoice(DIA_Milten_Letter,"Tady je,",DIA_Milten_Letter_Give);
@@ -288,7 +287,7 @@ func void DIA_Milten_Letter_NO_AGAIN()
 {
 //	AI_Output(other,self,"DIA_Milten_Letter_NO_AGAIN_15_00"); //I'd rather give the letter to Torrez himself.
 //	AI_Output(other,self,"DIA_Milten_Letter_NO_AGAIN_15_00"); //Ich möchte den Brief lieber Torrez direkt geben.
-	AI_Output(other,self,"DIA_Milten_Letter_NO_AGAIN_15_00"); //Raději bych ten dopis dal Torrezovi sám.
+	AI_Output(other,self,"DIA_Milten_Letter_NO_AGAIN_15_00"); //Raději bych ten dopis dal přímo Torrezovi.
 //	AI_Output(self,other,"DIA_Milten_Letter_NO_AGAIN_02_01"); //I can't talk you out of that, can I?
 //	AI_Output(self,other,"DIA_Milten_Letter_NO_AGAIN_02_01"); //Du lässt nicht mit dir reden, hm?
 	AI_Output(self,other,"DIA_Milten_Letter_NO_AGAIN_02_01"); //Ty nechceš, abych ho četl, viď?
@@ -297,7 +296,7 @@ func void DIA_Milten_Letter_NO_AGAIN()
 	AI_Output(other,self,"DIA_Milten_Letter_NO_AGAIN_15_02"); //Ne. Chci nejdřív vidět odměnu.
 //	AI_Output(self,other,"DIA_Milten_Letter_NO_AGAIN_02_03"); //Well then. If that's what you want. Wait here.
 //	AI_Output(self,other,"DIA_Milten_Letter_NO_AGAIN_02_03"); //Nun gut. Du willst es nicht anders. Warte hier.
-	AI_Output(self,other,"DIA_Milten_Letter_NO_AGAIN_02_03"); //Dobrá. Když teda chceš. Počkej tady.
+	AI_Output(self,other,"DIA_Milten_Letter_NO_AGAIN_02_03"); //Nu dobře. Když teda chceš. Počkej tady.
 
 	Info_ClearChoices(DIA_Milten_Letter);
 	AI_StopProcessInfos(self);
@@ -420,7 +419,7 @@ func void DIA_Milten_NochEinBrief_Info()
 	AI_Output(self,other,"DIA_Milten_NochEinBrief_02_01"); //Ach! Výborně! Dám ho Corristovi.
 //	AI_Output(self,other,"DIA_Milten_NochEinBrief_02_02"); //When you're back in the New Camp, the Magicians of Water will surely reward you for your efforts.
 //	AI_Output(self,other,"DIA_Milten_NochEinBrief_02_02"); //Wenn du wieder im Neuen Lager bist, werden die Wassermagier dich sicherlich für deine Mühen belohnen.
-	AI_Output(self,other,"DIA_Milten_NochEinBrief_02_02"); //Až se vrátíš do Nového tábora, mágové Vody tě jistě odmění za tvoji snahu.
+	AI_Output(self,other,"DIA_Milten_NochEinBrief_02_02"); //Až se vrátíš do Nového tábora, mágové Vody tě za tvoji snahu jistě odmění.
 
 	Cronos_Messenger = LOG_SUCCESS;
 	B_GiveInvItems(other,self,Cronos_Brief,1);
@@ -460,10 +459,10 @@ func void DIA_Milten_PERM_Info()
 	AI_Output(self,other,"DIA_Milten_PERM_02_01"); //Kruh ohně čerpá moc z milosti Innos. Bůh světla, pravdy a spravedlnosti na nás dozírá.
 //	AI_Output(self,other,"DIA_Milten_PERM_02_02"); //The magicians consider themselves to be the chosen ones - and that's how they treat others.
 //	AI_Output(self,other,"DIA_Milten_PERM_02_02"); //Die Magier betrachten sich selber als die Erwählten - und so behandeln sie auch alle anderen.
-	AI_Output(self,other,"DIA_Milten_PERM_02_02"); //Mágové se sami rozhodli, že se stanou vyvolenými - a takhle stanovili i ostatní.
+	AI_Output(self,other,"DIA_Milten_PERM_02_02"); //Mágové se sami rozhodli, že se stanou vyvolenými - a tak jednají i s ostatními.
 //	AI_Output(self,other,"DIA_Milten_PERM_02_03"); //I was lucky to be admitted. Corristo made me his apprentice. He probably just wanted some entertainment.
 //	AI_Output(self,other,"DIA_Milten_PERM_02_03"); //Ich hatte das Glück, damals aufgenommen zu werden. Corristo hat mich zu seinem Lehrling gemacht. Vermutlich hatte er einfach Lust auf Unterhaltung.
-	AI_Output(self,other,"DIA_Milten_PERM_02_03"); //Měl jsem štěstí, že jsem byl přijatý. Stal jsem se Corristovým učedníkem. Nejspíš potřeboval nějakou zábavu.
+	AI_Output(self,other,"DIA_Milten_PERM_02_03"); //Měl jsem štěstí, že jsem byl přijat. Corristo mě přijal za učedníka. Nejspíš potřeboval nějakou zábavu.
 //	AI_Output(self,other,"DIA_Milten_PERM_02_04"); //Since then, I've been trying to improve my magic skills every day in order to be admitted to the next Circle.
 //	AI_Output(self,other,"DIA_Milten_PERM_02_04"); //Seitdem bemühe ich mich jeden Tag, meine magischen Fähigkeiten zu steigern, damit ich in den nächsten Kreis aufgenommen werden kann.
 	AI_Output(self,other,"DIA_Milten_PERM_02_04"); //Od té doby jsem se pak snažil každý den zlepšovat v magickém umění, abych byl přijatý to dalšího Kruhu.
@@ -506,7 +505,7 @@ func void DIA_Milten_WannaMage_Info()
 	AI_Output(self,other,"DIA_Milten_WannaMage_02_02"); //Dokud nevykonáš něco opravdu významného, nikdy tě do učení nevezme.
 //	AI_Output(self,other,"DIA_Milten_WannaMage_02_03"); //Besides, you must belong to the Old Camp. I doubt if Corristo would take a member of any other camp for his apprentice.
 //	AI_Output(self,other,"DIA_Milten_WannaMage_02_03"); //Du mußt außerdem dem Alten Lager angehören. Ich kann mir nicht vorstellen, dass Corristo ein Mitglied eines anderen Lagers als Lehrling akzeptiert.
-	AI_Output(self,other,"DIA_Milten_WannaMage_02_03"); //Kromě toho musíš patřit ke Starému táboru. Pochybuju, že by Corristo přijal do učení někoho, kdo je členem nějakého jiného tábora.
+	AI_Output(self,other,"DIA_Milten_WannaMage_02_03"); //Kromě toho musíš patřit ke Starému táboru. Neumím si představit, že by Corristo přijal do učení někoho, kdo je členem nějakého jiného tábora.
 };
 
 //#####################################################################
@@ -546,13 +545,13 @@ func void Info_Milten_SHWAIT_Info()
 	AI_Output(self,hero,"Info_Milten_SHWAIT_02_01"); //Buď zdráv! Můj přítel Lester z tábora v bažinách mi řekl o tvých velkých skutcích!
 //	AI_Output(self,hero,"Info_Milten_SHWAIT_02_02"); //I am impressed. You have become very strong.
 //	AI_Output(self,hero,"Info_Milten_SHWAIT_02_02"); //Ich bin beeindruckt. Du bist sehr stark geworden.
-	AI_Output(self,hero,"Info_Milten_SHWAIT_02_02"); //Jsem ohromený. Stal ses velmi silný.
+	AI_Output(self,hero,"Info_Milten_SHWAIT_02_02"); //Jsem ohromen. Stal ses velmi silným.
 //	AI_Output(hero,self,"Info_Milten_SHWAIT_15_03"); //I do my best.
 //	AI_Output(hero,self,"Info_Milten_SHWAIT_15_03"); //Man tut, was man kann.
 	AI_Output(hero,self,"Info_Milten_SHWAIT_15_03"); //Dělám, jak umím.
 //	AI_Output(self,hero,"Info_Milten_SHWAIT_02_04"); //Ah, yes. Always modest, aren't you?
 //	AI_Output(self,hero,"Info_Milten_SHWAIT_02_04"); //Ja, ja, immer bescheiden, was?
-	AI_Output(self,hero,"Info_Milten_SHWAIT_02_04"); //Jistě. Pořád skromný, že ano?
+	AI_Output(self,hero,"Info_Milten_SHWAIT_02_04"); //Ano, ano, stále skromný, že?
 };
 
 //***************************************************************************
@@ -591,7 +590,7 @@ func void Info_Milten_SHGORN_Info()
 	AI_Output(hero,self,"Info_Milten_SHGORN_15_03"); //U staré rozvaliny kláštera u moře. Hledali jsme tam oba poklad.
 //	AI_Output(self,hero,"Info_Milten_SHGORN_02_04"); //I am sure he'll tell me all about it when we meet again.
 //	AI_Output(self,hero,"Info_Milten_SHGORN_02_04"); //Davon wird er mir bei unserem nächsten Treffen bestimmt erzählen.
-	AI_Output(self,hero,"Info_Milten_SHGORN_02_04"); //Jsem přesvědčený, že mi všechno o tom bude vyprávět, až se spolu zase setkáme.
+	AI_Output(self,hero,"Info_Milten_SHGORN_02_04"); //Jsem přesvědčený, že mi o tom bude vyprávět, až se spolu zase setkáme.
 };
 
 //***************************************************************************
@@ -621,10 +620,10 @@ func void Info_Milten_SHLESTER_Info()
 {
 //	AI_Output(hero,self,"Info_Milten_SHLESTER_15_01"); //Lester and I took out the mountain fort.
 //	AI_Output(hero,self,"Info_Milten_SHLESTER_15_01"); //Lester und ich haben die Bergfestung ausgenommen.
-	AI_Output(hero,self,"Info_Milten_SHLESTER_15_01"); //Byli jsme s Lesterem v horské pevnosti.
+	AI_Output(hero,self,"Info_Milten_SHLESTER_15_01"); //Vyloupili jsme s Lesterem horskou pevnost.
 //	AI_Output(self,hero,"Info_Milten_SHLESTER_02_02"); //He told me about it. Apparently you can be trusted.
 //	AI_Output(self,hero,"Info_Milten_SHLESTER_02_02"); //Er hat mir davon erzählt. Du scheinst vertrauenswürdig zu sein.
-	AI_Output(self,hero,"Info_Milten_SHLESTER_02_02"); //Říkal mi o tom. Podle všeho je možné ti věřit.
+	AI_Output(self,hero,"Info_Milten_SHLESTER_02_02"); //Vyprávěl mi o tom. Vypadá to, že ti můžeme věřit.
 //	AI_Output(hero,self,"Info_Milten_SHLESTER_15_03"); //Where have the four of you been meeting so far?
 //	AI_Output(hero,self,"Info_Milten_SHLESTER_15_03"); //Wo habt ihr vier euch bisher getroffen?
 	AI_Output(hero,self,"Info_Milten_SHLESTER_15_03"); //Kde jste se vy čtyři doposud setkávali?
@@ -663,7 +662,7 @@ func void Info_Milten_SHYOU_Info()
 	AI_Output(hero,self,"Info_Milten_SHYOU_15_01"); //Co děláš tady?
 //	AI_Output(self,hero,"Info_Milten_SHYOU_02_02"); //There is an ancient ring of stone not far from here. In its center lies the entrance to an underground vault.
 //	AI_Output(self,hero,"Info_Milten_SHYOU_02_02"); //Nicht weit von hier befindet sich ein uraltes Stonehenge, in dessen Mitte der Eingang zu einem unterirdischen Gewölbe liegt.
-	AI_Output(self,hero,"Info_Milten_SHYOU_02_02"); //Nedaleko odtud je prastarý kamenný kruh. V jeho středu leží vstup do podzemních prostor.
+	AI_Output(self,hero,"Info_Milten_SHYOU_02_02"); //Nedaleko odtud je prastarý kamenný kruh, v jeho středu leží vstup do podzemních prostory.
 //	AI_Output(hero,self,"Info_Milten_SHYOU_15_03"); //Some sort of tomb?
 //	AI_Output(hero,self,"Info_Milten_SHYOU_15_03"); //Eine Art Gruft?
 	AI_Output(hero,self,"Info_Milten_SHYOU_15_03"); //Nějaká hrobka?
@@ -687,7 +686,7 @@ instance Info_Milten_SHME(C_INFO)
 	permanent = 0;
 //	description = "I'm looking for a focus stone.";
 //	description = "Ich suche nach einem Fokusstein.";
-	description = "Hledám ohniskový kámen. Někde musí být.";
+	description = "Hledám ohniskový kámen.";
 };
 
 func int Info_Milten_SHME_Condition()
@@ -703,10 +702,10 @@ func void Info_Milten_SHME_Info()
 {
 //	AI_Output(hero,self,"Info_Milten_SHME_15_01"); //I'm looking for a focus stone. It must be here somewhere.
 //	AI_Output(hero,self,"Info_Milten_SHME_15_01"); //Ich suche nach einem Fokusstein. Er muss irgendwo hier in der Gegend sein.
-	AI_Output(hero,self,"Info_Milten_SHME_15_01"); //Hledám ohniskový kámen. Někde musí být.
+	AI_Output(hero,self,"Info_Milten_SHME_15_01"); //Hledám ohniskový kámen. Někde tady v okolí musí být.
 //	AI_Output(self,hero,"Info_Milten_SHME_02_02"); //That almost sounds as if we were both looking for something in the same place.
 //	AI_Output(self,hero,"Info_Milten_SHME_02_02"); //Hört sich fast so an, als ob wir beide etwas am gleichen Ort suchen würden.
-	AI_Output(self,hero,"Info_Milten_SHME_02_02"); //Vypadá to, jako bysme oba něco hledali na stejném místě.
+	AI_Output(self,hero,"Info_Milten_SHME_02_02"); //Vypadá to, jako bychom oba něco hledali na stejném místě.
 };
 
 //***************************************************************************
@@ -745,10 +744,10 @@ func void Info_Milten_SHPROBLEM_Info()
 	AI_Output(hero,self,"Info_Milten_SHPROBLEM_15_03"); //Vyprávěj, já nespěchám.
 //	AI_Output(self,hero,"Info_Milten_SHPROBLEM_02_04"); //Alright! After the creation of the Magic Barrier which imprisons us all...
 //	AI_Output(self,hero,"Info_Milten_SHPROBLEM_02_04"); //Nun gut! Nach der Erschaffung der magischen Barriere, die uns alle hier gefangen hält ...
-	AI_Output(self,hero,"Info_Milten_SHPROBLEM_02_04"); //Dobře!  Po vytvoření magické Bariéry, která nás všechny uvěznila...
+	AI_Output(self,hero,"Info_Milten_SHPROBLEM_02_04"); //Dobře! Po vytvoření magické Bariéry, která nás všechny uvěznila...
 //	AI_Output(self,hero,"Info_Milten_SHPROBLEM_02_05"); //... one of the magicians sealed a magic artefact down there.
 //	AI_Output(self,hero,"Info_Milten_SHPROBLEM_02_05"); //...hat einer der beteiligten Magier ein magisches Artefakt dort unten versiegelt.
-	AI_Output(self,hero,"Info_Milten_SHPROBLEM_02_05"); //...jeden mág schoval tady dole nějaký magický artefakt.
+	AI_Output(self,hero,"Info_Milten_SHPROBLEM_02_05"); //...zapečetil tam dole jeden mág nějaký magický artefakt.
 };
 
 //***************************************************************************
@@ -781,10 +780,10 @@ func void Info_Milten_SHFOCUS_Info()
 	AI_Output(hero,self,"Info_Milten_SHFOCUS_15_01"); //Není ten artefakt jeden z pěti ohniskových kamenů?
 //	AI_Output(self,hero,"Info_Milten_SHFOCUS_02_02"); //Exactly! So you already know the story of the five focus stones?
 //	AI_Output(self,hero,"Info_Milten_SHFOCUS_02_02"); //Genau! Dann kennst du die Geschichte der fünf Fokussteine wohl schon. 
-	AI_Output(self,hero,"Info_Milten_SHFOCUS_02_02"); //Přesně tak! Takže ty už znáš příběh pěti ohniskových kamenů?
+	AI_Output(self,hero,"Info_Milten_SHFOCUS_02_02"); //Přesně tak! Takže ty už znáš příběh pěti ohniskových kamenů.
 //	AI_Output(hero,self,"Info_Milten_SHFOCUS_15_03"); //Don't tell me you're after the focus as well!
 //	AI_Output(hero,self,"Info_Milten_SHFOCUS_15_03"); //Jetzt sag bloß, du bist auch hinter diesem Fokus her?
-	AI_Output(hero,self,"Info_Milten_SHFOCUS_15_03"); //Neříkej mi, že taky hledáš ohnisko!
+	AI_Output(hero,self,"Info_Milten_SHFOCUS_15_03"); //Neříkej mi, že také hledáš to ohnisko!
 //	AI_Output(self,hero,"Info_Milten_SHFOCUS_02_04"); //No. I'm not interested in the focus stone. I'm looking for an Orcish talisman.
 //	AI_Output(self,hero,"Info_Milten_SHFOCUS_02_04"); //Nein. Der Fokusstein interessiert mich nicht. Ich suche einen orkischen Talisman.
 	AI_Output(self,hero,"Info_Milten_SHFOCUS_02_04"); //Ne. Mě ohniskový kámen nezajímá. Já hledám skřetí talisman.
@@ -826,7 +825,7 @@ func void Info_Milten_SHSEAL_Info()
 	AI_Output(self,hero,"Info_Milten_SHSEAL_02_03"); //...bude proklet a začarován do nesmrtelné bytosti, která nepozná odpočinek a která bude střežit hrobku před dalšími vykradači hrobů.
 //	AI_Output(hero,self,"Info_Milten_SHSEAL_15_04"); //How can you get past that curse?
 //	AI_Output(hero,self,"Info_Milten_SHSEAL_15_04"); //Wie kommst du dann an diesem Bannzauber vorbei?
-	AI_Output(hero,self,"Info_Milten_SHSEAL_15_04"); //Jak se vymaníš z toho prokletí?
+	AI_Output(hero,self,"Info_Milten_SHSEAL_15_04"); //Jak se vyhneš té kletbě?
 //	AI_Output(self,hero,"Info_Milten_SHSEAL_02_05"); //There will be no need for that now.
 //	AI_Output(self,hero,"Info_Milten_SHSEAL_02_05"); //Das ist nicht mehr nötig.
 	AI_Output(self,hero,"Info_Milten_SHSEAL_02_05"); //To už nebude třeba.
@@ -835,7 +834,7 @@ func void Info_Milten_SHSEAL_Info()
 	AI_Output(self,hero,"Info_Milten_SHSEAL_02_06"); //Před několika lety se jeden Rudobaron, který z dlouhé chvíle lovil skřety, neopatrně přiblížil k hrobce a vstoupil do ní.
 //	AI_Output(self,hero,"Info_Milten_SHSEAL_02_07"); //Now HE is the guard of the treasures down there.
 //	AI_Output(self,hero,"Info_Milten_SHSEAL_02_07"); //Nun ist ER der Wächter über alle Schätze dort unten.
-	AI_Output(self,hero,"Info_Milten_SHSEAL_02_07"); //Teď je ON strážcem toho pokladu tady dole.
+	AI_Output(self,hero,"Info_Milten_SHSEAL_02_07"); //Teď je ON strážcem toho starého pokladu.
 };
 
 //***************************************************************************
@@ -902,7 +901,7 @@ func void Info_Milten_SHOFFER_Info()
 {
 //	AI_Output(hero,self,"Info_Milten_SHOFFER_15_01"); //We should seek out the tomb together! You get the talisman, and I'll have the focus stone.
 //	AI_Output(hero,self,"Info_Milten_SHOFFER_15_01"); //Wir sollten die Gruft gemeinsam ausheben! Du bekommst den Talisman und ich den Fokusstein.
-	AI_Output(hero,self,"Info_Milten_SHOFFER_15_01"); //Měli bysme hrobku prohledat společně. Ty dostaneš talisman a já ohniskový kámen.
+	AI_Output(hero,self,"Info_Milten_SHOFFER_15_01"); //Měli bychom hrobku prohledat společně. Ty dostaneš talisman a já ohniskový kámen.
 //	AI_Output(self,hero,"Info_Milten_SHOFFER_02_02"); //Alright, but there is one little problem...
 //	AI_Output(self,hero,"Info_Milten_SHOFFER_02_02"); //Einverstanden, aber da gibt es noch ein 'kleines' Problem ...
 	AI_Output(self,hero,"Info_Milten_SHOFFER_02_02"); //Dobře, je tu ale jeden malý problém...
@@ -911,13 +910,13 @@ func void Info_Milten_SHOFFER_Info()
 	AI_Output(hero,self,"Info_Milten_SHOFFER_15_03"); //Problém?
 //	AI_Output(self,hero,"Info_Milten_SHOFFER_02_04"); //Yes. The guard down there in the tomb...
 //	AI_Output(self,hero,"Info_Milten_SHOFFER_02_04"); //Ja. Der Wächter da unten in der Gruft ...
-	AI_Output(self,hero,"Info_Milten_SHOFFER_02_04"); //Ano. Ten strážce je dole v hrobce...
+	AI_Output(self,hero,"Info_Milten_SHOFFER_02_04"); //Ano. Ten strážce dole v hrobce...
 //	AI_Output(hero,self,"Info_Milten_SHOFFER_15_05"); //Can't he be cut into handy little pieces?
 //	AI_Output(hero,self,"Info_Milten_SHOFFER_15_05"); //Kann man ihn nicht in handliche Stücke zerlegen?
-	AI_Output(hero,self,"Info_Milten_SHOFFER_15_05"); //Nemůžeme ho rozsekat na kousky?
+	AI_Output(hero,self,"Info_Milten_SHOFFER_15_05"); //Nemůžeme ho prostě rozsekat na kousky?
 //	AI_Output(self,hero,"Info_Milten_SHOFFER_02_06"); //That wouldn't be too easy. He seems to be extremely resistant against the effects of normal weapons.
 //	AI_Output(self,hero,"Info_Milten_SHOFFER_02_06"); //Zumindest nicht so einfach. Er scheint gegen die Wirkung normaler Waffen extrem widerstandsfähig zu sein.
-	AI_Output(self,hero,"Info_Milten_SHOFFER_02_06"); //To by nebylo moc snadné. Myslím, že je výjimečně necitlivý vůči normálním zbraním.
+	AI_Output(self,hero,"Info_Milten_SHOFFER_02_06"); //To není tak snadné. Vypadá to, že je neuvěřitelně odolný vůči normálním zbraním.
 //	AI_Output(hero,self,"Info_Milten_SHOFFER_15_07"); //Let me guess, you already got a plan, right?
 //	AI_Output(hero,self,"Info_Milten_SHOFFER_15_07"); //Lass mich raten, du hast bereits einen Plan dafür, richtig?
 	AI_Output(hero,self,"Info_Milten_SHOFFER_15_07"); //Nech mě hádat, ty už máš připravený plán, viď?
@@ -971,7 +970,7 @@ func void Info_Milten_SHOFFER2_Info()
 	AI_Output(self,hero,"Info_Milten_SHOFFER2_02_06"); //Nejspíš nějaký pozdější vykradač hrobů, který nebyl o moc úspěšnější než ten první.
 //	AI_Output(self,hero,"Info_Milten_SHOFFER2_02_07"); //I went down there once, and I was nearly killed. One man on his own cannot do much there.
 //	AI_Output(self,hero,"Info_Milten_SHOFFER2_02_07"); //Ich war bereits einmal dort unten und wäre fast getötet worden. Einer alleine kann da nicht viel ausrichten.
-	AI_Output(self,hero,"Info_Milten_SHOFFER2_02_07"); //Jednou jsem sešel dolu a byl jsem málem zabit. Jeden muž tam sám jít nemůže.
+	AI_Output(self,hero,"Info_Milten_SHOFFER2_02_07"); //Jednou jsem sešel dolu a skoro mě zabili. Jeden muž tam sám jít nemůže.
 };
 
 //***************************************************************************
@@ -1007,10 +1006,10 @@ func void Info_Milten_SHACCEPT_Info()
 	AI_Output(self,hero,"Info_Milten_SHACCEPT_02_02"); //Dobře, velmi dobře. Doufal jsem, že to řekneš!
 //	AI_Output(self,hero,"Info_Milten_SHACCEPT_02_03"); //However, we only have one spell scroll. Use it for the guard!
 //	AI_Output(self,hero,"Info_Milten_SHACCEPT_02_03"); //Wir haben aber nur diese eine Spruchrolle. Benutze sie für den Wächter!
-	AI_Output(self,hero,"Info_Milten_SHACCEPT_02_03"); //Máme ale jenom jeden kouzelný svitek. použijeme ho na strážce!
+	AI_Output(self,hero,"Info_Milten_SHACCEPT_02_03"); //Máme ale jenom jeden kouzelný svitek. Použijeme ho na strážce!
 //	AI_Output(self,hero,"Info_Milten_SHACCEPT_02_04"); //The other undead can be defeated in normal fights as well.
 //	AI_Output(self,hero,"Info_Milten_SHACCEPT_02_04"); //Die anderen Untoten kann man auch im normalen Kampf besiegen.
-	AI_Output(self,hero,"Info_Milten_SHACCEPT_02_04"); //Ten druhý nemrtvý může být zabit i v normálním boji.
+	AI_Output(self,hero,"Info_Milten_SHACCEPT_02_04"); //Ostatní nemrtví mohou být zabiti i v normálním boji.
 //	AI_Output(hero,self,"Info_Milten_SHACCEPT_15_05"); //I see. Well, which way leads to the ring of stone?
 //	AI_Output(hero,self,"Info_Milten_SHACCEPT_15_05"); //Verstehe. Also, wo geht es zum Stonehenge?
 	AI_Output(hero,self,"Info_Milten_SHACCEPT_15_05"); //Aha. Která cesta vede ke kamennému kruhu?
@@ -1021,9 +1020,9 @@ func void Info_Milten_SHACCEPT_Info()
 	Log_CreateTopic(CH3_Stonehenge,LOG_MISSION);
 	Log_SetTopicStatus(CH3_Stonehenge,LOG_RUNNING);
 //	B_LogEntry(CH3_Stonehenge,"I met Milten, the Magician of Fire, near the ring of stone. He told me that one of the focus stones I'm looking for was in a crypt underneath the stone formation.");
-	B_LogEntry(CH3_Stonehenge,"Poblíž kamenného kruhu jsem potkal Miltena, mága Ohně. Řekl mi, že jeden z ohniskových kamenů, které hledám, je pod tímto kamenným útvarem.");
+	B_LogEntry(CH3_Stonehenge,"Poblíž kamenného kruhu jsem potkal Miltena, mága Ohně. Řekl mi, že jeden z ohniskových kamenů, které hledám, je pod tímto kamenným kruhem.");
 //	B_LogEntry(CH3_Stonehenge,"Milten gave me a spell scroll to defeat the undead guardian in the crypt. We'll get into the crypt together.");
-	B_LogEntry(CH3_Stonehenge,"Milten mi dal kouzelný svitek, který mi pomůže porazit nemrtvého strážce krypty. Půjdeme do krypty společně.");
+	B_LogEntry(CH3_Stonehenge,"Milten mi dal kouzelný svitek, který mi pomůže porazit nemrtvého strážce hrobky. Půjdeme do hrobky společně.");
 
 	CreateInvItem(self,ItArScrollDestroyUndead);
 	B_GiveInvItems(self,hero,ItArScrollDestroyUndead,1);
@@ -1299,7 +1298,7 @@ instance Info_Milten_SHCONTINUE(C_INFO)
 	permanent = 1;
 //	description = "Shall we dare to have another go at the guard?";
 //	description = "Wollen wir einen weiteren Versuch beim Wächter wagen?";
-	description = "Můžeme se znovu opovážit jít do té hrobky?";
+	description = "Chceme se znovu podívat do té hrobky?";
 };
 
 func int Info_Milten_SHCONTINUE_Condition()
@@ -1319,7 +1318,7 @@ func void Info_Milten_SHCONTINUE_Info()
 
 //	AI_Output(hero,self,"Info_Milten_SHCONTINUE_15_01"); //Shall we dare to have another go at the guard?
 //	AI_Output(hero,self,"Info_Milten_SHCONTINUE_15_01"); //Wollen wir einen weiteren Versuch beim Wächter wagen?
-	AI_Output(hero,self,"Info_Milten_SHCONTINUE_15_01"); //Můžeme se znovu opovážit jít do té hrobky?
+	AI_Output(hero,self,"Info_Milten_SHCONTINUE_15_01"); //Chceme se znovu podívat do té hrobky?
 //	AI_Output(self,hero,"Info_Milten_SHCONTINUE_02_02"); //I'm ready. Go ahead, I'll follow.
 //	AI_Output(self,hero,"Info_Milten_SHCONTINUE_02_02"); //Ich bin bereit. Geh voraus, ich folge dir!
 	AI_Output(self,hero,"Info_Milten_SHCONTINUE_02_02"); //Jsem připraven. Jdi napřed, já půjdu za tebou.
@@ -1355,7 +1354,7 @@ func void Info_Milten_SHSUCCESS_Info()
 
 //	AI_Output(self,hero,"Info_Milten_SHSUCCESS_02_01"); //Good. You have the talisman.
 //	AI_Output(self,hero,"Info_Milten_SHSUCCESS_02_01"); //Sehr gut. Du hast den Talisman!
-	AI_Output(self,hero,"Info_Milten_SHSUCCESS_02_01"); //Dobře. Máš talisman.
+	AI_Output(self,hero,"Info_Milten_SHSUCCESS_02_01"); //Výborně. Máš talisman.
 //	AI_Output(hero,self,"Info_Milten_SHSUCCESS_15_02"); //Here, take it. That was our deal!
 //	AI_Output(hero,self,"Info_Milten_SHSUCCESS_15_02"); //Hier, nimm ihn. So war unsere Abmachung!
 	AI_Output(hero,self,"Info_Milten_SHSUCCESS_15_02"); //Tady, vem si ho. To byla naše domluva!
@@ -1424,7 +1423,7 @@ func void Info_Milten_OCWARN_Info()
 		AI_Output(self,hero,"Info_Milten_OCWARN_02_03"); //Dobře, pak už to víš. Co říkal Diego?
 //		AI_Output(hero,self,"Info_Milten_OCWARN_15_04"); //If I can find Gorn and Lester, I'll warn them and send them to your meeting place.
 //		AI_Output(hero,self,"Info_Milten_OCWARN_15_04"); //Wenn ich Gorn und Lester finden kann, werde ich sie warnen, und zu eurem Versammlungsplatz schicken.
-		AI_Output(hero,self,"Info_Milten_OCWARN_15_04"); //Jestli najdu Gorna a Lestera, budu je varovat a pošlu je na místo vašeho srazu.
+		AI_Output(hero,self,"Info_Milten_OCWARN_15_04"); //Pokud najdu Gorna a Lestera, budu je varovat a pošlu je na místo vašeho srazu.
 //		AI_Output(self,hero,"Info_Milten_OCWARN_02_05"); //Good luck and take care!
 //		AI_Output(self,hero,"Info_Milten_OCWARN_02_05"); //Viel Glück und pass auf dich auf!
 		AI_Output(self,hero,"Info_Milten_OCWARN_02_05"); //Hodně štěstí a dávej pozor!
@@ -1454,7 +1453,7 @@ func void Info_Milten_OCWARN_Info()
 		AI_Output(hero,self,"Info_Milten_OCWARN_15_11"); //Starý důl byl ZAVALEN???
 //		AI_Output(self,hero,"Info_Milten_OCWARN_02_12"); //Yes. It all happened very fast. Nobody in the mine made it out.
 //		AI_Output(self,hero,"Info_Milten_OCWARN_02_12"); //Ja. Es ging alles sehr schnell. Keiner aus der Mine hat es herausgeschafft.
-		AI_Output(self,hero,"Info_Milten_OCWARN_02_12"); //Ano. Stalo se to velmi rychle. Nikdo z dolu neunikl.
+		AI_Output(self,hero,"Info_Milten_OCWARN_02_12"); //Ano. Stalo se to velmi rychle. Nikdo z dolu nedostal ven.
 //		AI_Output(self,hero,"Info_Milten_OCWARN_02_13"); //The guards blocked the entrance to the mine.
 //		AI_Output(self,hero,"Info_Milten_OCWARN_02_13"); //Die Gardisten haben den Mineneingang gesperrt.
 		AI_Output(self,hero,"Info_Milten_OCWARN_02_13"); //Stráže zablokovaly vchod do dolu.
@@ -1491,13 +1490,13 @@ func void Info_Milten_OCMINE_Info()
 	AI_Output(hero,self,"Info_Milten_OCMINE_15_01"); //Jak se mohl důl zavalit?
 //	AI_Output(self,hero,"Info_Milten_OCMINE_02_02"); //I've no idea. Some of the diggers who were waiting in front of the entrance said something about a massive earthquake and a huge cloud of dust coming from the tunnel.
 //	AI_Output(self,hero,"Info_Milten_OCMINE_02_02"); //Keine Ahnung. Einige Buddler, die vor dem Mineneingang warteten, erzählten von einem gewaltigen Beben und einer riesigen Staubwolke, die aus dem Stollen kam.
-	AI_Output(self,hero,"Info_Milten_OCMINE_02_02"); //Nemám zdání. Některý z kopáčů, kteří čekali vpředu u vchodu, říkali něco o silném zemětřesení a velkém oblaku dýmu, který vycházel z tunelu.
+	AI_Output(self,hero,"Info_Milten_OCMINE_02_02"); //Nemám zdání. Některý z kopáčů, kteří čekali vpředu u vchodu, říkali něco o silném zemětřesení a velkém oblaku dýmu, který se valil z hlavní štoly.
 //	AI_Output(hero,self,"Info_Milten_OCMINE_15_03"); //Were you there?
 //	AI_Output(hero,self,"Info_Milten_OCMINE_15_03"); //Warst du dort?
 	AI_Output(hero,self,"Info_Milten_OCMINE_15_03"); //Byl jsi tam?
 //	AI_Output(self,hero,"Info_Milten_OCMINE_02_04"); //Yes. That's where I learned about the cave-in.
 //	AI_Output(self,hero,"Info_Milten_OCMINE_02_04"); //Ja. Dort erfuhr ich dann auch vom Einsturz.
-	AI_Output(self,hero,"Info_Milten_OCMINE_02_04"); //Ano. Proto vím o tom závalu.
+	AI_Output(self,hero,"Info_Milten_OCMINE_02_04"); //Ano. Tam jsem se o tom závalu dozvěděl.
 };
 
 //***************************************************************************
@@ -1512,7 +1511,7 @@ instance Info_Milten_OCKDW(C_INFO)
 	permanent = 0;
 //	description = "What was that you said about the Magicians of Fire?";
 //	description = "Was sagtest du über die Feuermagier?";
-	description = "Proč by Rudobaroni chtěli zabít mágy Ohně?";
+	description = "Cos to říkal o mázích Ohně?";
 };
 
 func int Info_Milten_OCKDW_Condition()
@@ -1536,7 +1535,7 @@ func void Info_Milten_OCKDW_Info()
 	AI_Output(self,hero,"Info_Milten_OCKDW_02_03"); //Když jsem se vrátil po našem dobrodružství u kamenného kruhu, stráže u brány mě znenadání napadly.
 //	AI_Output(self,hero,"Info_Milten_OCKDW_02_04"); //They shouted words like 'traitor' and 'collaborator' at me. I had a very narrow escape.
 //	AI_Output(self,hero,"Info_Milten_OCKDW_02_04"); //Sie schrieen mir Worte wie 'Verräter' und 'Kollaborateur' entgegen. Ich konnte mich gerade noch in Sicherheit bringen.
-	AI_Output(self,hero,"Info_Milten_OCKDW_02_04"); //Vykřikovaly na mě slova 'zrádce' a 'kolaborant'. Jen taktak, že se mi podařilo uprchnout.
+	AI_Output(self,hero,"Info_Milten_OCKDW_02_04"); //Vykřikovaly na mě slova 'zrádce' a 'kolaborant'. Jen taktak, se mi podařilo dostat se do bezpečí.
 };
 
 //***************************************************************************
@@ -1572,7 +1571,7 @@ func void Info_Milten_OCWHY_Info()
 	AI_Output(self,hero,"Info_Milten_OCWHY_02_02"); //To je pravda. Stráže mi nedaly možnost se ani zeptat. Okamžitě tasily meče.
 //	AI_Output(self,hero,"Info_Milten_OCWHY_02_03"); //Perhaps Diego knows more. He was in the Camp when things got worse.
 //	AI_Output(self,hero,"Info_Milten_OCWHY_02_03"); //Vielleicht kann dir Diego mehr erzählen. Er war im Lager, als sich die Ereignisse zuspitzten.
-	AI_Output(self,hero,"Info_Milten_OCWHY_02_03"); //Snad ví Diego víc. Byl zrovna v táboře, když se to všechno začalo hroutit.
+	AI_Output(self,hero,"Info_Milten_OCWHY_02_03"); //Snad ti o tom Diego může říct víc. Byl zrovna v táboře, když se situace vyhrotila.
 };
 
 //***************************************************************************
@@ -1655,7 +1654,7 @@ func void Info_Milten_OCDIEGO_Info()
 	AI_Output(self,hero,"Info_Milten_OCDIEGO_02_02"); //Ukrývá se na druhé straně Starého tábora, blízko zadní brány.
 //	AI_Output(self,hero,"Info_Milten_OCDIEGO_02_03"); //Please talk to him!
 //	AI_Output(self,hero,"Info_Milten_OCDIEGO_02_03"); //Bitte sprich mit ihm!
-	AI_Output(self,hero,"Info_Milten_OCDIEGO_02_03"); //Řekni mu to, prosím!
+	AI_Output(self,hero,"Info_Milten_OCDIEGO_02_03"); //Promluv si s ním, prosím!
 
 //	B_LogEntry(CH4_Firemages,"Milten caught me in front of the Old Camp and told me about the collapse of the Old Mine and the assassination of the Magicians of Fire.");
 	B_LogEntry(CH4_Firemages,"Milten mě zastavil před Starým táborem a řekl mi o zavalení Starého dolu a vyvraždění mágů Ohně.");
@@ -1697,10 +1696,10 @@ func void Info_Milten_LOADSWORD_Info()
 
 //	AI_Output(self,hero,"Info_Milten_LOADSWORD_02_01"); //Greetings, my friend, I haven't seen you for ages.
 //	AI_Output(self,hero,"Info_Milten_LOADSWORD_02_01"); //Sei gegrüßt, mein Freund, dich habe ich ja schon lange nicht mehr gesehen.
-	AI_Output(self,hero,"Info_Milten_LOADSWORD_02_01"); //Nazdar, příteli, už jsem tě neviděl věčnost.
+	AI_Output(self,hero,"Info_Milten_LOADSWORD_02_01"); //Buď pozdraven, příteli, už jsem tě neviděl věčnost.
 //	AI_Output(hero,self,"Info_Milten_LOADSWORD_15_02"); //Hello, Milten. A lot has happened since we met the last time.
 //	AI_Output(hero,self,"Info_Milten_LOADSWORD_15_02"); //Hallo, Milten. Es ist viel passiert, seit wir uns das letzte Mal trafen.
-	AI_Output(hero,self,"Info_Milten_LOADSWORD_15_02"); //Nazdar, Miltene. Hodně se toho stalo, co jsme se viděli naposledy.
+	AI_Output(hero,self,"Info_Milten_LOADSWORD_15_02"); //Ahoj, Miltene. Hodně se toho stalo, co jsme se naposledy potkali.
 //	AI_Output(hero,self,"Info_Milten_LOADSWORD_15_03"); //I would like to tell you everything but I don't have the time right now. I'm in a hurry.
 //	AI_Output(hero,self,"Info_Milten_LOADSWORD_15_03"); //Ich würde dir gerne alles erzählen, doch im Moment ist keine Zeit dafür. Ich bin in Eile!
 	AI_Output(hero,self,"Info_Milten_LOADSWORD_15_03"); //Chtěl bych ti všechno vyprávět, ale nemám teď čas. Hrozně spěchám.
@@ -1787,10 +1786,10 @@ func void Info_Milten_LSAWAY_Info()
 	AI_Output(hero,self,"Info_Milten_LSAWAY_15_04"); //Teď není na legraci čas. Myslím to smrtelně vážně.
 //	AI_Output(hero,self,"Info_Milten_LSAWAY_15_05"); //I've seen Xardas, the Necromancer!
 //	AI_Output(hero,self,"Info_Milten_LSAWAY_15_05"); //Ich habe Xardas, den Dämonenbeschwörer, getroffen!
-	AI_Output(hero,self,"Info_Milten_LSAWAY_15_05"); //Viděl jsem Xardase, toho nekromanta!
+	AI_Output(hero,self,"Info_Milten_LSAWAY_15_05"); //Mluvil jsem s Xardasem, tím nekromantem!
 //	AI_Output(hero,self,"Info_Milten_LSAWAY_15_06"); //I'm working under his orders!
 //	AI_Output(hero,self,"Info_Milten_LSAWAY_15_06"); //Ich handle in seinem Auftrag!
-	AI_Output(hero,self,"Info_Milten_LSAWAY_15_06"); //Pracoval jsem pod jeho velením!
+	AI_Output(hero,self,"Info_Milten_LSAWAY_15_06"); //Pracuji pod jeho velením!
 //	AI_Output(self,hero,"Info_Milten_LSAWAY_02_07"); //XARDAS??? You're beginning to scare me!
 //	AI_Output(self,hero,"Info_Milten_LSAWAY_02_07"); //XARDAS??? Langsam machst du mir Angst!
 	AI_Output(self,hero,"Info_Milten_LSAWAY_02_07"); //XARDAS??? Začínáš mě děsit!
@@ -1802,7 +1801,7 @@ func void Info_Milten_LSAWAY_Info()
 	AI_Output(hero,self,"Info_Milten_LSAWAY_15_09"); //Já ano!
 //	AI_Output(self,hero,"Info_Milten_LSAWAY_02_10"); //What do you need the powers of the ore mound for?
 //	AI_Output(self,hero,"Info_Milten_LSAWAY_02_10"); //Wofür benötigst du die Energie des Erzhaufens?
-	AI_Output(self,hero,"Info_Milten_LSAWAY_02_10"); //Na co potřebuješ ty síly ze rudné haldy?
+	AI_Output(self,hero,"Info_Milten_LSAWAY_02_10"); //Na co potřebuješ magickou sílu rudné haldy?
 //	AI_Output(hero,self,"Info_Milten_LSAWAY_15_11"); //I want to transfer them to this sword here.
 //	AI_Output(hero,self,"Info_Milten_LSAWAY_15_11"); //Ich will sie auf dieses Schwert hier übertragen.
 	AI_Output(hero,self,"Info_Milten_LSAWAY_15_11"); //Chci je transformovat do tohoto meče.
@@ -1848,7 +1847,7 @@ func void Info_Milten_LOADSWORD4_Info()
 	B_UseFakeScroll();
 //	AI_Output(self,hero,"Info_Milten_LOADSWORD4_02_03"); //Mmmm... Mmmm... It looks as if I only have to read out this spell ...
 //	AI_Output(self,hero,"Info_Milten_LOADSWORD4_02_03"); //Hmmm ... Hmmm ... es sieht so aus, als ob ich diese Zauberformel nur herunterlesen müsste ...
-	AI_Output(self,hero,"Info_Milten_LOADSWORD4_02_03"); //Hmmm... Hmmm... To vypadá, jako bych musel jenom odříkat to zaříkávadlo...
+	AI_Output(self,hero,"Info_Milten_LOADSWORD4_02_03"); //Hmmm... Hmmm... To vypadá, jako bych to zaříkávadlo musel jenom odříkat...
 //	AI_Output(self,hero,"Info_Milten_LOADSWORD4_02_04"); //But we'll get into trouble with Saturas and the other magicians!
 //	AI_Output(self,hero,"Info_Milten_LOADSWORD4_02_04"); //Aber wir werden ernsthaften Ärger mit Saturas und den anderen Magiern bekommen!
 	AI_Output(self,hero,"Info_Milten_LOADSWORD4_02_04"); //Dostaneme se ale do sváru se Saturasem a ostatními mágy!
@@ -1866,7 +1865,7 @@ instance Info_Milten_LSRISK(C_INFO)
 	permanent = 0;
 //	description = "We'll have to take that risk!"; 
 //	description = "Das Risiko müssen wir eingehen!"; 
-	description = "Musíme to riskovat!"; 
+	description = "Musíme to risknout!"; 
 };
 
 func int Info_Milten_LSRISK_Condition()
@@ -1881,10 +1880,10 @@ func void Info_Milten_LSRISK_Info()
 {
 //	AI_Output(hero,self,"Info_Milten_LSRISK_15_01"); //We'll have to take that risk!
 //	AI_Output(hero,self,"Info_Milten_LSRISK_15_01"); //Das Risiko müssen wir eingehen!
-	AI_Output(hero,self,"Info_Milten_LSRISK_15_01"); //Musíme to riskovat!
+	AI_Output(hero,self,"Info_Milten_LSRISK_15_01"); //Musíme to risknout!
 //	AI_Output(hero,self,"Info_Milten_LSRISK_15_02"); //It really is VERY, VERY important!
 //	AI_Output(hero,self,"Info_Milten_LSRISK_15_02"); //Es ist wirklich SEHR, SEHR wichtig!
-	AI_Output(hero,self,"Info_Milten_LSRISK_15_02"); //Je to VELMI, VELMI důležité!
+	AI_Output(hero,self,"Info_Milten_LSRISK_15_02"); //Je to skutečně VELMI, VELMI důležité!
 //	AI_Output(hero,self,"Info_Milten_LSRISK_15_03"); //Important for ALL inhabitants of the colony.
 //	AI_Output(hero,self,"Info_Milten_LSRISK_15_03"); //Wichtig für ALLE Bewohner der Kolonie.
 	AI_Output(hero,self,"Info_Milten_LSRISK_15_03"); //Důležité pro VŠECHNY obyvatele kolonie.
@@ -1896,19 +1895,19 @@ func void Info_Milten_LSRISK_Info()
 	AI_Output(hero,self,"Info_Milten_LSRISK_15_05"); //Dostaneme se odtud ven! Musíš mi věřit!
 //	AI_Output(self,hero,"Info_Milten_LSRISK_02_06"); //Alright! After all you have done for us, I trust you completely.
 //	AI_Output(self,hero,"Info_Milten_LSRISK_02_06"); //Einverstanden! Nach all dem, was du bereits für uns getan hast, besitzt du mein Vertrauen.
-	AI_Output(self,hero,"Info_Milten_LSRISK_02_06"); //Dobrá! Musíš to pro nás udělat, naprosto ti věřím.
+	AI_Output(self,hero,"Info_Milten_LSRISK_02_06"); //Rozumím! Po tom všem, co jsi pro nás udělal, ti věřím.
 //	AI_Output(self,hero,"Info_Milten_LSRISK_02_07"); //Besides, it seems Xardas trusts you as well.
 //	AI_Output(self,hero,"Info_Milten_LSRISK_02_07"); //Außerdem scheinst du auch das von Xardas zu besitzen!
-	AI_Output(self,hero,"Info_Milten_LSRISK_02_07"); //Kromě toho to vypadá, že Xardas ti také věří.
+	AI_Output(self,hero,"Info_Milten_LSRISK_02_07"); //Kromě toho to vypadá, že ti Xardas také věří.
 //	AI_Output(self,hero,"Info_Milten_LSRISK_02_08"); //Meet me down at the ore mound, and... Don't tell anybody!
 //	AI_Output(self,hero,"Info_Milten_LSRISK_02_08"); //Triff mich unten beim Erzhaufen, und ... zu keinem ein Sterbenswörtchen!
-	AI_Output(self,hero,"Info_Milten_LSRISK_02_08"); //Přijď za mnou dolu k haldě a... Nikomu ani muk!
+	AI_Output(self,hero,"Info_Milten_LSRISK_02_08"); //Setkáme se dole u rudné haldy a... Nikomu ani slovo!
 //	AI_Output(hero,self,"Info_Milten_LSRISK_15_09"); //Good, let's meet at the ore mound! See you there!
 //	AI_Output(hero,self,"Info_Milten_LSRISK_15_09"); //Gut, wir treffen uns beim Erzhaufen. Bis dann!
 	AI_Output(hero,self,"Info_Milten_LSRISK_15_09"); //Dobře, sejdeme se teda u rudné haldy! Naviděnou!
 
 //	B_LogEntry(CH5_Uriziel,"I could convince my friend Milten to help me transfer the energy to the sword. We'll meet at the bottom of the ore mound of the Magicians of Water.");
-	B_LogEntry(CH5_Uriziel,"Měl bych přesvědčit svého přítele Miltena, aby mi pomohl přenést do meče energii. Setkáme se u úpatí rudné haldy mágů Vody.");
+	B_LogEntry(CH5_Uriziel,"Přesvědčil jsem svého přítele Miltena, aby mi pomohl přenést do meče magickou energii. Setkáme se u úpatí rudné haldy mágů Vody.");
 	Npc_ExchangeRoutine(self,"LSOreHeap");
 	B_ExchangeRoutine(Sld_726_Soeldner, "loadsword");
 
@@ -2050,7 +2049,7 @@ func void Info_Milten_LSDONE_Info()
 	AI_Output(self,hero,"Info_Milten_LSDONE_02_01"); //Hotovo!
 //	AI_Output(hero,self,"Info_Milten_LSDONE_15_02"); //Unbelievable! The plain gray gem is shimmering bluish now!
 //	AI_Output(hero,self,"Info_Milten_LSDONE_15_02"); //Unglaublich! Der unscheinbare graue Edelstein schimmert nun bläulich!
-	AI_Output(hero,self,"Info_Milten_LSDONE_15_02"); //Neuvěřitelné! Ten obyčejný šedivý drahokam se teď třpytí modravou barvou!
+	AI_Output(hero,self,"Info_Milten_LSDONE_15_02"); //Neuvěřitelné! Ten obyčejný šedivý drahokam teď světélkuje modravou barvou!
 
 	AI_EquipBestMeleeWeapon (hero);
 	AI_ReadyMeleeWeapon (hero);
@@ -2068,7 +2067,7 @@ func void Info_Milten_LSDONE_Info()
 	AI_Output(self,hero,"Info_Milten_LSDONE_02_05"); //Měl by ses ihned teleportovat na nějaké jiné místo!
 //	AI_Output(hero,self,"Info_Milten_LSDONE_15_06"); //What about you?
 //	AI_Output(hero,self,"Info_Milten_LSDONE_15_06"); //Was wird aus dir?
-	AI_Output(hero,self,"Info_Milten_LSDONE_15_06"); //A co ty?
+	AI_Output(hero,self,"Info_Milten_LSDONE_15_06"); //A co bude s tebou?
 //	AI_Output(self,hero,"Info_Milten_LSDONE_02_07"); //Don't worry about me, I'll think of something. Go now!
 //	AI_Output(self,hero,"Info_Milten_LSDONE_02_07"); //Mach dir um mich keine Sorgen, ich werde mir schon was einfallen lassen. Geh jetzt!
 	AI_Output(self,hero,"Info_Milten_LSDONE_02_07"); //O mě si strach nedělej, něco vymyslím. A teď už běž!

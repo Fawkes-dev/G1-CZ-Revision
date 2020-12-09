@@ -434,7 +434,7 @@ func void Info_Diego_OldCamp_Info()
 	{ 
 //	AI_Output(self,hero,"Info_Diego_OldCamp_11_04"); //You can also get some of it. All you have to do is join Gomez' people.
 //	AI_Output(self,hero,"Info_Diego_OldCamp_11_04"); //Du kannst auch deinen Teil davon bekommen. Alles, was du tun mußt, ist dich Gomez' Leuten anzuschließen.
-	AI_Output(self,hero,"Info_Diego_OldCamp_11_04"); //Také z toho můžeš něco dostat. JEdiné, co musíš udělat je přidat ke Gomezovi.
+	AI_Output(self,hero,"Info_Diego_OldCamp_11_04"); //Také z toho můžeš něco dostat. Jediné, co musíš udělat je přidat ke Gomezovi.
 	};
 };
 

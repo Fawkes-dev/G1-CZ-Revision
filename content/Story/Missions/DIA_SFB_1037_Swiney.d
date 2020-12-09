@@ -1,10 +1,10 @@
 // ************************************************************
-//	  EXIT 
+// 			  				   EXIT 
 // ************************************************************
 
 instance Info_Swiney_EXIT(C_INFO)
 {
-	npc = SfB_1037_Swiney;
+	npc = SfB_1037_Swiney ;
 	nr = 999;
 	condition = Info_Swiney_EXIT_Condition;
 	information = Info_Swiney_EXIT_Info;
@@ -23,7 +23,7 @@ func void Info_Swiney_EXIT_Info()
 };
 
 // ************************************************************
-// Hallo
+// 						Hallo
 // ************************************************************
 
 instance Info_Swiney_Hello(C_INFO)
@@ -57,7 +57,7 @@ func void Info_Swiney_Hello_Info()
 };
 
 // ************************************************************
-// Schürfer
+// 						Schürfer
 // ************************************************************
 
 instance Info_Swiney_Schuerfer(C_INFO)
@@ -103,10 +103,10 @@ func void Info_Swiney_Schuerfer_Info()
 
 	Info_ClearChoices(Info_Swiney_Schuerfer);
 //	Info_AddChoice(Info_Swiney_Schuerfer,"No.",Info_Swiney_Schuerfer_Nein);
-//	Info_AddChoice(Info_Swiney_Schuerfer," "Nein."	",Info_Swiney_Schuerfer_Nein);
+//	Info_AddChoice(Info_Swiney_Schuerfer,"Nein.",Info_Swiney_Schuerfer_Nein);
 	Info_AddChoice(Info_Swiney_Schuerfer,"Ne.",Info_Swiney_Schuerfer_Nein);
 //	Info_AddChoice(Info_Swiney_Schuerfer,"Yes.",Info_Swiney_Schuerfer_Ja);
-//	Info_AddChoice(Info_Swiney_Schuerfer," "Ja." 		",Info_Swiney_Schuerfer_Ja);
+//	Info_AddChoice(Info_Swiney_Schuerfer,"Ja.",Info_Swiney_Schuerfer_Ja);
 	Info_AddChoice(Info_Swiney_Schuerfer,"Ano.",Info_Swiney_Schuerfer_Ja);
 };
 
@@ -149,7 +149,7 @@ func void Info_Swiney_Schuerfer_Nein()
 };
 
 // ************************************************************
-// PERM
+// 							PERM
 // ************************************************************
 
 instance Info_Swiney_PERM(C_INFO)

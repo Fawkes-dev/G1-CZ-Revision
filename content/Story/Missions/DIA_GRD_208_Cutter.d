@@ -1,5 +1,5 @@
 //******************************************
-// EXIT 
+//					EXIT 
 //******************************************
 
 instance DIA_Cutter_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Cutter_Exit_Info()
 };
 
 //******************************************
-// Hallo 
+//					Hallo 
 //******************************************
 
 instance DIA_Cutter_Hello(C_INFO)
@@ -59,7 +59,7 @@ func void DIA_Cutter_Hello_Info()
 };
 
 //******************************************
-// Burg 
+//					Burg 
 //******************************************
 
 instance DIA_Cutter_Burg(C_INFO)
@@ -105,7 +105,7 @@ func void DIA_Cutter_Burg_Info()
 };
 
 //******************************************
-// PERM 
+//					PERM 
 //******************************************
 
 instance DIA_Cutter_PERM(C_INFO)
@@ -143,7 +143,7 @@ func void DIA_Cutter_PERM_Info()
 };
 
 /*------------------------------------------------------------------------
-// GARDIST GEWORDEN //
+//							GARDIST GEWORDEN //
 ------------------------------------------------------------------------*/
 instance GRD_208_Cutter_WELCOME(C_INFO)
 {

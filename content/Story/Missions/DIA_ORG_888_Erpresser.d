@@ -27,8 +27,12 @@ func void Info_Erpresser_Info()
 	AI_Output(self,other,"Info_Erpresser_Info_13_01"); //Hej, hochu, jestli chceš dál, musíš zaplatit 10 nugetů, jinak poletíš, jasný?
 
 	Info_ClearChoices(Info_Erpresser);
-	Info_AddChoice(Info_Erpresser,"Then why don't you come here and get your ore!", Info_Erpresser_Choice_AufsMaul);
-	Info_AddChoice(Info_Erpresser,"Three ore? That's not much. Here you go ...", Info_Erpresser_Choice_Zahlen);
+//	Info_AddChoice(Info_Erpresser,"Then why don't you come here and get your ore!", Info_Erpresser_Choice_AufsMaul);
+//	Info_AddChoice(Info_Erpresser,"Dann komm doch her und hol dir dein Erz!", Info_Erpresser_Choice_AufsMaul);
+	Info_AddChoice(Info_Erpresser,"Tak pojď dál a dej svoji rudu!", Info_Erpresser_Choice_AufsMaul);
+//	Info_AddChoice(Info_Erpresser,"Three ore? That's not much. Here you go ...", Info_Erpresser_Choice_Zahlen);
+//	Info_AddChoice(Info_Erpresser,"Drei Erz? Das ist nicht viel. Hier nimm...", Info_Erpresser_Choice_Zahlen);
+	Info_AddChoice(Info_Erpresser,"Tři nugety? To není moc. Tady, vezmi si...", Info_Erpresser_Choice_Zahlen);
 };
 
 func void Info_Erpresser_Choice_AufsMaul()

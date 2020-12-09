@@ -1,5 +1,5 @@
 // ****************************************
-// Exit
+// 					Exit
 // ****************************************
 
 instance DIA_Roscoe_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Roscoe_Exit_Info()
 };
 
 // ****************************************
-// Habe Liste
+// 					Habe Liste
 // ****************************************
 
 instance DIA_Roscoe_BringList(C_INFO)
@@ -70,13 +70,13 @@ func void DIA_Roscoe_BringList_Info()
 //	AI_Output(other,self,"DIA_Roscoe_BringList_15_06"); //Kann ich jetzt rein oder was?
 	AI_Output(other,self,"DIA_Roscoe_BringList_15_06"); //Můžu teď dál nebo ne?
 //	AI_Output(self,other,"DIA_Roscoe_BringList_10_07"); //Just go on in. Lares won't believe his eyes.
-//	AI_Output(self,other,"DIA_Roscoe_BringList_10_07"); //Geh nur. Lares werden die Augen aus dem Kopf fallen. 
+//	AI_Output(self,other,"DIA_Roscoe_BringList_10_07"); //Geh nur. Lares werden die Augen aus dem Kopf fallen.
 	AI_Output(self,other,"DIA_Roscoe_BringList_10_07"); //Jdi dál. Lares nebude věřit svým očím.
 	self.aivar[AIV_PASSGATE] = TRUE;
 };
 
 // ****************************************
-// Mordrag schickt mich
+// 			Mordrag schickt mich
 // ****************************************
 
 instance DIA_Roscoe_Mordrag(C_INFO)
@@ -130,7 +130,7 @@ func void DIA_Roscoe_Mordrag_Info()
 };
 
 // ****************************************
-// Wanna Join
+// 				Wanna Join
 // ****************************************
 
 instance DIA_Roscoe_WannaJoin(C_INFO)
@@ -168,7 +168,7 @@ func void DIA_Roscoe_WannaJoin_Info()
 };
 
 // ****************************************
-// Nochmal da
+// 				Nochmal da
 // ****************************************
 
 instance DIA_Roscoe_ComeAgain(C_INFO)
@@ -201,7 +201,7 @@ func void DIA_Roscoe_ComeAgain_Info()
 };
 
 //////////////////////////////////////////////////////////////////////////
-// DURCHGANGSWACHE
+//	DURCHGANGSWACHE
 //////////////////////////////////////////////////////////////////////////
 
 // **********************************************
@@ -250,7 +250,7 @@ func void Info_Roscoe_FirstWarn_Info()
 };
 
 //------------------------------------------------------------------------
-// 2. Warnung
+//	2. Warnung
 //------------------------------------------------------------------------
 instance Info_Roscoe_LastWarn(C_INFO)
 {
@@ -287,7 +287,7 @@ func int Info_Roscoe_LastWarn_Info()
 };
 
 //------------------------------------------------------------------------
-// Attack
+//	Attack
 //------------------------------------------------------------------------
 instance Info_Roscoe_Attack(C_INFO)
 {

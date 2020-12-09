@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_Grd_216_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Grd_216_Exit_Info()
 };
 
 // **************************************************
-// Kap 1 Standard Hallo
+// 				Kap 1 Standard Hallo
 // **************************************************
 
 instance DIA_Grd_216_First(C_INFO)
@@ -68,7 +68,7 @@ func void DIA_Grd_216_First_Info()
 };
 
 // **************************************************
-// Dusty Zoll
+// 					Dusty Zoll
 // **************************************************
 
 instance DIA_Grd_216_DustyZoll(C_INFO)
@@ -98,15 +98,15 @@ func void DIA_Grd_216_DustyZoll_Info()
 	AI_Output(self,other,"DIA_Grd_216_Dusty_Zoll_13_00"); //Stůj! Kamže máš za svým přítelem jít?
 	Info_ClearChoices(DIA_Grd_216_DustyZoll);
 //	Info_AddChoice(DIA_Grd_216_DustyZoll,"That's none of your business!",DIA_Grd_216_DustyZoll_PissOff);
-//	Info_AddChoice(DIA_Grd_216_DustyZoll,""Das geht dich einen Dreck an!" ",DIA_Grd_216_DustyZoll_PissOff);
+//	Info_AddChoice(DIA_Grd_216_DustyZoll,"Das geht dich einen Dreck an!",DIA_Grd_216_DustyZoll_PissOff);
 	Info_AddChoice(DIA_Grd_216_DustyZoll,"To není tvoje věc!",DIA_Grd_216_DustyZoll_PissOff);
 //	Info_AddChoice(DIA_Grd_216_DustyZoll,"We're on our way to the Brotherhood's camp.",DIA_Grd_216_DustyZoll_ToPSI);
-//	Info_AddChoice(DIA_Grd_216_DustyZoll,""Wir sind unterwegs ins Lager der Bruderschaft." ",DIA_Grd_216_DustyZoll_ToPSI);
+//	Info_AddChoice(DIA_Grd_216_DustyZoll,"Wir sind unterwegs ins Lager der Bruderschaft.",DIA_Grd_216_DustyZoll_ToPSI);
 	Info_AddChoice(DIA_Grd_216_DustyZoll,"Jsme na cestě do tábora Bratrstva.",DIA_Grd_216_DustyZoll_ToPSI);
 	if (Npc_HasItems(other,itminugget) >= 100)
 	{
 //		Info_AddChoice(DIA_Grd_216_DustyZoll,"We're just going for a stroll. Here's 100 ore.",DIA_Grd_216_DustyZoll_LittleWalk);
-//		Info_AddChoice(DIA_Grd_216_DustyZoll,""Wir machen einen kleinen Spaziergang. Hier sind 100 Erz." ",DIA_Grd_216_DustyZoll_LittleWalk);
+//		Info_AddChoice(DIA_Grd_216_DustyZoll,"Wir machen einen kleinen Spaziergang. Hier sind 100 Erz.",DIA_Grd_216_DustyZoll_LittleWalk);
 		Info_AddChoice(DIA_Grd_216_DustyZoll,"Jen se tu procházíme. Tady je 100 nugetů.",DIA_Grd_216_DustyZoll_LittleWalk);
 	};
 };

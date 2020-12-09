@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_Kyle_Exit(C_INFO)
@@ -24,7 +24,7 @@ func void DIA_Kyle_Exit_Info()
 };
 
 // **************************************************
-// Erstes Mal aufkreuzen
+// 				Erstes Mal aufkreuzen
 // **************************************************
 
 instance DIA_Kyle_HutRage(C_INFO)
@@ -53,7 +53,7 @@ func void DIA_Kyle_HutRage_Info()
 };
 
 // **************************************************
-// Was ist dein Problem?
+// 				Was ist dein Problem?
 // **************************************************
 
 instance DIA_Kyle_Problem(C_INFO)

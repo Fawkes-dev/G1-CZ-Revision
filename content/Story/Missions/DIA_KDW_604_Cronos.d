@@ -30,7 +30,7 @@ func void KDW_604_Cronos_Exit_Info()
 
 /*
 // *****************************************
-// Greet
+//					Greet
 // *****************************************
 
 instance KDW_604_Cronos_Greet(C_INFO)
@@ -58,7 +58,7 @@ func void KDW_604_Cronos_Greet_Info()
 */
 
 // *****************************************
-// Brief
+//					Brief
 // *****************************************
 
 instance KDW_604_Cronos_Brief(C_INFO)
@@ -104,7 +104,7 @@ func void KDW_604_Cronos_Brief_Info()
 };
 
 // *****************************************
-// Barrier
+//					Barrier
 // *****************************************
 
 instance KDW_604_Cronos_Barrier(C_INFO)
@@ -133,7 +133,7 @@ func void KDW_604_Cronos_Barrier_Info()
 //	AI_Output(other,self,"DIA_Cronos_Barrier_15_00"); //Ihr wollt die Barriere zerstören - wie genau soll das gehen?
 	AI_Output(other,self,"DIA_Cronos_Barrier_15_00"); //Chcete rozbít Bariéru - jak se to přesně chystáte udělat?
 //	AI_Output(self,other,"DIA_Cronos_Barrier_08_01"); //We need major amounts of magic ore.
-//	AI_Output(self,other,"DIA_Cronos_Barrier_08_01"); //Wir brauchen eine große Menge magisches Erz. 
+//	AI_Output(self,other,"DIA_Cronos_Barrier_08_01"); //Wir brauchen eine große Menge magisches Erz.
 	AI_Output(self,other,"DIA_Cronos_Barrier_08_01"); //Potřebujeme velké množství magické rudy.
 //	AI_Output(self,other,"DIA_Cronos_Barrier_08_02"); //We'll release the entire magic power in a great magic rite to blow up the Barrier.
 //	AI_Output(self,other,"DIA_Cronos_Barrier_08_02"); //In einem großen magischen Ritual werden wir die gesamte magische Energie freilassen und somit die Barriere sprengen.
@@ -147,7 +147,7 @@ func void KDW_604_Cronos_Barrier_Info()
 };
 
 // *****************************************
-// WannaJoin
+//					WannaJoin
 // *****************************************
 
 instance KDW_604_Cronos_WannaJoin(C_INFO)
@@ -176,12 +176,12 @@ func void KDW_604_Cronos_WannaJoin_Info()
 //	AI_Output(other,self,"DIA_Cronos_WannaJoin_15_00"); //Ich will bei euch mitmachen!
 	AI_Output(other,self,"DIA_Cronos_WannaJoin_15_00"); //Chtěl bych se k vám přidat!
 //	AI_Output(self,other,"DIA_Cronos_WannaJoin_08_01"); //If you want to join us, you should see Lee or Lares.
-//	AI_Output(self,other,"DIA_Cronos_WannaJoin_08_01"); //Wenn du dich uns anschließen willst, solltest du zu Lee oder Lares gehen. 
+//	AI_Output(self,other,"DIA_Cronos_WannaJoin_08_01"); //Wenn du dich uns anschließen willst, solltest du zu Lee oder Lares gehen.
 	AI_Output(self,other,"DIA_Cronos_WannaJoin_08_01"); //Jestli se k nám chceš přidat, měl bys zajít za Leem nebo Laresem.
 };
 
 // *****************************************
-// WannaMage
+//					WannaMage
 // *****************************************
 
 instance KDW_604_Cronos_WannaMage(C_INFO)
@@ -224,7 +224,7 @@ func void KDW_604_Cronos_WannaMage_Info()
 ///////////////////////////////////////////////////
 
 // *****************************************
-// Bandit --> Messenger
+//					Bandit --> Messenger
 // *****************************************
 
 instance KDW_604_Cronos_Bandit(C_INFO)
@@ -266,7 +266,7 @@ func void KDW_604_Cronos_Bandit_Info()
 };
 
 // *****************************************
-// BriefBack
+//					BriefBack
 // *****************************************
 
 instance KDW_604_Cronos_BriefBack(C_INFO)
@@ -311,7 +311,7 @@ func void KDW_604_Cronos_BriefBack_Info()
 ///////////////////////////////////////////////////
 
 //***************************************************************************
-// Info NEWS
+//	Info NEWS
 //***************************************************************************
 instance Info_Cronos_NEWS(C_INFO)
 {
@@ -345,7 +345,7 @@ func void Info_Cronos_NEWS_Info()
 };
 
 //***************************************************************************
-// Info KALOM
+//	Info KALOM
 //***************************************************************************
 instance Info_Cronos_KALOM(C_INFO)
 {
@@ -390,7 +390,7 @@ func void Info_Cronos_KALOM_Info()
 };
 
 //***************************************************************************
-// Info YBERION
+//	Info YBERION
 //***************************************************************************
 instance Info_Cronos_YBERION(C_INFO)
 {
@@ -438,7 +438,7 @@ func void Info_Cronos_YBERION_Info()
 };
 
 //***************************************************************************
-// Info SLEEPER
+//	Info SLEEPER
 //***************************************************************************
 instance Info_Cronos_SLEEPER(C_INFO)
 {
@@ -504,7 +504,7 @@ func void Info_Cronos_SLEEPER_Info()
 };
 
 //***************************************************************************
-// Info PAROLE
+//	Info PAROLE
 //***************************************************************************
 instance Info_Cronos_PAROLE(C_INFO)
 {
@@ -538,7 +538,7 @@ func void Info_Cronos_PAROLE_Info()
 };
 
 //***************************************************************************
-// Info REWARD
+//	Info REWARD
 //***************************************************************************
 instance Info_Cronos_REWARD(C_INFO)
 {
@@ -585,7 +585,7 @@ func void Info_Cronos_REWARD_Info()
 	B_GiveInvItems(self,hero,ItMiNugget, 1000);
 };
 /*------------------------------------------------------------------------
-// NACH DER WEIHE //
+//						NACH DER WEIHE //
 ------------------------------------------------------------------------*/
 instance KDW_604_Cronos_WELCOME(C_INFO)
 {
@@ -611,7 +611,7 @@ func void KDW_604_Cronos_WELCOME_Info()
 	AI_StopProcessInfos(self);  
 };
 //--------------------------------------------------------------------------
-// MANA KAUFEN
+// 							MANA KAUFEN
 //--------------------------------------------------------------------------
 // ***************************** INFOS ****************************************//
 
@@ -647,11 +647,8 @@ func void KDW_604_Cronos_MANA_Info()
 	AI_Output(self,other,"KDW_604_Cronos_MANA_Info_08_02"); //Můžu ti pomoci zvětšit tvoji sílu. Užívej ji moudře.
 
 	Info_ClearChoices(KDW_604_Cronos_MANA);
-//	Info_AddChoice(KDW_604_Cronos_MANA,"DIALOG_BACK									",KDW_604_Cronos_MANA_BACK);
 	Info_AddChoice(KDW_604_Cronos_MANA,DIALOG_BACK ,KDW_604_Cronos_MANA_BACK);
-//	Info_AddChoice(KDW_604_Cronos_MANA," B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0)			",KDW_604_Cronos_MANA_MAN_5);
 	Info_AddChoice(KDW_604_Cronos_MANA, B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0),KDW_604_Cronos_MANA_MAN_5);
-//	Info_AddChoice(KDW_604_Cronos_MANA,"B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0)		",KDW_604_Cronos_MANA_MAN_1);
 	Info_AddChoice(KDW_604_Cronos_MANA,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),KDW_604_Cronos_MANA_MAN_1);
 };  
 func void KDW_604_Cronos_MANA_BACK()
@@ -663,11 +660,8 @@ func void KDW_604_Cronos_MANA_MAN_1()
 {
 	B_BuyAttributePoints(other,ATR_MANA_MAX, LPCOST_ATTRIBUTE_MANA);
 	Info_ClearChoices(KDW_604_Cronos_MANA);
-//	Info_AddChoice(KDW_604_Cronos_MANA,"DIALOG_BACK									",KDW_604_Cronos_MANA_BACK);
 	Info_AddChoice(KDW_604_Cronos_MANA,DIALOG_BACK ,KDW_604_Cronos_MANA_BACK);
-//	Info_AddChoice(KDW_604_Cronos_MANA," B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0)			",KDW_604_Cronos_MANA_MAN_5);
 	Info_AddChoice(KDW_604_Cronos_MANA, B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0),KDW_604_Cronos_MANA_MAN_5);
-//	Info_AddChoice(KDW_604_Cronos_MANA,"B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0)		",KDW_604_Cronos_MANA_MAN_1);
 	Info_AddChoice(KDW_604_Cronos_MANA,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),KDW_604_Cronos_MANA_MAN_1);
 
 };
@@ -676,16 +670,13 @@ func void KDW_604_Cronos_MANA_MAN_5()
 {
 	B_BuyAttributePoints(other,ATR_MANA_MAX, 5*LPCOST_ATTRIBUTE_MANA);
 	Info_ClearChoices(KDW_604_Cronos_MANA);
-//	Info_AddChoice(KDW_604_Cronos_MANA,"DIALOG_BACK									",KDW_604_Cronos_MANA_BACK);
 	Info_AddChoice(KDW_604_Cronos_MANA,DIALOG_BACK ,KDW_604_Cronos_MANA_BACK);
-//	Info_AddChoice(KDW_604_Cronos_MANA," B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0)			",KDW_604_Cronos_MANA_MAN_5);
 	Info_AddChoice(KDW_604_Cronos_MANA, B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0),KDW_604_Cronos_MANA_MAN_5);
-//	Info_AddChoice(KDW_604_Cronos_MANA,"B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0)		",KDW_604_Cronos_MANA_MAN_1);
 	Info_AddChoice(KDW_604_Cronos_MANA,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),KDW_604_Cronos_MANA_MAN_1);
 
 };
 //---------------------------------------------------------
-// MAGISCHEN KRAM KAUFEN
+//					MAGISCHEN KRAM KAUFEN
 //---------------------------------------------------------
 instance KDW_604_Cronos_SELLSTUFF(C_INFO)
 {

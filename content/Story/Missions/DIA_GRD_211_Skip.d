@@ -1,5 +1,5 @@
 // **************************************
-// EXIT 
+//					EXIT 
 // **************************************
 
 instance DIA_Skip_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Skip_Exit_Info()
 };
 
 // **************************************
-// First
+//				First
 // **************************************
 	var int Skip_TradeFree;
 // **************************************
@@ -185,7 +185,7 @@ func void DIA_Skip_First_Thorus_KickAssAGAIN()
 };
 
 // **************************************
-// VERPATZT
+//			VERPATZT
 // **************************************
 
 instance DIA_Skip_VERPATZT(C_INFO)
@@ -257,7 +257,7 @@ func void GRD_211_Skip_TRADE_Info()
 };  
 
 /*------------------------------------------------------------------------
-// GARDIST GEWORDEN //
+//							GARDIST GEWORDEN //
 ------------------------------------------------------------------------*/
 instance GRD_211_Skip_WELCOME(C_INFO)
 {

@@ -1,5 +1,5 @@
 //*********************************************************
-// EXIT 
+//							EXIT 
 //*********************************************************
 
 instance Sld_700_Lee_Exit(C_INFO)
@@ -24,7 +24,7 @@ func void Sld_700_Lee_Exit_Info()
 };
 
 //*********************************************************
-// Greet 
+//						Greet 
 //*********************************************************
 
 instance Sld_700_Lee_Greet(C_INFO)
@@ -55,7 +55,7 @@ func void Sld_700_Lee_Greet_Info()
 };
 
 //*********************************************************
-// Define 
+//						Define 
 //*********************************************************
 
 instance Sld_700_Lee_Define(C_INFO)
@@ -92,7 +92,7 @@ func void Sld_700_Lee_Define_Info()
 };
 
 //*********************************************************
-// Mitmachen 
+//						Mitmachen 
 //*********************************************************
 
 instance Sld_700_Lee_Mitmachen(C_INFO)
@@ -131,7 +131,7 @@ func void Sld_700_Lee_Mitmachen_Info()
 };
 
 //*********************************************************
-// NowReady for Sld? 
+//						NowReady for Sld? 
 //*********************************************************
 	var int Lee_SldPossible;
 //*********************************************************
@@ -166,7 +166,7 @@ func void Sld_700_Lee_NowReady_Info()
 	if (CorKalom_BringMCQBalls == LOG_SUCCESS)
 	{
 //		AI_Output(self,other,"Sld_700_Lee_BECOMESLD_Info_08_01"); //Your deeds for the people in the Old Mine have demonstrated that you're quite a good man.
-//		AI_Output(self,other,"Sld_700_Lee_BECOMESLD_Info_08_01"); //Deine Taten für die Bruderschaft in der Alten Mine haben gezeigt, das du einiges drauf hast. 
+//		AI_Output(self,other,"Sld_700_Lee_BECOMESLD_Info_08_01"); //Deine Taten für die Bruderschaft in der Alten Mine haben gezeigt, das du einiges drauf hast.
 		AI_Output(self,other,"Sld_700_Lee_BECOMESLD_Info_08_01"); //Tvoje skutky vykonané pro lidi ve Starém dolu ukázaly, že jsi docela správný chlap.
 //		AI_Output(self,other,"Sld_700_Lee_BECOMESLD_Info_08_02"); //I'd be willing to let you join the mercenaries.
 //		AI_Output(self,other,"Sld_700_Lee_BECOMESLD_Info_08_02"); //Ich wäre bereit, dich in die Reihen der Söldner aufzunehmen.
@@ -380,7 +380,7 @@ func void Sld_700_Lee_DAMNPAST_Info()
 };
 
 //*********************************************************
-// FMTaken 
+//						FMTaken 
 //*********************************************************
 
 instance Sld_700_Lee_FMTaken(C_INFO)
@@ -502,8 +502,8 @@ func void Sld_700_Lee_CHANGESIDE_Info()
 	hero.guild = GIL_SLD;
 
 //	B_LogEntry(CH4_BannedFromOC,"I've changed sides. After the Old Camp has banished me, I've now joined the mercenaries. Now let's get back to Saturas!");
-//	B_LogEntry(CH4_BannedFromOC,"Ich habe Lee über Gorns und mein Aufräumen in der freien Mine informiert. Er zeigte sich sehr zufrieden.");
-	B_LogEntry(CH4_BannedFromOC,"Informoval jsem Leeho o čistce, kterou jsme s Gornem provedli ve Svobodném dole. Byl velmi potěšen.");
+//	B_LogEntry(CH4_BannedFromOC,"Ich habe die Seiten gewechselt. Nachdem das alte Lager mich verbannt hat, habe ich mich nun den Söldnern angeschlossen. Nun wieder zurück zu Saturas!");
+	B_LogEntry(CH4_BannedFromOC,"Převlékl jsem kabát. Poté, co mě vyhostili ze Starého tábora, přidal jsem se k žoldákům. A teď zpátky za Saturasem!");
 
 	Log_CreateTopic(GE_TeacherNC,LOG_NOTE);
 //	B_LogEntry(GE_TeacherNC,"Lee can teach me to fight with TWO-HANDED WEAPONS. Apart from that, he can teach me to improve my STRENGTH and my DEXTERITY.");
@@ -544,11 +544,8 @@ func void Sld_700_Lee_ARMOR_Info()
 	AI_Output(self,other,"Sld_700_Lee_ARMOR_Info_08_02"); //Na svoji zbroj si musíš nejdříve vydělat. Nehledě na to, že tě přijde draho.
 
 	Info_ClearChoices(Sld_700_Lee_ARMOR);
-//	Info_AddChoice(Sld_700_Lee_ARMOR,"DIALOG_BACK",Sld_700_Lee_ARMOR_BACK);
 	Info_AddChoice(Sld_700_Lee_ARMOR,DIALOG_BACK,Sld_700_Lee_ARMOR_BACK);
-//	Info_AddChoice(Sld_700_Lee_ARMOR,"B_BuildBuyArmorString(NAME_LeeMercs, VALUE_SLD_ARMOR_M) ",Sld_700_Lee_ARMOR_M);
 	Info_AddChoice(Sld_700_Lee_ARMOR,B_BuildBuyArmorString(NAME_LeeMercs, VALUE_SLD_ARMOR_M),Sld_700_Lee_ARMOR_M);
-//	Info_AddChoice(Sld_700_Lee_ARMOR,"B_BuildBuyArmorString(NAME_LeeHeavyMercs, VALUE_SLD_ARMOR_H)",Sld_700_Lee_ARMOR_H);
 	Info_AddChoice(Sld_700_Lee_ARMOR,B_BuildBuyArmorString(NAME_LeeHeavyMercs, VALUE_SLD_ARMOR_H),Sld_700_Lee_ARMOR_H);
 };  
 func void Sld_700_Lee_ARMOR_BACK()
@@ -652,15 +649,10 @@ func void Sld_700_Lee_Teach_Info()
 	AI_Output(self,other,"Sld_700_Lee_Teach_08_01"); //Můžu ti pomoci stát se silnější a obratnější.
 
 	Info_ClearChoices(Sld_700_Lee_Teach);
-//	Info_AddChoice(Sld_700_Lee_Teach,"DIALOG_BACK																",Sld_700_Lee_Teach_BACK);
 	Info_AddChoice(Sld_700_Lee_Teach,DIALOG_BACK ,Sld_700_Lee_Teach_BACK);
-//	Info_AddChoice(Sld_700_Lee_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)		",Sld_700_Lee_Teach_STR_5);
 	Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),Sld_700_Lee_Teach_STR_5);
-//	Info_AddChoice(Sld_700_Lee_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)		",Sld_700_Lee_Teach_STR_1);
 	Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),Sld_700_Lee_Teach_STR_1);
-//	Info_AddChoice(Sld_700_Lee_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",Sld_700_Lee_Teach_DEX_5);
 	Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),Sld_700_Lee_Teach_DEX_5);
-//	Info_AddChoice(Sld_700_Lee_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)		",Sld_700_Lee_Teach_DEX_1);
 	Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),Sld_700_Lee_Teach_DEX_1);
 };
 
@@ -674,15 +666,10 @@ func void Sld_700_Lee_Teach_STR_1()
 {
 	B_BuyAttributePoints(other,ATR_STRENGTH, LPCOST_ATTRIBUTE_STRENGTH);
 	Info_ClearChoices(Sld_700_Lee_Teach);
-//	Info_AddChoice(Sld_700_Lee_Teach,"DIALOG_BACK																",Sld_700_Lee_Teach_BACK);
 	Info_AddChoice(Sld_700_Lee_Teach,DIALOG_BACK ,Sld_700_Lee_Teach_BACK);
-//	Info_AddChoice(Sld_700_Lee_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)		",Sld_700_Lee_Teach_STR_5);
 	Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),Sld_700_Lee_Teach_STR_5);
-//	Info_AddChoice(Sld_700_Lee_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)		",Sld_700_Lee_Teach_STR_1);
 	Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),Sld_700_Lee_Teach_STR_1);
-//	Info_AddChoice(Sld_700_Lee_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",Sld_700_Lee_Teach_DEX_5);
 	Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),Sld_700_Lee_Teach_DEX_5);
-//	Info_AddChoice(Sld_700_Lee_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)		",Sld_700_Lee_Teach_DEX_1);
 	Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),Sld_700_Lee_Teach_DEX_1);
 };
 
@@ -690,15 +677,10 @@ func void Sld_700_Lee_Teach_STR_5()
 {
 	B_BuyAttributePoints(other,ATR_STRENGTH, 5*LPCOST_ATTRIBUTE_STRENGTH);
 	Info_ClearChoices(Sld_700_Lee_Teach);
-//	Info_AddChoice(Sld_700_Lee_Teach,"DIALOG_BACK																",Sld_700_Lee_Teach_BACK);
 	Info_AddChoice(Sld_700_Lee_Teach,DIALOG_BACK ,Sld_700_Lee_Teach_BACK);
-//	Info_AddChoice(Sld_700_Lee_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)		",Sld_700_Lee_Teach_STR_5);
 	Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),Sld_700_Lee_Teach_STR_5);
-//	Info_AddChoice(Sld_700_Lee_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)		",Sld_700_Lee_Teach_STR_1);
 	Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),Sld_700_Lee_Teach_STR_1);
-//	Info_AddChoice(Sld_700_Lee_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",Sld_700_Lee_Teach_DEX_5);
 	Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),Sld_700_Lee_Teach_DEX_5);
-//	Info_AddChoice(Sld_700_Lee_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)		",Sld_700_Lee_Teach_DEX_1);
 	Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),Sld_700_Lee_Teach_DEX_1);
 };
 
@@ -706,15 +688,10 @@ func void Sld_700_Lee_Teach_DEX_1()
 {
 	B_BuyAttributePoints(other,ATR_DEXTERITY, LPCOST_ATTRIBUTE_DEXTERITY);
 	Info_ClearChoices(Sld_700_Lee_Teach);
-//	Info_AddChoice(Sld_700_Lee_Teach,"DIALOG_BACK																",Sld_700_Lee_Teach_BACK);
 	Info_AddChoice(Sld_700_Lee_Teach,DIALOG_BACK ,Sld_700_Lee_Teach_BACK);
-//	Info_AddChoice(Sld_700_Lee_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)		",Sld_700_Lee_Teach_STR_5);
 	Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),Sld_700_Lee_Teach_STR_5);
-//	Info_AddChoice(Sld_700_Lee_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)		",Sld_700_Lee_Teach_STR_1);
 	Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),Sld_700_Lee_Teach_STR_1);
-//	Info_AddChoice(Sld_700_Lee_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",Sld_700_Lee_Teach_DEX_5);
 	Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),Sld_700_Lee_Teach_DEX_5);
-//	Info_AddChoice(Sld_700_Lee_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)		",Sld_700_Lee_Teach_DEX_1);
 	Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),Sld_700_Lee_Teach_DEX_1);
 };
 
@@ -722,19 +699,14 @@ func void Sld_700_Lee_Teach_DEX_5()
 {
 	B_BuyAttributePoints(other,ATR_DEXTERITY, 5*LPCOST_ATTRIBUTE_DEXTERITY);
 	Info_ClearChoices(Sld_700_Lee_Teach);
-//	Info_AddChoice(Sld_700_Lee_Teach,"DIALOG_BACK																",Sld_700_Lee_Teach_BACK);
 	Info_AddChoice(Sld_700_Lee_Teach,DIALOG_BACK ,Sld_700_Lee_Teach_BACK);
-//	Info_AddChoice(Sld_700_Lee_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)		",Sld_700_Lee_Teach_STR_5);
 	Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),Sld_700_Lee_Teach_STR_5);
-//	Info_AddChoice(Sld_700_Lee_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)		",Sld_700_Lee_Teach_STR_1);
 	Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),Sld_700_Lee_Teach_STR_1);
-//	Info_AddChoice(Sld_700_Lee_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",Sld_700_Lee_Teach_DEX_5);
 	Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),Sld_700_Lee_Teach_DEX_5);
-//	Info_AddChoice(Sld_700_Lee_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)		",Sld_700_Lee_Teach_DEX_1);
 	Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),Sld_700_Lee_Teach_DEX_1);
 };
 //-------------------------------------------------------------------------
-// ZWEIHANDKAMPF LERNEN STUFE 1
+//							ZWEIHANDKAMPF LERNEN STUFE 1
 //-------------------------------------------------------------------------
 instance Sld_700_Lee_ZWEIHAND1(C_INFO)
 {
@@ -790,7 +762,7 @@ func void Sld_700_Lee_ZWEIHAND1_Info()
 	};
 };  
 //-------------------------------------------------------------------------
-// ZWEIHANDKAMPF LERNEN STUFE 2
+//							ZWEIHANDKAMPF LERNEN STUFE 2
 //-------------------------------------------------------------------------
 instance Sld_700_Lee_ZWEIHAND2(C_INFO)
 {

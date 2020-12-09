@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+//						 EXIT 
 // **************************************************
 
 instance Info_Kharim_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void Info_Kharim_Exit_Info()
 };
 
 // **************************************************
-// Was machst du hier?
+//				Was machst du hier?
 // **************************************************
 
 instance Info_Kharim_What(C_INFO)
@@ -57,7 +57,7 @@ func void Info_Kharim_What_Info()
 };
 
 // **************************************
-// Fordern
+//				Fordern
 // **************************************
 	var int Kharim_Charged;
 // **************************************
@@ -96,10 +96,10 @@ func void Info_Kharim_Charge_Info()
 
 	Info_ClearChoices(Info_Kharim_Charge);
 //	Info_AddChoice(Info_Kharim_Charge,"Okay, okay, let's forget about it.",Info_Kharim_Charge_BACK);
-//	Info_AddChoice(Info_Kharim_Charge,""Okay, okay, vergessen wir die Sache."					",Info_Kharim_Charge_BACK);
+//	Info_AddChoice(Info_Kharim_Charge,"Okay, okay, vergessen wir die Sache.",Info_Kharim_Charge_BACK);
 	Info_AddChoice(Info_Kharim_Charge,"Dobře, dobře, zapomeneme na to!",Info_Kharim_Charge_BACK);
 //	Info_AddChoice(Info_Kharim_Charge,"So you don't get hurt, you coward?!",Info_Kharim_Charge_Insult);
-//	Info_AddChoice(Info_Kharim_Charge,""Damit du ungeschoren davonkommst, du feiges Schwein?!"	",Info_Kharim_Charge_Insult);
+//	Info_AddChoice(Info_Kharim_Charge,"Damit du ungeschoren davonkommst, du feiges Schwein?!",Info_Kharim_Charge_Insult);
 	Info_AddChoice(Info_Kharim_Charge,"Ne tak zhurta, ty zbabělče?!",Info_Kharim_Charge_Insult);
 
 };
@@ -129,16 +129,16 @@ func void Info_Kharim_Charge_Insult()
 //	Info_AddChoice(Info_Kharim_Charge,"Du bist doch nur hier, um Gomez in den Arsch zu kriechen!",Info_Kharim_Charge_Insult_GomezAss);
 	Info_AddChoice(Info_Kharim_Charge,"Jsi tady akorát proto, abys dostal příležitost políbit Gomezovi zadek!",Info_Kharim_Charge_Insult_GomezAss);
 //	Info_AddChoice(Info_Kharim_Charge,"How about: Your mother's a sheep-shagging...",Info_Kharim_Charge_Insult_Goats);
-//	Info_AddChoice(Info_Kharim_Charge,""Wie wär's mit: Deine Mutter treibt's mit Ziegen..."									",Info_Kharim_Charge_Insult_Goats);
+//	Info_AddChoice(Info_Kharim_Charge,"Wie wär's mit: Deine Mutter treibt's mit Ziegen...",Info_Kharim_Charge_Insult_Goats);
 	Info_AddChoice(Info_Kharim_Charge,"Jako třeba: tvoje matka obcuje s každým...",Info_Kharim_Charge_Insult_Goats);
 //	Info_AddChoice(Info_Kharim_Charge,"No, there's nothing I can think of you'd actually understand.",Info_Kharim_Charge_Insult_Stupid);
-//	Info_AddChoice(Info_Kharim_Charge,""Nein, mir fällt nichts ein, das du begreifen würdest."				",Info_Kharim_Charge_Insult_Stupid);
+//	Info_AddChoice(Info_Kharim_Charge,"Nein, mir fällt nichts ein, das du begreifen würdest.",Info_Kharim_Charge_Insult_Stupid);
 	Info_AddChoice(Info_Kharim_Charge,"Tak se nad tím zamysli: ne, není co si rozmýšlet, jestli jsi to pochopil.",Info_Kharim_Charge_Insult_Stupid);
 //	Info_AddChoice(Info_Kharim_Charge,"You've got thin arms, but then I saw your ugly mug.",Info_Kharim_Charge_Insult_Face);
-//	Info_AddChoice(Info_Kharim_Charge,""Deine dürren Ärmchen sind nichts gegen deine häßliche Visage."	",Info_Kharim_Charge_Insult_Face);
+//	Info_AddChoice(Info_Kharim_Charge,"Deine dürren Ärmchen sind nichts gegen deine häßliche Visage.",Info_Kharim_Charge_Insult_Face);
 	Info_AddChoice(Info_Kharim_Charge,"Máš tenký paže, ale pak jsem uviděl tvůj hnusný ciferník.",Info_Kharim_Charge_Insult_Face);
 //	Info_AddChoice(Info_Kharim_Charge,"Okay, okay, let's forget about it.",Info_Kharim_Charge_BACK);
-//	Info_AddChoice(Info_Kharim_Charge,""Okay, okay, vergessen wir die Sache."					",Info_Kharim_Charge_BACK);
+//	Info_AddChoice(Info_Kharim_Charge,"Okay, okay, vergessen wir die Sache.",Info_Kharim_Charge_BACK);
 	Info_AddChoice(Info_Kharim_Charge,"Dobře, dobře, zapomeneme na to!",Info_Kharim_Charge_BACK);
 
 };
@@ -199,7 +199,7 @@ func void Info_Kharim_Charge_Insult_Face()
 };
 
 // **************************************
-// IN DER ARENA
+//				IN DER ARENA
 // **************************************
 
 instance Info_Kharim_InArena(C_INFO)
@@ -238,7 +238,7 @@ func void Info_Kharim_InArena_Info()
 	else
 	{
 //		AI_Output(self,other,"SVM_9_LetsForgetOurLittleFight"); //Von mir aus können wir unseren Streit vergessen ... 
-//		AI_Output(self,other,"SVM_9_LetsForgetOurLittleFight"); //Von mir aus können wir unseren Streit vergessen ...	
+//		AI_Output(self,other,"SVM_9_LetsForgetOurLittleFight"); //Von mir aus können wir unseren Streit vergessen ...
 		AI_Output(self,other,"SVM_9_LetsForgetOurLittleFight"); //Raději bych na tohle malé nedorozumění zapomněl...
 		AI_StopProcessInfos(self);
 		Npc_ExchangeRoutine(self,"START");

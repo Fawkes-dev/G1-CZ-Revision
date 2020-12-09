@@ -29,7 +29,7 @@ func void DIA_GUR_1202_CorAngar_Exit_Info()
 };
 
 // ************************ 
-// Später Trainer 
+//		Später Trainer 
 // ************************
 
 instance DIA_CorAngar_LaterTrainer(C_INFO)
@@ -66,7 +66,7 @@ func void DIA_CorAngar_LaterTrainer_Info()
 };
 
 // ************************ 
-// Wie Templer
+//		Wie Templer
 // ************************
 
 instance DIA_CorAngar_WieTempler(C_INFO)
@@ -110,7 +110,7 @@ func void DIA_CorAngar_WieTempler_Info()
 /////////////////////////////////
 
 //-------------------------------------------------------------------------
-// STÄRKE UND DEX STEIGERN
+//							STÄRKE UND DEX STEIGERN
 //-------------------------------------------------------------------------
 instance GUR_1202_CorAngar_Teach(C_INFO)
 {
@@ -142,15 +142,10 @@ func void GUR_1202_CorAngar_Teach_Info()
 	AI_Output(self,other,"GUR_1202_CorAngar_Teach_08_01"); //Každý bojovník musí být silný a obratný.
 
 	Info_ClearChoices(GUR_1202_CorAngar_Teach);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"DIALOG_BACK									",GUR_1202_CorAngar_Teach_BACK);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,DIALOG_BACK ,GUR_1202_CorAngar_Teach_BACK);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)			",GUR_1202_CorAngar_Teach_STR_5);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),GUR_1202_CorAngar_Teach_STR_5);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)			",GUR_1202_CorAngar_Teach_STR_1);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),GUR_1202_CorAngar_Teach_STR_1);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",GUR_1202_CorAngar_Teach_DEX_5);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),GUR_1202_CorAngar_Teach_DEX_5);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)	",GUR_1202_CorAngar_Teach_DEX_1);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),GUR_1202_CorAngar_Teach_DEX_1);
 };
 
@@ -163,15 +158,10 @@ func void GUR_1202_CorAngar_Teach_STR_1()
 {
 	B_BuyAttributePoints(other,ATR_STRENGTH, LPCOST_ATTRIBUTE_STRENGTH);
 	Info_ClearChoices(GUR_1202_CorAngar_Teach);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"DIALOG_BACK									",GUR_1202_CorAngar_Teach_BACK);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,DIALOG_BACK ,GUR_1202_CorAngar_Teach_BACK);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)			",GUR_1202_CorAngar_Teach_STR_5);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),GUR_1202_CorAngar_Teach_STR_5);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)			",GUR_1202_CorAngar_Teach_STR_1);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),GUR_1202_CorAngar_Teach_STR_1);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",GUR_1202_CorAngar_Teach_DEX_5);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),GUR_1202_CorAngar_Teach_DEX_5);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)	",GUR_1202_CorAngar_Teach_DEX_1);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),GUR_1202_CorAngar_Teach_DEX_1);
 };
 
@@ -179,15 +169,10 @@ func void GUR_1202_CorAngar_Teach_STR_5()
 {
 	B_BuyAttributePoints(other,ATR_STRENGTH, 5*LPCOST_ATTRIBUTE_STRENGTH);
 	Info_ClearChoices(GUR_1202_CorAngar_Teach);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"DIALOG_BACK									",GUR_1202_CorAngar_Teach_BACK);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,DIALOG_BACK ,GUR_1202_CorAngar_Teach_BACK);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)			",GUR_1202_CorAngar_Teach_STR_5);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),GUR_1202_CorAngar_Teach_STR_5);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)			",GUR_1202_CorAngar_Teach_STR_1);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),GUR_1202_CorAngar_Teach_STR_1);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",GUR_1202_CorAngar_Teach_DEX_5);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),GUR_1202_CorAngar_Teach_DEX_5);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)	",GUR_1202_CorAngar_Teach_DEX_1);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),GUR_1202_CorAngar_Teach_DEX_1);
 };
 
@@ -195,15 +180,10 @@ func void GUR_1202_CorAngar_Teach_DEX_1()
 {
 	B_BuyAttributePoints(other,ATR_DEXTERITY, LPCOST_ATTRIBUTE_DEXTERITY);
 	Info_ClearChoices(GUR_1202_CorAngar_Teach);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"DIALOG_BACK									",GUR_1202_CorAngar_Teach_BACK);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,DIALOG_BACK ,GUR_1202_CorAngar_Teach_BACK);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)			",GUR_1202_CorAngar_Teach_STR_5);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),GUR_1202_CorAngar_Teach_STR_5);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)			",GUR_1202_CorAngar_Teach_STR_1);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),GUR_1202_CorAngar_Teach_STR_1);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",GUR_1202_CorAngar_Teach_DEX_5);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),GUR_1202_CorAngar_Teach_DEX_5);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)	",GUR_1202_CorAngar_Teach_DEX_1);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),GUR_1202_CorAngar_Teach_DEX_1);
 };
 
@@ -211,15 +191,10 @@ func void GUR_1202_CorAngar_Teach_DEX_5()
 {
 	B_BuyAttributePoints(other,ATR_DEXTERITY, 5*LPCOST_ATTRIBUTE_DEXTERITY);
 	Info_ClearChoices(GUR_1202_CorAngar_Teach);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"DIALOG_BACK									",GUR_1202_CorAngar_Teach_BACK);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,DIALOG_BACK ,GUR_1202_CorAngar_Teach_BACK);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)			",GUR_1202_CorAngar_Teach_STR_5);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),GUR_1202_CorAngar_Teach_STR_5);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)			",GUR_1202_CorAngar_Teach_STR_1);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),GUR_1202_CorAngar_Teach_STR_1);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",GUR_1202_CorAngar_Teach_DEX_5);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),GUR_1202_CorAngar_Teach_DEX_5);
-//	Info_AddChoice(GUR_1202_CorAngar_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)	",GUR_1202_CorAngar_Teach_DEX_1);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),GUR_1202_CorAngar_Teach_DEX_1);
 };
 
@@ -297,7 +272,7 @@ func void GUR_1202_CorAngar_WANNABETPL_Info()
 };
 
 //-------------------------------------------------------------------------
-// ZWEIHANDKAMPF LERNEN STUFE 1
+//							ZWEIHANDKAMPF LERNEN STUFE 1
 //-------------------------------------------------------------------------
 instance GUR_1202_CorAngar_ZWEIHAND1(C_INFO)
 {
@@ -307,7 +282,7 @@ instance GUR_1202_CorAngar_ZWEIHAND1(C_INFO)
 	important = 0;
 	permanent = 1;
 //	description = B_BuildLearnString(NAME_Learn2h_1, LPCOST_TALENT_2H_1,0); 
-//	description = B_BuildLearnString(NAME_Learn2h_1,	LPCOST_TALENT_2H_1,0); 
+//	description = B_BuildLearnString(NAME_Learn2h_1, LPCOST_TALENT_2H_1,0); 
 	description = B_BuildLearnString(NAME_Learn2h_1,LPCOST_TALENT_2H_1,0); 
 };
 
@@ -349,7 +324,7 @@ func void GUR_1202_CorAngar_ZWEIHAND1_Info()
 	};
 };  
 //-------------------------------------------------------------------------
-// ZWEIHANDKAMPF LERNEN STUFE 2
+//							ZWEIHANDKAMPF LERNEN STUFE 2
 //-------------------------------------------------------------------------
 instance GUR_1202_CorAngar_ZWEIHAND2(C_INFO)
 {
@@ -359,7 +334,7 @@ instance GUR_1202_CorAngar_ZWEIHAND2(C_INFO)
 	important = 0;
 	permanent = 1;
 //	description = B_BuildLearnString(NAME_Learn2h_2, LPCOST_TALENT_2H_2,0); 
-//	description = B_BuildLearnString(NAME_Learn2h_2,	LPCOST_TALENT_2H_2,0); 
+//	description = B_BuildLearnString(NAME_Learn2h_2, LPCOST_TALENT_2H_2,0); 
 	description = B_BuildLearnString(NAME_Learn2h_2,LPCOST_TALENT_2H_2,0); 
 };
 
@@ -418,7 +393,7 @@ func void GUR_1202_CorAngar_ZWEIHAND2_Info()
 //#####################################################################
 
 // **************************************************************************
-// nach der großen Beschwörung
+// 				nach der großen Beschwörung
 // **************************************************************************
 instance GUR_1202_CorAngar_SENDS(C_INFO)
 {
@@ -475,8 +450,12 @@ func void GUR_1202_CorAngar_SENDS_Info()
 	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_10"); //Chci tě požádat, abys šel do Skřetího hřbitova a podal mi zprávu, co tam templáři našli.
 
 	Info_ClearChoices(GUR_1202_CorAngar_SENDS);
-	Info_AddChoice(GUR_1202_CorAngar_SENDS,"What will I get in exchange?", GUR_1202_CorAngar_SENDS_EARN);
-	Info_AddChoice(GUR_1202_CorAngar_SENDS,"I'll get on my way right now!", GUR_1202_CorAngar_SENDS_KNOW);
+//	Info_AddChoice(GUR_1202_CorAngar_SENDS,"What will I get in exchange?", GUR_1202_CorAngar_SENDS_EARN);
+//	Info_AddChoice(GUR_1202_CorAngar_SENDS,"Was springt für mich dabei raus?", GUR_1202_CorAngar_SENDS_EARN);
+	Info_AddChoice(GUR_1202_CorAngar_SENDS,"Co dostanu za odměnu?", GUR_1202_CorAngar_SENDS_EARN);
+//	Info_AddChoice(GUR_1202_CorAngar_SENDS,"I'll get on my way right now!", GUR_1202_CorAngar_SENDS_KNOW);
+//	Info_AddChoice(GUR_1202_CorAngar_SENDS,"Ich mache mich sofort auf den Weg!", GUR_1202_CorAngar_SENDS_KNOW);
+	Info_AddChoice(GUR_1202_CorAngar_SENDS,"Ihned se vydám na cestu!", GUR_1202_CorAngar_SENDS_KNOW);
 };  
 func void GUR_1202_CorAngar_SENDS_EARN()
 {
@@ -541,7 +520,7 @@ func void GUR_1202_CorAngar_WHERE_Info()
 };  
 
 // **************************************************************************
-// nach dem Ork-Friedhof
+// 				nach dem Ork-Friedhof
 // **************************************************************************
 instance GUR_1202_CorAngar_AFTER(C_INFO)
 {
@@ -609,7 +588,7 @@ func void GUR_1202_CorAngar_AFTER_Info()
 };  
 
 // **************************************************************************
-// MISSION: Find Herb
+// 				MISSION: Find Herb
 // **************************************************************************
 instance Info_CorAngar_FindHerb(C_INFO)
 {

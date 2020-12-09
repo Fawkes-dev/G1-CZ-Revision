@@ -1,5 +1,5 @@
 // ****************************************
-// Exit
+// 					Exit
 // ****************************************
 
 instance DIA_Shrike_Exit(C_INFO)
@@ -24,7 +24,7 @@ func void DIA_Shrike_Exit_Info()
 };
 
 // ****************************************
-// Hallo
+// 					Hallo
 // ****************************************
 
 instance DIA_Shrike_Hello(C_INFO)
@@ -60,7 +60,7 @@ func void DIA_Shrike_Hello_Info()
 };
 
 // ****************************************
-// GetLost
+// 					GetLost
 // ****************************************
 
 instance DIA_Shrike_GetLost(C_INFO)

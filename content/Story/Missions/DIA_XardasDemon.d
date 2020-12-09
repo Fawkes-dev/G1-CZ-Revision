@@ -8,7 +8,6 @@ instance Info_XardasDemon_EXIT(C_INFO)
 	information = Info_XardasDemon_EXIT_Info;
 	important = 0; 
 	permanent = 1;
-//	description = 	DIALOG_ENDE;
 	description = DIALOG_ENDE;
 };                       
 
@@ -37,7 +36,7 @@ func void Info_XardasDemon_EXIT_Info()
 //#####################################################################
 
 //***************************************************************************
-// Info INTRO
+//	Info INTRO
 //***************************************************************************
 instance Info_XardasDemon_INTRO(C_INFO)
 {
@@ -82,7 +81,7 @@ func void Info_XardasDemon_INTRO_Info()
 };
 
 //***************************************************************************
-// Info MASTERWHO
+//	Info MASTERWHO
 //***************************************************************************
 instance Info_XardasDemon_MASTERWHO(C_INFO)
 {
@@ -120,7 +119,7 @@ func void Info_XardasDemon_MASTERWHO_Info()
 };
 
 //***************************************************************************
-// Info MASTERHOW
+//	Info MASTERHOW
 //***************************************************************************
 instance Info_XardasDemon_MASTERHOW(C_INFO)
 {
@@ -172,7 +171,7 @@ func void Info_XardasDemon_MASTERHOW_Info()
 };
 
 //***************************************************************************
-// Info NOHEART
+//	Info NOHEART
 //***************************************************************************
 instance Info_XardasDemon_NOHEART(C_INFO)
 {
@@ -214,7 +213,7 @@ func void Info_XardasDemon_NOHEART_Info()
 };
 
 //***************************************************************************
-// Ein Herz abliefern
+//	Ein Herz abliefern
 //***************************************************************************
 func void B_XardasDemon_GiveHeart()
 {
@@ -264,7 +263,7 @@ func void B_XardasDemon_GiveHeart()
 };
 
 //***************************************************************************
-// Info STONEHEART
+//	Info STONEHEART
 //***************************************************************************
 instance Info_XardasDemon_STONEHEART(C_INFO)
 {
@@ -300,7 +299,7 @@ func void Info_XardasDemon_STONEHEART_Info()
 };
 
 //***************************************************************************
-// Info ICEHEART
+//	Info ICEHEART
 //***************************************************************************
 instance Info_XardasDemon_ICEHEART(C_INFO)
 {
@@ -335,7 +334,7 @@ func void Info_XardasDemon_ICEHEART_Info()
 };
 
 //***************************************************************************
-// Info FIREHEART
+//	Info FIREHEART
 //***************************************************************************
 instance Info_XardasDemon_FIREHEART(C_INFO)
 {

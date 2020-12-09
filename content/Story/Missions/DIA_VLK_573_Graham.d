@@ -1,5 +1,5 @@
 // ************************************************************
-//	  EXIT 
+// 			  				   EXIT 
 // ************************************************************
 
 instance DIA_Graham_EXIT(C_INFO)
@@ -23,7 +23,7 @@ func void Info_Graham_EXIT_Info()
 };
 
 // ************************************************************
-// Was machst du?
+// 						Was machst du?
 // ************************************************************
 
 instance DIA_Graham_Hello(C_INFO)
@@ -58,7 +58,7 @@ func void DIA_Graham_Hello_Info()
 };
 
 // ************************************************************
-// Sell Map
+// 						Sell Map
 // ************************************************************
 	var int Graham_OMKarteVerkauft;
 	var int Graham_OMKarteErpresst;
@@ -94,13 +94,13 @@ func void DIA_Graham_SellMap_Info()
 	AI_Output(self,other,"DIA_Graham_SellMap_02_01"); //Žádný problém. Pro tebe... jen za 20 nugetů.
 	Info_ClearChoices(DIA_Graham_SellMap);
 //	Info_AddChoice(DIA_Graham_SellMap,"I'll return.",DIA_Graham_SellMap_BACK);
-//	Info_AddChoice(DIA_Graham_SellMap,""Ich komme wieder."							",DIA_Graham_SellMap_BACK);
+//	Info_AddChoice(DIA_Graham_SellMap,"Ich komme wieder.",DIA_Graham_SellMap_BACK);
 	Info_AddChoice(DIA_Graham_SellMap,"Ještě přijdu.",DIA_Graham_SellMap_BACK);
 //	Info_AddChoice(DIA_Graham_SellMap,"I'll pay for the map. Here, take the ore.",DIA_Graham_SellMap_Pay);
-//	Info_AddChoice(DIA_Graham_SellMap,""Gut - ich werde die Karte bezahlen. Hier, nimm das Erz."	",DIA_Graham_SellMap_Pay);
+//	Info_AddChoice(DIA_Graham_SellMap,"Gut - ich werde die Karte bezahlen. Hier, nimm das Erz.",DIA_Graham_SellMap_Pay);
 	Info_AddChoice(DIA_Graham_SellMap,"Zaplatím za mapu. Tady, vem si nugety.",DIA_Graham_SellMap_Pay);
 //	Info_AddChoice(DIA_Graham_SellMap,"Give me the map or I'll take it!",DIA_Graham_SellMap_AufsMaul);
-//	Info_AddChoice(DIA_Graham_SellMap,""Rück die Karte raus, oder ich polier dir die Fresse!"								",DIA_Graham_SellMap_AufsMaul);
+//	Info_AddChoice(DIA_Graham_SellMap,"Rück die Karte raus, oder ich polier dir die Fresse!",DIA_Graham_SellMap_AufsMaul);
 	Info_AddChoice(DIA_Graham_SellMap,"Dej mi tu mapu, nebo si ji vezmu sám!",DIA_Graham_SellMap_AufsMaul);
 //	Info_AddChoice(DIA_Graham_SellMap,"Hold on, Diego said you should GIVE me the map, not SELL it to me!",DIA_Graham_SellMap_GiveNotSell);
 //	Info_AddChoice(DIA_Graham_SellMap,"Moment, Diego sagte, du sollst mir die Karte GEBEN, nicht verkaufen.",DIA_Graham_SellMap_GiveNotSell);

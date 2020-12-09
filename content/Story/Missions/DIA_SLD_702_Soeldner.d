@@ -1,5 +1,5 @@
 // ********************************
-// EXIT
+// 				EXIT
 // ********************************
 
 instance DIA_Sld_702_EXIT(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Sld_702_EXIT_Info()
 };
 
 // ********************************
-// First
+// 				First
 // ********************************
 
 instance DIA_Sld_702_First(C_INFO)
@@ -58,7 +58,7 @@ func void DIA_Sld_702_First_Info()
 };
 
 // ********************************
-// PERM
+// 				PERM
 // ********************************
 
 instance DIA_Sld_702_PERM(C_INFO)

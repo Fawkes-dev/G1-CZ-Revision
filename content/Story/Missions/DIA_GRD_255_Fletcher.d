@@ -1,5 +1,5 @@
 // ************************************************************
-//	  EXIT 
+// 			  				   EXIT 
 // ************************************************************
 
 instance DIA_Fletcher_EXIT(C_INFO)
@@ -24,7 +24,7 @@ func void DIA_Fletcher_EXIT_Info()
 };
 
 // ************************************************************
-// FIRST NACHT 
+//						FIRST NACHT 
 // ************************************************************
 
 instance DIA_Fletcher_First(C_INFO)
@@ -73,7 +73,7 @@ func void DIA_Fletcher_First_Info()
 };
 
 // ************************************************************
-// Hallo 
+//							Hallo 
 // ************************************************************
 	var int fletcher_whytalk;
 // ************************************************************
@@ -113,13 +113,13 @@ func void DIA_Fletcher_Hello_Info()
 
 	Info_ClearChoices(DIA_Fletcher_Hello);
 //	Info_AddChoice(DIA_Fletcher_Hello,"I see.",DIA_Fletcher_Hello_ISee);
-//	Info_AddChoice(DIA_Fletcher_Hello,""Verstehe." 	",DIA_Fletcher_Hello_ISee);
+//	Info_AddChoice(DIA_Fletcher_Hello,"Verstehe.",DIA_Fletcher_Hello_ISee);
 	Info_AddChoice(DIA_Fletcher_Hello,"Aha...",DIA_Fletcher_Hello_ISee);
 //	Info_AddChoice(DIA_Fletcher_Hello,"Then how come I'm talking to you?",DIA_Fletcher_Hello_WhyTalk);
-//	Info_AddChoice(DIA_Fletcher_Hello,""Wie kommt es dann, dass wir beide uns unterhalten?"	",DIA_Fletcher_Hello_WhyTalk);
+//	Info_AddChoice(DIA_Fletcher_Hello,"Wie kommt es dann, dass wir beide uns unterhalten?",DIA_Fletcher_Hello_WhyTalk);
 	Info_AddChoice(DIA_Fletcher_Hello,"Tak jak to, že tady s tebou mluvím?",DIA_Fletcher_Hello_WhyTalk);
 //	Info_AddChoice(DIA_Fletcher_Hello,"Oh, where are you then?",DIA_Fletcher_Hello_WhereElse);
-//	Info_AddChoice(DIA_Fletcher_Hello,""Wo bist du denn?"	",DIA_Fletcher_Hello_WhereElse);
+//	Info_AddChoice(DIA_Fletcher_Hello,"Wo bist du denn?",DIA_Fletcher_Hello_WhereElse);
 	Info_AddChoice(DIA_Fletcher_Hello,"Och, a kde teda potom jsi?",DIA_Fletcher_Hello_WhereElse);
 };
 
@@ -157,7 +157,7 @@ func void DIA_Fletcher_Hello_ISee()
 };
 
 // ************************************************************
-// Wo Nek 
+//						Wo Nek 
 // ************************************************************
 
 instance DIA_Fletcher_WoNek(C_INFO)
@@ -203,7 +203,7 @@ func void DIA_Fletcher_WoNek_Info()
 };
 
 // ************************************************************
-// Trotzdem Schutzgeld 
+//						Trotzdem Schutzgeld 
 // ************************************************************
 
 instance DIA_Fletcher_TroSchu(C_INFO)
@@ -237,7 +237,7 @@ func void DIA_Fletcher_TroSchu_Info()
 };
 
 // ************************************************************
-// Wegen Nek 
+//						Wegen Nek 
 // ************************************************************
 	var int fletcher_foundNek;
 // ************************************************************
@@ -304,7 +304,7 @@ func void DIA_Fletcher_WegenNek_Info()
 };
 
 // ************************************************************
-// Problem
+//						Problem
 // ************************************************************
 
 instance DIA_Fletcher_Problem(C_INFO)
@@ -346,7 +346,7 @@ func void DIA_Fletcher_Problem_Info()
 //#####################################################################
 
 // ************************************************************
-// GARDIST GEWORDEN 
+//						GARDIST GEWORDEN 
 // ************************************************************
 instance Grd_255_Fletcher_WELCOME(C_INFO)
 {
@@ -381,7 +381,7 @@ func void Grd_255_Fletcher_WELCOME_Info()
 //#####################################################################
 
 //***************************************************************************
-// Info DIE
+//	Info DIE
 //***************************************************************************
 instance Info_Fletcher_DIE(C_INFO)
 {

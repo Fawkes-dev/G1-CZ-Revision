@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+//						 EXIT 
 // **************************************************
 
 instance Org_804_Organisator_Exit(C_INFO)
@@ -26,7 +26,7 @@ func void Org_804_Organisator_Exit_Info()
 };
 
 // **************************************************
-// Erste Begrüssung
+//					Erste Begrüssung
 // **************************************************
 
 instance Org_804_Organisator_Greet(C_INFO)
@@ -55,7 +55,7 @@ func void Org_804_Organisator_Greet_Info()
 };
 
 // **************************************************
-// Wo geht's hier hin?
+//					Wo geht's hier hin?
 // **************************************************
 
 instance Org_804_Organisator_WayTo(C_INFO)
@@ -88,7 +88,7 @@ func void Org_804_Organisator_WayTo_Info()
 };
 
 // **************************************************
-// Will zu Lares
+//					Will zu Lares
 // **************************************************
 
 instance Org_804_Organisator_ToLares(C_INFO)
@@ -129,7 +129,7 @@ func void Org_804_Organisator_ToLares_Info()
 };
 
 // **************************************************
-// Kann ich zu Lares? - PERM
+//				Kann ich zu Lares? - PERM
 // **************************************************
 
 instance Org_804_Organisator_PERM(C_INFO)
@@ -164,8 +164,8 @@ func void Org_804_Organisator_PERM_Info()
 };
 
 //////////////////////////////////////////////////////////////////////////
-// DURCHGANGSWACHE
-// =============== 
+//	DURCHGANGSWACHE
+//	=============== 
 //  AL aufhalten
 //////////////////////////////////////////////////////////////////////////
 
@@ -210,7 +210,7 @@ func void Info_Org_804_FirstWarn_Info()
 };
 
 //------------------------------------------------------------------------
-// 2. Warnung
+//	2. Warnung
 //------------------------------------------------------------------------
 instance Info_Org_804_LastWarn(C_INFO)
 {
@@ -247,7 +247,7 @@ func int Info_Org_804_LastWarn_Info()
 };
 
 //------------------------------------------------------------------------
-// Attack
+//	Attack
 //------------------------------------------------------------------------
 instance Info_Org_804_Attack(C_INFO)
 {

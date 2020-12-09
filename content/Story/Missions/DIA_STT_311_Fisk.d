@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+//						 EXIT 
 // **************************************************
 
 instance Stt_311_Fisk_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void Stt_311_Fisk_Exit_Info()
 };
 
 // **************************************************
-// First
+//					First
 // **************************************************
 
 instance Stt_311_Fisk_First(C_INFO)
@@ -54,7 +54,7 @@ func void Stt_311_Fisk_First_Info()
 };
 
 // **************************************************
-// Handeln
+//					Handeln
 // **************************************************
 
 instance Stt_311_Fisk_Trade(C_INFO)
@@ -117,13 +117,13 @@ func void Stt_311_Fisk_WhistlersSword_Info()
 
 	Info_ClearChoices(Stt_311_Fisk_WhistlersSword);
 //	Info_AddChoice(Stt_311_Fisk_WhistlersSword,"Maybe later.",Stt_311_Fisk_WhistlersSword_BACK);
-//	Info_AddChoice(Stt_311_Fisk_WhistlersSword,""Vielleicht später."							",Stt_311_Fisk_WhistlersSword_BACK);
+//	Info_AddChoice(Stt_311_Fisk_WhistlersSword,"Vielleicht später.",Stt_311_Fisk_WhistlersSword_BACK);
 	Info_AddChoice(Stt_311_Fisk_WhistlersSword,"Možná později.",Stt_311_Fisk_WhistlersSword_BACK);
 //	Info_AddChoice(Stt_311_Fisk_WhistlersSword,"You wanted to sell it to Whistler for a hundred...",Stt_311_Fisk_WhistlersSword_Fault);
-//	Info_AddChoice(Stt_311_Fisk_WhistlersSword,""Whistler wolltest du es für 100 verkaufen..."	",Stt_311_Fisk_WhistlersSword_Fault);
+//	Info_AddChoice(Stt_311_Fisk_WhistlersSword,"Whistler wolltest du es für 100 verkaufen...",Stt_311_Fisk_WhistlersSword_Fault);
 	Info_AddChoice(Stt_311_Fisk_WhistlersSword,"Whistlerovi jsi ho chtěl prodat za sto...",Stt_311_Fisk_WhistlersSword_Fault);
 //	Info_AddChoice(Stt_311_Fisk_WhistlersSword,"Yes, I'll take it.",Stt_311_Fisk_WhistlersSword_TakeIt);
-//	Info_AddChoice(Stt_311_Fisk_WhistlersSword,""Ja, ich nehme es."							",Stt_311_Fisk_WhistlersSword_TakeIt);
+//	Info_AddChoice(Stt_311_Fisk_WhistlersSword,"Ja, ich nehme es.",Stt_311_Fisk_WhistlersSword_TakeIt);
 	Info_AddChoice(Stt_311_Fisk_WhistlersSword,"Ano, vezmu si ho.",Stt_311_Fisk_WhistlersSword_TakeIt);
 };
 
@@ -181,7 +181,7 @@ func void Stt_311_Fisk_WhistlersSword_TakeIt()
 };
 
 // **************************************************
-// Forget Sword
+//					Forget Sword
 // **************************************************
 
 instance Stt_311_Fisk_ForgetSword(C_INFO)
@@ -215,7 +215,7 @@ func void Stt_311_Fisk_ForgetSword_Info()
 };
 
 // **************************************************
-// MordragKO
+//					MordragKO
 // **************************************************
 	var int Fisk_GetNewHehler;
 // **************************************************
@@ -253,13 +253,13 @@ func void Stt_311_Fisk_MordragKO_Info()
 
 	Info_ClearChoices(Stt_311_Fisk_MordragKO);
 //	Info_AddChoice(Stt_311_Fisk_MordragKO,"You're trading the Ore Barons' belongings! Thorus will be interested...",Stt_311_Fisk_MordragKO_Petze);
-//	Info_AddChoice(Stt_311_Fisk_MordragKO," "Deine Ware gehört den Erzbaronen. Das wird Thorus sicher interessieren..."",Stt_311_Fisk_MordragKO_Petze);
+//	Info_AddChoice(Stt_311_Fisk_MordragKO,"Deine Ware gehört den Erzbaronen. Das wird Thorus sicher interessieren...",Stt_311_Fisk_MordragKO_Petze);
 	Info_AddChoice(Stt_311_Fisk_MordragKO,"Obchoduješ s majetkem Rudobaronů! To bude Thoruse zajímat...",Stt_311_Fisk_MordragKO_Petze);
 //	Info_AddChoice(Stt_311_Fisk_MordragKO,"Relax! Maybe I can make up for it, can't I?",Stt_311_Fisk_MordragKO_Relax);
-//	Info_AddChoice(Stt_311_Fisk_MordragKO," "Entspann dich! Die Sache läßt sich sicher wieder geradebiegen, oder?" 	",Stt_311_Fisk_MordragKO_Relax);
+//	Info_AddChoice(Stt_311_Fisk_MordragKO,"Entspann dich! Die Sache läßt sich sicher wieder geradebiegen, oder?",Stt_311_Fisk_MordragKO_Relax);
 	Info_AddChoice(Stt_311_Fisk_MordragKO,"Klid! Možná to můžu nějak napravit, ne?",Stt_311_Fisk_MordragKO_Relax);
 //	Info_AddChoice(Stt_311_Fisk_MordragKO,"Then just kiss my ass!",Stt_311_Fisk_MordragKO_FuckOff);
-//	Info_AddChoice(Stt_311_Fisk_MordragKO," "Dann leck mich doch einfach!" 											",Stt_311_Fisk_MordragKO_FuckOff);
+//	Info_AddChoice(Stt_311_Fisk_MordragKO,"Dann leck mich doch einfach!",Stt_311_Fisk_MordragKO_FuckOff);
 	Info_AddChoice(Stt_311_Fisk_MordragKO,"Pak mi polib zadek!",Stt_311_Fisk_MordragKO_FuckOff);
 };
 
@@ -308,7 +308,7 @@ func void Stt_311_Fisk_MordragKO_Petze()
 };
 
 // **************************************************
-// New Hehler
+//					New Hehler
 // **************************************************
 
 instance Stt_311_Fisk_HehlerSuccess(C_INFO)
@@ -394,11 +394,8 @@ func void Stt_311_Fisk_ARMOR_Info()
 //	AI_Output(self,other,"Stt_311_Fisk_ARMOR_Info_12_02"); //Nun, ich bin sicher, dass ich dich zufrieden stellen kann.
 	AI_Output(self,other,"Stt_311_Fisk_ARMOR_Info_12_02"); //Ano, určitě budeš spokojený.
 	Info_ClearChoices(Stt_311_Fisk_ARMOR);
-//	Info_Addchoice (Stt_311_Fisk_ARMOR,"DIALOG_BACK",Stt_311_Fisk_ARMOR_BACK);
 	Info_Addchoice (Stt_311_Fisk_ARMOR,DIALOG_BACK,Stt_311_Fisk_ARMOR_BACK);
-//	Info_Addchoice (Stt_311_Fisk_ARMOR,"B_BuildBuyArmorString(NAME_FiskLightDiggers,VALUE_VLK_ARMOR_L)",Stt_311_Fisk_ARMOR_L);
 	Info_Addchoice (Stt_311_Fisk_ARMOR,B_BuildBuyArmorString(NAME_FiskLightDiggers,VALUE_VLK_ARMOR_L),Stt_311_Fisk_ARMOR_L);
-//	Info_Addchoice (Stt_311_Fisk_ARMOR,"B_BuildBuyArmorString(NAME_FiskDiggers,VALUE_VLK_ARMOR_M)",Stt_311_Fisk_ARMOR_M);
 	Info_Addchoice (Stt_311_Fisk_ARMOR,B_BuildBuyArmorString(NAME_FiskDiggers,VALUE_VLK_ARMOR_M),Stt_311_Fisk_ARMOR_M);
 
 };  

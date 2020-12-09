@@ -1,5 +1,5 @@
 // *******************************
-// EXIT
+// 				EXIT
 // *******************************
 
 instance DIA_GorNaRan_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_GorNaRan_Exit_Info()
 };
 
 // *******************************
-// Wache
+// 				Wache
 // *******************************
 
 instance DIA_GorNaRan_Wache(C_INFO)

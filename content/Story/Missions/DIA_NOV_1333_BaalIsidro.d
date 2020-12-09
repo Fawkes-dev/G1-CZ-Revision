@@ -1,5 +1,5 @@
 // ************************************************************
-//	  EXIT 
+// 			  				   EXIT 
 // ************************************************************
 
 instance DIA_BaalIsidro_EXIT(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_BaalIsidro_EXIT_Info()
 };
 
 // ************************************************************
-// Hallo
+// 							Hallo
 // ************************************************************
 
 instance DIA_BaalIsidro_Hello(C_INFO) 
@@ -63,7 +63,7 @@ func void DIA_BaalIsidro_Hello_Info()
 };
 
 // ************************************************************
-//  TRADE
+// 					 	TRADE
 // ************************************************************
 
 instance DIA_BaalIsidro_TRADE(C_INFO) 
@@ -98,7 +98,7 @@ func void DIA_BaalIsidro_TRADE_Info()
 };
 
 // ************************************************************
-//  Ich verkaufe für dich
+// 					 Ich verkaufe für dich
 // ************************************************************
 
 instance DIA_BaalIsidro_GimmeKraut(C_INFO) 
@@ -138,7 +138,7 @@ func void DIA_BaalIsidro_GimmeKraut_Info()
 };
 
 // ************************************************************
-// Baal Kagan hat gepetzt
+// 					Baal Kagan hat gepetzt
 // ************************************************************
 
 instance DIA_BaalIsidro_Problem(C_INFO) 
@@ -185,7 +185,7 @@ func void DIA_BaalIsidro_Problem_Info()
 };
 
 // ************************************************************
-//  Trink noch einen
+// 					 Trink noch einen
 // ************************************************************
 	var int BaalIsidro_GotDrink;
 // ************************************************************
@@ -277,7 +277,7 @@ func void DIA_BaalIsidro_Drink_Info()
 };
 
 // ************************************************************
-//  Übrleg's dir!
+// 					 Übrleg's dir!
 // ************************************************************
 	var int BaalIsidro_DealerJob;
 // ************************************************************
@@ -354,7 +354,7 @@ func void DIA_BaalIsidro_ThinkAgain_Info()
 };
 
 // ************************************************************
-// RUNNING / SUCCESS
+// 					RUNNING / SUCCESS
 // ************************************************************
 
 instance DIA_BaalIsidro_RUNNING(C_INFO) 

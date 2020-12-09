@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_Dusty_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Dusty_Exit_Info()
 };
 
 // **************************************************
-// Was machst du?
+// 				Was machst du?
 // **************************************************
 
 instance DIA_Dusty_Hello(C_INFO)
@@ -63,7 +63,7 @@ func void DIA_Dusty_Hello_Info()
 };
 
 // **************************************************
-// Warum gehst du nicht?
+// 				Warum gehst du nicht?
 // **************************************************
 
 instance DIA_Dusty_WhyNotLeave(C_INFO)
@@ -107,7 +107,7 @@ func void DIA_Dusty_WhyNotLeave_Info()
 };
 
 // **************************************************
-// Mit Melvin geredet
+// 				Mit Melvin geredet
 // **************************************************
 
 instance DIA_Dusty_MetMelvin(C_INFO)
@@ -156,7 +156,7 @@ func void DIA_Dusty_MetMelvin_Info()
 };
 
 // **************************************************
-// Ich gebe dir 100 Erz
+// 				Ich gebe dir 100 Erz
 // **************************************************
 
 instance DIA_Dusty_Offer100Ore(C_INFO)
@@ -197,7 +197,7 @@ func void DIA_Dusty_Offer100Ore_Info()
 };
 
 // **************************************************
-// Ich gehe mit dir
+// 				Ich gehe mit dir
 // **************************************************
 
 instance DIA_Dusty_IWouldGo(C_INFO)
@@ -239,7 +239,7 @@ func void DIA_Dusty_IWouldGo_Info()
 };
 
 // **************************************************
-// Lass uns gehen
+// 				Lass uns gehen
 // **************************************************
 var int Dusty_LetsGo;
 // **************************************************

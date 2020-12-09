@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+//						 EXIT 
 // **************************************************
 
 instance Info_GorHanis_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void Info_GorHanis_Exit_Info()
 };
 
 // **************************************************
-// Was machst du hier?
+//				Was machst du hier?
 // **************************************************
 
 instance Info_GorHanis_What(C_INFO)
@@ -54,7 +54,7 @@ func void Info_GorHanis_What_Info()
 };
 
 // **************************************************
-// Arena
+//					Arena
 // **************************************************
 
 instance Info_GorHanis_Arena(C_INFO)
@@ -91,7 +91,7 @@ func void Info_GorHanis_Arena_Info()
 };
 
 // **************************************************
-// Schläfer
+//					Schläfer
 // **************************************************
 
 instance Info_GorHanis_Sleeper(C_INFO)
@@ -134,7 +134,7 @@ func void Info_GorHanis_Sleeper_Info()
 };
 
 // **************************************************
-// Große Anrufung
+//					Große Anrufung
 // **************************************************
 
 instance Info_GorHanis_Summoning(C_INFO)
@@ -171,7 +171,7 @@ func void Info_GorHanis_Summoning_Info()
 };
 
 // **************************************************
-// Weg zum ST
+//					Weg zum ST
 // **************************************************
 
 instance Info_GorHanis_WayToST(C_INFO)
@@ -205,7 +205,7 @@ func void Info_GorHanis_WayToST_Info()
 };
 
 // **************************************************
-// FORDERN
+//					FORDERN
 // **************************************************
 
 instance Info_GorHanis_Charge(C_INFO)
@@ -245,7 +245,7 @@ func void Info_GorHanis_Charge_Info()
 };
 
 // **************************************************
-// NOCHMAL FORDERN
+//					NOCHMAL FORDERN
 // **************************************************
 
 instance Info_GorHanis_ChargeGood(C_INFO)
@@ -345,6 +345,7 @@ func int Info_TPL_1422_GorHanis2_Condition()
 func void Info_TPL_1422_GorHanis2_Info()
 {
 	AI_Output(other,self,"Info_TPL_1422_GorHanis2_15_01"); //Das geht dich nichts an!
+//	AI_Output(self,other,"Info_TPL_1422_GorHanis2_08_02"); //Soso, dann lasse ich dich lieber passieren, bevor du mir weh tust (lacht). Am Hohenpriester kommst Du eh nicht vorbei und ich muss mein Schwert nicht mit deinem Blut beschmutzen.
 	AI_Output(self,other,"Info_TPL_1422_GorHanis2_08_02"); //Soso, dann lasse ich dich lieber passieren, bevor du mir weh tust (lacht). Am Hohenpriester kommst Du eh nicht vorbei und ich muss mein Schwert nicht mit deinem Blut beschmutzen. 
 };
 

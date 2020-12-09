@@ -1,5 +1,5 @@
 // **************************************
-// EXIT 
+//					EXIT 
 // **************************************
 
 instance DIA_Grd_218_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Grd_218_Exit_Info()
 };
 
 // **************************************
-// Erstes Mal rein
+//			Erstes Mal rein
 // **************************************
 
 instance DIA_Grd_218_FirstIn(C_INFO)
@@ -71,17 +71,17 @@ func void DIA_Grd_218_FirstIn_Info()
 };
 
 //////////////////////////////////////////////////////////////////////////
-// DURCHGANGSWACHE
-// =============== 
-// NSC: Grd_218_Gardist
-// Lager: OldCamp 
-// Durchgang: Eingang Erzbaronhaus
-// Uhrzeit: 24h
+//	DURCHGANGSWACHE
+//	=============== 
+//	NSC: Grd_218_Gardist
+//	Lager: OldCamp 
+//	Durchgang: Eingang Erzbaronhaus
+//	Uhrzeit: 24h
 //
-// Es passiert folgendes:
-// 1. Nähert sich der Spieler dem Durchgang, so wird er in diesen
-// Dialog gezwungen und einmal gewarnt
-// 2. Nähert er sich trotzdem wieder, wird er angegriffen
+//	Es passiert folgendes:
+//	1. Nähert sich der Spieler dem Durchgang, so wird er in diesen
+//		Dialog gezwungen und einmal gewarnt
+//	2. Nähert er sich trotzdem wieder, wird er angegriffen
 //////////////////////////////////////////////////////////////////////////
 const string Grd_218_CHECKPOINT = "OCC_BARONS_HALLWAY_FRONT";
 
@@ -96,7 +96,7 @@ instance Info_Grd_218_FirstWarn(C_INFO)
 };                       
 
 //------------------------------------------------------------------------
-// 1. Warnung
+//	1. Warnung
 //------------------------------------------------------------------------
 func int Info_Grd_218_FirstWarn_Condition()
 {
@@ -130,7 +130,7 @@ func void Info_Grd_218_FirstWarn_Info()
 };
 
 //------------------------------------------------------------------------
-// Attack
+//	Attack
 //------------------------------------------------------------------------
 instance Info_Grd_218_Attack(C_INFO)
 {

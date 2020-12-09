@@ -1,5 +1,5 @@
 // **************************************************
-// EXIT 
+//						EXIT 
 // **************************************************
 
 instance DIA_Balor_Exit(C_INFO)
@@ -24,7 +24,7 @@ func void DIA_Balor_Exit_Info()
 };
 
 // **************************************************
-// Kraut abholen
+//				Kraut abholen
 // **************************************************
 	var int Balor_BotenDay;
 // **************************************************
@@ -83,7 +83,7 @@ func void DIA_Balor_FetchWeed_Info()
 };
 
 // **************************************************
-// Wem verhökern?
+//				Wem verhökern?
 // **************************************************
 	var int Balor_PlayerCheating;
 // **************************************************
@@ -119,13 +119,13 @@ func void DIA_Balor_SellUnder_Info()
 
 	Info_ClearChoices(DIA_Balor_SellUnder);
 //	Info_AddChoice(DIA_Balor_SellUnder,"Forget it, it was just a thought.",DIA_Balor_SellUnder_ForgetIt);
-//	Info_AddChoice(DIA_Balor_SellUnder,""Vergiß es, war nur so'n Gedanke."									",DIA_Balor_SellUnder_ForgetIt);
+//	Info_AddChoice(DIA_Balor_SellUnder,"Vergiß es, war nur so'n Gedanke.",DIA_Balor_SellUnder_ForgetIt);
 	Info_AddChoice(DIA_Balor_SellUnder,"Zapomeň na to, byla to jen úvaha.",DIA_Balor_SellUnder_ForgetIt);
 //	Info_AddChoice(DIA_Balor_SellUnder,"If you know somebody - we could go halves.",DIA_Balor_SellUnder_HalfHalf);
-//	Info_AddChoice(DIA_Balor_SellUnder,""Wenn du einen Abnehmer weißt - wir könnten Halbe-Halbe machen."	",DIA_Balor_SellUnder_HalfHalf);
+//	Info_AddChoice(DIA_Balor_SellUnder,"Wenn du einen Abnehmer weißt - wir könnten Halbe-Halbe machen.",DIA_Balor_SellUnder_HalfHalf);
 	Info_AddChoice(DIA_Balor_SellUnder,"Jestli někoho znáš - mohli bysme se rozdělit.",DIA_Balor_SellUnder_HalfHalf);
 //	Info_AddChoice(DIA_Balor_SellUnder,"No - tell me - who?",DIA_Balor_SellUnder_ComeOn);
-//	Info_AddChoice(DIA_Balor_SellUnder,""Nein - sag mal - an wen?"											",DIA_Balor_SellUnder_ComeOn);
+//	Info_AddChoice(DIA_Balor_SellUnder,"Nein - sag mal - an wen?",DIA_Balor_SellUnder_ComeOn);
 	Info_AddChoice(DIA_Balor_SellUnder,"Ne - řekni mi - kdo?",DIA_Balor_SellUnder_ComeOn);
 };
 
@@ -163,7 +163,7 @@ func void DIA_Balor_SellUnder_ComeOn()
 };
 
 // **************************************************
-// Name des Dealers
+//				Name des Dealers
 // **************************************************
 	var int Balor_TellsNCDealer;
 // **************************************************
@@ -202,10 +202,10 @@ func void DIA_Balor_TellDealer_Info()
 
 	Info_ClearChoices(DIA_Balor_TellDealer);
 //	Info_Addchoice (DIA_Balor_TellDealer,"Forget it.",DIA_Balor_TellDealer_ForgetIt);
-//	Info_Addchoice (DIA_Balor_TellDealer,""Vergiß es."	",DIA_Balor_TellDealer_ForgetIt);
+//	Info_Addchoice (DIA_Balor_TellDealer,"Vergiß es.",DIA_Balor_TellDealer_ForgetIt);
 	Info_Addchoice (DIA_Balor_TellDealer,"Na to zapomeň.",DIA_Balor_TellDealer_ForgetIt);
 //	Info_Addchoice (DIA_Balor_TellDealer,"50's fair - here you go.",DIA_Balor_TellDealer_Pay);
-//	Info_Addchoice (DIA_Balor_TellDealer,""50 sind fair - hier, nimm."	",DIA_Balor_TellDealer_Pay);
+//	Info_Addchoice (DIA_Balor_TellDealer,"50 sind fair - hier, nimm.",DIA_Balor_TellDealer_Pay);
 	Info_Addchoice (DIA_Balor_TellDealer,"50, to je fér - tady jsou.",DIA_Balor_TellDealer_Pay);
 };
 
@@ -261,7 +261,7 @@ func void DIA_Balor_TellDealer_ForgetIt()
 };
 
 // **************************************************
-// Verarschen
+//					Verarschen
 // **************************************************
 
 instance DIA_Balor_RipOff(C_INFO)
@@ -312,7 +312,7 @@ func void DIA_Balor_RipOff_Info()
 };
 
 // **************************************************
-// PERMANENT
+//					PERMANENT
 // **************************************************
 
 instance DIA_Balor_Perm(C_INFO)

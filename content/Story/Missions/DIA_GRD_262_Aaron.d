@@ -78,16 +78,15 @@ func int GRD_262_Aaron_BLUFF_Condition()
 func void GRD_262_Aaron_BLUFF_Info()
 {
 	Info_ClearChoices(GRD_262_Aaron_BLUFF);
-//	Info_AddChoice(GRD_262_Aaron_BLUFF,"DIALOG_BACK												",GRD_262_Aaron_BLUFF_BACK);
 	Info_AddChoice(GRD_262_Aaron_BLUFF,DIALOG_BACK ,GRD_262_Aaron_BLUFF_BACK);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"Ian sent me. You should go to see him at once!",GRD_262_Aaron_BLUFF_IAN);
-//	Info_AddChoice(GRD_262_Aaron_BLUFF,""Ian schickt mich. Du sollst sofort zu ihm kommen!"		",GRD_262_Aaron_BLUFF_IAN);
+//	Info_AddChoice(GRD_262_Aaron_BLUFF,"Ian schickt mich. Du sollst sofort zu ihm kommen!",GRD_262_Aaron_BLUFF_IAN);
 	Info_AddChoice(GRD_262_Aaron_BLUFF,"Poslal mě Ian. Měl bys za ním ihned zajít!",GRD_262_Aaron_BLUFF_IAN);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"I've heard that there are gangsters in the mine here.",GRD_262_Aaron_BLUFF_BANDIT);
-//	Info_AddChoice(GRD_262_Aaron_BLUFF,""Ich hab' gehört, das Banditen in der Mine sind."			",GRD_262_Aaron_BLUFF_BANDIT);
+//	Info_AddChoice(GRD_262_Aaron_BLUFF,"Ich hab' gehört, das Banditen in der Mine sind.",GRD_262_Aaron_BLUFF_BANDIT);
 	Info_AddChoice(GRD_262_Aaron_BLUFF,"Slyšel jsem, že v dole jsou banditi. Chtějí rudu!",GRD_262_Aaron_BLUFF_BANDIT);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"The diggers have found a massive ore nugget!",GRD_262_Aaron_BLUFF_ORE);
-//	Info_AddChoice(GRD_262_Aaron_BLUFF,""Die Buddler haben einen riesigen Erzbrocken gefunden!"	",GRD_262_Aaron_BLUFF_ORE);
+//	Info_AddChoice(GRD_262_Aaron_BLUFF,"Die Buddler haben einen riesigen Erzbrocken gefunden!",GRD_262_Aaron_BLUFF_ORE);
 	Info_AddChoice(GRD_262_Aaron_BLUFF,"Kopáči našli masivní magický nuget!",GRD_262_Aaron_BLUFF_ORE);
 };
 
@@ -126,13 +125,13 @@ func void GRD_262_Aaron_BLUFF_IAN()
 
 	Info_ClearChoices(GRD_262_Aaron_BLUFF);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"No idea.",GRD_262_Aaron_BLUFF_UGLY);
-//	Info_AddChoice(GRD_262_Aaron_BLUFF,""Keine Ahnung"					",GRD_262_Aaron_BLUFF_UGLY);
+//	Info_AddChoice(GRD_262_Aaron_BLUFF,"Keine Ahnung",GRD_262_Aaron_BLUFF_UGLY);
 	Info_AddChoice(GRD_262_Aaron_BLUFF,"Netuším.",GRD_262_Aaron_BLUFF_UGLY);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"He'll kill you.",GRD_262_Aaron_BLUFF_BAD);
-//	Info_AddChoice(GRD_262_Aaron_BLUFF,""Es gibt Ärger für dich"		",GRD_262_Aaron_BLUFF_BAD);
+//	Info_AddChoice(GRD_262_Aaron_BLUFF,"Es gibt Ärger für dich",GRD_262_Aaron_BLUFF_BAD);
 	Info_AddChoice(GRD_262_Aaron_BLUFF,"Zabije tě.",GRD_262_Aaron_BLUFF_BAD);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"He wants to give you a reward.",GRD_262_Aaron_BLUFF_GOOD);
-//	Info_AddChoice(GRD_262_Aaron_BLUFF,""Belohnung für gute Dienste"	",GRD_262_Aaron_BLUFF_GOOD);
+//	Info_AddChoice(GRD_262_Aaron_BLUFF,"Belohnung für gute Dienste",GRD_262_Aaron_BLUFF_GOOD);
 	Info_AddChoice(GRD_262_Aaron_BLUFF,"Chce ti dát odměnu.",GRD_262_Aaron_BLUFF_GOOD);
 };  
 func void GRD_262_Aaron_BLUFF_GOOD()

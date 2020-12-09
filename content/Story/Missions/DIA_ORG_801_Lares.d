@@ -1,5 +1,5 @@
 // ****************************** 
-// EXIT 
+//				EXIT 
 // ******************************
 
 instance ORG_801_Lares_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void ORG_801_Lares_Exit_Info()
 };
 
 // ****************************** 
-// Wie hier rein?
+//			Wie hier rein?
 // ******************************
 	var int Lares_vorbeigemogelt;
 // ******************************
@@ -75,7 +75,7 @@ func void ORG_801_Lares_YouHere_Info()
 };
 
 // ****************************** 
-// Wanna Join
+//			Wanna Join
 // ******************************
 
 instance ORG_801_Lares_WannaJoin(C_INFO)
@@ -110,7 +110,7 @@ func void ORG_801_Lares_WannaJoin_Info()
 };
 
 // ****************************** 
-// Bring List
+//			Bring List
 // ******************************
 	var int Lares_BringListBack;
 // ******************************
@@ -176,7 +176,7 @@ func void ORG_801_Lares_BringList_Info()
 };
 
 // ****************************** 
-// List an Diego!
+//		List an Diego!
 // ******************************
 
 instance ORG_801_Lares_BringListBack(C_INFO)
@@ -219,7 +219,7 @@ func void ORG_801_Lares_BringListBack_Info()
 };
 
 // ****************************** 
-// Anteil wegen BringList
+//		Anteil wegen BringList
 // ******************************
 
 instance ORG_801_Lares_BringListAnteil(C_INFO)
@@ -273,7 +273,7 @@ func void ORG_801_Lares_BringListAnteil_Info()
 };
 
 // ****************************** 
-// Mordrag schickt mich
+//		Mordrag schickt mich
 // ******************************
 
 instance ORG_801_Lares_MordragSentMe(C_INFO)
@@ -334,7 +334,7 @@ func void ORG_801_Lares_MordragSentMe_Info()
 };
 
 // ****************************** 
-// Immerhin vorbeigemogelt
+//		Immerhin vorbeigemogelt
 // ******************************
 
 instance ORG_801_Lares_Vorbeigemogelt(C_INFO)
@@ -370,7 +370,7 @@ func void ORG_801_Lares_Vorbeigemogelt_Info()
 };
 
 // ****************************** 
-// Baal Isidro - Get Kraut
+//		Baal Isidro - Get Kraut
 // ******************************
 	var int Lares_Get400Ore;
 // ******************************
@@ -433,7 +433,7 @@ func void ORG_801_Lares_GetKraut_Info()
 };
 
 // ****************************** 
-// 400 Ore
+//			400 Ore
 // ******************************
 
 instance ORG_801_Lares_400Ore(C_INFO)
@@ -484,7 +484,7 @@ func void ORG_801_Lares_400Ore_Info()
 };
 
 // ****************************** 
-// Reicht das jetzt???
+//		Reicht das jetzt???
 // ******************************
 
 instance ORG_801_Lares_Reicht(C_INFO)
@@ -545,8 +545,8 @@ func void ORG_801_Lares_Reicht_Info()
 		Log_CreateTopic(CH1_JoinOC,LOG_MISSION);
 		Log_SetTopicStatus(CH1_JoinOC,LOG_FAILED);
 //		B_LogEntry(CH1_JoinOC,"A member of Lares' gang can't join the Old Camp, that's impossible.");
-//		B_LogEntry(CH1_JoinOC,"Meinem Niederlage gegen Kirgo hat Scatty nicht sehr beeindruckt.");
-		B_LogEntry(CH1_JoinOC,"Skutečnost, že mě Kirgo porazil, už na Scattyho takový dojem neudělala.");
+//		B_LogEntry(CH1_JoinOC,"Als Mitglied von Lares Bande ist eine Aufnahme im Alten Lager unmöglich geworden.");
+		B_LogEntry(CH1_JoinOC,"Člen Laresovy tlupy se nemůže přidat ke Starému táboru. To je nemožné.");
 
 		Log_CreateTopic(CH1_JoinPsi,LOG_MISSION);
 		Log_SetTopicStatus(CH1_JoinPsi,LOG_FAILED);
@@ -583,7 +583,7 @@ func void ORG_801_Lares_Reicht_Info()
 };
 
 // ****************************** 
-// Goto Kalom
+//			Goto Kalom
 // ******************************
 
 instance ORG_801_Lares_GotoKalom(C_INFO)
@@ -667,7 +667,7 @@ func void ORG_801_Lares_GotoKalom_Info()
 };
 
 // ****************************** 
-// Wo lernen?
+//			Wo lernen?
 // ******************************
 
 instance ORG_801_Lares_WhereLearn(C_INFO)
@@ -702,7 +702,7 @@ func void ORG_801_Lares_WhereLearn_Info()
 
 };  
 // ******************************
-// STR + DEX LERNEN
+// 		STR + DEX LERNEN
 // ******************************
 instance ORG_801_Lares_Teach(C_INFO)
 {
@@ -730,15 +730,10 @@ func void ORG_801_Lares_Teach_Info()
 	AI_Output(other,self,"ORG_801_Lares_Teach_15_00"); //Chci se zlepšit.
 
 	Info_ClearChoices(ORG_801_Lares_Teach);
-//	Info_AddChoice(ORG_801_Lares_Teach,"DIALOG_BACK									",ORG_801_Lares_Teach_BACK);
 	Info_AddChoice(ORG_801_Lares_Teach,DIALOG_BACK ,ORG_801_Lares_Teach_BACK);
-//	Info_AddChoice(ORG_801_Lares_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)		",ORG_801_Lares_Teach_STR_5);
 	Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),ORG_801_Lares_Teach_STR_5);
-//	Info_AddChoice(ORG_801_Lares_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)		",ORG_801_Lares_Teach_STR_1);
 	Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),ORG_801_Lares_Teach_STR_1);
-//	Info_AddChoice(ORG_801_Lares_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",ORG_801_Lares_Teach_DEX_5);
 	Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),ORG_801_Lares_Teach_DEX_5);
-//	Info_AddChoice(ORG_801_Lares_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)	",ORG_801_Lares_Teach_DEX_1);
 	Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),ORG_801_Lares_Teach_DEX_1);
 };
 
@@ -751,15 +746,10 @@ func void ORG_801_Lares_Teach_STR_1()
 {
 	B_BuyAttributePoints(other,ATR_STRENGTH, LPCOST_ATTRIBUTE_STRENGTH);
 	Info_ClearChoices(ORG_801_Lares_Teach);
-//	Info_AddChoice(ORG_801_Lares_Teach,"DIALOG_BACK									",ORG_801_Lares_Teach_BACK);
 	Info_AddChoice(ORG_801_Lares_Teach,DIALOG_BACK ,ORG_801_Lares_Teach_BACK);
-//	Info_AddChoice(ORG_801_Lares_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)		",ORG_801_Lares_Teach_STR_5);
 	Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),ORG_801_Lares_Teach_STR_5);
-//	Info_AddChoice(ORG_801_Lares_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)		",ORG_801_Lares_Teach_STR_1);
 	Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),ORG_801_Lares_Teach_STR_1);
-//	Info_AddChoice(ORG_801_Lares_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",ORG_801_Lares_Teach_DEX_5);
 	Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),ORG_801_Lares_Teach_DEX_5);
-//	Info_AddChoice(ORG_801_Lares_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)	",ORG_801_Lares_Teach_DEX_1);
 	Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),ORG_801_Lares_Teach_DEX_1);
 };
 
@@ -767,15 +757,10 @@ func void ORG_801_Lares_Teach_STR_5()
 {
 	B_BuyAttributePoints(other,ATR_STRENGTH, 5*LPCOST_ATTRIBUTE_STRENGTH);
 	Info_ClearChoices(ORG_801_Lares_Teach);
-//	Info_AddChoice(ORG_801_Lares_Teach,"DIALOG_BACK									",ORG_801_Lares_Teach_BACK);
 	Info_AddChoice(ORG_801_Lares_Teach,DIALOG_BACK ,ORG_801_Lares_Teach_BACK);
-//	Info_AddChoice(ORG_801_Lares_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)		",ORG_801_Lares_Teach_STR_5);
 	Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),ORG_801_Lares_Teach_STR_5);
-//	Info_AddChoice(ORG_801_Lares_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)		",ORG_801_Lares_Teach_STR_1);
 	Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),ORG_801_Lares_Teach_STR_1);
-//	Info_AddChoice(ORG_801_Lares_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",ORG_801_Lares_Teach_DEX_5);
 	Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),ORG_801_Lares_Teach_DEX_5);
-//	Info_AddChoice(ORG_801_Lares_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)	",ORG_801_Lares_Teach_DEX_1);
 	Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),ORG_801_Lares_Teach_DEX_1);
 };
 
@@ -783,15 +768,10 @@ func void ORG_801_Lares_Teach_DEX_1()
 {
 	B_BuyAttributePoints(other,ATR_DEXTERITY,LPCOST_ATTRIBUTE_DEXTERITY);
 	Info_ClearChoices(ORG_801_Lares_Teach);
-//	Info_AddChoice(ORG_801_Lares_Teach,"DIALOG_BACK									",ORG_801_Lares_Teach_BACK);
 	Info_AddChoice(ORG_801_Lares_Teach,DIALOG_BACK ,ORG_801_Lares_Teach_BACK);
-//	Info_AddChoice(ORG_801_Lares_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)		",ORG_801_Lares_Teach_STR_5);
 	Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),ORG_801_Lares_Teach_STR_5);
-//	Info_AddChoice(ORG_801_Lares_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)		",ORG_801_Lares_Teach_STR_1);
 	Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),ORG_801_Lares_Teach_STR_1);
-//	Info_AddChoice(ORG_801_Lares_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",ORG_801_Lares_Teach_DEX_5);
 	Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),ORG_801_Lares_Teach_DEX_5);
-//	Info_AddChoice(ORG_801_Lares_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)	",ORG_801_Lares_Teach_DEX_1);
 	Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),ORG_801_Lares_Teach_DEX_1);
 };
 
@@ -799,14 +779,9 @@ func void ORG_801_Lares_Teach_DEX_5()
 {
 	B_BuyAttributePoints(other,ATR_DEXTERITY, 5*LPCOST_ATTRIBUTE_DEXTERITY);
 	Info_ClearChoices(ORG_801_Lares_Teach);
-//	Info_AddChoice(ORG_801_Lares_Teach,"DIALOG_BACK									",ORG_801_Lares_Teach_BACK);
 	Info_AddChoice(ORG_801_Lares_Teach,DIALOG_BACK ,ORG_801_Lares_Teach_BACK);
-//	Info_AddChoice(ORG_801_Lares_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)		",ORG_801_Lares_Teach_STR_5);
 	Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),ORG_801_Lares_Teach_STR_5);
-//	Info_AddChoice(ORG_801_Lares_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)		",ORG_801_Lares_Teach_STR_1);
 	Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),ORG_801_Lares_Teach_STR_1);
-//	Info_AddChoice(ORG_801_Lares_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",ORG_801_Lares_Teach_DEX_5);
 	Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),ORG_801_Lares_Teach_DEX_5);
-//	Info_AddChoice(ORG_801_Lares_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)	",ORG_801_Lares_Teach_DEX_1);
 	Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),ORG_801_Lares_Teach_DEX_1);
 };

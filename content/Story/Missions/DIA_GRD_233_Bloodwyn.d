@@ -2,7 +2,7 @@
 // Zur Info: Bloodwyn: 244, 243; Bloodwyn: 229, 242; Fletcher: 241, 240
 
 // ************************************************************
-//	  EXIT_Schutzgeld
+// 			  				   EXIT_Schutzgeld
 // ************************************************************
 
 instance Info_Bloodwyn_EXIT_Schutzgeld(C_INFO)
@@ -42,7 +42,7 @@ func void Info_Bloodwyn_EXIT_Schutzgeld_Info()
 };
 
 // ************************************************************
-// Schutzgeld
+// 						Schutzgeld
 // ************************************************************
 instance Info_Bloodwyn_Hello(C_INFO)
 {
@@ -87,13 +87,13 @@ func void Info_Bloodwyn_Hello_Info()
 
 	Info_ClearChoices(Info_Bloodwyn_Hello);
 //	Info_AddChoice(Info_Bloodwyn_Hello,"Why not? How much ore were you thinking of?",Info_Bloodwyn_Hello_HowMuch);
-//	Info_AddChoice(Info_Bloodwyn_Hello,""Warum nicht. An wieviel Erz hattest du denn gedacht?"	",Info_Bloodwyn_Hello_HowMuch);
+//	Info_AddChoice(Info_Bloodwyn_Hello,"Warum nicht. An wieviel Erz hattest du denn gedacht?",Info_Bloodwyn_Hello_HowMuch);
 	Info_AddChoice(Info_Bloodwyn_Hello,"Proč ne? Kolik nugetů máš na mysli?",Info_Bloodwyn_Hello_HowMuch);
 //	Info_AddChoice(Info_Bloodwyn_Hello,"You want me to pay protection money? I can take care of myself!",Info_Bloodwyn_Hello_ForgetIt);
-//	Info_AddChoice(Info_Bloodwyn_Hello,""Ich soll Schutzgeld zahlen? Ich kann auf mich selbst aufpassen!"	",Info_Bloodwyn_Hello_ForgetIt);
+//	Info_AddChoice(Info_Bloodwyn_Hello,"Ich soll Schutzgeld zahlen? Ich kann auf mich selbst aufpassen!",Info_Bloodwyn_Hello_ForgetIt);
 	Info_AddChoice(Info_Bloodwyn_Hello,"Chceš, abych zaplatil peníze za ochranu? Postarám se o sebe sám!",Info_Bloodwyn_Hello_ForgetIt);
 //	Info_AddChoice(Info_Bloodwyn_Hello,"Is that a threat?",Info_Bloodwyn_Hello_SollDrohungSein);
-//	Info_AddChoice(Info_Bloodwyn_Hello,""Soll das eine Drohung sein?"	",Info_Bloodwyn_Hello_SollDrohungSein);
+//	Info_AddChoice(Info_Bloodwyn_Hello,"Soll das eine Drohung sein?",Info_Bloodwyn_Hello_SollDrohungSein);
 	Info_AddChoice(Info_Bloodwyn_Hello,"To má být pohrůžka?",Info_Bloodwyn_Hello_SollDrohungSein);
 };
 
@@ -133,12 +133,12 @@ func void Info_Bloodwyn_Hello_HowMuch()
 
 	Info_ClearChoices(Info_Bloodwyn_Hello);
 //	Info_AddChoice(Info_Bloodwyn_Hello,"I don't have 10 ore.",Info_Bloodwyn_Hello_NotNow);
-//	Info_AddChoice(Info_Bloodwyn_Hello,""Ich habe gerade keine 10 Erz."	",Info_Bloodwyn_Hello_NotNow);
+//	Info_AddChoice(Info_Bloodwyn_Hello,"Ich habe gerade keine 10 Erz.",Info_Bloodwyn_Hello_NotNow);
 	Info_AddChoice(Info_Bloodwyn_Hello,"Nemám 10 nugetů.",Info_Bloodwyn_Hello_NotNow);
 	if (Npc_HasItems(other,itminugget)>=10)
 	{
 //		Info_AddChoice(Info_Bloodwyn_Hello,"Here's your ore. I can always use a friend or two.",Info_Bloodwyn_Hello_OkTakeIt);
-//		Info_AddChoice(Info_Bloodwyn_Hello,""Hier hast du das Erz. Ich kann Freunde brauchen."	",Info_Bloodwyn_Hello_OkTakeIt);
+//		Info_AddChoice(Info_Bloodwyn_Hello,"Hier hast du das Erz. Ich kann Freunde brauchen.",Info_Bloodwyn_Hello_OkTakeIt);
 		Info_AddChoice(Info_Bloodwyn_Hello,"Tady je tvoje ruda. Jeden či dva přátelé se vždycky můžou hodit.",Info_Bloodwyn_Hello_OkTakeIt);
 	};
 };
@@ -215,7 +215,7 @@ func void Info_Bloodwyn_Hello_NotNow()
 };
 
 // ************************************************************
-// Schutzgeld
+// 						Schutzgeld
 // ************************************************************
 
 instance Info_Bloodwyn_PayDay(C_INFO)
@@ -249,10 +249,10 @@ func void Info_Bloodwyn_PayDay_Info()
 
 		Info_ClearChoices(Info_Bloodwyn_PayDay);
 //		Info_AddChoice(Info_Bloodwyn_PayDay,"Here, take it. 10 ore's not much among friends.",Info_Bloodwyn_PayDay_PayAgain);
-//		Info_AddChoice(Info_Bloodwyn_PayDay,""Hier, nimm - 10 Erz sind nicht viel unter Freuden."	",Info_Bloodwyn_PayDay_PayAgain);
+//		Info_AddChoice(Info_Bloodwyn_PayDay,"Hier, nimm - 10 Erz sind nicht viel unter Freuden.",Info_Bloodwyn_PayDay_PayAgain);
 		Info_AddChoice(Info_Bloodwyn_PayDay,"Tady jsou. 10 nugetů není mezi přáteli mnoho.",Info_Bloodwyn_PayDay_PayAgain);
 //		Info_AddChoice(Info_Bloodwyn_PayDay,"I'm not paying - you've had enough out of me already.",Info_Bloodwyn_PayDay_PayNoMore);
-//		Info_AddChoice(Info_Bloodwyn_PayDay,""Ich werde nicht mehr zahlen - du hast schon genug gekriegt."	",Info_Bloodwyn_PayDay_PayNoMore);
+//		Info_AddChoice(Info_Bloodwyn_PayDay,"Ich werde nicht mehr zahlen - du hast schon genug gekriegt.",Info_Bloodwyn_PayDay_PayNoMore);
 		Info_AddChoice(Info_Bloodwyn_PayDay,"Nezaplatím - už jste ze mě vytáhli dost.",Info_Bloodwyn_PayDay_PayNoMore);
 	}
 	else if (Bloodwyn_ProtectionPaid == FALSE)
@@ -312,7 +312,7 @@ func void Info_Bloodwyn_PayDay_PayNoMore()
 };
 
 // ************************************************************
-// DOCH zahlen
+// 						DOCH zahlen
 // ************************************************************
 
 instance Info_Bloodwyn_Doch(C_INFO)
@@ -346,7 +346,7 @@ func void Info_Bloodwyn_Doch_Info()
 //		AI_Output(self,other,"Info_Bloodwyn_Doch_08_01"); //Na siehst du! Du kannst ja DOCH die richtige Entscheidung treffen.
 		AI_Output(self,other,"Info_Bloodwyn_Doch_08_01"); //Konečně! Vidíš, že se UMÍŠ dobře rozhodnout!
 //		AI_Output(self,other,"Info_Bloodwyn_Doch_08_02"); //And from now on, you'll keep paying me your daily contribution, won't you?
-//		AI_Output(self,other,"Info_Bloodwyn_Doch_08_02"); //Und von jetzt an zahlen wir schön brav täglich unsere Unterstützung, ja? 
+//		AI_Output(self,other,"Info_Bloodwyn_Doch_08_02"); //Und von jetzt an zahlen wir schön brav täglich unsere Unterstützung, ja?
 		AI_Output(self,other,"Info_Bloodwyn_Doch_08_02"); //A od teďka mi budeš platit denní příspěvek, jasný?
 		Bloodwyn_ProtectionPaid = TRUE;
 		Herek_ProtectionBully = FALSE;
@@ -418,7 +418,7 @@ func void Info_Bloodwyn_PayForJesse_Info()
 	};
 };
 /*------------------------------------------------------------------------
-// GARDIST GEWORDEN //
+//							GARDIST GEWORDEN //
 ------------------------------------------------------------------------*/
 instance GRD_233_Bloodwyn_WELCOME(C_INFO)
 {
@@ -453,7 +453,7 @@ func void GRD_233_Bloodwyn_WELCOME_Info()
 //#####################################################################
 
 //***************************************************************************
-// Info DIE
+//	Info DIE
 //***************************************************************************
 instance Info_Bloodwyn_DIE(C_INFO)
 {

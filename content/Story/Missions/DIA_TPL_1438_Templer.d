@@ -51,7 +51,7 @@ func int Tpl_1438_Templer_INFO_Condition()
 func void Tpl_1438_Templer_INFO_Info()
 {
 //	AI_Output(other,self,"Tpl_1438_Templer_INFO_Info_15_01"); //What are you templars doing in the mine?
-//	AI_Output(other,self,"Tpl_1438_Templer_INFO_Info_15_01"); //Was macht ihr Templer hier in der Mine? 
+//	AI_Output(other,self,"Tpl_1438_Templer_INFO_Info_15_01"); //Was macht ihr Templer hier in der Mine?
 	AI_Output(other,self,"Tpl_1438_Templer_INFO_Info_15_01"); //Co dělají templáři v dolu?
 //	AI_Output(self,other,"Tpl_1438_Templer_INFO_Info_13_02"); //We're hunting for minecrawlers. Go back to the Camp, you'll be safe there.
 //	AI_Output(self,other,"Tpl_1438_Templer_INFO_Info_13_02"); //Wir jagen die Minecrawler. Geh lieber zurück ins Lager, da bist du sicher.
@@ -83,7 +83,7 @@ func int Tpl_1438_Templer_WHY_Condition()
 func void Tpl_1438_Templer_WHY_Info()
 {
 //	AI_Output(other,self,"Tpl_1438_Templer_WHY_Info_15_01"); //Why do you hunt the crawlers?
-//	AI_Output(other,self,"Tpl_1438_Templer_WHY_Info_15_01"); //Warum jagt ihr die Crawler? 
+//	AI_Output(other,self,"Tpl_1438_Templer_WHY_Info_15_01"); //Warum jagt ihr die Crawler?
 	AI_Output(other,self,"Tpl_1438_Templer_WHY_Info_15_01"); //Proč lovíte červy?
 //	AI_Output(self,other,"Tpl_1438_Templer_WHY_Info_13_02"); //For their mandibles. They contain a valuable secretion.
 //	AI_Output(self,other,"Tpl_1438_Templer_WHY_Info_13_02"); //Wegen ihren Zangen. Sie enthalten ein wertvolles Sekret.
@@ -168,7 +168,7 @@ func void Tpl_1438_Templer_EGGSEARCH_Info()
 	B_LogEntry(CH2_MCEggs,"U vchodu do Starého dolu jsem se zeptal jednoho templáře na hnízdo důlních červů. Odkázal mě na tři další templáře - Gora Na Vida, Gora Na Koshe a Gora Na Bara. Tahle jména, která používají v Bratrstvu, mě přivádějí k šílenství.");  
 };  
 /*------------------------------------------------------------------------
-// ZANGEN FREISCHALTEN     //
+//							ZANGEN FREISCHALTEN     //
 ------------------------------------------------------------------------*/
 
 instance Tpl_1438_Templer_ZANGEN(C_INFO)
@@ -202,7 +202,7 @@ func void Tpl_1438_Templer_ZANGEN_Info()
 	AI_Output(self,other,"Tpl_1438_Templer_ZANGEN_Info_13_02"); //Není to tak snadné. Naučím tě to.
 }; 
 /*------------------------------------------------------------------------
-// LERNEN ZANGEN ZU ENTFERNEN //
+//							LERNEN ZANGEN ZU ENTFERNEN //
 ------------------------------------------------------------------------*/
 
 instance Tpl_1438_Templer_TEACHZANGEN(C_INFO)
@@ -240,13 +240,13 @@ func void Tpl_1438_Templer_TEACHZANGEN_Info()
 //		AI_Output(self,other,"Tpl_1438_Templer_TEACHZANGEN_Info_13_01"); //Du musst erst einen tiefen Schnitt in das Fleisch machen. Sei vorsichtig, dass du nicht die Zangendrüse erwischst. Triffst du sie, spritzt das Sekret raus.
 		AI_Output(self,other,"Tpl_1438_Templer_TEACHZANGEN_Info_13_01"); //Nejdřív musíš udělat hluboký zářez do masa. Dávej pozor, abys neporušil čelistní žlázu. Pokud to uděláš, výměšek vystříkne pryč.
 //		AI_Output(other,self,"Tpl_1438_Templer_TEACHZANGEN_Info_15_02"); //That must be quite painful.
-//		AI_Output(other,self,"Tpl_1438_Templer_TEACHZANGEN_Info_15_02"); //Das ist bestimmt ziemlich schmerzhaft. 
+//		AI_Output(other,self,"Tpl_1438_Templer_TEACHZANGEN_Info_15_02"); //Das ist bestimmt ziemlich schmerzhaft.
 		AI_Output(other,self,"Tpl_1438_Templer_TEACHZANGEN_Info_15_02"); //To musí být docela mrzuté.
 //		AI_Output(self,other,"Tpl_1438_Templer_TEACHZANGEN_Info_13_03"); //You bet! Did you ever meet Korgur Three-Fingers, the crawler hunter? Oh no, that was before you arrived. Well, let's go on...
-//		AI_Output(self,other,"Tpl_1438_Templer_TEACHZANGEN_Info_13_03"); //Und wie! Hast du eigentlich noch Drei-Finger-Korgur, den Crawlerjäger, kennengelernt? Ach nein, das war vor deiner Zeit. Nun, also weiter...  
+//		AI_Output(self,other,"Tpl_1438_Templer_TEACHZANGEN_Info_13_03"); //Und wie! Hast du eigentlich noch Drei-Finger-Korgur, den Crawlerjäger, kennengelernt? Ach nein, das war vor deiner Zeit. Nun, also weiter...
 		AI_Output(self,other,"Tpl_1438_Templer_TEACHZANGEN_Info_13_03"); //To si piš! Už jsi navštívil Korgura Tříprsťáka, lovce červů? Ale ne, to bylo, než jsi přišel. Dobrá, pokračujme...
 //		AI_Output(self,other,"Tpl_1438_Templer_TEACHZANGEN_Info_13_04"); //Cut around the glands, leaving a wide gap, and then remove the flesh together with the mandible. If you stick to that, you won't have any problems removing the mandibles.
-//		AI_Output(self,other,"Tpl_1438_Templer_TEACHZANGEN_Info_13_04"); //Schneide großflächig um die Drüsen herum und entferne dann das Fleisch zusammen mit der Zange. Wenn du dich daran hältst, wirst du keine Probleme mit dem Rausschneiden der Zangen haben.  
+//		AI_Output(self,other,"Tpl_1438_Templer_TEACHZANGEN_Info_13_04"); //Schneide großflächig um die Drüsen herum und entferne dann das Fleisch zusammen mit der Zange. Wenn du dich daran hältst, wirst du keine Probleme mit dem Rausschneiden der Zangen haben.
 		AI_Output(self,other,"Tpl_1438_Templer_TEACHZANGEN_Info_13_04"); //Řezej kolem žlázy, dělej hluboký zářez a potom odstraň maso společně s čelistma. Když je uchopíš takhle, nebudeš mít potíže s odstraněním čelistí.
 		Knows_GetMCMandibles = TRUE;
 		Log_CreateTopic(GE_AnimalTrophies,LOG_NOTE);

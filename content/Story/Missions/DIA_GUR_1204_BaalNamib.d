@@ -1,5 +1,5 @@
 // ************************************************************
-// EXIT 
+// 							EXIT 
 // ************************************************************
 
 instance DIA_BaalNamib_EXIT(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_BaalNamib_EXIT_Info()
 };
 
 // ************************************************************
-// NICHT ansprechbar (Ungläubiger) 
+// 					NICHT ansprechbar (Ungläubiger) 
 // ************************************************************
 // ************************************************************
 
@@ -48,16 +48,15 @@ func int DIA_BaalNamib_NoTalk_Condition()
 func void DIA_BaalNamib_NoTalk_Info()
 { 
 	Info_ClearChoices(DIA_BaalNamib_NoTalk);
-//	Info_Addchoice (DIA_BaalNamib_NoTalk,"DIALOG_ENDE					",DIA_BaalNamib_NoTalk_ENDE);
 	Info_Addchoice (DIA_BaalNamib_NoTalk,DIALOG_ENDE ,DIA_BaalNamib_NoTalk_ENDE);
 //	Info_Addchoice (DIA_BaalNamib_NoTalk,"Is everything alright, pal?",DIA_BaalNamib_NoTalk_Imp);
-//	Info_Addchoice (DIA_BaalNamib_NoTalk,""Alles, klar, Alter?"			",DIA_BaalNamib_NoTalk_Imp);
+//	Info_Addchoice (DIA_BaalNamib_NoTalk,"Alles, klar, Alter?",DIA_BaalNamib_NoTalk_Imp);
 	Info_Addchoice (DIA_BaalNamib_NoTalk,"Je všechno v pořádku, příteli?",DIA_BaalNamib_NoTalk_Imp);
 //	Info_Addchoice (DIA_BaalNamib_NoTalk,"The Sleeper be with you!",DIA_BaalNamib_NoTalk_Sleeper);
-//	Info_Addchoice (DIA_BaalNamib_NoTalk,""Der Schläfer sei mit dir!"	",DIA_BaalNamib_NoTalk_Sleeper);
+//	Info_Addchoice (DIA_BaalNamib_NoTalk,"Der Schläfer sei mit dir!",DIA_BaalNamib_NoTalk_Sleeper);
 	Info_Addchoice (DIA_BaalNamib_NoTalk,"Spáč buď s tebou!",DIA_BaalNamib_NoTalk_Sleeper);
 //	Info_Addchoice (DIA_BaalNamib_NoTalk,"Hi! I'm new here!",DIA_BaalNamib_NoTalk_Hi);
-//	Info_Addchoice (DIA_BaalNamib_NoTalk,""Hi! Ich bin neu hier!"		",DIA_BaalNamib_NoTalk_Hi);
+//	Info_Addchoice (DIA_BaalNamib_NoTalk,"Hi! Ich bin neu hier!",DIA_BaalNamib_NoTalk_Hi);
 	Info_Addchoice (DIA_BaalNamib_NoTalk,"Zdar! Jsem tu nový!",DIA_BaalNamib_NoTalk_Hi);
 };
 
@@ -97,7 +96,7 @@ func void DIA_BaalNamib_NoTalk_ENDE()
 };
 
 // ************************************************************
-// BN spricht dich an
+// 					BN spricht dich an
 // ************************************************************
 
 instance DIA_BaalNamib_FirstTalk(C_INFO)
@@ -128,10 +127,10 @@ func void DIA_BaalNamib_FirstTalk_Info()
 
 	Info_ClearChoices(DIA_BaalNamib_FirstTalk);
 //	Info_AddChoice(DIA_BaalNamib_FirstTalk,"SAY NOTHING",DIA_BaalNamib_FirstTalk_Mute);
-//	Info_AddChoice(DIA_BaalNamib_FirstTalk,""NICHTS SAGEN"										",DIA_BaalNamib_FirstTalk_Mute);
-	Info_AddChoice(DIA_BaalNamib_FirstTalk,"NEŘÍKEJ NIC.",DIA_BaalNamib_FirstTalk_Mute);
+//	Info_AddChoice(DIA_BaalNamib_FirstTalk,"NICHTS SAGEN",DIA_BaalNamib_FirstTalk_Mute);
+	Info_AddChoice(DIA_BaalNamib_FirstTalk,"NEŘÍKEJ NIC",DIA_BaalNamib_FirstTalk_Mute);
 //	Info_AddChoice(DIA_BaalNamib_FirstTalk,"Yes, I wish to follow the Sleeper!",DIA_BaalNamib_FirstTalk_Sleeper);
-//	Info_AddChoice(DIA_BaalNamib_FirstTalk,""Ja, ich will den Weg des Schläfers beschreiten!"	",DIA_BaalNamib_FirstTalk_Sleeper);
+//	Info_AddChoice(DIA_BaalNamib_FirstTalk,"Ja, ich will den Weg des Schläfers beschreiten!",DIA_BaalNamib_FirstTalk_Sleeper);
 	Info_AddChoice(DIA_BaalNamib_FirstTalk,"Ano, chci následovat Spáče!",DIA_BaalNamib_FirstTalk_Sleeper);
 };
 
@@ -215,12 +214,12 @@ func void GUR_1204_BaalNamib_ARMOR_Info()
 
 ////////////////////////////////////////
 ////////////////////////////////////////
-///////// Kap 2 ////////
+/////////		Kap 2 ////////
 ////////////////////////////////////////
 ////////////////////////////////////////
 
 // **************************************************************************
-// BAAL NAMIB SCHICKT DEN SPIELER ZU YBERION 
+//					BAAL NAMIB SCHICKT DEN SPIELER ZU YBERION 
 // **************************************************************************
 instance Info_BaalNamib_BROTHERHOOD(C_INFO)
 {
@@ -236,7 +235,7 @@ instance Info_BaalNamib_BROTHERHOOD(C_INFO)
 
 func int Info_BaalNamib_BROTHERHOOD_Condition()
 {
-// return (kapitel == 2);
+//	return (kapitel == 2) ;
 };
 
 func void Info_BaalNamib_BROTHERHOOD_Info()
@@ -249,13 +248,13 @@ func void Info_BaalNamib_BROTHERHOOD_Info()
 	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_02_02"); //Náš mistr, moudrý Y´Berion, nechal poslat pro novice. Protože jsi nyní členem komunity, jdi za ním a nabídni mu své služby.
 	Info_Clearchoices ( Info_BaalNamib_BROTHERHOOD);
 //	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,"Alright, I'll go to see him now.",Info_BaalNamib_BROTHERHOOD_OK);
-//	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,""In Ordnung, ich werde ihn sofort aufsuchen"		",Info_BaalNamib_BROTHERHOOD_OK);
+//	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,"In Ordnung, ich werde ihn sofort aufsuchen",Info_BaalNamib_BROTHERHOOD_OK);
 	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,"Dobrá, půjdu za ním hned.",Info_BaalNamib_BROTHERHOOD_OK);
 //	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,"Where can I find Y'Berion?",Info_BaalNamib_BROTHERHOOD_YBWO);  
-//	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,""Wo finde ich Y'Berion?"							",Info_BaalNamib_BROTHERHOOD_YBWO);  
+//	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,"Wo finde ich Y'Berion?",Info_BaalNamib_BROTHERHOOD_YBWO);  
 	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,"Kde najdu Y´Beriona?",Info_BaalNamib_BROTHERHOOD_YBWO);  
 //	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,"Do you know what Y'Berion wants me to do?",Info_BaalNamib_BROTHERHOOD_YBWAS);
-//	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,""Weißt du, was ich für Y'berion erledigen soll?"	",Info_BaalNamib_BROTHERHOOD_YBWAS);
+//	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,"Weißt du, was ich für Y'berion erledigen soll?",Info_BaalNamib_BROTHERHOOD_YBWAS);
 	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,"Víš, co ode mě Y´Berion chce?",Info_BaalNamib_BROTHERHOOD_YBWAS);
 	var C_NPC Kalom;
 	Kalom = Hlp_GetNpc(GUR_1201_CORKALOM); 

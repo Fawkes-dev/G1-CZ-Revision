@@ -1,5 +1,5 @@
 // **************************************************
-// EXIT 
+//						EXIT 
 // **************************************************
 
 instance DIA_Nyras_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Nyras_Exit_Info()
 };
 
 // **************************************************
-// Hi
+//						Hi
 // **************************************************
 
 instance DIA_Nyras_Hallo(C_INFO)
@@ -56,7 +56,7 @@ func void DIA_Nyras_Hallo_Info()
 };
 
 // **************************************************
-// Ort
+//						Ort
 // **************************************************
 
 instance DIA_Nyras_Ort(C_INFO)
@@ -97,7 +97,7 @@ func void DIA_Nyras_Ort_Info()
 
 	Info_ClearChoices(DIA_Nyras_Ort);
 //	Info_Addchoice (DIA_Nyras_Ort,"Tell me about the holy words of the great Sleeper.",DIA_Nyras_Ort_Holy);
-//	Info_Addchoice (DIA_Nyras_Ort,"Berichte mir von den heiligen Worten des großen Schläfers. ",DIA_Nyras_Ort_Holy);
+//	Info_Addchoice (DIA_Nyras_Ort,"Berichte mir von den heiligen Worten des großen Schläfers.",DIA_Nyras_Ort_Holy);
 	Info_Addchoice (DIA_Nyras_Ort,"Povídej mi o svatém poslání velkého Spáče!",DIA_Nyras_Ort_Holy);
 //	Info_Addchoice (DIA_Nyras_Ort,"And what does he say then?",DIA_Nyras_Ort_Casual);
 //	Info_Addchoice (DIA_Nyras_Ort,"Und was sagt er so?",DIA_Nyras_Ort_Casual);
@@ -139,12 +139,12 @@ func void DIA_Nyras_Ort_Holy()
 };
 
 // ***************************************************
-// 
+//						
 // ***************************************************
 
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
-//////////////////// Bring Fokus 1 ///////////////////////////
+////////////////////		Bring Fokus 1 ///////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 

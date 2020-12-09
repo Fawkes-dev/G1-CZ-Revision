@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------
-// Info EXIT
+//	Info EXIT
 //---------------------------------------------------------------------
 instance Info_Xardas_EXIT(C_INFO)
 {
@@ -40,7 +40,7 @@ func void Info_Xardas_EXIT_Info()
 //#####################################################################
 
 //---------------------------------------------------------------------
-// Info DISTURB
+//	Info DISTURB
 //---------------------------------------------------------------------
 instance Info_Xardas_DISTURB(C_INFO)
 {
@@ -78,7 +78,7 @@ func void Info_Xardas_DISTURB_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info OTHERS
+//	Info OTHERS
 //---------------------------------------------------------------------
 instance Info_Xardas_OTHERS(C_INFO)
 {
@@ -114,7 +114,7 @@ func void Info_Xardas_OTHERS_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info SATURAS
+//	Info SATURAS
 //---------------------------------------------------------------------
 instance Info_Xardas_SATURAS(C_INFO)
 {
@@ -156,7 +156,7 @@ func void Info_Xardas_SATURAS_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info KDW
+//	Info KDW
 //---------------------------------------------------------------------
 instance Info_Xardas_KDW(C_INFO)
 {
@@ -195,7 +195,7 @@ func void Info_Xardas_KDW_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info SLEEPER
+//	Info SLEEPER
 //---------------------------------------------------------------------
 instance Info_Xardas_SLEEPER(C_INFO)
 {
@@ -234,7 +234,7 @@ func void Info_Xardas_SLEEPER_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info DANGER
+//	Info DANGER
 //---------------------------------------------------------------------
 instance Info_Xardas_DANGER(C_INFO)
 {
@@ -276,7 +276,7 @@ func void Info_Xardas_DANGER_Info()
 };
 
 //---------------------------------------------------------------------
-// Info BARRIER
+//	Info BARRIER
 //---------------------------------------------------------------------
 instance Info_Xardas_BARRIER(C_INFO)
 {
@@ -323,7 +323,7 @@ func void Info_Xardas_BARRIER_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info EVENT
+//	Info EVENT
 //---------------------------------------------------------------------
 instance Info_Xardas_EVENT(C_INFO)
 {
@@ -361,7 +361,7 @@ func void Info_Xardas_EVENT_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info EVENTWHY
+//	Info EVENTWHY
 //---------------------------------------------------------------------
 instance Info_Xardas_EVENTWHY(C_INFO)
 {
@@ -393,7 +393,7 @@ func void Info_Xardas_EVENTWHY_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info EVENTHOW
+//	Info EVENTHOW
 //---------------------------------------------------------------------
 instance Info_Xardas_EVENTHOW(C_INFO)
 {
@@ -443,7 +443,7 @@ func void Info_Xardas_EVENTHOW_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info EVENTWHERE
+//	Info EVENTWHERE
 //---------------------------------------------------------------------
 instance Info_Xardas_EVENTWHERE(C_INFO)
 {
@@ -481,7 +481,7 @@ func void Info_Xardas_EVENTWHERE_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info ACCEPT
+//	Info ACCEPT
 //---------------------------------------------------------------------
 instance Info_Xardas_ACCEPT(C_INFO)
 {
@@ -555,7 +555,7 @@ func void Kdf_404_Xardas_SELLMAGICSTUFF_Info()
 };
 
 //---------------------------------------------------------------------
-// Info RETURN
+//	Info RETURN
 //---------------------------------------------------------------------
 instance Info_Xardas_RETURN(C_INFO)
 {
@@ -634,7 +634,7 @@ func void Info_Xardas_RETURN_Info()
 //#####################################################################
 
 //---------------------------------------------------------------------
-// Info FOUNDTEMPLE
+//	Info FOUNDTEMPLE
 //---------------------------------------------------------------------
 instance Info_Xardas_FOUNDTEMPLE(C_INFO)
 {
@@ -673,7 +673,7 @@ func void Info_Xardas_FOUNDTEMPLE_Info()
 };
 
 //---------------------------------------------------------------------
-// Info PROPHECY
+//	Info PROPHECY
 //---------------------------------------------------------------------
 instance Info_Xardas_PROPHECY(C_INFO)
 {
@@ -718,7 +718,7 @@ func void Info_Xardas_PROPHECY_Info()
 };
 
 //---------------------------------------------------------------------
-// Info LOADSWORD
+//	Info LOADSWORD
 //---------------------------------------------------------------------
 instance Info_Xardas_LOADSWORD(C_INFO)
 {
@@ -774,7 +774,7 @@ func void Info_Xardas_LOADSWORD_Info()
 };
 
 //---------------------------------------------------------------------
-// Info LOADSWORD1
+//	Info LOADSWORD1
 //---------------------------------------------------------------------
 instance Info_Xardas_LOADSWORD01(C_INFO)
 {
@@ -818,7 +818,7 @@ func void Info_Xardas_LOADSWORD01_Info()
 };
 
 //---------------------------------------------------------------------
-// Info LOADSWORD02
+//	Info LOADSWORD02
 //---------------------------------------------------------------------
 instance Info_Xardas_LOADSWORD02(C_INFO)
 {
@@ -865,7 +865,7 @@ func void Info_Xardas_LOADSWORD02_Info()
 };
 
 //---------------------------------------------------------------------
-// Info BETTERARMOR
+//	Info BETTERARMOR
 //---------------------------------------------------------------------
 instance Info_Xardas_BETTERARMOR(C_INFO)
 {
@@ -940,7 +940,7 @@ func void Info_Xardas_BETTERARMOR_Info()
 };
 
 //---------------------------------------------------------------------
-// Info OREARMOR
+//	Info OREARMOR
 //---------------------------------------------------------------------
 instance Info_Xardas_OREARMOR(C_INFO)
 {
@@ -989,7 +989,7 @@ func void Info_Xardas_OREARMOR_Info()
 };
 
 //---------------------------------------------------------------------
-// Info FORMULA 
+//	Info FORMULA 
 //---------------------------------------------------------------------
 instance Info_Xardas_FORMULA(C_INFO)
 {
@@ -1038,7 +1038,7 @@ func void Info_Xardas_FORMULA_Info()
 };
 
 //---------------------------------------------------------------------
-// Info ALTRUNE 
+//	Info ALTRUNE 
 //---------------------------------------------------------------------
 instance Info_Xardas_ALTRUNE(C_INFO)
 {
@@ -1075,7 +1075,7 @@ func void Info_Xardas_ALTRUNE_Info()
 };
 
 //---------------------------------------------------------------------
-// Info SWORDLOADED
+//	Info SWORDLOADED
 //---------------------------------------------------------------------
 instance Info_Xardas_SWORDLOADED(C_INFO)
 {
@@ -1111,7 +1111,7 @@ func void Info_Xardas_SWORDLOADED_Info()
 };
 
 //---------------------------------------------------------------------
-// Info MAKERUNE
+//	Info MAKERUNE
 //---------------------------------------------------------------------
 instance Info_Xardas_MAKERUNE(C_INFO)
 {
@@ -1160,7 +1160,7 @@ func void Info_Xardas_MAKERUNE_Info()
 };
 
 //---------------------------------------------------------------------
-// Info MAKERUNEDOIT
+//	Info MAKERUNEDOIT
 //---------------------------------------------------------------------
 instance Info_Xardas_MAKERUNEDOIT(C_INFO)
 {
@@ -1199,8 +1199,12 @@ func void Info_Xardas_MAKERUNEDOIT_Info()
 	AI_Output(self,other,"Info_Xardas_MAKERUNEDOIT_14_03"); //Tohle rozhodnutí je konečné. Opravdu chceš, abych ten drahokam odstranil?
 
 	Info_ClearChoices(Info_Xardas_MAKERUNEDOIT);
-	Info_AddChoice(Info_Xardas_MAKERUNEDOIT,"YES, do it!", Info_Xardas_MAKERUNE_YES);
-	Info_AddChoice(Info_Xardas_MAKERUNEDOIT,"NO, don't do it!", Info_Xardas_MAKERUNE_NO);
+//	Info_AddChoice(Info_Xardas_MAKERUNEDOIT,"YES, do it!", Info_Xardas_MAKERUNE_YES);
+//	Info_AddChoice(Info_Xardas_MAKERUNEDOIT,"JA, tu es!", Info_Xardas_MAKERUNE_YES);
+	Info_AddChoice(Info_Xardas_MAKERUNEDOIT,"ANO, udělej to!", Info_Xardas_MAKERUNE_YES);
+//	Info_AddChoice(Info_Xardas_MAKERUNEDOIT,"NO, don't do it!", Info_Xardas_MAKERUNE_NO);
+//	Info_AddChoice(Info_Xardas_MAKERUNEDOIT,"NEIN, lieber doch nicht!", Info_Xardas_MAKERUNE_NO);
+	Info_AddChoice(Info_Xardas_MAKERUNEDOIT,"NE, nedělej to!", Info_Xardas_MAKERUNE_NO);
 };
 
 func void Info_Xardas_MAKERUNE_YES()
@@ -1236,7 +1240,7 @@ func void Info_Xardas_MAKERUNE_NO()
 }; 
 
 //---------------------------------------------------------------------
-// Info LOADSWORD9 --> SC kann DMB werden
+//	Info LOADSWORD9 --> SC kann DMB werden
 //---------------------------------------------------------------------
 instance Info_Xardas_LOADSWORD09(C_INFO)
 {

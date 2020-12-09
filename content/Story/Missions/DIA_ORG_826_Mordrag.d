@@ -6,7 +6,7 @@ var int MordragKO_StayAtNC;
 // **************************************************
 
 // **************************************************
-//  EXIT 
+//						 EXIT 
 // **************************************************
 
 instance Org_826_Mordrag_Exit(C_INFO)
@@ -30,7 +30,7 @@ func void Org_826_Mordrag_Exit_Info()
 };
 
 // **************************************************
-// Erste Begrüssung
+//					Erste Begrüssung
 // **************************************************
 
 instance Org_826_Mordrag_Greet(C_INFO)
@@ -59,7 +59,7 @@ func void Org_826_Mordrag_Greet_Info()
 };
 
 // **************************************************
-// Handeln
+//					Handeln
 // **************************************************
 var int Mordrag_Traded;
 // **************************************************
@@ -101,7 +101,7 @@ func void Org_826_Mordrag_Trade_Info()
 };
 
 // **************************************************
-// KURIER FÜR MAGIER
+//					KURIER FÜR MAGIER
 // **************************************************
 
 instance Org_826_Mordrag_Courier(C_INFO)
@@ -141,7 +141,7 @@ func void Org_826_Mordrag_Courier_Info()
 };
 
 // **************************************************
-// DU HAST EIN PROBLEM
+//					DU HAST EIN PROBLEM
 // **************************************************
 
 instance Org_826_Mordrag_Problem(C_INFO)
@@ -190,7 +190,7 @@ func void Org_826_Mordrag_Problem_Info()
 };
 
 // **************************************************
-//   NCInfo
+//					  NCInfo
 // **************************************************
 
 instance Org_826_Mordrag_NCInfo(C_INFO)
@@ -236,7 +236,7 @@ func void Org_826_Mordrag_NCInfo_Info()
 };
 
 // **************************************************
-// JoinNewcamp
+//					JoinNewcamp
 // **************************************************
 
 instance Org_826_Mordrag_JoinNewcamp(C_INFO)
@@ -322,7 +322,7 @@ func void Org_826_Mordrag_GotoNewcamp_Info()
 };
 
 // **************************************************
-// AM NEWCMAP ANGEKOMMEN
+//				AM NEWCMAP ANGEKOMMEN
 // **************************************************
 
 instance Org_826_Mordrag_AtNewcamp(C_INFO)
@@ -393,7 +393,7 @@ func void Org_826_Mordrag_AtNewcamp_Info()
 };
 
 // **************************************************
-// AUFS MAUL
+//					AUFS MAUL
 // **************************************************
 
 instance Org_826_Mordrag_Fight(C_INFO)
@@ -427,13 +427,13 @@ func void Org_826_Mordrag_Fight_Info()
 
 	Info_ClearChoices(Org_826_Mordrag_Fight);
 //	Info_AddChoice(Org_826_Mordrag_Fight,"Just scram out of this camp!",Info_Mordrag_Fight_GetAway);
-//	Info_AddChoice(Org_826_Mordrag_Fight," "Mach dass du aus diesem Lager verschwindest!" 					",Info_Mordrag_Fight_GetAway);
+//	Info_AddChoice(Org_826_Mordrag_Fight,"Mach dass du aus diesem Lager verschwindest!",Info_Mordrag_Fight_GetAway);
 	Info_AddChoice(Org_826_Mordrag_Fight,"Prostě odsud vypadni!",Info_Mordrag_Fight_GetAway);
 //	Info_AddChoice(Org_826_Mordrag_Fight,"There's no room here for people who steal from the Ore Barons!",Info_Mordrag_Fight_OreBarons);
-//	Info_AddChoice(Org_826_Mordrag_Fight," "Hier ist kein Platz für Leute, die die Erzbarone bestehlen!" 	",Info_Mordrag_Fight_OreBarons);
+//	Info_AddChoice(Org_826_Mordrag_Fight,"Hier ist kein Platz für Leute, die die Erzbarone bestehlen!",Info_Mordrag_Fight_OreBarons);
 	Info_AddChoice(Org_826_Mordrag_Fight,"Tady není místo pro lidi, kteří kradou u Rudobaronů!",Info_Mordrag_Fight_OreBarons);
 //	Info_AddChoice(Org_826_Mordrag_Fight,"Thorus sent me. He wants to get rid of you once and for all.",Info_Mordrag_Fight_Thorus);
-//	Info_AddChoice(Org_826_Mordrag_Fight," "Thorus schickt mich. Er will dich für immer loswerden." 		",Info_Mordrag_Fight_Thorus);
+//	Info_AddChoice(Org_826_Mordrag_Fight,"Thorus schickt mich. Er will dich für immer loswerden.",Info_Mordrag_Fight_Thorus);
 	Info_AddChoice(Org_826_Mordrag_Fight,"Poslal mě Thorus. Chce, abych tě provždy odstranil.",Info_Mordrag_Fight_Thorus);
 };
 
@@ -484,7 +484,7 @@ func void Info_Mordrag_Fight_Thorus()
 };
 
 // **************************************************
-// HauAb
+//					HauAb
 // **************************************************
 
 instance Org_826_Mordrag_HauAb(C_INFO)
@@ -526,7 +526,7 @@ func void Org_826_Mordrag_HauAb_Info()
 };
 
 // **************************************************
-// GotoKalom
+//					GotoKalom
 // **************************************************
 
 instance Org_826_Mordrag_GotoKalom(C_INFO)
@@ -571,7 +571,7 @@ func void Org_826_Mordrag_GotoKalom_Info()
 };
 
 // **************************************************
-// GotoKalom - NOW
+//					GotoKalom - NOW
 // **************************************************
 	var int Mordrag_GotoKalom;
 // **************************************************
@@ -662,7 +662,7 @@ func void Org_826_Mordrag_GotoKalomNOW_DoIt()
 };
 
 // **************************************************
-// RUNNING
+//					RUNNING
 // **************************************************
 
 instance Org_826_Mordrag_RUNNING(C_INFO)

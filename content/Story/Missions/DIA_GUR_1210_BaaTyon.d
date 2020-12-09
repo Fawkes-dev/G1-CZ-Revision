@@ -1,5 +1,5 @@
 // **************************************************
-// EXIT
+//						EXIT
 // **************************************************
 
 instance DIA_BaalTyon_Exit(C_INFO)
@@ -24,7 +24,7 @@ func void DIA_BaalTyon_Exit_Info()
 };
 
 // ************************************************************
-// NICHT ansprechbar (Ungläubiger) 
+// 					NICHT ansprechbar (Ungläubiger) 
 // ************************************************************
 	var int BaalTyon_Ansprechbar;
 	var int BaalTyon_Sakrileg;
@@ -51,22 +51,21 @@ func int DIA_BaalTyon_NoTalk_Condition()
 func void DIA_BaalTyon_NoTalk_Info()
 { 
 	Info_ClearChoices(DIA_BaalTyon_NoTalk);
-//	Info_Addchoice (DIA_BaalTyon_NoTalk,"DIALOG_ENDE					",DIA_BaalTyon_NoTalk_ENDE);
 	Info_Addchoice (DIA_BaalTyon_NoTalk,DIALOG_ENDE ,DIA_BaalTyon_NoTalk_ENDE);
 	if (Npc_HasItems(other,SpecialJoint)>=1)
 	{
 //		info_AddChoice (DIA_BaalTyon_NoTalk,"(offer prepared dreamcall)",DIA_BaalTyon_SpecialJoint);
-//		info_AddChoice (DIA_BaalTyon_NoTalk,""(präparierten Traumruf anbieten)"	",DIA_BaalTyon_SpecialJoint);
+//		info_AddChoice (DIA_BaalTyon_NoTalk,"(präparierten Traumruf anbieten)",DIA_BaalTyon_SpecialJoint);
 		info_AddChoice (DIA_BaalTyon_NoTalk,"(nabídni upravený přivolávač snů)",DIA_BaalTyon_SpecialJoint);
 	};
 //	Info_Addchoice (DIA_BaalTyon_NoTalk,"Everything alright, pal?",DIA_BaalTyon_NoTalk_Imp);
-//	Info_Addchoice (DIA_BaalTyon_NoTalk,""Alles, klar, Alter?"			",DIA_BaalTyon_NoTalk_Imp);
+//	Info_Addchoice (DIA_BaalTyon_NoTalk,"Alles, klar, Alter?",DIA_BaalTyon_NoTalk_Imp);
 	Info_Addchoice (DIA_BaalTyon_NoTalk,"Je všechno v pořádku, příteli?",DIA_BaalTyon_NoTalk_Imp);
 //	Info_Addchoice (DIA_BaalTyon_NoTalk,"The Sleeper be with you!",DIA_BaalTyon_NoTalk_Sleeper);
-//	Info_Addchoice (DIA_BaalTyon_NoTalk,""Der Schläfer sei mit dir!"	",DIA_BaalTyon_NoTalk_Sleeper);
+//	Info_Addchoice (DIA_BaalTyon_NoTalk,"Der Schläfer sei mit dir!",DIA_BaalTyon_NoTalk_Sleeper);
 	Info_Addchoice (DIA_BaalTyon_NoTalk,"Spáč buď s tebou!",DIA_BaalTyon_NoTalk_Sleeper);
 //	Info_Addchoice (DIA_BaalTyon_NoTalk,"Hi! I'm new here!",DIA_BaalTyon_NoTalk_Hi);
-//	Info_Addchoice (DIA_BaalTyon_NoTalk,""Hi! Ich bin neu hier!"		",DIA_BaalTyon_NoTalk_Hi);
+//	Info_Addchoice (DIA_BaalTyon_NoTalk,"Hi! Ich bin neu hier!",DIA_BaalTyon_NoTalk_Hi);
 	Info_Addchoice (DIA_BaalTyon_NoTalk,"Zdar! Jsem tu nový!",DIA_BaalTyon_NoTalk_Hi);
 };
 
@@ -93,7 +92,7 @@ func void DIA_BaalTyon_NoTalk_Sleeper()
 func void DIA_BaalTyon_NoTalk_Imp()
 {
 //	AI_Output(other,self,"DIA_BaalTyon_NoTalk_Imp_15_00"); //Everything alright, pal?
-//	AI_Output(other,self,"DIA_BaalTyon_NoTalk_Imp_15_00"); //Alles klar, Alter? 
+//	AI_Output(other,self,"DIA_BaalTyon_NoTalk_Imp_15_00"); //Alles klar, Alter?
 	AI_Output(other,self,"DIA_BaalTyon_NoTalk_Imp_15_00"); //Je všechno v pořádku, příteli?
 //	AI_Output(self,other,"DIA_BaalTyon_NoTalk_Imp_11_01"); //(sigh)
 	AI_Output(self,other,"DIA_BaalTyon_NoTalk_Imp_11_01"); //(vzdech)
@@ -130,7 +129,7 @@ func void DIA_BaalTyon_SpecialJoint()
 };
 
 // **************************************************
-// Hatte Vision
+//					Hatte Vision
 // **************************************************
 
 instance DIA_BaalTyon_Vision(C_INFO)

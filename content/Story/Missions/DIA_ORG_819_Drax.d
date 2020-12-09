@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+//						 EXIT 
 // **************************************************
 
 instance Org_819_Drax_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void Org_819_Drax_Exit_Info()
 };
 
 // **************************************************
-//  Ihr jagt hier...
+//					 Ihr jagt hier...
 // **************************************************
 
 instance Org_819_Drax_HuntHere(C_INFO)
@@ -66,7 +66,7 @@ func void Org_819_Drax_HuntHere_Info()
 };
 
 // **************************************************
-// Scavenger jagen + Bier
+//				Scavenger jagen + Bier
 // **************************************************
 	var int drax_bierbekommen;
 	var int drax_Lehrer_frei;
@@ -142,7 +142,7 @@ func void Org_819_Drax_Scavenger_Info()
 };
 
 // **************************************************
-// Animaltrophies
+//				Animaltrophies
 // **************************************************
 
 instance Org_819_Drax_Creatures(C_INFO)
@@ -185,33 +185,32 @@ func void Org_819_Drax_Creatures_Info()
 		AI_Output(self,other,"Org_819_Drax_Creatures_06_03"); //Každý obchodník ty věci s tebou vymění.
 
 		Info_ClearChoices(Org_819_Drax_Creatures);
-//		Info_AddChoice(Org_819_Drax_Creatures," DIALOG_BACK 													",Org_819_Drax_Creatures_BACK);
 		Info_AddChoice(Org_819_Drax_Creatures, DIALOG_BACK ,Org_819_Drax_Creatures_BACK);
 //		Info_AddChoice(Org_819_Drax_Creatures,"You're demanding a lot for your advice.",Org_819_Drax_Creatures_PrettyMuch);
-//		Info_AddChoice(Org_819_Drax_Creatures," "Du verlangst verdammt viel für dein Wissen." 				",Org_819_Drax_Creatures_PrettyMuch);
+//		Info_AddChoice(Org_819_Drax_Creatures,"Du verlangst verdammt viel für dein Wissen.",Org_819_Drax_Creatures_PrettyMuch);
 		Info_AddChoice(Org_819_Drax_Creatures,"Požaduješ toho za své rady moc.",Org_819_Drax_Creatures_PrettyMuch);
 		if (Knows_GetTeeth == FALSE)
 		{
 //			Info_AddChoice(Org_819_Drax_Creatures,"Remove teeth (cost: 1 skill point, 50 ore)",Org_819_Drax_Creatures_Zahn);
-//			Info_AddChoice(Org_819_Drax_Creatures," "Zähne entfernen (Kosten: 1 Lernpunkt, 50 Erz)" 		",Org_819_Drax_Creatures_Zahn);
+//			Info_AddChoice(Org_819_Drax_Creatures,"Zähne entfernen (Kosten: 1 Lernpunkt, 50 Erz)",Org_819_Drax_Creatures_Zahn);
 			Info_AddChoice(Org_819_Drax_Creatures,"Vyjmout zuby (cena: 1 dovednostní bod, 50 nugetů)",Org_819_Drax_Creatures_Zahn);
 		};
 		if (Knows_GetFur == FALSE)
 		{
 //			Info_AddChoice(Org_819_Drax_Creatures,"Remove fur (cost: 1 skill point, 100 ore)",Org_819_Drax_Creatures_Fell);
-//			Info_AddChoice(Org_819_Drax_Creatures," "Fell abziehen (Kosten: 1 Lernpunkt, 100 Erz)"		",Org_819_Drax_Creatures_Fell);
+//			Info_AddChoice(Org_819_Drax_Creatures,"Fell abziehen (Kosten: 1 Lernpunkt, 100 Erz)",Org_819_Drax_Creatures_Fell);
 			Info_AddChoice(Org_819_Drax_Creatures,"Stáhnout kožešinu (cena: 1 dovednostní bod, 100 nugetů)",Org_819_Drax_Creatures_Fell);
 		};
 		if (Knows_GetClaws == FALSE)
 		{
 //			Info_AddChoice(Org_819_Drax_Creatures,"Remove claws (cost: 1 skill point, 50 ore)",Org_819_Drax_Creatures_Kralle);
-//			Info_AddChoice(Org_819_Drax_Creatures," "Krallen abzuziehen (Kosten: 1 Lernpunkt, 50 Erz)" 	",Org_819_Drax_Creatures_Kralle);
+//			Info_AddChoice(Org_819_Drax_Creatures,"Krallen abzuziehen (Kosten: 1 Lernpunkt, 50 Erz)",Org_819_Drax_Creatures_Kralle);
 			Info_AddChoice(Org_819_Drax_Creatures,"Vyjmout drápy (cena: 1 dovednostní bod, 50 nugetů)",Org_819_Drax_Creatures_Kralle);
 		};
 		if (Knows_GetHide == FALSE)
 		{
 //			Info_AddChoice(Org_819_Drax_Creatures,"Skin reptiles (cost: 1 skill point, 100 ore)",Org_819_Drax_Creatures_Haut);
-//			Info_AddChoice(Org_819_Drax_Creatures," "Häuten von Reptilien (Kosten: 1 Lernpunkt, 100 Erz)"	",Org_819_Drax_Creatures_Haut);
+//			Info_AddChoice(Org_819_Drax_Creatures,"Häuten von Reptilien (Kosten: 1 Lernpunkt, 100 Erz)",Org_819_Drax_Creatures_Haut);
 			Info_AddChoice(Org_819_Drax_Creatures,"Stáhnout plaza (cena: 1 dovednostní bod, 100 nugetů)",Org_819_Drax_Creatures_Haut);
 		};
 	}
@@ -299,7 +298,7 @@ func void Org_819_Drax_Creatures_Zahn()
 func void Org_819_Drax_Creatures_Fell()
 {
 //	AI_Output(other,self,"Org_819_Drax_Creatures_Fell_15_00"); //How can I skin these creatures?
-//	AI_Output(other,self,"Org_819_Drax_Creatures_Fell_15_00"); //Wie kann ich den Viechern das Fell abziehen? 
+//	AI_Output(other,self,"Org_819_Drax_Creatures_Fell_15_00"); //Wie kann ich den Viechern das Fell abziehen?
 	AI_Output(other,self,"Org_819_Drax_Creatures_Fell_15_00"); //Jak dostanu kůži těch příšer?
 
 	if (Npc_HasItems(other,itminugget)>=100)
@@ -360,7 +359,7 @@ func void Org_819_Drax_Creatures_Kralle()
 			PrintScreen("Naučit se: vytahovat drápy", -1,-1,"FONT_OLD_20_WHITE.TGA",2);
 
 //			AI_Output(other,self,"Org_819_Drax_Creatures_Kralle_15_00"); //Show me how to take off the claws!
-//			AI_Output(other,self,"Org_819_Drax_Creatures_Kralle_15_00"); //Bring mir bei, Krallen abzuziehen!  
+//			AI_Output(other,self,"Org_819_Drax_Creatures_Kralle_15_00"); //Bring mir bei, Krallen abzuziehen!
 			AI_Output(other,self,"Org_819_Drax_Creatures_Kralle_15_00"); //Ukaž mi, jak dostanu drápy!
 //			AI_Output(self,other,"Org_819_Drax_Creatures_Kralle_06_01"); //Actually it's quite simple if you know what to do. Bend the claws forward - never backwards - and you MUSTN'T pull them out either!
 //			AI_Output(self,other,"Org_819_Drax_Creatures_Kralle_06_01"); //Ist im Grunde ganz einfach, wenn du weißt, wie's geht. Du mußt die Krallen nach vorne wegknicken, auf keinen Fall nach hinten und NICHT ziehen!

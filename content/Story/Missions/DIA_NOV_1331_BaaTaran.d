@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+//						 EXIT 
 // **************************************************
 
 instance DIA_BaalTaran_EXIT(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_BaalTaran_EXIT_Info()
 };
 
 // **************************************************
-// Erste Begrüssung
+//					Erste Begrüssung
 // **************************************************
 
 instance DIA_BaalTaran_Greet(C_INFO)
@@ -54,7 +54,7 @@ func void DIA_BaalTaran_Greet_Info()
 };
 
 // **************************************************
-// Was ist Bruderschaft
+//					Was ist Bruderschaft
 // **************************************************
 
 instance DIA_BaalTaran_Bruderschaft(C_INFO)
@@ -91,7 +91,7 @@ func void DIA_BaalTaran_Bruderschaft_Info()
 };
 
 // **************************************************
-// Wer ist der Schläfer
+//					Wer ist der Schläfer
 // **************************************************
 
 instance DIA_BaalTaran_Sleeper(C_INFO)
@@ -131,7 +131,7 @@ func void DIA_BaalTaran_Sleeper_Info()
 };
 
 // **************************************************
-// Lehre des Schläfers
+//					Lehre des Schläfers
 // **************************************************
 
 instance DIA_BaalTaran_Lehre(C_INFO)
@@ -177,7 +177,7 @@ func void DIA_BaalTaran_Lehre_Info()
 };
 
 // **************************************************
-// Freiheit
+//						Freiheit
 // **************************************************
 
 instance DIA_BaalTaran_Freiheit(C_INFO)
@@ -214,7 +214,7 @@ func void DIA_BaalTaran_Freiheit_Info()
 };
 
 // **************************************************
-// Beweis
+//						Beweis
 // **************************************************
 
 instance DIA_BaalTaran_Beweis(C_INFO)
@@ -254,7 +254,7 @@ func void DIA_BaalTaran_Beweis_Info()
 };
 
 // **************************************************
-// Weg zum ST
+//					Weg zum ST
 // **************************************************
 
 instance DIA_BaalTaran_WayToST(C_INFO)
@@ -300,7 +300,7 @@ func void DIA_BaalTaran_WayToST_Info()
 };
 
 // **************************************************
-// Will in die BURG
+//					Will in die BURG
 // **************************************************
 
 instance DIA_BaalTaran_IntoCastle(C_INFO)
@@ -343,10 +343,10 @@ func void DIA_BaalTaran_IntoCastle_Info()
 
 	Info_ClearChoices(DIA_BaalTaran_IntoCastle);
 //	Info_AddChoice(DIA_BaalTaran_IntoCastle,"I want to meet somebody there.",DIA_BaalTaran_IntoCastle_MeetSomeone);
-//	Info_AddChoice(DIA_BaalTaran_IntoCastle,""Ich will dort jemanden treffen."						",DIA_BaalTaran_IntoCastle_MeetSomeone);
+//	Info_AddChoice(DIA_BaalTaran_IntoCastle,"Ich will dort jemanden treffen.",DIA_BaalTaran_IntoCastle_MeetSomeone);
 	Info_AddChoice(DIA_BaalTaran_IntoCastle,"Chci se tam s někým setkat.",DIA_BaalTaran_IntoCastle_MeetSomeone);
 //	Info_AddChoice(DIA_BaalTaran_IntoCastle,"I have a letter for the High Magician of the Circle of Fire.",DIA_BaalTaran_IntoCastle_Letter);
-//	Info_AddChoice(DIA_BaalTaran_IntoCastle,""Ich habe einen Brief für den obersten Feuermagier."	",DIA_BaalTaran_IntoCastle_Letter);
+//	Info_AddChoice(DIA_BaalTaran_IntoCastle,"Ich habe einen Brief für den obersten Feuermagier.",DIA_BaalTaran_IntoCastle_Letter);
 	Info_AddChoice(DIA_BaalTaran_IntoCastle,"Mám dopis pro Velkého mága Kruhu ohně.",DIA_BaalTaran_IntoCastle_Letter);
 };
 
@@ -360,10 +360,10 @@ func void DIA_BaalTaran_IntoCastle_MeetSomeone()
 	AI_Output(self,other,"DIA_BaalTaran_IntoCastle_MeetSomeone_05_01"); //Tak? A s kým? A proč nepočkáš, až dotyčný vyjde ven?
 	Info_ClearChoices(DIA_BaalTaran_IntoCastle);
 //	Info_AddChoice(DIA_BaalTaran_IntoCastle,"That's none of your business.",DIA_BaalTaran_IntoCastle_ForgetIt);
-//	Info_AddChoice(DIA_BaalTaran_IntoCastle,""Das geht dich nichts an."	",DIA_BaalTaran_IntoCastle_ForgetIt);
+//	Info_AddChoice(DIA_BaalTaran_IntoCastle,"Das geht dich nichts an.",DIA_BaalTaran_IntoCastle_ForgetIt);
 	Info_AddChoice(DIA_BaalTaran_IntoCastle,"Do toho ti nic není.",DIA_BaalTaran_IntoCastle_ForgetIt);
 //	Info_AddChoice(DIA_BaalTaran_IntoCastle,"He's one of the magicians.",DIA_BaalTaran_IntoCastle_Mage);
-//	Info_AddChoice(DIA_BaalTaran_IntoCastle,""Es ist einer der Magier."	",DIA_BaalTaran_IntoCastle_Mage);
+//	Info_AddChoice(DIA_BaalTaran_IntoCastle,"Es ist einer der Magier.",DIA_BaalTaran_IntoCastle_Mage);
 	Info_AddChoice(DIA_BaalTaran_IntoCastle,"On je jedním z mágů.",DIA_BaalTaran_IntoCastle_Mage);
 };
 
@@ -400,10 +400,10 @@ func void DIA_BaalTaran_IntoCastle_Mage()
 	AI_Output(self,other,"DIA_BaalTaran_IntoCastle_Mage_05_02"); //Co od nich vůbec chceš? Kouzelné runy? Nebo lektvary?
 	Info_ClearChoices(DIA_BaalTaran_IntoCastle);
 //	Info_AddChoice(DIA_BaalTaran_IntoCastle,"That's none of your business.",DIA_BaalTaran_IntoCastle_ForgetIt);
-//	Info_AddChoice(DIA_BaalTaran_IntoCastle,""Das geht dich nichts an."	",DIA_BaalTaran_IntoCastle_ForgetIt);
+//	Info_AddChoice(DIA_BaalTaran_IntoCastle,"Das geht dich nichts an.",DIA_BaalTaran_IntoCastle_ForgetIt);
 	Info_AddChoice(DIA_BaalTaran_IntoCastle,"Do toho ti nic není.",DIA_BaalTaran_IntoCastle_ForgetIt);
 //	Info_AddChoice(DIA_BaalTaran_IntoCastle,"That's right.",DIA_BaalTaran_IntoCastle_Exactly);
-//	Info_AddChoice(DIA_BaalTaran_IntoCastle,""Stimmt genau."				",DIA_BaalTaran_IntoCastle_Exactly);
+//	Info_AddChoice(DIA_BaalTaran_IntoCastle,"Stimmt genau.",DIA_BaalTaran_IntoCastle_Exactly);
 	Info_AddChoice(DIA_BaalTaran_IntoCastle,"Ano.",DIA_BaalTaran_IntoCastle_Exactly);
 };
 

@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------
-// EXIT //
+//							EXIT //
 ------------------------------------------------------------------------*/
 
 instance Nov_1371_BaalNetbek_Exit(C_INFO)
@@ -55,7 +55,7 @@ func void Nov_1371_BaalNetbek_CRAZY_Info()
 //	AI_Output(other,self,"Nov_1371_BaalNetbek_CRAZY_Info_15_03"); //Diener? Ich sehe keine Diener!
 	AI_Output(other,self,"Nov_1371_BaalNetbek_CRAZY_Info_15_03"); //Služebníci? Nevidím žádné služebníky!
 //	AI_Output(self,other,"Nov_1371_BaalNetbek_CRAZY_Info_03_04"); //They're everywhere. The trees! They walk and skip and dance...
-//	AI_Output(self,other,"Nov_1371_BaalNetbek_CRAZY_Info_03_04"); //Sie sind hier überall. Die Bäume! Sie wandern und springen und tanzen... 
+//	AI_Output(self,other,"Nov_1371_BaalNetbek_CRAZY_Info_03_04"); //Sie sind hier überall. Die Bäume! Sie wandern und springen und tanzen...
 	AI_Output(self,other,"Nov_1371_BaalNetbek_CRAZY_Info_03_04"); //Jsou všude. Stromy! Vykračujou si, skáčou a tancujou...
 //	AI_Output(other,self,"Nov_1371_BaalNetbek_CRAZY_Info_15_05"); //... Oh, I see. Well, I'll be on my way then...
 //	AI_Output(other,self,"Nov_1371_BaalNetbek_CRAZY_Info_15_05"); //...ach so, na ich geh dann mal wieder...
@@ -102,6 +102,6 @@ func void Nov_1371_BaalNetbek_AGAIN_Info()
 //	AI_Output(other,self,"Nov_1371_BaalNetbek_AGAIN_Info_15_01"); //Hey, geht's dir gut?
 	AI_Output(other,self,"Nov_1371_BaalNetbek_AGAIN_Info_15_01"); //Hej, jak to jde?
 //	AI_Output(self,other,"Nov_1371_BaalNetbek_AGAIN_Info_03_02"); //Mind you don't hurt my trees!
-//	AI_Output(self,other,"Nov_1371_BaalNetbek_AGAIN_Info_03_02"); //Pass auf, dass du meine Bäume nicht verletzt! 
+//	AI_Output(self,other,"Nov_1371_BaalNetbek_AGAIN_Info_03_02"); //Pass auf, dass du meine Bäume nicht verletzt!
 	AI_Output(self,other,"Nov_1371_BaalNetbek_AGAIN_Info_03_02"); //Pamatuj, neubližuj mým stromům!
 };  

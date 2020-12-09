@@ -8,7 +8,6 @@ instance Info_Saturas_EXIT(C_INFO)
 	information = Info_Saturas_EXIT_Info;
 	important = 0; 
 	permanent = 1;
-//	description = 	DIALOG_ENDE;
 	description = DIALOG_ENDE;
 };                       
 
@@ -64,7 +63,7 @@ func void Info_Saturas_Intruder_Info()
 //#####################################################################
 
 //***************************************************************************
-// Info NEWS
+//	Info NEWS
 //***************************************************************************
 instance Info_Saturas_NEWS(C_INFO)
 {
@@ -97,7 +96,7 @@ func void Info_Saturas_NEWS_Info()
 };
 
 //***************************************************************************
-// Info YBERION
+//	Info YBERION
 //***************************************************************************
 instance Info_Saturas_YBERION(C_INFO)
 {
@@ -158,7 +157,7 @@ func void Info_Saturas_YBERION_Info()
 };
 
 //***************************************************************************
-// Info BOOK
+//	Info BOOK
 //***************************************************************************
 instance Info_Saturas_BOOK(C_INFO)
 {
@@ -201,7 +200,7 @@ func void Info_Saturas_BOOK_Info()
 };
 
 //***************************************************************************
-// Info FOCUS
+//	Info FOCUS
 //***************************************************************************
 instance Info_Saturas_FOCUS(C_INFO)
 {
@@ -262,7 +261,7 @@ func void Info_Saturas_FOCUS_Info()
 };
 
 //***************************************************************************
-// Info WHATNOW
+//	Info WHATNOW
 //***************************************************************************
 instance Info_Saturas_WHATNOW(C_INFO)
 {
@@ -298,7 +297,7 @@ func void Info_Saturas_WHATNOW_Info()
 };
 
 //***************************************************************************
-// Info OFFER
+//	Info OFFER
 //***************************************************************************
 instance Info_Saturas_OFFER(C_INFO)
 {
@@ -360,7 +359,7 @@ func void Info_Saturas_OFFER_Info()
 };
 
 //***************************************************************************
-// B_DeliverFocus
+//	B_DeliverFocus
 //***************************************************************************
 func void B_DeliverFocus()
 {
@@ -459,7 +458,7 @@ func void B_DeliverFocus()
 };
 
 //***************************************************************************
-// Info BRINGFOCUS2
+//	Info BRINGFOCUS2
 //***************************************************************************
 instance Info_Saturas_BRINGFOCUS2(C_INFO)
 {
@@ -499,7 +498,7 @@ func void Info_Saturas_BRINGFOCUS2_Info()
 }; 
 
 //***************************************************************************
-// Info BRINGFOCUS3
+//	Info BRINGFOCUS3
 //***************************************************************************
 instance Info_Saturas_BRINGFOCUS3(C_INFO)
 {
@@ -539,7 +538,7 @@ func void Info_Saturas_BRINGFOCUS3_Info()
 }; 
 
 //***************************************************************************
-// Info BRINGFOCUS4
+//	Info BRINGFOCUS4
 //***************************************************************************
 instance Info_Saturas_BRINGFOCUS4(C_INFO)
 {
@@ -582,7 +581,7 @@ func void Info_Saturas_BRINGFOCUS4_Info()
 }; 
 
 //***************************************************************************
-// Info BRINGFOCUS5
+//	Info BRINGFOCUS5
 //***************************************************************************
 instance Info_Saturas_BRINGFOCUS5(C_INFO)
 {
@@ -622,7 +621,7 @@ func void Info_Saturas_BRINGFOCUS5_Info()
 }; 
 
 //***************************************************************************
-// Info ALLFOCI
+//	Info ALLFOCI
 //***************************************************************************
 instance Info_Saturas_ALLFOCI(C_INFO)
 {
@@ -671,7 +670,7 @@ func void Info_Saturas_ALLFOCI_Info()
 };
 
 //***************************************************************************
-// Info FAVOR
+//	Info FAVOR
 //***************************************************************************
 instance Info_Saturas_FAVOR(C_INFO)
 {
@@ -716,7 +715,7 @@ func void Info_Saturas_FAVOR_Info()
 }; 
 
 //***************************************************************************
-// Info ACCEPT
+//	Info ACCEPT
 //***************************************************************************
 instance Info_Saturas_ACCEPT(C_INFO)
 {
@@ -780,7 +779,7 @@ func void Info_Saturas_ACCEPT_Info()
 //#####################################################################
 
 //---------------------------------------------------------------------
-// Info AMBUSH
+//	Info AMBUSH
 //---------------------------------------------------------------------
 instance Info_Saturas_AMBUSH(C_INFO)
 {
@@ -827,7 +826,7 @@ func void Info_Saturas_AMBUSH_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info COLLAPSE
+//	Info COLLAPSE
 //---------------------------------------------------------------------
 instance Info_Saturas_COLLAPSE(C_INFO)
 {
@@ -863,7 +862,7 @@ func void Info_Saturas_COLLAPSE_Info()
 };
 
 //---------------------------------------------------------------------
-// Info MURDER
+//	Info MURDER
 //---------------------------------------------------------------------
 instance Info_Saturas_MURDER(C_INFO)
 {
@@ -1051,7 +1050,7 @@ func void KDW_600_Saturas_OATH_Info()
 };  
 
 /*------------------------------------------------------------------------
-// KDWAUFNAHME //
+//							KDWAUFNAHME //
 ------------------------------------------------------------------------*/
 instance KDW_600_Saturas_KDWAUFNAHME(C_INFO)
 {
@@ -1086,29 +1085,29 @@ func void KDW_600_Saturas_KDWAUFNAHME_Info()
 //	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_03"); //Sprich nun die Worte des Eides:
 	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_03"); //Nyní prones slova přísahy:
 //	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_04"); //I swear by the might of the gods...
-//	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_04"); //Ich schwöre bei den Mächten der Götter ... 
+//	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_04"); //Ich schwöre bei den Mächten der Götter...
 	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_04"); //Přísahám při boží moci...
 //	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_05"); //I swear by the might of the gods...
-//	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_05"); //Ich schwöre bei den Mächten der Götter ... 
+//	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_05"); //Ich schwöre bei den Mächten der Götter...
 	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_05"); //Přísahám při boží moci...
 //	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_06"); //... and by the power of the holy Water...
-//	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_06"); //... und bei der Kraft des heiligen Wassers ... 
+//	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_06"); //...und bei der Kraft des heiligen Wassers...
 	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_06"); //...a na sílu svaté Vody...
 //	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_07"); //... and by the power of the holy Water...
-//	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_07"); //... und bei der Kraft des heiligen Wassers ... 
+//	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_07"); //...und bei der Kraft des heiligen Wassers...
 	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_07"); //...a na sílu svaté Vody...
 //	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_08"); //... that my knowledge and my deeds from now on and forever shall be one with the Water...
-//	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_08"); //... dass mein Wissen und Handeln von nun an und auf ewig mit dem Wasser verbunden sei ... 
+//	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_08"); //...dass mein Wissen und Handeln von nun an und auf ewig mit dem Wasser verbunden sei...
 	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_08"); //...že mé vědění a skutky budu od tohoto okamžiku a provždy v jednotě s Vodou...
 //	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_09"); //... that my knowledge and my deeds from now on and forever shall be one with the Water...
-//	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_09"); //... dass mein Wissen und Handeln von nun an und auf ewig mit dem Wasser verbunden sei ... 
+//	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_09"); //...dass mein Wissen und Handeln von nun an und auf ewig mit dem Wasser verbunden sei...
 	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_09"); //...že mé vědění a skutky budu od tohoto okamžiku a provždy v jednotě s Vodou...
 //	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_10"); //... until my body shall return to the realm of Beliar and the source of my life shall dry out.
-//	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_10"); //... bis ich einkehre in Beliars Reich und der Quell des Lebens versiegt. 
-	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_10"); //...dokud mé tělo nebude navráceno říši Beliarově a voda mého života nevyschne.
+//	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_10"); //...bis ich einkehre in Beliars Reich und der Quell des Lebens versiegt.
+	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_10"); //...dokud mé tělo nebude navráceno říši Beliarově a voda mého života nevyschne
 //	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_11"); //... until my body shall return to the realm of Beliar and the source of my life shall dry out.
-//	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_11"); //... bis ich einkehre in Beliars Reich und der Quell des Lebens versiegt. 
-	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_11"); //...dokud mé tělo nebude navráceno říši Beliarově a voda mého života nevyschne.
+//	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_11"); //...bis ich einkehre in Beliars Reich und der Quell des Lebens versiegt.
+	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_11"); //...dokud mé tělo nebude navráceno říši Beliarově a voda mého života nevyschne
 
 //	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_12"); //With this oath you unite the power of the Fire and the blessing of the Water within you.
 //	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_12"); //Mit diesem Schwur einst du die Kraft des Feuers und den Segen des Wassers in dir.
@@ -1193,7 +1192,7 @@ func void KDW_600_Saturas_LESSON_Info()
 	B_LogEntry(GE_TeacherNC,"Saturas, vůdce mágů Vody, učí magickým KRUHŮM. Stále přebývá u pentagramu v horní rovině.");
 };  
 //--------------------------------------------------------------------------
-// DER ERSTE KREIS
+// 							DER ERSTE KREIS
 //--------------------------------------------------------------------------
 instance KDW_600_Saturas_KREIS1(C_INFO)
 {
@@ -1254,7 +1253,7 @@ func void KDW_600_Saturas_KREIS1_Info()
 	};
 };  
 //---------------------------------------------------------------------
-// DER ZWEITE KREIS
+//						DER ZWEITE KREIS
 //---------------------------------------------------------------------
 instance KDW_600_Saturas_KREIS2(C_INFO)
 {
@@ -1314,7 +1313,7 @@ func void KDW_600_Saturas_KREIS2_Info()
 
 };  
 //---------------------------------------------------------------------
-// DER DRITTE KREIS
+//						DER DRITTE KREIS
 //---------------------------------------------------------------------
 instance KDW_600_Saturas_KREIS3(C_INFO)
 {
@@ -1370,7 +1369,7 @@ func void KDW_600_Saturas_KREIS3_Info()
 
 };  
 //---------------------------------------------------------------------
-// DER VIERTE KREIS
+//						DER VIERTE KREIS
 //---------------------------------------------------------------------
 instance KDW_600_Saturas_KREIS4(C_INFO)
 {
@@ -1415,10 +1414,7 @@ func void KDW_600_Saturas_KREIS4_Info()
 //		AI_Output(self,other,"KDW_600_Saturas_KREIS4_Info_14_05"); //With the runes you control now, you have the entire knowledge of the temples of the realm at your fingertips.
 //		AI_Output(self,other,"KDW_600_Saturas_KREIS4_Info_14_05"); //Mit allen Runen, die du nun beherrschen kannst, steht dir das gesammelte Wissen der Tempel des Reiches zur Verfügung.
 		AI_Output(self,other,"KDW_600_Saturas_KREIS4_Info_14_05"); //S těmito runami, které už ovládáš, máš celé vědění chrámové sféry v malíčku.
-
-//		//AI_Output(self,other,"KDW_600_Saturas_KREIS4_Info_14_06"); //Du hast jetzt alles gelernt, was ich dir beibringen kann.
-//		//AI_Output(self,other,"KDW_600_Saturas_KREIS4_Info_14_06"); //Teď znáš všechno, co jsem tě mohl naučit.
-	
+		//AI_Output(self,other,"KDW_600_Saturas_KREIS4_Info_14_06"); //Du hast jetzt alles gelernt, was ich dir beibringen kann.
 //		AI_Output(self,other,"KDW_600_Saturas_KREIS4_Info_14_07"); //Understand the magic, then you'll discover the secret of power.
 //		AI_Output(self,other,"KDW_600_Saturas_KREIS4_Info_14_07"); //Erkenne die Magie, dann wirst du das Geheimnis von Macht erkennen.
 		AI_Output(self,other,"KDW_600_Saturas_KREIS4_Info_14_07"); //Jakmile porozumíš magii, objevíš tajemství moci.
@@ -1541,7 +1537,7 @@ func void KDW_600_Saturas_HEAVYARMOR_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info NOWSLD
+//	Info NOWSLD
 //---------------------------------------------------------------------
 instance Info_Saturas_NOWSLD(C_INFO)
 {
@@ -1576,12 +1572,13 @@ func void Info_Saturas_NOWSLD_Info()
 	AI_Output(self,hero,"Info_Saturas_NOWSLD_14_03"); //Buď vítán!
 
 //	B_LogEntry(CH4_BannedFromOC,"Saturas has now officially welcomed me as a mercenary.");
+//	B_LogEntry(CH4_BannedFromOC,"Auch Saturas hat mich nun als neuer Söldner offiziell begrüßt.");
 	B_LogEntry(CH4_BannedFromOC,"Saturas mě oficiálně uvedl jako žoldáka. ");
 	Log_SetTopicStatus(CH4_BannedFromOC,LOG_SUCCESS); 
 };
 
 //---------------------------------------------------------------------
-// Info XARDAS
+//	Info XARDAS
 //---------------------------------------------------------------------
 instance Info_Saturas_XARDAS(C_INFO)
 {
@@ -1668,7 +1665,7 @@ func void Info_Saturas_XARDAS_Info()
 };
 
 //---------------------------------------------------------------------
-// Info XARDASWHO
+//	Info XARDASWHO
 //---------------------------------------------------------------------
 instance Info_Saturas_XARDASWHO(C_INFO)
 {
@@ -1704,7 +1701,7 @@ func void Info_Saturas_XARDASWHO_Info()
 };
 
 //---------------------------------------------------------------------
-// Info XARDASWHY
+//	Info XARDASWHY
 //---------------------------------------------------------------------
 instance Info_Saturas_XARDASWHY(C_INFO)
 {
@@ -1746,7 +1743,7 @@ func void Info_Saturas_XARDASWHY_Info()
 };
 
 //---------------------------------------------------------------------
-// Info XARDASWHERE
+//	Info XARDASWHERE
 //---------------------------------------------------------------------
 instance Info_Saturas_XARDASWHERE(C_INFO)
 {
@@ -1782,7 +1779,7 @@ func void Info_Saturas_XARDASWHERE_Info()
 };
 
 //---------------------------------------------------------------------
-// Info XARDASHELP
+//	Info XARDASHELP
 //---------------------------------------------------------------------
 instance Info_Saturas_XARDASHELP(C_INFO)
 {
@@ -1828,7 +1825,7 @@ func void Info_Saturas_XARDASHELP_Info()
 };
 
 //---------------------------------------------------------------------
-// Info XARDASPROBLEM
+//	Info XARDASPROBLEM
 //---------------------------------------------------------------------
 instance Info_Saturas_XARDASPROBLEM(C_INFO)
 {
@@ -1875,11 +1872,12 @@ func void Info_Saturas_XARDASPROBLEM_Info()
 	AI_Output(hero,self,"Info_Saturas_XARDASPROBLEM_15_07"); //Začíná to být zajímavé!
 
 //	B_LogEntry(CH4_FindXardas,"Saturas warned me of the magic creatures of Xardas, the Necromancer. There are writings about the dangers and weaknesses of these creatures in the library of the Magicians of Water. I should take some time to have a look around there."); 
+//	B_LogEntry(CH4_FindXardas,"Saturas warnte mich vor den magischen Kreaturen des Dämonenbeschwörers Xardas. In der Bibliothek der Wassermagier gibt es Schriften über die Gefahren und Schwächen solcher Wesen. Ich sollte mir etwas Zeit nehmen, um dort herumzustöbern."); 
 	B_LogEntry(CH4_FindXardas,"Saturas mě varoval před stvůrami nekromanta Xardase. V knihovně mágů Vody jsou spisy o síle i slabinách těchto netvorů. Měl bych si udělat čas a pročíst si je."); 
 };
 
 //---------------------------------------------------------------------
-// Info XARDASGO
+//	Info XARDASGO
 //---------------------------------------------------------------------
 instance Info_Saturas_XARDASGO(C_INFO)
 {
@@ -1923,12 +1921,13 @@ func void Info_Saturas_XARDASGO_Info()
 	AI_Output(hero,self,"Info_Saturas_XARDASGO_15_06"); //Vrátím se!
 
 //	B_LogEntry(CH4_FindXardas,"There are writings about the dangers and weaknesses of these creatures in the library of the Magicians of Water. I should take some time to have a look around there.");
+//	B_LogEntry(CH4_FindXardas,"In der Bibliothek der Wassermagier gibt es Schriften über die Gefahren und Schwächen solcher Wesen. Ich sollte mir etwas Zeit nehmen, um dort herumzustöbern.");
 	B_LogEntry(CH4_FindXardas,"V knihovně mágů Vody jsou spisy o síle i slabinách těchto netvorů. Měl bych si udělat čas a pročíst si je.");
 
 };
 
 /*------------------------------------------------------------------------
-// TIMESUP- Xardas ist die Schlüsselperson, Saturas ist nicht mehr wichtig 
+//	TIMESUP- Xardas ist die Schlüsselperson, Saturas ist nicht mehr wichtig 
 ------------------------------------------------------------------------*/
 instance KDW_600_Saturas_TIMESUP(C_INFO)
 {
@@ -1954,13 +1953,13 @@ func void KDW_600_Saturas_TIMESUP_Info()
 	AI_Output(self,other,"KDW_600_Saturas_TIMESUP_Info_14_00"); //Mluvil jsi s Xardasem?
 	Info_ClearChoices(KDW_600_Saturas_TIMESUP);
 //	Info_AddChoice(KDW_600_Saturas_TIMESUP,"Well...",KDW_600_Saturas_TIMESUP_JA1);
-//	Info_AddChoice(KDW_600_Saturas_TIMESUP,""Nun..."										",KDW_600_Saturas_TIMESUP_JA1);
+//	Info_AddChoice(KDW_600_Saturas_TIMESUP,"Nun...",KDW_600_Saturas_TIMESUP_JA1);
 	Info_AddChoice(KDW_600_Saturas_TIMESUP,"Tedy...",KDW_600_Saturas_TIMESUP_JA1);
 //	Info_AddChoice(KDW_600_Saturas_TIMESUP,"No...",KDW_600_Saturas_TIMESUP_JA2);
-//	Info_AddChoice(KDW_600_Saturas_TIMESUP,""Nein..."										",KDW_600_Saturas_TIMESUP_JA2);
+//	Info_AddChoice(KDW_600_Saturas_TIMESUP,"Nein...",KDW_600_Saturas_TIMESUP_JA2);
 	Info_AddChoice(KDW_600_Saturas_TIMESUP,"Ne...",KDW_600_Saturas_TIMESUP_JA2);
 //	Info_AddChoice(KDW_600_Saturas_TIMESUP,"The whole thing's not the way you think...",KDW_600_Saturas_TIMESUP_JA3);
-//	Info_AddChoice(KDW_600_Saturas_TIMESUP,""Die ganze Sache ist anders, als du denkst..."	",KDW_600_Saturas_TIMESUP_JA3);
+//	Info_AddChoice(KDW_600_Saturas_TIMESUP,"Die ganze Sache ist anders, als du denkst...",KDW_600_Saturas_TIMESUP_JA3);
 	Info_AddChoice(KDW_600_Saturas_TIMESUP,"Celá ta záležitost není taková, jak si myslíš...",KDW_600_Saturas_TIMESUP_JA3);
 
 };
@@ -2019,7 +2018,7 @@ func void KDW_600_Saturas_TIMESUP_JA3()
 //////////////////////////////////////////////////////////////////////////
 
 // ****************************************
-// Aufnahme eines Sld 
+// 			Aufnahme eines Sld 
 // ****************************************
 
 instance KDW_600_Saturas_HogeAUFNAHME(C_INFO)
@@ -2062,7 +2061,7 @@ func void KDW_600_Saturas_HogeAUFNAHME_Info()
 };
 
 // ****************************************
-// Aufnahme eines Sld - Teil 2
+// 			Aufnahme eines Sld - Teil 2
 // ****************************************
 instance KDW_600_Saturas_HogeAUFNAHMETeil2(C_INFO)
 {
@@ -2094,29 +2093,29 @@ func void KDW_600_Saturas_HogeAUFNAHMETeil2_Info()
 //	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_03"); //Sprich nun die Worte des Eides:
 	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_03"); //Nyní prones slova přísahy:
 //	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_04"); //I swear by the might of the gods...
-//	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_04"); //Ich schwöre bei den Mächten der Götter ... 
+//	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_04"); //Ich schwöre bei den Mächten der Götter...
 	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_04"); //Přísahám při boží moci...
 //	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_05"); //I swear by the might of the gods...
-//	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_05"); //Ich schwöre bei den Mächten der Götter ... 
+//	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_05"); //Ich schwöre bei den Mächten der Götter...
 	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_05"); //Přísahám při boží moci...
 //	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_06"); //... and by the power of the holy Water...
-//	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_06"); //... und bei der Kraft des heiligen Wassers ... 
+//	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_06"); //...und bei der Kraft des heiligen Wassers...
 	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_06"); //...a na sílu svaté Vody...
 //	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_07"); //... and by the power of the holy Water...
-//	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_07"); //... und bei der Kraft des heiligen Wassers ... 
+//	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_07"); //...und bei der Kraft des heiligen Wassers...
 	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_07"); //...a na sílu svaté Vody...
 //	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_08"); //... that my knowledge and my deeds from now on and forever shall be one with the Water...
-//	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_08"); //... dass mein Wissen und Handeln von nun an und auf ewig mit dem Wasser verbunden sei ... 
+//	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_08"); //...dass mein Wissen und Handeln von nun an und auf ewig mit dem Wasser verbunden sei...
 	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_08"); //...že mé vědění a skutky budu od tohoto okamžiku a provždy v jednotě s Vodou...
 //	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_09"); //... that my knowledge and my deeds from now on and forever shall be one with the Water...
-//	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_09"); //... dass mein Wissen und Handeln von nun an und auf ewig mit dem Wasser verbunden sei ... 
+//	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_09"); //...dass mein Wissen und Handeln von nun an und auf ewig mit dem Wasser verbunden sei...
 	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_09"); //...že mé vědění a skutky budu od tohoto okamžiku a provždy v jednotě s Vodou...
 //	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_10"); //... until my body shall return to the realm of Beliar and the source of my life shall dry out.
-//	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_10"); //... bis ich einkehre in Beliars Reich und der Quell des Lebens versiegt. 
-	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_10"); //...dokud mé tělo nebude navráceno říši Beliarově a voda mého života nevyschne.
+//	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_10"); //...bis ich einkehre in Beliars Reich und der Quell des Lebens versiegt.
+	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_10"); //...dokud mé tělo nebude navráceno říši Beliarově a voda mého života nevyschne
 //	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_11"); //... until my body shall return to the realm of Beliar and the source of my life shall dry out.
-//	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_11"); //... bis ich einkehre in Beliars Reich und der Quell des Lebens versiegt. 
-	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_11"); //...dokud mé tělo nebude navráceno říši Beliarově a voda mého života nevyschne.
+//	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_11"); //...bis ich einkehre in Beliars Reich und der Quell des Lebens versiegt.
+	AI_Output(other,self,"KDW_600_Saturas_KDWAUFNAHME_Info_15_11"); //...dokud mé tělo nebude navráceno říši Beliarově a voda mého života nevyschne
 
 //	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_14"); //Wear this robe as a sign of your bond with the holy Water and with Adanos.
 //	AI_Output(self,other,"KDW_600_Saturas_KDWAUFNAHME_Info_14_14"); //Trage diese Robe als Zeichen deiner Verbundenheit zum heiligen Wasser und zu Adanos.
@@ -2131,6 +2130,7 @@ func void KDW_600_Saturas_HogeAUFNAHMETeil2_Info()
 
 	Log_CreateTopic(CH4_SldToKdW,LOG_NOTE);
 //	B_LogEntry(CH4_SldToKdW,"Saturas has now admitted me to the Circle of Water.");
+//	B_LogEntry(CH4_SldToKdW,"Saturas hat mich in den Kreis der Wassermagier aufgenommen.");
 	B_LogEntry(CH4_SldToKdW,"Saturas mě přijal do Kruhu vody.");
 
 	AI_StopProcessInfos(self);

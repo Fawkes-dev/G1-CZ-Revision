@@ -1,5 +1,5 @@
 // **************************************************
-// EXIT 
+//						EXIT 
 // **************************************************
 
 instance DIA_Caine_Exit(C_INFO)
@@ -24,7 +24,7 @@ func void DIA_Caine_Exit_Info()
 };
 
 // **************************************************
-// Hallo
+//						Hallo
 // **************************************************
 
 instance DIA_Caine_Hallo(C_INFO)
@@ -55,10 +55,10 @@ func void DIA_Caine_Hallo_Info()
 
 	Info_ClearChoices(DIA_Caine_Hallo);
 //	Info_AddChoice(DIA_Caine_Hallo,"No.",DIA_Caine_Hallo_Nein);
-//	Info_AddChoice(DIA_Caine_Hallo,""Nein."	",DIA_Caine_Hallo_Nein);
+//	Info_AddChoice(DIA_Caine_Hallo,"Nein.",DIA_Caine_Hallo_Nein);
 	Info_AddChoice(DIA_Caine_Hallo,"Ne.",DIA_Caine_Hallo_Nein);
 //	Info_AddChoice(DIA_Caine_Hallo,"Yes.",DIA_Caine_Hallo_Ja);
-//	Info_AddChoice(DIA_Caine_Hallo,""Ja."		",DIA_Caine_Hallo_Ja);
+//	Info_AddChoice(DIA_Caine_Hallo,"Ja.",DIA_Caine_Hallo_Ja);
 	Info_AddChoice(DIA_Caine_Hallo,"Ano.",DIA_Caine_Hallo_Ja);
 };
 
@@ -89,7 +89,7 @@ func void DIA_Caine_Hallo_Nein()
 
 /*
 // **************************************************
-// Zu Kalom
+//						Zu Kalom
 // **************************************************
 
 instance DIA_Caine_WaysToKalom(C_INFO)
@@ -118,7 +118,7 @@ func void DIA_Caine_WaysToKalom_Info()
 };
 
 // **************************************************
-// Alchimistische Subsatanzen
+//				Alchimistische Subsatanzen
 // **************************************************
 
 instance DIA_Caine_Alchemies(C_INFO)
@@ -149,7 +149,7 @@ func void DIA_Caine_Alchemies_Info()
 */
 
 // **************************************************
-// Job = Substanzen 
+//						Job = Substanzen 
 // **************************************************
 
 instance DIA_Caine_Job(C_INFO)
@@ -186,7 +186,7 @@ func void DIA_Caine_Job_Info()
 };
 
 // **************************************************
-// Wo Sekret
+//						Wo Sekret
 // **************************************************
 
 instance DIA_Caine_WoSekret(C_INFO)
@@ -226,7 +226,7 @@ func void DIA_Caine_WoSekret_Info()
 };
 
 // **************************************************
-// AddInfoKalom
+//						AddInfoKalom
 // **************************************************
 
 instance DIA_Caine_AddInfoKalom(C_INFO)
@@ -261,7 +261,7 @@ func void DIA_Caine_AddInfoKalom_Info()
 
 /*
 // **************************************************
-// 
+//						
 // **************************************************
 
 instance DIA_Caine_WieGuruSend(C_INFO)

@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_BaalCadar_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_BaalCadar_Exit_Info()
 };
 
 // ************************************************************
-// NICHT ansprechbar (Ungläubiger) 
+// 					NICHT ansprechbar (Ungläubiger) 
 // ************************************************************
 	var int BaalCadar_Ansprechbar;
 	var int BaalCadar_Sakrileg;
@@ -53,16 +53,15 @@ func int DIA_BaalCadar_NoTalk_Condition()
 func void DIA_BaalCadar_NoTalk_Info()
 { 
 	Info_ClearChoices(DIA_BaalCadar_NoTalk);
-//	Info_Addchoice (DIA_BaalCadar_NoTalk,"DIALOG_ENDE					",DIA_BaalCadar_NoTalk_ENDE);
 	Info_Addchoice (DIA_BaalCadar_NoTalk,DIALOG_ENDE ,DIA_BaalCadar_NoTalk_ENDE);
 //	Info_Addchoice (DIA_BaalCadar_NoTalk,"Everything alright, pal?",DIA_BaalCadar_NoTalk_Imp);
-//	Info_Addchoice (DIA_BaalCadar_NoTalk,""Alles, klar, Alter?"			",DIA_BaalCadar_NoTalk_Imp);
+//	Info_Addchoice (DIA_BaalCadar_NoTalk,"Alles, klar, Alter?",DIA_BaalCadar_NoTalk_Imp);
 	Info_Addchoice (DIA_BaalCadar_NoTalk,"Je všechno v pořádku, příteli?",DIA_BaalCadar_NoTalk_Imp);
 //	Info_Addchoice (DIA_BaalCadar_NoTalk,"The Sleeper be with you!",DIA_BaalCadar_NoTalk_Sleeper);
-//	Info_Addchoice (DIA_BaalCadar_NoTalk,""Der Schläfer sei mit dir!"	",DIA_BaalCadar_NoTalk_Sleeper);
+//	Info_Addchoice (DIA_BaalCadar_NoTalk,"Der Schläfer sei mit dir!",DIA_BaalCadar_NoTalk_Sleeper);
 	Info_Addchoice (DIA_BaalCadar_NoTalk,"Spáč buď s tebou!",DIA_BaalCadar_NoTalk_Sleeper);
 //	Info_Addchoice (DIA_BaalCadar_NoTalk,"Hi! I'm new here!",DIA_BaalCadar_NoTalk_Hi);
-//	Info_Addchoice (DIA_BaalCadar_NoTalk,""Hi! Ich bin neu hier!"		",DIA_BaalCadar_NoTalk_Hi);
+//	Info_Addchoice (DIA_BaalCadar_NoTalk,"Hi! Ich bin neu hier!",DIA_BaalCadar_NoTalk_Hi);
 	Info_Addchoice (DIA_BaalCadar_NoTalk,"Zdar! Jsem tu nový!",DIA_BaalCadar_NoTalk_Hi);
 };
 
@@ -89,7 +88,7 @@ func void DIA_BaalCadar_NoTalk_Sleeper()
 func void DIA_BaalCadar_NoTalk_Imp()
 {
 //	AI_Output(other,self,"DIA_BaalCadar_NoTalk_Imp_15_00"); //Everything alright, pal?
-//	AI_Output(other,self,"DIA_BaalCadar_NoTalk_Imp_15_00"); //Alles klar, Alter? 
+//	AI_Output(other,self,"DIA_BaalCadar_NoTalk_Imp_15_00"); //Alles klar, Alter?
 	AI_Output(other,self,"DIA_BaalCadar_NoTalk_Imp_15_00"); //Je všechno v pořádku, příteli?
 //	AI_Output(self,other,"DIA_BaalCadar_NoTalk_Imp_02_01"); //(sigh)
 	AI_Output(self,other,"DIA_BaalCadar_NoTalk_Imp_02_01"); //(vzdech)
@@ -103,6 +102,7 @@ func void DIA_BaalCadar_NoTalk_ENDE()
 
 /*
 
+//	AI_Output(self,other,"Sit_1_PSI_BaalCadar_HypnoticTeacher_2FuncNo_02_01"); //Du solltest deinen Weg mit Bedacht wählen und nach reiflicher Überlegung.
 	AI_Output(self,other,"Sit_1_PSI_BaalCadar_HypnoticTeacher_2FuncNo_02_01"); //Du solltest deinen Weg mit Bedacht wählen und nach reiflicher Überlegung. 
 	AI_Output(self,other,"Sit_1_PSI_BaalCadar_HypnoticTeacher_2FuncNo_02_02"); //Bedenke wie du entscheidest. In den anderen Lagern bekommst zwar Schutz und Nahrung, aber ist es das, was du willst?
 	AI_Output(self,other,"Sit_1_PSI_BaalCadar_HypnoticTeacher_2FuncNo_15_03"); //Was erwartet mich, was es wert wäre, zu euch zu kommen?
@@ -113,13 +113,11 @@ func void DIA_BaalCadar_NoTalk_ENDE()
 	AI_Output(self,other,"Sit_1_PSI_BaalCadar_HypnoticTeacher_2FuncNo_02_08"); //Ist es nicht das, was du willst?... Freiheit?
 	AI_Output(self,other,"Sit_1_PSI_BaalCadar_HypnoticTeacher_2FuncNo_02_09"); //Also solltest du nicht die Frage stellen, warum du her kommen solltest, die Frage ist viel mehr, warum solltest du nicht?
 	Log_CreateTopic(GE_TeacherPSI,LOG_NOTE);
-//	B_LogEntry(GE_TeacherPSI,"Baal Cadar kann mir zeigen, wie ich meine geistige Kraft verbessern kann.");
-//	B_LogEntry(GE_TeacherPSI,"Baal Cadar kann mir zeigen, wie ich meine geistige Kraft verbessern kann.");
-	B_LogEntry(GE_TeacherPSI,"Guru Baal Cadar mi může pomoci vylepšit MAGICKOU ENERGII.");
+	B_LogEntry(GE_TeacherPSI,"Baal Cadar kann mir zeigen, wie ich meine geistige Kraft verbessern kann.");
 */
 
 // **************************************************
-//  Sleep Spell
+// 						 Sleep Spell
 // **************************************************
 
 instance DIA_BaalCadar_SleepSpell(C_INFO)
@@ -208,15 +206,12 @@ func void Gur_1208_BaalCadar_Teach_Info()
 		Log_CreateTopic(GE_TeacherPSI,LOG_NOTE);
 //		B_LogEntry(GE_TeacherPSI,"The Guru Baal Cadar can help me to increase my MANA.");
 //		B_LogEntry(GE_TeacherPSI,"Der Guru Baal Cadar kann mir helfen, meine MANA zu steigern");
-		B_LogEntry(GE_TeacherPSI,"Baal Cadar mě může naučit magické KRUHY runové magie.");
+		B_LogEntry(GE_TeacherPSI,"Guru Baal Cadar mi může pomoci vylepšit MAGICKOU ENERGII.");
 		log_baalcadartrain = TRUE;
 	};
 	Info_ClearChoices(Gur_1208_BaalCadar_Teach);
-//	Info_AddChoice(Gur_1208_BaalCadar_Teach,"DIALOG_BACK									",Gur_1208_BaalCadar_Teach_BACK);
 	Info_AddChoice(Gur_1208_BaalCadar_Teach,DIALOG_BACK ,Gur_1208_BaalCadar_Teach_BACK);
-//	Info_AddChoice(Gur_1208_BaalCadar_Teach," B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0)		",Gur_1208_BaalCadar_Teach_MAN_5);
 	Info_AddChoice(Gur_1208_BaalCadar_Teach, B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0),Gur_1208_BaalCadar_Teach_MAN_5);
-//	Info_AddChoice(Gur_1208_BaalCadar_Teach,"B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0)	",Gur_1208_BaalCadar_Teach_MAN_1);
 	Info_AddChoice(Gur_1208_BaalCadar_Teach,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),Gur_1208_BaalCadar_Teach_MAN_1);
 };
 
@@ -229,11 +224,8 @@ func void Gur_1208_BaalCadar_Teach_MAN_1()
 {
 	B_BuyAttributePoints(other,ATR_MANA_MAX, LPCOST_ATTRIBUTE_MANA);
 	Info_ClearChoices(Gur_1208_BaalCadar_Teach);
-//	Info_AddChoice(Gur_1208_BaalCadar_Teach,"DIALOG_BACK									",Gur_1208_BaalCadar_Teach_BACK);
 	Info_AddChoice(Gur_1208_BaalCadar_Teach,DIALOG_BACK ,Gur_1208_BaalCadar_Teach_BACK);
-//	Info_AddChoice(Gur_1208_BaalCadar_Teach," B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0)		",Gur_1208_BaalCadar_Teach_MAN_5);
 	Info_AddChoice(Gur_1208_BaalCadar_Teach, B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0),Gur_1208_BaalCadar_Teach_MAN_5);
-//	Info_AddChoice(Gur_1208_BaalCadar_Teach,"B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0)	",Gur_1208_BaalCadar_Teach_MAN_1);
 	Info_AddChoice(Gur_1208_BaalCadar_Teach,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),Gur_1208_BaalCadar_Teach_MAN_1);
 };
 
@@ -241,11 +233,8 @@ func void Gur_1208_BaalCadar_Teach_MAN_5()
 {
 	B_BuyAttributePoints(other,ATR_MANA_MAX, 5*LPCOST_ATTRIBUTE_MANA);
 	Info_ClearChoices(Gur_1208_BaalCadar_Teach);
-//	Info_AddChoice(Gur_1208_BaalCadar_Teach,"DIALOG_BACK									",Gur_1208_BaalCadar_Teach_BACK);
 	Info_AddChoice(Gur_1208_BaalCadar_Teach,DIALOG_BACK ,Gur_1208_BaalCadar_Teach_BACK);
-//	Info_AddChoice(Gur_1208_BaalCadar_Teach," B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0)		",Gur_1208_BaalCadar_Teach_MAN_5);
 	Info_AddChoice(Gur_1208_BaalCadar_Teach, B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0),Gur_1208_BaalCadar_Teach_MAN_5);
-//	Info_AddChoice(Gur_1208_BaalCadar_Teach,"B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0)	",Gur_1208_BaalCadar_Teach_MAN_1);
 	Info_AddChoice(Gur_1208_BaalCadar_Teach,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),Gur_1208_BaalCadar_Teach_MAN_1);
 
 };
@@ -288,7 +277,7 @@ func void Gur_1208_BaalCadar_FIRSTTEST_Info()
 	Log_CreateTopic(GE_TeacherPSI,LOG_NOTE);
 //	B_LogEntry(GE_TeacherPSI,"Baal Cadar can teach me the magic CIRCLES of rune magic.");
 //	B_LogEntry(GE_TeacherPSI,"Baal Cadar kann mich die magischen KREISE der Runenmagie lehren.");
-	B_LogEntry(GE_TeacherPSI,"Templář Gor Na Toth mi může pomoci zvýšit moji SÍLU, OBRATNOST a MAGICKOU ENERGII.");
+	B_LogEntry(GE_TeacherPSI,"Baal Cadar mě může naučit magické KRUHY runové magie.");
 
 };
 
@@ -498,7 +487,7 @@ func void Gur_1208_BaalCadar_KREIS4_Info()
 
 };
 //---------------------------------------------------------
-// MAGISCHEN KRAM KAUFEN
+//					MAGISCHEN KRAM KAUFEN
 //---------------------------------------------------------
 instance Gur_1208_BaalCadar_SELLSTUFF(C_INFO)
 {

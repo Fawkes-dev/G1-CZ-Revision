@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_Whistler_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Whistler_Exit_Info()
 };
 
 // **************************************************
-//  Ich bin neu hier 
+// 					 Ich bin neu hier 
 // **************************************************
 
 instance DIA_Whistler_IAmNew(C_INFO)
@@ -65,7 +65,7 @@ func void DIA_Whistler_IAmNew_Info()
 };
 
 // **************************************************
-//  Welcher Gefallen
+// 					 Welcher Gefallen
 // **************************************************
 	var int Whistler_BuyMySword;
 	var int Whistler_BuyMySword_Day;
@@ -108,13 +108,13 @@ func void DIA_Whistler_Favour_Info()
 
 	Info_ClearChoices(DIA_Whistler_Favour);
 //	Info_AddChoice(DIA_Whistler_Favour,"Okay, give me the 100 ore nuggets. I'll get the thing.",DIA_Whistler_Favour_Ok);
-//	Info_AddChoice(DIA_Whistler_Favour," "Okay, her mit den 100 Erzbrocken. Ich hol das Ding."								",DIA_Whistler_Favour_Ok);
+//	Info_AddChoice(DIA_Whistler_Favour,"Okay, her mit den 100 Erzbrocken. Ich hol das Ding.",DIA_Whistler_Favour_Ok);
 	Info_AddChoice(DIA_Whistler_Favour,"Dobře, dej mi těch 100 magických nugetů. Dostanu tu věc.",DIA_Whistler_Favour_Ok);
 //	Info_AddChoice(DIA_Whistler_Favour,"Did you ever consider that I might just run off with the ore...?",DIA_Whistler_Favour_OreAway);
-//	Info_AddChoice(DIA_Whistler_Favour," "Hast du mal daran gedacht, dass ich mit dem Erz durchbrennen könnte...?"	",DIA_Whistler_Favour_OreAway);
+//	Info_AddChoice(DIA_Whistler_Favour,"Hast du mal daran gedacht, dass ich mit dem Erz durchbrennen könnte...?",DIA_Whistler_Favour_OreAway);
 	Info_AddChoice(DIA_Whistler_Favour,"Nenapadlo tě snad, že bych mohl s tou rudou utéct...?",DIA_Whistler_Favour_OreAway);
 //	Info_AddChoice(DIA_Whistler_Favour,"Why won't he sell the weapon to you any more?",DIA_Whistler_Favour_WhyNotSell);
-//	Info_AddChoice(DIA_Whistler_Favour," "Warum will er dir die Waffe nicht mehr verkaufen?"									",DIA_Whistler_Favour_WhyNotSell);
+//	Info_AddChoice(DIA_Whistler_Favour,"Warum will er dir die Waffe nicht mehr verkaufen?",DIA_Whistler_Favour_WhyNotSell);
 	Info_AddChoice(DIA_Whistler_Favour,"Proč ti tu zbraň nechce prodat?",DIA_Whistler_Favour_WhyNotSell);
 };
 
@@ -135,8 +135,8 @@ func void DIA_Whistler_Favour_Ok()
 		Log_SetTopicStatus(CH1_JoinOC,LOG_RUNNING);
 	};
 //	B_LogEntry(CH1_JoinOC,"Whistler will help me if I go to see Fisk at the market and buy him a sword. He's given me 100 ore.");
-//	B_LogEntry(CH1_JoinOC,"Ich bin Kharim unterlegen! Mein Mut hat Scatty gefallen, aber meine Kampffähigkeiten nicht.");
-	B_LogEntry(CH1_JoinOC,"Kharim mě zbil! Scattymu se líbila moje odvaha, ne však můj boj.");
+//	B_LogEntry(CH1_JoinOC,"Whistler unterstützt mich, wenn ich ihm bei Fisk auf dem Marktplatz ein Schwert kaufe. Er hat mir 100 Erz gegeben.");
+	B_LogEntry(CH1_JoinOC,"Whistler mi pomůže, když půjdu na tržiště za Fistem a koupím pro něj meč. Dal mi na něj 100 nugetů.");
 
 	var C_NPC fisk; fisk = Hlp_GetNpc(Stt_311_Fisk);
 
@@ -175,7 +175,7 @@ func void DIA_Whistler_Favour_WhyNotSell()
 };
 
 // **************************************************
-//  RUNNING 110
+// 					 RUNNING 110
 // **************************************************
 
 instance DIA_Whistler_Running110(C_INFO)
@@ -217,7 +217,7 @@ func void DIA_Whistler_Running110_Info()
 }; 
 
 // **************************************************
-// RUNNING - PayBack
+// 				RUNNING - PayBack
 // **************************************************
 
 instance DIA_Whistler_RunningPayBack(C_INFO)
@@ -255,8 +255,8 @@ func void DIA_Whistler_RunningPayBack_Info()
 		Whistler_BuyMySword = LOG_OBSOLETE;
 
 //		B_LogEntry(CH1_JoinOC,"I've messed it up, Whistler will never get his sword.");
-//		B_LogEntry(CH1_JoinOC,"Ich habe es Kharim gezeigt! Scatty hat gestaunt.");
-		B_LogEntry(CH1_JoinOC,"Nandal jsem to Kharimovi! Scatty byl dojatý.");
+//		B_LogEntry(CH1_JoinOC,"Ich habs vermasselt, Whistler kriegt sein Schwert nie.");
+		B_LogEntry(CH1_JoinOC,"Nepochodil jsem, Whistler svůj meč už nikdy nedostane.");
 
 		AI_StopProcessInfos(self);
 	}
@@ -270,7 +270,7 @@ func void DIA_Whistler_RunningPayBack_Info()
 }; 
 
 // **************************************************
-//  Too late
+// 					 Too late
 // **************************************************
 
 instance DIA_Whistler_MySword_TooLate(C_INFO)
@@ -300,8 +300,8 @@ func void DIA_Whistler_MySword_TooLate_Info()
 	Whistler_BuyMySword = LOG_FAILED;
 
 //	B_LogEntry(CH1_JoinOC,"I've messed it up. Whistler is really fed up with me.");
-//	B_LogEntry(CH1_JoinOC,"Da ich mich nun endgültig für die Bruderschaft des Schläfers im Sumpflager entschieden habe, kann ich kein Schatten Gomez' mehr werden");
-	B_LogEntry(CH1_JoinOC,"Protože jsem se nakonec rozhodl přidat k Bratrstvu Spáče Tábora v bažinách, nemohu se stát jedním z Gomezových Stínů.");
+//	B_LogEntry(CH1_JoinOC,"Ich hab's vermasselt. Whistler ist ganz schön sauer auf mich.");
+	B_LogEntry(CH1_JoinOC,"Nepochodil jsem, Whistler se na mě pořádně naštval.");
 
 	AI_StopProcessInfos(self);
 
@@ -311,7 +311,7 @@ func void DIA_Whistler_MySword_TooLate_Info()
 };
 
 // **************************************************
-// Success
+// 					Success
 // **************************************************
 
 instance DIA_Whistler_MySword_Success(C_INFO)
@@ -353,14 +353,14 @@ func void DIA_Whistler_MySword_Success_Info()
 	AI_Output(self,other,"DIA_Whistler_MySword_Success_11_02"); //Když se na tebe bude Diego ptát, budu mluvit v tvůj prospěch. Do té doby - měj se!
 
 //	B_LogEntry(CH1_JoinOC,"Whistler was content when I gave him the sword he wanted. He'll recommend me to Diego.");
-//	B_LogEntry(CH1_JoinOC,"Als Mitglied von Lares Bande ist eine Aufnahme im Alten Lager unmöglich geworden.");
-	B_LogEntry(CH1_JoinOC,"Člen Laresovy tlupy se nemůže přidat ke Starému táboru. To je nemožné.");
+//	B_LogEntry(CH1_JoinOC,"Whistler war zufrieden, als ich ihm das gewünschte Schwert übergab. Er will sich bei Diego für mich einsetzen.");
+	B_LogEntry(CH1_JoinOC,"Whistler byl spokojený, když jsem mu dal meč, o který žádal. Doporučil mě Diegovi.");
 	}
 	else
 	{
 //	B_LogEntry(CH1_JoinOC,"Whistler was content when I gave him the sword he wanted. Unfortunately, there's nothing in it for me, because I can't become a Shadow any more.");
-//	B_LogEntry(CH1_JoinOC,"Um bei Gomez Leuten im Alten Lager aufgenommen zu werden, soll ich mich bei Thorus melden.");
-	B_LogEntry(CH1_JoinOC,"Abych se mohl spojit s Gomezovými lidmi ve Starém táboře, potřebuji navštívit Thoruse.");
+//	B_LogEntry(CH1_JoinOC,"Whistler war zufrieden, als ich ihm das gewünschte Schwert übergab.Leider nützt mir das nicht viel, denn Schatten kann ich nicht mehr werden.");
+	B_LogEntry(CH1_JoinOC,"Whistler byl spokojený, když jsem mu dal meč, o který žádal. Bohužel z toho nic nebudu mít, protože už se nikdy nebudu moci stát Stínem.");
 	};
 	Whistler_BuyMySword = LOG_SUCCESS;
 	B_GiveXP(XP_Whistlerssword);
@@ -369,7 +369,7 @@ func void DIA_Whistler_MySword_Success_Info()
 };
 
 // **************************************************
-// STANDARD - Kap 1 nach SUCCESS
+// 			STANDARD - Kap 1 nach SUCCESS
 // **************************************************
 
 instance DIA_Whistler_StandardKap1(C_INFO)

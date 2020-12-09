@@ -1,5 +1,5 @@
 // **************************************
-// EXIT 
+//					EXIT 
 // **************************************
 
 instance DIA_Scorpio_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Scorpio_Exit_Info()
 };
 
 // **************************************
-// Was willst du hier?
+//			Was willst du hier?
 // **************************************
 
 instance DIA_Scorpio_Hello(C_INFO)
@@ -127,7 +127,7 @@ func void DIA_Scorpio_Hello_Join()
 };
 
 // **************************************
-// REFUSE TRAIN
+//			REFUSE TRAIN
 // **************************************
 
 instance DIA_Scorpio_REFUSETRAIN(C_INFO)
@@ -168,7 +168,7 @@ func void DIA_Scorpio_REFUSETRAIN_Info()
 //*******************************
 
 /*------------------------------------------------------------------------
-// GARDIST GEWORDEN //
+//							GARDIST GEWORDEN //
 ------------------------------------------------------------------------*/
 instance GRD_205_Scorpio_WELCOME(C_INFO)
 {
@@ -248,9 +248,7 @@ func void GRD_205_Scorpio_CROSSBOW_Info()
 		log_scorpiocrossbow = TRUE;
 	};
 	Info_ClearChoices(GRD_205_Scorpio_CROSSBOW);
-//	Info_Addchoice (GRD_205_Scorpio_CROSSBOW,"B_BuildLearnString(NAME_LearnCrossbow_1,	LPCOST_TALENT_CROSSBOW_1,200)",GRD_205_Scorpio_CROSSBOW_OK);
 	Info_Addchoice (GRD_205_Scorpio_CROSSBOW,B_BuildLearnString(NAME_LearnCrossbow_1, LPCOST_TALENT_CROSSBOW_1,200),GRD_205_Scorpio_CROSSBOW_OK);
-//	Info_Addchoice (GRD_205_Scorpio_CROSSBOW,"DIALOG_BACK",GRD_205_Scorpio_CROSSBOW_BACK);
 	Info_Addchoice (GRD_205_Scorpio_CROSSBOW,DIALOG_BACK,GRD_205_Scorpio_CROSSBOW_BACK);
 
 };  
@@ -329,7 +327,6 @@ func void GRD_205_Scorpio_CROSSBOW2_Info()
 	AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_Info_13_02"); //To bude stát 300 nugetů.
 
 	Info_ClearChoices(GRD_205_Scorpio_CROSSBOW2);
-//	Info_Addchoice (GRD_205_Scorpio_CROSSBOW2,"B_BuildLearnString(NAME_LearnCrossbow_2,	LPCOST_TALENT_CROSSBOW_2,300)",GRD_205_Scorpio_CROSSBOW2_OK);
 	Info_Addchoice (GRD_205_Scorpio_CROSSBOW2,B_BuildLearnString(NAME_LearnCrossbow_2, LPCOST_TALENT_CROSSBOW_2,300),GRD_205_Scorpio_CROSSBOW2_OK);
 	Info_Addchoice (GRD_205_Scorpio_CROSSBOW2,DIALOG_BACK,  GRD_205_Scorpio_CROSSBOW2_BACK);
 
@@ -378,7 +375,7 @@ func void GRD_205_Scorpio_CROSSBOW2_OK()
 Ab Kapitel 4 steht Scorpio draussen, damit der Spieler bei ihm noch lernen kann 
 ------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------
-// hey PC! //
+//							hey PC! //
 ------------------------------------------------------------------------*/
 instance GRD_205_Scorpio_HeyPC(C_INFO)
 {
@@ -405,7 +402,7 @@ func void GRD_205_Scorpio_HeyPC_Info()
 };
 
 /*------------------------------------------------------------------------
-// Scorpio ist abgehauen //
+//							Scorpio ist abgehauen //
 ------------------------------------------------------------------------*/
 instance GRD_205_Scorpio_BANISHED(C_INFO)
 {

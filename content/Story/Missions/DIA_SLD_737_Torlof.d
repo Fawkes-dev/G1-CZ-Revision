@@ -1,5 +1,5 @@
 // ********************************
-// EXIT
+// 				EXIT
 // ********************************
 
 instance DIA_Torlof_EXIT(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Torlof_EXIT_Info()
 };
 
 // ********************************
-// Hallo
+// 				Hallo
 // ********************************
 
 instance DIA_Torlof_Hallo(C_INFO)
@@ -52,7 +52,7 @@ func void DIA_Torlof_Hallo_Info()
 //	AI_Output(self,other,"DIA_Torlof_Hallo_04_01"); //Ich bin Torlof.
 	AI_Output(self,other,"DIA_Torlof_Hallo_04_01"); //Jsem Torlof.
 //	AI_Output(self,other,"DIA_Torlof_Hallo_04_02"); //I was involved in a mutiny as mate of a royal warship.
-//	AI_Output(self,other,"DIA_Torlof_Hallo_04_02"); //Hab als Maat auf einem der königlichen Kriegsschiffe bei ner Meuterei mitgemacht. 
+//	AI_Output(self,other,"DIA_Torlof_Hallo_04_02"); //Hab als Maat auf einem der königlichen Kriegsschiffe bei ner Meuterei mitgemacht.
 	AI_Output(self,other,"DIA_Torlof_Hallo_04_02"); //Zapletl jsem se do vzpoury jako důstojník královské flotily.
 //	AI_Output(self,other,"DIA_Torlof_Hallo_04_03"); //It wasn't such a good idea. The greater part of the crew was on the captain's side.
 //	AI_Output(self,other,"DIA_Torlof_Hallo_04_03"); //Kam nicht so gut an. Der größte Teil der Mannschaft war auf der Seite des Käptn's.
@@ -63,7 +63,7 @@ func void DIA_Torlof_Hallo_Info()
 };
 
 // ********************************
-// Mitmachen
+// 				Mitmachen
 // ********************************
 
 instance DIA_Torlof_Mitmachen(C_INFO)
@@ -115,7 +115,7 @@ func void DIA_Torlof_Mitmachen_Info()
 /*
 
 // ********************************
-// PERM
+// 				PERM
 // ********************************
 
 instance DIA_Torlof_PERM(C_INFO)

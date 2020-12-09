@@ -1,5 +1,5 @@
 // ********************************
-// EXIT
+// 				EXIT
 // ********************************
 
 instance DIA_Jeremiah_EXIT(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Jeremiah_EXIT_Info()
 };
 
 // ********************************
-// Hallo
+// 				Hallo
 // ********************************
 
 instance DIA_Jeremiah_Hallo(C_INFO)
@@ -60,7 +60,7 @@ func void DIA_Jeremiah_Hallo_Info()
 };
 
 // ********************************
-// PERM
+// 				PERM
 // ********************************
 	var int Jeremiah_Bauer; //NUR lokal benutzt - wegen perm-info-condition Umgehung
 // ********************************
@@ -98,7 +98,7 @@ func void DIA_Jeremiah_PERM_Info()
 };
 
 // ********************************
-// Horatio
+// 				Horatio
 // ********************************
 
 instance DIA_Jeremiah_Horatio(C_INFO)

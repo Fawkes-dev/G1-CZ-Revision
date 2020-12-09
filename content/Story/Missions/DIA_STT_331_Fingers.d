@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_STT_331_Fingers_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_STT_331_Fingers_Exit_Info()
 };
 
 // **************************************************
-//  Schatten werden
+// 				 Schatten werden
 // **************************************************
 	var int Fingers_CanTeach;
 // **************************************************
@@ -58,16 +58,15 @@ func void DIA_Fingers_BecomeShadow_Info()
 //	AI_Output(self,other,"DIA_Fingers_BecomeShadow_05_01"); //Und?
 	AI_Output(self,other,"DIA_Fingers_BecomeShadow_05_01"); //No a?
 	Info_ClearChoices(DIA_Fingers_BecomeShadow);
-//	Info_AddChoice(DIA_Fingers_BecomeShadow,"DIALOG_BACK										",DIA_Fingers_BecomeShadow_BACK);
 	Info_AddChoice(DIA_Fingers_BecomeShadow,DIALOG_BACK ,DIA_Fingers_BecomeShadow_BACK);
 	if (Npc_KnowsInfo(hero,Info_Diego_Teachers))
 	{
 //		Info_AddChoice(DIA_Fingers_BecomeShadow,"I'm looking for somebody to teach me something.",DIA_Fingers_BecomeShadow_TeachMe);
-//		Info_AddChoice(DIA_Fingers_BecomeShadow,""Ich suche jemanden, der mir was beibringt."	",DIA_Fingers_BecomeShadow_TeachMe);
+//		Info_AddChoice(DIA_Fingers_BecomeShadow,"Ich suche jemanden, der mir was beibringt.",DIA_Fingers_BecomeShadow_TeachMe);
 		Info_AddChoice(DIA_Fingers_BecomeShadow,"Hledám někoho, kdo mě něco naučí.",DIA_Fingers_BecomeShadow_TeachMe);
 	};
 //	Info_AddChoice(DIA_Fingers_BecomeShadow,"Can you help me?",DIA_Fingers_BecomeShadow_AnyTips);
-//	Info_AddChoice(DIA_Fingers_BecomeShadow,""Kannst du mir dabei helfen?"					",DIA_Fingers_BecomeShadow_AnyTips);
+//	Info_AddChoice(DIA_Fingers_BecomeShadow,"Kannst du mir dabei helfen?",DIA_Fingers_BecomeShadow_AnyTips);
 	Info_AddChoice(DIA_Fingers_BecomeShadow,"Můžeš mi pomoci?",DIA_Fingers_BecomeShadow_AnyTips);
 };
 
@@ -121,7 +120,7 @@ func void DIA_Fingers_BecomeShadow_TeachMe()
 };
 
 // **************************************************
-//  Lehrer
+// 						 Lehrer
 // **************************************************
 	var int Fingers_Wherecavalorn;
 
@@ -155,18 +154,13 @@ func void DIA_Fingers_Lehrer_Info()
 	AI_Output(self,other,"DIA_Fingers_Lehrer_05_02"); //To záleží na tom, co chceš umět.
 
 	Info_ClearChoices(DIA_Fingers_Lehrer);
-//	Info_AddChoice(DIA_Fingers_Lehrer,"DIALOG_BACK																	",DIA_Fingers_Lehrer_BACK);
 	Info_AddChoice(DIA_Fingers_Lehrer,DIALOG_BACK ,DIA_Fingers_Lehrer_BACK);
-//	Info_AddChoice(DIA_Fingers_Lehrer,"B_BuildLearnString(NAME_LearnPickpocket_2	,	LPCOST_TALENT_PICKPOCKET_2,0)	",DIA_Fingers_Lehrer_Pickpocket2);
 	Info_AddChoice(DIA_Fingers_Lehrer,B_BuildLearnString(NAME_LearnPickpocket_2 , LPCOST_TALENT_PICKPOCKET_2,0),DIA_Fingers_Lehrer_Pickpocket2);
-//	Info_AddChoice(DIA_Fingers_Lehrer,"B_BuildLearnString(NAME_LearnPickpocket_1	,	LPCOST_TALENT_PICKPOCKET_1,0)	",DIA_Fingers_Lehrer_Pickpocket);
 	Info_AddChoice(DIA_Fingers_Lehrer,B_BuildLearnString(NAME_LearnPickpocket_1 , LPCOST_TALENT_PICKPOCKET_1,0),DIA_Fingers_Lehrer_Pickpocket);
-//	Info_AddChoice(DIA_Fingers_Lehrer,"B_BuildLearnString(NAME_LearnPicklock_2		,	LPCOST_TALENT_PICKLOCK_2,0)	",DIA_Fingers_Lehrer_Lockpick2);
 	Info_AddChoice(DIA_Fingers_Lehrer,B_BuildLearnString(NAME_LearnPicklock_2 , LPCOST_TALENT_PICKLOCK_2,0),DIA_Fingers_Lehrer_Lockpick2);
-//	Info_AddChoice(DIA_Fingers_Lehrer,"B_BuildLearnString(NAME_LearnPicklock_1		,	LPCOST_TALENT_PICKLOCK_1,0)	",DIA_Fingers_Lehrer_Lockpick);
 	Info_AddChoice(DIA_Fingers_Lehrer,B_BuildLearnString(NAME_LearnPicklock_1 , LPCOST_TALENT_PICKLOCK_1,0),DIA_Fingers_Lehrer_Lockpick);
 //	Info_AddChoice(DIA_Fingers_Lehrer,"I want to learn how to sneak around.",DIA_Fingers_Lehrer_Schleichen);
-//	Info_AddChoice(DIA_Fingers_Lehrer,""Ich will lernen, mich lautlos zu bewegen." 								",DIA_Fingers_Lehrer_Schleichen);
+//	Info_AddChoice(DIA_Fingers_Lehrer,"Ich will lernen, mich lautlos zu bewegen.",DIA_Fingers_Lehrer_Schleichen);
 	Info_AddChoice(DIA_Fingers_Lehrer,"Chci se naučit plížit.",DIA_Fingers_Lehrer_Schleichen);
 };
 
@@ -281,7 +275,7 @@ func void DIA_Fingers_Lehrer_BACK()
 };
 
 // **************************************************
-// Wo Cavalorn
+// 					Wo Cavalorn
 // **************************************************
 
 instance DIA_Fingers_WhereCavalorn(C_INFO)
@@ -322,7 +316,7 @@ func void DIA_Fingers_WhereCavalorn_Info()
 };
 
 // **************************************************
-// Gutes Wort
+// 					Gutes Wort
 // **************************************************
 	var int Fingers_Learnt;
 // **************************************************

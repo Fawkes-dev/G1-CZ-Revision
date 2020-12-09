@@ -1,17 +1,17 @@
 //////////////////////////////////////////////////////////////////////////
-// DURCHGANGSWACHE
-// =============== 
-// NSC: Grd_212_Torwache
-// Lager: OldCamp
-// Durchgang: Inneres Tor zur Burg (rechte Wache)
-// Uhrzeit: 24h
+//	DURCHGANGSWACHE
+//	=============== 
+//	NSC: Grd_212_Torwache
+//	Lager: OldCamp
+//	Durchgang: Inneres Tor zur Burg (rechte Wache)
+//	Uhrzeit: 24h
 //
-// Es passiert folgendes:
-// 1. Nähert sich der Spieler dem Durchgang, so wird er in diesen
-// Dialog gezwungen und einmal gewarnt
-// 2. Nähert sich der SC trotzdem weiter, so wird er ein ZWEITES Mal
-// gewarnt (aggressiver mit Waffe ziehen)
-// 3. Nähert er sich trotzdem wieder, wird er angegriffen
+//	Es passiert folgendes:
+//	1. Nähert sich der Spieler dem Durchgang, so wird er in diesen
+//		Dialog gezwungen und einmal gewarnt
+//	2. Nähert sich der SC trotzdem weiter, so wird er ein ZWEITES Mal
+//		gewarnt (aggressiver mit Waffe ziehen)
+//	3. Nähert er sich trotzdem wieder, wird er angegriffen
 //////////////////////////////////////////////////////////////////////////
 CONST STRING Grd_212_CHECKPOINT = "OCC_GATE_INSIDE";
 
@@ -26,7 +26,7 @@ instance Info_Grd_212_FirstWarn(C_INFO)
 };                       
 
 //------------------------------------------------------------------------
-// 1. Warnung
+//	1. Warnung
 //------------------------------------------------------------------------
 func int Info_Grd_212_FirstWarn_Condition()
 {
@@ -60,7 +60,7 @@ func void Info_Grd_212_FirstWarn_Info()
 };
 
 //------------------------------------------------------------------------
-// 2. Warnung
+//	2. Warnung
 //------------------------------------------------------------------------
 instance Info_Grd_212_LastWarn(C_INFO)
 {
@@ -97,7 +97,7 @@ func int Info_Grd_212_LastWarn_Info()
 };
 
 //------------------------------------------------------------------------
-// Attack
+//	Attack
 //------------------------------------------------------------------------
 instance Info_Grd_212_Attack(C_INFO)
 {
@@ -136,7 +136,7 @@ func int Info_Grd_212_Attack_Info()
 };
 
 // ************************************************************
-//	  EXIT 
+// 			  				   EXIT 
 // ************************************************************
 
 instance Info_Grd_212_EXIT(C_INFO)
@@ -160,7 +160,7 @@ func void Info_Grd_212_EXIT_Info()
 };
 
 // ************************************************************
-// PERM Abblitzen
+// 						PERM Abblitzen
 // ************************************************************
 
 instance Info_Grd_212_Abblitzen(C_INFO)
@@ -204,7 +204,7 @@ func void Info_Grd_212_Abblitzen_Info()
 };
 
 // ************************************************************
-// Erstes Mal rein
+// 						Erstes Mal rein
 // ************************************************************
 
 instance Info_Grd_212_FirstIn(C_INFO)
@@ -240,7 +240,7 @@ func void Info_Grd_212_FirstIn_Info()
 };
 
 // ************************************************************
-// PERM Nach FirstIn
+// 						PERM Nach FirstIn
 // ************************************************************
 
 instance Info_Grd_212_Passgate(C_INFO)

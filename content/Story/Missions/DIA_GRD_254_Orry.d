@@ -1,5 +1,5 @@
 // **************************************************
-//  PRE EXIT 
+// 						 PRE EXIT 
 // **************************************************
 
 instance DIA_Orry_PreExit(C_INFO)
@@ -27,7 +27,7 @@ func void DIA_Orry_PreExit_Info()
 };
 
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_Orry_Exit(C_INFO)
@@ -54,7 +54,7 @@ func void DIA_Orry_Exit_Info()
 };
 
 // **************************************************
-// Ich Wache
+// 					Ich Wache
 // **************************************************
 
 instance DIA_Orry_GuardGate(C_INFO)
@@ -102,10 +102,10 @@ func void DIA_Orry_GuardGate_Info()
 	AI_Output(self,other,"DIA_Orry_GuardGate_06_06"); //Předpokládám, že jsi mluvil s Diegem...?
 	Info_ClearChoices(DIA_Orry_GuardGate);
 //	Info_AddChoice(DIA_Orry_GuardGate,"No.",DIA_Orry_GuardGate_No);
-//	Info_AddChoice(DIA_Orry_GuardGate,""Nein."	",DIA_Orry_GuardGate_No);
+//	Info_AddChoice(DIA_Orry_GuardGate,"Nein.",DIA_Orry_GuardGate_No);
 	Info_AddChoice(DIA_Orry_GuardGate,"Ne.",DIA_Orry_GuardGate_No);
 //	Info_AddChoice(DIA_Orry_GuardGate,"Yes.",DIA_Orry_GuardGate_Yes);
-//	Info_AddChoice(DIA_Orry_GuardGate,""Ja."	",DIA_Orry_GuardGate_Yes);
+//	Info_AddChoice(DIA_Orry_GuardGate,"Ja.",DIA_Orry_GuardGate_Yes);
 	Info_AddChoice(DIA_Orry_GuardGate,"Ano.",DIA_Orry_GuardGate_Yes);
 };
 
@@ -135,7 +135,7 @@ func void DIA_Orry_GuardGate_Yes()
 };
 
 // **************************************************
-// New Camp
+// 					New Camp
 // **************************************************
 
 instance DIA_Orry_NewCamp(C_INFO)
@@ -172,7 +172,7 @@ func void DIA_Orry_NewCamp_Info()
 };
 
 // **************************************************
-// Old Camp
+// 					Old Camp
 // **************************************************
 
 instance DIA_Orry_OldCamp(C_INFO)
@@ -209,7 +209,7 @@ func void DIA_Orry_OldCamp_Info()
 };
 
 // **************************************************
-// Shore
+// 					Shore
 // **************************************************
 
 instance DIA_Orry_Shore(C_INFO)
@@ -249,7 +249,7 @@ func void DIA_Orry_Shore_Info()
 };
 
 // **************************************************
-// Frau
+// 					Frau
 // **************************************************
 
 instance DIA_Orry_Woman(C_INFO)
@@ -292,7 +292,7 @@ func void DIA_Orry_Woman_Info()
 };
 
 // **************************************************
-// Waffe
+// 					Waffe
 // **************************************************
 
 instance DIA_Orry_Waffe(C_INFO)

@@ -1,5 +1,5 @@
 // ************************************************************
-//	  EXIT 
+// 			  				   EXIT 
 // ************************************************************
 
 instance Info_Thorus_EXIT(C_INFO)
@@ -23,7 +23,7 @@ func void Info_Thorus_EXIT_Info()
 };
 
 // ************************************************************
-// Nur Gomez Leute in Burg
+// 					Nur Gomez Leute in Burg
 // ************************************************************
 
 instance Info_Thorus_EnterCastle(C_INFO) //E2
@@ -57,7 +57,7 @@ func void Info_Thorus_EnterCastle_Info()
 };
 
 // ************************************************************
-// Ich will für Gomez arbeiten
+// 					Ich will für Gomez arbeiten
 // ************************************************************
 
 instance Info_Thorus_WorkForGomez(C_INFO) //E2
@@ -92,7 +92,7 @@ func void Info_Thorus_WorkForGomez_Info()
 };
 
 // ************************************************************
-// Diego schickt mich
+// 						Diego schickt mich
 // ************************************************************
 
 instance Info_Thorus_DiegoSentMe(C_INFO) //E3
@@ -139,7 +139,7 @@ func void Info_Thorus_DiegoSentMe_Info()
 };
 
 // ************************************************************
-// Try Me
+// 						Try Me
 // ************************************************************
 
 instance Info_Thorus_TryMe(C_INFO) //E3
@@ -179,7 +179,7 @@ func void Info_Thorus_TryMe_Info()
 };
 
 // ************************************************************
-// TryMeAgain
+// 						TryMeAgain
 // ************************************************************
 
 instance Info_Thorus_TryMeAgain(C_INFO) //E4
@@ -216,7 +216,7 @@ func void Info_Thorus_TryMeAgain_Info()
 };
 
 // ************************************************************
-// TryMeICanDoIt
+// 						TryMeICanDoIt
 // ************************************************************
 
 instance Info_Thorus_TryMeICanDoIt(C_INFO) //E5
@@ -253,11 +253,11 @@ func void Info_Thorus_TryMeICanDoIt_Info()
 };
 
 // **************************************************************************
-// MISSION MORDRAG KO
+// 							MISSION MORDRAG KO
 // **************************************************************************
 VAR INT Thorus_MordragKo;
 // **************************************************************************
-// MISSION MORDRAG KO VERGABE
+// 							MISSION MORDRAG KO VERGABE
 // **************************************************************************
 
 instance Info_Thorus_MordragKo_Offer(C_INFO) //E6
@@ -309,19 +309,19 @@ func void Info_Thorus_MordragKo_Offer_Info()
 
 	Info_ClearChoices(Info_Thorus_MordragKo_Offer);
 //	Info_AddChoice(Info_Thorus_MordragKo_Offer,"I'll take care of it.",Info_Thorus_MordragKo_OFFER_BACK);
-//	Info_AddChoice(Info_Thorus_MordragKo_Offer," "Ich kümmere mich drum." 							",Info_Thorus_MordragKo_OFFER_BACK);
+//	Info_AddChoice(Info_Thorus_MordragKo_Offer,"Ich kümmere mich drum.",Info_Thorus_MordragKo_OFFER_BACK);
 	Info_AddChoice(Info_Thorus_MordragKo_Offer,"Postarám se o to.",Info_Thorus_MordragKo_OFFER_BACK);
 //	Info_AddChoice(Info_Thorus_MordragKo_Offer,"D'you want me to kill the guy?",Info_Thorus_MordragKo_KillHim);
-//	Info_AddChoice(Info_Thorus_MordragKo_Offer," "Soll ich den Kerl umbringen?" 						",Info_Thorus_MordragKo_KillHim);
+//	Info_AddChoice(Info_Thorus_MordragKo_Offer,"Soll ich den Kerl umbringen?",Info_Thorus_MordragKo_KillHim);
 	Info_AddChoice(Info_Thorus_MordragKo_Offer,"Chceš po mně, abych toho chlapíka zabil?",Info_Thorus_MordragKo_KillHim);
 //	Info_AddChoice(Info_Thorus_MordragKo_Offer,"Where can I find Mordrag?",Info_Thorus_MordragKo_Where);
-//	Info_AddChoice(Info_Thorus_MordragKo_Offer," "Wo finde ich Mordrag?" 								",Info_Thorus_MordragKo_Where);
+//	Info_AddChoice(Info_Thorus_MordragKo_Offer,"Wo finde ich Mordrag?",Info_Thorus_MordragKo_Where);
 	Info_AddChoice(Info_Thorus_MordragKo_Offer,"Kde Mordraga najdu?",Info_Thorus_MordragKo_Where);
 //	Info_AddChoice(Info_Thorus_MordragKo_Offer,"Why do the mages protect that Mordrag?",Info_Thorus_MordragKo_MagesProtect);
-//	Info_AddChoice(Info_Thorus_MordragKo_Offer," "Wieso beschützen die Magier diesen Mordrag?"		",Info_Thorus_MordragKo_MagesProtect);
+//	Info_AddChoice(Info_Thorus_MordragKo_Offer,"Wieso beschützen die Magier diesen Mordrag?",Info_Thorus_MordragKo_MagesProtect);
 	Info_AddChoice(Info_Thorus_MordragKo_Offer,"Proč ho mágové ochraňují?",Info_Thorus_MordragKo_MagesProtect);
 //	Info_AddChoice(Info_Thorus_MordragKo_Offer,"Sounds to me like the mages are your problem...",Info_Thorus_MordragKo_MageProblem);
-//	Info_AddChoice(Info_Thorus_MordragKo_Offer," "Klingt eher als wären die Magier dein Problem..."	",Info_Thorus_MordragKo_MageProblem);
+//	Info_AddChoice(Info_Thorus_MordragKo_Offer,"Klingt eher als wären die Magier dein Problem...",Info_Thorus_MordragKo_MageProblem);
 	Info_AddChoice(Info_Thorus_MordragKo_Offer,"Zdá se, že ti mágové jsou pro tebe problém...",Info_Thorus_MordragKo_MageProblem);
 
 	Thorus_MordragKo = LOG_RUNNING;
@@ -401,7 +401,7 @@ func void Info_Thorus_MordragKo_MageProblem()
 };
 
 // **************************************************************************
-// ANALYZE
+// 									ANALYZE
 // **************************************************************************
 
 instance Info_Thorus_MordragKo_Analyze(C_INFO)
@@ -428,22 +428,22 @@ func void Info_Thorus_MordragKo_Analyze_Info()
 {
 	Info_ClearChoices(Info_Thorus_MordragKo_Analyze);
 //	Info_AddChoice(Info_Thorus_MordragKo_Analyze,"I'll take care of it.",Info_Thorus_MordragKo_ANALYZE_BACK);
-//	Info_AddChoice(Info_Thorus_MordragKo_Analyze," "Ich kümmere mich drum." 	",Info_Thorus_MordragKo_ANALYZE_BACK);
+//	Info_AddChoice(Info_Thorus_MordragKo_Analyze,"Ich kümmere mich drum.",Info_Thorus_MordragKo_ANALYZE_BACK);
 	Info_AddChoice(Info_Thorus_MordragKo_Analyze,"Postarám se o to.",Info_Thorus_MordragKo_ANALYZE_BACK);
 //	Info_AddChoice(Info_Thorus_MordragKo_Analyze,"Where can I find Mordrag?",Info_Thorus_MordragKo_Where); //SIEHE OBEN
-//	Info_AddChoice(Info_Thorus_MordragKo_Analyze," "Wo finde ich Mordrag?" 	",Info_Thorus_MordragKo_Where); //SIEHE OBEN
+//	Info_AddChoice(Info_Thorus_MordragKo_Analyze,"Wo finde ich Mordrag?",Info_Thorus_MordragKo_Where); //SIEHE OBEN
 	Info_AddChoice(Info_Thorus_MordragKo_Analyze,"Kde Mordraga najdu?",Info_Thorus_MordragKo_Where); //SIEHE OBEN
 	var C_NPC Mordrag; Mordrag = Hlp_GetNpc(Org_826_Mordrag);
 	if (Npc_IsDead(Mordrag))
 	{
 //		Info_AddChoice(Info_Thorus_MordragKo_Analyze,"Mordrag will never steal anything from anyone ever again!",Info_Thorus_MordragKo_MordragDead);
-//		Info_AddChoice(Info_Thorus_MordragKo_Analyze," "Mordrag wird nie wieder irgendwen bestehlen!" ",Info_Thorus_MordragKo_MordragDead);
+//		Info_AddChoice(Info_Thorus_MordragKo_Analyze,"Mordrag wird nie wieder irgendwen bestehlen!",Info_Thorus_MordragKo_MordragDead);
 		Info_AddChoice(Info_Thorus_MordragKo_Analyze,"Mordrag už nikdy nikomu nic neukradne!",Info_Thorus_MordragKo_MordragDead);
 	}
 	else if ((MordragKO_HauAb==TRUE) || (MordragKO_StayAtNC==TRUE))
 	{ 
 //		Info_AddChoice(Info_Thorus_MordragKo_Analyze,"He's never gonna show his face around here again!",Info_Thorus_MordragKo_MordragGone);
-//		Info_AddChoice(Info_Thorus_MordragKo_Analyze," "Der Typ wird sich hier nie wieder blicken lassen!" ",Info_Thorus_MordragKo_MordragGone);
+//		Info_AddChoice(Info_Thorus_MordragKo_Analyze,"Der Typ wird sich hier nie wieder blicken lassen!",Info_Thorus_MordragKo_MordragGone);
 		Info_AddChoice(Info_Thorus_MordragKo_Analyze,"Už se tu nikdy víc neukáže!",Info_Thorus_MordragKo_MordragGone);
 	};
 
@@ -493,7 +493,7 @@ func void Info_Thorus_MordragKo_MordragGone()
 };
 
 // ************************************************************
-// Mordrag verplappert 
+// 						Mordrag verplappert 
 // ************************************************************
 
 instance Info_Thorus_MordragFailed(C_INFO)
@@ -533,7 +533,7 @@ func void Info_Thorus_MordragFailed_Info()
 };
 
 // ************************************************************
-// Bribe Thorus 
+// 						Bribe Thorus 
 // ************************************************************
 
 instance Info_Thorus_BribeGuard(C_INFO)
@@ -562,7 +562,7 @@ func void Info_Thorus_BribeGuard_Info()
 //	AI_Output(other,self,"Info_Thorus_BribeGuard_15_00"); //Würdest du mich für eine entsprechende Menge Erz in die Burg lassen?
 	AI_Output(other,self,"Info_Thorus_BribeGuard_15_00"); //Kdybych ti dal určité množství rudy, pustil bys mě na hrad?
 //	AI_Output(self,other,"Info_Thorus_BribeGuard_09_01"); //For a certain amount...
-//	AI_Output(self,other,"Info_Thorus_BribeGuard_09_01"); //Für eine entsprechende Menge ... 
+//	AI_Output(self,other,"Info_Thorus_BribeGuard_09_01"); //Für eine entsprechende Menge ...
 	AI_Output(self,other,"Info_Thorus_BribeGuard_09_01"); //Za určité množství...
 //	AI_Output(other,self,"Info_Thorus_BribeGuard_15_02"); //How much?
 //	AI_Output(other,self,"Info_Thorus_BribeGuard_15_02"); //Wie viel?
@@ -585,7 +585,7 @@ func void Info_Thorus_BribeGuard_Info()
 };
 
 // ************************************************************
-// Give1000Ore 
+// 						Give1000Ore 
 // ************************************************************
 
 instance Info_Thorus_Give1000Ore(C_INFO)
@@ -634,7 +634,7 @@ func void Info_Thorus_Give1000Ore_Info()
 };
 
 // ************************************************************
-// Brief für Magier
+// 					Brief für Magier
 // ************************************************************
 
 instance Info_Thorus_LetterForMages(C_INFO)
@@ -681,7 +681,7 @@ func void Info_Thorus_LetterForMages_Info()
 };
 
 // ************************************************************
-// Bereit für Gomez !!!
+// 					Bereit für Gomez !!!
 // ************************************************************
 
 instance Info_Thorus_ReadyForGomez(C_INFO)
@@ -736,7 +736,7 @@ func void Info_Thorus_ReadyForGomez_Info()
 };
 
 // ************************************************************
-// KRAUTBOTE von Kalom
+// 					KRAUTBOTE von Kalom
 // ************************************************************
 
 instance Info_Thorus_Krautbote(C_INFO)
@@ -793,7 +793,7 @@ func void Info_Thorus_Krautbote_Info()
 };
 
 // ************************************************************
-// SIEGEL der KdW
+// 					SIEGEL der KdW
 // ************************************************************
 	var int thorus_Amulettgezeigt;
 // ************************************************************
@@ -849,7 +849,7 @@ func void Info_Thorus_KdWSiegel_Info()
 };
 
 // ************************************************************
-// Habs GESCHAFFT
+// 					Habs GESCHAFFT
 // ************************************************************
 
 instance Info_Thorus_SttGeschafft(C_INFO)
@@ -892,7 +892,7 @@ func void Info_Thorus_SttGeschafft_Info()
 //////////////////////////////////////////////////
 
 // ************************************************************
-// PERM2
+// 					PERM2
 // ************************************************************
 
 instance Info_Thorus_PERM2(C_INFO)
@@ -1130,7 +1130,7 @@ func void GRD_200_Thorus_WANNABEMAGE_Info()
 	AI_ContinueRoutine(Corristo);
 };  
 //---------------------------------------------------------------
-//	 STR + DEX
+//	 						STR + DEX
 //---------------------------------------------------------------
 instance GRD_200_Thorus_Teach(C_INFO)
 {
@@ -1170,15 +1170,10 @@ func void GRD_200_Thorus_Teach_Info()
 		log_thorustrain = TRUE;
 	};
 	Info_ClearChoices(GRD_200_Thorus_Teach);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"DIALOG_BACK									",GRD_200_Thorus_Teach_BACK);
 	Info_AddChoice(GRD_200_Thorus_Teach,DIALOG_BACK ,GRD_200_Thorus_Teach_BACK);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)		",GRD_200_Thorus_Teach_STR_5);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),GRD_200_Thorus_Teach_STR_5);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)		",GRD_200_Thorus_Teach_STR_1);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),GRD_200_Thorus_Teach_STR_1);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",GRD_200_Thorus_Teach_DEX_5);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),GRD_200_Thorus_Teach_DEX_5);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)	",GRD_200_Thorus_Teach_DEX_1);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),GRD_200_Thorus_Teach_DEX_1);
 };
 
@@ -1192,15 +1187,10 @@ func void GRD_200_Thorus_Teach_STR_1()
 {
 	B_BuyAttributePoints(other,ATR_STRENGTH, LPCOST_ATTRIBUTE_STRENGTH);
 	Info_ClearChoices(GRD_200_Thorus_Teach);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"DIALOG_BACK									",GRD_200_Thorus_Teach_BACK);
 	Info_AddChoice(GRD_200_Thorus_Teach,DIALOG_BACK ,GRD_200_Thorus_Teach_BACK);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)		",GRD_200_Thorus_Teach_STR_5);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),GRD_200_Thorus_Teach_STR_5);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)		",GRD_200_Thorus_Teach_STR_1);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),GRD_200_Thorus_Teach_STR_1);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",GRD_200_Thorus_Teach_DEX_5);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),GRD_200_Thorus_Teach_DEX_5);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)	",GRD_200_Thorus_Teach_DEX_1);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),GRD_200_Thorus_Teach_DEX_1);
 };
 
@@ -1208,15 +1198,10 @@ func void GRD_200_Thorus_Teach_STR_5()
 {
 	B_BuyAttributePoints(other,ATR_STRENGTH, 5*LPCOST_ATTRIBUTE_STRENGTH);
 	Info_ClearChoices(GRD_200_Thorus_Teach);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"DIALOG_BACK									",GRD_200_Thorus_Teach_BACK);
 	Info_AddChoice(GRD_200_Thorus_Teach,DIALOG_BACK ,GRD_200_Thorus_Teach_BACK);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)		",GRD_200_Thorus_Teach_STR_5);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),GRD_200_Thorus_Teach_STR_5);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)		",GRD_200_Thorus_Teach_STR_1);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),GRD_200_Thorus_Teach_STR_1);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",GRD_200_Thorus_Teach_DEX_5);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),GRD_200_Thorus_Teach_DEX_5);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)	",GRD_200_Thorus_Teach_DEX_1);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),GRD_200_Thorus_Teach_DEX_1);
 };
 
@@ -1224,15 +1209,10 @@ func void GRD_200_Thorus_Teach_DEX_1()
 {
 	B_BuyAttributePoints(other,ATR_DEXTERITY,LPCOST_ATTRIBUTE_DEXTERITY);
 	Info_ClearChoices(GRD_200_Thorus_Teach);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"DIALOG_BACK									",GRD_200_Thorus_Teach_BACK);
 	Info_AddChoice(GRD_200_Thorus_Teach,DIALOG_BACK ,GRD_200_Thorus_Teach_BACK);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)		",GRD_200_Thorus_Teach_STR_5);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),GRD_200_Thorus_Teach_STR_5);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)		",GRD_200_Thorus_Teach_STR_1);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),GRD_200_Thorus_Teach_STR_1);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",GRD_200_Thorus_Teach_DEX_5);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),GRD_200_Thorus_Teach_DEX_5);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)	",GRD_200_Thorus_Teach_DEX_1);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),GRD_200_Thorus_Teach_DEX_1);
 };
 
@@ -1240,19 +1220,14 @@ func void GRD_200_Thorus_Teach_DEX_5()
 {
 	B_BuyAttributePoints(other,ATR_DEXTERITY, 5*LPCOST_ATTRIBUTE_DEXTERITY);
 	Info_ClearChoices(GRD_200_Thorus_Teach);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"DIALOG_BACK									",GRD_200_Thorus_Teach_BACK);
 	Info_AddChoice(GRD_200_Thorus_Teach,DIALOG_BACK ,GRD_200_Thorus_Teach_BACK);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)		",GRD_200_Thorus_Teach_STR_5);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),GRD_200_Thorus_Teach_STR_5);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)		",GRD_200_Thorus_Teach_STR_1);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),GRD_200_Thorus_Teach_STR_1);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",GRD_200_Thorus_Teach_DEX_5);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),GRD_200_Thorus_Teach_DEX_5);
-//	Info_AddChoice(GRD_200_Thorus_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)	",GRD_200_Thorus_Teach_DEX_1);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),GRD_200_Thorus_Teach_DEX_1);
 };
 //-------------------------------------------------------------------------
-// ZWEIHANDKAMPF LERNEN STUFE 1
+//							ZWEIHANDKAMPF LERNEN STUFE 1
 //-------------------------------------------------------------------------
 instance GRD_200_Thorus_ZWEIHAND1(C_INFO)
 {
@@ -1314,7 +1289,7 @@ func void GRD_200_Thorus_ZWEIHAND1_Info()
 	};
 };  
 //-------------------------------------------------------------------------
-// ZWEIHANDKAMPF LERNEN STUFE 2
+//							ZWEIHANDKAMPF LERNEN STUFE 2
 //-------------------------------------------------------------------------
 instance GRD_200_Thorus_ZWEIHAND2(C_INFO)
 {
@@ -1369,6 +1344,6 @@ func void GRD_200_Thorus_ZWEIHAND2_Info()
 //		AI_Output(self,other,"GRD_200_Thorus_ZWEIHAND2_Info_09_09"); //The key to success is varying your stances and changing positions.
 //		AI_Output(self,other,"GRD_200_Thorus_ZWEIHAND2_Info_09_09"); //Abwechslung in den Kampfbewegungen und Positionswechsel sind der Schlüssel zum Sieg.
 		AI_Output(self,other,"GRD_200_Thorus_ZWEIHAND2_Info_09_09"); //Klíčem k úspěchu je měnit postoje a polohy.
-		GRD_200_Thorus_ZWEIHAND2.permanent = 0;
+		GRD_200_Thorus_ZWEIHAND2.permanent = 0 ;
 	};
 };  

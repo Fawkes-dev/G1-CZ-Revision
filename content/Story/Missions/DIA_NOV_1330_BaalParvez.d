@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+//						 EXIT 
 // **************************************************
 
 instance DIA_BaalParvez_EXIT(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_BaalParvez_EXIT_Info()
 };
 
 // **************************************************
-// Erste Begrüssung
+//					Erste Begrüssung
 // **************************************************
 
 instance DIA_BaalParvez_Greet(C_INFO)
@@ -55,7 +55,7 @@ func void DIA_BaalParvez_Greet_Info()
 };
 
 // **************************************************
-// Rechter Weg
+//					Rechter Weg
 // **************************************************
 
 instance DIA_BaalParvez_RightWay(C_INFO)
@@ -101,7 +101,7 @@ func void DIA_BaalParvez_RightWay_Info()
 };
 
 // **************************************************
-// Vorteile für mich
+//					Vorteile für mich
 // **************************************************
 
 instance DIA_BaalParvez_MyAdvantage(C_INFO)
@@ -147,7 +147,7 @@ func void DIA_BaalParvez_MyAdvantage_Info()
 };
 
 // **************************************************
-// Schläfer
+//					Schläfer
 // **************************************************
 
 instance DIA_BaalParvez_Sleeper(C_INFO)
@@ -193,7 +193,7 @@ func void DIA_BaalParvez_Sleeper_Info()
 };
 
 // **************************************************
-// Was hat Schläfer zu euch gesagt?
+//			Was hat Schläfer zu euch gesagt?
 // **************************************************
 
 instance DIA_BaalParvez_SleeperSaid(C_INFO)
@@ -236,7 +236,7 @@ func void DIA_BaalParvez_SleeperSaid_Info()
 };
 
 // **************************************************
-// Erzähl mir von der MAgie des Schläfers
+//		Erzähl mir von der MAgie des Schläfers
 // **************************************************
 
 instance DIA_BaalParvez_PSIMagic(C_INFO)
@@ -273,7 +273,7 @@ func void DIA_BaalParvez_PSIMagic_Info()
 };
 
 // **************************************************
-// GotoNewcamp
+//					GotoNewcamp
 // **************************************************
 	var int BaalParvez_GotoPSI_Day;
 // **************************************************
@@ -334,7 +334,7 @@ func void DIA_BaalParvez_GotoPSI_Info()
 };
 
 // **************************************************
-// AM PSICAMP ANGEKOMMEN
+//				AM PSICAMP ANGEKOMMEN
 // **************************************************
 
 instance DIA_BaalParvez_AtPSI(C_INFO)
@@ -377,7 +377,7 @@ func void DIA_BaalParvez_AtPSI_Info()
 	AI_Output(self,other,"DIA_BaalParvez_AtPSI_10_02"); //Zeptej se na Cora Kaloma. Stará se o novice a žáky.
 //	AI_Output(self,other,"DIA_BaalParvez_AtPSI_10_03"); //I'll go back to the Old Camp - there are still many infidels who need to be guided to the right path.
 //	AI_Output(self,other,"DIA_BaalParvez_AtPSI_10_03"); //Ich gehe zurück ins alte Lager - es gibt noch viele Unwissende, die auf den richtigen Weg gebracht werden müssen.
-	AI_Output(self,other,"DIA_BaalParvez_AtPSI_10_03"); //Já se vrátím do Starého tábora - je tam pořád dost nevěrců, kteří potřebují navést na správnou cestu.
+	AI_Output(self,other,"DIA_BaalParvez_AtPSI_10_03"); //Já se vrátím do Starého tábora - je tam pořád dost nevěrců, kteří potřebují navést na správnou cestu
 //	AI_Output(other,self,"DIA_BaalParvez_AtPSI_15_04"); //Good luck.
 //	AI_Output(other,self,"DIA_BaalParvez_AtPSI_15_04"); //Viel Glück.
 	AI_Output(other,self,"DIA_BaalParvez_AtPSI_15_04"); //Hodně štěstí.

@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_Guy_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Guy_Exit_Info()
 };
 
 // **************************************************
-// Erstes Mal aufkreuzen
+// 				Erstes Mal aufkreuzen
 // **************************************************
 
 instance DIA_Guy_Hello(C_INFO)
@@ -72,7 +72,7 @@ func void DIA_Guy_Hello_Info()
 };
 
 // **************************************************
-// Advantages OC
+// 				Advantages OC
 // **************************************************
 
 instance DIA_Guy_AdOC(C_INFO)
@@ -109,13 +109,13 @@ func void DIA_Guy_AdOC_Info()
 
 	Info_ClearChoices(DIA_Guy_AdOC);
 //	Info_AddChoice(DIA_Guy_AdOC,"I think I've heard enough about the Old Camp.",DIA_Guy_AdOC_BACK);
-//	Info_AddChoice(DIA_Guy_AdOC," "Ich denke, ich hab' genug über's alte Lager gehört..." ",DIA_Guy_AdOC_BACK);
+//	Info_AddChoice(DIA_Guy_AdOC,"Ich denke, ich hab' genug über's alte Lager gehört...",DIA_Guy_AdOC_BACK);
 	Info_AddChoice(DIA_Guy_AdOC,"Myslím, že jsem o Starém táboře slyšel dost.",DIA_Guy_AdOC_BACK);
 //	Info_AddChoice(DIA_Guy_AdOC,"What goods are considered precious here?",DIA_Guy_AdOC_Warez);
-//	Info_AddChoice(DIA_Guy_AdOC," "Was sind hier wertvolle Waren?"			",DIA_Guy_AdOC_Warez);
+//	Info_AddChoice(DIA_Guy_AdOC,"Was sind hier wertvolle Waren?",DIA_Guy_AdOC_Warez);
 	Info_AddChoice(DIA_Guy_AdOC,"Jaké zboží je tu obzvlášť vzácné?",DIA_Guy_AdOC_Warez);
 //	Info_AddChoice(DIA_Guy_AdOC,"And what if two people fight each other who both pay protection money?",DIA_Guy_AdOC_Protection);
-//	Info_AddChoice(DIA_Guy_AdOC," "Und was ist, wenn zwei Leute kämpfen, die beide Schutzgeld zahlen?"			",DIA_Guy_AdOC_Protection);
+//	Info_AddChoice(DIA_Guy_AdOC,"Und was ist, wenn zwei Leute kämpfen, die beide Schutzgeld zahlen?",DIA_Guy_AdOC_Protection);
 	Info_AddChoice(DIA_Guy_AdOC,"A co když se do sebe pustí dva lidé, kteří oba platí peníze za ochranu?",DIA_Guy_AdOC_Protection);
 }; 
 
@@ -160,7 +160,7 @@ func void DIA_Guy_AdOC_Protection()
 };
 
 // **************************************************
-// Advantages NewCamp
+// 				Advantages NewCamp
 // **************************************************
 
 instance DIA_Guy_AdNC(C_INFO)
@@ -203,7 +203,7 @@ func void DIA_Guy_AdNC_Info()
 }; 
 
 // **************************************************
-// Advantages ST
+// 				Advantages ST
 // **************************************************
 
 instance DIA_Guy_AdST(C_INFO)
@@ -246,7 +246,7 @@ func void DIA_Guy_AdST_Info()
 };
 
 // **************************************************
-// Welche Hütte ist meine
+// 				Welche Hütte ist meine
 // **************************************************
 
 instance DIA_Guy_MyOwnHut(C_INFO)

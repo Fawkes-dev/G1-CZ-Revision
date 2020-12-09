@@ -1,5 +1,5 @@
 // **************************************************
-// EXIT 
+//						EXIT 
 // **************************************************
 
 instance DIA_Harlok_Exit(C_INFO)
@@ -24,7 +24,7 @@ func void DIA_Harlok_Exit_Info()
 };
 
 // **************************************************
-// Harlok abholen
+//				Harlok abholen
 // **************************************************
 
 instance DIA_Harlok_FetchHarlok(C_INFO)
@@ -56,13 +56,12 @@ func void DIA_Harlok_FetchHarlok_Info()
 //	AI_Output(self,other,"DIA_Harlok_FetchHarlok_01_01"); //Was?
 	AI_Output(self,other,"DIA_Harlok_FetchHarlok_01_01"); //Cože?
 	Info_ClearChoices(DIA_Harlok_FetchHarlok);
-//	Info_Addchoice (DIA_Harlok_FetchHarlok,"DIALOG_BACK															",DIA_Harlok_FetchHarlok_BACK);
 	Info_Addchoice (DIA_Harlok_FetchHarlok,DIALOG_BACK ,DIA_Harlok_FetchHarlok_BACK);
 //	Info_Addchoice (DIA_Harlok_FetchHarlok,"Get your arse to the weed mashers or you'll be for it. ",DIA_Harlok_FetchHarlok_OrElse);
 //	Info_Addchoice (DIA_Harlok_FetchHarlok,"Schwing deinen Hintern zu den Krautstampfern, oder es gibt saures.",DIA_Harlok_FetchHarlok_OrElse);
 	Info_Addchoice (DIA_Harlok_FetchHarlok,"Pohni svým zadkem k mísičům drogy, nebo uvidíš.",DIA_Harlok_FetchHarlok_OrElse);
 //	Info_Addchoice (DIA_Harlok_FetchHarlok,"I'm here to remind you that you're to take over from him.",DIA_Harlok_FetchHarlok_Please);
-//	Info_Addchoice (DIA_Harlok_FetchHarlok,""Ich soll dich daran erinnern, dass du ihn ablösen sollst."			",DIA_Harlok_FetchHarlok_Please);
+//	Info_Addchoice (DIA_Harlok_FetchHarlok,"Ich soll dich daran erinnern, dass du ihn ablösen sollst.",DIA_Harlok_FetchHarlok_Please);
 	Info_Addchoice (DIA_Harlok_FetchHarlok,"Mám ti připomenout, že ho máš vystřídat.",DIA_Harlok_FetchHarlok_Please);
 };
 
@@ -97,7 +96,7 @@ func int DIA_Harlok_FetchHarlok_BACK()
 };
 
 // **************************************************
-// Harlok NOCHMAL überzeugen
+//				Harlok NOCHMAL überzeugen
 // **************************************************
 
 instance DIA_Harlok_HarlokAgain(C_INFO)
@@ -135,7 +134,7 @@ func void DIA_Harlok_HarlokAgain_Info()
 };
 
 // **************************************************
-// Harlok schicken (nach Aufs-Maul)
+//				Harlok schicken (nach Aufs-Maul)
 // **************************************************
 
 instance DIA_Harlok_SendHarlok(C_INFO)
@@ -188,7 +187,7 @@ func void DIA_Harlok_SendHarlok_Info()
 };
 
 // **************************************************
-// Harlok REFUSE TALK - PERM
+//			Harlok REFUSE TALK - PERM
 // **************************************************
 
 instance DIA_Harlok_Angry(C_INFO)

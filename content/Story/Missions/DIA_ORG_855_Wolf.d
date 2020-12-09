@@ -1,5 +1,5 @@
 //****************************************
-// EXIT
+//					EXIT
 //****************************************
 
 instance DIA_ORG_855_Wolf_Exit(C_INFO)
@@ -24,7 +24,7 @@ func void DIA_ORG_855_Wolf_Exit_Info()
 };
 
 //****************************************
-// Hallo
+//					Hallo
 //****************************************
 
 instance DIA_Wolf_Hello(C_INFO)
@@ -59,7 +59,7 @@ func void DIA_Wolf_Hello_Info()
 };
 
 //****************************************
-// Bin ORG!
+//				Bin ORG!
 //****************************************
 
 instance DIA_Wolf_GreetORG(C_INFO)
@@ -88,7 +88,7 @@ func void DIA_Wolf_GreetORG_Info()
 };
 
 //****************************************
-// TRADE
+//				TRADE
 //****************************************
 
 instance Org_855_Wolf_TRADE(C_INFO)
@@ -119,7 +119,7 @@ func void Org_855_Wolf_TRADE_Info()
 };
 
 //****************************************
-// Wo Jäger
+//				Wo Jäger
 //****************************************
 
 instance Org_855_Wolf_WhereHunter(C_INFO)
@@ -153,7 +153,7 @@ func void Org_855_Wolf_WhereHunter_Info()
 };
 
 //****************************************
-// Sell Armor
+//				Sell Armor
 //****************************************
 
 instance DIA_Wolf_SellArmor(C_INFO)
@@ -190,11 +190,8 @@ func void DIA_Wolf_SellArmor_Info()
 		AI_Output(self,other,"DIA_Wolf_SellArmor_09_01"); //Teď když jsi jedním z nás, můžu ti jednu prodat.
 
 		Info_ClearChoices(DIA_Wolf_SellArmor);
-//		Info_Addchoice (DIA_Wolf_SellArmor,"DIALOG_BACK														",DIA_Wolf_SellArmor_BACK);
 		Info_Addchoice (DIA_Wolf_SellArmor,DIALOG_BACK ,DIA_Wolf_SellArmor_BACK);
-//		Info_Addchoice (DIA_Wolf_SellArmor,"B_BuildBuyArmorString(NAME_WolfBandits,VALUE_ORG_ARMOR_M)",DIA_Wolf_SellArmor_M);
 		Info_Addchoice (DIA_Wolf_SellArmor,B_BuildBuyArmorString(NAME_WolfBandits,VALUE_ORG_ARMOR_M),DIA_Wolf_SellArmor_M);
-//		Info_Addchoice (DIA_Wolf_SellArmor,"B_BuildBuyArmorString(NAME_WolfHeavyBandits,VALUE_ORG_ARMOR_H)		",DIA_Wolf_SellArmor_H);
 		Info_Addchoice (DIA_Wolf_SellArmor,B_BuildBuyArmorString(NAME_WolfHeavyBandits,VALUE_ORG_ARMOR_H),DIA_Wolf_SellArmor_H);
 	}
 	else
@@ -368,7 +365,7 @@ instance ORG_855_Wolf_TRAINAGAIN(C_INFO)
 	important = 0;
 	permanent = 0;
 //	description = B_BuildLearnString(NAME_LearnBow_2, LPCOST_TALENT_BOW_2,50); 
-//	description = B_BuildLearnString(NAME_LearnBow_2,	LPCOST_TALENT_BOW_2,50); 
+//	description = B_BuildLearnString(NAME_LearnBow_2, LPCOST_TALENT_BOW_2,50); 
 	description = B_BuildLearnString(NAME_LearnBow_2,LPCOST_TALENT_BOW_2,50); 
 };
 
@@ -408,7 +405,7 @@ func void ORG_855_Wolf_TRAINAGAIN_Info()
 	};
 }; 
 //---------------------------------------------------------------
-//	  DEX
+//	 					 DEX
 //---------------------------------------------------------------
 instance ORG_855_Wolf_Teach(C_INFO)
 {
@@ -449,11 +446,8 @@ func void ORG_855_Wolf_Teach_Info()
 	};
 
 	Info_ClearChoices(ORG_855_Wolf_Teach);
-//	Info_AddChoice(ORG_855_Wolf_Teach,"DIALOG_BACK									",ORG_855_Wolf_Teach_BACK);
 	Info_AddChoice(ORG_855_Wolf_Teach,DIALOG_BACK ,ORG_855_Wolf_Teach_BACK);
-//	Info_AddChoice(ORG_855_Wolf_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",ORG_855_Wolf_Teach_DEX_5);
 	Info_AddChoice(ORG_855_Wolf_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),ORG_855_Wolf_Teach_DEX_5);
-//	Info_AddChoice(ORG_855_Wolf_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)",ORG_855_Wolf_Teach_DEX_1);
 	Info_AddChoice(ORG_855_Wolf_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),ORG_855_Wolf_Teach_DEX_1);
 };
 
@@ -466,11 +460,8 @@ func void ORG_855_Wolf_Teach_DEX_1()
 {
 	B_BuyAttributePoints(other,ATR_DEXTERITY, LPCOST_ATTRIBUTE_DEXTERITY);
 	Info_ClearChoices(ORG_855_Wolf_Teach);
-//	Info_AddChoice(ORG_855_Wolf_Teach,"DIALOG_BACK									",ORG_855_Wolf_Teach_BACK);
 	Info_AddChoice(ORG_855_Wolf_Teach,DIALOG_BACK ,ORG_855_Wolf_Teach_BACK);
-//	Info_AddChoice(ORG_855_Wolf_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",ORG_855_Wolf_Teach_DEX_5);
 	Info_AddChoice(ORG_855_Wolf_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),ORG_855_Wolf_Teach_DEX_5);
-//	Info_AddChoice(ORG_855_Wolf_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)",ORG_855_Wolf_Teach_DEX_1);
 	Info_AddChoice(ORG_855_Wolf_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),ORG_855_Wolf_Teach_DEX_1);
 };
 
@@ -478,11 +469,8 @@ func void ORG_855_Wolf_Teach_DEX_5()
 {
 	B_BuyAttributePoints(other,ATR_DEXTERITY, 5*LPCOST_ATTRIBUTE_DEXTERITY);
 	Info_ClearChoices(ORG_855_Wolf_Teach);
-//	Info_AddChoice(ORG_855_Wolf_Teach,"DIALOG_BACK									",ORG_855_Wolf_Teach_BACK);
 	Info_AddChoice(ORG_855_Wolf_Teach,DIALOG_BACK ,ORG_855_Wolf_Teach_BACK);
-//	Info_AddChoice(ORG_855_Wolf_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)	",ORG_855_Wolf_Teach_DEX_5);
 	Info_AddChoice(ORG_855_Wolf_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),ORG_855_Wolf_Teach_DEX_5);
-//	Info_AddChoice(ORG_855_Wolf_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)",ORG_855_Wolf_Teach_DEX_1);
 	Info_AddChoice(ORG_855_Wolf_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),ORG_855_Wolf_Teach_DEX_1);
 };
 
@@ -495,7 +483,7 @@ func void ORG_855_Wolf_Teach_DEX_5()
 //#####################################################################
 
 //---------------------------------------------------------------------
-// Info GOOD
+//	Info GOOD
 //---------------------------------------------------------------------
 instance Info_Wolf_GOOD(C_INFO)
 {
@@ -537,7 +525,7 @@ func void Info_Wolf_GOOD_Info()
 };
 
 //---------------------------------------------------------------------
-// Info SPEAK
+//	Info SPEAK
 //---------------------------------------------------------------------
 instance Info_Wolf_SPEAK(C_INFO)
 {
@@ -588,7 +576,7 @@ func void Info_Wolf_SPEAK_Info()
 };
 
 //---------------------------------------------------------------------
-// Info SKIN
+//	Info SKIN
 //---------------------------------------------------------------------
 instance Info_Wolf_SKIN(C_INFO)
 {
@@ -645,7 +633,7 @@ func void Info_Wolf_SKIN_Info()
 };
 
 //---------------------------------------------------------------------
-// Info PROFIT
+//	Info PROFIT
 //---------------------------------------------------------------------
 instance Info_Wolf_PROFIT(C_INFO)
 {
@@ -678,7 +666,7 @@ func void Info_Wolf_PROFIT_Info()
 };
 
 //---------------------------------------------------------------------
-// Info MCPLATESFEW
+//	Info MCPLATESFEW
 //---------------------------------------------------------------------
 instance Info_Wolf_MCPLATESFEW(C_INFO)
 {
@@ -716,7 +704,7 @@ func void Info_Wolf_MCPLATESFEW_Info()
 };
 
 //---------------------------------------------------------------------
-// Info MCPLATESENOUGH
+//	Info MCPLATESENOUGH
 //---------------------------------------------------------------------
 instance Info_Wolf_MCPLATESENOUGH(C_INFO)
 {
@@ -769,7 +757,7 @@ func void Info_Wolf_MCPLATESENOUGH_Info()
 };
 
 //---------------------------------------------------------------------
-// Info ARMORINWORK
+//	Info ARMORINWORK
 //---------------------------------------------------------------------
 instance Info_Wolf_ARMORINWORK(C_INFO)
 {
@@ -807,7 +795,7 @@ func void Info_Wolf_ARMORINWORK_Info()
 };
 
 //---------------------------------------------------------------------
-// Info ARMORFINISHED
+//	Info ARMORFINISHED
 //---------------------------------------------------------------------
 instance Info_Wolf_ARMORFINISHED(C_INFO)
 {

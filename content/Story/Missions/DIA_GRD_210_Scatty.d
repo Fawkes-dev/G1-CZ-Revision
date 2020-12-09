@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_Scatty_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Scatty_Exit_Info()
 };
 
 // **************************************************
-//  Was machst du hier 
+// 					 Was machst du hier 
 // **************************************************
 
 instance DIA_Scatty_WhatDoYouDo(C_INFO)
@@ -54,7 +54,7 @@ func void DIA_Scatty_WhatDoYouDo_Info()
 };
 
 // **************************************************
-//  Join OC
+// 					 Join OC
 // **************************************************
 	var int Scatty_ChargeKirgo;
 	var int Scatty_ChargeKharim;
@@ -108,7 +108,7 @@ func void DIA_Scatty_JoinOC_Info()
 };
 
 // **************************************************
-//  KIRGO SUCCESS
+// 					 KIRGO SUCCESS
 // **************************************************
 
 instance DIA_Scatty_KirgoSuccess(C_INFO)
@@ -169,7 +169,7 @@ func void DIA_Scatty_KirgoSuccess_Info()
 };
 
 // **************************************************
-//  KHARIM SUCCESS
+// 					 KHARIM SUCCESS
 // **************************************************
 
 instance DIA_Scatty_KHARIMSuccess(C_INFO)
@@ -240,7 +240,7 @@ func void DIA_Scatty_KHARIMSuccess_Info()
 };
 
 // **************************************************
-//  Warum andere Lager Kämpfer
+// 				 Warum andere Lager Kämpfer
 // **************************************************
 
 instance DIA_Scatty_OtherCamps(C_INFO)
@@ -280,7 +280,7 @@ func void DIA_Scatty_OtherCamps_Info()
 };
 
 // **************************************************
-// Will Wetten
+// 					Will Wetten
 // **************************************************
 
 instance DIA_Scatty_WannaBet(C_INFO)
@@ -318,7 +318,7 @@ func void DIA_Scatty_WannaBet_Info()
 };
 
 // **************************************************
-// Will Kämpfen
+// 					Will Kämpfen
 // **************************************************
 
 instance DIA_Scatty_WannaFight(C_INFO)
@@ -335,10 +335,10 @@ instance DIA_Scatty_WannaFight(C_INFO)
 
 func int DIA_Scatty_WannaFight_Condition()
 {
-// if (Npc_KnowsInfo(hero,DIA_Scatty_WhatDoYouDo))
-// {
-// return 1;
-// };
+//	if (Npc_KnowsInfo(hero,DIA_Scatty_WhatDoYouDo))
+//	{
+//		return 1;
+//	};
 };
 
 func void DIA_Scatty_WannaFight_Info()
@@ -355,7 +355,7 @@ func void DIA_Scatty_WannaFight_Info()
 };
 
 // **************************************************
-// TRAIN
+// 					TRAIN
 // **************************************************
 
 instance DIA_Scatty_TRAIN(C_INFO)
@@ -396,16 +396,13 @@ func void DIA_Scatty_TRAIN_Info()
 	AI_Output(self,other,"DIA_Scatty_TRAIN_01_01"); //Jistě, ale ne pro zábavu. Jestli chceš, abych tě cvičil, musíš mi za to zaplatit.
 
 	Info_ClearChoices(DIA_Scatty_TRAIN);
-//	Info_AddChoice(DIA_Scatty_TRAIN,"DIALOG_BACK		",DIA_Scatty_TRAIN_BACK);
 	Info_AddChoice(DIA_Scatty_TRAIN,DIALOG_BACK ,DIA_Scatty_TRAIN_BACK);
 	if (Npc_GetTalentSkill(hero,NPC_TALENT_1H) == 1) 
 	{
-//		Info_AddChoice(DIA_Scatty_TRAIN,"B_BuildLearnString(NAME_Learn1h_2, LPCOST_TALENT_1H_2,150)	",DIA_Scatty_TRAIN_2h);
 		Info_AddChoice(DIA_Scatty_TRAIN,B_BuildLearnString(NAME_Learn1h_2, LPCOST_TALENT_1H_2,150),DIA_Scatty_TRAIN_2h);
 	};
 	if (Npc_GetTalentSkill(hero,NPC_TALENT_1H) == 0) 
 	{
-//		Info_AddChoice(DIA_Scatty_TRAIN,"B_BuildLearnString(NAME_Learn1h_1, LPCOST_TALENT_1H_1,50)	",DIA_Scatty_TRAIN_1h);
 		Info_AddChoice(DIA_Scatty_TRAIN,B_BuildLearnString(NAME_Learn1h_1, LPCOST_TALENT_1H_1,50),DIA_Scatty_TRAIN_1h);
 	};
 };

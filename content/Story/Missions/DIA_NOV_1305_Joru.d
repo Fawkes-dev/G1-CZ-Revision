@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_Joru_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Joru_Exit_Info()
 };
 
 // **************************************************
-// Was machst du?
+//					Was machst du?
 // **************************************************
 
 instance DIA_Joru_Greet(C_INFO)
@@ -66,7 +66,7 @@ func void DIA_Joru_Greet_Info()
 };
 
 // **************************************************
-// Tester
+//					Tester
 // **************************************************
 
 instance DIA_Joru_Tester(C_INFO)
@@ -106,7 +106,7 @@ func void DIA_Joru_Tester_Info()
 };
 
 // **************************************************
-// Schonmal Kontakt?
+//				Schonmal Kontakt?
 // **************************************************
 
 instance DIA_Joru_SleeperContact(C_INFO)
@@ -149,7 +149,7 @@ func void DIA_Joru_SleeperContact_Info()
 };
 
 // **************************************************
-// JOIN PSI
+//					JOIN PSI
 // **************************************************
 	var int Joru_BringJoints;
 // **************************************************
@@ -192,10 +192,10 @@ func void DIA_Joru_JoinPsi_Info()
 
 	Info_ClearChoices(DIA_Joru_JoinPsi);
 //	Info_AddChoice(DIA_Joru_JoinPsi,"No.",DIA_Joru_JoinPsi_Nein);
-//	Info_AddChoice(DIA_Joru_JoinPsi,""Nein."	",DIA_Joru_JoinPsi_Nein);
+//	Info_AddChoice(DIA_Joru_JoinPsi,"Nein.",DIA_Joru_JoinPsi_Nein);
 	Info_AddChoice(DIA_Joru_JoinPsi,"Ne.",DIA_Joru_JoinPsi_Nein);
 //	Info_AddChoice(DIA_Joru_JoinPsi,"Yes.",DIA_Joru_JoinPsi_Ja);
-//	Info_AddChoice(DIA_Joru_JoinPsi,""Ja."		",DIA_Joru_JoinPsi_Ja);
+//	Info_AddChoice(DIA_Joru_JoinPsi,"Ja.",DIA_Joru_JoinPsi_Ja);
 	Info_AddChoice(DIA_Joru_JoinPsi,"Ano.",DIA_Joru_JoinPsi_Ja);
 };
 
@@ -232,7 +232,7 @@ func void DIA_Joru_JoinPsi_Nein()
 };
 
 // **************************************************
-// SUCCESS
+//					SUCCESS
 // **************************************************
 
 instance DIA_Joru_JointsRunning(C_INFO)
@@ -284,7 +284,7 @@ func void DIA_Joru_JointsRunning_Info()
 };
 
 // **************************************************
-// Wie kann ich Gurus beeindrucken?
+//			Wie kann ich Gurus beeindrucken?
 // **************************************************
 	var int Joru_Tips;
 // **************************************************
@@ -351,7 +351,7 @@ func void DIA_Joru_ImpressGurus_Info()
 };
 
 // **************************************************
-// Woher Magie?
+//					Woher Magie?
 // **************************************************
 
 instance DIA_Joru_GetMagic(C_INFO)

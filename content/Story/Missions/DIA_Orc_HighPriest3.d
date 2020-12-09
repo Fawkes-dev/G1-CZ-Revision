@@ -31,8 +31,8 @@ func void Info_HighPriest3_Info()
 	AI_Output(other,self,"Info_HighPriest3_15_03"); //Nejdřív pošlu na cestu já tebe, ty zatuchlá utkvělá představo ráje!
 
 //	B_LogEntry(CH4_EnterTemple,"Varrag-Unhilqt, one of the five Orc shamans of the Sleeper, is right in front of me. Only one of us will leave this chamber alive!");
-//	B_LogEntry(CH4_EnterTemple,"Varrag-Kasorg, ein weiterer der fünf Ork-Schamanen, wird nun seine erbärmliche Existenz mir zu Füßen beenden!");
-	B_LogEntry(CH4_EnterTemple,"Do chrámu však vede i jiná cesta. Budu k tomu muset použít figurku Spáče z posvátného sloupu skřetích šamanů. Ta otevře vrata chrámu.");
+//	B_LogEntry(CH4_EnterTemple,"Varrag-Unhilqt, einer der fünf Ork-Schamanen des Schläfers, steht vor mir. Nur einer von uns wird diese Kammer verlassen!");
+	B_LogEntry(CH4_EnterTemple,"Varrag-Unhilqt, jeden z pěti Spáčových šamanů, stojí přede mnou. Jen jeden z nás vyjde z této komnaty živý!");
 
 	AI_StopProcessInfos(self);
 

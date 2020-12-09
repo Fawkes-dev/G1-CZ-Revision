@@ -50,7 +50,7 @@ func void Info_Corristo_Intruder_Info()
 };
 
 //--------------------------------------------------------------------------
-// ÜBER DIE MAGIER
+// 							ÜBER DIE MAGIER
 //--------------------------------------------------------------------------
 instance KDF_402_Corristo_EXPLAINMAGE(C_INFO)
 {
@@ -89,7 +89,7 @@ func void KDF_402_Corristo_EXPLAINMAGE_Info()
 	AI_Output(self,other,"KDF_402_Corristo_EXPLAINMAGE_Info_14_04"); //Je to dar, který je naším trvalým břemenem. Úkolem, který určuje naše životy.
 };  
 //--------------------------------------------------------------------------
-// MAGIERAUFNAHME
+// 							MAGIERAUFNAHME
 //--------------------------------------------------------------------------
 instance KDF_402_Corristo_WANNBEKDF(C_INFO)
 {
@@ -148,7 +148,7 @@ func void KDF_402_Corristo_WANNBEKDF_Info()
 	};
 };
 //--------------------------------------------------------------------------
-// DIE PROBE 
+// 							DIE PROBE 
 //-------------------------------------------------------------------------- 
 instance KDF_402_Corristo_KDFTEST(C_INFO)
 {
@@ -184,7 +184,7 @@ func void KDF_402_Corristo_KDFTEST_Info()
 	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Ano.",KDF_402_Corristo_KDFTEST_JA); 
 //	Info_Addchoice (KDF_402_Corristo_KDFTEST,"No",KDF_402_Corristo_KDFTEST_NO); 
 //	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Nein",KDF_402_Corristo_KDFTEST_NO); 
-	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Ne.",KDF_402_Corristo_KDFTEST_NO); 
+	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Ne",KDF_402_Corristo_KDFTEST_NO); 
 
 };  
 func void KDF_402_Corristo_KDFTEST_JA()
@@ -282,7 +282,7 @@ func void KDF_402_Corristo_KDFTEST_GOMEZ()
 	Npc_ExchangeRoutine(self,"START");
 };
 //--------------------------------------------------------------------------
-// DIE PROBE 3
+// 							DIE PROBE 3
 //--------------------------------------------------------------------------
 func void KDF_402_Corristo_KDFTEST_FIGHT()
 {
@@ -306,7 +306,7 @@ func void KDF_402_Corristo_KDFTEST_DEMUT()
 //	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_DEMUT_Info_14_03"); //Du hast gut und recht geantwortet. Ich werde dich die Kunst der Magie lehren.
 	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_DEMUT_Info_14_03"); //Odpovídal jsi dobře a správně. Budu tě učit umění magie.
 //	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_DEMUT_Info_14_04"); //Follow me to the Hall of Magic, where you will take the ancient vow.
-//	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_DEMUT_Info_14_04"); //Folge mir nun zur Halle der Magie, wo du den alten Schwur leisten wirst. 
+//	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_DEMUT_Info_14_04"); //Folge mir nun zur Halle der Magie, wo du den alten Schwur leisten wirst.
 	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_DEMUT_Info_14_04"); //Následuj mě do Sálu magie, kde složíš prastarý slib.
 
 	AI_StopProcessInfos(self);
@@ -325,7 +325,7 @@ func void KDF_402_Corristo_KDFTEST_DISZIPLIN()
 //	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_DISZIPLIN_Info_14_03"); //Du hast gut und recht geantwortet. Ich werde dich die Kunst der Magie lehren.
 	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_DISZIPLIN_Info_14_03"); //Odpovídal jsi dobře a správně. Budu tě učit umění magie.
 //	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_DISZIPLIN_Info_14_04"); //Follow me to the Hall of Magic, where you will take the ancient vow.
-//	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_DISZIPLIN_Info_14_04"); //Folge mir nun zur Halle der Magie, wo du den alten Schwur leisten wirst. 
+//	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_DISZIPLIN_Info_14_04"); //Folge mir nun zur Halle der Magie, wo du den alten Schwur leisten wirst.
 	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_DISZIPLIN_Info_14_04"); //Následuj mě do Sálu magie, kde složíš prastarý slib.
 	Corristo_KDFAufnahme = 4;
 	AI_StopProcessInfos(self);
@@ -342,14 +342,14 @@ func void KDF_402_Corristo_KDFTEST_EHRFURCHT()
 //	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_EHRFURCHT_Info_14_03"); //Du hast gut und recht geantwortet. Ich werde dich die Kunst der Magie lehren.
 	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_EHRFURCHT_Info_14_03"); //Odpovídal jsi dobře a správně. Budu tě učit umění magie.
 //	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_EHRFURCHT_Info_14_04"); //Follow me to the Hall of Magic, where you will take the ancient vow.
-//	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_EHRFURCHT_Info_14_04"); //Folge mir nun zur Halle der Magie, wo du den alten Schwur leisten wirst. 
+//	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_EHRFURCHT_Info_14_04"); //Folge mir nun zur Halle der Magie, wo du den alten Schwur leisten wirst.
 	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_EHRFURCHT_Info_14_04"); //Následuj mě do Sálu magie, kde složíš prastarý slib.
 	Corristo_KDFAufnahme = 4;
 	AI_StopProcessInfos(self);
 	B_Story_Feueraufnahme();
 };
 //--------------------------------------------------------------------------
-// DAS AUFNAHMERITUAL
+// 							DAS AUFNAHMERITUAL
 //--------------------------------------------------------------------------
 instance KDF_402_Corristo_AUFNAHME(C_INFO)
 {
@@ -458,7 +458,7 @@ func void KDF_402_Corristo_ROBE_Info()
 	B_LogEntry(GE_TeacherOC,"Corristo mě může naučit magické KRUHY a zvýšit moji magickou energii. Obývá dům mágů Ohně."); 
 };
 //--------------------------------------------------------------------------
-// MANA KAUFEN
+// 							MANA KAUFEN
 //--------------------------------------------------------------------------
 // ***************************** INFOS ****************************************//
 
@@ -492,11 +492,8 @@ func void KDF_402_Corristo_MANA_Info()
 	AI_Output(self,other,"KDF_402_Corristo_MANA_Info_14_02"); //Můžu ti pomoci zvětšit tvoji sílu. Jak ji použiješ, je už tvoje věc.
 
 	Info_ClearChoices(KDF_402_Corristo_MANA);
-//	Info_AddChoice(KDF_402_Corristo_MANA,"DIALOG_BACK	",KDF_402_Corristo_MANA_BACK);
 	Info_AddChoice(KDF_402_Corristo_MANA,DIALOG_BACK ,KDF_402_Corristo_MANA_BACK);
-//	Info_AddChoice(KDF_402_Corristo_MANA,"B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0)		",KDF_402_Corristo_MANA_MAN_5);
 	Info_AddChoice(KDF_402_Corristo_MANA,B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0),KDF_402_Corristo_MANA_MAN_5);
-//	Info_AddChoice(KDF_402_Corristo_MANA,"B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0)		",KDF_402_Corristo_MANA_MAN_1);
 	Info_AddChoice(KDF_402_Corristo_MANA,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),KDF_402_Corristo_MANA_MAN_1);
 };  
 func void KDF_402_Corristo_MANA_BACK()
@@ -508,11 +505,8 @@ func void KDF_402_Corristo_MANA_MAN_1()
 {
 	B_BuyAttributePoints(other,ATR_MANA_MAX, LPCOST_ATTRIBUTE_MANA);
 	Info_ClearChoices(KDF_402_Corristo_MANA);
-//	Info_AddChoice(KDF_402_Corristo_MANA,"DIALOG_BACK	",KDF_402_Corristo_MANA_BACK);
 	Info_AddChoice(KDF_402_Corristo_MANA,DIALOG_BACK ,KDF_402_Corristo_MANA_BACK);
-//	Info_AddChoice(KDF_402_Corristo_MANA,"B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0)		",KDF_402_Corristo_MANA_MAN_5);
 	Info_AddChoice(KDF_402_Corristo_MANA,B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0),KDF_402_Corristo_MANA_MAN_5);
-//	Info_AddChoice(KDF_402_Corristo_MANA,"B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0)		",KDF_402_Corristo_MANA_MAN_1);
 	Info_AddChoice(KDF_402_Corristo_MANA,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),KDF_402_Corristo_MANA_MAN_1);
 
 };
@@ -521,16 +515,13 @@ func void KDF_402_Corristo_MANA_MAN_5()
 {
 	B_BuyAttributePoints(other,ATR_MANA_MAX, 5*LPCOST_ATTRIBUTE_MANA);
 	Info_ClearChoices(KDF_402_Corristo_MANA);
-//	Info_AddChoice(KDF_402_Corristo_MANA,"DIALOG_BACK	",KDF_402_Corristo_MANA_BACK);
 	Info_AddChoice(KDF_402_Corristo_MANA,DIALOG_BACK ,KDF_402_Corristo_MANA_BACK);
-//	Info_AddChoice(KDF_402_Corristo_MANA,"B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0)		",KDF_402_Corristo_MANA_MAN_5);
 	Info_AddChoice(KDF_402_Corristo_MANA, B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0),KDF_402_Corristo_MANA_MAN_5);
-//	Info_AddChoice(KDF_402_Corristo_MANA,"B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0)		",KDF_402_Corristo_MANA_MAN_1);
 	Info_AddChoice(KDF_402_Corristo_MANA,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),KDF_402_Corristo_MANA_MAN_1);
 
 };
 //--------------------------------------------------------------------------
-// ERLÄUTERUNG DER KREISE
+// 							ERLÄUTERUNG DER KREISE
 //--------------------------------------------------------------------------
 // ***************************** INFOS ****************************************//
 
@@ -559,16 +550,16 @@ func void KDF_402_Corristo_EXPLAINCIRCLES_Info()
 //	AI_Output(other,self,"KDF_402_Corristo_EXPLAINCIRCLES_Info_15_01"); //Erkläre mir das Wesen der magischen Kreise.
 	AI_Output(other,self,"KDF_402_Corristo_EXPLAINCIRCLES_Info_15_01"); //Vysvětli mi význam kouzelných Kruhů.
 //	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_02"); //Of course. The Circles symbolize your share of the magic.
-//	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_02"); //Natürlich. Die Kreise symbolisieren deinen Anteil an der magischen Macht.  
+//	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_02"); //Natürlich. Die Kreise symbolisieren deinen Anteil an der magischen Macht.
 	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_02"); //Jistě. Tyhle Kruhy znázorňují, že sdílíš kouzlo.
 //	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_03"); //They stand for knowledge, skill and the learning of new magic spells.
-//	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_03"); //Sie stehen für Wissen, Begabung und für das Erlernen neuer Zaubersprüche. 
+//	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_03"); //Sie stehen für Wissen, Begabung und für das Erlernen neuer Zaubersprüche.
 	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_03"); //Jsou tady pro vědění, dovednost a učení nových kouzelných zaříkávadel.
 //	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_04"); //You must pass through each Circle before you can join the next.
 //	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_04"); //Du wirst jeden Kreis durchlaufen, bis du in den nächsten aufgenommen werden kannst.
 	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_04"); //Aby ses mohl přidat k dalšímu Kruhu, musíš projít předchozím.
 //	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_05"); //Many hours of learning are required and you'll need much experience to reach the higher Circles.
-//	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_05"); //Es erfordert viele Lernstunden und es bedarf hoher Erfahrung, willst du die höheren Kreise erreichen. 
+//	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_05"); //Es erfordert viele Lernstunden und es bedarf hoher Erfahrung, willst du die höheren Kreise erreichen.
 	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_05"); //Vyžaduje to dlouhé učení a také budeš potřebovat získat spoustu zkušeností, než dosáhneš vyšších kruhů.
 //	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_06"); //But your efforts to reach them will be rewarded with new and powerful spells each time. However, the Circles of magic are more than that.
 //	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_06"); //Doch die Mühe, sie zu erlernen, wird jedes Mal mit neuen machtvollen Zaubern belohnt. Die Kreise der Magie sind aber noch mehr als das.
@@ -581,7 +572,7 @@ func void KDF_402_Corristo_EXPLAINCIRCLES_Info()
 	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_08"); //Abys porozuměl jejich moci, musíš poznat sám sebe.
 };  
 //--------------------------------------------------------------------------
-// DER ERSTE KREIS
+// 							DER ERSTE KREIS
 //--------------------------------------------------------------------------
 instance KDF_402_Corristo_KREIS1(C_INFO)
 {
@@ -623,10 +614,10 @@ func void KDF_402_Corristo_KREIS1_Info()
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS1_Info_14_04"); //Durch den Einsatz deiner eigenen magischen Energie, bist du in der Lage, den Zauber der Rune zu wirken.
 		AI_Output(self,other,"KDF_402_Corristo_KREIS1_Info_14_04"); //Spolu se svými vlastními kouzelnými silami budeš schopen využívat kouzlo run.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS1_Info_14_05"); //But in contrast to the magic scrolls, which are magic formulas as well, the magic power of the rune ensures that the structure of the spell endures.
-//		AI_Output(self,other,"KDF_402_Corristo_KREIS1_Info_14_05"); //Doch anders als Spruchrollen, die auch eine Zauberformel sind, sorgt die magische Kraft, die der Rune innewohnt dafür, dass die Struktur des Zaubers erhalten bleibt. 
+//		AI_Output(self,other,"KDF_402_Corristo_KREIS1_Info_14_05"); //Doch anders als Spruchrollen, die auch eine Zauberformel sind, sorgt die magische Kraft, die der Rune innewohnt dafür, dass die Struktur des Zaubers erhalten bleibt.
 		AI_Output(self,other,"KDF_402_Corristo_KREIS1_Info_14_05"); //Ale narozdíl od kouzelných svitků, které jsou také kouzelnými formulemi, magická síla run zajišťuje, že struktura zaříkávadla přetrvává.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS1_Info_14_06"); //Every rune is a source of magic power which you can fall back on anytime.
-//		AI_Output(self,other,"KDF_402_Corristo_KREIS1_Info_14_06"); //Jede Rune ist eine Quelle magischer Kraft, auf die du immer wieder zurückgreifen kannst.  
+//		AI_Output(self,other,"KDF_402_Corristo_KREIS1_Info_14_06"); //Jede Rune ist eine Quelle magischer Kraft, auf die du immer wieder zurückgreifen kannst.
 		AI_Output(self,other,"KDF_402_Corristo_KREIS1_Info_14_06"); //Každá runa je zdrojem magické síly, kterou můžeš kdykoliv zase zrušit.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS1_Info_14_07"); //Your own magic power is used up when you use a rune, just as with a spell scroll.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS1_Info_14_07"); //Deine eigene magische Kraft verbraucht sich beim Benutzen der Rune, wie bei einer Spruchrolle.
@@ -641,7 +632,7 @@ func void KDF_402_Corristo_KREIS1_Info()
 	};
 };  
 //---------------------------------------------------------------------
-// DER ZWEITE KREIS
+//						DER ZWEITE KREIS
 //---------------------------------------------------------------------
 instance KDF_402_Corristo_KREIS2(C_INFO)
 {
@@ -677,29 +668,29 @@ func void KDF_402_Corristo_KREIS2_Info()
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_02"); //Du hast das Verständnis der Runen gelernt. Nun ist es an der Zeit, dieses Verständnis zu vertiefen.
 		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_02"); //Naučil ses rozumět kouzelným znakům. Nadešel čas prohloubit toto porozumění.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_03"); //When you join the Second Circle you will learn the foundations of stronger battle spells, and above all the secret of healing.
-//		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_03"); //Mit dem zweiten Kreis lernst du die Grundsätze stärkerer Kampfzauber und vor allem das Geheimnis der Heilung. 
+//		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_03"); //Mit dem zweiten Kreis lernst du die Grundsätze stärkerer Kampfzauber und vor allem das Geheimnis der Heilung.
 		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_03"); //Jakmile se přidáš ke Druhému kruhu, naučíš se základům mocnějších bojových zaříkávadel a všem tajům ranhojičství.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_04"); //But you need to learn much if you want to recognize the true secrets of magic.
-//		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_04"); //Doch du musst noch viel lernen, willst du die tatsächlichen Geheimnisse der Magie ergründen. 
+//		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_04"); //Doch du musst noch viel lernen, willst du die tatsächlichen Geheimnisse der Magie ergründen.
 		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_04"); //Budeš se ale muset naučit ještě víc, jestli chceš poznat opravdová tajemství magie.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_05"); //You know that you can use every rune as often as you like until you've used up all of your own powers.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_05"); //Du weißt, dass du jede Rune solange einsetzen kannst, bis deine eigene Kraft verbraucht ist.
 		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_05"); //Víš, že každou runu můžeš používat jak často chceš, dokud nevyčerpáš své vlastní síly.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_06"); //But before you act, think about the point of your actions. You have obtained powers with which you may easily conjure up death and destruction.
-//		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_06"); //Aber frage dich, ob es sinnvoll ist. Du hast Macht verliehen bekommen, mit der es dir ein Leichtes ist, Tod und Verderben zu bringen.   
+//		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_06"); //Aber frage dich, ob es sinnvoll ist. Du hast Macht verliehen bekommen, mit der es dir ein Leichtes ist, Tod und Verderben zu bringen.
 		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_06"); //Než budeš jednat, rozmysli si cíl svého jednání. Nabyl jsi síly, která tě snadno může dovést k záhubě a zničení.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_07"); //But a true magician only uses magic when it is necessary.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_07"); //Doch der wahrhafte Magier zaubert nur dann, wenn es angebracht ist.
 		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_07"); //Opravdový kouzelník ale užívá kouzla jen tehdy, když je to nezbytné.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_08"); //Understand the situation, then you'll recognize the power of the runes.
-//		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_08"); //Erkenne die Situation, dann wirst du die Macht der Runen erkennen.   
+//		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_08"); //Erkenne die Situation, dann wirst du die Macht der Runen erkennen.
 		AI_Output(self,other,"KDF_402_Corristo_KREIS2_Info_14_08"); //Pokud porozumíš situaci, pak poznáš moc run.
 		KDF_402_Corristo_KREIS2.permanent = 0;
 	};
 
 };  
 //---------------------------------------------------------------------
-// DER DRITTE KREIS
+//						DER DRITTE KREIS
 //---------------------------------------------------------------------
 instance KDF_402_Corristo_KREIS3(C_INFO)
 {
@@ -731,13 +722,13 @@ func void KDF_402_Corristo_KREIS3_Info()
 	if (B_GiveSkill(other,NPC_TALENT_MAGE , 3, LPCOST_TALENT_MAGE_3))
 	{
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS3_Info_14_02"); //The Third Circle of Magic is one of the most important steps in the life of a magician. Once you've reached it, you cease to be a seeker.
-//		AI_Output(self,other,"KDF_402_Corristo_KREIS3_Info_14_02"); //Der dritte Kreis der Magie ist einer der wichtigsten Schritte im Leben eines Magiers. Nicht länger bist du ein Suchender. 
+//		AI_Output(self,other,"KDF_402_Corristo_KREIS3_Info_14_02"); //Der dritte Kreis der Magie ist einer der wichtigsten Schritte im Leben eines Magiers. Nicht länger bist du ein Suchender.
 		AI_Output(self,other,"KDF_402_Corristo_KREIS3_Info_14_02"); //Třetí kouzelný kruh je jedním z nejdůležitějších kroků v životě mága. Jakmile ho dosáhneš, přestáváš být hledačem.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS3_Info_14_03"); //You have already come far on the path of magic. You have learned to use the runes.
-//		AI_Output(self,other,"KDF_402_Corristo_KREIS3_Info_14_03"); //Du bist bereits ein Stück des magischen Weges gegangen. Du hast gelernt, die Runen zu nutzen. 
+//		AI_Output(self,other,"KDF_402_Corristo_KREIS3_Info_14_03"); //Du bist bereits ein Stück des magischen Weges gegangen. Du hast gelernt, die Runen zu nutzen.
 		AI_Output(self,other,"KDF_402_Corristo_KREIS3_Info_14_03"); //Došel jsi už po cestě magie opravdu daleko. Naučil ses používat kouzelné runy.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS3_Info_14_04"); //This knowledge is the foundation for your further path. Use the runes with deliberation.
-//		AI_Output(self,other,"KDF_402_Corristo_KREIS3_Info_14_04"); //Dieses Wissen ist das Fundament für deinen weiteren Weg. Nutze die Runen mit Bedacht. 
+//		AI_Output(self,other,"KDF_402_Corristo_KREIS3_Info_14_04"); //Dieses Wissen ist das Fundament für deinen weiteren Weg. Nutze die Runen mit Bedacht.
 		AI_Output(self,other,"KDF_402_Corristo_KREIS3_Info_14_04"); //Tato znalost je východisko pro tvojí další cestu. Používej tyto runy s uvážením.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS3_Info_14_05"); //You may use a rune or not. But you must decide on one of these possibilities.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS3_Info_14_05"); //Du kannst eine Rune nutzen oder nicht. Aber entscheide dich für eine der Möglichkeiten.
@@ -753,7 +744,7 @@ func void KDF_402_Corristo_KREIS3_Info()
 
 };  
 //---------------------------------------------------------------------
-// DER VIERTE KREIS
+//						DER VIERTE KREIS
 //---------------------------------------------------------------------
 instance KDF_402_Corristo_KREIS4(C_INFO)
 {
@@ -787,7 +778,7 @@ func void KDF_402_Corristo_KREIS4_Info()
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS4_Info_14_02"); //Du hast die ersten drei Kreise durchschritten. Nun ist es an der Zeit, dass du die Geheimnisse der Magie kennenlernst.
 		AI_Output(self,other,"KDF_402_Corristo_KREIS4_Info_14_02"); //Dokončil jsi první tři Kruhy. Nyní nadešel čas naučit se tajemství magie.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS4_Info_14_03"); //The magic of the runes is based on the stone. They are magic stones, created out of magic ore.
-//		AI_Output(self,other,"KDF_402_Corristo_KREIS4_Info_14_03"); //Die Magie der Runen ruht in ihrem Stein. Es sind magische Steine, gewonnen aus magischem Erz. 
+//		AI_Output(self,other,"KDF_402_Corristo_KREIS4_Info_14_03"); //Die Magie der Runen ruht in ihrem Stein. Es sind magische Steine, gewonnen aus magischem Erz.
 		AI_Output(self,other,"KDF_402_Corristo_KREIS4_Info_14_03"); //Kouzlo run je založeno na kamenech. Existují kouzelné kameny, vytvořené z kouzelné rudy.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS4_Info_14_04"); //It's the same ore which is collected in the mines. This ore is endowed with magic formulas in the temples. There the runes are converted to the instruments of our power.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS4_Info_14_04"); //Das gleiche Erz, was hier abgebaut wird. Dieses Erz wird in den Tempeln mit den Formeln der Magie versehen. Dort werden sie zu den Instrumenten unserer Macht geformt.
@@ -796,7 +787,7 @@ func void KDF_402_Corristo_KREIS4_Info()
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS4_Info_14_05"); //Mit allen Runen, die du nun beherrschen kannst, steht dir das gesammelte Wissen der Tempel zur Verfügung.
 		AI_Output(self,other,"KDF_402_Corristo_KREIS4_Info_14_05"); //S těmito runami, které už ovládáš, máš celé vědění chrámové sféry v malíčku.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS4_Info_14_06"); //You have now learned everything I can teach you.
-//		AI_Output(self,other,"KDF_402_Corristo_KREIS4_Info_14_06"); //Du hast jetzt alles gelernt, was ich dir beibringen kann. 
+//		AI_Output(self,other,"KDF_402_Corristo_KREIS4_Info_14_06"); //Du hast jetzt alles gelernt, was ich dir beibringen kann.
 		AI_Output(self,other,"KDF_402_Corristo_KREIS4_Info_14_06"); //Teď už víš všechno, co jsem tě mohl naučit.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS4_Info_14_07"); //Understand the magic, then you'll discover the secret of power.
 //		AI_Output(self,other,"KDF_402_Corristo_KREIS4_Info_14_07"); //Erkenne die Magie, dann wirst du das Geheimnis von Macht erkennen.

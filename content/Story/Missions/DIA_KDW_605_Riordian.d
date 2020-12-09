@@ -36,7 +36,7 @@ func void Info_Riordian_EXIT_Info()
 //#####################################################################
 
 //***************************************************************************
-// Info NEWS
+//	Info NEWS
 //***************************************************************************//Bist du der Wassermagier, der die Tränke braut?
 instance Info_Riordian_NEWS(C_INFO)
 {
@@ -88,7 +88,7 @@ func void Info_Riordian_NEWS_Info()
 };
 
 //***************************************************************************
-// Info REWARD
+//	Info REWARD
 //***************************************************************************
 instance Info_Riordian_REWARD(C_INFO)
 {
@@ -158,7 +158,7 @@ func void Info_Riordian_REWARD_Info()
 //#####################################################################
 
 //---------------------------------------------------------------------
-// Info MESSAGE
+//	Info MESSAGE
 //---------------------------------------------------------------------
 instance Info_Riordian_MESSAGE(C_INFO)
 {
@@ -186,7 +186,7 @@ func void Info_Riordian_MESSAGE_Info()
 };
 
 //---------------------------------------------------------------------
-// Info MESSAGEWHY
+//	Info MESSAGEWHY
 //---------------------------------------------------------------------
 instance Info_Riordian_MESSAGEWHY(C_INFO)
 {
@@ -230,7 +230,7 @@ func void Info_Riordian_MESSAGEWHY_Info()
 	AI_Output(self,hero,"Info_Riordian_MESSAGEWHY_14_06"); //Ano! Zajdi za ním, prosím, co nejdříve!
 };
 /*------------------------------------------------------------------------
-// WELCOME //
+//							WELCOME //
 ------------------------------------------------------------------------*/
 instance KDW_605_Riordian_WELCOME(C_INFO)
 {

@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_Grd_214_Torwache_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Grd_214_Torwache_Exit_Info()
 };
 
 // **************************************************
-// Was machst du
+// 					Was machst du
 // **************************************************
 
 instance DIA_Grd_214_Torwache_job(C_INFO)
@@ -115,7 +115,7 @@ func int Grd_214_Torwache_NODUSTY_Condition()
 func void Grd_214_Torwache_NODUSTY_Info()
 {
 //	AI_Output(self,other,"Grd_214_Torwache_NODUSTY_Info_07_01"); //HEY, YOU!!! You wouldn't be trying to smuggle Dusty out o' here, would you?
-//	AI_Output(self,other,"Grd_214_Torwache_NODUSTY_Info_07_01"); //HEY DU!!! Versuchst wohl Dusty hier herauszuschmuggeln, was? 
+//	AI_Output(self,other,"Grd_214_Torwache_NODUSTY_Info_07_01"); //HEY DU!!! Versuchst wohl Dusty hier herauszuschmuggeln, was?
 	AI_Output(self,other,"Grd_214_Torwache_NODUSTY_Info_07_01"); //HEJ, TY!!! Nepokoušíš se odtud propašovat rudný prach, že ne?
 //	AI_Output(other,self,"Grd_214_Torwache_NODUSTY_Info_15_02"); //We just wanted...
 //	AI_Output(other,self,"Grd_214_Torwache_NODUSTY_Info_15_02"); //Wir wollen doch nur...

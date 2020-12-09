@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_Dexter_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Dexter_Exit_Info()
 };
 
 // **************************************************
-// Erste Begrüssung
+// 					Erste Begrüssung
 // **************************************************
 
 instance DIA_Dexter_First(C_INFO)
@@ -52,7 +52,7 @@ func void DIA_Dexter_First_Info()
 };
 
 // **************************************************
-// Kraut
+// 					Kraut
 // **************************************************
 
 instance DIA_Dexter_Kraut(C_INFO)
@@ -83,7 +83,7 @@ func void DIA_Dexter_Kraut_Info()
 };
 
 // **************************************************
-// TRADE
+// 					TRADE
 // **************************************************
 
 // **************************************************
@@ -127,7 +127,7 @@ func void DIA_Dexter_Trade_Info()
 };
 
 // **************************************************
-// JOIN OC
+// 					JOIN OC
 // **************************************************
 	var int Dexter_GetKalomsRecipe;
 // **************************************************
@@ -192,10 +192,10 @@ func void DIA_Dexter_JoinOC_Info()
 
 	Info_ClearChoices(DIA_Dexter_JoinOC);
 //	Info_AddChoice(DIA_Dexter_JoinOC,"Okay - I'll see if I can get the thing.",DIA_Dexter_JoinOC_Ok);
-//	Info_AddChoice(DIA_Dexter_JoinOC," "Okay - ich werd sehen, ob ich das Ding kriege."						",DIA_Dexter_JoinOC_Ok);
+//	Info_AddChoice(DIA_Dexter_JoinOC,"Okay - ich werd sehen, ob ich das Ding kriege.",DIA_Dexter_JoinOC_Ok);
 	Info_AddChoice(DIA_Dexter_JoinOC,"Dobře - uvidím, jestli tu věc budu moci dostat.",DIA_Dexter_JoinOC_Ok);
 //	Info_AddChoice(DIA_Dexter_JoinOC,"Sounds like a difficult business - how much is in it for me?",DIA_Dexter_JoinOC_HowMuch);
-//	Info_AddChoice(DIA_Dexter_JoinOC," "Hört sich nach ner schwierigen Sache an - wieviel ist für mich drin?"	",DIA_Dexter_JoinOC_HowMuch);
+//	Info_AddChoice(DIA_Dexter_JoinOC,"Hört sich nach ner schwierigen Sache an - wieviel ist für mich drin?",DIA_Dexter_JoinOC_HowMuch);
 	Info_AddChoice(DIA_Dexter_JoinOC,"Vypadá to na obtížný úkol - kolik mi to vynese?",DIA_Dexter_JoinOC_HowMuch);
 };
 
@@ -228,7 +228,7 @@ func void DIA_Dexter_JoinOC_HowMuch()
 	AI_Output(self,other,"DIA_Dexter_JoinOC_HowMuch_10_01"); //Nějaké body ve chvíli, když se mě Diego zeptá, jestli máš pro nás cenu. A hádej, na čem bude záviset moje odpověď.
 
 //	Info_AddChoice(DIA_Dexter_JoinOC,"Maybe I'll have to pay for the recipe - give me 50 ore in advance.",DIA_Dexter_JoinOC_Advance);
-//	Info_AddChoice(DIA_Dexter_JoinOC," "Es kann sein, dass ich das Rezept bezahlen muss - gib mir 50 Erz Vorschuß."	",DIA_Dexter_JoinOC_Advance);
+//	Info_AddChoice(DIA_Dexter_JoinOC,"Es kann sein, dass ich das Rezept bezahlen muss - gib mir 50 Erz Vorschuß.",DIA_Dexter_JoinOC_Advance);
 	Info_AddChoice(DIA_Dexter_JoinOC,"Možná budu muset za ten recept zaplatit - dej mi 50 nugetů jako zálohu.",DIA_Dexter_JoinOC_Advance);
 };
 
@@ -242,7 +242,7 @@ func void DIA_Dexter_JoinOC_Advance()
 	AI_Output(self,other,"DIA_Dexter_JoinOC_Advance_10_01"); //Zapomeň na to!
 
 //	Info_AddChoice(DIA_Dexter_JoinOC,"No ore - no recipe!",DIA_Dexter_JoinOC_Threat);
-//	Info_AddChoice(DIA_Dexter_JoinOC," "Kein Erz - kein Rezept!"	",DIA_Dexter_JoinOC_Threat);
+//	Info_AddChoice(DIA_Dexter_JoinOC,"Kein Erz - kein Rezept!",DIA_Dexter_JoinOC_Threat);
 	Info_AddChoice(DIA_Dexter_JoinOC,"Žádná ruda, žádný recept!",DIA_Dexter_JoinOC_Threat);
 };
 
@@ -256,7 +256,7 @@ func void DIA_Dexter_JoinOC_Threat()
 	AI_Output(self,other,"DIA_Dexter_JoinOC_Threat_10_01"); //Dobrá! O rudě se můžeme začít bavit, až budeš mít ten recept.
 
 //	Info_AddChoice(DIA_Dexter_JoinOC,"No! I want to see ore right now or you can get your recipe yourself.",DIA_Dexter_JoinOC_OreNowOrElse);
-//	Info_AddChoice(DIA_Dexter_JoinOC," "Ich will jetzt Erz sehen, oder du kannst dein Rezept selber abholen."	",DIA_Dexter_JoinOC_OreNowOrElse);
+//	Info_AddChoice(DIA_Dexter_JoinOC,"Ich will jetzt Erz sehen, oder du kannst dein Rezept selber abholen.",DIA_Dexter_JoinOC_OreNowOrElse);
 	Info_AddChoice(DIA_Dexter_JoinOC,"Ne! Chci to vidět teď a pak si můžeš ten recept nechat.",DIA_Dexter_JoinOC_OreNowOrElse);
 };
 
@@ -270,7 +270,7 @@ func void DIA_Dexter_JoinOC_OreNowOrElse()
 	AI_Output(self,other,"DIA_Dexter_JoinOC_OreNowOrElse_10_01"); //Je tady spousta jiných nováčků.Myslím, že bych ten úkol mohl dát někomu z nich...
 
 //	Info_AddChoice(DIA_Dexter_JoinOC,"Okay! Let's just forget about the whole thing.",DIA_Dexter_JoinOC_ForgetIt);
-//	Info_AddChoice(DIA_Dexter_JoinOC," "Gut! Vergessen wir die Sache."	",DIA_Dexter_JoinOC_ForgetIt);
+//	Info_AddChoice(DIA_Dexter_JoinOC,"Gut! Vergessen wir die Sache.",DIA_Dexter_JoinOC_ForgetIt);
 	Info_AddChoice(DIA_Dexter_JoinOC,"Dobře! Zapomeňme na celou tu věc.",DIA_Dexter_JoinOC_ForgetIt);
 };
 
@@ -307,7 +307,7 @@ func void DIA_Dexter_JoinOC_ForgetIt()
 };
 
 // **************************************************
-// Where ST
+// 					Where ST
 // **************************************************
 var int Dexter_PsiCamp;
 // **************************************************
@@ -365,7 +365,7 @@ func void DIA_Dexter_WhereST_Info()
 };
 
 // **************************************************
-// SUCCESS
+// 					SUCCESS
 // **************************************************
 
 instance DIA_Dexter_KalomsRecipeSuccess(C_INFO)

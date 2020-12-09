@@ -1,5 +1,5 @@
 // **************************************************
-// EXIT 
+//						EXIT 
 // **************************************************
 
 instance DIA_Shrat_Exit(C_INFO)
@@ -24,7 +24,7 @@ func void DIA_Shrat_Exit_Info()
 };
 
 // **************************************************
-// Was machst du hier?
+//				Was machst du hier?
 // **************************************************
 
 instance DIA_Shrat_WhyHere(C_INFO)
@@ -67,7 +67,7 @@ func void DIA_Shrat_WhyHere_Info()
 };
 
 // **************************************************
-// Hilfe bei Join PSI ??
+//				Hilfe bei Join PSI ??
 // **************************************************
 
 instance DIA_Shrat_JoinPSI(C_INFO)
@@ -104,7 +104,7 @@ func void DIA_Shrat_JoinPSI_Info()
 };
 
 // **************************************************
-// Komm mit
+//					Komm mit
 // **************************************************
 
 instance DIA_Shrat_ComeWithMe(C_INFO)
@@ -141,7 +141,7 @@ func void DIA_Shrat_ComeWithMe_Info()
 };
 
 // **************************************************
-// Verlassen
+//					Verlassen
 // **************************************************
 
 instance DIA_Shrat_LeaveMe(C_INFO)

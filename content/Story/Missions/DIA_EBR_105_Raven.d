@@ -1,5 +1,5 @@
 // **************************************
-// EXIT 
+//					EXIT 
 // **************************************
 
 instance DIA_Raven_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Raven_Exit_Info()
 };
 
 // **************************************
-// Erstes Mal rein
+//			Erstes Mal rein
 // **************************************
 
 instance DIA_Raven_FirstIn(C_INFO)
@@ -53,7 +53,7 @@ func void DIA_Raven_FirstIn_Info()
 };
 
 // **************************************
-// Wer bist du?
+//			Wer bist du?
 // **************************************
 
 instance DIA_Raven_Who(C_INFO)
@@ -84,7 +84,7 @@ func void DIA_Raven_Who_Info()
 };
 
 // **************************************
-// Krautbote
+//			Krautbote
 // **************************************
 
 instance DIA_Raven_Krautbote(C_INFO)
@@ -128,7 +128,7 @@ func void DIA_Raven_Krautbote_Info()
 };
 
 // **************************************
-// Gomez sehen (Stt-Aufnahme)
+//		Gomez sehen (Stt-Aufnahme)
 // **************************************
 
 instance DIA_Raven_Aufnahme(C_INFO)
@@ -169,7 +169,7 @@ func void DIA_Raven_Aufnahme_Info()
 };
 
 // **************************************
-// In Halle angekommen
+//		In Halle angekommen
 // **************************************
 
 instance DIA_Raven_There(C_INFO)
@@ -201,7 +201,7 @@ func void DIA_Raven_There_Info()
 };
 
 // **************************************
-// PERM
+//				PERM
 // **************************************
 
 instance DIA_Raven_PERM(C_INFO)
@@ -235,7 +235,7 @@ func void DIA_Raven_PERM_Info()
 };
 
 // **************************************
-// Bin dabei
+//			Bin dabei
 // **************************************
 
 instance DIA_Raven_BinDabei(C_INFO)
@@ -280,7 +280,7 @@ func void DIA_Raven_BinDabei_Info()
 };
 
 // *********************************************
-// Sekten-Auftrag
+// 				Sekten-Auftrag
 // *********************************************
 	var int Raven_SpySect;
 // *********************************************
@@ -339,7 +339,7 @@ func void DIA_Raven_SpySect_Info()
 };
 
 // *********************************************
-// Ausrüstung
+// 				Ausrüstung
 // *********************************************
 
 instance DIA_Raven_Equipment(C_INFO)
@@ -396,7 +396,7 @@ func void DIA_Raven_Equipment_Info()
 //////////////////////////////////////////////////
 
 // *********************************************
-// Spy Zwischenbericht
+// 				Spy Zwischenbericht
 // *********************************************
 
 instance DIA_Raven_SpyBericht(C_INFO)

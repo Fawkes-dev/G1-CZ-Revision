@@ -1,5 +1,5 @@
 // **************************************
-// EXIT 
+//					EXIT 
 // **************************************
 
 instance DIA_Gomez_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Gomez_Exit_Info()
 };
 
 // **************************************
-// Nicht mit Raven geredet
+//		Nicht mit Raven geredet
 // **************************************
 
 instance DIA_Gomez_Fault(C_INFO)
@@ -62,7 +62,7 @@ func void DIA_Gomez_Fault_Info()
 };
 
 // **************************************
-// Hallo
+//				Hallo
 // **************************************
 	var int gomez_kontakte;
 // **************************************
@@ -98,16 +98,16 @@ func void DIA_Gomez_Hello_Info()
 
 	Info_ClearChoices(DIA_Gomez_Hello); 
 //	Info_AddChoice(DIA_Gomez_Hello,"I hope I'm not going to have to chop your head off to prove myself.",DIA_Gomez_Hello_KopfAb);
-//	Info_AddChoice(DIA_Gomez_Hello,""Ich hoffe ich muss dir nicht erst den Kopf abhacken, um mich zu beweisen." ",DIA_Gomez_Hello_KopfAb);
+//	Info_AddChoice(DIA_Gomez_Hello,"Ich hoffe ich muss dir nicht erst den Kopf abhacken, um mich zu beweisen.",DIA_Gomez_Hello_KopfAb);
 	Info_AddChoice(DIA_Gomez_Hello,"Doufám, že ti nebudu muset useknout hlavu, abych ti ukázal, že se umím...",DIA_Gomez_Hello_KopfAb);
 //	Info_AddChoice(DIA_Gomez_Hello,"There's only blockheads around here.",DIA_Gomez_Hello_Spinner);
-//	Info_AddChoice(DIA_Gomez_Hello,""Weil hier nur Schwachköpfe rumrennen."									",DIA_Gomez_Hello_Spinner);
+//	Info_AddChoice(DIA_Gomez_Hello,"Weil hier nur Schwachköpfe rumrennen.",DIA_Gomez_Hello_Spinner);
 	Info_AddChoice(DIA_Gomez_Hello,"Tady jsou jenom hňupové.",DIA_Gomez_Hello_Spinner);
 //	Info_AddChoice(DIA_Gomez_Hello,"I've been traveling around a lot and I have contacts in all the camps.",DIA_Gomez_Hello_Kontakte);
-//	Info_AddChoice(DIA_Gomez_Hello,""Ich bin viel rumgekommen und habe gute Kontakte in allen Lagern."			",DIA_Gomez_Hello_Kontakte);
+//	Info_AddChoice(DIA_Gomez_Hello,"Ich bin viel rumgekommen und habe gute Kontakte in allen Lagern.",DIA_Gomez_Hello_Kontakte);
 	Info_AddChoice(DIA_Gomez_Hello,"Chodil jsem po všech táborech a ve všech mám známé.",DIA_Gomez_Hello_Kontakte);
 //	Info_AddChoice(DIA_Gomez_Hello,"I have stood the test of faith.",DIA_Gomez_Hello_ThorusSays);
-//	Info_AddChoice(DIA_Gomez_Hello,""Ich habe die Prüfung des Vertrauens bestanden."							",DIA_Gomez_Hello_ThorusSays);
+//	Info_AddChoice(DIA_Gomez_Hello,"Ich habe die Prüfung des Vertrauens bestanden.",DIA_Gomez_Hello_ThorusSays);
 	Info_AddChoice(DIA_Gomez_Hello,"Složil jsem zkoušku poctivosti.",DIA_Gomez_Hello_ThorusSays);
 
 };
@@ -133,23 +133,23 @@ func void DIA_Gomez_Hello_Kontakte()
 	AI_Output(self,other,"DIA_Gomez_Hello_Kontakte_11_01"); //Tak to by bylo užitečné. S kým jsi ve spojení?
 	Info_ClearChoices(DIA_Gomez_Hello);
 //	Info_AddChoice(DIA_Gomez_Hello,"Those were the important ones.",DIA_Gomez_Hello_Kontakte_ThatsAll);
-//	Info_AddChoice(DIA_Gomez_Hello,""Das waren alle wichtigen." ",DIA_Gomez_Hello_Kontakte_ThatsAll);
+//	Info_AddChoice(DIA_Gomez_Hello,"Das waren alle wichtigen.",DIA_Gomez_Hello_Kontakte_ThatsAll);
 	Info_AddChoice(DIA_Gomez_Hello,"To byly ty důležité.",DIA_Gomez_Hello_Kontakte_ThatsAll);
 //	Info_AddChoice(DIA_Gomez_Hello,"A couple of fences in the New Camp.",DIA_Gomez_Hello_Kontakte_NLHehler);
-//	Info_AddChoice(DIA_Gomez_Hello,""Zu einigen Hehlern im Neuen Lager."	",DIA_Gomez_Hello_Kontakte_NLHehler);
+//	Info_AddChoice(DIA_Gomez_Hello,"Zu einigen Hehlern im Neuen Lager.",DIA_Gomez_Hello_Kontakte_NLHehler);
 	Info_AddChoice(DIA_Gomez_Hello,"Pár přechovávačů v Novém táboře.",DIA_Gomez_Hello_Kontakte_NLHehler);
-//	Info_AddChoice(DIA_Gomez_Hello,""Zu Lares."	",DIA_Gomez_Hello_Kontakte_Lares);
+//	Info_AddChoice(DIA_Gomez_Hello,"Zu Lares.",DIA_Gomez_Hello_Kontakte_Lares);
 	Info_AddChoice(DIA_Gomez_Hello,"Lares.",DIA_Gomez_Hello_Kontakte_Lares);
 	//Info_AddChoice(DIA_Gomez_Hello,"Zu Lee." ,DIA_Gomez_Hello_Kontakte_Lee);
 //	Info_AddChoice(DIA_Gomez_Hello,"A few of the Baals in the Brotherhood's camp.",DIA_Gomez_Hello_Kontakte_Baals);
-//	Info_AddChoice(DIA_Gomez_Hello,""Zu einigen Baals aus dem Lager der Bruderschaft."	",DIA_Gomez_Hello_Kontakte_Baals);
+//	Info_AddChoice(DIA_Gomez_Hello,"Zu einigen Baals aus dem Lager der Bruderschaft.",DIA_Gomez_Hello_Kontakte_Baals);
 	Info_AddChoice(DIA_Gomez_Hello,"Pár Baalů v táboře Bratrstva.",DIA_Gomez_Hello_Kontakte_Baals);
-//	Info_AddChoice(DIA_Gomez_Hello,""Zu Cor Kalom."	",DIA_Gomez_Hello_Kontakte_Kalom);
+//	Info_AddChoice(DIA_Gomez_Hello,"Zu Cor Kalom.",DIA_Gomez_Hello_Kontakte_Kalom);
 	Info_AddChoice(DIA_Gomez_Hello,"Cor Kalom.",DIA_Gomez_Hello_Kontakte_Kalom);
 
 	if (gomez_kontakte < 3)
 	{
-//	Info_AddChoice(DIA_Gomez_Hello,""Zu Y'Berion."	",DIA_Gomez_Hello_Kontakte_YBerion);
+//	Info_AddChoice(DIA_Gomez_Hello,"Zu Y'Berion.",DIA_Gomez_Hello_Kontakte_YBerion);
 	Info_AddChoice(DIA_Gomez_Hello,"Y'Berion.",DIA_Gomez_Hello_Kontakte_YBerion);
 	};
 };
@@ -283,7 +283,7 @@ func void DIA_Gomez_Hello_Kontakte_ThatsAll()
 };
 
 // **************************************
-// Bin ich dabei
+//				Bin ich dabei
 // **************************************
 
 instance DIA_Gomez_Dabei(C_INFO)
@@ -344,7 +344,7 @@ func void DIA_Gomez_Dabei_Info()
 };
 
 // **************************************
-// Nur so (PERM)
+//				Nur so (PERM)
 // **************************************
 
 instance DIA_Gomez_NurSo(C_INFO)
@@ -379,12 +379,12 @@ func void DIA_Gomez_NurSo_Info()
 
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
-/////////////////   Kapitel 5        ///////////////////
+/////////////////   	Kapitel 5        ///////////////////
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 
 // ***********************************************
-// Wartet auf den SC
+// 				Wartet auf den SC
 // ***********************************************
 
 instance DIA_EBR_100_Gomez_Wait4SC(C_INFO)

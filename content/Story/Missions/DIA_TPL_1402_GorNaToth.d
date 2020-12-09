@@ -1,5 +1,5 @@
 // ***************************** 
-// EXIT 
+//				EXIT 
 // *****************************
 
 instance DIA_TPL_1402_GorNaToth_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_TPL_1402_GorNaToth_Exit_Info()
 };
 
 // ***************************** 
-// Abweisend 
+//			Abweisend 
 // *****************************
 instance DIA_GorNaToth_Abweisend(C_INFO)
 {
@@ -58,7 +58,7 @@ func void DIA_GorNaToth_Abweisend_Info()
 };
 
 // ***************************** 
-// AngarTalked 
+//			AngarTalked 
 // *****************************
 
 instance DIA_GorNaToth_AngarTalked(C_INFO)
@@ -86,13 +86,13 @@ func void DIA_GorNaToth_AngarTalked_Info()
 	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_11_00"); //Mluvil s tebou Cor Angar? Co říkal?
 	Info_ClearChoices(DIA_GorNaToth_AngarTalked);
 //	Info_AddChoice(DIA_GorNaToth_AngarTalked,"He says you'd be unworthy of wearing the armor of a templar.",DIA_GorNaToth_AngarTalked_Unworthy); 
-//	Info_AddChoice(DIA_GorNaToth_AngarTalked,"	"Er hat gesagt, du seist unwürdig, die Rüstung eines Templers zu tragen."",DIA_GorNaToth_AngarTalked_Unworthy); 
+//	Info_AddChoice(DIA_GorNaToth_AngarTalked,"Er hat gesagt, du seist unwürdig, die Rüstung eines Templers zu tragen.",DIA_GorNaToth_AngarTalked_Unworthy); 
 	Info_AddChoice(DIA_GorNaToth_AngarTalked,"Říká, že nejsi hoden nosit templářskou zbroj.",DIA_GorNaToth_AngarTalked_Unworthy); 
 //	Info_AddChoice(DIA_GorNaToth_AngarTalked,"He said he never liked the swampsharks.",DIA_GorNaToth_AngarTalked_Shark); 
-//	Info_AddChoice(DIA_GorNaToth_AngarTalked,"	"Er sagte, die Sumpfhaie habe er noch nie leiden können."",DIA_GorNaToth_AngarTalked_Shark); 
+//	Info_AddChoice(DIA_GorNaToth_AngarTalked,"Er sagte, die Sumpfhaie habe er noch nie leiden können.",DIA_GorNaToth_AngarTalked_Shark); 
 	Info_AddChoice(DIA_GorNaToth_AngarTalked,"Říkal, že vždycky nesnášel močálové žraloky.",DIA_GorNaToth_AngarTalked_Shark); 
 //	Info_AddChoice(DIA_GorNaToth_AngarTalked,"He said I should come back as soon as I'm a templar.",DIA_GorNaToth_AngarTalked_Normal); 
-//	Info_AddChoice(DIA_GorNaToth_AngarTalked,"	"Er hat gesagt, ich soll wiederkommen, wenn ich Templer bin."",DIA_GorNaToth_AngarTalked_Normal); 
+//	Info_AddChoice(DIA_GorNaToth_AngarTalked,"Er hat gesagt, ich soll wiederkommen, wenn ich Templer bin.",DIA_GorNaToth_AngarTalked_Normal); 
 	Info_AddChoice(DIA_GorNaToth_AngarTalked,"Říkal, že se mám vrátit, jakmile se stanu templářem.",DIA_GorNaToth_AngarTalked_Normal); 
 };
 
@@ -193,7 +193,7 @@ func void TPL_1402_GorNaToth_GETSTUFF_Info()
 };  
 
 /*------------------------------------------------------------------------
-// ARMOR
+//							ARMOR
 ------------------------------------------------------------------------*/
 instance TPL_1402_GorNaToth_ARMOR(C_INFO)
 {
@@ -226,7 +226,6 @@ func void TPL_1402_GorNaToth_ARMOR_Info()
 
 	Info_ClearChoices(TPL_1402_GorNaToth_ARMOR);
 	Info_AddChoice(TPL_1402_GorNaToth_ARMOR, DIALOG_BACK , TPL_1402_GorNaToth_ARMOR_BACK); 
-//	Info_AddChoice(TPL_1402_GorNaToth_ARMOR,"	B_BuildBuyArmorString(NAME_GorNaTothHeavyTpl,VALUE_TPL_ARMOR_H) ",TPL_1402_GorNaToth_ARMOR_H); 
 	Info_AddChoice(TPL_1402_GorNaToth_ARMOR, B_BuildBuyArmorString(NAME_GorNaTothHeavyTpl,VALUE_TPL_ARMOR_H),TPL_1402_GorNaToth_ARMOR_H); 
 	Info_AddChoice(TPL_1402_GorNaToth_ARMOR, B_BuildBuyArmorString(NAME_GorNaTothTpl,VALUE_TPL_ARMOR_M), TPL_1402_GorNaToth_ARMOR_M); 
 
@@ -319,7 +318,7 @@ func void TPL_1402_GorNaToth_ARMOR_BACK()
 };
 
 //---------------------------------------------------------------
-//	 STR + DEX
+//	 						STR + DEX
 //---------------------------------------------------------------
 instance TPL_1402_GorNaToth_Teach(C_INFO)
 {
@@ -351,19 +350,12 @@ func void TPL_1402_GorNaToth_Teach_Info()
 	AI_Output(self,other,"TPL_1402_GorNaToth_Teach_11_01"); //Síla a obratnost jsou zrovna tak důležité jako síla mysli.
 
 	Info_ClearChoices(TPL_1402_GorNaToth_Teach);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"DIALOG_BACK									",TPL_1402_GorNaToth_Teach_BACK);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,DIALOG_BACK ,TPL_1402_GorNaToth_Teach_BACK);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)			",TPL_1402_GorNaToth_Teach_STR_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),TPL_1402_GorNaToth_Teach_STR_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)			",TPL_1402_GorNaToth_Teach_STR_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),TPL_1402_GorNaToth_Teach_STR_1);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)",TPL_1402_GorNaToth_Teach_DEX_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),TPL_1402_GorNaToth_Teach_DEX_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)",TPL_1402_GorNaToth_Teach_DEX_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),TPL_1402_GorNaToth_Teach_DEX_1);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0)		",TPL_1402_GorNaToth_Teach_MAN_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0),TPL_1402_GorNaToth_Teach_MAN_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0)			",TPL_1402_GorNaToth_Teach_MAN_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),TPL_1402_GorNaToth_Teach_MAN_1);
 
 	if (log_gornatothtrain == FALSE)
@@ -371,7 +363,7 @@ func void TPL_1402_GorNaToth_Teach_Info()
 		Log_CreateTopic(GE_TeacherPSI,LOG_NOTE);
 //		B_LogEntry(GE_TeacherPSI,"The templar Gor Na Toth can help me to improve my STRENGTH, DEXTERITY and MANA.");
 //		B_LogEntry(GE_TeacherPSI,"Der Templer Gor Na Toth kann mir helfen, meine STÄRKE, mein GESCHICK und mein MANA zu verbessern.");
-		B_LogEntry(GE_TeacherPSI,"Templář Gor Na Toth mě může naučit bojovat s JEDNORUČNÍMI zbraněmi.");
+		B_LogEntry(GE_TeacherPSI,"Templář Gor Na Toth mi může pomoci zvýšit moji SÍLU, OBRATNOST a MAGICKOU ENERGII.");
 		log_gornatothtrain = TRUE;
 	};
 };
@@ -385,19 +377,12 @@ func void TPL_1402_GorNaToth_Teach_STR_1()
 {
 	B_BuyAttributePoints(other,ATR_STRENGTH, LPCOST_ATTRIBUTE_STRENGTH);
 	Info_ClearChoices(TPL_1402_GorNaToth_Teach);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"DIALOG_BACK									",TPL_1402_GorNaToth_Teach_BACK);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,DIALOG_BACK ,TPL_1402_GorNaToth_Teach_BACK);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)			",TPL_1402_GorNaToth_Teach_STR_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),TPL_1402_GorNaToth_Teach_STR_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)			",TPL_1402_GorNaToth_Teach_STR_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),TPL_1402_GorNaToth_Teach_STR_1);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)",TPL_1402_GorNaToth_Teach_DEX_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),TPL_1402_GorNaToth_Teach_DEX_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)",TPL_1402_GorNaToth_Teach_DEX_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),TPL_1402_GorNaToth_Teach_DEX_1);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0)		",TPL_1402_GorNaToth_Teach_MAN_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0),TPL_1402_GorNaToth_Teach_MAN_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0)			",TPL_1402_GorNaToth_Teach_MAN_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),TPL_1402_GorNaToth_Teach_MAN_1);
 };
 
@@ -405,19 +390,12 @@ func void TPL_1402_GorNaToth_Teach_STR_5()
 {
 	B_BuyAttributePoints(other,ATR_STRENGTH, 5*LPCOST_ATTRIBUTE_STRENGTH);
 	Info_ClearChoices(TPL_1402_GorNaToth_Teach);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"DIALOG_BACK									",TPL_1402_GorNaToth_Teach_BACK);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,DIALOG_BACK ,TPL_1402_GorNaToth_Teach_BACK);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)			",TPL_1402_GorNaToth_Teach_STR_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),TPL_1402_GorNaToth_Teach_STR_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)			",TPL_1402_GorNaToth_Teach_STR_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),TPL_1402_GorNaToth_Teach_STR_1);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)",TPL_1402_GorNaToth_Teach_DEX_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),TPL_1402_GorNaToth_Teach_DEX_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)",TPL_1402_GorNaToth_Teach_DEX_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),TPL_1402_GorNaToth_Teach_DEX_1);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0)		",TPL_1402_GorNaToth_Teach_MAN_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0),TPL_1402_GorNaToth_Teach_MAN_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0)			",TPL_1402_GorNaToth_Teach_MAN_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),TPL_1402_GorNaToth_Teach_MAN_1);
 };
 
@@ -425,19 +403,12 @@ func void TPL_1402_GorNaToth_Teach_DEX_1()
 {
 	B_BuyAttributePoints(other,ATR_DEXTERITY, LPCOST_ATTRIBUTE_DEXTERITY);
 	Info_ClearChoices(TPL_1402_GorNaToth_Teach);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"DIALOG_BACK									",TPL_1402_GorNaToth_Teach_BACK);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,DIALOG_BACK ,TPL_1402_GorNaToth_Teach_BACK);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)			",TPL_1402_GorNaToth_Teach_STR_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),TPL_1402_GorNaToth_Teach_STR_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)			",TPL_1402_GorNaToth_Teach_STR_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),TPL_1402_GorNaToth_Teach_STR_1);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)",TPL_1402_GorNaToth_Teach_DEX_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),TPL_1402_GorNaToth_Teach_DEX_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)",TPL_1402_GorNaToth_Teach_DEX_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),TPL_1402_GorNaToth_Teach_DEX_1);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0)		",TPL_1402_GorNaToth_Teach_MAN_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0),TPL_1402_GorNaToth_Teach_MAN_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0)			",TPL_1402_GorNaToth_Teach_MAN_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),TPL_1402_GorNaToth_Teach_MAN_1);
 };
 
@@ -445,38 +416,24 @@ func void TPL_1402_GorNaToth_Teach_DEX_5()
 {
 	B_BuyAttributePoints(other,ATR_DEXTERITY, 5*LPCOST_ATTRIBUTE_DEXTERITY);
 	Info_ClearChoices(TPL_1402_GorNaToth_Teach);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"DIALOG_BACK									",TPL_1402_GorNaToth_Teach_BACK);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,DIALOG_BACK ,TPL_1402_GorNaToth_Teach_BACK);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)			",TPL_1402_GorNaToth_Teach_STR_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),TPL_1402_GorNaToth_Teach_STR_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)			",TPL_1402_GorNaToth_Teach_STR_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),TPL_1402_GorNaToth_Teach_STR_1);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)",TPL_1402_GorNaToth_Teach_DEX_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),TPL_1402_GorNaToth_Teach_DEX_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)",TPL_1402_GorNaToth_Teach_DEX_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),TPL_1402_GorNaToth_Teach_DEX_1);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0)		",TPL_1402_GorNaToth_Teach_MAN_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0),TPL_1402_GorNaToth_Teach_MAN_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0)			",TPL_1402_GorNaToth_Teach_MAN_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),TPL_1402_GorNaToth_Teach_MAN_1);
 };
 func void TPL_1402_GorNaToth_Teach_MAN_1()
 {
 	B_BuyAttributePoints(other,ATR_MANA_MAX, LPCOST_ATTRIBUTE_MANA);
 	Info_ClearChoices(TPL_1402_GorNaToth_Teach);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"DIALOG_BACK									",TPL_1402_GorNaToth_Teach_BACK);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,DIALOG_BACK ,TPL_1402_GorNaToth_Teach_BACK);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)			",TPL_1402_GorNaToth_Teach_STR_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),TPL_1402_GorNaToth_Teach_STR_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)			",TPL_1402_GorNaToth_Teach_STR_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),TPL_1402_GorNaToth_Teach_STR_1);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)",TPL_1402_GorNaToth_Teach_DEX_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),TPL_1402_GorNaToth_Teach_DEX_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)",TPL_1402_GorNaToth_Teach_DEX_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),TPL_1402_GorNaToth_Teach_DEX_1);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0)		",TPL_1402_GorNaToth_Teach_MAN_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0),TPL_1402_GorNaToth_Teach_MAN_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0)			",TPL_1402_GorNaToth_Teach_MAN_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),TPL_1402_GorNaToth_Teach_MAN_1);
 };
 
@@ -484,19 +441,12 @@ func void TPL_1402_GorNaToth_Teach_MAN_5()
 {
 	B_BuyAttributePoints(other,ATR_MANA_MAX, 5*LPCOST_ATTRIBUTE_MANA);
 	Info_ClearChoices(TPL_1402_GorNaToth_Teach);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"DIALOG_BACK									",TPL_1402_GorNaToth_Teach_BACK);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,DIALOG_BACK ,TPL_1402_GorNaToth_Teach_BACK);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)			",TPL_1402_GorNaToth_Teach_STR_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),TPL_1402_GorNaToth_Teach_STR_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)			",TPL_1402_GorNaToth_Teach_STR_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),TPL_1402_GorNaToth_Teach_STR_1);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)",TPL_1402_GorNaToth_Teach_DEX_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),TPL_1402_GorNaToth_Teach_DEX_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)",TPL_1402_GorNaToth_Teach_DEX_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),TPL_1402_GorNaToth_Teach_DEX_1);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0)		",TPL_1402_GorNaToth_Teach_MAN_5);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0),TPL_1402_GorNaToth_Teach_MAN_5);
-//	Info_AddChoice(TPL_1402_GorNaToth_Teach,"B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0)			",TPL_1402_GorNaToth_Teach_MAN_1);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),TPL_1402_GorNaToth_Teach_MAN_1);
 };
 /*------------------------------------------------------------------------
@@ -529,8 +479,8 @@ func void TPL_1402_GorNaToth_TRAIN_Info()
 	{
 		Log_CreateTopic(GE_TeacherPSI,LOG_NOTE);
 //		B_LogEntry(GE_TeacherPSI,"The templar Gor Na Toth can teach me to fight with ONE-HANDED weapons.");
-//		B_LogEntry(GE_TeacherPSI,"Baal Cadar kann mich die magischen KREISE der Runenmagie lehren.");
-		B_LogEntry(GE_TeacherPSI,"Templář Gor Na Toth mi může pomoci zvýšit moji SÍLU, OBRATNOST a MAGICKOU ENERGII.");
+//		B_LogEntry(GE_TeacherPSI,"Der Templer Gor Na Toth kann mir den Kampf mit EINHÄNDIGEN Waffen beibringen.");
+		B_LogEntry(GE_TeacherPSI,"Templář Gor Na Toth mě může naučit bojovat s JEDNORUČNÍMI zbraněmi.");
 		log_gornatothfight = TRUE;
 	};
 //	AI_Output(other,self,"TPL_1402_GorNaToth_TRAIN_Info_15_00"); //I want to improve my handling of one-handed weapons.
@@ -578,7 +528,7 @@ instance TPL_1402_GorNaToth_TRAINAGAIN(C_INFO)
 	important = 0;
 	permanent = 1;
 //	description = B_BuildLearnString(NAME_Learn1h_2, LPCOST_TALENT_1H_2,0); 
-//	description = B_BuildLearnString(NAME_Learn1h_2,			LPCOST_TALENT_1H_2,0); 
+//	description = B_BuildLearnString(NAME_Learn1h_2, LPCOST_TALENT_1H_2,0); 
 	description = B_BuildLearnString(NAME_Learn1h_2,LPCOST_TALENT_1H_2,0); 
 };
 

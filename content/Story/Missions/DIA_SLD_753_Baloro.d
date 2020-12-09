@@ -1,5 +1,5 @@
 //****************************************************
-// Typ der den SC an der Nase herum führt!
+//	Typ der den SC an der Nase herum führt!
 //****************************************************
 
 //Variablen:
@@ -112,10 +112,10 @@ func void DIA_SLD_753_Baloro_Worumgehts_Info()
 
 	Info_ClearChoices(DIA_SLD_753_Baloro_Worumgehts); // alte choices loeschen
 //	Info_AddChoice(DIA_SLD_753_Baloro_Worumgehts,"I must have it.",DIA_SLD_753_Baloro_Worumgehts_ja);
-//	Info_AddChoice(DIA_SLD_753_Baloro_Worumgehts,""Will ich unbedingt haben"	",DIA_SLD_753_Baloro_Worumgehts_ja);
+//	Info_AddChoice(DIA_SLD_753_Baloro_Worumgehts,"Will ich unbedingt haben",DIA_SLD_753_Baloro_Worumgehts_ja);
 	Info_AddChoice(DIA_SLD_753_Baloro_Worumgehts,"Musím to mít.",DIA_SLD_753_Baloro_Worumgehts_ja);
 //	Info_AddChoice(DIA_SLD_753_Baloro_Worumgehts,"I don't believe a word he says.",DIA_SLD_753_Baloro_Exit_Info);
-//	Info_AddChoice(DIA_SLD_753_Baloro_Worumgehts,""Ich glaub ihm kein Wort"	",DIA_SLD_753_Baloro_Exit_Info);
+//	Info_AddChoice(DIA_SLD_753_Baloro_Worumgehts,"Der Typ will mich doch verarschen!",DIA_SLD_753_Baloro_Exit_Info);
 	Info_AddChoice(DIA_SLD_753_Baloro_Worumgehts,"Ten chlápek mele nesmysly.",DIA_SLD_753_Baloro_Exit_Info);
 
 };
@@ -137,10 +137,10 @@ func void DIA_SLD_753_Baloro_Worumgehts_ja()
 
 	Info_ClearChoices(DIA_SLD_753_Baloro_Worumgehts); // alte choices loeschen
 //	Info_AddChoice(DIA_SLD_753_Baloro_Worumgehts,"I must have it.",DIA_SLD_753_Baloro_Worumgehts_jaklar);
-//	Info_AddChoice(DIA_SLD_753_Baloro_Worumgehts,""Muss ich haben"						",DIA_SLD_753_Baloro_Worumgehts_jaklar);
+//	Info_AddChoice(DIA_SLD_753_Baloro_Worumgehts,"Muss ich haben",DIA_SLD_753_Baloro_Worumgehts_jaklar);
 	Info_AddChoice(DIA_SLD_753_Baloro_Worumgehts,"Musím to mít.",DIA_SLD_753_Baloro_Worumgehts_jaklar);
 //	Info_AddChoice(DIA_SLD_753_Baloro_Worumgehts,"The bloke's taking the piss.",DIA_SLD_753_Baloro_Exit_Info);
-//	Info_AddChoice(DIA_SLD_753_Baloro_Worumgehts,""Ich glaub ihm kein Wort"	",DIA_SLD_753_Baloro_Exit_Info);
+//	Info_AddChoice(DIA_SLD_753_Baloro_Worumgehts,"Der Typ will mich doch verarschen!",DIA_SLD_753_Baloro_Exit_Info);
 	Info_AddChoice(DIA_SLD_753_Baloro_Worumgehts,"Ten chlápek mele nesmysly.",DIA_SLD_753_Baloro_Exit_Info);
 };
 
@@ -151,7 +151,7 @@ func void DIA_SLD_753_Baloro_Worumgehts_jaklar()
 	AI_Output(other,self,"DIA_SLD_753_Baloro_Worumgehts_ja_15_06"); //Dobrá, uvidíme, co budu moci udělat!
 //	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_ja_08_06"); //Very good! But hurry up!
 //	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_ja_08_06"); //Sehr schön! Aber beeil dich!
-	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_ja_08_06"); //Výborně! Ale nepospíchej.
+	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_ja_08_06"); //Výborně! Ale nepospíchej
 //	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_ja_08_07"); //Don't forget: 5 apples, 2 bottles of rice schnapps, 5 bottles of beer, 3 loafs of bread, 2 pieces of cheese and 2 bunches of grapes! Okay?
 //	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_ja_08_07"); //Vergiss es nicht: 5 Äpfel, 2 Flaschen Reisschnaps, 5 Flaschen Bier, 3 Laibe Brot, 2 Käsestücke und 2 Weintraubenreben! Klar?
 	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_ja_08_07"); //A nezapomeň: 5 jablek, 2 láhve rýžové pálenky, 5 láhví piva, 3 bochníky chleba, 2 kusy sýra, 2 hrozny vína! Jasný?
@@ -161,7 +161,7 @@ func void DIA_SLD_753_Baloro_Worumgehts_jaklar()
 
 //******** Auftragannahme **************************
 
-	SLD_753_Baloro_SC_besorgt_den_Kram = LOG_RUNNING;
+	SLD_753_Baloro_SC_besorgt_den_Kram = LOG_RUNNING ;
 
 	Log_CreateTopic(Baloros_Waffe,LOG_MISSION);
 	Log_SetTopicStatus(Baloros_Waffe,LOG_RUNNING);
@@ -295,7 +295,7 @@ func void DIA_SLD_753_Baloro_habsdabei_Info()
 //	AI_Output(self,other,"DIA_SLD_753_Baloro_habsdabei_Info_08_06"); //Macht aber nichts! Jetzt haben wir Jungs wenigstens genügend Fressalien zum Feiern! Schönen Dank auch! Und vielleicht sehen wir uns ja noch mal. He he he!
 	AI_Output(self,other,"DIA_SLD_753_Baloro_habsdabei_Info_08_06"); //Ale nevadí! Teď máme my chlapi dost jídla na oslavu! Díky moc! Možná se ještě uvidíme. Hehehe!
 
-	SLD_753_Baloro_SC_besorgt_den_Kram = LOG_SUCCESS;
+	SLD_753_Baloro_SC_besorgt_den_Kram = LOG_SUCCESS ;
 	B_GiveXP(300);
 //	B_LogEntry(Baloros_Waffe, "I should have known better than trusting this jerk! Nevermind, now I've learned my lesson!"); 
 //	B_LogEntry(Baloros_Waffe, "Hätte ich mir gleich denken können, daß der Typ mich nur verarschen will. Egal! Jetzt bin um eine Erfahrung reicher!"); 
@@ -339,7 +339,7 @@ func void DIA_SLD_753_Baloro_letztes_Wort_Info()
 //			AI_Output(self,other,"DIA_SLD_753_Baloro_letztes_Wort_Info_08_01"); //Was willst du denn noch! Verschwinde! Geh jemand anders auf die Nerven, sonst setzt's was! Kapiert?
 			AI_Output(self,other,"DIA_SLD_753_Baloro_letztes_Wort_Info_08_01"); //Co chceš víc? Odtáhni! Lez si na nervy někomu jinému, nebo tě rozmáznu! Jasný!
 
-			SLD_753_Baloro_SC_wills_wissen = 1;
+			SLD_753_Baloro_SC_wills_wissen = 1 ;
 
 			AI_StopProcessInfos(self); 
 
@@ -371,7 +371,7 @@ func int DIA_SLD_753_Baloro_SC_wills_wissen_Condition()
 
 func void DIA_SLD_753_Baloro_Attack()
 {
-// B_FullStop(self); 
+//	B_FullStop(self); 
 	AI_StopProcessInfos(self); 
 	Npc_SetTarget(self,hero);
 	AI_StartState(self,ZS_Attack, 1, "");
@@ -392,7 +392,7 @@ func void DIA_SLD_753_Baloro_SC_wills_wissen_Info()
 //	AI_Output(self,other,"DIA_SLD_753_Baloro_SC_wills_wissen_Info_08_02"); //Na gut! Du willst es ja nicht anders! Ich hab' dich gewarnt!
 	AI_Output(self,other,"DIA_SLD_753_Baloro_SC_wills_wissen_Info_08_02"); //Dobrá! Říkal sis o to! Já tě varoval!
 
-	DIA_SLD_753_Baloro_Attack();
+	DIA_SLD_753_Baloro_Attack() ;
 
 };
 
@@ -432,7 +432,7 @@ func void DIA_SLD_753_Baloro_Exit_Info()
 //						AI_Output(self,other,"DIA_SLD_753_Baloro_Exit_Info_08_02"); //Na gut! Wie du willst! Du hattest deine Chance!
 						AI_Output(self,other,"DIA_SLD_753_Baloro_Exit_Info_08_02"); //Dobrá! Jak chceš! Dostal si šanci!
 
-						SLD_753_Baloro_SC_choice = 1;
+						SLD_753_Baloro_SC_choice = 1 ;
 					}
 				else
 					{

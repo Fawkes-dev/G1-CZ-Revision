@@ -60,7 +60,7 @@ func void Grd_263_Asghan_NEST_Info()
 //	AI_Output(other,self,"Grd_263_Asghan_NEST_Info_15_05"); //Dann wird dort irgendwo ein Nest sein. Lass mich das Tor öffnen!
 	AI_Output(other,self,"Grd_263_Asghan_NEST_Info_15_05"); //Vypadá to, že tady někde musí být hnízdo. Nech mě otevřít ty vrata!
 //	AI_Output(self,other,"Grd_263_Asghan_NEST_Info_06_06"); //No! This gate can only be opened with Ian's permission! Nothing will be done before.
-//	AI_Output(self,other,"Grd_263_Asghan_NEST_Info_06_06"); //Nein! Erst wenn Ian die Erlaubnis gibt, wird dieses Tor geöffnet! Vorher geht gar nichts. 
+//	AI_Output(self,other,"Grd_263_Asghan_NEST_Info_06_06"); //Nein! Erst wenn Ian die Erlaubnis gibt, wird dieses Tor geöffnet! Vorher geht gar nichts.
 	AI_Output(self,other,"Grd_263_Asghan_NEST_Info_06_06"); //Ne! Tyhle vrata se smí otevírat jen s Ianovým svolením! Bez něj se nic nesmí udělat!
 
 //	B_LogEntry(CH2_MCEggs,"Asghan, the boss of the mine guards, won't open the gate. He wants Ian's permission.");

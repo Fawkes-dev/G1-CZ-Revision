@@ -1,5 +1,5 @@
 // ****************************************
-// Exit
+// 					Exit
 // ****************************************
 
 instance DIA_Aidan_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Aidan_Exit_Info()
 };
 
 // ****************************************
-// Hallo
+// 				Hallo
 // ****************************************
 
 instance DIA_Aidan_Hello(C_INFO)
@@ -65,7 +65,7 @@ func void DIA_Aidan_Hello_Info()
 };
 
 // **************************************************
-// Animaltrophies
+//				Animaltrophies
 // **************************************************
 
 instance Org_859_Aidan_Creatures(C_INFO)
@@ -102,31 +102,30 @@ func void Org_859_Aidan_Creatures_Info()
 		AI_Output(self,other,"Org_859_Aidan_Creatures_13_01"); //Co bys chtěl vědět?
 
 		Info_ClearChoices(Org_859_Aidan_Creatures);
-//		Info_AddChoice(Org_859_Aidan_Creatures," DIALOG_BACK 											",Org_859_Aidan_Creatures_BACK);
 		Info_AddChoice(Org_859_Aidan_Creatures, DIALOG_BACK ,Org_859_Aidan_Creatures_BACK);
 
 		if (Knows_GetTeeth == FALSE)
 		{
 //			Info_AddChoice(Org_859_Aidan_Creatures,"Remove teeth (Cost: 1 skill point, 50 ore)",Org_859_Aidan_Creatures_Zahn);
-//			Info_AddChoice(Org_859_Aidan_Creatures," "Zähne entfernen (Kosten: 1 LP, 50 Erz)" 		",Org_859_Aidan_Creatures_Zahn);
+//			Info_AddChoice(Org_859_Aidan_Creatures,"Zähne entfernen (Kosten: 1 LP, 50 Erz)",Org_859_Aidan_Creatures_Zahn);
 			Info_AddChoice(Org_859_Aidan_Creatures,"Vyjmout zuby (cena: 1 dovednostní bod, 50 nugetů)",Org_859_Aidan_Creatures_Zahn);
 		};
 		if (Knows_GetFur == FALSE)
 		{
 //			Info_AddChoice(Org_859_Aidan_Creatures,"Remove fur (Cost: 1 skill point, 100 ore)",Org_859_Aidan_Creatures_Fell);
-//			Info_AddChoice(Org_859_Aidan_Creatures," "Fell abziehen (Kosten: 1 LP, 100 Erz)"			",Org_859_Aidan_Creatures_Fell);
+//			Info_AddChoice(Org_859_Aidan_Creatures,"Fell abziehen (Kosten: 1 LP, 100 Erz)",Org_859_Aidan_Creatures_Fell);
 			Info_AddChoice(Org_859_Aidan_Creatures,"Stáhnout kožešinu (cena:1 dovednostní bod, 100 nugetů)",Org_859_Aidan_Creatures_Fell);
 		};
 		if (Knows_GetClaws == FALSE)
 		{
 //			Info_AddChoice(Org_859_Aidan_Creatures,"Remove claws (Cost: 1 skill point, 50 ore)",Org_859_Aidan_Creatures_Kralle);
-//			Info_AddChoice(Org_859_Aidan_Creatures," "Krallen abzuziehen (Kosten: 1 LP, 50 Erz)" 		",Org_859_Aidan_Creatures_Kralle);
+//			Info_AddChoice(Org_859_Aidan_Creatures,"Krallen abzuziehen (Kosten: 1 LP, 50 Erz)",Org_859_Aidan_Creatures_Kralle);
 			Info_AddChoice(Org_859_Aidan_Creatures,"Vyjmout drápy (cena: 1 dovednostní bod, 50 nugetů)",Org_859_Aidan_Creatures_Kralle);
 		};
 		if (Knows_GetHide == FALSE)
 		{
 //			Info_AddChoice(Org_859_Aidan_Creatures,"Skin reptiles (Cost: 1 skill point, 100 ore)",Org_859_Aidan_Creatures_Haut);
-//			Info_AddChoice(Org_859_Aidan_Creatures," "Häuten von Reptilien (Kosten: 1 LP, 100 Erz)"	",Org_859_Aidan_Creatures_Haut);
+//			Info_AddChoice(Org_859_Aidan_Creatures,"Häuten von Reptilien (Kosten: 1 LP, 100 Erz)",Org_859_Aidan_Creatures_Haut);
 			Info_AddChoice(Org_859_Aidan_Creatures,"Stáhnout plaza (cena: 1 dovednostní bod, 100 nugetů)",Org_859_Aidan_Creatures_Haut);
 		};
 	}
@@ -176,7 +175,7 @@ func void Org_859_Aidan_Creatures_Zahn()
 		}
 		else
 		{
-//			AI_Output(self,other,"Org_859_Aidan_Creatures_KEINE_LP_13_00"); //You need more experience, otherwise my knowledge won't be of any use to you.
+//			AI_Output(self,other,"Org_859_Aidan_Creatures_KEINE_LP_13_00"); //Du musst mehr Erfahrung sammeln, vorher wird dich mein Wissen nicht weiterbringen.
 			AI_Output(self,other,"Org_859_Aidan_Creatures_KEINE_LP_13_00"); //
 //			PrintScreen("Not enough skill points!", -1,-1,"FONT_OLD_20_WHITE.TGA",2);
 //			PrintScreen("Zu wenig Lernpunkte!", -1,-1,"FONT_OLD_20_WHITE.TGA",2);
@@ -185,7 +184,7 @@ func void Org_859_Aidan_Creatures_Zahn()
 	}
 	else
 	{
-//		AI_Output(self,other,"Org_859_Aidan_Creatures_KEIN_ERZ_13_00"); //I wanna see some ore first. Like I said: Everything has its price!
+//		AI_Output(self,other,"Org_859_Aidan_Creatures_KEIN_ERZ_13_00"); //Erst will ich mein Erz sehen - wie gesagt: Alles hat seinen Preis!
 		AI_Output(self,other,"Org_859_Aidan_Creatures_KEIN_ERZ_13_00"); //
 	};
 };
@@ -223,7 +222,7 @@ func void Org_859_Aidan_Creatures_Fell()
 		}
 		else
 		{
-//			AI_Output(self,other,"Org_859_Aidan_Creatures_KEINE_LP_13_00"); //You need more experience, otherwise my knowledge won't be of any use to you.
+//			AI_Output(self,other,"Org_859_Aidan_Creatures_KEINE_LP_13_00"); //Du musst mehr Erfahrung sammeln, vorher wird dich mein Wissen nicht weiterbringen.
 			AI_Output(self,other,"Org_859_Aidan_Creatures_KEINE_LP_13_00"); //
 //			PrintScreen("Not enough skill points!", -1,-1,"FONT_OLD_20_WHITE.TGA",2);
 //			PrintScreen("Zu wenig Lernpunkte!", -1,-1,"FONT_OLD_20_WHITE.TGA",2);
@@ -232,7 +231,7 @@ func void Org_859_Aidan_Creatures_Fell()
 	}
 	else
 	{
-//		AI_Output(self,other,"Org_859_Aidan_Creatures_KEIN_ERZ_13_00"); //I wanna see some ore first. Like I said: Everything has its price!
+//		AI_Output(self,other,"Org_859_Aidan_Creatures_KEIN_ERZ_13_00"); //Erst will ich mein Erz sehen - wie gesagt: Alles hat seinen Preis!
 		AI_Output(self,other,"Org_859_Aidan_Creatures_KEIN_ERZ_13_00"); //
 	};
 };
@@ -269,7 +268,7 @@ func void Org_859_Aidan_Creatures_Kralle()
 		}
 		else
 		{
-//			AI_Output(self,other,"Org_859_Aidan_Creatures_KEINE_LP_13_00"); //You need more experience, otherwise my knowledge won't be of any use to you.
+//			AI_Output(self,other,"Org_859_Aidan_Creatures_KEINE_LP_13_00"); //Du musst mehr Erfahrung sammeln, vorher wird dich mein Wissen nicht weiterbringen.
 			AI_Output(self,other,"Org_859_Aidan_Creatures_KEINE_LP_13_00"); //
 //			PrintScreen("Not enough skill points!", -1,-1,"FONT_OLD_20_WHITE.TGA",2);
 //			PrintScreen("Zu wenig Lernpunkte!", -1,-1,"FONT_OLD_20_WHITE.TGA",2);
@@ -278,7 +277,7 @@ func void Org_859_Aidan_Creatures_Kralle()
 	}
 	else
 	{
-//		AI_Output(self,other,"Org_859_Aidan_Creatures_KEIN_ERZ_13_00"); //I wanna see some ore first. Like I said: Everything has its price!
+//		AI_Output(self,other,"Org_859_Aidan_Creatures_KEIN_ERZ_13_00"); //Erst will ich mein Erz sehen - wie gesagt: Alles hat seinen Preis!
 		AI_Output(self,other,"Org_859_Aidan_Creatures_KEIN_ERZ_13_00"); //
 	};
 };
@@ -315,6 +314,7 @@ func void Org_859_Aidan_Creatures_Haut()
 		}
 		else
 		{
+//			AI_Output(self,other,"Org_859_Aidan_Creatures_KEINE_LP_13_00"); //Du musst mehr Erfahrung sammeln, vorher wird dich mein Wissen nicht weiterbringen.
 			AI_Output(self,other,"Org_859_Aidan_Creatures_KEINE_LP_13_00"); //You need more experience, otherwise my knowledge won't be of any use to you.
 //			PrintScreen("Not enough skill points!", -1,-1,"FONT_OLD_20_WHITE.TGA",2);
 //			PrintScreen("Zu wenig Lernpunkte!", -1,-1,"FONT_OLD_20_WHITE.TGA",2);
@@ -323,6 +323,7 @@ func void Org_859_Aidan_Creatures_Haut()
 	}
 	else
 	{
+//		AI_Output(self,other,"Org_859_Aidan_Creatures_KEIN_ERZ_13_00"); //Erst will ich mein Erz sehen - wie gesagt: Alles hat seinen Preis!
 		AI_Output(self,other,"Org_859_Aidan_Creatures_KEIN_ERZ_13_00"); //I wanna see some ore first. Like I said: Everything has its price!
 	};
 };

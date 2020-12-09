@@ -1,5 +1,5 @@
 // **************************************
-// EXIT 
+//					EXIT 
 // **************************************
 
 instance DIA_Bartholo_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Bartholo_Exit_Info()
 };
 
 // ************************************************************
-// HAllo
+// 					HAllo
 // ************************************************************
 
 instance Info_Bartholo_HAllo(C_INFO)
@@ -63,7 +63,7 @@ func void Info_Bartholo_HAllo_Info()
 };
 
 // ************************************************************
-// PERM TRADE
+// 					PERM TRADE
 // ************************************************************
 
 instance Info_Bartholo_PERM(C_INFO)
@@ -82,10 +82,10 @@ instance Info_Bartholo_PERM(C_INFO)
 func int Info_Bartholo_PERM_Condition()
 { 
 //SN: Problematisch, da Bartholo auch einen wichtigen Schlüssel hat!
-// if (Npc_KnowsInfo(hero,Info_Bartholo_Hallo))
-// {
-// return 1;
-// };
+//	if (Npc_KnowsInfo(hero,Info_Bartholo_Hallo))
+//	{
+//		return 1;
+//	};
 };
 
 func void Info_Bartholo_PERM_Info()
@@ -99,7 +99,7 @@ func void Info_Bartholo_PERM_Info()
 };
 
 // ************************************************************
-// KRAUTBOTE von Kalom
+// 					KRAUTBOTE von Kalom
 // ************************************************************
 
 instance Info_Bartholo_Krautbote(C_INFO)
@@ -167,7 +167,7 @@ func void Info_Bartholo_Krautbote_Info()
 };
 
 // **************************************************************************
-// Wartet auf den SC
+// 				Wartet auf den SC
 // **************************************************************************
 
 instance DIA_EBR_106_Bartholo_Wait4SC(C_INFO)

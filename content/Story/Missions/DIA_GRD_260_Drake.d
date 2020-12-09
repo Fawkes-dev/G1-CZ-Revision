@@ -198,7 +198,9 @@ instance Grd_260_Drake_Ian(C_INFO) //E1
 	information = Grd_260_Drake_Ian_Info;
 	important = 0;
 	permanent = 0;
-	description = "Where can I find Ian?";
+//	description = "Where can I find Ian?";
+//	description = "Wo kann ich Ian finden ?";
+	description = "Kde najdu Iana?";
 };
 
 func int Grd_260_Drake_Ian_Condition()
@@ -229,7 +231,7 @@ func void Grd_260_Drake_Ian_Info()
 };  
 
 /*------------------------------------------------------------------------
-// GARDEAUFNAHME //
+//						GARDEAUFNAHME //
 ------------------------------------------------------------------------*/
 instance Grd_260_Drake_GARDEAUFNAHME(C_INFO)
 {

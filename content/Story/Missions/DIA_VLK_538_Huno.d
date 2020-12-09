@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_Huno_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Huno_Exit_Info()
 };
 
 // **************************************************
-// Info YouKnowYourJob
+//	Info YouKnowYourJob
 // **************************************************
 instance DIA_Huno_YouKnowYourJob(C_INFO)
 {
@@ -57,7 +57,7 @@ func void DIA_Huno_YouKnowYourJob_Info()
 };
 
 // **************************************************
-// Info HowLong
+//	Info HowLong
 // **************************************************
 instance DIA_Huno_HowLong(C_INFO)
 {
@@ -109,7 +109,7 @@ func void DIA_Huno_HowLong_Info()
 };
 
 // **************************************************
-// Info HowsYourBusiness
+//	Info HowsYourBusiness
 // **************************************************
 instance DIA_Huno_HowsYourBusiness(C_INFO)
 {
@@ -155,7 +155,7 @@ func void DIA_Huno_HowsYourBusiness_Info()
 };
 
 // **************************************************
-// Info LEARNSMITH
+//	Info LEARNSMITH
 // **************************************************
 var int Huno_LearnSmith;
 // **************************************************
@@ -215,7 +215,7 @@ func void DIA_Huno_LEARNSMITH_Info()
 };
 
 // **************************************************
-// Info BUYSMITH
+//	Info BUYSMITH
 // **************************************************
 instance DIA_Huno_BUYSMITH(C_INFO)
 {

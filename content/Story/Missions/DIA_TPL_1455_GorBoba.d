@@ -60,9 +60,7 @@ func void Info_TPL_1455_GorBoba1_Info()
 	AI_StopProcessInfos(self);
 
 	Log_CreateTopic        ( "Orktempel",LOG_NOTE);
-//	B_LogEntry            ( "Orktempel","GorBoba wanted to stop me. He told me that Kalom and his supporters had been given powers by the high priest to make them invincible by human weapons."); 
-//	B_LogEntry            ( "GorBoba hat sich mir in den Weg gestellt um micht auf zu halten. Ich habe noch von ihm erfahren, dass Kalom und seine Anhänger von dem Hohenpriester Macht verliehen bekommen haben, so dass sie nicht mehr mit menschlichen Waffen verletzt werden können.","GorBoba wanted to stop me. He told me that Kalom and his supporters had been given powers by the high priest to make them invincible by human weapons."); 
-	B_LogEntry            ( "Zastavil mě GorBoba a snažil se odradit od cesty. Říkal, že Kalom a jeho stoupenci byli vysokým knězem obdařeni silou, která je činí nezranitelnými běžnými lidskými zbraněmi.","GorBoba wanted to stop me. He told me that Kalom and his supporters had been given powers by the high priest to make them invincible by human weapons."); 
+	B_LogEntry            ( "Orktempel","GorBoba wanted to stop me. He told me that Kalom and his supporters had been given powers by the high priest to make them invincible by human weapons."); 
 
 	Npc_SetAttitude(self,ATT_HOSTILE);
 	Npc_SetTempAttitude(self,ATT_HOSTILE); 

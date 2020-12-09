@@ -25,7 +25,7 @@ Ulu-Mulu Ulumulu -> Das Ulumulu
 */
 
 //---------------------------------------------------------------------
-// Info EXIT
+//	Info EXIT
 //---------------------------------------------------------------------
 instance Info_FreemineOrc_EXIT(C_INFO)
 {
@@ -68,7 +68,7 @@ func void Info_FreemineOrc_EXIT_Info()
 };
 
 //---------------------------------------------------------------------
-// Info INTRO
+//	Info INTRO
 //---------------------------------------------------------------------
 instance Info_FreemineOrc_INTRO(C_INFO)
 {
@@ -92,7 +92,7 @@ func void Info_FreemineOrc_INTRO_Info()
 };
 
 //---------------------------------------------------------------------
-// Info WASPASSIERT
+//	Info WASPASSIERT
 //---------------------------------------------------------------------
 instance Info_FreemineOrc_WASPASSIERT(C_INFO)
 {
@@ -134,7 +134,7 @@ func void Info_FreemineOrc_WASPASSIERT_Info()
 };
 
 //---------------------------------------------------------------------
-// Info WASTUN
+//	Info WASTUN
 //---------------------------------------------------------------------
 instance Info_FreemineOrc_WASTUN(C_INFO)
 {
@@ -176,7 +176,7 @@ func void Info_FreemineOrc_WASTUN_Info()
 };
 
 //---------------------------------------------------------------------
-// Info OFFER
+//	Info OFFER
 //---------------------------------------------------------------------
 instance Info_FreemineOrc_OFFER(C_INFO)
 {
@@ -214,7 +214,7 @@ func void Info_FreemineOrc_OFFER_Info()
 };
 
 //---------------------------------------------------------------------
-// Info CRAWLER
+//	Info CRAWLER
 //---------------------------------------------------------------------
 instance Info_FreemineOrc_CRAWLER(C_INFO)
 {
@@ -253,7 +253,7 @@ func void Info_FreemineOrc_CRAWLER_Info()
 };
 
 //---------------------------------------------------------------------
-// Info TONGUE
+//	Info TONGUE
 //---------------------------------------------------------------------
 instance Info_FreemineOrc_TONGUE(C_INFO)
 {
@@ -286,7 +286,7 @@ func void Info_FreemineOrc_TONGUE_Info()
 };
 
 //---------------------------------------------------------------------
-// Info SEARCHPOTION - Medizin noch nicht gefunden
+//	Info SEARCHPOTION - Medizin noch nicht gefunden
 //---------------------------------------------------------------------
 instance Info_FreemineOrc_SEARCHPOTION(C_INFO)
 {
@@ -329,7 +329,7 @@ func void Info_FreemineOrc_SearchPotion_Info()
 };
 
 //---------------------------------------------------------------------
-// Info SUCHEULUMULU
+//	Info SUCHEULUMULU
 //---------------------------------------------------------------------
 instance Info_FreemineOrc_SUCHEULUMULU(C_INFO)
 {
@@ -380,7 +380,7 @@ func void Info_FreemineOrc_SUCHEULUMULU_Info()
 };
 
 //---------------------------------------------------------------------
-// Info GIVEPOTION
+//	Info GIVEPOTION
 //---------------------------------------------------------------------
 instance Info_FreemineOrc_GIVEPOTION(C_INFO)
 {
@@ -435,7 +435,7 @@ func void Info_FreemineOrc_GIVEPOTION_Info()
 //	AI_Output(self,hero,"Info_FreemineOrc_GIVEPOTION_17_06"); //Fremder brauchen KROTAHK, KHAZ-TAK, DWACHKARR und ORTH-ANTAK.
 	AI_Output(self,hero,"Info_FreemineOrc_GIVEPOTION_17_06"); //Cizinec potřebovat KROTAHK, KHAZ-TAK, DWACHKARR a ORTH-ANTAK.
 //	AI_Output(self,hero,"Info_FreemineOrc_GIVEPOTION_17_07"); //Stranger bring, then Tarrok make Ulu-Mulu!
-//	AI_Output(self,hero,"Info_FreemineOrc_GIVEPOTION_17_07"); //Fremder bringen, dann Tarrok machen Ulu-Mulu!	
+//	AI_Output(self,hero,"Info_FreemineOrc_GIVEPOTION_17_07"); //Fremder bringen, dann Tarrok machen Ulu-Mulu!
 	AI_Output(self,hero,"Info_FreemineOrc_GIVEPOTION_17_07"); //Cizinec to přinést, Tarrok pak udělat Ulu-Mulu!
 
 	if !Npc_KnowsInfo(hero,Info_FreemineOrc_OFFER)
@@ -447,7 +447,7 @@ func void Info_FreemineOrc_GIVEPOTION_Info()
 };
 
 //---------------------------------------------------------------------
-// Info FIREWARAN
+//	Info FIREWARAN
 //---------------------------------------------------------------------
 instance Info_FreemineOrc_FIREWARAN(C_INFO)
 {
@@ -475,13 +475,13 @@ func void Info_FreemineOrc_FIREWARAN_Info()
 //	AI_Output(hero,self,"Info_FreemineOrc_FIREWARAN_15_01"); //Was ist ein KROTAHK?
 	AI_Output(hero,self,"Info_FreemineOrc_FIREWARAN_15_01"); //Co je to KROTAHK?
 //	AI_Output(self,hero,"Info_FreemineOrc_FIREWARAN_17_02"); //Be tongue of fire! Be tongue of fire lizard!
-//	AI_Output(self,hero,"Info_FreemineOrc_FIREWARAN_17_02"); //Seien Flammenzunge! Seien Zunge von Feuerechse! 
+//	AI_Output(self,hero,"Info_FreemineOrc_FIREWARAN_17_02"); //Seien Flammenzunge! Seien Zunge von Feuerechse!
 	AI_Output(self,hero,"Info_FreemineOrc_FIREWARAN_17_02"); //Být ohnivý jazyk. Být jazyk ohnivé ještěrky!
 
 };
 
 //---------------------------------------------------------------------
-// Info FIREWARAN2
+//	Info FIREWARAN2
 //---------------------------------------------------------------------
 instance Info_FreemineOrc_FIREWARAN2(C_INFO)
 {
@@ -511,7 +511,7 @@ func void Info_FreemineOrc_FIREWARAN2_Info()
 //	AI_Output(hero,self,"Info_FreemineOrc_FIREWARAN2_15_01"); //Wo finde ich eine Feuerechse?
 	AI_Output(hero,self,"Info_FreemineOrc_FIREWARAN2_15_01"); //Kde najdu ohnivou ještěrku?
 //	AI_Output(self,hero,"Info_FreemineOrc_FIREWARAN2_17_02"); //Fire lizard live home. Home of Tarrok. Stranger need search!
-//	AI_Output(self,hero,"Info_FreemineOrc_FIREWARAN2_17_02"); //Feuerechsen in Heimat leben. Heimat von Tarrok. Fremder suchen müssen! 
+//	AI_Output(self,hero,"Info_FreemineOrc_FIREWARAN2_17_02"); //Feuerechsen in Heimat leben. Heimat von Tarrok. Fremder suchen müssen!
 	AI_Output(self,hero,"Info_FreemineOrc_FIREWARAN2_17_02"); //Ohnivá ještěrka žít doma. Doma u Tarroka. Cizinec muset hledat!
 //	AI_Output(self,hero,"Info_FreemineOrc_FIREWARAN2_17_03"); //Also find fire lizard on sand near sea.
 //	AI_Output(self,hero,"Info_FreemineOrc_FIREWARAN2_17_03"); //Auch können finden Feuerechse auf Sand bei Meer.
@@ -523,7 +523,7 @@ func void Info_FreemineOrc_FIREWARAN2_Info()
 };
 
 //---------------------------------------------------------------------
-// Info SHADOWBEAST
+//	Info SHADOWBEAST
 //---------------------------------------------------------------------
 instance Info_FreemineOrc_SHADOWBEAST(C_INFO)
 {
@@ -551,13 +551,13 @@ func void Info_FreemineOrc_SHADOWBEAST_Info()
 //	AI_Output(hero,self,"Info_FreemineOrc_SHADOWBEAST_Info_15_01"); //Was bedeutet KHAZ-TAK?
 	AI_Output(hero,self,"Info_FreemineOrc_SHADOWBEAST_Info_15_01"); //Co je to KHAZ-TAK?
 //	AI_Output(self,hero,"Info_FreemineOrc_SHADOWBEAST_Info_17_02"); //Be horn of shadowbeast. Horn sharp as knife and hard as stone.
-//	AI_Output(self,hero,"Info_FreemineOrc_SHADOWBEAST_Info_17_02"); //Seien Horn von Schattenläufer. Horn spitz wie Dolch und hart wie Stein. 
+//	AI_Output(self,hero,"Info_FreemineOrc_SHADOWBEAST_Info_17_02"); //Seien Horn von Schattenläufer. Horn spitz wie Dolch und hart wie Stein.
 	AI_Output(self,hero,"Info_FreemineOrc_SHADOWBEAST_Info_17_02"); //Být roh stínové obludy. Roh ostrý jako nůž a tvrdý jako kámen.
 
 };
 
 //---------------------------------------------------------------------
-// Info SHADOWBEAST2
+//	Info SHADOWBEAST2
 //---------------------------------------------------------------------
 instance Info_FreemineOrc_SHADOWBEAST2(C_INFO)
 {
@@ -599,7 +599,7 @@ func void Info_FreemineOrc_SHADOWBEAST2_Info()
 };
 
 //---------------------------------------------------------------------
-// Info SWAMPSHARK
+//	Info SWAMPSHARK
 //---------------------------------------------------------------------
 instance Info_FreemineOrc_SWAMPSHARK(C_INFO)
 {
@@ -633,7 +633,7 @@ func void Info_FreemineOrc_SWAMPSHARK_Info()
 };
 
 //---------------------------------------------------------------------
-// Info SWAMPSHARK2
+//	Info SWAMPSHARK2
 //---------------------------------------------------------------------
 instance Info_FreemineOrc_SWAMPSHARK2(C_INFO)
 {
@@ -672,7 +672,7 @@ func void Info_FreemineOrc_SWAMPSHARK2_Info()
 };
 
 //---------------------------------------------------------------------
-// Info TROLL
+//	Info TROLL
 //---------------------------------------------------------------------
 instance Info_FreemineOrc_TROLL(C_INFO)
 {
@@ -705,7 +705,7 @@ func void Info_FreemineOrc_TROLL_Info()
 };
 
 //---------------------------------------------------------------------
-// Info TROLL2
+//	Info TROLL2
 //---------------------------------------------------------------------
 instance Info_FreemineOrc_TROLL2(C_INFO)
 {
@@ -750,7 +750,7 @@ func void Info_FreemineOrc_TROLL2_Info()
 };
 
 //---------------------------------------------------------------------
-// Info LOOKINGULUMULU
+//	Info LOOKINGULUMULU
 //---------------------------------------------------------------------
 instance Info_FreemineOrc_LOOKINGULUMULU(C_INFO)
 {
@@ -792,7 +792,7 @@ func void Info_FreemineOrc_LOOKINGULUMULU_Info()
 };
 
 //---------------------------------------------------------------------
-// Info EVERYULUMULU
+//	Info EVERYULUMULU
 //---------------------------------------------------------------------
 instance Info_FreemineOrc_EVERYULUMULU(C_INFO)
 {

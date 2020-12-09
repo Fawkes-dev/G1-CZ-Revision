@@ -22,7 +22,7 @@ func void IE_397_Announcer_Exit_Info()
 };
 
 //---------------------------------------------------------------------
-// InExtremo-Ansage
+//	InExtremo-Ansage
 //---------------------------------------------------------------------
 instance IE_397_Announcer_ANNOUNCE(C_INFO)
 {

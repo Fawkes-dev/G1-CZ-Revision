@@ -1,5 +1,5 @@
 // ****************************************
-// FIRST 
+// 					FIRST 
 // ****************************************
 
 instance GUR_1201_CorKalom_FIRST(C_INFO)
@@ -29,7 +29,7 @@ func void GUR_1201_CorKalom_FIRST_Info()
 };  
 
 // ****************************************
-// Wanna Join
+// 				Wanna Join
 // ****************************************
 
 instance GUR_1201_CorKalom_WannaJoin(C_INFO)
@@ -76,7 +76,7 @@ func void GUR_1201_CorKalom_WannaJoin_Info()
 };  
 
 // ****************************************
-// Kaloms Recipe
+// 				Kaloms Recipe
 // ****************************************
 
 instance GUR_1201_CorKalom_Recipe(C_INFO)
@@ -114,7 +114,7 @@ func void GUR_1201_CorKalom_Recipe_Info()
 };  
 
 // ****************************************
-// Experimente (PERM)
+// 				Experimente (PERM)
 // ****************************************
 
 instance GUR_1201_CorKalom_Experimente(C_INFO)
@@ -205,7 +205,7 @@ func void GUR_1201_CorKalom_BRINGWEED_Info()
 };  
 
 // ****************************************
-// Crawlerzangen (PERM)
+// 				Crawlerzangen (PERM)
 // ****************************************
 
 instance GUR_1201_CorKalom_Crawlerzangen(C_INFO)
@@ -264,7 +264,7 @@ func void GUR_1201_CorKalom_Crawlerzangen_Info()
 }; 
 
 // ****************************************
-// Join PSI
+// 				Join PSI
 // ****************************************
 
 instance GUR_1201_CorKalom_JoinPSI(C_INFO)
@@ -369,8 +369,8 @@ func void GUR_1201_CorKalom_JoinPSI_Info()
 			Log_CreateTopic(CH1_JoinOC,LOG_MISSION);
 			Log_SetTopicStatus(CH1_JoinOC,LOG_FAILED);
 //			B_LogEntry(CH1_JoinOC,"Since I've now finally decided to join the Brotherhood of the Sleeper in the swamp camp, I can't become one Gomez' Shadows any more.");
-//			B_LogEntry(CH1_JoinOC,"Scatty der Arenameister wird von mir beeindruckt sein, wenn ich einen der Kämpfer fordere.");
-			B_LogEntry(CH1_JoinOC,"Scatty, mistr arény, ocení, když vyzvu jednoho z bojovníků.");
+//			B_LogEntry(CH1_JoinOC,"Da ich mich nun endgültig für die Bruderschaft des Schläfers im Sumpflager entschieden habe, kann ich kein Schatten Gomez' mehr werden");
+			B_LogEntry(CH1_JoinOC,"Protože jsem se nakonec rozhodl přidat k Bratrstvu Spáče Tábora v bažinách, nemohu se stát jedním z Gomezových Stínů.");
 
 			Log_CreateTopic(CH1_JoinNC,LOG_MISSION);
 			Log_SetTopicStatus(CH1_JoinNC,LOG_FAILED);
@@ -404,7 +404,7 @@ func void GUR_1201_CorKalom_JoinPSI_Info()
 };
 
 // ****************************************
-// Join PSI2
+// 				Join PSI2
 // ****************************************
 
 instance GUR_1201_CorKalom_JoinPSI2(C_INFO)
@@ -462,7 +462,7 @@ func void GUR_1201_CorKalom_JoinPSI2_Info()
 };  
 
 // **************************************************************************
-// MISSION: Drug Monopol
+// 							MISSION: Drug Monopol
 // **************************************************************************
 
 // --------------------------------------------------------------------------
@@ -525,7 +525,7 @@ func void Info_Kalom_DrugMonopol_Info()
 };
 
 // **************************************************************************
-// SUCCESS
+// 							SUCCESS
 // **************************************************************************
 
 instance Info_Kalom_Success(C_INFO)
@@ -590,7 +590,7 @@ func void Info_Kalom_Success_Info()
 };
 
 // ****************************************************************
-// KRAUTBOTE ZURÜCK
+// 							KRAUTBOTE ZURÜCK
 // ****************************************************************
 
 instance Info_Kalom_KrautboteBACK(C_INFO)
@@ -645,7 +645,7 @@ func void Info_Kalom_KrautboteBACK_Info()
 
 // **************************************************************************
 //
-// KAPITEL 2
+// 									KAPITEL 2
 //
 // **************************************************************************
 instance Info_CorKalom_BringFocus(C_INFO)
@@ -761,7 +761,7 @@ func void GUR_1201_CorKalom_SACHE_Info()
 	Info_Clearchoices (GUR_1201_CorKalom_SACHE);
 //	Info_Addchoice (GUR_1201_CorKalom_SACHE,"No",GUR_1201_CorKalom_SACHE_NEIN);
 //	Info_Addchoice (GUR_1201_CorKalom_SACHE,"Nein",GUR_1201_CorKalom_SACHE_NEIN);
-	Info_Addchoice (GUR_1201_CorKalom_SACHE,"Ne.",GUR_1201_CorKalom_SACHE_NEIN);
+	Info_Addchoice (GUR_1201_CorKalom_SACHE,"Ne",GUR_1201_CorKalom_SACHE_NEIN);
 //	Info_Addchoice (GUR_1201_CorKalom_SACHE,"Yes",GUR_1201_CorKalom_SACHE_JA);
 //	Info_Addchoice (GUR_1201_CorKalom_SACHE,"Ja",GUR_1201_CorKalom_SACHE_JA);
 	Info_Addchoice (GUR_1201_CorKalom_SACHE,"Ano.",GUR_1201_CorKalom_SACHE_JA);
@@ -1151,19 +1151,19 @@ func void Info_CorKalom_BringMCQBalls_Success_Info()
 
 	Info_ClearChoices(Info_CorKalom_BringMCQBalls_Success);
 //	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"A rune.",Info_CorKalom_BringMCQBalls_Success_RUNE);
-//	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,""Eine Rune"	",Info_CorKalom_BringMCQBalls_Success_RUNE);
+//	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"Eine Rune",Info_CorKalom_BringMCQBalls_Success_RUNE);
 	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"Runu.",Info_CorKalom_BringMCQBalls_Success_RUNE);
 //	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"A weapon.",Info_CorKalom_BringMCQBalls_Success_WAFFE);
-//	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,""Eine Waffe"	",Info_CorKalom_BringMCQBalls_Success_WAFFE);
+//	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"Eine Waffe",Info_CorKalom_BringMCQBalls_Success_WAFFE);
 	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"Nějakou zbraň.",Info_CorKalom_BringMCQBalls_Success_WAFFE);
 //	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"A healing potion.",Info_CorKalom_BringMCQBalls_Success_HEAL);
-//	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,""Heilmittel"	",Info_CorKalom_BringMCQBalls_Success_HEAL);
+//	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"Heilmittel",Info_CorKalom_BringMCQBalls_Success_HEAL);
 	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"Hojivý lektvar.",Info_CorKalom_BringMCQBalls_Success_HEAL);
 //	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"Ore.",Info_CorKalom_BringMCQBalls_Success_ORE);
-//	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,""Erz"		",Info_CorKalom_BringMCQBalls_Success_ORE);
+//	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"Erz",Info_CorKalom_BringMCQBalls_Success_ORE);
 	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"Rudu.",Info_CorKalom_BringMCQBalls_Success_ORE);
 //	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"Mana.",Info_CorKalom_BringMCQBalls_Success_MANA);
-//	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,""Manatrank"	",Info_CorKalom_BringMCQBalls_Success_MANA);
+//	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"Manatrank",Info_CorKalom_BringMCQBalls_Success_MANA);
 	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"Manu.",Info_CorKalom_BringMCQBalls_Success_MANA);
 };
 func void Info_CorKalom_BringMCQBalls_Success_RUNE()
@@ -1229,7 +1229,7 @@ func void Info_CorKalom_BringMCQBalls_Success_MANA()
 }; 
 
 // **************************************************************************
-// MISSION: Bring Book
+// 				MISSION: Bring Book
 // **************************************************************************
 instance Info_CorKalom_BringBook(C_INFO)
 {
@@ -1291,16 +1291,15 @@ func void Info_CorKalom_BringBook_Info()
 
 	Info_ClearChoices(Info_CorKalom_BringBook);
 
-//	Info_Addchoice(Info_CorKalom_BringBook,"DIALOG_BACK						",Info_CorKalom_BringBook_BACK);
 	Info_Addchoice(Info_CorKalom_BringBook,DIALOG_BACK ,Info_CorKalom_BringBook_BACK);
 //	Info_Addchoice(Info_CorKalom_BringBook,"What will I get for it?",Info_CorKalom_BringBook_EARN);
-//	Info_Addchoice(Info_CorKalom_BringBook,""Was ist für mich drin?"			",Info_CorKalom_BringBook_EARN);
+//	Info_Addchoice(Info_CorKalom_BringBook,"Was ist für mich drin?",Info_CorKalom_BringBook_EARN);
 	Info_Addchoice(Info_CorKalom_BringBook,"Co za to dostanu?",Info_CorKalom_BringBook_EARN);
 //	Info_Addchoice(Info_CorKalom_BringBook,"Who stole the almanac?",Info_CorKalom_BringBook_WHO);
 //	Info_Addchoice(Info_CorKalom_BringBook,"Wer hat den Almanach gestohlen?",Info_CorKalom_BringBook_WHO);
 	Info_Addchoice(Info_CorKalom_BringBook,"Kdo ukradl ten almanach?",Info_CorKalom_BringBook_WHO);
 //	Info_Addchoice(Info_CorKalom_BringBook,"Where can I find Talas?",Info_CorKalom_BringBook_WHERE);
-//	Info_Addchoice(Info_CorKalom_BringBook,""Wo finde ich Talas?"			",Info_CorKalom_BringBook_WHERE);
+//	Info_Addchoice(Info_CorKalom_BringBook,"Wo finde ich Talas?",Info_CorKalom_BringBook_WHERE);
 	Info_Addchoice(Info_CorKalom_BringBook,"Kde najdu Talase?",Info_CorKalom_BringBook_WHERE);
 };
 func void Info_CorKalom_BringBook_BACK()
@@ -1354,7 +1353,7 @@ func int Info_CorKalom_BringBook_Success_Condition()
 	if (Npc_HasItems(Hero,ItWrFokusbuch)
 	&& (CorKalom_BringBook==LOG_RUNNING))
 	{
-		return 1; 
+		return 1 ; 
 	};
 };
 func void Info_CorKalom_BringBook_Success_Info()
@@ -1423,14 +1422,14 @@ func void Info_CorKalom_Belohnung_Info()
 
 	Info_ClearChoices(Info_CorKalom_Belohnung);
 //	Info_Addchoice(Info_CorKalom_Belohnung,"A spell scroll",Info_CorKalom_Belohnung_SCROLL);
-//	Info_Addchoice(Info_CorKalom_Belohnung,""Eine Spruchrolle"	",Info_CorKalom_Belohnung_SCROLL);
-	Info_Addchoice(Info_CorKalom_Belohnung,"Kouzelný svitek.",Info_CorKalom_Belohnung_SCROLL);
+//	Info_Addchoice(Info_CorKalom_Belohnung,"Eine Spruchrolle",Info_CorKalom_Belohnung_SCROLL);
+	Info_Addchoice(Info_CorKalom_Belohnung,"Kouzelný svitek",Info_CorKalom_Belohnung_SCROLL);
 //	Info_Addchoice(Info_CorKalom_Belohnung,"Ore",Info_CorKalom_Belohnung_ORE);
-//	Info_Addchoice(Info_CorKalom_Belohnung,""Erz"				",Info_CorKalom_Belohnung_ORE);
-	Info_Addchoice(Info_CorKalom_Belohnung,"Ruda.",Info_CorKalom_Belohnung_ORE);
+//	Info_Addchoice(Info_CorKalom_Belohnung,"Erz",Info_CorKalom_Belohnung_ORE);
+	Info_Addchoice(Info_CorKalom_Belohnung,"Ruda",Info_CorKalom_Belohnung_ORE);
 //	Info_Addchoice(Info_CorKalom_Belohnung,"Mana potion",Info_CorKalom_Belohnung_MANA);
-//	Info_Addchoice(Info_CorKalom_Belohnung,""Manatrank"			",Info_CorKalom_Belohnung_MANA);
-	Info_Addchoice(Info_CorKalom_Belohnung,"Lektvar many.",Info_CorKalom_Belohnung_MANA);
+//	Info_Addchoice(Info_CorKalom_Belohnung,"Manatrank",Info_CorKalom_Belohnung_MANA);
+	Info_Addchoice(Info_CorKalom_Belohnung,"Lektvar many",Info_CorKalom_Belohnung_MANA);
 
 };
 func void Info_CorKalom_Belohnung_SCROLL()

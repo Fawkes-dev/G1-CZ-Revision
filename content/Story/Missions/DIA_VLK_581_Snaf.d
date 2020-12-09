@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_Snaf_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Snaf_Exit_Info()
 };
 
 // **************************************************
-// Erstes Mal aufkreuzen
+// 				Erstes Mal aufkreuzen
 // **************************************************
 
 instance DIA_Snaf_Hello(C_INFO)
@@ -66,7 +66,7 @@ func void DIA_Snaf_Hello_Info()
 };
 
 // **************************************************
-// Bring Zutaten
+// 				Bring Zutaten
 // **************************************************
 	var int Snaf_Zutaten; 
 	var int Snaf_FreeMBRagout;
@@ -106,10 +106,10 @@ func void DIA_Snaf_Zutaten_Info()
 
 	Info_ClearChoices(DIA_Snaf_Zutaten);
 //	Info_AddChoice(DIA_Snaf_Zutaten,"You want me to throw up?",DIA_Snaf_Zutaten_KOTZ);
-//	Info_AddChoice(DIA_Snaf_Zutaten," "Willst du, dass ich kotze?"	",DIA_Snaf_Zutaten_KOTZ);
+//	Info_AddChoice(DIA_Snaf_Zutaten,"Willst du, dass ich kotze?",DIA_Snaf_Zutaten_KOTZ);
 	Info_AddChoice(DIA_Snaf_Zutaten,"Chceš, abych se pozvracel?",DIA_Snaf_Zutaten_KOTZ);
 //	Info_AddChoice(DIA_Snaf_Zutaten,"Sounds good.",DIA_Snaf_Zutaten_DoIt);
-//	Info_AddChoice(DIA_Snaf_Zutaten," "Hört sich gut an."			",DIA_Snaf_Zutaten_DoIt);
+//	Info_AddChoice(DIA_Snaf_Zutaten,"Hört sich gut an.",DIA_Snaf_Zutaten_DoIt);
 	Info_AddChoice(DIA_Snaf_Zutaten,"To zní dobře.",DIA_Snaf_Zutaten_DoIt);
 };
 
@@ -159,7 +159,7 @@ func void DIA_Snaf_Zutaten_DoIt()
 };
 
 // **************************************************
-// SUCCESS
+// 					SUCCESS
 // **************************************************
 
 instance DIA_Snaf_ZutatenSuccess(C_INFO)
@@ -204,8 +204,8 @@ func void DIA_Snaf_ZutatenSuccess_Info()
 
 	Log_SetTopicStatus(CH1_SnafsRecipe,LOG_SUCCESS);
 //	B_LogEntry(CH1_SnafsRecipe,"Snaf was really satisfied when I gave him the ingredients.");
-//	B_LogEntry(CH1_SnafsRecipe,"Der Koch Snaf im Aussenring des Alten Lagers hat mich geschickt, ihm 3 Fleischwanzen und 5 Höllenpilze für ein neues Rezept zu besorgen.");
-	B_LogEntry(CH1_SnafsRecipe,"Snaf, kuchař který žije na Vnějším okruhu, mě poslal, abych mu pro nový kuchařský recept opatřil 3 žravé štěnice a 5 pekelných hub.");
+//	B_LogEntry(CH1_SnafsRecipe,"Snaf war sehr zufrieden, als ich ihm die Zutaten übergab.");
+	B_LogEntry(CH1_SnafsRecipe,"Snaf byl velmi spokojený, když jsem mu přinesl ty přísady.");
 
 	if Snaf_FreeMBRagout==TRUE
 	{
@@ -220,7 +220,7 @@ func void DIA_Snaf_ZutatenSuccess_Info()
 };
 
 // **************************************************
-// AFTER SUCCESS
+// 					AFTER SUCCESS
 // **************************************************
 	var int Snaf_RagoutDay;
 // **************************************************
@@ -269,7 +269,7 @@ func void DIA_Snaf_AfterSuccess_Info()
 };
 
 // **************************************************
-// Wo Fleischwanzen
+// 					Wo Fleischwanzen
 // **************************************************
 
 instance DIA_Snaf_WhereMeatbugs(C_INFO)
@@ -310,7 +310,7 @@ func void DIA_Snaf_WhereMeatbugs_Info()
 };
 
 // **************************************************
-// Where Mushrooms
+// 					Where Mushrooms
 // **************************************************
 
 instance DIA_Snaf_WhereMushrooms(C_INFO)
@@ -348,7 +348,7 @@ func void DIA_Snaf_WhereMushrooms_Info()
 };
 
 // **************************************************
-// Where Nek
+// 					Where Nek
 // **************************************************
 
 instance DIA_Snaf_WhereNek(C_INFO)
@@ -390,7 +390,7 @@ func void DIA_Snaf_WhereNek_Info()
 		Log_SetTopicStatus(CH1_LostNek,LOG_RUNNING);
 	};
 //	B_LogEntry(CH1_LostNek,"Snaf, the cook, last saw Nek when he went to gather mushrooms.");
-//	B_LogEntry(CH1_LostNek,"Der Schatten Sly hat mich beauftragt, den verschwundenen Gardisten Nek zu finden.Der Gardist könnte zum Neuen Lager übergelaufen sein. Fletcher aus dem Arenaviertel sollte ich nach Nek fragen.");
-	B_LogEntry(CH1_LostNek,"Sly, jeden ze Stínů, mě požádal, abych našel nezvěstného strážce Neka. Tento strážce se měl přidat k Novému táboru. Zeptám se na Neka Fletchera z obvodu arény.");
+//	B_LogEntry(CH1_LostNek,"Der Koch Snaf hat Nek zum letzten Mal gesehen, als er Pilze pflücken ging.");
+	B_LogEntry(CH1_LostNek,"Kuchař Snaf viděl Neka naposledy, když odešel sbírat houby.");
 };
 

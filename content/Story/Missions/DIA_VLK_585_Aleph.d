@@ -276,7 +276,6 @@ func void VLK_585_Aleph_SCHUPPEN_Info()
 
 	Info_ClearChoices(VLK_585_Aleph_SCHUPPEN);
 
-//	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,"DIALOG_BACK 	   ",VLK_585_Aleph_SCHUPPEN_Back);
 	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,DIALOG_BACK    ,VLK_585_Aleph_SCHUPPEN_Back);
 //	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,"Pay 50 ore.",VLK_585_Aleph_SCHUPPEN_50);
 //	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,"50 Erz zahlen",VLK_585_Aleph_SCHUPPEN_50);

@@ -21,7 +21,7 @@ func int DIA_SLD_761_Soeldner_INTRO_CONDITION()
 func void DIA_SLD_761_Soeldner_INTRO_INFO()
 {
 //	AI_Output(self,other,"DIA_SLD_761_Soeldner_INTRO_INFO_03_01"); //What are you doing at the mine here?
-//	AI_Output(self,other,"DIA_SLD_761_Soeldner_INTRO_INFO_03_01"); //Was machst du hier an der Mine? 
+//	AI_Output(self,other,"DIA_SLD_761_Soeldner_INTRO_INFO_03_01"); //Was machst du hier an der Mine?
 	AI_Output(self,other,"DIA_SLD_761_Soeldner_INTRO_INFO_03_01"); //Co tady děláš v tom dole?
 };
 
@@ -51,7 +51,7 @@ func void DIA_SLD_761_Soeldner_EXIT_1_INFO()
 //	AI_Output(other,self,"DIA_SLD_761_Soeldner_EXIT_1_INFO_15_01"); //Ich hab' noch was zu erledigen.
 	AI_Output(other,self,"DIA_SLD_761_Soeldner_EXIT_1_INFO_15_01"); //Dělám pořád tu samou práci.
 //	AI_Output(self,other,"DIA_SLD_761_Soeldner_EXIT_1_INFO_03_02");//That's what I think as well.
-//	AI_Output(self,other,"DIA_SLD_761_Soeldner_EXIT_1_INFO_03_02");//Das denke ich auch. 
+//	AI_Output(self,other,"DIA_SLD_761_Soeldner_EXIT_1_INFO_03_02");//Das denke ich auch.
 	AI_Output(self,other,"DIA_SLD_761_Soeldner_EXIT_1_INFO_03_02");//Taky si to myslím.
 	AI_StopProcessInfos(self);
 };
@@ -177,13 +177,13 @@ func void DIA_SLD_761_Soeldner_Bribe_INFO()
 //	AI_Output(other,self,"DIA_SLD_761_Soeldner_Bribe_INFO_15_01");//Kann man da gar nichts machen?
 	AI_Output(other,self,"DIA_SLD_761_Soeldner_Bribe_INFO_15_01");//Nemohlo by se s tím něco udělat?
 //	AI_Output(self,other,"DIA_SLD_761_Soeldner_Bribe_INFO_03_02");//What should there be to do about it?
-//	AI_Output(self,other,"DIA_SLD_761_Soeldner_Bribe_INFO_03_02");//Was sollte man da machen können? 
+//	AI_Output(self,other,"DIA_SLD_761_Soeldner_Bribe_INFO_03_02");//Was sollte man da machen können?
 	AI_Output(self,other,"DIA_SLD_761_Soeldner_Bribe_INFO_03_02");//Co bysme s tím měli udělat?
 //	AI_Output(self,other,"DIA_SLD_761_Soeldner_Bribe_INFO_03_03");//One moment, if you're trying to bribe me, you have the wrong man here.
-//	AI_Output(self,other,"DIA_SLD_761_Soeldner_Bribe_INFO_03_03");//Moment mal, wenn du versucht, mich zu bestechen, dann bist du hier an der falschen Adresse. 
+//	AI_Output(self,other,"DIA_SLD_761_Soeldner_Bribe_INFO_03_03");//Moment mal, wenn du versucht, mich zu bestechen, dann bist du hier an der falschen Adresse.
 	AI_Output(self,other,"DIA_SLD_761_Soeldner_Bribe_INFO_03_03");//Okamžik, jestli se mě pokoušíš podplatit, tak to jsi narazil na toho nesprávného.
 //	AI_Output(other,self,"DIA_SLD_761_Soeldner_Bribe_INFO_15_04");//No, I wasn't trying to bribe anybody, I just thought that...
-//	AI_Output(other,self,"DIA_SLD_761_Soeldner_Bribe_INFO_15_04");//Nein, ich wollte niemanden bestechen, ich dachte nur.. 
+//	AI_Output(other,self,"DIA_SLD_761_Soeldner_Bribe_INFO_15_04");//Nein, ich wollte niemanden bestechen, ich dachte nur..
 	AI_Output(other,self,"DIA_SLD_761_Soeldner_Bribe_INFO_15_04");//Ne, nepokoušel jsem se nikoho podplatit, jenom jsem myslel...
 //	AI_Output(other,self,"DIA_SLD_761_Soeldner_Bribe_INFO_15_05");//I guess I'd best be going.
 //	AI_Output(other,self,"DIA_SLD_761_Soeldner_Bribe_INFO_15_05");//Ich glaub', ich geh' dann besser.

@@ -45,7 +45,7 @@ func void Stt_302_Viper_GREET_Info()
 //	AI_Output(other,self,"Stt_302_Viper_GREET_Info_15_01"); //Ich habe gehört, du bist der Schmelzer.
 	AI_Output(other,self,"Stt_302_Viper_GREET_Info_15_01"); //Dověděl jsem se, že jsi tavič.
 //	AI_Output(self,other,"Stt_302_Viper_GREET_Info_11_02"); //You're a smart boy indeed.
-//	AI_Output(self,other,"Stt_302_Viper_GREET_Info_11_02"); //Du bist ja ein ganz schlauer Bursche. 
+//	AI_Output(self,other,"Stt_302_Viper_GREET_Info_11_02"); //Du bist ja ein ganz schlauer Bursche.
 	AI_Output(self,other,"Stt_302_Viper_GREET_Info_11_02"); //To jsi ale bystrý hoch.
 };  
 // ***************************** SCHMELZGESCHICHTE ****************************************//
@@ -75,10 +75,10 @@ func void Stt_302_Viper_MELT_Info()
 //	AI_Output(other,self,"Stt_302_Viper_MELT_Info_15_01"); //Ich habe gehört, ihr schmelzt nur einen Teil des Erzes ein.
 	AI_Output(other,self,"Stt_302_Viper_MELT_Info_15_01"); //Dověděl jsem se, že tavíš jenom malou část rudy.
 //	AI_Output(self,other,"Stt_302_Viper_MELT_Info_11_02"); //Some time ago we used to melt the lot down. But Gomez and the mages were none too happy about that.
-//	AI_Output(self,other,"Stt_302_Viper_MELT_Info_11_02"); //Früher haben wir alles Erz eingeschmolzen. Aber damit waren Gomez und die Magier nicht einverstanden. 
+//	AI_Output(self,other,"Stt_302_Viper_MELT_Info_11_02"); //Früher haben wir alles Erz eingeschmolzen. Aber damit waren Gomez und die Magier nicht einverstanden.
 	AI_Output(self,other,"Stt_302_Viper_MELT_Info_11_02"); //Před nějakou dobu jsme začali tavit o hodně méně. Gomez a jeho mágové z toho ale neměli moc radost.
 //	AI_Output(self,other,"Stt_302_Viper_MELT_Info_11_03"); //They hung around here for weeks to examine the ore and everything else.
-//	AI_Output(self,other,"Stt_302_Viper_MELT_Info_11_03"); //Wochenlang haben sie sich hier rumgetrieben und haben das Erz und alles andere untersucht. 
+//	AI_Output(self,other,"Stt_302_Viper_MELT_Info_11_03"); //Wochenlang haben sie sich hier rumgetrieben und haben das Erz und alles andere untersucht.
 	AI_Output(self,other,"Stt_302_Viper_MELT_Info_11_03"); //Celé týdny se tady potloukali, aby zkoušeli rudu a tak.
 //	AI_Output(self,other,"Stt_302_Viper_MELT_Info_11_04"); //They fiddled about and stuck their noble noses in things they didn't have a clue about.
 //	AI_Output(self,other,"Stt_302_Viper_MELT_Info_11_04"); //Sie haben hier rumgeschnüffelt und ihre feinen Nasen in Sachen gesteckt, von denen sie keine Ahnung haben.

@@ -1,5 +1,5 @@
 // **************************************
-// EXIT 
+//					EXIT 
 // **************************************
 
 instance DIA_Lefty_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Lefty_Exit_Info()
 };
 
 // **************************************
-// First At Night
+//				First At Night
 // **************************************
 
 instance DIA_Lefty_FirstAtNight(C_INFO)
@@ -65,7 +65,7 @@ func void DIA_Lefty_FirstAtNight_Info()
 };
 
 // **************************************
-// First
+//				First
 // **************************************
 
 instance DIA_Lefty_First(C_INFO)
@@ -104,13 +104,13 @@ func void DIA_Lefty_First_Info()
 
 	Info_ClearChoices(DIA_Lefty_First);
 //	Info_AddChoice(DIA_Lefty_First,"Maybe later.",DIA_Lefty_First_Later);
-//	Info_AddChoice(DIA_Lefty_First,""Vielleicht später."				",DIA_Lefty_First_Later);
+//	Info_AddChoice(DIA_Lefty_First,"Vielleicht später.",DIA_Lefty_First_Later);
 	Info_AddChoice(DIA_Lefty_First,"Možná později.",DIA_Lefty_First_Later);
 //	Info_AddChoice(DIA_Lefty_First,"Take the water to the peasants yourself!",DIA_Lefty_First_Never);
-//	Info_AddChoice(DIA_Lefty_First,""Bring dein Wasser selbst rum!"	",DIA_Lefty_First_Never);
+//	Info_AddChoice(DIA_Lefty_First,"Bring dein Wasser selbst rum!",DIA_Lefty_First_Never);
 	Info_AddChoice(DIA_Lefty_First,"Dones tu vodu rolníkům sám!",DIA_Lefty_First_Never);
 //	Info_AddChoice(DIA_Lefty_First,"Sure, I'll be glad to help.",DIA_Lefty_First_Yes);
-//	Info_AddChoice(DIA_Lefty_First,""Klar, ich helfe gerne."			",DIA_Lefty_First_Yes);
+//	Info_AddChoice(DIA_Lefty_First,"Klar, ich helfe gerne.",DIA_Lefty_First_Yes);
 	Info_AddChoice(DIA_Lefty_First,"Jistě, rád pomůžu.",DIA_Lefty_First_Yes);
 };
 
@@ -126,8 +126,8 @@ func void DIA_Lefty_First_Yes()
 	Lefty_Mission = LOG_RUNNING;
 	An_Bauern_verteilt = 0;
 //	B_LogEntry(CH1_CarryWater,"Although it's probably quite a stupid task, I agreed, because maybe I can make some friends there. I have to get the water from the so-called Rice Lord.");
-//	B_LogEntry(CH1_CarryWater,"Lefty, ein ziemlich großkotziger Bandit aus dem neuen Lager will, dass ich den Bauern auf den Reisfeldern Wasser bringe.");
-	B_LogEntry(CH1_CarryWater,"Lefty, otravný bandita z Nového tábora, po mně chce, abych nosil rolníkům na pole vodu.");
+//	B_LogEntry(CH1_CarryWater,"Obwohl es vermutlich eine stupide Aufgabe ist, habe ich zugesagt, um mir vielleicht ein paar Freunde zu machen. Das zu verteilende Wasser soll ich vom sogenannten 'Reislord' abholen.");
+	B_LogEntry(CH1_CarryWater,"Přestože to je dosti stupidní úkol, přijal jsem to, protože si tam možná najdu nějaké přátele. Musím si vyzvednout vodu od takzvaného Rýžového lorda.");
 
 	Info_ClearChoices(DIA_Lefty_First);
 };
@@ -143,8 +143,8 @@ func void DIA_Lefty_First_Never()
 	Lefty_WorkDay = B_SetDayTolerance();
 	Lefty_Mission = LOG_FAILED;
 //	B_LogEntry(CH1_CarryWater,"When I turned down Lefty's 'offer', he got quite unpleasant! And I thought the Old Camp was a rough place!");
-//	B_LogEntry(CH1_CarryWater,"Obwohl es vermutlich eine stupide Aufgabe ist, habe ich zugesagt, um mir vielleicht ein paar Freunde zu machen. Das zu verteilende Wasser soll ich vom sogenannten 'Reislord' abholen.");
-	B_LogEntry(CH1_CarryWater,"Přestože to je dosti stupidní úkol, přijal jsem to, protože si tam možná najdu nějaké přátele. Musím si vyzvednout vodu od takzvaného Rýžového lorda.");
+//	B_LogEntry(CH1_CarryWater,"Als ich Leftys 'Angebot' ablehnte, wurde er ziemlich ungehalten! Und ich dachte schon, das Alte Lager ist ein rauher Ort.");
+	B_LogEntry(CH1_CarryWater,"Když jsem Leftyho 'nabídku' odmítl, tvářil se hodně naštvaně! A já si myslel, jaké je Starý tábor drsné místo!");
 
 	Info_ClearChoices(DIA_Lefty_First);
 	AI_StopProcessInfos(self);
@@ -163,7 +163,7 @@ func void DIA_Lefty_First_Later()
 };
 
 // **************************************
-// Every Day
+//				Every Day
 // **************************************
 var int CarriedWaterForLefty;
 // **************************************
@@ -206,8 +206,8 @@ func void DIA_Lefty_WorkDay_Info()
 		Lefty_Mission = LOG_RUNNING;
 		An_Bauern_verteilt = 0;
 //		B_LogEntry(CH1_CarryWater,"I met Lefty again! He wants me to go to the Rice Lord and get the water for the peasants on the rice fields.");
-//		B_LogEntry(CH1_CarryWater,"Als ich Leftys 'Angebot' ablehnte, wurde er ziemlich ungehalten! Und ich dachte schon, das Alte Lager ist ein rauher Ort.");
-		B_LogEntry(CH1_CarryWater,"Když jsem Leftyho 'nabídku' odmítl, tvářil se hodně naštvaně! A já si myslel, jaké je Starý tábor drsné místo!");
+//		B_LogEntry(CH1_CarryWater,"Schon wieder bin ich Lefty über den Weg gelaufen! Er will, dass ich jetzt endlich zum Reislord gehe und das Wasser für die Verteilung an die Bauern auf den Reisfeldern abhole.");
+		B_LogEntry(CH1_CarryWater,"Znovu jsem se setkal s Leftym! Chce po mně, abych šel k Rýžovému lordovi vyzvednout vodu pro rolníky na polích.");
 
 		AI_StopProcessInfos(self);
 	}
@@ -222,8 +222,8 @@ func void DIA_Lefty_WorkDay_Info()
 		Lefty_WorkDay = B_SetDayTolerance();
 		Lefty_Mission = LOG_FAILED;
 //		B_LogEntry(CH1_CarryWater,"Lefty was really mad that I hadn't distributed the water yet! Looks like I might get some fun out of that guy yet.");
-//		B_LogEntry(CH1_CarryWater,"Schon wieder bin ich Lefty über den Weg gelaufen! Er will, dass ich jetzt endlich zum Reislord gehe und das Wasser für die Verteilung an die Bauern auf den Reisfeldern abhole.");
-		B_LogEntry(CH1_CarryWater,"Znovu jsem se setkal s Leftym! Chce po mně, abych šel k Rýžovému lordovi vyzvednout vodu pro rolníky na polích.");
+//		B_LogEntry(CH1_CarryWater,"Lefty war stinksauer darüber, dass ich das Wasser noch nicht verteilt haben! Das kann ja noch heiter werden mit diesem Burschen.");
+		B_LogEntry(CH1_CarryWater,"Lefty byl doopravdy na padnutí, že jsem ještě neroznesl vodu! Jako bych si z toho čipery střílel. ");
 
 		AI_StopProcessInfos(self);
 		Npc_SetTarget(self,other);
@@ -243,8 +243,8 @@ func void DIA_Lefty_WorkDay_Info()
 		if !CarriedWaterForLefty
 		{
 //			B_LogEntry(CH1_CarryWater,"I don't believe it. After I distributed the water everywhere, Lefty really wants me to do the water carrying every day. I think this idiot needs to be told a few things.");
-//			B_LogEntry(CH1_CarryWater,"Lefty war stinksauer darüber, dass ich das Wasser noch nicht verteilt haben! Das kann ja noch heiter werden mit diesem Burschen.");
-			B_LogEntry(CH1_CarryWater,"Lefty byl doopravdy na padnutí, že jsem ještě neroznesl vodu! Jako bych si z toho čipery střílel. ");
+//			B_LogEntry(CH1_CarryWater,"Ich fasse es nicht. Nachdem ich das Wasser überall verteilt habe, will Lefty doch tatsächlich, dass ich nun jeden Tag den Wasserträger spiele. Ich glaube dieser Idiot muss mal seine Grenzen aufgezeigt bekommen.");
+			B_LogEntry(CH1_CarryWater,"Nemůžu tomu uvěřit. Potom, co jsem všude roznesl vodu, Lefty snad vážně chce, abych to dělal každý den. Mám pocit, že tomu idiotovi budu muset pár věcí vysvětlit.");
 			B_GiveXP(XP_LeftyCarriedWater);
 			CarriedWaterForLefty = TRUE;
 		};
@@ -254,7 +254,7 @@ func void DIA_Lefty_WorkDay_Info()
 };
 
 // **************************************
-// NICHT MEHR
+//				NICHT MEHR
 // **************************************
 
 instance DIA_Lefty_NeverAgain(C_INFO)
@@ -295,7 +295,7 @@ func void DIA_Lefty_NeverAgain_Info()
 }; 
 
 // **************************************
-// PERM
+//				PERM
 // **************************************
 var int LeftyWasBeaten;
 // **************************************
@@ -331,8 +331,8 @@ func void DIA_Lefty_PERM_Info()
 	if !LeftyWasBeaten
 	{
 //		B_LogEntry(CH1_CarryWater,"I made it clear to Lefty that he'd better not annoy me with his water carrying theories. Some people only learn through pain.");
-//		B_LogEntry(CH1_CarryWater,"Ich fasse es nicht. Nachdem ich das Wasser überall verteilt habe, will Lefty doch tatsächlich, dass ich nun jeden Tag den Wasserträger spiele. Ich glaube dieser Idiot muss mal seine Grenzen aufgezeigt bekommen.");
-		B_LogEntry(CH1_CarryWater,"Nemůžu tomu uvěřit. Potom, co jsem všude roznesl vodu, Lefty snad vážně chce, abych to dělal každý den. Mám pocit, že tomu idiotovi budu muset pár věcí vysvětlit.");
+//		B_LogEntry(CH1_CarryWater,"Ich habe Lefty endgültig klargemacht, dass er mich besser nicht mehr mit seiner Wasserträgerei behelligen sollte. Mache Leute lernen nur durch Schmerzen.");
+		B_LogEntry(CH1_CarryWater,"Řekl jsem Leftymu, aby mě ve vlastním zájmu přestal obtěžovat se svými teoriemi o roznášení vody. Někteří lidé se poučí, jen když je to zabolí.");
 		Log_SetTopicStatus(CH1_CarryWater,LOG_SUCCESS);
 		B_GiveXP(XP_LeftyConfronted);
 		LeftyWasBeaten = TRUE;
@@ -340,13 +340,13 @@ func void DIA_Lefty_PERM_Info()
 
 	Info_ClearChoices(DIA_Lefty_PERM);
 //	Info_AddChoice(DIA_Lefty_PERM,"Just wanted to see how you are.",DIA_Lefty_PERM_Nothing);
-//	Info_AddChoice(DIA_Lefty_PERM,""Wollte nur mal sehen, wie's dir geht."												",DIA_Lefty_PERM_Nothing);
+//	Info_AddChoice(DIA_Lefty_PERM,"Wollte nur mal sehen, wie's dir geht.",DIA_Lefty_PERM_Nothing);
 	Info_AddChoice(DIA_Lefty_PERM,"Jen jsem chtěl vědět, jak se máš.",DIA_Lefty_PERM_Nothing);
 //	Info_AddChoice(DIA_Lefty_PERM,"The peasants look thirsty.",DIA_Lefty_PERM_Durstig);
-//	Info_AddChoice(DIA_Lefty_PERM,""Die Bauern sehen durstig aus."														",DIA_Lefty_PERM_Durstig);
+//	Info_AddChoice(DIA_Lefty_PERM,"Die Bauern sehen durstig aus.",DIA_Lefty_PERM_Durstig);
 	Info_AddChoice(DIA_Lefty_PERM,"Rolníci vypadají žíznivě.",DIA_Lefty_PERM_Durstig);
 //	Info_AddChoice(DIA_Lefty_PERM,"I've had a really bad day. I want to relieve my tension - hold still...",DIA_Lefty_PERM_AufsMaul);
-//	Info_AddChoice(DIA_Lefty_PERM,""Ich hatte nen schlechten Tag und suche einen Ausgleich... Halt mal still."	",DIA_Lefty_PERM_AufsMaul);
+//	Info_AddChoice(DIA_Lefty_PERM,"Ich hatte nen schlechten Tag und suche einen Ausgleich... Halt mal still.",DIA_Lefty_PERM_AufsMaul);
 	Info_AddChoice(DIA_Lefty_PERM,"Měl jsem vážně zlej den. Radím ti, abys mě neprovokoval a zůstal raději zticha.",DIA_Lefty_PERM_AufsMaul);
 
 }; 

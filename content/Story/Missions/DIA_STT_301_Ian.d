@@ -104,7 +104,7 @@ func int STT_301_IAN_ORE_Condition()
 {
 	if Npc_KnowsInfo(hero,STT_301_IAN_GOMEZ)
 	{
-		return TRUE;
+		return TRUE ;
 	};
 
 };
@@ -114,7 +114,7 @@ func void STT_301_IAN_ORE_Info()
 //	AI_Output(other,self,"STT_301_IAN_ORE_Info_15_01"); //Kannst du mir ein paar Takte zur Erzförderung erzählen?
 	AI_Output(other,self,"STT_301_IAN_ORE_Info_15_01"); //Můžeš mi říci něco o zdejší produkci rudy?
 //	AI_Output(self,other,"STT_301_IAN_ORE_Info_13_02"); //We dig for ore day and night. This means a storage of 200 sacks per month and another 20 sacks which will be melted down.
-//	AI_Output(self,other,"STT_301_IAN_ORE_Info_13_02"); //Wir fördern hier rund um die Uhr Erz. Im Monat sind das über 200 Säcke Erz, die gelagert werden und noch mal 20 Säcke, die eingeschmolzen werden. 
+//	AI_Output(self,other,"STT_301_IAN_ORE_Info_13_02"); //Wir fördern hier rund um die Uhr Erz. Im Monat sind das über 200 Säcke Erz, die gelagert werden und noch mal 20 Säcke, die eingeschmolzen werden.
 	AI_Output(self,other,"STT_301_IAN_ORE_Info_13_02"); //Těžíme ve dne v noci. To znamená 200 pytlů měsíčně do skladu a dalších 20 pytlů na přetavení.
 //	AI_Output(self,other,"STT_301_IAN_ORE_Info_13_03"); //Hundreds of blades can be forged with the ore we supply to the King.
 //	AI_Output(self,other,"STT_301_IAN_ORE_Info_13_03"); //Mit dem Erz, das wir dem König liefern, können hunderte von Klingen hergestellt werden.
@@ -136,7 +136,7 @@ instance STT_301_IAN_MORE(C_INFO)
 
 func int STT_301_IAN_MORE_Condition()
 {
-	return Npc_KnowsInfo(hero,STT_301_IAN_ORE);
+	return Npc_KnowsInfo(hero,STT_301_IAN_ORE) ;
 };
 
 func void STT_301_IAN_MORE_Info()
@@ -145,7 +145,7 @@ func void STT_301_IAN_MORE_Info()
 //	AI_Output(other,self,"STT_301_IAN_MORE_Info_15_01"); //Ich habe gehört, das Erz ist magisch. Erzähl mir davon.
 	AI_Output(other,self,"STT_301_IAN_MORE_Info_15_01"); //Slyšel jsem, že ta ruda má kouzelnou moc. Řekni mi o tom něco.
 //	AI_Output(self,other,"STT_301_IAN_MORE_Info_13_02"); //The magic ore does have special qualities. Weapons forged from it don't break, their blades are sharper than usual ones.
-//	AI_Output(self,other,"STT_301_IAN_MORE_Info_13_02"); //Das magische Erz besitzt besondere Qualitäten. Es macht die Waffen unzerbrechlich und die Klingen sind schärfer als gewöhnliche. 
+//	AI_Output(self,other,"STT_301_IAN_MORE_Info_13_02"); //Das magische Erz besitzt besondere Qualitäten. Es macht die Waffen unzerbrechlich und die Klingen sind schärfer als gewöhnliche.
 	AI_Output(self,other,"STT_301_IAN_MORE_Info_13_02"); //Ta magická moc dodává kovu speciální vlastnosti. Zbraně, které jsou z něj ukovány, se nelámou, jejich ostří jsou ostřejší než obyčejně.
 //	AI_Output(self,other,"STT_301_IAN_MORE_Info_13_03"); //An army equipped with these weapons has a decisive advantage in battle.
 //	AI_Output(self,other,"STT_301_IAN_MORE_Info_13_03"); //Eine Armee, die mit solchen Waffen ausgestattet ist, hat einen entscheidenden Vorteil in jeder Schlacht.
@@ -167,7 +167,7 @@ instance STT_301_IAN_MAGIC(C_INFO)
 
 func int STT_301_IAN_MAGIC_Condition()
 {
-	return Npc_KnowsInfo(hero,STT_301_IAN_MORE);
+	return Npc_KnowsInfo(hero,STT_301_IAN_MORE) ;
 };
 
 func void STT_301_IAN_MAGIC_Info()
@@ -176,10 +176,10 @@ func void STT_301_IAN_MAGIC_Info()
 //	AI_Output(other,self,"STT_301_IAN_MAGIC_Info_15_01"); //Erzähl mir mehr vom Erz.
 	AI_Output(other,self,"STT_301_IAN_MAGIC_Info_15_01"); //Řekni mi víc o té rudě.
 //	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_02"); //Unfortunately the magic powers of the ore vanish during the smelting process. They know the right smelting technique in the blast furnaces of Nordmar.
-//	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_02"); //Leider geht die magische Wirkung des Erzes beim Schmelzen verloren. In den Hochöfen von Nordmar, da kennen sie die richtige Schmelztechnik. 
+//	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_02"); //Leider geht die magische Wirkung des Erzes beim Schmelzen verloren. In den Hochöfen von Nordmar, da kennen sie die richtige Schmelztechnik.
 	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_02"); //Naneštěstí během procesu tavení magické kouzlo rudy vyprchává. V horkovzdušných tavicích pecích u Severního moře znají správnou techniku tavení.
 //	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_03"); //But even without the magic powers, weapons made from this ore are extremely resistant and do more damage than normal weapons.
-//	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_03"); //Aber selbst ohne die magische Wirkung sind Waffen aus diesem Erz extrem widerstandsfähig und richten mehr Schaden an als gewöhnliche Waffen.  
+//	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_03"); //Aber selbst ohne die magische Wirkung sind Waffen aus diesem Erz extrem widerstandsfähig und richten mehr Schaden an als gewöhnliche Waffen.
 	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_03"); //Ale zbraně vyrobené z téhle rudy jsou i bez magického kouzla výjimečně trvanlivé a mají daleko větší účinek než zbraně obyčejné.
 
 };   
@@ -214,7 +214,7 @@ func void STT_301_IAN_MINE_Info()
 //	AI_Output(self,other,"STT_301_IAN_MINE_Info_13_02"); //Wenn du dich hier weiter umsehen willst, sei vorsichtig. In den Höhlen sind Minecrawler. Am besten du bleibst in diesem Hauptschacht.
 	AI_Output(self,other,"STT_301_IAN_MINE_Info_13_02"); //Jestli se chceš tady porozhlédnout, musíš být opatrný. V jeskyních jsou důlní červi. Měl bys raději zůstat v hlavní šachtě.
 //	AI_Output(self,other,"STT_301_IAN_MINE_Info_13_03"); //And leave the templars alone. Even if they only hang around most of the time, they're the best fighters you can ever have at your side when it comes down to the crawlers.
-//	AI_Output(self,other,"STT_301_IAN_MINE_Info_13_03"); //Und lass die Templer in Ruhe. Sie lungern zwar die meiste Zeit nur rum, aber wenn die Crawler kommen,gibt es keinen besseren Kämpfer an deiner Seite.  
+//	AI_Output(self,other,"STT_301_IAN_MINE_Info_13_03"); //Und lass die Templer in Ruhe. Sie lungern zwar die meiste Zeit nur rum, aber wenn die Crawler kommen,gibt es keinen besseren Kämpfer an deiner Seite.
 	AI_Output(self,other,"STT_301_IAN_MINE_Info_13_03"); //A nechat templáře na pokoji. Sice se většinu času jen tak procházejí, ale když přijdou červi, jsou to nejlepší bojovníci, jaké vůbec můžeme na naší straně mít.
 //	AI_Output(other,self,"STT_301_IAN_MINE_Info_15_04"); //I'll keep that in mind.
 //	AI_Output(other,self,"STT_301_IAN_MINE_Info_15_04"); //Ich werd's mir merken.
@@ -223,7 +223,7 @@ func void STT_301_IAN_MINE_Info()
 //	AI_Output(self,other,"STT_301_IAN_MINE_Info_13_05"); //Ich hab' noch zu tun. Und halte meine Jungs nicht von der Arbeit ab.
 	AI_Output(self,other,"STT_301_IAN_MINE_Info_13_05"); //Musím něco dělat. A neruš moje chlapy při práci.
 //	AI_Output(other,self,"STT_301_IAN_MINE_Info_15_06"); //I'll just have a look around here.
-//	AI_Output(other,self,"STT_301_IAN_MINE_Info_15_06"); //Ich sehe mich nur mal um.   
+//	AI_Output(other,self,"STT_301_IAN_MINE_Info_15_06"); //Ich sehe mich nur mal um.
 	AI_Output(other,self,"STT_301_IAN_MINE_Info_15_06"); //Jen se tu rozhlížím.
 };
 /*------------------------------------------------------------------------
@@ -300,8 +300,8 @@ func void STT_301_IAN_GETLIST_Info()
 	B_GiveInvItems(self,hero,TheList,1);
 };  
 // **************************************************************************
-// MISSION BRING MCQ EIER RUNNING , 
-// oder: Ohne Zahnrad keine Eier
+// 							MISSION BRING MCQ EIER RUNNING , 
+//							oder: Ohne Zahnrad keine Eier
 // **************************************************************************  
 instance STT_301_IAN_NEST(C_INFO)
 {
@@ -335,7 +335,7 @@ func void STT_301_IAN_NEST_Info()
 //	AI_Output(other,self,"STT_301_IAN_NEST_Info_15_03"); //Hör zu, ich muss zu diesem Nest...
 	AI_Output(other,self,"STT_301_IAN_NEST_Info_15_03"); //Poslyš, potřebuju se teď dostat do jejich hnízda...
 //	AI_Output(self,other,"STT_301_IAN_NEST_Info_13_04"); //I don't have time to see to it now. Our masher doesn't work any more. The gearwheel broke a few hours ago.
-//	AI_Output(self,other,"STT_301_IAN_NEST_Info_13_04"); //Ich habe jetzt keine Zeit, mich darum zu kümmern. Unser Stampfer ist kaputt. Vor ein paar Stunden ist das Zahnrad gebrochen. 
+//	AI_Output(self,other,"STT_301_IAN_NEST_Info_13_04"); //Ich habe jetzt keine Zeit, mich darum zu kümmern. Unser Stampfer ist kaputt. Vor ein paar Stunden ist das Zahnrad gebrochen.
 	AI_Output(self,other,"STT_301_IAN_NEST_Info_13_04"); //Nemám čas se teď o to starat. Drtička přestala pracovat. Před několika hodinami se rozbilo ozubené kolo.
 //	AI_Output(self,other,"STT_301_IAN_NEST_Info_13_05"); //I've no idea where to get a new one.
 //	AI_Output(self,other,"STT_301_IAN_NEST_Info_13_05"); //Ich hab' noch keine Idee, wo ich ein neues herbekommen kann.
@@ -501,7 +501,7 @@ func void STT_301_IAN_AFTERALL_Info()
 //	AI_Output(self,other,"STT_301_IAN_AFTERALL_Info_13_02"); //Dann kehrt jetzt hier endlich wieder Ruhe ein. Hahaha!
 	AI_Output(self,other,"STT_301_IAN_AFTERALL_Info_13_02"); //Tak už tady budeme konečně mít mír a klid, hahaha!
 //	AI_Output(self,other,"STT_301_IAN_AFTERALL_Info_13_03"); //No offence. Good work, boy!
-//	AI_Output(self,other,"STT_301_IAN_AFTERALL_Info_13_03"); //Nichts für ungut. Gute Arbeit, Kleiner! 
+//	AI_Output(self,other,"STT_301_IAN_AFTERALL_Info_13_03"); //Nichts für ungut. Gute Arbeit, Kleiner!
 	AI_Output(self,other,"STT_301_IAN_AFTERALL_Info_13_03"); //Bez urážky. Dobrá práce, hochu!
 //	AI_Output(self,other,"STT_301_IAN_AFTERALL_Info_13_04"); //Here, take this crate of beer for your efforts.
 //	AI_Output(self,other,"STT_301_IAN_AFTERALL_Info_13_04"); //Hier, nimm diese Kiste Bier für deine Mühen.

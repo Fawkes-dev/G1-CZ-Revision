@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_Grim_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Grim_Exit_Info()
 };
 
 // **************************************************
-// FALLE (Schutzgeld)
+// 				FALLE (Schutzgeld)
 // **************************************************
 
 instance DIA_Grim_Falle(C_INFO)
@@ -68,13 +68,13 @@ func void DIA_Grim_Falle_Info()
 
 	Info_ClearChoices(DIA_Grim_Falle);
 //	Info_AddChoice(DIA_Grim_Falle,"Not interested - you'll have to look for somebody else.",DIA_Grim_Falle_Deny);
-//	Info_AddChoice(DIA_Grim_Falle,""Kein Interesse - such dir einen anderen."	",DIA_Grim_Falle_Deny);
+//	Info_AddChoice(DIA_Grim_Falle,"Kein Interesse - such dir einen anderen.",DIA_Grim_Falle_Deny);
 	Info_AddChoice(DIA_Grim_Falle,"Nemám zájem - budeš se muset poohlédnout po někom jiném.",DIA_Grim_Falle_Deny);
 //	Info_AddChoice(DIA_Grim_Falle,"What will happen when we have the amulet?",DIA_Grim_Falle_HowShare);
-//	Info_AddChoice(DIA_Grim_Falle,""Was passiert, wenn wir das Amulett haben?"	",DIA_Grim_Falle_HowShare);
+//	Info_AddChoice(DIA_Grim_Falle,"Was passiert, wenn wir das Amulett haben?",DIA_Grim_Falle_HowShare);
 	Info_AddChoice(DIA_Grim_Falle,"Co se stane, až budeme mít ten amulet?",DIA_Grim_Falle_HowShare);
 //	Info_AddChoice(DIA_Grim_Falle,"Count me in!",DIA_Grim_Falle_Accepr);
-//	Info_AddChoice(DIA_Grim_Falle,""Ich bin dabei!"							",DIA_Grim_Falle_Accepr);
+//	Info_AddChoice(DIA_Grim_Falle,"Ich bin dabei!",DIA_Grim_Falle_Accepr);
 	Info_AddChoice(DIA_Grim_Falle,"Můžeš!",DIA_Grim_Falle_Accepr);
 };
 
@@ -100,13 +100,13 @@ func void DIA_Grim_Falle_HowShare()
 
 	Info_ClearChoices(DIA_Grim_Falle);
 //	Info_AddChoice(DIA_Grim_Falle,"Not interested - you'll have to look for somebody else.",DIA_Grim_Falle_Deny);
-//	Info_AddChoice(DIA_Grim_Falle,""Kein Interesse - such dir einen anderen."	",DIA_Grim_Falle_Deny);
+//	Info_AddChoice(DIA_Grim_Falle,"Kein Interesse - such dir einen anderen.",DIA_Grim_Falle_Deny);
 	Info_AddChoice(DIA_Grim_Falle,"Nemám zájem - budeš se muset poohlédnout po někom jiném.",DIA_Grim_Falle_Deny);
 //	Info_AddChoice(DIA_Grim_Falle,"No! It's either fifty-fifty or you can do it on your own!",DIA_Grim_Falle_HalfHalf);
-//	Info_AddChoice(DIA_Grim_Falle,""Wir machen Halbe-Halbe! Oder du kannst dich alleine mit den Typen anlegen!"	",DIA_Grim_Falle_HalfHalf);
+//	Info_AddChoice(DIA_Grim_Falle,"Wir machen Halbe-Halbe! Oder du kannst dich alleine mit den Typen anlegen!",DIA_Grim_Falle_HalfHalf);
 	Info_AddChoice(DIA_Grim_Falle,"Ne! Buď to bude půl na půl, nebo si to udělej sám!",DIA_Grim_Falle_HalfHalf);
 //	Info_AddChoice(DIA_Grim_Falle,"Count me in!",DIA_Grim_Falle_Accepr);
-//	Info_AddChoice(DIA_Grim_Falle,""Ich bin dabei!"							",DIA_Grim_Falle_Accepr);
+//	Info_AddChoice(DIA_Grim_Falle,"Ich bin dabei!",DIA_Grim_Falle_Accepr);
 	Info_AddChoice(DIA_Grim_Falle,"Můžeš!",DIA_Grim_Falle_Accepr);
 };
 
@@ -132,7 +132,7 @@ func void DIA_Grim_Falle_Accepr()
 };
 
 // **************************************************
-// Bereit für Falle
+// 				Bereit für Falle
 // **************************************************
 
 instance DIA_Grim_ReadyToGo(C_INFO)
@@ -170,7 +170,7 @@ func void DIA_Grim_ReadyToGo_Info()
 }; 
 
 // **************************************************
-// OC DRAUSSEN ANGEKOMMEN
+//				OC DRAUSSEN ANGEKOMMEN
 // **************************************************
 
 instance DIA_Grim_AtOCdraussen(C_INFO)
@@ -232,7 +232,7 @@ func void DIA_Grim_AtOCdraussen_Info()
 };
 
 // **************************************************
-// NACH Falle
+// 				NACH Falle
 // **************************************************
 
 instance DIA_Grim_NACHFalle(C_INFO)
@@ -273,10 +273,10 @@ func void DIA_Grim_NACHFalle_Info()
 
 	Info_ClearChoices(DIA_Grim_NACHFalle);
 //	Info_AddChoice(DIA_Grim_NACHFalle,"Brawl on.",DIA_Grim_NACHFalle_Weiterpruegeln);
-//	Info_AddChoice(DIA_Grim_NACHFalle,""Weiterprügeln."	",DIA_Grim_NACHFalle_Weiterpruegeln);
+//	Info_AddChoice(DIA_Grim_NACHFalle,"Weiterprügeln.",DIA_Grim_NACHFalle_Weiterpruegeln);
 	Info_AddChoice(DIA_Grim_NACHFalle,"Do toho.",DIA_Grim_NACHFalle_Weiterpruegeln);
 //	Info_AddChoice(DIA_Grim_NACHFalle,"Peace.",DIA_Grim_NACHFalle_Frieden);
-//	Info_AddChoice(DIA_Grim_NACHFalle,""Frieden."			",DIA_Grim_NACHFalle_Frieden);
+//	Info_AddChoice(DIA_Grim_NACHFalle,"Frieden.",DIA_Grim_NACHFalle_Frieden);
 	Info_AddChoice(DIA_Grim_NACHFalle,"Mír.",DIA_Grim_NACHFalle_Frieden);
 };
 
@@ -312,7 +312,7 @@ func void DIA_Grim_NACHFalle_Frieden()
 };
 
 // **************************************************
-// Hallo
+// 				Hallo
 // **************************************************
 	var int FirstOver; 
 // **************************************************
@@ -353,7 +353,7 @@ func void DIA_Grim_Hallo_Info()
 };
 
 // **************************************************
-// Leben
+// 						Leben
 // **************************************************
 
 instance DIA_Grim_Leben(C_INFO)
@@ -384,7 +384,7 @@ func void DIA_Grim_Leben_Info()
 };
 
 // **************************************************
-// Aufnahme
+// 						Aufnahme
 // **************************************************
 
 instance DIA_Grim_Aufnahme(C_INFO)
@@ -424,7 +424,7 @@ func void DIA_Grim_Aufnahme_Info()
 };
 
 // **************************************************
-// Wie weit bist DU?
+// 						Wie weit bist DU?
 // **************************************************
 var int Grim_Tests;
 // **************************************************
@@ -468,7 +468,7 @@ func void DIA_Grim_HowFarAreYou_Info()
 };
 
 // **************************************************
-// Leben
+// 						Leben
 // **************************************************
 
 instance DIA_Grim_YourPDV(C_INFO)
@@ -510,7 +510,7 @@ func void DIA_Grim_YourPDV_Info()
 //#####################################################################
 
 //---------------------------------------------------------------------
-// Info INEXTREMO
+//	Info INEXTREMO
 //---------------------------------------------------------------------
 instance DIA_Grim_INEXTREMO(C_INFO)
 {
@@ -556,7 +556,7 @@ func void DIA_Grim_INEXTREMO_Info()
 //#####################################################################
 
 //---------------------------------------------------------------------
-// Info INEXTREMOAWAY
+//	Info INEXTREMOAWAY
 //---------------------------------------------------------------------
 instance DIA_Grim_INEXTREMOAWAY(C_INFO)
 {

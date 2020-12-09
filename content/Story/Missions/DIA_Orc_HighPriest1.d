@@ -35,8 +35,8 @@ func void Info_HighPriest1_Info()
 	AI_Output(other,self,"Info_HighPriest1_15_04"); //Otázka je, čí konec nadchází, ty červem okousaná hroudo masa!
 
 //	B_LogEntry(CH4_EnterTemple,"I'm facing Varrag-Hashor, one of the five Orc shamans, who brought the Sleeper to this world. I'll put an end to his undead existence.");
-//	B_LogEntry(CH4_EnterTemple,"Xardas war sichtlich überrascht, daß es mir gelungen war, in den unterirdischen Tempel einzudringen. Er hält mich wohl für die Ikone aus einer alten orkischen Prophezeiung.");
-	B_LogEntry(CH4_EnterTemple,"Xardas byl dost překvapen, že se mi podařilo proniknout do podzemního chrámu. Díval se, jako by mě považoval za ikonu ze starého skřetího proroctví.");
+//	B_LogEntry(CH4_EnterTemple,"Varrag-Hashor, einer der fünf Ork-Schamanen, die damals den Schläfer auf diese Welt geholt haben, steht mir gegenüber. Ich werde sein untotes Dasein ein für allemal beenden.");
+	B_LogEntry(CH4_EnterTemple,"Stojím tváří v tvář Varrag-Hashorovi, jednomu z pěti skřetích šamanů, kteří do tohoto světa vnesli Spáče. Skončím jeho nemrtvou existenci.");
 
 	AI_StopProcessInfos(self);
 

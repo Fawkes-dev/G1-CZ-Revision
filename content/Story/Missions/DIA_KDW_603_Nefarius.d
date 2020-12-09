@@ -1,5 +1,5 @@
 // **************************** 
-// EXIT 
+//				EXIT 
 // ****************************
 
 instance Info_Nefarius_EXIT(C_INFO)
@@ -23,7 +23,7 @@ func void Info_Nefarius_EXIT_Info()
 };
 
 // **************************** 
-// Hallo 
+//			Hallo 
 // ****************************
 
 instance Info_Nefarius_Hallo(C_INFO)
@@ -34,7 +34,7 @@ instance Info_Nefarius_Hallo(C_INFO)
 	information = Info_Nefarius_Hallo_Info;
 	permanent = 0;
 //	description = "Who are you?";
-//	description = 	"Wer bist du?";
+//	description = "Wer bist du?";
 	description = "Kdo jsi?";
 };                       
 
@@ -54,7 +54,7 @@ func void Info_Nefarius_Hallo_Info()
 };
 
 // **************************** 
-// Wo Saturas
+//			Wo Saturas
 // ****************************
 
 instance Info_Nefarius_WoSaturas(C_INFO)
@@ -65,7 +65,7 @@ instance Info_Nefarius_WoSaturas(C_INFO)
 	information = Info_Nefarius_WoSaturas_Info;
 	permanent = 0;
 //	description = "Where can I find Saturas?";
-//	description = 	"Wo finde ich Saturas?";
+//	description = "Wo finde ich Saturas?";
 	description = "Kde najdu Saturase?";
 };                       
 
@@ -85,7 +85,7 @@ func void Info_Nefarius_WoSaturas_Info()
 };
 
 // **************************** 
-// WannaMage
+//			WannaMage
 // ****************************
 
 instance Info_Nefarius_WannaMage(C_INFO)
@@ -96,7 +96,7 @@ instance Info_Nefarius_WannaMage(C_INFO)
 	information = Info_Nefarius_WannaMage_Info;
 	permanent = 0;
 //	description = "I'd like to become a Magician of the Circle of Water!";
-//	description = 	"Ich will ein Magier vom Kreis des Wassers werden!";
+//	description = "Ich will ein Magier vom Kreis des Wassers werden!";
 	description = "Chtěl bych se stát mágem Kruhu vody.";
 };                       
 
@@ -131,7 +131,7 @@ func void Info_Nefarius_WannaMage_Info()
 };
 
 // **************************** 
-// NowReady
+//			NowReady
 // ****************************
 
 instance Info_Nefarius_NowReady(C_INFO)
@@ -142,7 +142,7 @@ instance Info_Nefarius_NowReady(C_INFO)
 	information = Info_Nefarius_NowReady_Info;
 	permanent = 1;
 //	description = "Am I ready for the Circle of Water?";
-//	description = 	"Bin ich bereit für den Kreis des Wassers?";
+//	description = "Bin ich bereit für den Kreis des Wassers?";
 	description = "Jsem připraven na vstup do Kruhu vody?";
 };                       
 
@@ -179,12 +179,12 @@ func void Info_Nefarius_NowReady_Info()
 
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
-/////////////// Kapitel 4 //////////////
+///////////////		Kapitel 4 //////////////
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
 
 // **************************** 
-// OCNews
+//			OCNews
 // ****************************
 
 instance Info_Nefarius_OCNews(C_INFO)
@@ -220,7 +220,7 @@ func void Info_Nefarius_OCNews_Info()
 	if (Npc_GetTrueGuild(hero)==GIL_SLD)
 	{
 //		AI_Output(self,other,"Info_Nefarius_OCNews_04_03"); //Wait!
-//		AI_Output(self,other,"Info_Nefarius_OCNews_04_03"); //Warte! 
+//		AI_Output(self,other,"Info_Nefarius_OCNews_04_03"); //Warte!
 		AI_Output(self,other,"Info_Nefarius_OCNews_04_03"); //Počkej!
 //		AI_Output(self,other,"Info_Nefarius_OCNews_04_04"); //You have braved great dangers on our behalf.
 //		AI_Output(self,other,"Info_Nefarius_OCNews_04_04"); //Du hast große Gefahren auf dich genommen, um uns zu dienen.

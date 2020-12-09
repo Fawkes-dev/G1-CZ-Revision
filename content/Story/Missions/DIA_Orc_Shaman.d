@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------
-// Info EXIT
+//	Info EXIT
 //---------------------------------------------------------------------
 instance Info_OrcShaman_EXIT(C_INFO)
 {
@@ -31,7 +31,7 @@ func void Info_OrcShaman_EXIT_Info()
 //#####################################################################
 
 //---------------------------------------------------------------------
-// Info THX
+//	Info THX
 //---------------------------------------------------------------------
 instance Info_OrcShaman_THX(C_INFO)
 {
@@ -63,7 +63,7 @@ func void Info_OrcShaman_THX_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info WHO
+//	Info WHO
 //---------------------------------------------------------------------
 instance Info_OrcShaman_WHO(C_INFO)
 {
@@ -100,7 +100,7 @@ func void Info_OrcShaman_WHO_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info TONGUE
+//	Info TONGUE
 //---------------------------------------------------------------------
 instance Info_OrcShaman_TONGUE(C_INFO)
 {
@@ -137,7 +137,7 @@ func void Info_OrcShaman_TONGUE_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info MINE
+//	Info MINE
 //---------------------------------------------------------------------
 instance Info_OrcShaman_MINE(C_INFO)
 {
@@ -171,7 +171,7 @@ func void Info_OrcShaman_MINE_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info WHY
+//	Info WHY
 //---------------------------------------------------------------------
 instance Info_OrcShaman_WHY(C_INFO)
 {
@@ -211,7 +211,7 @@ func void Info_OrcShaman_WHY_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info KRUSHAK
+//	Info KRUSHAK
 //---------------------------------------------------------------------
 instance Info_OrcShaman_KRUSHAK(C_INFO)
 {
@@ -251,7 +251,7 @@ func void Info_OrcShaman_KRUSHAK_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info SLEEPER
+//	Info SLEEPER
 //---------------------------------------------------------------------
 instance Info_OrcShaman_SLEEPER(C_INFO)
 {
@@ -303,7 +303,7 @@ func void Info_OrcShaman_SLEEPER_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info CURSE
+//	Info CURSE
 //---------------------------------------------------------------------
 instance Info_OrcShaman_CURSE(C_INFO)
 {
@@ -352,7 +352,7 @@ func void Info_OrcShaman_CURSE_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info OUTSIDE
+//	Info OUTSIDE
 //---------------------------------------------------------------------
 instance Info_OrcShaman_OUTSIDE(C_INFO)
 {
@@ -394,7 +394,7 @@ func void Info_OrcShaman_OUTSIDE_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info INTEMPLE
+//	Info INTEMPLE
 //---------------------------------------------------------------------
 instance Info_OrcShaman_INTEMPLE(C_INFO)
 {
@@ -428,12 +428,12 @@ func void Info_OrcShaman_INTEMPLE_Info()
 //	AI_Output(self,hero,"Info_OrcShaman_INTEMPLE_17_03"); //Aber Eingang von Tempel in Heimat. Ur-Shak nicht können gehen Heimat.
 	AI_Output(self,hero,"Info_OrcShaman_INTEMPLE_17_03"); //Ale vstup do chrámu být doma. Ur-Shak nesmět jít domů.
 //	AI_Output(hero,self,"Info_OrcShaman_INTEMPLE_15_04"); //I see, you mean they won't let you go back into the Orc town?
-//	AI_Output(hero,self,"Info_OrcShaman_INTEMPLE_15_04"); //Ur-Shak glauben 
+//	AI_Output(hero,self,"Info_OrcShaman_INTEMPLE_15_04"); //Ur-Shak glauben
 	AI_Output(hero,self,"Info_OrcShaman_INTEMPLE_15_04"); //Vím, myslíš tím, že by tě nepustili zpátky do skřetího města.
 };
 
 //---------------------------------------------------------------------
-// Info MAP
+//	Info MAP
 //---------------------------------------------------------------------
 instance Info_OrcShaman_MAP(C_INFO)
 {
@@ -481,7 +481,7 @@ func void Info_OrcShaman_MAP_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info FIGHT
+//	Info FIGHT
 //---------------------------------------------------------------------
 instance Info_OrcShaman_FIGHT(C_INFO)
 {
@@ -520,7 +520,7 @@ func void Info_OrcShaman_FIGHT_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info OTHERWAY
+//	Info OTHERWAY
 //---------------------------------------------------------------------
 instance Info_OrcShaman_OTHERWAY(C_INFO)
 {
@@ -562,7 +562,7 @@ func void Info_OrcShaman_OTHERWAY_Info()
 };
 
 //---------------------------------------------------------------------
-// Info ULUMULU
+//	Info ULUMULU
 //---------------------------------------------------------------------
 instance Info_OrcShaman_ULUMULU(C_INFO)
 {
@@ -605,9 +605,15 @@ func void Info_OrcShaman_ULUMULU_Info()
 	B_Story_FoundUrShak();
 
 	Info_ClearChoices(Info_OrcShaman_ULUMULU);
-	Info_AddChoice(Info_OrcShaman_ULUMULU,"Were you held in the Free Mine?", Info_OrcShaman_ULUMULU_FM);
-	Info_AddChoice(Info_OrcShaman_ULUMULU,"Were you a prisoner in the abandoned mine?", Info_OrcShaman_ULUMULU_VM);
-	Info_AddChoice(Info_OrcShaman_ULUMULU,"Were you held captive in the Old Mine?", Info_OrcShaman_ULUMULU_AM);
+//	Info_AddChoice(Info_OrcShaman_ULUMULU,"Were you held in the Free Mine?", Info_OrcShaman_ULUMULU_FM);
+//	Info_AddChoice(Info_OrcShaman_ULUMULU,"Warst du in der Freien Mine gefangen?", Info_OrcShaman_ULUMULU_FM);
+	Info_AddChoice(Info_OrcShaman_ULUMULU,"Byl jsi zavřený ve Svobodném dole?", Info_OrcShaman_ULUMULU_FM);
+//	Info_AddChoice(Info_OrcShaman_ULUMULU,"Were you a prisoner in the abandoned mine?", Info_OrcShaman_ULUMULU_VM);
+//	Info_AddChoice(Info_OrcShaman_ULUMULU,"Warst du in der Verlassenen Mine gefangen?", Info_OrcShaman_ULUMULU_VM);
+	Info_AddChoice(Info_OrcShaman_ULUMULU,"Byls vězněm v tom opuštěném dole?", Info_OrcShaman_ULUMULU_VM);
+//	Info_AddChoice(Info_OrcShaman_ULUMULU,"Were you held captive in the Old Mine?", Info_OrcShaman_ULUMULU_AM);
+//	Info_AddChoice(Info_OrcShaman_ULUMULU,"Warst du in der Alten Mine gefangen?", Info_OrcShaman_ULUMULU_AM);
+	Info_AddChoice(Info_OrcShaman_ULUMULU,"Drželi tě zavřeného v Starém dole?", Info_OrcShaman_ULUMULU_AM);
 }; 
 
 func void Info_OrcShaman_ULUMULU_VM()
@@ -646,7 +652,7 @@ func void Info_OrcShaman_ULUMULU_FM()
 };
 
 //---------------------------------------------------------------------
-// Info BYEBYE
+//	Info BYEBYE
 //---------------------------------------------------------------------
 instance Info_OrcShaman_BYEBYE(C_INFO)
 {
@@ -692,7 +698,7 @@ func void Info_OrcShaman_BYEBYE_Info()
 };
 
 //---------------------------------------------------------------------
-// Info FRIENDLYHELLO
+//	Info FRIENDLYHELLO
 //---------------------------------------------------------------------
 instance Info_OrcShaman_FRIENDLYHELLO(C_INFO)
 {
@@ -747,7 +753,7 @@ func void Info_OrcShaman_FRIENDLYHELLO_Info()
 //#####################################################################
 
 //---------------------------------------------------------------------
-// Info ORCCITY
+//	Info ORCCITY
 //---------------------------------------------------------------------
 instance Info_OrcShaman_ORCCITY(C_INFO)
 {
@@ -796,7 +802,7 @@ func void Info_OrcShaman_ORCCITY_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info YOUHERE
+//	Info YOUHERE
 //---------------------------------------------------------------------
 instance Info_OrcShaman_YOUHERE(C_INFO)
 {
@@ -841,7 +847,7 @@ func void Info_OrcShaman_YOUHERE_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info SEAL
+//	Info SEAL
 //---------------------------------------------------------------------
 instance Info_OrcShaman_SEAL(C_INFO)
 {
@@ -880,7 +886,7 @@ func void Info_OrcShaman_SEAL_Info()
 }; 
 
 //---------------------------------------------------------------------
-// Info SCROLL
+//	Info SCROLL
 //---------------------------------------------------------------------
 instance Info_OrcShaman_SCROLL(C_INFO)
 {
@@ -918,12 +924,12 @@ func void Info_OrcShaman_SCROLL_Info()
 	AI_Output(self,hero,"Info_OrcShaman_SCROLL_17_04"); //Bratři Ur-Shaka to nemít rádi! ULU-MULU nepomáhat, když přítel používat kouzlo!
 
 //	B_LogEntry(CH4_EnterTemple,"I met the shaman Ur-Shak in front of the Orc town again. He told me that I could only get into the vestibule of the underground temple with an Orc spell. The other Orc shamans keep spells like that in their caves.");
-//	B_LogEntry(CH4_EnterTemple,"Grash-Varrag-Arushat schient kein untoter Orkschamane wie die anderen zu sein. Es ist weitaus mächtiger und meine Waffen richteten nicht den geringsten Schaden an. Ich brauche eine Waffe, die mächtiger als alles andere ist!");
-	B_LogEntry(CH4_EnterTemple,"Varrag-Kasorg, další z pěti skřetích šamanů, teď končí svoji bídnou existenci u mých nohou!");
+//	B_LogEntry(CH4_EnterTemple,"Ich habe den Schamanen Ur-Shak vor der Orkstadt wiedergetroffen. Er verriet mir, dass ich nur mithilfe eines orkischen Zauberspruches in die Vorhalle des unterirdischen Tempels gelangen kann. Die anderen Ork-Schamanen bewahren solche Zauber in ihrer Höhle auf.");
+	B_LogEntry(CH4_EnterTemple,"Před skřetím městem jsem se znovu setkal se šamanem Ur-Shakem. Řekl mi, že pouze skřetím kouzlem se mohu dostat do předsálí podzemního chrámu. Ostatní skřetí šamani mají ve svých jeskyních právě taková kouzla.");
 }; 
 
 //---------------------------------------------------------------------
-// Info IDOL
+//	Info IDOL
 //---------------------------------------------------------------------
 instance Info_OrcShaman_IDOL(C_INFO)
 {
@@ -962,8 +968,8 @@ func void Info_OrcShaman_IDOL_Info()
 		AI_Output(self,hero,"Info_OrcShaman_IDOL_17_04"); //Přítel teď moci otevřít bránu do chrámového sálu!
 
 //		B_LogEntry(CH4_EnterTemple,"Another way leads into the temple as well. I have to use the figurine of the Sleeper from the sacred column of the Orc shamans. It opens the door to the temple.");
-//		B_LogEntry(CH4_EnterTemple,"Ich habe den Schamanen Ur-Shak vor der Orkstadt wiedergetroffen. Er verriet mir, dass ich nur mithilfe eines orkischen Zauberspruches in die Vorhalle des unterirdischen Tempels gelangen kann. Die anderen Ork-Schamanen bewahren solche Zauber in ihrer Höhle auf.");
-		B_LogEntry(CH4_EnterTemple,"Varrag-Unhilqt, jeden z pěti Spáčových šamanů, stojí přede mnou. Jen jeden z nás vyjde z této komnaty živý!");
+//		B_LogEntry(CH4_EnterTemple,"Es gibt noch einen weiteren Weg in den Tempel. Ich muss die Schläferfigur von der heiligen Säule der Orkschamanen benutzen. Sie öffnet das Tor zum Tempel.");
+		B_LogEntry(CH4_EnterTemple,"Do chrámu však vede i jiná cesta. Budu k tomu muset použít figurku Spáče z posvátného sloupu skřetích šamanů. Ta otevře vrata chrámu.");
 	}
 	else
 	{
@@ -975,8 +981,8 @@ func void Info_OrcShaman_IDOL_Info()
 		AI_Output(self,hero,"Info_OrcShaman_IDOL_17_06"); //Figurka teď otevřít vrata chrámového sálu!
 
 //		B_LogEntry(CH4_EnterTemple,"There is another way to the temple. There is a figure of the Sleeper on the sacred column of the Orc shamans which opens the door to the temple. Ur-Shak's brothers won't be delighted when they discover that I'm using their holy icon.");
-//		B_LogEntry(CH4_EnterTemple,"Es gibt noch einen weiteren Weg in den Tempel. Ich muss die Schläferfigur von der heiligen Säule der Orkschamanen benutzen. Sie öffnet das Tor zum Tempel.");
-		B_LogEntry(CH4_EnterTemple,"Varrag-Ruuushk, jeden z pěti nemrtvých šamanů vzývajících Spáče, mi zkřížil cestu. Nezastaví mě, tím jsme si jist!");
+//		B_LogEntry(CH4_EnterTemple,"Es gibt noch einen weiteren Weg in den Tempel zu gelangen. Auf der heiligen Säule der Orkschamanen steht eine Schläferfigur, die das Tor zum Tempel öffnet. Allerdings werden Ur-Shak's Brüder wenig begeistert sein, wenn sie bemerken, dass ich mich ihrer heiligen Ikone bediene.");
+		B_LogEntry(CH4_EnterTemple,"Do chrámu vede další cesta. V posvátném sloupu skřetích šamanů je figurka Spáče, která otevře vrata chrámu. Ur-Shakovi bratři se nepotěší, až uvidí, že používám jejich svatou ikonu.");
 	};
 }; 
 

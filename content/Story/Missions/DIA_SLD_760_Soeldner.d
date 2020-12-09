@@ -115,7 +115,7 @@ func void DIA_SLD_760_Soeldner_UMSEHEN_INFO()
 //	AI_Output(other,self,"DIA_SLD_760_Soeldner_UMSEHEN_INFO_15_01"); //Ich will mich hier nur mal umsehen.
 	AI_Output(other,self,"DIA_SLD_760_Soeldner_UMSEHEN_INFO_15_01"); //Chtěl bych se tady porozhlédnout.
 //	AI_Output(self,other,"DIA_SLD_760_Soeldner_UMSEHEN_INFO_13_02");//Then leave your fingers in your pockets or I'll chop them off.
-//	AI_Output(self,other,"DIA_SLD_760_Soeldner_UMSEHEN_INFO_13_02");//Dann lass deine Finger bei dir, sonst werde ich sie dir anschneiden. 
+//	AI_Output(self,other,"DIA_SLD_760_Soeldner_UMSEHEN_INFO_13_02");//Dann lass deine Finger bei dir, sonst werde ich sie dir anschneiden.
 	AI_Output(self,other,"DIA_SLD_760_Soeldner_UMSEHEN_INFO_13_02");//Vyndej si ruce z kapes nebo ti je urazím!
 };
 

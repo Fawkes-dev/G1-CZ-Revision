@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_Herek_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Herek_Exit_Info()
 };
 
 // **************************************************
-// Schutzgeld-Bully
+// 				Schutzgeld-Bully
 // **************************************************
 
 instance DIA_Herek_Bully(C_INFO)
@@ -71,7 +71,7 @@ func void DIA_Herek_Bully_Info()
 };
 
 // **************************************************
-// Motz
+// 					Motz
 // **************************************************
 
 instance DIA_Herek_Motz(C_INFO)
@@ -118,7 +118,7 @@ func void DIA_Herek_Motz_Info()
 };
 
 // **************************************************
-// Anlegen!
+// 					Anlegen!
 // **************************************************
 
 instance DIA_Herek_Anlegen(C_INFO)

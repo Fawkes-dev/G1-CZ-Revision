@@ -1,5 +1,5 @@
 // ************************************************************
-//	  EXIT 
+// 			  				   EXIT 
 // ************************************************************
 
 instance DIA_BaalKagan_EXIT(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_BaalKagan_EXIT_Info()
 };
 
 // ************************************************************
-// Hallo
+// 							Hallo
 // ************************************************************
 
 instance DIA_BaalKagan_Hello(C_INFO)
@@ -57,7 +57,7 @@ func void DIA_BaalKagan_Hello_Info()
 };
 
 // ************************************************************
-// Warum hier
+// 						Warum hier
 // ************************************************************
 
 instance DIA_BaalKagan_WhyHere(C_INFO)
@@ -102,7 +102,7 @@ func void DIA_BaalKagan_WhyHere_Info()
 };
 
 // ************************************************************
-// TRADE
+// 						TRADE
 // ************************************************************
 
 instance DIA_BaalKagan_TRADE(C_INFO)
@@ -137,7 +137,7 @@ func void DIA_BaalKagan_TRADE_Info()
 };
 
 // ************************************************************
-// Hilfe anfordern
+// 						Hilfe anfordern
 // ************************************************************
 
 instance DIA_BaalKagan_OrderHelp(C_INFO)
@@ -183,7 +183,7 @@ func void DIA_BaalKagan_OrderHelp_Info()
 };
 
 // ************************************************************
-// Ich könnte dir helfen
+// 					Ich könnte dir helfen
 // ************************************************************
 
 instance DIA_BaalKagan_WannaHelp(C_INFO)
@@ -229,7 +229,7 @@ func void DIA_BaalKagan_WannaHelp_Info()
 };
 
 // ************************************************************
-// Was ist drin?
+// 						Was ist drin?
 // ************************************************************
 
 instance DIA_BaalKagan_WasDrin(C_INFO)
@@ -278,7 +278,7 @@ func void DIA_BaalKagan_WasDrin_Info()
 };
 
 // ************************************************************
-// Gib mir Kraut
+// 						Gib mir Kraut
 // ************************************************************
 	var int BaalKAgan_VerteilKraut;
 // ************************************************************
@@ -330,7 +330,7 @@ func void DIA_BaalKagan_GimmeKraut_Info()
 };
 
 // ************************************************************
-// SUCCESS
+// 						SUCCESS
 // ************************************************************
 
 instance DIA_BaalKagan_SUCCESS(C_INFO)
@@ -369,16 +369,16 @@ func void DIA_BaalKagan_SUCCESS_Info()
 
 		Info_ClearChoices(DIA_BaalKagan_SUCCESS);
 //		Info_AddChoice(DIA_BaalKagan_SUCCESS,"I'll take the ore.",DIA_BaalKagan_SUCCESS_Erz);
-//		Info_AddChoice(DIA_BaalKagan_SUCCESS," "Ich nehme das Erz."	",DIA_BaalKagan_SUCCESS_Erz);
+//		Info_AddChoice(DIA_BaalKagan_SUCCESS,"Ich nehme das Erz.",DIA_BaalKagan_SUCCESS_Erz);
 		Info_AddChoice(DIA_BaalKagan_SUCCESS,"Vezmu si rudu.",DIA_BaalKagan_SUCCESS_Erz);
 		if (Npc_GetTrueGuild(hero) == GIL_NONE)
 		{
 //			Info_AddChoice(DIA_BaalKagan_SUCCESS,"Help me to join the Brotherhood.",DIA_BaalKagan_SUCCESS_Join);
-//			Info_AddChoice(DIA_BaalKagan_SUCCESS," "Hilf mir, in der Bruderschaft aufgenommen zu werden."	",DIA_BaalKagan_SUCCESS_Join);
+//			Info_AddChoice(DIA_BaalKagan_SUCCESS,"Hilf mir, in der Bruderschaft aufgenommen zu werden.",DIA_BaalKagan_SUCCESS_Join);
 			Info_AddChoice(DIA_BaalKagan_SUCCESS,"Pomoz mi vstoupit do Bratrstva.",DIA_BaalKagan_SUCCESS_Join);
 		};
 //		Info_AddChoice(DIA_BaalKagan_SUCCESS,"These spell scrolls are quite interesting - what kind of spells are they?",DIA_BaalKagan_SUCCESS_WhatSpells);
-//		Info_AddChoice(DIA_BaalKagan_SUCCESS," "Die Spruchrollen interessieren mich - was sind das für Sprüche?"	",DIA_BaalKagan_SUCCESS_WhatSpells);
+//		Info_AddChoice(DIA_BaalKagan_SUCCESS,"Die Spruchrollen interessieren mich - was sind das für Sprüche?",DIA_BaalKagan_SUCCESS_WhatSpells);
 		Info_AddChoice(DIA_BaalKagan_SUCCESS,"Tyto kouzelné svitky jsou také docela zajímavé - jaký druh kouzla mají?",DIA_BaalKagan_SUCCESS_WhatSpells);
 
 		BaalKagan_VerteilKraut = LOG_SUCCESS;
@@ -405,7 +405,7 @@ func void DIA_BaalKagan_SUCCESS_WhatSpells()
 //	AI_Output(self,other,"DIA_BaalKagan_SUCCESS_WhatSpells_13_01"); //Windfaust, Charme, Telekinese, Pyrokinese und Schlaf. Von diesen Sprüchen darfst du drei wählen.
 	AI_Output(self,other,"DIA_BaalKagan_SUCCESS_WhatSpells_13_01"); //Větrnou pěst, telekinezi, pyrokinezi a spánek. Můžeš si vybrat tři z nich.
 //	Info_AddChoice(DIA_BaalKagan_SUCCESS,"I'll take the three spell scrolls.",DIA_BaalKagan_SUCCESS_TakeScrolls);
-//	Info_AddChoice(DIA_BaalKagan_SUCCESS," "Ich nehme die drei Spruchrollen."	",DIA_BaalKagan_SUCCESS_TakeScrolls);
+//	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Ich nehme die drei Spruchrollen.",DIA_BaalKagan_SUCCESS_TakeScrolls);
 	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Vezmu si tři kouzelné svitky.",DIA_BaalKagan_SUCCESS_TakeScrolls);
 };
 
@@ -462,20 +462,20 @@ func void DIA_BaalKagan_SUCCESS_TakeScrolls()
 	AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_13_01"); //Dobré rozhodnutí. Vem si tři.
 	Info_ClearChoices(DIA_BaalKagan_SUCCESS);
 //	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Fist of Wind",DIA_BaalKagan_SUCCESS_TakeScrolls_Windfaust);
-//	Info_AddChoice(DIA_BaalKagan_SUCCESS," "Windfaust"	",DIA_BaalKagan_SUCCESS_TakeScrolls_Windfaust);
-	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Úder větru.",DIA_BaalKagan_SUCCESS_TakeScrolls_Windfaust);
+//	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Windfaust",DIA_BaalKagan_SUCCESS_TakeScrolls_Windfaust);
+	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Úder větru",DIA_BaalKagan_SUCCESS_TakeScrolls_Windfaust);
 //	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Telekinesis",DIA_BaalKagan_SUCCESS_TakeScrolls_Telekinese);
-//	Info_AddChoice(DIA_BaalKagan_SUCCESS," "Telekinese"	",DIA_BaalKagan_SUCCESS_TakeScrolls_Telekinese);
-	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Telekineze.",DIA_BaalKagan_SUCCESS_TakeScrolls_Telekinese);
+//	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Telekinese",DIA_BaalKagan_SUCCESS_TakeScrolls_Telekinese);
+	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Telekineze",DIA_BaalKagan_SUCCESS_TakeScrolls_Telekinese);
 //	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Pyrokinesis",DIA_BaalKagan_SUCCESS_TakeScrolls_Pyrokinese);
-//	Info_AddChoice(DIA_BaalKagan_SUCCESS," "Pyrokinese"	",DIA_BaalKagan_SUCCESS_TakeScrolls_Pyrokinese);
-	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Pyrokineze.",DIA_BaalKagan_SUCCESS_TakeScrolls_Pyrokinese);
+//	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Pyrokinese",DIA_BaalKagan_SUCCESS_TakeScrolls_Pyrokinese);
+	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Pyrokineze",DIA_BaalKagan_SUCCESS_TakeScrolls_Pyrokinese);
 //	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Sleep",DIA_BaalKagan_SUCCESS_TakeScrolls_Schlaf);
-//	Info_AddChoice(DIA_BaalKagan_SUCCESS," "Schlaf."		",DIA_BaalKagan_SUCCESS_TakeScrolls_Schlaf);
-	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Spánek.",DIA_BaalKagan_SUCCESS_TakeScrolls_Schlaf);
+//	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Schlaf.",DIA_BaalKagan_SUCCESS_TakeScrolls_Schlaf);
+	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Spánek",DIA_BaalKagan_SUCCESS_TakeScrolls_Schlaf);
 //	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Charm",DIA_BaalKagan_SUCCESS_TakeScrolls_Charme);
-//	Info_AddChoice(DIA_BaalKagan_SUCCESS," "Charme"		",DIA_BaalKagan_SUCCESS_TakeScrolls_Charme);
-	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Šarm.",DIA_BaalKagan_SUCCESS_TakeScrolls_Charme);
+//	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Charme",DIA_BaalKagan_SUCCESS_TakeScrolls_Charme);
+	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Šarm",DIA_BaalKagan_SUCCESS_TakeScrolls_Charme);
 };
 //-----------------------------------------------------------------------
 	var int BaalKagan_drei;
@@ -488,7 +488,7 @@ func void DIA_BaalKagan_SUCCESS_TakeScrolls_Windfaust()
 	BaalKagan_drei = BaalKagan_drei+1;
 	if (BaalKagan_drei >= 3)  
 	{ 
-//		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //That was three. Use them wisely.
+//		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //Das waren drei. Verwende sie weise.
 		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //
 		Info_ClearChoices(DIA_BaalKagan_SUCCESS); 
 	};
@@ -502,7 +502,7 @@ func void DIA_BaalKagan_SUCCESS_TakeScrolls_Telekinese()
 	BaalKagan_drei = BaalKagan_drei+1;
 	if (BaalKagan_drei >= 3)  
 	{ 
-//		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //That was three. Use them wisely.
+//		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //Das waren drei. Verwende sie weise.
 		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //
 		Info_ClearChoices(DIA_BaalKagan_SUCCESS); 
 	};
@@ -516,7 +516,7 @@ func void DIA_BaalKagan_SUCCESS_TakeScrolls_Pyrokinese()
 	BaalKagan_drei = BaalKagan_drei+1;
 	if (BaalKagan_drei >= 3)  
 	{ 
-//		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //That was three. Use them wisely.
+//		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //Das waren drei. Verwende sie weise.
 		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //
 		Info_ClearChoices(DIA_BaalKagan_SUCCESS); 
 	};
@@ -530,7 +530,7 @@ func void DIA_BaalKagan_SUCCESS_TakeScrolls_Schlaf()
 	BaalKagan_drei = BaalKagan_drei+1;
 	if (BaalKagan_drei >= 3)  
 	{ 
-//		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //That was three. Use them wisely.
+//		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //Das waren drei. Verwende sie weise.
 		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //
 		Info_ClearChoices(DIA_BaalKagan_SUCCESS); 
 	};
@@ -544,6 +544,7 @@ func void DIA_BaalKagan_SUCCESS_TakeScrolls_Charme()
 	BaalKagan_drei = BaalKagan_drei+1;
 	if (BaalKagan_drei >= 3)  
 	{ 
+//		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //Das waren drei. Verwende sie weise.
 		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //That was three. Use them wisely.
 		Info_ClearChoices(DIA_BaalKagan_SUCCESS); 
 	};

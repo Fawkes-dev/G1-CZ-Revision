@@ -1,5 +1,5 @@
 // ************************************************************
-// EXIT 
+// 							EXIT 
 // ************************************************************
 
 instance Info_Yberion_EXIT(C_INFO)
@@ -131,9 +131,15 @@ func void Info_YBerion_BringFocus_Info()
 
 	Info_ClearChoices(Info_YBerion_BringFocus);
 	Info_AddChoice(Info_YBerion_BringFocus,DIALOG_BACK , Info_YBerion_BringFocus_BACK);
-	Info_AddChoice(Info_YBerion_BringFocus,"I'll bring the focus back!", Info_YBerion_BringFocus_OK);
-	Info_AddChoice(Info_YBerion_BringFocus,"Where shall I begin to search?", Info_YBerion_BringFocus_WO);
-	Info_AddChoice(Info_YBerion_BringFocus,"Why is the focus so important?", Info_YBerion_BringFocus_FOKUS);
+//	Info_AddChoice(Info_YBerion_BringFocus,"I'll bring the focus back!", Info_YBerion_BringFocus_OK);
+//	Info_AddChoice(Info_YBerion_BringFocus,"Ich werde den Fokus zurückbringen!", Info_YBerion_BringFocus_OK);
+	Info_AddChoice(Info_YBerion_BringFocus,"Přinesu to ohnisko zpátky!", Info_YBerion_BringFocus_OK);
+//	Info_AddChoice(Info_YBerion_BringFocus,"Where shall I begin to search?", Info_YBerion_BringFocus_WO);
+//	Info_AddChoice(Info_YBerion_BringFocus,"Wo soll ich suchen?", Info_YBerion_BringFocus_WO);
+	Info_AddChoice(Info_YBerion_BringFocus,"Kde mám začít pátrat?", Info_YBerion_BringFocus_WO);
+//	Info_AddChoice(Info_YBerion_BringFocus,"Why is the focus so important?", Info_YBerion_BringFocus_FOKUS);
+//	Info_AddChoice(Info_YBerion_BringFocus,"Was hat es mit dem Fokus auf sich?", Info_YBerion_BringFocus_FOKUS);
+	Info_AddChoice(Info_YBerion_BringFocus,"Proč je to ohnisko tak důležité?", Info_YBerion_BringFocus_FOKUS);
 };
 
 func void Info_YBerion_BringFocus_BACK()
@@ -388,6 +394,7 @@ func void GUR_1200_Yberion_LASTWORDS_Info()
 	AI_Output(self,other,"GUR_1200_Yberion_LASTWORDS_Info_12_06"); //Der Schläfer...Ich sah ihn. Er ist ein ...ein ....Dämon!
 	AI_Output(self,other,"GUR_1200_Yberion_LASTWORDS_Info_12_07"); //Wenn du die Barriere noch immer vernichten willst,... geh zum Neuen Lager. Berichte ihnen vom Fokus. Sag ihnen...
 	AI_Output(self,other,"GUR_1200_Yberion_LASTWORDS_Info_12_08"); //...sag ihnen das wir herausgefunden haben, wie sich die Foki aufladen lassen, sie sollen...sollen die Barriere vernichten......ihr müsst ....
+//	AI_Output(self,other,"GUR_1200_Yberion_LASTWORDS_Info_12_09"); //...das Böse....darf nicht erwachen ....
 	AI_Output(self,other,"GUR_1200_Yberion_LASTWORDS_Info_12_09"); //...das Böse....darf nicht erwachen .... 
 
 };  

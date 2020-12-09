@@ -1,5 +1,5 @@
 // **************************************************
-// EXIT 
+//						EXIT 
 // **************************************************
 
 instance DIA_Viran_Exit(C_INFO)
@@ -24,7 +24,7 @@ func void DIA_Viran_Exit_Info()
 };
 
 // **************************************************
-// Was macht ihr hier?
+//				Was macht ihr hier?
 // **************************************************
 
 instance DIA_Viran_What(C_INFO)
@@ -67,7 +67,7 @@ func void DIA_Viran_What_Info()
 };
 
 // **************************************************
-// Kraut abholen
+//				Kraut abholen
 // **************************************************
 
 instance DIA_Viran_FetchWeed(C_INFO)
@@ -104,10 +104,10 @@ func void DIA_Viran_FetchWeed_Info()
 
 	Info_ClearChoices(DIA_Viran_FetchWeed);
 //	Info_Addchoice (DIA_Viran_FetchWeed,"Go see him and ask him if you don't believe me!",DIA_Viran_FetchWeed_GotoHim);
-//	Info_Addchoice (DIA_Viran_FetchWeed,""Geh doch zu ihm und frag ihn, wenn du mir nicht glaubst!"	",DIA_Viran_FetchWeed_GotoHim);
+//	Info_Addchoice (DIA_Viran_FetchWeed,"Geh doch zu ihm und frag ihn, wenn du mir nicht glaubst!",DIA_Viran_FetchWeed_GotoHim);
 	Info_Addchoice (DIA_Viran_FetchWeed,"Jdi za ním a zeptej se ho, když mi nevěříš!",DIA_Viran_FetchWeed_GotoHim);
 //	Info_Addchoice (DIA_Viran_FetchWeed,"But Baal Orun really has sent me!",DIA_Viran_FetchWeed_Really);
-//	Info_Addchoice (DIA_Viran_FetchWeed,""Baal Orun schickt mich aber wirklich!"					",DIA_Viran_FetchWeed_Really);
+//	Info_Addchoice (DIA_Viran_FetchWeed,"Baal Orun schickt mich aber wirklich!",DIA_Viran_FetchWeed_Really);
 	Info_Addchoice (DIA_Viran_FetchWeed,"Ale Baal Orun mě skutečně poslal!",DIA_Viran_FetchWeed_Really);
 };
 
@@ -133,7 +133,7 @@ func void DIA_Viran_FetchWeed_GotoHim()
 };
 
 // **************************************************
-// MISSION Bloodflies
+//				MISSION Bloodflies
 // **************************************************
 	var int Viran_Bloodflies;
 // **************************************************
@@ -177,7 +177,7 @@ func void DIA_Viran_Bloodflies_Info()
 };
 
 // **************************************************
-// Running / Success
+//				Running / Success
 // **************************************************
 	var int Viran_BotenDay;
 // **************************************************
@@ -259,7 +259,7 @@ func void DIA_Viran_Running_Info()
 };
 
 // **************************************************
-// PERMANENT
+//					PERMANENT
 // **************************************************
 
 instance DIA_Viran_Perm(C_INFO)
@@ -296,7 +296,7 @@ func void DIA_Viran_Perm_Info()
 };
 
 // **************************************************
-// Verarschen
+//					Verarschen
 // **************************************************
 
 instance DIA_Viran_RipOff(C_INFO)

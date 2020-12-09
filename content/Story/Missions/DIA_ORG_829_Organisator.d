@@ -1,5 +1,5 @@
 // ************************************************************
-//	  EXIT 
+// 			  				   EXIT 
 // ************************************************************
 
 instance Info_ORG_829_EXIT(C_INFO)
@@ -23,7 +23,7 @@ func void Info_ORG_829_EXIT_Info()
 };
 
 // ************************************************************
-// Hallo
+// 						Hallo
 // ************************************************************
 
 instance Info_ORG_829_Hello(C_INFO)
@@ -54,7 +54,7 @@ func void Info_ORG_829_Hello_Info()
 };
 
 // ************************************************************
-// Offer Joint
+// 						Offer Joint
 // ************************************************************
 	var int Org_829_GotJoint;
 // ************************************************************
@@ -109,7 +109,7 @@ func void Info_ORG_829_OfferJoint_Info()
 };
 
 // ************************************************************
-// Special Info
+// 							Special Info
 // ************************************************************
 
 instance Info_ORG_829_SpecialInfo(C_INFO)
@@ -144,12 +144,12 @@ func void Info_ORG_829_SpecialInfo_Info()
 //	AI_Output(other,self,"Info_ORG_829_SpecialInfo_15_02"); //Von 'uns'?
 	AI_Output(other,self,"Info_ORG_829_SpecialInfo_15_02"); //Co myslíš tím 'z nás'?
 //	AI_Output(self,other,"Info_ORG_829_SpecialInfo_06_03"); //"Well, an outlaw, of course. One of the ""kick-the-Ore Barons-in-the-butt"" rogues!"
-//	AI_Output(self,other,"Info_ORG_829_SpecialInfo_06_03"); //Na, ein Bandit eben. Ein Wir-treten-den-Erzbaronen-in-den-Arsch-Bandit! 
+//	AI_Output(self,other,"Info_ORG_829_SpecialInfo_06_03"); //Na, ein Bandit eben. Ein Wir-treten-den-Erzbaronen-in-den-Arsch-Bandit!
 	AI_Output(self,other,"Info_ORG_829_SpecialInfo_06_03"); //Psanec, samozřejmě. Jeden z 'nakopávačů Rudobaronskejch zadků'!
 };
 
 // ************************************************************
-// PERM
+// 							PERM
 // ************************************************************
 
 instance Info_ORG_829_PERM(C_INFO)

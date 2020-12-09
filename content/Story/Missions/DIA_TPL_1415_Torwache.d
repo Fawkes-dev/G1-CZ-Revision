@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_Tpl_1415_Torwache_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Tpl_1415_Torwache_Exit_Info()
 };
 
 // **************************************************
-// Erstes Mal aufkreuzen
+// 				Erstes Mal aufkreuzen
 // **************************************************
 
 instance DIA_Tpl_1415_Torwache_First(C_INFO)
@@ -111,7 +111,7 @@ func void DIA_Tpl_1415_Torwache_First_JustLooking()
 };
 
 // **************************************************
-// Wie sieht's im Lager aus?
+// 				Wie sieht's im Lager aus?
 // **************************************************
 
 instance DIA_Tpl_1415_Torwache_Sit(C_INFO)
@@ -141,7 +141,7 @@ func void DIA_Tpl_1415_Torwache_Sit_Info()
 	AI_Output(self,other,"DIA_Tpl_1415_Torwache_Sit_13_01"); //Všude klid. Tak pojď.
 };
 /*------------------------------------------------------------------------
-// TEMPLERAUFNAHME //
+//						TEMPLERAUFNAHME //
 ------------------------------------------------------------------------*/
 instance Tpl_1415_Torwache_TEMPLERAUFNAHME(C_INFO)
 {
@@ -218,9 +218,7 @@ func void Tpl_1415_Templer_ROCK_Info()
 	AI_Output(self,other,"Tpl_1415_Templer_ROCK_Info_13_04"); //Za takové volnomyšlenkářství ji nedostaneš!
 
 	Info_ClearChoices(Tpl_1415_Templer_ROCK);
-//	Info_Addchoice (Tpl_1415_Templer_ROCK,"DIALOG_BACK",Tpl_1415_Templer_ROCK_BACK);
 	Info_Addchoice (Tpl_1415_Templer_ROCK,DIALOG_BACK,Tpl_1415_Templer_ROCK_BACK);
-//	Info_Addchoice (Tpl_1415_Templer_ROCK,"B_BuildBuyArmorString(NAME_TorwachenPsiRock,VALUE_NOV_ARMOR_L)",Tpl_1415_Templer_ROCK_BUY);
 	Info_Addchoice (Tpl_1415_Templer_ROCK,B_BuildBuyArmorString(NAME_TorwachenPsiRock,VALUE_NOV_ARMOR_L),Tpl_1415_Templer_ROCK_BUY);
 };
 

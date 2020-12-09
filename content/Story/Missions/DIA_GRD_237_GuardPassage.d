@@ -1,10 +1,10 @@
 //////////////////////////////////////////////////////////////////////////
-// DURCHGANGSWACHE
-// =============== 
-// NSC: Grd_237_Torwache
-// Lager: OldCamp
-// Durchgang: Barrikade beim Durchgang zum Orkgebiet
-// Uhrzeit: 24h
+//	DURCHGANGSWACHE
+//	=============== 
+//	NSC: Grd_237_Torwache
+//	Lager: OldCamp
+//	Durchgang: Barrikade beim Durchgang zum Orkgebiet
+//	Uhrzeit: 24h
 //////////////////////////////////////////////////////////////////////////
 CONST STRING Grd_237_CHECKPOINT = "OW_PATH_272";
 
@@ -19,7 +19,7 @@ instance Info_Grd_237_FirstWarn(C_INFO)
 };                       
 
 //------------------------------------------------------------------------
-// 1. Warnung
+//	1. Warnung
 //------------------------------------------------------------------------
 func int Info_Grd_237_FirstWarn_Condition()
 {
@@ -47,9 +47,15 @@ func void Info_Grd_237_FirstWarn_Info()
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,Grd_237_CHECKPOINT);
 
 	Info_ClearChoices(Info_Grd_237_FirstWarn);
-	Info_AddChoice(Info_Grd_237_FirstWarn,"I don't think I want to do that!", Info_Grd_237_FirstWarn_Info_NO); 
-	Info_AddChoice(Info_Grd_237_FirstWarn,"Sure, here's my ore!", Info_Grd_237_FirstWarn_Info_YES); 
-	Info_AddChoice(Info_Grd_237_FirstWarn,"I think it might be best if I just turn back.", Info_Grd_237_FirstWarn_Info_RETREAT); 
+//	Info_AddChoice(Info_Grd_237_FirstWarn,"I don't think I want to do that!", Info_Grd_237_FirstWarn_Info_NO); 
+//	Info_AddChoice(Info_Grd_237_FirstWarn,"Ich glaube nicht, dass ich das will!", Info_Grd_237_FirstWarn_Info_NO); 
+	Info_AddChoice(Info_Grd_237_FirstWarn,"Nemyslím, že to chci udělat!", Info_Grd_237_FirstWarn_Info_NO); 
+//	Info_AddChoice(Info_Grd_237_FirstWarn,"Sure, here's my ore!", Info_Grd_237_FirstWarn_Info_YES); 
+//	Info_AddChoice(Info_Grd_237_FirstWarn,"Na klar, hier ist mein Erz!", Info_Grd_237_FirstWarn_Info_YES); 
+	Info_AddChoice(Info_Grd_237_FirstWarn,"Jistě, tady je moje ruda!", Info_Grd_237_FirstWarn_Info_YES); 
+//	Info_AddChoice(Info_Grd_237_FirstWarn,"I think it might be best if I just turn back.", Info_Grd_237_FirstWarn_Info_RETREAT); 
+//	Info_AddChoice(Info_Grd_237_FirstWarn,"Ist wohl besser wenn ich wieder umdrehe!", Info_Grd_237_FirstWarn_Info_RETREAT); 
+	Info_AddChoice(Info_Grd_237_FirstWarn,"Myslím, že by bylo lepší, kdybych se vrátil.", Info_Grd_237_FirstWarn_Info_RETREAT); 
 };
 
 func void Info_Grd_237_FirstWarn_Info_RETREAT()
@@ -106,7 +112,7 @@ func void Info_Grd_237_FirstWarn_Info_NO()
 }; 
 
 //------------------------------------------------------------------------
-// 2. Warnung
+//	2. Warnung
 //------------------------------------------------------------------------
 instance Info_Grd_237_LastWarn(C_INFO)
 {
@@ -142,7 +148,7 @@ func int Info_Grd_237_LastWarn_Info()
 };
 
 //------------------------------------------------------------------------
-// Attack
+//	Attack
 //------------------------------------------------------------------------
 instance Info_Grd_237_Attack(C_INFO)
 {

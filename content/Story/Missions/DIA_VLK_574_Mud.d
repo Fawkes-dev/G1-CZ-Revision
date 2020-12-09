@@ -5,7 +5,7 @@ var int Mud_NerveRealized;
 // **************************************************
 
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_Mud_Exit(C_INFO)
@@ -32,7 +32,7 @@ func void DIA_Mud_Exit_Info()
 };
 
 // **************************************************
-// First + EXIT
+// 						First + EXIT
 // **************************************************
 
 instance DIA_Mud_FirstEXIT(C_INFO)
@@ -63,10 +63,10 @@ func void DIA_Mud_FirstEXIT_Info()
 	AI_Output(self,other,"DIA_Mud_FirstEXIT_07_01"); //Jestli dovolíš, na chvilku se k tobě přidám. Určitě potřebuješ přítele.
 	Info_ClearChoices(DIA_Mud_FirstEXIT);
 //	Info_AddChoice(DIA_Mud_FirstEXIT,"Get lost!",DIA_Mud_FirstEXIT_Verpiss);
-//	Info_AddChoice(DIA_Mud_FirstEXIT," "Verpiss dich!"			",DIA_Mud_FirstEXIT_Verpiss);
+//	Info_AddChoice(DIA_Mud_FirstEXIT,"Verpiss dich!",DIA_Mud_FirstEXIT_Verpiss);
 	Info_AddChoice(DIA_Mud_FirstEXIT,"Ztrať se!",DIA_Mud_FirstEXIT_Verpiss);
 //	Info_AddChoice(DIA_Mud_FirstEXIT,"Why not - come along!",DIA_Mud_FirstEXIT_Komm);
-//	Info_AddChoice(DIA_Mud_FirstEXIT," "Warum nicht - komm mit!"	",DIA_Mud_FirstEXIT_Komm);
+//	Info_AddChoice(DIA_Mud_FirstEXIT,"Warum nicht - komm mit!",DIA_Mud_FirstEXIT_Komm);
 	Info_AddChoice(DIA_Mud_FirstEXIT,"Proč ne - pojď.",DIA_Mud_FirstEXIT_Komm);
 };
 
@@ -97,7 +97,7 @@ func void DIA_Mud_FirstEXIT_Komm()
 };
 
 // **************************************************
-// Shut Up!
+// 					Shut Up!
 // **************************************************
 
 instance DIA_Mud_ShutUp(C_INFO)
@@ -133,7 +133,7 @@ func void DIA_Mud_ShutUp_Info()
 };
 
 // **************************************************
-// Verpiß dich
+// 					Verpiß dich
 // **************************************************
 
 instance DIA_Mud_GetLost(C_INFO)
@@ -164,7 +164,7 @@ func void DIA_Mud_GetLost_Info()
 };
 
 // **************************************************
-// DEFEATED
+// 					DEFEATED
 // **************************************************
 
 instance DIA_Mud_Defeated(C_INFO)
@@ -202,7 +202,7 @@ func void DIA_Mud_Defeated_Info()
 };
 
 // **************************************************
-//  Nerve 0 
+// 						 Nerve 0 
 // **************************************************
 
 instance DIA_Mud_Nerve_0(C_INFO)
@@ -231,7 +231,7 @@ func void DIA_Mud_Nerve_0_Info()
 };
 
 // **************************************************
-//  Nerve 1 
+// 						 Nerve 1 
 // **************************************************
 
 instance DIA_Mud_Nerve_1(C_INFO)
@@ -261,7 +261,7 @@ func void DIA_Mud_Nerve_1_Info()
 };
 
 // **************************************************
-//  Nerve 2 
+// 						 Nerve 2 
 // **************************************************
 
 instance DIA_Mud_Nerve_2(C_INFO)
@@ -290,7 +290,7 @@ func void DIA_Mud_Nerve_2_Info()
 };
 
 // **************************************************
-//  Nerve 3
+// 						 Nerve 3
 // **************************************************
 
 instance DIA_Mud_Nerve_3(C_INFO)
@@ -319,7 +319,7 @@ func void DIA_Mud_Nerve_3_Info()
 };
 
 // **************************************************
-//  Nerve 4
+// 						 Nerve 4
 // **************************************************
 
 instance DIA_Mud_Nerve_4(C_INFO)
@@ -348,7 +348,7 @@ func void DIA_Mud_Nerve_4_Info()
 };
 
 // **************************************************
-//  Nerve 5
+// 						 Nerve 5
 // **************************************************
 
 instance DIA_Mud_Nerve_5(C_INFO)
@@ -377,7 +377,7 @@ func void DIA_Mud_Nerve_5_Info()
 };
 
 // **************************************************
-//  Nerve 6
+// 						 Nerve 6
 // **************************************************
 
 instance DIA_Mud_Nerve_6(C_INFO)
@@ -406,7 +406,7 @@ func void DIA_Mud_Nerve_6_Info()
 };
 
 // **************************************************
-//  Nerve 7
+// 						 Nerve 7
 // **************************************************
 
 instance DIA_Mud_Nerve_7(C_INFO)
@@ -435,7 +435,7 @@ func void DIA_Mud_Nerve_7_Info()
 };
 
 // **************************************************
-//  Nerve 8
+// 						 Nerve 8
 // **************************************************
 
 instance DIA_Mud_Nerve_8(C_INFO)
@@ -464,7 +464,7 @@ func void DIA_Mud_Nerve_8_Info()
 };
 
 // **************************************************
-//  Nerve 9
+// 						 Nerve 9
 // **************************************************
 
 instance DIA_Mud_Nerve_9(C_INFO)
@@ -493,7 +493,7 @@ func void DIA_Mud_Nerve_9_Info()
 };
 
 // **************************************************
-//  Nerve 10
+// 						 Nerve 10
 // **************************************************
 
 instance DIA_Mud_Nerve_10(C_INFO)
@@ -522,7 +522,7 @@ func void DIA_Mud_Nerve_10_Info()
 };
 
 // **************************************************
-//  Nerve 11
+// 						 Nerve 11
 // **************************************************
 
 instance DIA_Mud_Nerve_11(C_INFO)
@@ -551,7 +551,7 @@ func void DIA_Mud_Nerve_11_Info()
 };
 
 // **************************************************
-//  Nerve 12
+// 						 Nerve 12
 // **************************************************
 
 instance DIA_Mud_Nerve_12(C_INFO)
@@ -580,7 +580,7 @@ func void DIA_Mud_Nerve_12_Info()
 };
 
 // **************************************************
-//  Nerve 13
+// 						 Nerve 13
 // **************************************************
 
 instance DIA_Mud_Nerve_13(C_INFO)
@@ -609,7 +609,7 @@ func void DIA_Mud_Nerve_13_Info()
 };
 
 // **************************************************
-//  Nerve 14
+// 						 Nerve 14
 // **************************************************
 
 instance DIA_Mud_Nerve_14(C_INFO)
@@ -641,7 +641,7 @@ func void DIA_Mud_Nerve_14_Info()
 };
 
 // **************************************************
-//  Nerve 15
+// 						 Nerve 15
 // **************************************************
 
 instance DIA_Mud_Nerve_15(C_INFO)
@@ -670,7 +670,7 @@ func void DIA_Mud_Nerve_15_Info()
 };
 
 // **************************************************
-//  Nerve 16
+// 						 Nerve 16
 // **************************************************
 
 instance DIA_Mud_Nerve_16(C_INFO)
@@ -699,7 +699,7 @@ func void DIA_Mud_Nerve_16_Info()
 };
 
 // **************************************************
-//  Nerve 17
+// 						 Nerve 17
 // **************************************************
 
 instance DIA_Mud_Nerve_17(C_INFO)
@@ -728,7 +728,7 @@ func void DIA_Mud_Nerve_17_Info()
 };
 
 // **************************************************
-//  Nerve 18
+// 						 Nerve 18
 // **************************************************
 
 instance DIA_Mud_Nerve_18(C_INFO)
@@ -757,7 +757,7 @@ func void DIA_Mud_Nerve_18_Info()
 };
 
 // **************************************************
-//  Nerve 19
+// 						 Nerve 19
 // **************************************************
 
 instance DIA_Mud_Nerve_19(C_INFO)

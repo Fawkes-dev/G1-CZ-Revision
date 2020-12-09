@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+//						 EXIT 
 // **************************************************
 
 instance DIA_Gravo_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Gravo_Exit_Info()
 };
 
 // **************************************************
-// Hallo
+//						Hallo
 // **************************************************
 
 instance DIA_Gravo_Hallo(C_INFO)
@@ -63,7 +63,7 @@ func void DIA_Gravo_Hallo_Info()
 };
 
 // **************************************************
-// HelpHow
+//						HelpHow
 // **************************************************
 
 instance DIA_Gravo_HelpHow(C_INFO)
@@ -113,7 +113,7 @@ func void DIA_Gravo_HelpHow_Info()
 };
 
 // **************************************************
-// HelpAngryNow
+//						HelpAngryNow
 // **************************************************
 
 //---------------------------------------------------
@@ -141,10 +141,10 @@ func void B_Gravo_HelpAttitude(var C_NPC prob)
 		else
 		{
 //			AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01"); //I don't have that much.
-//			AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01"); //So viel hab' ich nicht.
+//			AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01"); //Soviel hab' ich nicht.
 			AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01"); //Nemám tolik.
 //			AI_Output(self,other,"B_Gravo_HelpAttitude_NoOre_04_02"); //Then I can't do anything for you - I'm sorry, boy.
-//			AI_Output(self,other,"B_Gravo_HelpAttitude_NoOre_04_02"); //Dann kann ich nichts für dich tun - tut mir Leid, Junge.
+//			AI_Output(self,other,"B_Gravo_HelpAttitude_NoOre_04_02"); //Dann kann ich nichts für dich tun - tut mit leid, Junge.
 			AI_Output(self,other,"B_Gravo_HelpAttitude_NoOre_04_02"); //Pak pro tebe nebudu moci nic udělat - je mi líto, chlapče.
 		};
 
@@ -171,10 +171,10 @@ func void B_Gravo_HelpAttitude(var C_NPC prob)
 		else
 		{
 //			AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01"); //Soviel hab' ich nicht.
-//			AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01"); //So viel hab' ich nicht.
+//			AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01"); //Soviel hab' ich nicht.
 			AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01"); //Nemám tolik.
 //			AI_Output(self,other,"B_Gravo_HelpAttitude_NoOre_04_02"); //Dann kann ich nichts für dich tun - tut mit leid, Junge.
-//			AI_Output(self,other,"B_Gravo_HelpAttitude_NoOre_04_02"); //Dann kann ich nichts für dich tun - tut mir Leid, Junge.
+//			AI_Output(self,other,"B_Gravo_HelpAttitude_NoOre_04_02"); //Dann kann ich nichts für dich tun - tut mit leid, Junge.
 			AI_Output(self,other,"B_Gravo_HelpAttitude_NoOre_04_02"); //Pak pro tebe nebudu moci nic udělat - je mi líto, chlapče.
 		};
 	}
@@ -218,16 +218,15 @@ func void DIA_Gravo_HelpAngryNow_Info()
 	AI_Output(self,other,"DIA_Gravo_HelpAngryNow_04_01"); //Taky myslím, ale varuju tě, může tě to stát 100 až 500 nugetů.
 
 	Info_ClearChoices(DIA_Gravo_HelpAngryNow);
-//	Info_AddChoice(DIA_Gravo_HelpAngryNow," DIALOG_BACK			",DIA_Gravo_HelpAngryNow_BACK);
 	Info_AddChoice(DIA_Gravo_HelpAngryNow, DIALOG_BACK ,DIA_Gravo_HelpAngryNow_BACK);
 //	Info_AddChoice(DIA_Gravo_HelpAngryNow,"Help me with Diego.",DIA_Gravo_HelpAngryNow_Diego);
-//	Info_AddChoice(DIA_Gravo_HelpAngryNow," "Mit Diego."			",DIA_Gravo_HelpAngryNow_Diego);
+//	Info_AddChoice(DIA_Gravo_HelpAngryNow,"Mit Diego.",DIA_Gravo_HelpAngryNow_Diego);
 	Info_AddChoice(DIA_Gravo_HelpAngryNow,"Pomoz mi s Diegem.",DIA_Gravo_HelpAngryNow_Diego);
 //	Info_AddChoice(DIA_Gravo_HelpAngryNow,"Help me with Thorus.",DIA_Gravo_HelpAngryNow_Thorus);
-//	Info_AddChoice(DIA_Gravo_HelpAngryNow," "Mit Thorus"			",DIA_Gravo_HelpAngryNow_Thorus);
+//	Info_AddChoice(DIA_Gravo_HelpAngryNow,"Mit Thorus",DIA_Gravo_HelpAngryNow_Thorus);
 	Info_AddChoice(DIA_Gravo_HelpAngryNow,"Pomoz mi s Thorusem.",DIA_Gravo_HelpAngryNow_Thorus);
 //	Info_AddChoice(DIA_Gravo_HelpAngryNow,"Help me with Gomez.",DIA_Gravo_HelpAngryNow_Gomez);
-//	Info_AddChoice(DIA_Gravo_HelpAngryNow," "Mit Gomez"			",DIA_Gravo_HelpAngryNow_Gomez);
+//	Info_AddChoice(DIA_Gravo_HelpAngryNow,"Mit Gomez",DIA_Gravo_HelpAngryNow_Gomez);
 	Info_AddChoice(DIA_Gravo_HelpAngryNow,"Pomoz mi s Gomezem.",DIA_Gravo_HelpAngryNow_Gomez);
 };
 
@@ -270,7 +269,7 @@ func void DIA_Gravo_HelpAngryNow_Gomez()
 };
 
 // **************************************************
-// Influence
+//						Influence
 // **************************************************
 
 instance DIA_Gravo_Influence(C_INFO)

@@ -1,5 +1,5 @@
 // **************************************************
-// EXIT
+//						EXIT
 // **************************************************
 
 instance DIA_BaalOrun_Exit(C_INFO)
@@ -24,7 +24,7 @@ func void DIA_BaalOrun_Exit_Info()
 };
 
 // ************************************************************
-// NICHT ansprechbar (Ungläubiger) 
+// 					NICHT ansprechbar (Ungläubiger) 
 // ************************************************************
 	var int BaalOrun_Ansprechbar;
 	var int BaalOrun_Sakrileg;
@@ -51,16 +51,15 @@ func int DIA_BaalOrun_NoTalk_Condition()
 func void DIA_BaalOrun_NoTalk_Info()
 { 
 	Info_ClearChoices(DIA_BaalOrun_NoTalk);
-//	Info_Addchoice (DIA_BaalOrun_NoTalk,"DIALOG_ENDE					",DIA_BaalOrun_NoTalk_ENDE);
 	Info_Addchoice (DIA_BaalOrun_NoTalk,DIALOG_ENDE ,DIA_BaalOrun_NoTalk_ENDE);
 //	Info_Addchoice (DIA_BaalOrun_NoTalk,"Everything alright, pal?",DIA_BaalOrun_NoTalk_Imp);
-//	Info_Addchoice (DIA_BaalOrun_NoTalk,""Alles, klar, Alter?"			",DIA_BaalOrun_NoTalk_Imp);
+//	Info_Addchoice (DIA_BaalOrun_NoTalk,"Alles, klar, Alter?",DIA_BaalOrun_NoTalk_Imp);
 	Info_Addchoice (DIA_BaalOrun_NoTalk,"Je všechno v pořádku, příteli?",DIA_BaalOrun_NoTalk_Imp);
 //	Info_Addchoice (DIA_BaalOrun_NoTalk,"The Sleeper be with you!",DIA_BaalOrun_NoTalk_Sleeper);
-//	Info_Addchoice (DIA_BaalOrun_NoTalk,""Der Schläfer sei mit dir!"	",DIA_BaalOrun_NoTalk_Sleeper);
+//	Info_Addchoice (DIA_BaalOrun_NoTalk,"Der Schläfer sei mit dir!",DIA_BaalOrun_NoTalk_Sleeper);
 	Info_Addchoice (DIA_BaalOrun_NoTalk,"Spáč buď s tebou!",DIA_BaalOrun_NoTalk_Sleeper);
 //	Info_Addchoice (DIA_BaalOrun_NoTalk,"Hi! I'm new here!",DIA_BaalOrun_NoTalk_Hi);
-//	Info_Addchoice (DIA_BaalOrun_NoTalk,""Hi! Ich bin neu hier!"		",DIA_BaalOrun_NoTalk_Hi);
+//	Info_Addchoice (DIA_BaalOrun_NoTalk,"Hi! Ich bin neu hier!",DIA_BaalOrun_NoTalk_Hi);
 	Info_Addchoice (DIA_BaalOrun_NoTalk,"Zdar! Jsem tu nový!",DIA_BaalOrun_NoTalk_Hi);
 };
 
@@ -87,7 +86,7 @@ func void DIA_BaalOrun_NoTalk_Sleeper()
 func void DIA_BaalOrun_NoTalk_Imp()
 {
 //	AI_Output(other,self,"DIA_BaalOrun_NoTalk_Imp_15_00"); //Everything alright, pal?
-//	AI_Output(other,self,"DIA_BaalOrun_NoTalk_Imp_15_00"); //Alles klar, Alter? 
+//	AI_Output(other,self,"DIA_BaalOrun_NoTalk_Imp_15_00"); //Alles klar, Alter?
 	AI_Output(other,self,"DIA_BaalOrun_NoTalk_Imp_15_00"); //Je všechno v pořádku, příteli?
 //	AI_Output(self,other,"DIA_BaalOrun_NoTalk_Imp_12_01"); //(sigh)
 	AI_Output(self,other,"DIA_BaalOrun_NoTalk_Imp_12_01"); //(vzdech)
@@ -100,7 +99,7 @@ func void DIA_BaalOrun_NoTalk_ENDE()
 };
 
 // **************************************************
-// Ghorim_KickHarlok Success + MISSION
+//		Ghorim_KickHarlok Success + MISSION
 // **************************************************
 instance DIA_BaalOrun_FirstTalk(C_INFO)
 {
@@ -151,10 +150,10 @@ func void DIA_BaalOrun_FirstTalk_Info()
 
 	Info_ClearChoices(DIA_BaalOrun_FirstTalk);
 //	Info_Addchoice (DIA_BaalOrun_FirstTalk,"Say nothing",DIA_BaalOrun_FirstTalk_MuteEnde);
-//	Info_Addchoice (DIA_BaalOrun_FirstTalk,""Nichts sagen" ",DIA_BaalOrun_FirstTalk_MuteEnde);
-	Info_Addchoice (DIA_BaalOrun_FirstTalk,"Nic neříkej.",DIA_BaalOrun_FirstTalk_MuteEnde);
+//	Info_Addchoice (DIA_BaalOrun_FirstTalk,"Nichts sagen",DIA_BaalOrun_FirstTalk_MuteEnde);
+	Info_Addchoice (DIA_BaalOrun_FirstTalk,"Nic neříkej",DIA_BaalOrun_FirstTalk_MuteEnde);
 //	Info_Addchoice (DIA_BaalOrun_FirstTalk,"Where exactly can I find the gatherers?",DIA_BaalOrun_FirstTalk_Where);
-//	Info_Addchoice (DIA_BaalOrun_FirstTalk,""Wo genau kann ich die Sammler finden?"	",DIA_BaalOrun_FirstTalk_Where);
+//	Info_Addchoice (DIA_BaalOrun_FirstTalk,"Wo genau kann ich die Sammler finden?",DIA_BaalOrun_FirstTalk_Where);
 	Info_Addchoice (DIA_BaalOrun_FirstTalk,"Kde přesně najdu ty sběrače?",DIA_BaalOrun_FirstTalk_Where);
 };
 
@@ -183,7 +182,7 @@ func void DIA_BaalOrun_FirstTalk_MuteEnde()
 };
 
 // **************************************************
-// Kraut geholt
+//					Kraut geholt
 // **************************************************
 
 instance DIA_BaalOrun_GotWeed(C_INFO)
@@ -229,7 +228,7 @@ func void DIA_BaalOrun_GotWeed_Info()
 };
 
 // **************************************************
-// Kraut abgeliefert!
+//					Kraut abgeliefert!
 // **************************************************
 
 instance DIA_BaalOrun_WeedAtKaloms(C_INFO)
@@ -272,7 +271,7 @@ func void DIA_BaalOrun_WeedAtKaloms_Info()
 };
 
 // **************************************************
-// Permanent
+//					Permanent
 // **************************************************
 
 instance DIA_BaalOrun_Perm(C_INFO)

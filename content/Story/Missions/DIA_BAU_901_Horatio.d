@@ -1,5 +1,5 @@
 // ************************************************************
-//	  EXIT 
+// 			  				   EXIT 
 // ************************************************************
 
 instance DIA_Horatio_EXIT(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Horatio_EXIT_Info()
 };
 
 // ************************************************************
-//	  Wasser
+// 			  				   Wasser
 // ************************************************************
 
 instance Info_Horatio_Wasser(C_INFO)
@@ -80,7 +80,7 @@ func void Info_Horatio_Wasser_Info()
 };
 
 // ************************************************************
-// Hallo
+// 						Hallo
 // ************************************************************
 	var int horatio_trouble;
 // ************************************************************
@@ -110,10 +110,10 @@ func void DIA_Horatio_Hello_Info()
 
 	Info_ClearChoices(DIA_Horatio_Hello);
 //	Info_AddChoice(DIA_Horatio_Hello,"Trouble? Who with? A peasant?",DIA_Horatio_Hello_PissOff);
-//	Info_AddChoice(DIA_Horatio_Hello," "Ärger? Von wem? Von einem Bauern?"",DIA_Horatio_Hello_PissOff);
+//	Info_AddChoice(DIA_Horatio_Hello,"Ärger? Von wem? Von einem Bauern?",DIA_Horatio_Hello_PissOff);
 	Info_AddChoice(DIA_Horatio_Hello,"Problémy? S kým? S nějakým rolníkem?",DIA_Horatio_Hello_PissOff);
 //	Info_AddChoice(DIA_Horatio_Hello,"Hey, relax! I'm a newcomer.",DIA_Horatio_Hello_BeCool);
-//	Info_AddChoice(DIA_Horatio_Hello," "Entspann dich! Ich bin neu hier."	",DIA_Horatio_Hello_BeCool);
+//	Info_AddChoice(DIA_Horatio_Hello,"Entspann dich! Ich bin neu hier.",DIA_Horatio_Hello_BeCool);
 	Info_AddChoice(DIA_Horatio_Hello,"Hej, klídek! Jsem tady nový.",DIA_Horatio_Hello_BeCool);
 };
 
@@ -146,7 +146,7 @@ func void DIA_Horatio_Hello_PissOff()
 };
 
 // ************************************************************
-// SORRY (PERM)
+// 						SORRY (PERM)
 // ************************************************************
 
 instance DIA_Horatio_SORRY(C_INFO)
@@ -180,7 +180,7 @@ func void DIA_Horatio_SORRY_Info()
 };
 
 // ************************************************************
-// Horatios Story
+// 					Horatios Story
 // ************************************************************
 
 instance DIA_Horatio_Story(C_INFO)
@@ -226,7 +226,7 @@ func void DIA_Horatio_Story_Info()
 };
 
 // ************************************************************
-// Warum hier?
+// 						Warum hier?
 // ************************************************************
 
 instance DIA_Horatio_WhyHere(C_INFO)
@@ -269,7 +269,7 @@ func void DIA_Horatio_WhyHere_Info()
 };
 
 // ************************************************************
-// Bitte STR
+// 						Bitte STR
 // ************************************************************
 	var int horatio_StrFree;
 // ************************************************************
@@ -307,20 +307,20 @@ func void DIA_Horatio_PleaseTeachSTR_Info()
 	if Npc_KnowsInfo(hero,DIA_Jeremiah_Horatio)
 	{
 //		Info_AddChoice(DIA_Horatio_PleaseTeachSTR,"So I can wipe out the Rice Lord and his thugs!",DIA_Horatio_PleaseTeachSTR_Ricelord);
-//		Info_AddChoice(DIA_Horatio_PleaseTeachSTR," "Damit ich Reislord und seine Schläger fertigmachen kann!"",DIA_Horatio_PleaseTeachSTR_Ricelord);
+//		Info_AddChoice(DIA_Horatio_PleaseTeachSTR,"Damit ich Reislord und seine Schläger fertigmachen kann!",DIA_Horatio_PleaseTeachSTR_Ricelord);
 		Info_AddChoice(DIA_Horatio_PleaseTeachSTR,"Mohl bych pak vyřídit Rýžového Lorda a jeho tlupu!",DIA_Horatio_PleaseTeachSTR_Ricelord);
 	}
 	else
 	{
 //		Info_AddChoice(DIA_Horatio_PleaseTeachSTR,"Good question. I'll think about it...",DIA_Horatio_PleaseTeachSTR_BACK);
-//		Info_AddChoice(DIA_Horatio_PleaseTeachSTR," "Gute Frage. Ich werde darüber nachdenken..."",DIA_Horatio_PleaseTeachSTR_BACK);
+//		Info_AddChoice(DIA_Horatio_PleaseTeachSTR,"Gute Frage. Ich werde darüber nachdenken...",DIA_Horatio_PleaseTeachSTR_BACK);
 		Info_AddChoice(DIA_Horatio_PleaseTeachSTR,"Dobrá otázka. Budu o tom přemýšlet...",DIA_Horatio_PleaseTeachSTR_BACK);
 	};
 //	Info_AddChoice(DIA_Horatio_PleaseTeachSTR,"Self defense!",DIA_Horatio_PleaseTeachSTR_Defend);
-//	Info_AddChoice(DIA_Horatio_PleaseTeachSTR," "Zur Selbstverteidigung!"",DIA_Horatio_PleaseTeachSTR_Defend);
+//	Info_AddChoice(DIA_Horatio_PleaseTeachSTR,"Zur Selbstverteidigung!",DIA_Horatio_PleaseTeachSTR_Defend);
 	Info_AddChoice(DIA_Horatio_PleaseTeachSTR,"Sebeobrana!",DIA_Horatio_PleaseTeachSTR_Defend);
 //	Info_AddChoice(DIA_Horatio_PleaseTeachSTR,"To teach these bastards how to talk to me properly!",DIA_Horatio_PleaseTeachSTR_Attack);
-//	Info_AddChoice(DIA_Horatio_PleaseTeachSTR," "Um den Mistkerlen hier zu zeigen, wie man mit mir zu sprechen hat!"",DIA_Horatio_PleaseTeachSTR_Attack);
+//	Info_AddChoice(DIA_Horatio_PleaseTeachSTR,"Um den Mistkerlen hier zu zeigen, wie man mit mir zu sprechen hat!",DIA_Horatio_PleaseTeachSTR_Attack);
 	Info_AddChoice(DIA_Horatio_PleaseTeachSTR,"Naučil bych ty bastardy, jak se mnou mají správně mluvit!",DIA_Horatio_PleaseTeachSTR_Attack);
 
 	Log_CreateTopic(CH1_HoratiosTeachings,LOG_MISSION);
@@ -372,7 +372,7 @@ func void DIA_Horatio_PleaseTeachSTR_Ricelord()
 };
 
 // ************************************************************
-// Nachgedacht (STR)
+// 						Nachgedacht (STR)
 // ************************************************************
 
 instance DIA_Horatio_ThoughtSTR(C_INFO)
@@ -406,14 +406,14 @@ func void DIA_Horatio_ThoughtSTR_Info()
 
 	Info_ClearChoices(DIA_Horatio_ThoughtSTR);
 //	Info_AddChoice(DIA_Horatio_ThoughtSTR,"No.",DIA_Horatio_ThoughtSTR_NoIdea);
-//	Info_AddChoice(DIA_Horatio_ThoughtSTR," "Nein."",DIA_Horatio_ThoughtSTR_NoIdea);
+//	Info_AddChoice(DIA_Horatio_ThoughtSTR,"Nein.",DIA_Horatio_ThoughtSTR_NoIdea);
 	Info_AddChoice(DIA_Horatio_ThoughtSTR,"Ne.",DIA_Horatio_ThoughtSTR_NoIdea);
 
 	var C_NPC ricelord; ricelord = Hlp_GetNpc(Bau_900_Ricelord);
 	if Npc_KnowsInfo(hero,DIA_Jeremiah_Horatio)
 	{
 //		Info_AddChoice(DIA_Horatio_ThoughtSTR,"Yes. I want to be able to take on the Rice Lord and his thugs!",DIA_Horatio_ThoughtSTR_Ricelord);
-//		Info_AddChoice(DIA_Horatio_ThoughtSTR," "Ja. Ich will es mit Ricelord und seinen Schlägern aufnehmen können!"",DIA_Horatio_ThoughtSTR_Ricelord);
+//		Info_AddChoice(DIA_Horatio_ThoughtSTR,"Ja. Ich will es mit Ricelord und seinen Schlägern aufnehmen können!",DIA_Horatio_ThoughtSTR_Ricelord);
 		Info_AddChoice(DIA_Horatio_ThoughtSTR,"Ano. Chci být schopen dostat Rýžového Lorda a jeho tlupu!",DIA_Horatio_ThoughtSTR_Ricelord);
 	};
 };
@@ -443,7 +443,7 @@ func void DIA_Horatio_ThoughtSTR_Ricelord()
 };
 
 // ************************************************************
-// Will Ricelord köpfen
+//					Will Ricelord köpfen
 // ************************************************************
 
 func void DIA_Horatio_HelpSTR_LEARN_NOW()
@@ -516,7 +516,7 @@ func void DIA_Horatio_HelpSTR_Info()
 };
 
 // ************************************************************
-// Thanks (PERM)
+// 							Thanks (PERM)
 // ************************************************************
 
 instance DIA_Horatio_Thanks(C_INFO)

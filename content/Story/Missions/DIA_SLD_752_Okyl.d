@@ -80,7 +80,7 @@ func void DIA_SLD_752_OKYL_UMSEHEN_INFO()
 //	AI_Output(other,self,"DIA_SLD_752_OKYL_UMSEHEN_INFO_15_01"); //Ich seh' mich hier nur mal um.
 	AI_Output(other,self,"DIA_SLD_752_OKYL_UMSEHEN_INFO_15_01"); //Jen se tu porozhlédnu.
 //	AI_Output(self,other,"DIA_SLD_752_OKYL_UMSEHEN_INFO_11_02");//Then just watch out that you don't mess up here in the Hollow, else you'll be in your grave faster than you'd like to think.
-//	AI_Output(self,other,"DIA_SLD_752_OKYL_UMSEHEN_INFO_11_02");//Dann pass bloß auf, dass du hier im Kessel keinen Mist baust, sonst bist du schneller im Grab, als dir lieb ist. 
+//	AI_Output(self,other,"DIA_SLD_752_OKYL_UMSEHEN_INFO_11_02");//Dann pass bloß auf, dass du hier im Kessel keinen Mist baust, sonst bist du schneller im Grab, als dir lieb ist.
 	AI_Output(self,other,"DIA_SLD_752_OKYL_UMSEHEN_INFO_11_02");//Dávej pozor, aby ses tady v Kotlině nedostal do žádného maléru, jinak se dostaneš do hrobu rychleji, než by ses nadál.
 };
 

@@ -1,5 +1,5 @@
 // **************************************************
-// Pre - EXIT 
+// 					Pre - EXIT 
 // **************************************************
 
 instance DIA_BaalTondral_MuteExit(C_INFO)
@@ -26,7 +26,7 @@ func void DIA_BaalTondral_MuteExit_Info()
 };
 
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_BaalTondral_Exit(C_INFO)
@@ -53,7 +53,7 @@ func void DIA_BaalTondral_Exit_Info()
 };
 
 // **************************************************
-// Fanatic Teacher
+// 					Fanatic Teacher
 // **************************************************
 
 instance DIA_BaalTondral_FanaticTeacher(C_INFO)
@@ -103,7 +103,7 @@ func void DIA_BaalTondral_FanaticTeacher_Info()
 };
 
 // **************************************************
-// Du hast mich angesprochen
+// 				Du hast mich angesprochen
 // **************************************************
 
 instance DIA_BaalTondral_YouTalked(C_INFO)
@@ -140,7 +140,7 @@ func void DIA_BaalTondral_YouTalked_Info()
 };
 
 // **************************************************
-// Loyalität beweisen
+// 				Loyalität beweisen
 // **************************************************
 	var int BaalTondral_GetNewGuy;
 // **************************************************
@@ -187,7 +187,7 @@ func void DIA_BaalTondral_Loyality_Info()
 };
 
 // **************************************************
-// Wo finde ich neuen Mann
+// 				Wo finde ich neuen Mann
 // **************************************************
 
 instance DIA_BaalTondral_NewMember(C_INFO)
@@ -224,7 +224,7 @@ func void DIA_BaalTondral_NewMember_Info()
 };
 
 // **************************************************
-// Wieso braucht ihr so dringend Neue
+// 			Wieso braucht ihr so dringend Neue
 // **************************************************
 
 instance DIA_BaalTondral_NewMember2(C_INFO)
@@ -267,7 +267,7 @@ func void DIA_BaalTondral_NewMember2_Info()
 };
 
 // **************************************************
-// DUSTY SUCCESS
+// 					DUSTY SUCCESS
 // **************************************************
 
 instance DIA_BaalTondral_DustySuccess(C_INFO)
@@ -334,7 +334,7 @@ func void DIA_BaalTondral_DustySuccess_Info()
 };
 
 // **************************************************
-// zu Kalom
+// 					zu Kalom
 // **************************************************
 
 instance DIA_BaalTondral_SendToKalom(C_INFO)

@@ -1,5 +1,5 @@
 // ************************************************************
-//	  EXIT 
+// 			  				   EXIT 
 // ************************************************************
 
 instance Info_Jackal_EXIT(C_INFO)
@@ -23,7 +23,7 @@ func void Info_Jackal_EXIT_Info()
 };
 
 // ************************************************************
-// Schutzgeld
+// 						Schutzgeld
 // ************************************************************
 	var int Jackal_ProtectionPaid;
 	var int Jackal_PayDay;
@@ -63,13 +63,13 @@ func void Info_Jackal_Hello_Info()
 
 	Info_ClearChoices(Info_Jackal_Hello);
 //	Info_AddChoice(Info_Jackal_Hello,"What if I don't pay?",Info_Jackal_Hello_WhatIf);
-//	Info_AddChoice(Info_Jackal_Hello,""Und wenn ich nicht zahle?" ",Info_Jackal_Hello_WhatIf);
+//	Info_AddChoice(Info_Jackal_Hello,"Und wenn ich nicht zahle?",Info_Jackal_Hello_WhatIf);
 	Info_AddChoice(Info_Jackal_Hello,"A co když nezaplatím?",Info_Jackal_Hello_WhatIf);
 //	Info_AddChoice(Info_Jackal_Hello,"And what do I get out of it?",Info_Jackal_Hello_WhatDoIGet);
-//	Info_AddChoice(Info_Jackal_Hello,""Und was bekomme ich dafür?" ",Info_Jackal_Hello_WhatDoIGet);
+//	Info_AddChoice(Info_Jackal_Hello,"Und was bekomme ich dafür?",Info_Jackal_Hello_WhatDoIGet);
 	Info_AddChoice(Info_Jackal_Hello,"A co za to?",Info_Jackal_Hello_WhatDoIGet);
 //	Info_AddChoice(Info_Jackal_Hello,"Here's 10 ore. And you'll have to help me if I get into trouble.",Info_Jackal_Hello_Pay);
-//	Info_AddChoice(Info_Jackal_Hello,""Hier. 10 Erz. Und du hilfst mir, wenn ich Ärger habe." ",Info_Jackal_Hello_Pay);
+//	Info_AddChoice(Info_Jackal_Hello,"Hier. 10 Erz. Und du hilfst mir, wenn ich Ärger habe.",Info_Jackal_Hello_Pay);
 	Info_AddChoice(Info_Jackal_Hello,"Tady je 10 nugetů. A jestli budu mít potíže, tak mi pomůžeš.",Info_Jackal_Hello_Pay);
 };
 
@@ -135,7 +135,7 @@ func void Info_Jackal_Hello_WhatIf()
 //	AI_Output(self,other,"Info_Jackal_Hello_WhatIf_07_02"); //Du kannst das jederzeit nachholen - nur bitte rechne nicht mit meiner Hilfe, solange du nicht einen kleinen Beitrag zu meinen Unkosten geleistet hast - das verstehst du doch?
 	AI_Output(self,other,"Info_Jackal_Hello_WhatIf_07_02"); //Můžeš zaplatit kdykoliv - dokud ale nepřispěješ na moje výdaje, nepočítej s mojí pomocí. Jsem si jistý, že tomu rozumíš.
 //	Info_AddChoice(Info_Jackal_Hello,"I'll see you later.",Info_Jackal_Hello_Later);
-//	Info_AddChoice(Info_Jackal_Hello,""Wir sehen uns später." ",Info_Jackal_Hello_Later);
+//	Info_AddChoice(Info_Jackal_Hello,"Wir sehen uns später.",Info_Jackal_Hello_Later);
 	Info_AddChoice(Info_Jackal_Hello,"Ještě se uvidíme.",Info_Jackal_Hello_Later);
 };
 
@@ -154,7 +154,7 @@ func void Info_Jackal_Hello_Later()
 };
 
 // ************************************************************
-// DOCH Schutzgeld
+// 					DOCH Schutzgeld
 // ************************************************************
 
 // Bei JACKAL reicht es, wenn man EINMAL zahlt
@@ -202,7 +202,7 @@ func void Info_Jackal_Schutz_Info()
 };
 
 // ************************************************************
-// Perm - wenn gezahlt
+// 					Perm - wenn gezahlt
 // ************************************************************
 
 instance Info_Jackal_PermPaid(C_INFO)
@@ -236,7 +236,7 @@ func void Info_Jackal_PermPaid_Info()
 };
 
 /*------------------------------------------------------------------------
-// GARDIST GEWORDEN //
+//							GARDIST GEWORDEN //
 ------------------------------------------------------------------------*/
 instance GRD_201_Jackal_WELCOME(C_INFO)
 {
@@ -271,7 +271,7 @@ func void GRD_201_Jackal_WELCOME_Info()
 //#####################################################################
 
 //---------------------------------------------------------------------
-// Info PAYDAY
+//	Info PAYDAY
 //---------------------------------------------------------------------
 instance Info_Jackal_PAYDAY(C_INFO)
 {

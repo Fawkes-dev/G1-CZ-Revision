@@ -80,10 +80,10 @@ func void Nov_1300_Talas_HELP_Info()
 //	AI_Output(other,self,"Nov_1300_Talas_HELP_Info_15_01"); //Ich kann dir helfen, den Almanach zurückbringen.
 	AI_Output(other,self,"Nov_1300_Talas_HELP_Info_15_01"); //Pomůžu ti přinést zpátky ten almanach.
 //	AI_Output(self,other,"Nov_1300_Talas_HELP_Info_02_02"); //Really? I was mugged by goblins! And now I'm supposed to go there and get the book back!
-//	AI_Output(self,other,"Nov_1300_Talas_HELP_Info_02_02"); //Wirklich? Goblins haben mich überfallen! Und jetzt soll ich wieder zu ihnen gehen und das Buch zurückbringen! 
+//	AI_Output(self,other,"Nov_1300_Talas_HELP_Info_02_02"); //Wirklich? Goblins haben mich überfallen! Und jetzt soll ich wieder zu ihnen gehen und das Buch zurückbringen!
 	AI_Output(self,other,"Nov_1300_Talas_HELP_Info_02_02"); //Opravdu? Přepadli mě goblini! A teď se po mně chce, abych za nimi šel a přinesl tu knihu zpátky!
 //	AI_Output(self,other,"Nov_1300_Talas_HELP_Info_02_03"); //I have a suggestion to make: I'll show you the way to the almanac, so you can get it back.
-//	AI_Output(self,other,"Nov_1300_Talas_HELP_Info_02_03"); //Ich mache dir einen Vorschlag. Ich zeige dir den Weg zum Almanach und du holst ihn zurück. 
+//	AI_Output(self,other,"Nov_1300_Talas_HELP_Info_02_03"); //Ich mache dir einen Vorschlag. Ich zeige dir den Weg zum Almanach und du holst ihn zurück.
 	AI_Output(self,other,"Nov_1300_Talas_HELP_Info_02_03"); //Mám pro tebe návrh. Ukážu ti cestu k almanachu, abys ho mohl dostat nazpět.
 
 	Info_ClearChoices(Nov_1300_Talas_HELP);
@@ -127,7 +127,7 @@ func void Nov_1300_Talas_HELP_MORE()
 //	AI_Output(other,self,"Nov_1300_Talas_HELP_MORE_15_01"); //Gib mir 50 Erz und ich bin dabei.
 	AI_Output(other,self,"Nov_1300_Talas_HELP_MORE_15_01"); //Dej mi 50 nugetů a já budu přitom.
 //	AI_Output(self,other,"Nov_1300_Talas_HELP_MORE_02_02"); //What? That's robbery! Alright then, tell me when you're ready.
-//	AI_Output(self,other,"Nov_1300_Talas_HELP_MORE_02_02"); //Was? Du beraubst mich. Nun gut, sag mir Bescheid, wenn du so weit bist. 
+//	AI_Output(self,other,"Nov_1300_Talas_HELP_MORE_02_02"); //Was? Du beraubst mich. Nun gut, sag mir Bescheid, wenn du so weit bist.
 	AI_Output(self,other,"Nov_1300_Talas_HELP_MORE_02_02"); //Cože? To je krádež! Dobrá teda, řekni mi, až budeš připraven.
 	CreateInvItems(self,ItMiNugget,50);
 	B_GiveInvItems(self,hero,ItMiNugget,50);
@@ -274,7 +274,7 @@ func void Nov_1300_Talas_RETURNED_Info()
 //	AI_Output(other,self,"Info_Talas_RETURNED_15_02"); //Pass nur auf, dass du dich nicht überarbeitest.
 	AI_Output(other,self,"Info_Talas_RETURNED_15_02"); //Dávej pozor, aby ses nevysílil.
 //	AI_Output(self,other,"Info_Talas_RETURNED_02_03"); //Don't worry, I sure won't! There's no need to worry about me.
-//	AI_Output(self,other,"Info_Talas_RETURNED_02_03"); //Keine Angst, darauf achte ich sogar sehr! Mach dir um mich keine Sorgen. 
+//	AI_Output(self,other,"Info_Talas_RETURNED_02_03"); //Keine Angst, darauf achte ich sogar sehr! Mach dir um mich keine Sorgen.
 	AI_Output(self,other,"Info_Talas_RETURNED_02_03"); //Neměj obavy, nevysílím! Nemusíš si se mnou dělat starosti.
 
 //	B_LogEntry(CH2_Book,"Now we're back in the swamp camp. Talas is the biggest coward I've ever met. I'll take the book to Cor Kalom myself.");

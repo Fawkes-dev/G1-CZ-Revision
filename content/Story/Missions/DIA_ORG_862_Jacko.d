@@ -1,5 +1,5 @@
 // ************************************************************
-// EXIT 
+// 							EXIT 
 // ************************************************************
 
 instance Info_Jacko_EXIT(C_INFO)
@@ -23,7 +23,7 @@ func void Info_Jacko_EXIT_Info()
 };
 
 //******************************************************************
-// Raus hier! 
+//							Raus hier! 
 //******************************************************************
 
 instance ORG_862_Jacko_GoAway(C_INFO)
@@ -57,7 +57,7 @@ func void ORG_862_Jacko_GoAway_Info()
 }; 
 
 //******************************************************************
-// Weg mit den Jungs 
+//							Weg mit den Jungs 
 //******************************************************************
 
 instance ORG_862_Jacko_GUARD(C_INFO)
@@ -96,13 +96,13 @@ func void ORG_862_Jacko_GUARD_Info()
 
 	Info_Clearchoices (ORG_862_Jacko_GUARD);
 //	Info_Addchoice (ORG_862_Jacko_GUARD,"I'm here to warn you. Cor Kalom sent five templars to finish you off.",ORG_862_Jacko_GUARD_Templer);
-//	Info_Addchoice (ORG_862_Jacko_GUARD,""Ich will euch warnen. Cor Kalom hat fünf Templer geschickt."	",ORG_862_Jacko_GUARD_Templer);
+//	Info_Addchoice (ORG_862_Jacko_GUARD,"Ich will euch warnen. Cor Kalom hat fünf Templer geschickt.",ORG_862_Jacko_GUARD_Templer);
 	Info_Addchoice (ORG_862_Jacko_GUARD,"Jsem tu, abych vás varoval. Cor Kalom vyslal pět templářů, aby s vámi skoncovali.",ORG_862_Jacko_GUARD_Templer);
 //	Info_Addchoice (ORG_862_Jacko_GUARD,"I want to know what this information is worth to you.",ORG_862_Jacko_GUARD_InfoWert);
-//	Info_Addchoice (ORG_862_Jacko_GUARD,""Ich will wissen, was dir diese Information wert ist."	",ORG_862_Jacko_GUARD_InfoWert);
+//	Info_Addchoice (ORG_862_Jacko_GUARD,"Ich will wissen, was dir diese Information wert ist.",ORG_862_Jacko_GUARD_InfoWert);
 	Info_Addchoice (ORG_862_Jacko_GUARD,"Zajímalo by mě, jakou cenu má pro tebe tahle informace.",ORG_862_Jacko_GUARD_InfoWert);
 //	Info_Addchoice (ORG_862_Jacko_GUARD,"To put an end to the whole business here!",ORG_862_Jacko_GUARD_Angriff);
-//	Info_Addchoice (ORG_862_Jacko_GUARD,""Um der Sache hier ein Ende zu bereiten!"	",ORG_862_Jacko_GUARD_Angriff);
+//	Info_Addchoice (ORG_862_Jacko_GUARD,"Um der Sache hier ein Ende zu bereiten!",ORG_862_Jacko_GUARD_Angriff);
 	Info_Addchoice (ORG_862_Jacko_GUARD,"A věc se chýlí ke konci!",ORG_862_Jacko_GUARD_Angriff);
 };  
 
@@ -196,7 +196,7 @@ func void ORG_862_Jacko_GUARD_Angriff()
 };
 
 //******************************************************************
-// Im Banditencamp 
+//							Im Banditencamp 
 //******************************************************************
 
 instance ORG_862_Jacko_Banditencamp(C_INFO)
@@ -233,7 +233,7 @@ func void ORG_862_Jacko_Banditencamp_Info()
 
 /*
 //******************************************************************
-// SPELER SOLL ABHAUEN 
+//					SPELER SOLL ABHAUEN 
 //******************************************************************
 
 instance ORG_862_Jacko_DRUGGUARD(C_INFO)
@@ -258,7 +258,7 @@ func void ORG_862_Jacko_DRUGGUARD_Info()
 };  
 
 //******************************************************************
-// NORMAL 
+//						NORMAL 
 //******************************************************************
 
 instance ORG_862_Jacko_KALOM(C_INFO)
@@ -282,12 +282,14 @@ func int ORG_862_Jacko_KALOM_Condition()
 };
 func void ORG_862_Jacko_KALOM_Info()
 {
+//	AI_Output(other,self,"ORG_862_Jacko_KALOM_Info_15_01"); //Ich bin im Auftrag der Bruderschaft hier.
 	AI_Output(other,self,"ORG_862_Jacko_KALOM_Info_15_01"); //Ich bin im Auftrag der Bruderschaft hier. 
+//	AI_Output(self,other,"ORG_862_Jacko_KALOM_Info_06_02"); //Oh scheisse! Und da schicken die so einen wie dich?
 	AI_Output(self,other,"ORG_862_Jacko_KALOM_Info_06_02"); //Oh scheisse! Und da schicken die so einen wie dich? 
 };  
 
 //******************************************************************
-// NORMAL 
+//				NORMAL 
 //******************************************************************
 
 instance ORG_862_Jacko_ANGEBOT(C_INFO)
@@ -311,7 +313,9 @@ func int ORG_862_Jacko_ANGEBOT_Condition()
 func void ORG_862_Jacko_ANGEBOT_Info()
 {
 	AI_Output(other,self,"ORG_862_Jacko_ANGEBOT_Info_15_01"); //Ich will euch ein Angebot machen!
+//	AI_Output(self,other,"ORG_862_Jacko_ANGEBOT_Info_06_02"); //Was für ein Angebot?
 	AI_Output(self,other,"ORG_862_Jacko_ANGEBOT_Info_06_02"); //Was für ein Angebot? 
+//	AI_Output(other,self,"ORG_862_Jacko_ANGEBOT_Info_15_03"); //Das werde ich mit demjenigen bereden,der hier das Sagen hat.
 	AI_Output(other,self,"ORG_862_Jacko_ANGEBOT_Info_15_03"); //Das werde ich mit demjenigen bereden,der hier das Sagen hat.  
 	AI_Output(self,other,"ORG_862_Jacko_ANGEBOT_Info_06_04"); //Na schön,dann rede mit Renyu. Aber keine faulen Tricks, sonst zerschlage ich jeden deiner Knochen einzeln!
 	AI_StopProcessInfos(self);

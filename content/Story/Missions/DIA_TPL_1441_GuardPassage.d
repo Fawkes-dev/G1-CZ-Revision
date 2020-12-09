@@ -1,17 +1,17 @@
 //////////////////////////////////////////////////////////////////////////
-// DURCHGANGSWACHE
-// =============== 
-// NSC: TPL_1441_Templer
-// Lager: 
-// Durchgang:
-// Uhrzeit:
+//	DURCHGANGSWACHE
+//	=============== 
+//	NSC: TPL_1441_Templer
+//	Lager: 
+//	Durchgang:
+//	Uhrzeit:
 //
-// Es passiert folgendes:
-// 1. Nähert sich der Spieler dem Durchgang, so wird er in diesen
-// Dialog gezwungen und einmal gewarnt
-// 2. Nähert sich der SC trotzdem weiter, so wird er ein ZWEITES Mal
-// gewarnt (aggressiver mit Waffe ziehen)
-// 3. Nähert er sich trotzdem wieder, wird er angegriffen
+//	Es passiert folgendes:
+//	1. Nähert sich der Spieler dem Durchgang, so wird er in diesen
+//		Dialog gezwungen und einmal gewarnt
+//	2. Nähert sich der SC trotzdem weiter, so wird er ein ZWEITES Mal
+//		gewarnt (aggressiver mit Waffe ziehen)
+//	3. Nähert er sich trotzdem wieder, wird er angegriffen
 //////////////////////////////////////////////////////////////////////////
 const string TPL_1441_CHECKPOINT = "PSI_TEMPLE_IN";
 
@@ -26,7 +26,7 @@ instance Info_TPL_1441_FirstWarn(C_INFO)
 };                       
 
 //------------------------------------------------------------------------
-// 1. Warnung
+//	1. Warnung
 //------------------------------------------------------------------------
 func int Info_TPL_1441_FirstWarn_Condition()
 {
@@ -52,8 +52,12 @@ func void Info_TPL_1441_FirstWarn_Info()
 	if (Npc_KnowsInfo(hero,PC_Psionic_SEND))
 	{
 		Info_Clearchoices (Info_TPL_1441_FirstWarn);
-		Info_Addchoice (Info_TPL_1441_FirstWarn,"Y'Berion himself gave me permission.", Info_TPL_1441_FirstWarn_Condition_YBERION);  
-		Info_Addchoice (Info_TPL_1441_FirstWarn,"The novice Lester sent me.", Info_TPL_1441_FirstWarn_Condition_LESTER);  
+//		Info_Addchoice (Info_TPL_1441_FirstWarn,"Y'Berion himself gave me permission.", Info_TPL_1441_FirstWarn_Condition_YBERION);  
+//		Info_Addchoice (Info_TPL_1441_FirstWarn,"Y'Berion höchstpersönlich hat mir die Erlaubnis gegeben", Info_TPL_1441_FirstWarn_Condition_YBERION);  
+		Info_Addchoice (Info_TPL_1441_FirstWarn,"Y´Berion mi dal povolení.", Info_TPL_1441_FirstWarn_Condition_YBERION);  
+//		Info_Addchoice (Info_TPL_1441_FirstWarn,"The novice Lester sent me.", Info_TPL_1441_FirstWarn_Condition_LESTER);  
+//		Info_Addchoice (Info_TPL_1441_FirstWarn,"Der Novize Lester schickt mich", Info_TPL_1441_FirstWarn_Condition_LESTER);  
+		Info_Addchoice (Info_TPL_1441_FirstWarn,"Poslal mě novic Lester.", Info_TPL_1441_FirstWarn_Condition_LESTER);  
 	}
 	else
 	{
@@ -89,7 +93,7 @@ func void Info_TPL_1441_FirstWarn_Condition_LESTER()
 };
 
 //------------------------------------------------------------------------
-// 2. Warnung
+//	2. Warnung
 //------------------------------------------------------------------------
 instance Info_TPL_1441_LastWarn(C_INFO)
 {
@@ -124,7 +128,7 @@ func int Info_TPL_1441_LastWarn_Info()
 };
 
 //------------------------------------------------------------------------
-// Attack
+//	Attack
 //------------------------------------------------------------------------
 instance Info_TPL_1441_Attack(C_INFO)
 {

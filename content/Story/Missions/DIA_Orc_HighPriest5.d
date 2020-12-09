@@ -92,8 +92,8 @@ func void Info_HighPriest5FAILED_Info()
 	Npc_SetTempAttitude(self,ATT_HOSTILE); 
 
 //	B_LogEntry(CH4_EnterTemple,"Grash-Varrag-Arushat apparently doesn't belong to the undead Orc shamans. He is more powerful by far and my weapons don't harm him at all. I need a more powerful weapon!");
-//	B_LogEntry(CH4_EnterTemple,"Varrag-Ruuushk, einer der untoten Schamanen der Schläfer-Herbeirufung kreuzt nun meinen Weg. Er wird mich nicht aufhalten, dafür sorge ich!");
-	B_LogEntry(CH4_EnterTemple,"Stojím tváří v tvář Varrag-Hashorovi, jednomu z pěti skřetích šamanů, kteří do tohoto světa vnesli Spáče. Skončím jeho nemrtvou existenci.");
+//	B_LogEntry(CH4_EnterTemple,"Grash-Varrag-Arushat schient kein untoter Orkschamane wie die anderen zu sein. Es ist weitaus mächtiger und meine Waffen richteten nicht den geringsten Schaden an. Ich brauche eine Waffe, die mächtiger als alles andere ist!");
+	B_LogEntry(CH4_EnterTemple,"Grash-Varrat-Arushat zřejmě nepatří k nemrtvým skřetím šamanům. Je daleko silnější a mé zbraně mu nedokážou ublížit. Potřebuji daleko silnější zbraň!");
 	B_GiveXP(XP_RetreatFromLastPriest);
 
 	AI_StopProcessInfos(self);

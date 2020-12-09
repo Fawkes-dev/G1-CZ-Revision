@@ -1,5 +1,5 @@
 // ************************************************************
-//	  EXIT 
+// 			  				   EXIT 
 // ************************************************************
 
 instance DIA_Org_876_EXIT(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Org_876_EXIT_Info()
 };
 
 // ************************************************************
-// Bin Schürfer
+// 						Bin Schürfer
 // ************************************************************
 
 instance DIA_Org_876_AmSfb(C_INFO)
@@ -74,7 +74,7 @@ func void DIA_Org_876_AmSfb_Info()
 };
 
 // ************************************************************
-// Bestechen
+// 						Bestechen
 // ************************************************************
 
 instance DIA_Org_876_Bribe(C_INFO)
@@ -109,13 +109,13 @@ func void DIA_Org_876_Bribe_Info()
 
 	Info_ClearChoices(DIA_Org_876_Bribe);
 //	Info_AddChoice(DIA_Org_876_Bribe,"100 ore nuggets should be enough.",DIA_Org_876_Bribe_100Erz);
-//	Info_AddChoice(DIA_Org_876_Bribe,""Hundert Erzbrocken sollten reichen."	",DIA_Org_876_Bribe_100Erz);
+//	Info_AddChoice(DIA_Org_876_Bribe,"Hundert Erzbrocken sollten reichen.",DIA_Org_876_Bribe_100Erz);
 	Info_AddChoice(DIA_Org_876_Bribe,"100 nugetů by mělo stačit.",DIA_Org_876_Bribe_100Erz);
 //	Info_AddChoice(DIA_Org_876_Bribe,"What do you say to 50 ore?",DIA_Org_876_Bribe_50Erz);
-//	Info_AddChoice(DIA_Org_876_Bribe,""Was denkst du über 50 Erz?"	",DIA_Org_876_Bribe_50Erz);
+//	Info_AddChoice(DIA_Org_876_Bribe,"Was denkst du über 50 Erz?",DIA_Org_876_Bribe_50Erz);
 	Info_AddChoice(DIA_Org_876_Bribe,"Co říkáš na 50 nugetů?",DIA_Org_876_Bribe_50Erz);
 //	Info_AddChoice(DIA_Org_876_Bribe,"I have 10 ore - here.",DIA_Org_876_Bribe_10Erz);
-//	Info_AddChoice(DIA_Org_876_Bribe,""Ich habe 10 Erz - hier."	",DIA_Org_876_Bribe_10Erz);
+//	Info_AddChoice(DIA_Org_876_Bribe,"Ich habe 10 Erz - hier.",DIA_Org_876_Bribe_10Erz);
 	Info_AddChoice(DIA_Org_876_Bribe,"Mám s sebou 10 nugetů.",DIA_Org_876_Bribe_10Erz);
 };
 
@@ -185,7 +185,7 @@ func void DIA_Org_876_Bribe_100Erz()
 };
 
 // ************************************************************
-// PERM
+// 							PERM
 // ************************************************************
 
 instance DIA_Org_876_PERM(C_INFO)
@@ -220,7 +220,7 @@ func void DIA_Org_876_PERM_Info()
 };
 
 // ************************************************************
-// SC = SLD oder Magier
+// 						SC = SLD oder Magier
 // ************************************************************
 
 instance DIA_Org_876_ScSld(C_INFO)
@@ -256,7 +256,7 @@ func void DIA_Org_876_ScSld_Info()
 };
 
 // ************************************************************
-// SC = Sekte
+// 						SC = Sekte
 // ************************************************************
 
 instance DIA_Org_876_ScSekte(C_INFO)
@@ -288,7 +288,7 @@ func void DIA_Org_876_ScSekte_Info()
 };
 
 // ************************************************************
-// Kraut geben
+// 						Kraut geben
 // ************************************************************
 	var int Org_876_GotJoint;
 // ************************************************************
@@ -337,7 +337,7 @@ func void DIA_Org_876_GibKraut_Info()
 	else
 	{
 //		AI_Output(other,self,"DIA_Org_876_GibKraut_KEIN_15_00"); //Oh... Hold on. I don't have anything after all.
-//		AI_Output(other,self,"DIA_Org_876_GibKraut_KEIN_15_00"); //Äh ... Warte mal. Hab' doch nichts. 
+//		AI_Output(other,self,"DIA_Org_876_GibKraut_KEIN_15_00"); //Äh ... Warte mal. Hab' doch nichts.
 		AI_Output(other,self,"DIA_Org_876_GibKraut_KEIN_15_00"); //Och... Počkej. Já vlastně nic nemám.
 //		AI_Output(self,other,"DIA_Org_876_GibKraut_KEIN_06_00"); //Great. Think of me the next time.
 //		AI_Output(self,other,"DIA_Org_876_GibKraut_KEIN_06_00"); //Na toll. Denk beim nächsten Mal an mich.
@@ -347,19 +347,19 @@ func void DIA_Org_876_GibKraut_Info()
 };
 
 //////////////////////////////////////////////////////////////////////////
-// DURCHGANGSWACHE
-// =============== 
-// NSC: Org_876_Tuersteher
-// Lager: NewCamp 
-// Durchgang: Kneipe (rechte Wache)
-// Uhrzeit: 24h
+//	DURCHGANGSWACHE
+//	=============== 
+//	NSC: Org_876_Tuersteher
+//	Lager: NewCamp 
+//	Durchgang: Kneipe (rechte Wache)
+//	Uhrzeit: 24h
 //
-// Es passiert folgendes:
-// 1. Nähert sich der Spieler dem Durchgang, so wird er in diesen
-// Dialog gezwungen und einmal gewarnt
-// 2. Nähert sich der SC trotzdem weiter, so wird er ein ZWEITES Mal
-// gewarnt (aggressiver mit Waffe ziehen)
-// 3. Nähert er sich trotzdem wieder, wird er angegriffen
+//	Es passiert folgendes:
+//	1. Nähert sich der Spieler dem Durchgang, so wird er in diesen
+//		Dialog gezwungen und einmal gewarnt
+//	2. Nähert sich der SC trotzdem weiter, so wird er ein ZWEITES Mal
+//		gewarnt (aggressiver mit Waffe ziehen)
+//	3. Nähert er sich trotzdem wieder, wird er angegriffen
 //////////////////////////////////////////////////////////////////////////
 
 // **********************************************
@@ -408,7 +408,7 @@ func void Info_Org_876_FirstWarn_Info()
 };
 
 //------------------------------------------------------------------------
-// 2. Warnung
+//	2. Warnung
 //------------------------------------------------------------------------
 instance Info_Org_876_LastWarn(C_INFO)
 {
@@ -445,7 +445,7 @@ func int Info_Org_876_LastWarn_Info()
 };
 
 //------------------------------------------------------------------------
-// Attack
+//	Attack
 //------------------------------------------------------------------------
 instance Info_Org_876_Attack(C_INFO)
 {

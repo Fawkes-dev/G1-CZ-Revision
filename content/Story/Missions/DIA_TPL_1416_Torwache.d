@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_Tpl_1416_Torwache_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Tpl_1416_Torwache_Exit_Info()
 };
 
 // **************************************************
-// Wie ist das Leben hier
+// 				Wie ist das Leben hier
 // **************************************************
 
 instance DIA_Tpl_1416_Torwache_Life(C_INFO)

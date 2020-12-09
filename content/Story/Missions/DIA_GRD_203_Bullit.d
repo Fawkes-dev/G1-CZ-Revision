@@ -1,5 +1,5 @@
 //******************************************
-// EXIT 
+//					EXIT 
 //******************************************
 
 instance DIA_Bullit_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Bullit_Exit_Info()
 };
 
 //******************************************
-// First 
+//					First 
 //******************************************
 
 instance DIA_Bullit_First(C_INFO)
@@ -44,12 +44,12 @@ func int DIA_Bullit_First_Condition()
 func void DIA_Bullit_First_Info()
 {
 //	AI_Output(self,other,"DIA_Bullit_First_06_00"); //Who have we here? Ain't you the guy I baptized earlier? What do you want? You come back for more?
-//	AI_Output(self,other,"DIA_Bullit_First_06_00"); //Wen haben wir denn da? Du bist doch der Typ, den ich getauft habe? Was willst du? Noch mehr Schläge? 
+//	AI_Output(self,other,"DIA_Bullit_First_06_00"); //Wen haben wir denn da? Du bist doch der Typ, den ich getauft habe? Was willst du? Noch mehr Schläge?
 	AI_Output(self,other,"DIA_Bullit_First_06_00"); //Kohopak to tady máme? Není to ten hoch, kterého jsem kdysi pokřtil? Co chceš? Vracíš se a chceš ještě víc?
 };
 
 //******************************************
-// Aufs Maul
+//				Aufs Maul
 //******************************************
 
 instance DIA_Bullit_AufsMAul(C_INFO)
@@ -88,7 +88,7 @@ func void DIA_Bullit_AufsMAul_Info()
 };
 
 // *****************************************************
-// Wartet auf den SC
+// 				Wartet auf den SC
 // *****************************************************
 
 instance DIA_GRD_203_Bullit_Wait4SC(C_INFO)

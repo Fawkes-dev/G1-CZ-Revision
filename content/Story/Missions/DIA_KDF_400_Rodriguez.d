@@ -1,5 +1,5 @@
 //***********************************************
-// EXIT 
+//					EXIT 
 //***********************************************
 
 instance DIA_Rodriguez_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Rodriguez_Exit_Info()
 };
 
 //***********************************************
-// Hallo und tschüß
+//				Hallo und tschüß
 //***********************************************
 
 instance DIA_Rodriguez_Hello(C_INFO)

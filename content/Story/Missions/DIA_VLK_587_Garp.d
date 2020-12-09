@@ -50,7 +50,7 @@ func void Vlk_587_Garp_ORK_Info()
 //	AI_Output(other,self,"Vlk_587_Garp_ORK_Info_15_03"); //Er ist ja noch nicht mal angekettet. Warum haut er nicht einfach ab?
 	AI_Output(other,self,"Vlk_587_Garp_ORK_Info_15_03"); //Není ani v železech. Jak to, že neuteče?
 //	AI_Output(self,other,"Vlk_587_Garp_ORK_Info_01_04"); //He tried that once. The guards gave it to him in such a way that he couldn't walk for a couple of weeks. Since then, he's never tried it again.
-//	AI_Output(self,other,"Vlk_587_Garp_ORK_Info_01_04"); //Er hat es einmal versucht. Die Gardisten haben ihm so stark zugesetzt, dass er ein paar Wochen nicht laufen konnte. Seitdem hat er nie wieder versucht zu fliehen.  
+//	AI_Output(self,other,"Vlk_587_Garp_ORK_Info_01_04"); //Er hat es einmal versucht. Die Gardisten haben ihm so stark zugesetzt, dass er ein paar Wochen nicht laufen konnte. Seitdem hat er nie wieder versucht zu fliehen.
 	AI_Output(self,other,"Vlk_587_Garp_ORK_Info_01_04"); //Jednou se o to pokusil. Stráž mu dala co proto, takže nemohl pár týdnů chodit. Od té doby se o to už nikdy nepokusil.
 };  
 

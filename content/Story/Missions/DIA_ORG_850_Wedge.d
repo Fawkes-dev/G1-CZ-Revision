@@ -1,5 +1,5 @@
 // ****************************************
-// Exit
+// 					Exit
 // ****************************************
 
 instance DIA_Wedge_Exit(C_INFO)
@@ -24,7 +24,7 @@ func void DIA_Wedge_Exit_Info()
 };
 
 // ****************************************
-// Psst
+// 					Psst
 // ****************************************
 
 instance DIA_Wedge_Psst(C_INFO)
@@ -59,7 +59,7 @@ func void DIA_Wedge_Psst_Info()
 };
 
 // ****************************************
-// Hallo
+// 					Hallo
 // ****************************************
 
 instance DIA_Wedge_Hello(C_INFO)
@@ -99,7 +99,7 @@ func void DIA_Wedge_Hello_Info()
 };  
 
 // ****************************************
-// Was ist mit Butch
+// 				Was ist mit Butch
 // ****************************************
 
 instance DIA_Wedge_WarnsOfButch(C_INFO)
@@ -134,7 +134,7 @@ func void DIA_Wedge_WarnsOfButch_Info()
 };  
 
 // ****************************************
-// Lehrer
+// 					Lehrer
 // ****************************************
 
 instance DIA_Wedge_Lehrer(C_INFO)
@@ -165,7 +165,7 @@ func void DIA_Wedge_Lehrer_Info()
 //		B_LogEntry(GE_TeacherNC,"Wedge, the rogue, can teach me the talents of SNEAKING, PICKPOCKETING and LOCK PICKING.");
 //		B_LogEntry(GE_TeacherNC,"Wedge der Bandit, kann mir die Talente SCHLEICHEN, TASCHENDIEBSTAHL und SCHLÖSSER ÖFFNEN beibringen.");
 		B_LogEntry(GE_TeacherNC,"Bandita Wedge mě může učit dovednostem PLÍŽENÍ, VYBÍRÁNÍ KAPES a PÁČENÍ ZÁMKŮ.");
-		log_wedgelearn = TRUE;
+		log_wedgelearn = TRUE ;
 	};
 //	AI_Output(other,self,"DIA_Wedge_Lehrer_15_00"); //What can you teach me?
 //	AI_Output(other,self,"DIA_Wedge_Lehrer_15_00"); //Was kannst du mir beibringen?
@@ -175,31 +175,25 @@ func void DIA_Wedge_Lehrer_Info()
 	AI_Output(self,other,"DIA_Wedge_Lehrer_05_01"); //To záleží... Co chceš umět?
 
 	Info_ClearChoices(DIA_Wedge_Lehrer);
-//	Info_AddChoice(DIA_Wedge_Lehrer,"DIALOG_BACK																",DIA_Wedge_Lehrer_BACK);
 	Info_AddChoice(DIA_Wedge_Lehrer,DIALOG_BACK ,DIA_Wedge_Lehrer_BACK);
 	if (Npc_GetTalentSkill(hero,NPC_TALENT_PICKPOCKET) == 1) 
 	{
-//		Info_AddChoice(DIA_Wedge_Lehrer,"B_BuildLearnString(NAME_LearnPickpocket_2,LPCOST_TALENT_PICKPOCKET_2,0)		",DIA_Wedge_Lehrer_Pickpocket2);
 		Info_AddChoice(DIA_Wedge_Lehrer,B_BuildLearnString(NAME_LearnPickpocket_2,LPCOST_TALENT_PICKPOCKET_2,0),DIA_Wedge_Lehrer_Pickpocket2);
 	};
 	if (Npc_GetTalentSkill(hero,NPC_TALENT_PICKPOCKET) == 0) 
 	{
-//		Info_AddChoice(DIA_Wedge_Lehrer,"B_BuildLearnString(NAME_LearnPickpocket_1,LPCOST_TALENT_PICKPOCKET_1,0)		",DIA_Wedge_Lehrer_Pickpocket);
 		Info_AddChoice(DIA_Wedge_Lehrer,B_BuildLearnString(NAME_LearnPickpocket_1,LPCOST_TALENT_PICKPOCKET_1,0),DIA_Wedge_Lehrer_Pickpocket);
 	};
 	if (Npc_GetTalentSkill(hero,NPC_TALENT_PICKLOCK) == 1) 
 	{
-//		Info_AddChoice(DIA_Wedge_Lehrer,"B_BuildLearnString(NAME_LearnPicklock_2,	LPCOST_TALENT_PICKLOCK_2,0)		",DIA_Wedge_Lehrer_Lockpick2);
 		Info_AddChoice(DIA_Wedge_Lehrer,B_BuildLearnString(NAME_LearnPicklock_2, LPCOST_TALENT_PICKLOCK_2,0),DIA_Wedge_Lehrer_Lockpick2);
 	};
 	if (Npc_GetTalentSkill(hero,NPC_TALENT_PICKLOCK) == 0) 
 	{
-//		Info_AddChoice(DIA_Wedge_Lehrer,"B_BuildLearnString(NAME_LearnPicklock_1,	LPCOST_TALENT_PICKLOCK_1,0)		",DIA_Wedge_Lehrer_Lockpick);
 		Info_AddChoice(DIA_Wedge_Lehrer,B_BuildLearnString(NAME_LearnPicklock_1, LPCOST_TALENT_PICKLOCK_1,0),DIA_Wedge_Lehrer_Lockpick);
 	};
 	if (Npc_GetTalentSkill(hero,NPC_TALENT_SNEAK) == 0) 
 	{
-//		Info_AddChoice(DIA_Wedge_Lehrer,"B_BuildLearnString(NAME_LearnSneak, 		LPCOST_TALENT_SNEAK,0)			",DIA_Wedge_Lehrer_Schleichen);
 		Info_AddChoice(DIA_Wedge_Lehrer,B_BuildLearnString(NAME_LearnSneak, LPCOST_TALENT_SNEAK,0),DIA_Wedge_Lehrer_Schleichen);
 	};
 };

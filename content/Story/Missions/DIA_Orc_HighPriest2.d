@@ -32,8 +32,8 @@ func void Info_HighPriest2_Info()
 	AI_Output(other,self,"Info_HighPriest2_15_03"); //TY buď proklat, ty plesnivá páchnoucí onuce!
 
 //	B_LogEntry(CH4_EnterTemple,"Varrag-Kasorg, another one of the five Orc shamans, will now end his sad existence down at my feet!");
-//	B_LogEntry(CH4_EnterTemple,"Varrag-Hashor, einer der fünf Ork-Schamanen, die damals den Schläfer auf diese Welt geholt haben, steht mir gegenüber. Ich werde sein untotes Dasein ein für allemal beenden.");
-	B_LogEntry(CH4_EnterTemple,"Před skřetím městem jsem se znovu setkal se šamanem Ur-Shakem. Řekl mi, že pouze skřetím kouzlem se mohu dostat do předsálí podzemního chrámu. Ostatní skřetí šamani mají ve svých jeskyních právě taková kouzla.");
+//	B_LogEntry(CH4_EnterTemple,"Varrag-Kasorg, ein weiterer der fünf Ork-Schamanen, wird nun seine erbärmliche Existenz mir zu Füßen beenden!");
+	B_LogEntry(CH4_EnterTemple,"Varrag-Kasorg, další z pěti skřetích šamanů, teď končí svoji bídnou existenci u mých nohou!");
 
 	AI_StopProcessInfos(self);
 

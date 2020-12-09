@@ -1,5 +1,5 @@
 // ***************************** 
-// EXIT 
+//				EXIT 
 // *****************************
 
 instance DIA_Grd_264_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Grd_264_Exit_Info()
 };
 
 /*------------------------------------------------------------------------
-// GARDEAUFNAHME und der andere gardist... 
+//						GARDEAUFNAHME und der andere gardist... 
 ------------------------------------------------------------------------*/
 instance Grd_264_Gardist_GARDEAUFNAHME(C_INFO)
 {

@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+//						 EXIT 
 // **************************************************
 
 instance DIA_Fortuno_EXIT(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Fortuno_EXIT_Info()
 };
 
 // **************************************************
-// Erste Begrüssung
+//					Erste Begrüssung
 // **************************************************
 
 instance DIA_Fortuno_Greet(C_INFO)
@@ -52,7 +52,7 @@ func void DIA_Fortuno_Greet_Info()
 };
 
 // **************************************************
-// Was ist das Geschenk?
+//				Was ist das Geschenk?
 // **************************************************
 	var int Fortuno_RationDay;
 // **************************************************
@@ -100,7 +100,7 @@ func void DIA_Fortuno_GetGeschenk_Info()
 };
 
 // **************************************************
-// Tägliche Ration
+//				Tägliche Ration
 // **************************************************
 
 instance DIA_Fortuno_DailyRation(C_INFO)
@@ -146,7 +146,7 @@ func void DIA_Fortuno_DailyRation_Info()
 };
 
 // **************************************************
-// TRADE
+//						TRADE
 // **************************************************
 
 instance DIA_Fortuno_BuyJoints(C_INFO)

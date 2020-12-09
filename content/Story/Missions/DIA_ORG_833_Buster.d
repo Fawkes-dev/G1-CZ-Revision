@@ -88,13 +88,13 @@ func void DIA_ORG_833_Buster_Train1()
 	if (B_GiveSkill(other,NPC_TALENT_ACROBAT , 1, LPCOST_TALENT_ACROBAT))
 	{
 //		AI_Output(self,other,"DIA_ORG_833_Buster3_02_02"); //As soon as you've gained control of your body, you'll be able to jump much further.
-//		AI_Output(self,other,"DIA_ORG_833_Buster3_02_02"); //Wenn du deinen Körper beherrscht, bist du in der Lage viel weiter zu springen. 
+//		AI_Output(self,other,"DIA_ORG_833_Buster3_02_02"); //Wenn du deinen Körper beherrscht, bist du in der Lage viel weiter zu springen.
 		AI_Output(self,other,"DIA_ORG_833_Buster3_02_02"); //Brzy získáš kontrolu nad svým tělem a budeš schopen skákat mnohem dál.
 //		AI_Output(self,other,"DIA_ORG_833_Buster3_02_03"); //You'll learn how to roll off and what's the best way to land when falling. But don't forget, you're not immortal!
 //		AI_Output(self,other,"DIA_ORG_833_Buster3_02_03"); //Du lernst dich richtig abzurollen und aus dem Fall heraus richtig zu landen. Aber denk daran, du bist nicht unsterblich!
 		AI_Output(self,other,"DIA_ORG_833_Buster3_02_03"); //Naučil ses, jak se stočit a jak nejlépe při pádu dopadnout na zem. Ale nezapomeň - nejsi nesmrtelný!
 //		AI_Output(self,other,"DIA_ORG_833_Buster3_02_04"); //Acrobatics can also be very useful during a battle. You'll be able to change the distance between you and your foe very quickly. Good luck!
-//		AI_Output(self,other,"DIA_ORG_833_Buster3_02_04"); //Auch im Kampf ist Akrobatik sehr hilfreich. Du kannst deinen Abstand zum Gegner sehr schnell verändern. Viel Glück! 
+//		AI_Output(self,other,"DIA_ORG_833_Buster3_02_04"); //Auch im Kampf ist Akrobatik sehr hilfreich. Du kannst deinen Abstand zum Gegner sehr schnell verändern. Viel Glück!
 		AI_Output(self,other,"DIA_ORG_833_Buster3_02_04"); //Akrobacie může být také velmi užitečná v boji. Můžeš velmi rychle měnit vzdálenost mezi tebou a tvým nepřítelem. Hodně štěstí!
 	}; 
 };  

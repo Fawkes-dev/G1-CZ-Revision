@@ -1,9 +1,9 @@
 //*****************************************
-// EXIT UNTEN
+//				EXIT UNTEN
 //*****************************************
 
 // ************************************************************
-// Hello 
+//							Hello 
 // ************************************************************
 
 instance DIA_Stone_Hello(C_INFO)
@@ -37,7 +37,7 @@ func void DIA_Stone_Hello_Info()
 };
 
 // ************************************************************
-// Kaufen 
+//							Kaufen 
 // ************************************************************
 
 instance DIA_Stone_NotSelling(C_INFO)
@@ -165,7 +165,6 @@ func void GRD_219_Stone_BETTERARMOR_Info()
 
 	Info_ClearChoices(GRD_219_Stone_BETTERARMOR);
 	Info_AddChoice(GRD_219_Stone_BETTERARMOR, DIALOG_BACK , GRD_219_Stone_BETTERARMOR_BACK); 
-//	Info_AddChoice(GRD_219_Stone_BETTERARMOR," B_BuildBuyArmorString(NAME_StoneHeavyGuards,VALUE_GRD_ARMOR_H)	",GRD_219_Stone_BETTERARMOR_H); 
 	Info_AddChoice(GRD_219_Stone_BETTERARMOR, B_BuildBuyArmorString(NAME_StoneHeavyGuards,VALUE_GRD_ARMOR_H),GRD_219_Stone_BETTERARMOR_H); 
 	Info_AddChoice(GRD_219_Stone_BETTERARMOR, B_BuildBuyArmorString(NAME_StoneGuards,VALUE_GRD_ARMOR_M), GRD_219_Stone_BETTERARMOR_M); 
 };  
@@ -282,7 +281,7 @@ func void DIA_GRD_219_Stone_Exit_Info()
 //#####################################################################
 
 //---------------------------------------------------------------------
-// Begrüßung
+//	Begrüßung
 //---------------------------------------------------------------------
 instance DIA_GRD_219_Stone(C_INFO)
 {
@@ -309,7 +308,7 @@ func void DIA_GRD_219_Stone_Info()
 };
 
 //---------------------------------------------------------------------
-// Info Stone1
+//	Info Stone1
 //---------------------------------------------------------------------
 instance DIA_GRD_219_Stone1(C_INFO)
 {
@@ -368,7 +367,7 @@ func void DIA_GRD_219_Stone1_Info()
 };
 
 //---------------------------------------------------------------------
-// Info Stone3
+//	Info Stone3
 //---------------------------------------------------------------------
 instance DIA_GRD_219_Stone3(C_INFO)
 {
@@ -401,7 +400,7 @@ func void DIA_GRD_219_Stone3_Info()
 };
 
 //---------------------------------------------------------------------
-// Info Stone2
+//	Info Stone2
 //---------------------------------------------------------------------
 // Warum ist Stone im Kerker
 instance DIA_GRD_219_Stone2(C_INFO)
@@ -438,7 +437,7 @@ func void DIA_GRD_219_Stone2_Info()
 };
 
 //---------------------------------------------------------------------
-// Info Stone4
+//	Info Stone4
 //---------------------------------------------------------------------
 // Rüstung verbessern lassen
 instance DIA_GRD_219_Stone4(C_INFO)

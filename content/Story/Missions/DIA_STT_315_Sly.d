@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_STT_315_Sly_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_STT_315_Sly_Exit_Info()
 };
 
 // **************************************************
-// Erste Begrüssung 
+// 					Erste Begrüssung 
 // **************************************************
 
 instance DIA_STT_315_Sly(C_INFO)
@@ -57,7 +57,7 @@ func void DIA_STT_315_Sly_Info()
 };
 
 // **************************************************
-// Erste Begrüssung 
+// 					Erste Begrüssung 
 // **************************************************
 	var int Sly_LostNek;
 // **************************************************
@@ -99,13 +99,13 @@ func void DIA_STT_315_LostNek_Info()
 	};
 	Info_ClearChoices(DIA_STT_315_LostNek);
 //	Info_AddChoice(DIA_STT_315_LostNek,"I'll see if I can find him.",DIA_STT_315_LostNek_DoIt);
-//	Info_AddChoice(DIA_STT_315_LostNek,""Ich werd sehen, ob ich ihn finde."				",DIA_STT_315_LostNek_DoIt);
+//	Info_AddChoice(DIA_STT_315_LostNek,"Ich werd sehen, ob ich ihn finde.",DIA_STT_315_LostNek_DoIt);
 	Info_AddChoice(DIA_STT_315_LostNek,"Uvidím, jestli ho dokážu najít.",DIA_STT_315_LostNek_DoIt);
 
 	if (Npc_GetTrueGuild(hero) == GIL_NONE)
 	{
 //		Info_AddChoice(DIA_STT_315_LostNek,"What good will your speaking up for me do?",DIA_STT_315_LostNek_Why);
-//		Info_AddChoice(DIA_STT_315_LostNek,""Was kann ein gutes Wort von dir denn bewirken?"	",DIA_STT_315_LostNek_Why);
+//		Info_AddChoice(DIA_STT_315_LostNek,"Was kann ein gutes Wort von dir denn bewirken?",DIA_STT_315_LostNek_Why);
 		Info_AddChoice(DIA_STT_315_LostNek,"Co mám udělat, aby ses za mě přimluvil?",DIA_STT_315_LostNek_Why);
 	};
 };
@@ -160,7 +160,7 @@ func void DIA_STT_315_LostNek_DoIt()
 };
 
 // **************************************************
-// SUCCESS
+// 						SUCCESS
 // **************************************************
 
 instance DIA_STT_315_LostNekSuccess(C_INFO)
@@ -194,10 +194,10 @@ func void DIA_STT_315_LostNekSuccess_Info()
 
 	Info_ClearChoices(DIA_STT_315_LostNekSuccess);
 //	Info_AddChoice(DIA_STT_315_LostNekSuccess,"No - I'm afraid not.",DIA_STT_315_LostNekSuccess_NoProof);
-//	Info_AddChoice(DIA_STT_315_LostNekSuccess,""Nein - ich befürchte nicht."					",DIA_STT_315_LostNekSuccess_NoProof);
+//	Info_AddChoice(DIA_STT_315_LostNekSuccess,"Nein - ich befürchte nicht.",DIA_STT_315_LostNekSuccess_NoProof);
 	Info_AddChoice(DIA_STT_315_LostNekSuccess,"Obávám se, že ne.",DIA_STT_315_LostNekSuccess_NoProof);
 //	Info_AddChoice(DIA_STT_315_LostNekSuccess,"I've found this amulet on him - here you go.",DIA_STT_315_LostNekSuccess_Proof);
-//	Info_AddChoice(DIA_STT_315_LostNekSuccess,""Ich hab' ein Amulett bei ihm gefunden - hier."	",DIA_STT_315_LostNekSuccess_Proof);
+//	Info_AddChoice(DIA_STT_315_LostNekSuccess,"Ich hab' ein Amulett bei ihm gefunden - hier.",DIA_STT_315_LostNekSuccess_Proof);
 	Info_AddChoice(DIA_STT_315_LostNekSuccess,"Našel jsem u něj jeho amulet - tady.",DIA_STT_315_LostNekSuccess_Proof);
 };
 
@@ -225,8 +225,8 @@ func void DIA_STT_315_LostNekSuccess_Proof()
 
 	Log_SetTopicStatus(CH1_LostNek,LOG_SUCCESS);
 //	B_LogEntry(CH1_LostNek,"I've given Nek's amulet to Sly. He was amazed at my honesty.");
-//	B_LogEntry(CH1_LostNek,"Der Schatten Sly hat mir versprochen, ein gutes Wort bei Diego für mich einzulegen, wenn ich Nek finde. Der Gardist könnte zum Neuen Lager übergelaufen sein. Fletcher aus dem Arenaviertel sollte ich nach Nek fragen.");
-	B_LogEntry(CH1_LostNek,"Sly, jeden ze Stínů, slíbil, že jestli najdu Neka, tak se za mě přimluví u Diega. Tento strážce se měl přidat k Novému táboru. Zeptám se na Neka Fletchera z obvodu arény.");
+//	B_LogEntry(CH1_LostNek,"Ich habe Sly das Amulett von Nek gegeben. Er war überrascht von meiner Ehrlichkeit.");
+	B_LogEntry(CH1_LostNek,"Dal jsem Slyovi Nekův amulet. Byl ohromen mojí poctivostí.");
 
 	B_GiveXP(XP_Slysearchfornek); 
 	if (Npc_GetTrueGuild(hero) == GIL_NONE)
@@ -234,16 +234,16 @@ func void DIA_STT_315_LostNekSuccess_Proof()
 		Log_CreateTopic(CH1_JoinOC,LOG_MISSION);
 		Log_SetTopicStatus(CH1_JoinOC,LOG_RUNNING);
 //		B_LogEntry(CH1_JoinOC,"I've given Sly Nek's amulet. He'll talk to Diego and speak in my favor.");
-//		B_LogEntry(CH1_JoinOC,"Um aufgenommen zu werden, muss ich wichtige Leute im Aussenring beeindrucken und eine Prüfung des Vertrauens bei Diego ablegen.");
-		B_LogEntry(CH1_JoinOC,"Abych se mohl přidat, musím udělat dojem na lidi z Vnějšího okruhu a podstoupit Diegovu zkoušku poctivosti.");
+//		B_LogEntry(CH1_JoinOC,"Ich habe Sly das Amulett von Nek gegeben. Er wird mit Diego sprechen und ein gutes Wort für mich einlegen.");
+		B_LogEntry(CH1_JoinOC,"Dal jsem Slyovi Nekův amulet. Přimluví se za mě u Diega.");
 	}
 	else
 	{ 
 		Log_CreateTopic(CH1_JoinOC,LOG_MISSION);
 		Log_SetTopicStatus(CH1_JoinOC,LOG_FAILED);
 //		B_LogEntry(CH1_JoinOC,"I've given Sly Nek's amulet. Not that it's going to do me any good - the Old Camp won't let me join any more anyway.");
-//		B_LogEntry(CH1_JoinOC,"Diego hat mir eine Audienz bei Gomez verschafft. Jetzt kann ich einer von Gomez Leuten werden und die Burg betreten, ich muss nur noch zu Thorus gehen.");
-		B_LogEntry(CH1_JoinOC,"Diego mi udělil slyšení u Gomeze. Právě jsem se stal jedním z Gomezových lidí a mám přístup na hrad, jen musím nejdříve navštívit Thoruse.");
+//		B_LogEntry(CH1_JoinOC,"Ich habe Sly das Amulett von Nek gegeben, allerdings bringt mir das Nichts, denn im Alten Lager werde ich nicht mehr aufgenommen.");
+		B_LogEntry(CH1_JoinOC,"Dal jsem Slyovi Nekův amulet. Bohužel však z toho nebudu mít nic - Ke Starému táboru se už nemohu přidat.");
 	};
 	Info_ClearChoices(DIA_STT_315_LostNekSuccess);
 	AI_StopProcessInfos(self);
@@ -252,7 +252,7 @@ func void DIA_STT_315_LostNekSuccess_Proof()
 func void DIA_STT_315_LostNekSuccess_NoProof()
 {
 //	AI_Output(other,self,"DIA_STT_315_LostNekSuccess_NoProof_15_00"); //No - I'm afraid not.
-//	AI_Output(other,self,"DIA_STT_315_LostNekSuccess_NoProof_15_00"); //Nein - ich befürchte nicht. 
+//	AI_Output(other,self,"DIA_STT_315_LostNekSuccess_NoProof_15_00"); //Nein - ich befürchte nicht.
 	AI_Output(other,self,"DIA_STT_315_LostNekSuccess_NoProof_15_00"); //Obávám se, že ne.
 //	AI_Output(self,other,"DIA_STT_315_LostNekSuccess_NoProof_10_01"); //Oh? You're not hiding anything from me, are you? Nek had an amulet on him.
 //	AI_Output(self,other,"DIA_STT_315_LostNekSuccess_NoProof_10_01"); //So? Du willst mir doch nicht etwas vorenthalten? Nek hat ein Schutzamulett bei sich.
@@ -273,7 +273,7 @@ func void DIA_STT_315_LostNekSuccess_NoProof()
 };
 
 // **************************************************
-// AFTER SUCCESS
+// 					AFTER SUCCESS
 // **************************************************
 
 instance DIA_STT_315_Sly_AfterSuccess(C_INFO)

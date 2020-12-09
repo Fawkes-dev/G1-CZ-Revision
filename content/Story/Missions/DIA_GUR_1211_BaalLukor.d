@@ -1,5 +1,5 @@
 // ************************************************************
-// EXIT 
+// 							EXIT 
 // ************************************************************
 instance Info_BaalLukor_EXIT(C_INFO)
 {
@@ -22,7 +22,7 @@ func void Info_BaalLukor_EXIT_Info()
 };
 
 //**************************************************************************
-// Info MEET: Erstes Zusammentreffen mit Baal Lukor
+//	Info MEET: Erstes Zusammentreffen mit Baal Lukor
 //**************************************************************************
 instance Info_BaalLukor_MEET(C_INFO)
 {
@@ -48,7 +48,7 @@ func void Info_BaalLukor_MEET_Info()
 };
 
 //**************************************************************************
-// Info DEAD
+//	Info DEAD
 //**************************************************************************
 instance Info_BaalLukor_DEAD(C_INFO)
 {
@@ -95,7 +95,7 @@ func void Info_BaalLukor_DEAD_Info()
 };
 
 //**************************************************************************
-// Info SUMMONING
+//	Info SUMMONING
 //**************************************************************************
 instance Info_BaalLukor_SUMMONING(C_INFO)
 {
@@ -138,7 +138,7 @@ func void Info_BaalLukor_SUMMONING_Info()
 };
 
 //**************************************************************************
-// Info HELP
+//	Info HELP
 //**************************************************************************
 instance Info_BaalLukor_HELP(C_INFO)
 {
@@ -178,7 +178,7 @@ func void Info_BaalLukor_HELP_Info()
 };
 
 //**************************************************************************
-// Info FOUNDNONE
+//	Info FOUNDNONE
 //**************************************************************************
 instance Info_BaalLukor_FOUNDNONE(C_INFO)
 {
@@ -216,7 +216,7 @@ func void Info_BaalLukor_FOUNDNONE_Info()
 };
 
 //**************************************************************************
-// Info FOUNDONE
+//	Info FOUNDONE
 //**************************************************************************
 instance Info_BaalLukor_FOUNDONE(C_INFO)
 {
@@ -252,7 +252,7 @@ func void Info_BaalLukor_FOUNDONE_Info()
 };
 
 //**************************************************************************
-// Info FIRSTWAIT
+//	Info FIRSTWAIT
 //**************************************************************************
 instance Info_BaalLukor_FIRSTWAIT(C_INFO)
 {
@@ -286,7 +286,7 @@ func void Info_BaalLukor_FIRSTWAIT_Info()
 };
 
 //**************************************************************************
-// Info FIRSTSCROLL
+//	Info FIRSTSCROLL
 //**************************************************************************
 instance Info_BaalLukor_FIRSTSCROLL(C_INFO)
 {
@@ -338,7 +338,7 @@ func void Info_BaalLukor_FIRSTSCROLL_Info()
 };
 
 //**************************************************************************
-// Info SECONDWAIT
+//	Info SECONDWAIT
 //**************************************************************************
 instance Info_BaalLukor_SECONDWAIT(C_INFO)
 {
@@ -375,7 +375,7 @@ func void Info_BaalLukor_SECONDWAIT_Info()
 };
 
 //**************************************************************************
-// Info SECONDSCROLL
+//	Info SECONDSCROLL
 //**************************************************************************
 instance Info_BaalLukor_SECONDSCROLL(C_INFO)
 {
@@ -428,7 +428,7 @@ func void Info_BaalLukor_SECONDSCROLL_Info()
 };
 
 //**************************************************************************
-// Info BOTHSCROLLS
+//	Info BOTHSCROLLS
 //**************************************************************************
 instance Info_BaalLukor_BOTHSCROLLS(C_INFO)
 {
@@ -468,7 +468,7 @@ func void Info_BaalLukor_BOTHSCROLLS_Info()
 };
 
 //**************************************************************************
-// Info RUNES
+//	Info RUNES
 //**************************************************************************
 instance Info_BaalLukor_RUNES(C_INFO)
 {
@@ -527,7 +527,7 @@ func void Info_BaalLukor_RUNES_Info()
 };
 
 //**************************************************************************
-// Info WHATNOW
+//	Info WHATNOW
 //**************************************************************************
 instance Info_BaalLukor_WHATNOW(C_INFO)
 {
@@ -565,7 +565,7 @@ func void Info_BaalLukor_WHATNOW_Info()
 };
 
 //**************************************************************************
-// Info HALLWITHOUT
+//	Info HALLWITHOUT
 //**************************************************************************
 instance Info_BaalLukor_HALLWITHOUT(C_INFO)
 {
@@ -606,7 +606,7 @@ func void Info_BaalLukor_HALLWITHOUT_Info()
 };
 
 //**************************************************************************
-// Info HALLWITH
+//	Info HALLWITH
 //**************************************************************************
 instance Info_BaalLukor_HALLWITH(C_INFO)
 {
@@ -651,7 +651,7 @@ func void Info_BaalLukor_HALLWITH_Info()
 };
 
 //**************************************************************************
-// Info DOOR
+//	Info DOOR
 //**************************************************************************
 instance Info_BaalLukor_DOOR(C_INFO)
 {
@@ -694,7 +694,7 @@ func void Info_BaalLukor_DOOR_Info()
 };
 
 //**************************************************************************
-// Info TELEPORT
+//	Info TELEPORT
 //**************************************************************************
 instance Info_BaalLukor_TELEPORT(C_INFO)
 {
@@ -746,7 +746,7 @@ func void Info_BaalLukor_TELEPORT_Info()
 };
 
 //**************************************************************************
-// Info ALTAR
+//	Info ALTAR
 //**************************************************************************
 instance Info_BaalLukor_ALTAR(C_INFO)
 {
@@ -817,7 +817,7 @@ func void Info_BaalLukor_ALTAR_Info()
 //	AI_Output(self,hero,"Info_BaalLukor_ALTAR_13_11"); //STIRB, UNGLÄUBIGER!!!!
 	AI_Output(self,hero,"Info_BaalLukor_ALTAR_13_11"); //ZEMŘI, NEVĚRČE!!!
 //	AI_Output(self,hero,"Info_BaalLukor_ALTAR_13_12"); //AIIIEEEEHHHHHH!!!!!!
-//	AI_Output(self,hero,"Info_BaalLukor_ALTAR_13_12"); //AIIIEEEEHHHHHH!!!!!! 
+//	AI_Output(self,hero,"Info_BaalLukor_ALTAR_13_12"); //AIIIEEEEHHHHHH!!!!!!
 	AI_Output(self,hero,"Info_BaalLukor_ALTAR_13_12"); //AAJEEEEÉÉÉHHH!!!!!
 
 	self.flags = 0;

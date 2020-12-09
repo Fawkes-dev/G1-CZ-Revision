@@ -44,3 +44,8 @@ func void DIA_Ricelord_Arbeit_Info()
     AI_Output(self,other,"DIA_Ricelord_Arbeit_12_01"); //Běž za Leem. Obvykle bývá napravo od haly.
 };
 ```
+
+# Plan ([X] - done, [ ] - WIP)
+1. [ ] First step - review all C_INFO.description texts, AI_Output dialogs, B_LogEntry & PrintScreen entries
+2. [ ] Then review all other czech texts (C_ITEM, SVM, etc.)
+3. [ ] Fix all bugs (not only dialog related, e.g. ZS_Sleep routine, where NPC actually don't use beds and don't sleep)

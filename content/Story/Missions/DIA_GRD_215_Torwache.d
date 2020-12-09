@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_Grd_215_Torwache_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Grd_215_Torwache_Exit_Info()
 };
 
 // **************************************************
-// Erstes Mal aufkreuzen
+// 				Erstes Mal aufkreuzen
 // **************************************************
 
 instance DIA_Grd_215_Torwache_First(C_INFO)
@@ -59,15 +59,15 @@ func void DIA_Grd_215_Torwache_First_Info()
 
 	Info_ClearChoices(DIA_Grd_215_Torwache_First);
 //	Info_AddChoice(DIA_Grd_215_Torwache_First,"Sure, I plan to take on the whole Camp!",DIA_Grd_215_Torwache_First_Trouble);
-//	Info_AddChoice(DIA_Grd_215_Torwache_First,""Klar, ich hatte mir vorgenommen, das ganze Lager auseinanderzunehmen!"		",DIA_Grd_215_Torwache_First_Trouble);
+//	Info_AddChoice(DIA_Grd_215_Torwache_First,"Klar, ich hatte mir vorgenommen, das ganze Lager auseinanderzunehmen!",DIA_Grd_215_Torwache_First_Trouble);
 	Info_AddChoice(DIA_Grd_215_Torwache_First,"Jistě, mám v úmyslu zabrat celý tábor.",DIA_Grd_215_Torwache_First_Trouble);
 //	Info_AddChoice(DIA_Grd_215_Torwache_First,"I just want to take a look around.",DIA_Grd_215_Torwache_First_JustLooking);
-//	Info_AddChoice(DIA_Grd_215_Torwache_First,""Ich will mich nur ein bißchen umsehen."		",DIA_Grd_215_Torwache_First_JustLooking);
+//	Info_AddChoice(DIA_Grd_215_Torwache_First,"Ich will mich nur ein bißchen umsehen.",DIA_Grd_215_Torwache_First_JustLooking);
 	Info_AddChoice(DIA_Grd_215_Torwache_First,"Chci se tu jenom porozhlédnout.",DIA_Grd_215_Torwache_First_JustLooking);
 	if (Npc_KnowsInfo(hero,Info_Diego_Kolonie))
 	{
 //		Info_AddChoice(DIA_Grd_215_Torwache_First,"Diego says I'm to meet him in the Camp.",DIA_Grd_215_Torwache_First_Diego);
-//		Info_AddChoice(DIA_Grd_215_Torwache_First,""Diego hat gesagt, ich soll ihn im Lager treffen."	",DIA_Grd_215_Torwache_First_Diego);
+//		Info_AddChoice(DIA_Grd_215_Torwache_First,"Diego hat gesagt, ich soll ihn im Lager treffen.",DIA_Grd_215_Torwache_First_Diego);
 		Info_AddChoice(DIA_Grd_215_Torwache_First,"Diego řekl, že ho mám v táboře navštívit.",DIA_Grd_215_Torwache_First_Diego);
 	};
 };
@@ -98,10 +98,10 @@ func void DIA_Grd_215_Torwache_First_JustLooking()
 
 	Info_ClearChoices(DIA_Grd_215_Torwache_First);
 //	Info_AddChoice(DIA_Grd_215_Torwache_First,"Forget it.",DIA_Grd_215_Torwache_First_NoPay);
-//	Info_AddChoice(DIA_Grd_215_Torwache_First,""Vergiß es."					",DIA_Grd_215_Torwache_First_NoPay);
+//	Info_AddChoice(DIA_Grd_215_Torwache_First,"Vergiß es.",DIA_Grd_215_Torwache_First_NoPay);
 	Info_AddChoice(DIA_Grd_215_Torwache_First,"Na to zapomeň.",DIA_Grd_215_Torwache_First_NoPay);
 //	Info_AddChoice(DIA_Grd_215_Torwache_First,"Okay, here's your 10 ore.",DIA_Grd_215_Torwache_First_Pay);
-//	Info_AddChoice(DIA_Grd_215_Torwache_First,""Gut, hier sind deine 10 Erz."	",DIA_Grd_215_Torwache_First_Pay);
+//	Info_AddChoice(DIA_Grd_215_Torwache_First,"Gut, hier sind deine 10 Erz.",DIA_Grd_215_Torwache_First_Pay);
 	Info_AddChoice(DIA_Grd_215_Torwache_First,"Dobrá, tady je tvých 10 nugetů.",DIA_Grd_215_Torwache_First_Pay);
 };
 
@@ -155,7 +155,7 @@ func void DIA_Grd_215_Torwache_First_Pay()
 };
 
 // **************************************************
-// PERM
+// 						PERM
 // **************************************************
 
 instance DIA_Grd_215_Torwache_PERM(C_INFO)

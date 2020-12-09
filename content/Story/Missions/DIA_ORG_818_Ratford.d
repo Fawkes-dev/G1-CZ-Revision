@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+//						 EXIT 
 // **************************************************
 
 instance Org_818_Ratford_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void Org_818_Ratford_Exit_Info()
 };
 
 // **************************************************
-// Wrong Way
+//					Wrong Way
 // **************************************************
 
 instance Org_818_Ratford_WrongWay(C_INFO)
@@ -55,7 +55,7 @@ func void Org_818_Ratford_WrongWay_Info()
 };
 
 // **************************************************
-// Was jagt ihr
+//					Was jagt ihr
 // **************************************************
 
 instance Org_818_Ratford_WhatGame(C_INFO)
@@ -92,7 +92,7 @@ func void Org_818_Ratford_WhatGame_Info()
 };
 
 // **************************************************
-// Warum gefährlich
+//					Warum gefährlich
 // **************************************************
 
 instance Org_818_Ratford_WhyDangerous(C_INFO)
@@ -129,7 +129,7 @@ func void Org_818_Ratford_WhyDangerous_Info()
 };
 
 // **************************************************
-// Wo Ausrüstung
+//					Wo Ausrüstung
 // **************************************************
 
 instance Org_818_Ratford_WoEquipment(C_INFO)
@@ -174,7 +174,7 @@ func void Org_818_Ratford_WoEquipment_Info()
 };
 
 // **************************************************
-// More Locations
+//					More Locations
 // **************************************************
 
 instance Org_818_Ratford_MoreLocations(C_INFO)
@@ -220,7 +220,7 @@ func void Org_818_Ratford_MoreLocations_Info()
 };
 
 // **************************************************
-// Wo Karte?
+//					Wo Karte?
 // **************************************************
 
 instance Org_818_Ratford_WoKarte(C_INFO)
@@ -257,10 +257,10 @@ func void Org_818_Ratford_WoKarte_Info()
 
 	Info_ClearChoices(Org_818_Ratford_WoKarte);
 //	Info_AddChoice(Org_818_Ratford_WoKarte,"If I get them without paying, I'll take as many as I can carry!",Org_818_Ratford_WoKarte_Stehlen);
-//	Info_AddChoice(Org_818_Ratford_WoKarte," "Wenn ich rankomme, ohne zu bezahlen, bringe ich mit, soviel ich tragen kann!" 	",Org_818_Ratford_WoKarte_Stehlen);
+//	Info_AddChoice(Org_818_Ratford_WoKarte,"Wenn ich rankomme, ohne zu bezahlen, bringe ich mit, soviel ich tragen kann!",Org_818_Ratford_WoKarte_Stehlen);
 	Info_AddChoice(Org_818_Ratford_WoKarte,"Jestli se mi je podaří vzít bez placení, vezmu jich tolik, kolik unesu!",Org_818_Ratford_WoKarte_Stehlen);
 //	Info_AddChoice(Org_818_Ratford_WoKarte,"Why? Doesn't he sell the maps? ",Org_818_Ratford_WoKarte_Kaufen);
-//	Info_AddChoice(Org_818_Ratford_WoKarte," "Wieso? - Verkauft er die Karten nicht?" 										",Org_818_Ratford_WoKarte_Kaufen);
+//	Info_AddChoice(Org_818_Ratford_WoKarte,"Wieso? - Verkauft er die Karten nicht?",Org_818_Ratford_WoKarte_Kaufen);
 	Info_AddChoice(Org_818_Ratford_WoKarte,"Proč? On neprodává mapy?",Org_818_Ratford_WoKarte_Kaufen);
 };
 
@@ -291,7 +291,7 @@ func void Org_818_Ratford_WoKarte_Kaufen()
 };
 
 // **************************************************
-// Danke
+//						Danke
 // **************************************************
 
 instance Org_818_Ratford_Thanks(C_INFO)

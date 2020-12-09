@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------
-// EXIT //
+//							EXIT //
 ------------------------------------------------------------------------*/
 
 instance Org_873_Cipher_Exit(C_INFO)
@@ -24,7 +24,7 @@ func void Org_873_Cipher_Exit_Info()
 };
 
 // ******************************
-// Hallo
+// 			Hallo
 // ******************************
 
 instance Org_873_Cipher_Hello(C_INFO)
@@ -67,7 +67,7 @@ func void Org_873_Cipher_Hello_Info()
 };
 
 // ******************************
-// Fisk
+// 			Fisk
 // ******************************
 
 instance Org_873_Cipher_Fisk(C_INFO)
@@ -104,7 +104,7 @@ func void Org_873_Cipher_Fisk_Info()
 };
 
 // ******************************
-// Balor sent Me
+// 			Balor sent Me
 // ******************************
 	var int Cipher_Trade;
 // ******************************
@@ -153,13 +153,13 @@ func void Org_873_Cipher_FromBalor_Info()
 //		AI_Output(other,self,"DIA_Cipher_FromBalor_15_04"); //Damit kann ich nicht dienen.
 		AI_Output(other,self,"DIA_Cipher_FromBalor_15_04"); //S tím ti nemůžu pomoci.
 //		AI_Output(self,other,"DIA_Cipher_FromBalor_12_05"); //Then come back when you can help me.
-//		AI_Output(self,other,"DIA_Cipher_FromBalor_12_05"); //Dann komm wieder, wenn du es kannst. 
+//		AI_Output(self,other,"DIA_Cipher_FromBalor_12_05"); //Dann komm wieder, wenn du es kannst.
 		AI_Output(self,other,"DIA_Cipher_FromBalor_12_05"); //Až mi budeš schopen pomoci, přijď zpátky.
 	};
 };
 
 // ******************************
-// TRADE
+// 			TRADE
 // ******************************
 
 instance Org_873_Cipher_TRADE(C_INFO)

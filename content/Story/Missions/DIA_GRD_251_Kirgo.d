@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+//						 EXIT 
 // **************************************************
 
 instance Info_Kirgo_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void Info_Kirgo_Exit_Info()
 };
 
 // **************************************************
-// Was machst du hier?
+//				Was machst du hier?
 // **************************************************
 
 instance Info_Kirgo_What(C_INFO)
@@ -59,7 +59,7 @@ func void Info_Kirgo_What_Info()
 };
 
 // **************************************************
-// Bit du gut
+//				Bit du gut
 // **************************************************
 
 instance Info_Kirgo_Good(C_INFO)
@@ -93,7 +93,7 @@ func void Info_Kirgo_Good_Info()
 };
 
 // **************************************
-// Fordern (Vorspiel)
+//				Fordern (Vorspiel)
 // **************************************
 
 instance Info_Kirgo_Charge(C_INFO)
@@ -126,10 +126,10 @@ func void Info_Kirgo_Charge_Info()
 	AI_Output(self,other,"Info_Kirgo_Charge_05_01"); //Cože? Ale já bojovat nechci. Proč si raději nedáme pivo a nepopovídáme o vnějším světě?
 	Info_ClearChoices(Info_Kirgo_Charge);
 //	Info_AddChoice(Info_Kirgo_Charge,"No! I want to fight. Now!",Info_Kirgo_Charge_NOW);
-//	Info_AddChoice(Info_Kirgo_Charge,""Nein! Ich will gegen dich kämpfen. Jetzt!"		",Info_Kirgo_Charge_NOW);
+//	Info_AddChoice(Info_Kirgo_Charge,"Nein! Ich will gegen dich kämpfen. Jetzt!",Info_Kirgo_Charge_NOW);
 	Info_AddChoice(Info_Kirgo_Charge,"Ne! Chci bojovat. Teď!",Info_Kirgo_Charge_NOW);
 //	Info_AddChoice(Info_Kirgo_Charge,"Okay, give me a beer then!",Info_Kirgo_Charge_Beer);
-//	Info_AddChoice(Info_Kirgo_Charge,""Okay, gib ein Bier rüber!"						",Info_Kirgo_Charge_Beer);
+//	Info_AddChoice(Info_Kirgo_Charge,"Okay, gib ein Bier rüber!",Info_Kirgo_Charge_Beer);
 	Info_AddChoice(Info_Kirgo_Charge,"Dobře, pak mám u tebe pivo!",Info_Kirgo_Charge_Beer);
 };
 
@@ -186,7 +186,7 @@ func void Info_Kirgo_Charge_Beer()
 };
 
 // **************************************
-// Fordern REAL
+//				Fordern REAL
 // **************************************
 	var int Kirgo_Charged;
 // **************************************
@@ -228,7 +228,7 @@ func void Info_Kirgo_ChargeREAL_Info()
 };
 
 // **************************************
-// IN DER ARENA
+//				IN DER ARENA
 // **************************************
 
 instance Info_Kirgo_InArena(C_INFO)
@@ -267,7 +267,7 @@ func void Info_Kirgo_InArena_Info()
 	else
 	{
 //		AI_Output(self,other,"SVM_5_LetsForgetOurLittleFight"); //Den kleinen Streit vergessen wir, okay? 
-//		AI_Output(self,other,"SVM_5_LetsForgetOurLittleFight"); //Den kleinen Streit vergessen wir, okay?		
+//		AI_Output(self,other,"SVM_5_LetsForgetOurLittleFight"); //Den kleinen Streit vergessen wir, okay?
 		AI_Output(self,other,"SVM_5_LetsForgetOurLittleFight"); //Dobrá, zapomeňme na tuhle hádku, dobrý?
 		AI_StopProcessInfos(self);
 		Npc_ExchangeRoutine(self,"START");

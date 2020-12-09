@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_Melvin_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Melvin_Exit_Info()
 };
 
 // **************************************************
-// Was machst du?
+// 				Was machst du?
 // **************************************************
 
 instance DIA_Melvin_Hello(C_INFO)
@@ -60,7 +60,7 @@ func void DIA_Melvin_Hello_Info()
 };
 
 // **************************************************
-// Dusty getroffen
+// 				Dusty getroffen
 // **************************************************
 
 instance DIA_Melvin_MetDusty(C_INFO)

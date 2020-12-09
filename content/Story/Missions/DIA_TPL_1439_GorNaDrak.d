@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+//						 EXIT 
 // **************************************************
 
 instance DIA_GorNaDrak_EXIT(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_GorNaDrak_EXIT_Info()
 };
 
 // **************************************************
-// Erste Begrüssung
+//					Erste Begrüssung
 // **************************************************
 
 instance DIA_GorNaDrak_Greet(C_INFO)
@@ -57,7 +57,7 @@ func void DIA_GorNaDrak_Greet_Info()
 };
 
 // **************************************************
-// Was ist Sekret
+//					Was ist Sekret
 // **************************************************
 
 instance DIA_GorNaDrak_WasSekret(C_INFO)
@@ -91,7 +91,7 @@ func void DIA_GorNaDrak_WasSekret_Info()
 };
 
 // **************************************************
-//  LERNE: Zangen Nehmen
+//			 	LERNE: Zangen Nehmen
 // **************************************************
 
 instance DIA_GorNaDrak_TeachMandibles(C_INFO)
@@ -124,8 +124,8 @@ func void DIA_GorNaDrak_TeachMandibles_Info()
 	AI_Output(self,other,"DIA_GorNaDrak_TeachMandibles_09_01"); //Jistě. Když tu bestii zabiješ, vezmeš její čelisti a odneseš je. Tak získáš žlázu s výměškem, aniž bys ji poškodil.
 
 //	PrintScreen("Learn: Cutting out minecrawlers' mandibles", -1,-1,"FONT_OLD_20_WHITE.TGA",3);
-//	PrintScreen("Wissen über Zangen rausschneiden - Minecrawler", -1,-1,"FONT_OLD_20_WHITE.TGA",3);
-	PrintScreen("Jak odstranit čelisti - důlní červi", -1,-1,"FONT_OLD_20_WHITE.TGA",3);
+//	PrintScreen("Lerne: Minecrawlerzangen rausschneiden", -1,-1,"FONT_OLD_20_WHITE.TGA",3);
+	PrintScreen("Naučit se: Odříznout čelisti důlních červů", -1,-1,"FONT_OLD_20_WHITE.TGA",3);
 	Knows_GetMCMandibles = TRUE;
 	Log_CreateTopic(GE_AnimalTrophies,LOG_NOTE);
 //	B_LogEntry(GE_AnimalTrophies,"How to remove mandibles - minecrawlers");
@@ -134,7 +134,7 @@ func void DIA_GorNaDrak_TeachMandibles_Info()
 };
 
 // **************************************************
-//  Wofür ist Sekret da?
+//			 	Wofür ist Sekret da?
 // **************************************************
 
 instance DIA_GorNaDrak_WhatFor(C_INFO)
@@ -174,7 +174,7 @@ func void DIA_GorNaDrak_WhatFor_Info()
 };
 
 // **************************************************
-//  Kap 1 Permanent
+//			 	Kap 1 Permanent
 // **************************************************
 
 instance DIA_GorNaDrak_Permanent(C_INFO)

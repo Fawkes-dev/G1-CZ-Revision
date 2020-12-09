@@ -1,5 +1,5 @@
 // **************************************************
-//  EXIT 
+// 						 EXIT 
 // **************************************************
 
 instance DIA_Cavalorn_Exit(C_INFO)
@@ -23,7 +23,7 @@ func void DIA_Cavalorn_Exit_Info()
 };
 
 // **************************************************
-// Ich Jäger
+// 					Ich Jäger
 // **************************************************
 
 instance DIA_cavalorn_Hunter(C_INFO)
@@ -55,7 +55,7 @@ func void DIA_cavalorn_Hunter_Info()
 };
 
 // **************************************************
-// Lehrer
+// 						Lehrer
 // **************************************************
 
 instance DIA_cavalorn_Lehrer(C_INFO)
@@ -84,8 +84,8 @@ func void DIA_cavalorn_Lehrer_Info()
 	{
 		Log_CreateTopic(GE_TeacherOW,LOG_NOTE);
 //		B_LogEntry(GE_TeacherOW,"Cavalorn's a hunter. He can teach me to SNEAK and to FIRE A BOW as well. He lives in a hut between the Old and the New Camp.");
-//		B_LogEntry(GE_TeacherOW,"Cavalorn kann mir Schleichen beibringen. Seine Hütte steht in einer Schlucht westlich des Alten Lagers, auf dem Weg zum Neuen Lager.");
-		B_LogEntry(GE_TeacherOW,"Cavalorm mě může naučit plížení. Jeho chatrč stojí na západ od Starého tábora, směrem k Novému táboru.");
+//		B_LogEntry(GE_TeacherOW,"Cavalorn ist Jäger. Von ihm kann ich ausser SCHLEICHEN noch BOGENSCHIESSEN lernen. Er lebt in einer Hütte zwischen Altem und Neuem Lager.");
+		B_LogEntry(GE_TeacherOW,"Cavalorn je lovec. Může mě naučit PLÍŽENÍ a také LUKOSTŘELBĚ. Žije v chatrči mezi Starým a Novým táborem.");
 		log_cavalorntrain = TRUE;
 	};
 //	AI_Output(other,self,"DIA_cavalorn_Lehrer_15_00"); //Can you teach me something about hunting?
@@ -96,24 +96,20 @@ func void DIA_cavalorn_Lehrer_Info()
 	AI_Output(self,other,"DIA_cavalorn_Lehrer_12_01"); //To záleží - co chceš umět?
 
 	Info_ClearChoices(DIA_cavalorn_Lehrer);
-//	Info_AddChoice(DIA_cavalorn_Lehrer,"DIALOG_BACK															",DIA_cavalorn_Lehrer_BACK);
 	Info_AddChoice(DIA_cavalorn_Lehrer,DIALOG_BACK ,DIA_cavalorn_Lehrer_BACK);
 
 	if (Npc_GetTalentSkill (hero,NPC_TALENT_BOW) == 1)
 	{
-//		Info_AddChoice(DIA_cavalorn_Lehrer,"B_BuildLearnString(NAME_LearnBow_2,		LPCOST_TALENT_BOW_2,0)	",DIA_cavalorn_Lehrer_Bow_2);
 		Info_AddChoice(DIA_cavalorn_Lehrer,B_BuildLearnString(NAME_LearnBow_2, LPCOST_TALENT_BOW_2,0),DIA_cavalorn_Lehrer_Bow_2);
 	};
 
 	if (Npc_GetTalentSkill (hero,NPC_TALENT_BOW) == 0)
 	{
-//		Info_AddChoice(DIA_cavalorn_Lehrer,"B_BuildLearnString(NAME_LearnBow_1,		LPCOST_TALENT_BOW_1,0)	",DIA_cavalorn_Lehrer_Bow);
 		Info_AddChoice(DIA_cavalorn_Lehrer,B_BuildLearnString(NAME_LearnBow_1, LPCOST_TALENT_BOW_1,0),DIA_cavalorn_Lehrer_Bow);
 	};
 
 	if (Npc_GetTalentSkill (hero,NPC_TALENT_SNEAK) == 0)
 	{
-//		Info_AddChoice(DIA_cavalorn_Lehrer,"B_BuildLearnString(NAME_LearnSneak, 		LPCOST_TALENT_SNEAK,0)	",DIA_cavalorn_Lehrer_Schleichen);
 		Info_AddChoice(DIA_cavalorn_Lehrer,B_BuildLearnString(NAME_LearnSneak, LPCOST_TALENT_SNEAK,0),DIA_cavalorn_Lehrer_Schleichen);
 	};
 };

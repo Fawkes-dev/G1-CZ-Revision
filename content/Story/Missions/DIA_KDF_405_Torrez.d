@@ -1,5 +1,5 @@
 //***********************************************
-// EXIT 
+//					EXIT 
 //***********************************************
 
 instance DIA_Torrez_Exit(C_INFO)
@@ -27,7 +27,7 @@ func void DIA_Torrez_Exit_Info()
 };
 
 //***********************************************
-// Hallo 
+//					Hallo 
 //***********************************************
 
 instance DIA_Torrez_Hello(C_INFO)
@@ -60,7 +60,7 @@ func void DIA_Torrez_Hello_Info()
 };
 
 //***********************************************
-// Belohnung WÄHLEN 
+//					Belohnung WÄHLEN 
 //***********************************************
 
 instance DIA_Torrez_Belohnung(C_INFO)
@@ -94,16 +94,16 @@ func void DIA_Torrez_Belohnung_Info()
 
 	Info_ClearChoices(DIA_Torrez_Belohnung);
 //	Info_AddChoice(DIA_Torrez_Belohnung,"Essence of the spirit (Maximum mana +5)",DIA_Torrez_Belohnung_ManaMax);
-//	Info_AddChoice(DIA_Torrez_Belohnung,""Essenz des Geistes (Maximales Mana +5)" 	",DIA_Torrez_Belohnung_ManaMax);
+//	Info_AddChoice(DIA_Torrez_Belohnung,"Essenz des Geistes (Maximales Mana +5)",DIA_Torrez_Belohnung_ManaMax);
 	Info_AddChoice(DIA_Torrez_Belohnung,"Esence ducha (maximum many +5)",DIA_Torrez_Belohnung_ManaMax);
 //	Info_AddChoice(DIA_Torrez_Belohnung,"3 spell scrolls (fireball, chain lightning and transform into scavenger)",DIA_Torrez_Belohnung_Scrolls);
-//	Info_AddChoice(DIA_Torrez_Belohnung,""3 Spruchrollen (Feuerball, Blitz und Verwandeln in Scavenger)"	",DIA_Torrez_Belohnung_Scrolls);
+//	Info_AddChoice(DIA_Torrez_Belohnung,"3 Spruchrollen (Feuerball, Blitz und Verwandeln in Scavenger)",DIA_Torrez_Belohnung_Scrolls);
 	Info_AddChoice(DIA_Torrez_Belohnung,"3 kouzelné svitky (ohnivá koule, blesk, proměna v mrchožrouta)",DIA_Torrez_Belohnung_Scrolls);
 //	Info_AddChoice(DIA_Torrez_Belohnung,"Ring of Dexterity (+5)",DIA_Torrez_Belohnung_Dex);
-//	Info_AddChoice(DIA_Torrez_Belohnung,""Ring des Geschicks (+5)"	",DIA_Torrez_Belohnung_Dex);
+//	Info_AddChoice(DIA_Torrez_Belohnung,"Ring des Geschicks (+5)",DIA_Torrez_Belohnung_Dex);
 	Info_AddChoice(DIA_Torrez_Belohnung,"Prsten obratnosti (+5)",DIA_Torrez_Belohnung_Dex);
 //	Info_AddChoice(DIA_Torrez_Belohnung,"Ring of Strength (+5)",DIA_Torrez_Belohnung_Str);
-//	Info_AddChoice(DIA_Torrez_Belohnung,""Stärkering (+5)"	",DIA_Torrez_Belohnung_Str);
+//	Info_AddChoice(DIA_Torrez_Belohnung,"Stärkering (+5)",DIA_Torrez_Belohnung_Str);
 	Info_AddChoice(DIA_Torrez_Belohnung,"Prsten síly (+5)",DIA_Torrez_Belohnung_Str);
 };
 
@@ -163,7 +163,7 @@ func void DIA_Torrez_Belohnung_ManaMax()
 };
 
 //***********************************************
-// Brief TAUSCH
+//					Brief TAUSCH
 //***********************************************
 
 instance DIA_Torrez_BriefTausch(C_INFO)
@@ -243,7 +243,7 @@ func void DIA_Torrez_BriefTausch_Info()
 };
 
 //***********************************************
-// PERM
+//					PERM
 //***********************************************
 
 instance DIA_Torrez_PERM(C_INFO)
@@ -281,7 +281,7 @@ func void DIA_Torrez_PERM_Info()
 ///////////////////////////////////////////
 
 //---------------------------------------------------------
-// WÄHREND DER AUFNAHME 
+//					WÄHREND DER AUFNAHME 
 //---------------------------------------------------------
 instance KDF_405_Torrez_BOOK(C_INFO)
 {
@@ -314,7 +314,7 @@ func void KDF_405_Torrez_BOOK_Info()
 	AI_StopProcessInfos(self);
 };
 //---------------------------------------------------------
-// MAGISCHEN KRAM KAUFEN
+//					MAGISCHEN KRAM KAUFEN
 //---------------------------------------------------------
 instance KDF_405_Torrez_SELLBOOKS(C_INFO)
 {
@@ -414,13 +414,12 @@ func void KDF_405_Torrez_MANA_Info()
 	AI_Output(self,other,"KDF_405_Torrez_MANA_Info_04_02"); //Můžu ti pomoci zvětšit tvoji sílu. Jak ji použiješ, je už tvoje věc.
 
 	Info_ClearChoices(KDF_405_Torrez_MANA);
-//	Info_AddChoice(KDF_405_Torrez_MANA,"DIALOG_BACK							",KDF_405_Torrez_MANA_BACK);
 	Info_AddChoice(KDF_405_Torrez_MANA,DIALOG_BACK ,KDF_405_Torrez_MANA_BACK);
 //	Info_AddChoice(KDF_405_Torrez_MANA,"Increase mana by 5 (cost 5 skill points)",KDF_405_Torrez_MANA_MAN_5);
-//	Info_AddChoice(KDF_405_Torrez_MANA,""Mana um 5 steigern (Kosten 5 LP)"		",KDF_405_Torrez_MANA_MAN_5);
+//	Info_AddChoice(KDF_405_Torrez_MANA,"Mana um 5 steigern (Kosten 5 LP)",KDF_405_Torrez_MANA_MAN_5);
 	Info_AddChoice(KDF_405_Torrez_MANA,"Zvýšení many o 5 (cena 5 dovednostních bodů)",KDF_405_Torrez_MANA_MAN_5);
 //	Info_AddChoice(KDF_405_Torrez_MANA,"Increase mana by 1 (cost 1 skill point)",KDF_405_Torrez_MANA_MAN_1);
-//	Info_AddChoice(KDF_405_Torrez_MANA,""Mana um 1 steigern (Kosten 1 LP)"		",KDF_405_Torrez_MANA_MAN_1);
+//	Info_AddChoice(KDF_405_Torrez_MANA,"Mana um 1 steigern (Kosten 1 LP)",KDF_405_Torrez_MANA_MAN_1);
 	Info_AddChoice(KDF_405_Torrez_MANA,"Zvýšení many o 1 (cena 1 dovednostní bod)",KDF_405_Torrez_MANA_MAN_1);
 };  
 func void KDF_405_Torrez_MANA_BACK()
@@ -432,13 +431,12 @@ func void KDF_405_Torrez_MANA_MAN_1()
 {
 	B_BuyAttributePoints(other,ATR_MANA_MAX,1);
 	Info_ClearChoices(KDF_405_Torrez_MANA);
-//	Info_AddChoice(KDF_405_Torrez_MANA,"DIALOG_BACK							",KDF_405_Torrez_MANA_BACK);
 	Info_AddChoice(KDF_405_Torrez_MANA,DIALOG_BACK ,KDF_405_Torrez_MANA_BACK);
 //	Info_AddChoice(KDF_405_Torrez_MANA,"Increase mana by 5 (cost 5 skill points)",KDF_405_Torrez_MANA_MAN_5);
-//	Info_AddChoice(KDF_405_Torrez_MANA,""Mana um 5 steigern (Kosten 5 LP)"		",KDF_405_Torrez_MANA_MAN_5);
+//	Info_AddChoice(KDF_405_Torrez_MANA,"Mana um 5 steigern (Kosten 5 LP)",KDF_405_Torrez_MANA_MAN_5);
 	Info_AddChoice(KDF_405_Torrez_MANA,"Zvýšení many o 5 (cena 5 dovednostních bodů)",KDF_405_Torrez_MANA_MAN_5);
 //	Info_AddChoice(KDF_405_Torrez_MANA,"Increase mana by 1 (cost 1 skill point)",KDF_405_Torrez_MANA_MAN_1);
-//	Info_AddChoice(KDF_405_Torrez_MANA,""Mana um 1 steigern (Kosten 1 LP)"		",KDF_405_Torrez_MANA_MAN_1);
+//	Info_AddChoice(KDF_405_Torrez_MANA,"Mana um 1 steigern (Kosten 1 LP)",KDF_405_Torrez_MANA_MAN_1);
 	Info_AddChoice(KDF_405_Torrez_MANA,"Zvýšení many o 1 (cena 1 dovednostní bod)",KDF_405_Torrez_MANA_MAN_1);
 
 };
@@ -447,13 +445,12 @@ func void KDF_405_Torrez_MANA_MAN_5()
 {
 	B_BuyAttributePoints(other,ATR_MANA_MAX, 5);
 	Info_ClearChoices(KDF_405_Torrez_MANA);
-//	Info_AddChoice(KDF_405_Torrez_MANA,"DIALOG_BACK							",KDF_405_Torrez_MANA_BACK);
 	Info_AddChoice(KDF_405_Torrez_MANA,DIALOG_BACK ,KDF_405_Torrez_MANA_BACK);
 //	Info_AddChoice(KDF_405_Torrez_MANA,"Increase mana by 5 (cost 5 skill points)",KDF_405_Torrez_MANA_MAN_5);
-//	Info_AddChoice(KDF_405_Torrez_MANA,""Mana um 5 steigern (Kosten 5 LP)"		",KDF_405_Torrez_MANA_MAN_5);
+//	Info_AddChoice(KDF_405_Torrez_MANA,"Mana um 5 steigern (Kosten 5 LP)",KDF_405_Torrez_MANA_MAN_5);
 	Info_AddChoice(KDF_405_Torrez_MANA,"Zvýšení many o 5 (cena 5 dovednostních bodů)",KDF_405_Torrez_MANA_MAN_5);
 //	Info_AddChoice(KDF_405_Torrez_MANA,"Increase mana by 1 (cost 1 skill point)",KDF_405_Torrez_MANA_MAN_1);
-//	Info_AddChoice(KDF_405_Torrez_MANA,""Mana um 1 steigern (Kosten 1 LP)"		",KDF_405_Torrez_MANA_MAN_1);
+//	Info_AddChoice(KDF_405_Torrez_MANA,"Mana um 1 steigern (Kosten 1 LP)",KDF_405_Torrez_MANA_MAN_1);
 	Info_AddChoice(KDF_405_Torrez_MANA,"Zvýšení many o 1 (cena 1 dovednostní bod)",KDF_405_Torrez_MANA_MAN_1);
 
 };

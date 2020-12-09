@@ -102,13 +102,13 @@ func void DIA_Gorn_Leben_Info()
 	AI_Output(other,self,"DIA_Gorn_Leben_15_00"); //Co musíš dělat jako žoldák mágů?
 //	AI_Output(self,other,"DIA_Gorn_Leben_09_01"); //Lee has made a deal with the magicians. He hires the best fighters to be found in the colony. Which means us.
 //	AI_Output(self,other,"DIA_Gorn_Leben_09_01"); //Lee hat mit den Magiern eine Abmachung getroffen. Er heuert die besten Kämpfer an, die in der Kolonie zu finden sind. Also uns.
-	AI_Output(self,other,"DIA_Gorn_Leben_09_01"); //Lee uzavřel s mágy smlouvu. Pronajímá nejlepší bojovníky, jaké je možné v kolonii najít. Tedy nás.
+	AI_Output(self,other,"DIA_Gorn_Leben_09_01"); //Lee uzavřel s mágy smlouvu. Najímá nejlepší bojovníky, jaké je možné v kolonii najít. Tedy nás.
 //	AI_Output(self,other,"DIA_Gorn_Leben_09_02"); //We take care that the scrapers can mine the ore without being bothered and keep trouble away from the magicians.
 //	AI_Output(self,other,"DIA_Gorn_Leben_09_02"); //Wir sorgen dafür, dass die Schürfer ungestört Erz abbauen können und halten den Magiern den Rücken frei.
-	AI_Output(self,other,"DIA_Gorn_Leben_09_02"); //Staráme se o to, aby rudaři mohli těžit rudu a nebyli přitom obtěžováni a chráníme mágy před nesnázemi.
+	AI_Output(self,other,"DIA_Gorn_Leben_09_02"); //Staráme se o to, aby rudaři mohli nerušeně těžit rudu a chráníme mágy před nesnázemi.
 //	AI_Output(self,other,"DIA_Gorn_Leben_09_03"); //The magicians make sure we'll get out of here. And we get a small share of the ore as our pay.
 //	AI_Output(self,other,"DIA_Gorn_Leben_09_03"); //Die Magier kümmern sich darum, dass wir hier rauskommen. Und einen kleinen Teil des Erzes bekommen wir als Sold.
-	AI_Output(self,other,"DIA_Gorn_Leben_09_03"); //Mágové se postarají, abychom odsud mohli odejít. A my dostáváme malý podíl rudy jako plat.
+	AI_Output(self,other,"DIA_Gorn_Leben_09_03"); //Mágové se postarají, abychom odsud mohli odejít. A my dostáváme malý podíl rudy jako žold.
 };
 
 //*************************************
@@ -147,7 +147,7 @@ func void DIA_Gorn_Hut_Info()
 	AI_Output(self,other,"DIA_Gorn_Hut_09_01"); //Myslím, že ne. Ale jestli to opravdu chceš, zajdi za Shrikem.
 //	AI_Output(self,other,"DIA_Gorn_Hut_09_02"); //He's taken the hut right at the front, at the entrance to the cave. It was empty - but it really belonged to us.
 //	AI_Output(self,other,"DIA_Gorn_Hut_09_02"); //Er hat sich die Hütte ganz vorne am Höhleneingang geschnappt. Sie stand leer - aber eigentlich gehörte sie uns.
-	AI_Output(self,other,"DIA_Gorn_Hut_09_02"); //Má chatrč úplně vpředu, u vchodu do jeskyně. Byla prázdná - ale vlastně patřila nám.
+	AI_Output(self,other,"DIA_Gorn_Hut_09_02"); //Šlohnul si chatrč úplně vepředu, u vchodu do jeskyně. Byla prázdná - ale vlastně patřila nám.
 //	AI_Output(other,self,"DIA_Gorn_Hut_15_03"); //Us?
 //	AI_Output(other,self,"DIA_Gorn_Hut_15_03"); //Uns?
 	AI_Output(other,self,"DIA_Gorn_Hut_15_03"); //Nám?
@@ -162,7 +162,7 @@ func void DIA_Gorn_Hut_Info()
 	Log_SetTopicStatus(CH1_ShrikesHut,LOG_RUNNING);
 //	B_LogEntry(CH1_ShrikesHut,"Gorn, the mercenary, told me that Shrike had taken a hut of the mercenaries without asking. Since I've asked Gorn, none of the mercenaries will interfere if I can 'convince' Shrike of getting another hut.");
 //	B_LogEntry(CH1_ShrikesHut,"Der Söldner Gorn erzählte mir, dass Shrike sich ohne zu Fragen eine Söldner-Hütte genommen hat. Da ICH Gorn gefragt habe, wird sich keiner der Söldner einmischen, wenn ich Shrike davon 'überzeugen' kann, sich eine andere Hütte zu suchen.");
-	B_LogEntry(CH1_ShrikesHut,"Žoldák Gorn mi řekl, že mu Shrike bez dovolení zabral jeho chatrč. Požádal jsem Gorna, aby nikdo ze žoldáků nezasahoval, dokud 'nepřesvědčím' Shrika, aby si našel jinou chatrč.");
+	B_LogEntry(CH1_ShrikesHut,"Žoldák Gorn mi řekl, že Shrike bez dovolení zabral chatrč žoldáků. Požádal jsem Gorna, aby nikdo ze žoldáků nezasahoval, dokud 'nepřesvědčím' Shrika, aby si našel jinou chatrč.");
 	Gorn_ShrikesHut = LOG_RUNNING;
 };
 
@@ -179,7 +179,7 @@ instance DIA_Gorn_HutFree(C_INFO)
 	permanent = 0;
 //	description = "Shrike has moved to another hut.";
 //	description = "Shrike hat sich eine andere Hütte gesucht.";
-	description = "Shrike se přestěhoval do jiné chatrče.";
+	description = "Shrike si našel jinou chatrč.";
 };
 
 func int DIA_Gorn_HutFree_Condition()
@@ -194,16 +194,16 @@ func void DIA_Gorn_HutFree_Info()
 {
 //	AI_Output(other,self,"DIA_Gorn_HutFree_15_00"); //Shrike has moved to another hut.
 //	AI_Output(other,self,"DIA_Gorn_HutFree_15_00"); //Shrike hat sich eine andere Hütte gesucht.
-	AI_Output(other,self,"DIA_Gorn_HutFree_15_00"); //Shrike se přestěhoval do jiné chatrče.
+	AI_Output(other,self,"DIA_Gorn_HutFree_15_00"); //Shrike si našel jinou chatrč.
 //	AI_Output(self,other,"DIA_Gorn_HutFree_09_01"); //Good. Torlof just told me that he wanted to have a word with the guy.
 //	AI_Output(self,other,"DIA_Gorn_HutFree_09_01"); //Gut. Gerade noch hat mich Torlof drauf angesprochen, dass er dem Burschen das Fell über die Ohren ziehen wollte.
-	AI_Output(self,other,"DIA_Gorn_HutFree_09_01"); //Dobře. Torlof mi právě řekl, že by si chtěl s tím chlapíkem promluvit.
+	AI_Output(self,other,"DIA_Gorn_HutFree_09_01"); //Dobře. Zrovna mi říkal Torlof, že mu chtěl vyprášit kožich.
 
 	Gorn_ShrikesHut = LOG_SUCCESS;
 	Log_SetTopicStatus(CH1_ShrikesHut,LOG_SUCCESS);
 //	B_LogEntry(CH1_ShrikesHut,"Gorn was really amused that I kicked Shrike out of his hut. I think he's an honest guy. Tough, but fair. I should stick to him in the future.");
 //	B_LogEntry(CH1_ShrikesHut,"Gorn hat sich darüber königlich amüsert, dass ich Shrike aus seiner Hütte geworfen haben. Er macht den Eindruck einer ehrlichen Haut. Hart aber gerecht. Ich sollte mich in Zukunft an ihn halten.");
-	B_LogEntry(CH1_ShrikesHut,"Gorn byl velmi potěšen, když jsem Shrika vyrazil z jeho chatrče. Myslím, že je to ten nejčestnější chlapík. Měl bych s ním v budoucnu držet.");
+	B_LogEntry(CH1_ShrikesHut,"Gorna pobavilo, že jsem Shrika vyrazil z jeho chatrče. Myslím, že je to čestný chlapík. Měl bych s ním v budoucnu držet.");
 	B_GiveXP(XP_ReportedKickedShrike);
 };
 
@@ -239,13 +239,14 @@ func void DIA_Gorn_BecomeSLD_Info()
 	AI_Output(other,self,"DIA_Gorn_BecomeSLD_15_00"); //Co musím udělat, abych se mohl přidat k Novému táboru?
 //	AI_Output(self,other,"DIA_Gorn_BecomeSLD_09_01"); //Before Lee admits you, you'll have to improve your fighting skills. It doesn't matter what weapon you use, but you have to be good.
 //	AI_Output(self,other,"DIA_Gorn_BecomeSLD_09_01"); //Bevor dich Lee aufnimmt, musst du lernen, besser zu kämpfen. Egal, mit welcher Waffe, aber du musst gut sein.
-	AI_Output(self,other,"DIA_Gorn_BecomeSLD_09_01"); //Než tě Lee uzná, musíš se naučit lépe bojovat. Nezáleží na tom, jakou zbraň používáš, ale ty sám musíš být dobrý.
+	AI_Output(self,other,"DIA_Gorn_BecomeSLD_09_01"); //Než tě Lee přijme, musíš se naučit lépe bojovat. Nezáleží na tom, jakou zbraň používáš, ale musíš být dobrý.
 //	AI_Output(self,other,"DIA_Gorn_BecomeSLD_09_02"); //Besides, you should be very experienced with the life here and everything.
 //	AI_Output(self,other,"DIA_Gorn_BecomeSLD_09_02"); //Außerdem musst du viel Erfahrung haben mit dem Leben hier und allem.
-	AI_Output(self,other,"DIA_Gorn_BecomeSLD_09_02"); //Kromě toho bys měl mít velké zkušenosti se zdejším životem a tak.
+	AI_Output(self,other,"DIA_Gorn_BecomeSLD_09_02"); //Kromě toho bys měl mít hodně zkušeností se zdejším životem a tak.
 //	AI_Output(self,other,"DIA_Gorn_BecomeSLD_09_03"); //If you don't want to go to the other camps, you should try to join the rogues before you start as a mercenary.
 //	AI_Output(self,other,"DIA_Gorn_BecomeSLD_09_03"); //Wenn du keine Lust hast, in die anderen Lager zu gehen, solltest du dich den Banditen anschließen, bevor du als Söldner anfängst.
-	AI_Output(self,other,"DIA_Gorn_BecomeSLD_09_03"); //Jestli nebudeš chtít do jiných táborů, mohl by ses zkusit přidat k banditům, než začneš jako žoldák.
+//	AI_Output(self,other,"DIA_Gorn_BecomeSLD_09_03"); //Jestli nebudeš chtít do jiných táborů, mohl by ses zkusit přidat k banditům, než začneš jako žoldák.
+	AI_Output(self,other,"DIA_Gorn_BecomeSLD_09_03"); //Jestli nebudeš mít chuť jít do ostatních táborů, měl by ses přidat k banditům, než začneš jako žoldák.
 };
 
 /*
@@ -307,7 +308,7 @@ func void DIA_Gorn_TRADE_Info()
 	AI_Output(other,self,"DIA_Gorn_TRADE_15_00"); //Máš ještě víc tohohle zboží?
 //	AI_Output(self,other,"DIA_Gorn_TRADE_09_01"); //Plenty. You wanna trade?
 //	AI_Output(self,other,"DIA_Gorn_TRADE_09_01"); //Jede Menge. Willst du handeln?
-	AI_Output(self,other,"DIA_Gorn_TRADE_09_01"); //Spousty. Chceš udělat obchod?
+	AI_Output(self,other,"DIA_Gorn_TRADE_09_01"); //Spousty. Chceš obchodovat?
 };
 
 //*************************************
@@ -323,7 +324,7 @@ instance DIA_Gorn_DuHehler(C_INFO)
 	permanent = 0;
 //	description = "Why did you take part in one of the gang's raids?";
 //	description = "Wie kommt es, dass du dich an einem Überfall der Bande beteiligt hast?";
-	description = "Proč ses zúčastnil útoku té tlupy?";
+	description = "Jakto, že ses zúčastnil útoku té tlupy?";
 };
 
 func int DIA_Gorn_DuHehler_Condition()
@@ -338,10 +339,10 @@ func void DIA_Gorn_DuHehler_Info()
 {
 //	AI_Output(other,self,"DIA_Gorn_DuHehler_15_00"); //Why did you take part in one of the gang's raids?
 //	AI_Output(other,self,"DIA_Gorn_DuHehler_15_00"); //Wie kommt es, dass du dich an einem Überfall der Bande beteiligt hast?
-	AI_Output(other,self,"DIA_Gorn_DuHehler_15_00"); //Proč ses zúčastnil útoku té tlupy?
+	AI_Output(other,self,"DIA_Gorn_DuHehler_15_00"); //Jakto, že ses zúčastnil útoku té tlupy?
 //	AI_Output(self,other,"DIA_Gorn_DuHehler_09_01"); //Who says I did?
 //	AI_Output(self,other,"DIA_Gorn_DuHehler_09_01"); //Wer sagt, dass es so war?
-	AI_Output(self,other,"DIA_Gorn_DuHehler_09_01"); //Kdo to říkal?
+	AI_Output(self,other,"DIA_Gorn_DuHehler_09_01"); //Kdo říká, že to tak bylo?
 //	AI_Output(other,self,"DIA_Gorn_DuHehler_15_02"); //Why would you have so much of the stuff if it wasn't true?
 //	AI_Output(other,self,"DIA_Gorn_DuHehler_15_02"); //Warum hast du sonst so viel von diesem Zeug?
 	AI_Output(other,self,"DIA_Gorn_DuHehler_15_02"); //Kde bys teda potom vzal tolik toho zboží, kdyby to nebyla pravda?
@@ -350,13 +351,13 @@ func void DIA_Gorn_DuHehler_Info()
 	AI_Output(self,other,"DIA_Gorn_DuHehler_09_03"); //Nemysli si, že je to všechno z JEDNÉ várky.
 //	AI_Output(other,self,"DIA_Gorn_DuHehler_15_04"); //You take part in raids regularly?
 //	AI_Output(other,self,"DIA_Gorn_DuHehler_15_04"); //Du beteiligst dich regelmäßig an den Überfällen?
-	AI_Output(other,self,"DIA_Gorn_DuHehler_15_04"); //Účastnil ses útoků pravidelně?
+	AI_Output(other,self,"DIA_Gorn_DuHehler_15_04"); //Účastníš se útoků pravidelně?
 //	AI_Output(self,other,"DIA_Gorn_DuHehler_09_05"); //If I did, I couldn't tell you. Lee wouldn't like that one bit.
 //	AI_Output(self,other,"DIA_Gorn_DuHehler_09_05"); //Wenn es so wäre, könnte ich es dir nicht sagen. Lee sieht so was nämlich gar nicht gerne.
-	AI_Output(self,other,"DIA_Gorn_DuHehler_09_05"); //Kdyby ano, tak bych ti to stejně neřekl. Leeovi by se to pranic nelíbilo.
+	AI_Output(self,other,"DIA_Gorn_DuHehler_09_05"); //Kdyby to tak bylo, tak bych ti to stejně neřekl. Lee toto strašně nerad vidí.
 //	AI_Output(other,self,"DIA_Gorn_DuHehler_15_06"); //I see.
 //	AI_Output(other,self,"DIA_Gorn_DuHehler_15_06"); //Verstehe.
-	AI_Output(other,self,"DIA_Gorn_DuHehler_15_06"); //Aha.
+	AI_Output(other,self,"DIA_Gorn_DuHehler_15_06"); //Rozumím.
 
 	CreateInvItems(self,ItFoApple, 21);
 	B_GiveInvItems(self,other,ItFoApple,21); //Notwendig für Screenausgabe
@@ -404,7 +405,7 @@ func void Info_Gorn_NCWAIT_Info()
 
 //	AI_Output(self,other,"Info_Gorn_NCWAIT_09_01"); //Ahh, it's you! My friend Lester from the swamp camp told me all you did there.
 //	AI_Output(self,other,"Info_Gorn_NCWAIT_09_01"); //Ahh, du bist es! Mein Freund Lester aus dem Sumpflager hat mir erzählt, was du dort alles vollbracht hast.
-	AI_Output(self,other,"Info_Gorn_NCWAIT_09_01"); //Áhh, to jsi ty! Můj přítel Lester z tábora z bažin mi řekl všechno o tom, cos tam dělal.
+	AI_Output(self,other,"Info_Gorn_NCWAIT_09_01"); //Áhh, to jsi ty! Můj přítel Lester z tábora z bažin mi vyprávěl, co všecho jsi tam dokázal.
 //	AI_Output(self,other,"Info_Gorn_NCWAIT_09_02"); //For somebody who hasn't been here for long, you've come quite a way.
 //	AI_Output(self,other,"Info_Gorn_NCWAIT_09_02"); //Für jemanden, der noch nicht so lange hier ist, hast du es schon weit gebracht.
 	AI_Output(self,other,"Info_Gorn_NCWAIT_09_02"); //Na někoho, kdo tu ještě není dlouho, máš už docela rozhled.
@@ -443,7 +444,7 @@ func void Info_Gorn_MAGES_Info()
 	AI_Output(other,self,"Info_Gorn_MAGES_15_01"); //Mám důležitou zprávu pro mágy Vody!
 //	AI_Output(self,other,"Info_Gorn_MAGES_09_02"); //Then you should talk to Saturas. He's the highest of the water mages and spends all day studying some writings or other.
 //	AI_Output(self,other,"Info_Gorn_MAGES_09_02"); //Dann sprich am besten gleich mit Saturas. Er ist der oberste Wassermagier und studiert den ganzen Tag irgendwelche Schriften.
-	AI_Output(self,other,"Info_Gorn_MAGES_09_02"); //Pak bys měl mluvit se Saturasem. Je nejvyšší z mágů Vody a celé dny tráví studiemi nějakých písemností nebo tak.
+	AI_Output(self,other,"Info_Gorn_MAGES_09_02"); //Pak by sis měl nejlépe promluvit se Saturasem. Je nejvyšší z mágů Vody a celé dny tráví studiem nějakých písemností.
 //	AI_Output(self,other,"Info_Gorn_MAGES_09_03"); //But no matter how important your message is, the guards of the upper level won't let you through to him.
 //	AI_Output(self,other,"Info_Gorn_MAGES_09_03"); //Aber egal, wie wichtig die Botschaft auch ist, die Wachen zur oberen Ebene werden dich nicht zu ihm durch lassen.
 	AI_Output(self,other,"Info_Gorn_MAGES_09_03"); //Bez ohledu na závažnost té zprávy tě však stráže z horní roviny za ním nepustí.
@@ -485,13 +486,13 @@ func void Info_Gorn_CRONOS_Info()
 	AI_Output(other,self,"Info_Gorn_CRONOS_15_01"); //Kde najdu toho 'strážce rudy'?
 //	AI_Output(self,other,"Info_Gorn_CRONOS_09_01a");//If you proceed from here, you'll come across the big dwelling cave behind the dam.
 //	AI_Output(self,other,"Info_Gorn_CRONOS_09_01a");//Wenn du von hier weitergehst, stößt du nach dem Damm auf die große Wohnhöhle.
-	AI_Output(self,other,"Info_Gorn_CRONOS_09_01a");//Když vyjdeš odtud, projdeš velkou obytnou jeskyní za hrází.
+	AI_Output(self,other,"Info_Gorn_CRONOS_09_01a");//Když odtud vyjdeš, za přehradou narazíš na velkou obytnou jeskyní.
 //	AI_Output(self,other,"Info_Gorn_CRONOS_09_02"); //Cronos is usually at the grid over the big ore mound.
 //	AI_Output(self,other,"Info_Gorn_CRONOS_09_02"); //Cronos hält sich normalerweise am Gitter über dem großen Erzhaufen auf.
-	AI_Output(self,other,"Info_Gorn_CRONOS_09_02"); //Cronos obvykle bývá u mříže před velkou haldou rudy.
+	AI_Output(self,other,"Info_Gorn_CRONOS_09_02"); //Cronos se obvykle zdržuje u mříže nad velkou haldou rudy.
 //	AI_Output(self,other,"Info_Gorn_CRONOS_09_03"); //But he's a bit arrogant. You'll have to convince him that your message is important.
 //	AI_Output(self,other,"Info_Gorn_CRONOS_09_03"); //Aber er ist ein wenig arrogant. Du wirst ihn überzeugen müssen, dass deine Botschaft wichtig ist.
-	AI_Output(self,other,"Info_Gorn_CRONOS_09_03"); //Je ale trochu arogantní. Budeš ho muset přesvědčit, že je tvá zpráva důležitá.
+	AI_Output(self,other,"Info_Gorn_CRONOS_09_03"); //Je ale trochu arogantní. Budeš ho muset přesvědčit, že je tvá zpráva opravdu důležitá.
 
 	VAR C_NPC Cronos;
 	Cronos = Hlp_GetNpc(KdW_604_Cronos);
@@ -499,7 +500,7 @@ func void Info_Gorn_CRONOS_Info()
 
 //	B_LogEntry(CH3_EscapePlanNC,"Gorn recommended me to go straight to the High Magician of Water, who's called Saturas. Cronos, the keeper of the ore, can get me an audience. Cronos is to be found in the center of the Camp, at the grid above the ore mound."); 
 //	B_LogEntry(CH3_EscapePlanNC,"Gorn empfahl mir, direkt mit dem obersten Wassermagier mit Namen Saturas zu sprechen. Cronos, der Hüter des Erzes, kann eine Audienz erwirken. Cronos hält sich im Zentrum des Neuen Lagers, am Gitter über dem Erzhaufen auf."); 
-	B_LogEntry(CH3_EscapePlanNC,"Gorn mi poradil, abych šel přímo za nejvyšším mágem Vody, Saturasem. Cronos, držitel rudy, mě vyslechne. Cronose je možné najít v chrámu u mříže nad rudnou haldou."); 
+	B_LogEntry(CH3_EscapePlanNC,"Gorn mi poradil, abych šel přímo za nejvyšším mágem Vody, Saturasem. Cronos, strážce rudy, mi může zařídit audienci u Saturase. Cronos se zdržuje ve středu Nového tábora u mříže nad rudnou haldou."); 
 
 	Npc_ExchangeRoutine(self,"start");
 };
@@ -549,7 +550,7 @@ instance Info_Gorn_RUINWHAT(C_INFO)
 	permanent = 0;
 //	description = "What are you doing here?";
 //	description = "Was führt dich denn hier her?";
-	description = "Co tady děláš?";
+	description = "Kde se tu bereš?";
 };                       
 
 func int Info_Gorn_RUINWHAT_Condition()
@@ -564,7 +565,7 @@ func void Info_Gorn_RUINWHAT_Info()
 {
 //	AI_Output(other,self,"Info_Gorn_RUINWHAT_15_01"); //What are you doing here?
 //	AI_Output(other,self,"Info_Gorn_RUINWHAT_15_01"); //Was führt dich denn hierher?
-	AI_Output(other,self,"Info_Gorn_RUINWHAT_15_01"); //Co tady děláš?
+	AI_Output(other,self,"Info_Gorn_RUINWHAT_15_01"); //Kde se tu bereš?
 //	AI_Output(self,other,"Info_Gorn_RUINWHAT_09_02"); //Oh, I'm trying to track down an old legend.
 //	AI_Output(self,other,"Info_Gorn_RUINWHAT_09_02"); //Oh, ich versuche, einer alten Legende auf die Spur zu kommen.
 	AI_Output(self,other,"Info_Gorn_RUINWHAT_09_02"); //Och, pokouším se vystopovat starou legendu.
@@ -573,22 +574,22 @@ func void Info_Gorn_RUINWHAT_Info()
 	AI_Output(other,self,"Info_Gorn_RUINWHAT_15_03"); //Legendu?
 //	AI_Output(self,other,"Info_Gorn_RUINWHAT_09_04"); //Yes, Milten, my pal from the Old Camp, told me that monks used to live here.
 //	AI_Output(self,other,"Info_Gorn_RUINWHAT_09_04"); //Ja, Milten, mein Kumpel aus dem Alten Lager, hat mir erzählt, dass hier einst Mönche lebten.
-	AI_Output(self,other,"Info_Gorn_RUINWHAT_09_04"); //Ano, Milten, můj kamarád ze Starého tábora, mi řekl, že tady kdysi žili mniši.
+	AI_Output(self,other,"Info_Gorn_RUINWHAT_09_04"); //Ano, Milten, můj kamarád ze Starého tábora, mi říkal, že tady kdysi žili mniši.
 //	AI_Output(self,other,"Info_Gorn_RUINWHAT_09_05"); //Of course, that was long before the Barrier was created.
 //	AI_Output(self,other,"Info_Gorn_RUINWHAT_09_05"); //Das war natürlich lange, bevor es die Barriere gab.
 	AI_Output(self,other,"Info_Gorn_RUINWHAT_09_05"); //Samozřejmě, už dávno předtím, než tady byla Bariéra.
 //	AI_Output(self,other,"Info_Gorn_RUINWHAT_09_06"); //It's said they worshipped a god who gave them the power to turn into animals.
 //	AI_Output(self,other,"Info_Gorn_RUINWHAT_09_06"); //Sie sollen einem Gott gehuldigt haben, der seinen Anhängern die Macht gab, sich in Tiere zu verwandeln.
-	AI_Output(self,other,"Info_Gorn_RUINWHAT_09_06"); //Říká se, že uctívali boha, který jim dával moc proměňovat se ve zvířata.
+	AI_Output(self,other,"Info_Gorn_RUINWHAT_09_06"); //Říká se, že uctívali boha, který svým stoupencům dával moc proměňovat se ve zvířata.
 //	AI_Output(self,other,"Info_Gorn_RUINWHAT_09_07"); //I'm sure there are still treasures from the old times here.
 //	AI_Output(self,other,"Info_Gorn_RUINWHAT_09_07"); //Bestimmt gibt es hier noch Schätze aus der alten Zeit.
-	AI_Output(self,other,"Info_Gorn_RUINWHAT_09_07"); //Jsem přesvědčený, že tady jsou stále ty poklady ze starých dob.
+	AI_Output(self,other,"Info_Gorn_RUINWHAT_09_07"); //Zajisté tu budou poklady ze starých časů.
 
 	if (!Npc_KnowsInfo(hero,Info_Gorn_RUINFOCUS))
 	{ 
 //		AI_Output(self,other,"Info_Gorn_RUINWHAT_09_08"); //What brings you here?
 //		AI_Output(self,other,"Info_Gorn_RUINWHAT_09_08"); //Was führt dich hierher?
-		AI_Output(self,other,"Info_Gorn_RUINWHAT_09_08"); //Co tě sem přivedlo?
+		AI_Output(self,other,"Info_Gorn_RUINWHAT_09_08"); //Co tě sem přivádí?
 	};
 };
 
@@ -625,7 +626,7 @@ func void Info_Gorn_RUINFOCUS_Info()
 	AI_Output(other,self,"Info_Gorn_RUINFOCUS_15_02"); //Musí tady někde být.
 //	AI_Output(self,other,"Info_Gorn_RUINFOCUS_09_03"); //The thing you're looking for might be in the old ruined monastery beyond the canyon.
 //	AI_Output(self,other,"Info_Gorn_RUINFOCUS_09_03"); //Was du suchst, befindet sich vielleicht innerhalb der Klosterruinen dort jenseits der Schlucht.
-	AI_Output(self,other,"Info_Gorn_RUINFOCUS_09_03"); //Ta věc, kterou hledáš, by mohla být ve zřícenině kláštera za kaňonem.
+	AI_Output(self,other,"Info_Gorn_RUINFOCUS_09_03"); //Ta věc, kterou hledáš, by mohla být v ruinách kláštera za propastí.
 };
 
 //***************************************************************************
@@ -670,16 +671,16 @@ func void Info_Gorn_RUINJOIN_Info()
 	AI_Output(other,self,"Info_Gorn_RUINJOIN_15_05"); //Tak půjdeme spolu?
 //	AI_Output(self,other,"Info_Gorn_RUINJOIN_09_06"); //Okay, but before we cross this log, I'd like to examine the canyon. I like to know what's at my back.
 //	AI_Output(self,other,"Info_Gorn_RUINJOIN_09_06"); //Ok, doch bevor wir über diesen Baumstamm balancieren, möchte ich die Schlucht darunter erforschen. Ich habe gerne einen freien Rücken.
-	AI_Output(self,other,"Info_Gorn_RUINJOIN_09_06"); //Dobře, ale ještě než vyrazíme, chtěl bych prozkoumat ten kaňon. Rád vím, co mám za zádama.
+	AI_Output(self,other,"Info_Gorn_RUINJOIN_09_06"); //Dobře, ale ještě než vyrazíme, chtěl bych prozkoumat tu propast. Rád vím, co mám za zády.
 //	AI_Output(self,other,"Info_Gorn_RUINJOIN_09_07"); //Come with me, I've discovered a path which will take us there.
 //	AI_Output(self,other,"Info_Gorn_RUINJOIN_09_07"); //Komm mit, ich habe einen Weg entdeckt, der uns dorthin führt.
-	AI_Output(self,other,"Info_Gorn_RUINJOIN_09_07"); //Pojď se mnou, našel jsem cestu, po které půjdeme.
+	AI_Output(self,other,"Info_Gorn_RUINJOIN_09_07"); //Pojď se mnou, našel jsem cestu, která tam vede.
 
 	Log_CreateTopic(CH3_MonasteryRuin,LOG_MISSION);
 	Log_SetTopicStatus(CH3_MonasteryRuin,LOG_RUNNING);
 //	B_LogEntry(CH3_MonasteryRuin,"When I approached the ruined monastery, I met the mercenary Gorn. He's here to search the ruins for old treasures.");
 //	B_LogEntry(CH3_MonasteryRuin,"Als ich mich der Klosterruine näherte traf ich auf den Söldner Gorn. Er ist hier, um die vor uns liegende Gemäuer nach Schätzen aus alten Tagen zu durchsuchen.");
-	B_LogEntry(CH3_MonasteryRuin,"Když jsem se přiblížil k rozvalinám kláštera, potkal jsem žoldáka Gorna. Vypravil se sem, aby tu hledal  starý poklad.");
+	B_LogEntry(CH3_MonasteryRuin,"Když jsem se přiblížil k rozvalinám kláštera, potkal jsem žoldáka Gorna. Je tu, aby v rozvalinách kláštera hledal poklady ze starých časů.");
 //	B_LogEntry(CH3_MonasteryRuin,"We'll continue our search together. Gorn warned me of big herds of snappers in the area.");
 //	B_LogEntry(CH3_MonasteryRuin,"Wir werden unsere Suche gemeinsam fortsetzen. Gorn warnte mich vor grossen Snapper-Rudeln, die in dieser Gegend verstärkt anzutreffen sind.");
 	B_LogEntry(CH3_MonasteryRuin,"Budeme pokračovat v pátrání společně. Gorn mě varoval před velkými smečkami chňapavců, které se v této oblasti vyskytují.");
@@ -715,14 +716,14 @@ func void Info_Gorn_RUINABYSS_Info()
 
 //	AI_Output(self,other,"Info_Gorn_RUINABYSS_09_01"); //That's what I call luck. Apparently this used to be a storage cave.
 //	AI_Output(self,other,"Info_Gorn_RUINABYSS_09_01"); //Das nenne ich Glück. Hier scheint eine Vorratshöhle gewesen zu sein.
-	AI_Output(self,other,"Info_Gorn_RUINABYSS_09_01"); //Tomu se říká štěstí. Určitě tu bývala zásobní jeskyně.
+	AI_Output(self,other,"Info_Gorn_RUINABYSS_09_01"); //Tomu říkám štěstí. Určitě tu bývala zásobovací jeskyně.
 //	AI_Output(self,other,"Info_Gorn_RUINABYSS_09_02"); //Why don't you take the lead now, I just wanted to make sure that we won't be surprised on our return trip.
 //	AI_Output(self,other,"Info_Gorn_RUINABYSS_09_02"); //Übernimm du jetzt die Führung, ich wollte nur sicherstellen, dass bei unserer Rückkehr hier keine Überraschung auf uns wartet.
-	AI_Output(self,other,"Info_Gorn_RUINABYSS_09_02"); //Tak si teď převezmi vedení, chtěl bych mít jistotu, že na zpáteční cestě nezažijeme nějaké překvapení.
+	AI_Output(self,other,"Info_Gorn_RUINABYSS_09_02"); //Teď si převezmi vedení, chtěl bych mít jistotu, že na zpáteční cestě nezažijeme nějaké překvapení.
 
 //	B_LogEntry(CH3_MonasteryRuin,"We have discovered a secret supply cave. Above all, one key and two spell scrolls proved to be quite interesting.");
 //	B_LogEntry(CH3_MonasteryRuin,"Wir haben eine geheime Vorratshöhle entdeckt. Vor allem ein Schlüssel und zwei Spruchrollen haben meine Aufmerksamkeit geweckt");
-	B_LogEntry(CH3_MonasteryRuin,"Nalezli jsme tajnou zásobovací jeskyni. Kromě toho jeden klíč a dva kouzelné svitky, které vypadaly velmi zajímavě.");
+	B_LogEntry(CH3_MonasteryRuin,"Nalezli jsme tajnou zásobovací jeskyni. Ze všeho nejvíce mě zaujal klíč a dva kouzelné svitky.");
 
 	AI_StopProcessInfos(self);
 	Npc_ExchangeRoutine(self,"RuinFollow");
@@ -756,7 +757,7 @@ func void Info_Gorn_RUINLEAVE_Info()
 
 //	AI_Output(self,other,"Info_Gorn_RUINLEAVE_09_01"); //You seem to have lost interest in the ruined monastery.
 //	AI_Output(self,other,"Info_Gorn_RUINLEAVE_09_01"); //Du scheinst doch nicht mehr an der Klosterruine interessiert zu sein.
-	AI_Output(self,other,"Info_Gorn_RUINLEAVE_09_01"); //Myslím, že už tě ta zřícenina kláštera přestala zajímat.
+	AI_Output(self,other,"Info_Gorn_RUINLEAVE_09_01"); //Vypadá to, že už tě ta zřícenina kláštera nezajímá.
 //	AI_Output(self,other,"Info_Gorn_RUINLEAVE_09_02"); //I'll go on, on my own.
 //	AI_Output(self,other,"Info_Gorn_RUINLEAVE_09_02"); //Ich werde alleine weitergehen.
 	AI_Output(self,other,"Info_Gorn_RUINLEAVE_09_02"); //Budu pokračovat sám.
@@ -796,7 +797,7 @@ func void Info_Gorn_RUINWALL_Info()
 
 //	AI_Output(self,other,"Info_Gorn_RUINWALL_09_01"); //This damn gate. They say nobody in the colony has ever been able to open it.
 //	AI_Output(self,other,"Info_Gorn_RUINWALL_09_01"); //Dieses verfluchte Tor. Man erzählt sich, dass bisher kein Mensch in der Kolonie es öffnen konnte.
-	AI_Output(self,other,"Info_Gorn_RUINWALL_09_01"); //Ta proklatá brána. Říkají, že ji nikdo z kolonie nedokáže otevřít.
+	AI_Output(self,other,"Info_Gorn_RUINWALL_09_01"); //Ta proklatá brána. Říká se, že ji nikdo z kolonie nedokáže otevřít.
 //	AI_Output(self,other,"Info_Gorn_RUINWALL_09_02"); //The little beasts over there seem to be the only ones who have managed to get into the inner yard.
 //	AI_Output(self,other,"Info_Gorn_RUINWALL_09_02"); //Die kleinen Biester da drüben scheinen die Einzigen zu sein, die es geschafft haben, in den Innenhof zu gelangen.
 	AI_Output(self,other,"Info_Gorn_RUINWALL_09_02"); //Ty malé bestie jsou zřejmě jediné, co se dokáže dostat do vnitřního prostoru.

@@ -226,7 +226,7 @@ func void B_XardasDemon_GiveHeart()
 		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_01"); //...Co? ...Jistě? ...Zkouška hodnosti!
 //		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_02"); //... Missing? Two are still missing?
 //		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_02"); //... Fehlen? ... Zwei fehlen noch?
-		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_02"); //...Chyba? ...Stále dvě chyby?
+		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_02"); //...Chybí? ...Stále dvě chybí?
 		FindGolemHearts = 2;
 	}
 	else if (FindGolemHearts == 2)

@@ -256,7 +256,7 @@ func void B_XardasDemon_GiveHeart()
 		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_07"); //...Protidůkaz? ...Jaký protidůkaz? ...Runa? ...Runa pro mě?
 //		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_08"); //Well, then I'll accept the rune of teleportation as a sign of worthiness!
 //		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_08"); //Nun, dann nehme ich die Rune der Teleportation als Zeichen der Würde an mich!
-		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_08"); //Jistě, potom přijmu teleportační runu jako znamení mé vážnosti!
+		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_08"); //Jistě, potom přijmu teleportační runu jako důkaz toho, že jsem hoden!
 
 		B_Story_AccessToXardas();
 	};

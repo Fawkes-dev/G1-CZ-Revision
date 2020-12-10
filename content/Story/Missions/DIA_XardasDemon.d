@@ -64,7 +64,7 @@ func void Info_XardasDemon_INTRO_Info()
 	AI_WhirlAround(hero,self); //KEIN B_Whirlaround()!!!
 //	AI_Output(hero,self,"Info_XardasDemon_INTRO_15_02"); //YOU are talking to me??? How did you get into my head?
 //	AI_Output(hero,self,"Info_XardasDemon_INTRO_15_02"); //DUUUU sprichst zu mir ??? Wie ... wie kommst du in meinen Kopf?
-	AI_Output(hero,self,"Info_XardasDemon_INTRO_15_02"); //TY na mě mluvíš??? Jak... Ty ses dostal do mojí hlavy?
+	AI_Output(hero,self,"Info_XardasDemon_INTRO_15_02"); //TY na mě mluvíš??? Jak... Jak ses dostal do mojí hlavy?
 //	AI_Output(self,other,"DIA_BaalCadar_NoTalk_Hi_02_01"); //
 	AI_Output(self,other,"DIA_BaalCadar_NoTalk_Hi_02_01"); //(vzdech)
 //	AI_Output(hero,self,"Info_XardasDemon_INTRO_15_03"); //You are what?... The servant of your master?
@@ -72,7 +72,7 @@ func void Info_XardasDemon_INTRO_Info()
 	AI_Output(hero,self,"Info_XardasDemon_INTRO_15_03"); //Co jsi zač?... Služebník svého pána?
 //	AI_Output(hero,self,"Info_XardasDemon_INTRO_15_04"); //You seem to be a creature from hell!
 //	AI_Output(hero,self,"Info_XardasDemon_INTRO_15_04"); //Du erscheinst mir eher wie eine Kreatur der Hölle!
-	AI_Output(hero,self,"Info_XardasDemon_INTRO_15_04"); //Vypadáš jako pekelná příšera!
+	AI_Output(hero,self,"Info_XardasDemon_INTRO_15_04"); //Vypadáš jako stvůra z pekla!
 //	AI_Output(self,other,"DIA_BaalCadar_NoTalk_Hi_02_01"); //
 	AI_Output(self,other,"DIA_BaalCadar_NoTalk_Hi_02_01"); //(vzdech)
 //	AI_Output(hero,self,"Info_XardasDemon_INTRO_15_05"); //You want me to be silent?
@@ -112,10 +112,10 @@ func void Info_XardasDemon_MASTERWHO_Info()
 	AI_Output(self,other,"DIA_BaalCadar_NoTalk_Hi_02_01"); //(vzdech)
 //	AI_Output(hero,self,"Info_XardasDemon_MASTERWHO_15_02"); //Oh, right... So names are not important... Okay.
 //	AI_Output(hero,self,"Info_XardasDemon_MASTERWHO_15_02"); //Aha ... Namen sind also unwichtig ... Okay.
-	AI_Output(hero,self,"Info_XardasDemon_MASTERWHO_15_02"); //Och, jistě... Jména nejsou podstatná... Dobře.
+	AI_Output(hero,self,"Info_XardasDemon_MASTERWHO_15_02"); //Och, jistě... Jména nejsou důležitá... Dobře.
 //	AI_Output(hero,self,"Info_XardasDemon_MASTERWHO_15_03"); //I'll just assume that this here is the tower of Xardas.
 //	AI_Output(hero,self,"Info_XardasDemon_MASTERWHO_15_03"); //Ich gehe einfach mal davon aus, dass das hier der Turm von Xardas ist.
-	AI_Output(hero,self,"Info_XardasDemon_MASTERWHO_15_03"); //Předpokládejme, že to, co je tady, je Xardasova věž.
+	AI_Output(hero,self,"Info_XardasDemon_MASTERWHO_15_03"); //Budu předpokládat, že toto je Xardasova věž.
 };
 
 //***************************************************************************
@@ -150,18 +150,18 @@ func void Info_XardasDemon_MASTERHOW_Info()
 	AI_Output(self,other,"DIA_BaalCadar_NoTalk_Hi_02_01"); //(vzdech)
 //	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_02"); //... Me?... Unworthy??... What kind of test???
 //	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_02"); //... Ich? ... unwürdig?? ... Was für ein Test???
-	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_02"); //...Já? ...Bezcenný? ...Jaký druh zkoušky???
+	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_02"); //...Já?... Nejsem hoden? ...Jakou zkoušku???
 //	AI_Output(self,other,"DIA_BaalCadar_NoTalk_Hi_02_01"); //
 	AI_Output(self,other,"DIA_BaalCadar_NoTalk_Hi_02_01"); //(vzdech)
 //	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_03"); //... Aaahhhh... I understand... Whoever wants to talk to your master must prove worthy first!
 //	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_03"); //... Aaahhhh ... Ich verstehe ... wer deinen Meister sprechen will, muss sich würdig erweisen!
-	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_03"); //...AAchchchch... Rozumím... Kdokoliv chce mluvit s tvým pánem, musí nejdřív složit zkoušku hodnosti!
+	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_03"); //...Aaahhhh... Rozumím... Kdokoliv chce mluvit s tvým pánem, musí nejdříve prokázat, že je hoden!
 //	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_04"); //... Hold on, what was that?... The proof?... Victory over what?... Victory over the elements?
 //	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_04"); //... Moment, wie war das? ... Der Beweis? ... Sieg über was? ... Sieg über die Elemente?
 	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_04"); //... Zadrž, cože? ... Důkaz?... Vítězství nad čím?... Vítězství nad živly?...
 //	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_05"); //... Stone?... Ice?... Fire?
 //	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_05"); //... Stein? ... Eis? ... Feuer?
-	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_05"); //... Kameny? ...Led? ...Oheň?
+	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_05"); //... Kámen? ...Led? ...Oheň?
 
 	FindGolemHearts = 1; // Auftrag vergeben
 
@@ -223,10 +223,10 @@ func void B_XardasDemon_GiveHeart()
 		AI_Output(self,other,"DIA_BaalCadar_NoTalk_Hi_02_01"); //(vzdech)
 //		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_01"); //... What?... Right!... Worthy proofs!
 //		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_01"); //... Was? ... Aha! ... Ein würdiger Beweis!
-		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_01"); //...Co? ...Jistě?... Zkouška hodnosti!
+		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_01"); //...Co? ...Jistě? ...Zkouška hodnosti!
 //		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_02"); //... Missing? Two are still missing?
 //		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_02"); //... Fehlen? ... Zwei fehlen noch?
-		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_02"); //..Chyba? Stále dvě chyby?
+		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_02"); //...Chybí? ...Stále dvě chybí?
 		FindGolemHearts = 2;
 	}
 	else if (FindGolemHearts == 2)
@@ -253,10 +253,10 @@ func void B_XardasDemon_GiveHeart()
 		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_06"); //Jestli je to tak, chtěl bych teď mluvit s tvým pánem!
 //		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_07"); //... Counterevidence?... What kind of counterevidence?... A rune?... A rune for me?
 //		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_07"); //... Gegenbeweis? ... Was für einen Gegenbeweis? ... Eine Rune? ... Eine Rune für mich?
-		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_07"); //...Protidůkaz? ...V jakém smyslu protidůkaz? ...Runa? ...Runa pro mě?
+		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_07"); //...Protidůkaz? ...Jaký protidůkaz? ...Runa? ...Runa pro mě?
 //		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_08"); //Well, then I'll accept the rune of teleportation as a sign of worthiness!
 //		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_08"); //Nun, dann nehme ich die Rune der Teleportation als Zeichen der Würde an mich!
-		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_08"); //Jistě, potom přijmu teleportační runu jako znamení vážnosti!
+		AI_Output(hero,self,"Info_XardasDemon_GIVEHEART_15_08"); //Jistě, potom přijmu teleportační runu jako důkaz toho, že jsem hoden!
 
 		B_Story_AccessToXardas();
 	};
@@ -310,7 +310,7 @@ instance Info_XardasDemon_ICEHEART(C_INFO)
 	important = 0;
 //	description = "Is this heart of an ice golem the proof?";
 //	description = "Ist dieses Herz eines Eisgolems ein Beweis?";
-	description = "Je toto ledové srdce Golema důkaz?";
+	description = "Je toto srdce ledového Golema důkaz?";
 };
 
 func int Info_XardasDemon_ICEHEART_Condition()
@@ -326,7 +326,7 @@ func void Info_XardasDemon_ICEHEART_Info()
 {
 //	AI_Output(hero,self,"Info_XardasDemon_ICEHEART_15_01"); //Is this heart of an ice golem the proof?
 //	AI_Output(hero,self,"Info_XardasDemon_ICEHEART_15_01"); //Ist dieses Herz eines Eisgolems ein Beweis?
-	AI_Output(hero,self,"Info_XardasDemon_ICEHEART_15_01"); //Je toto ledové srdce Golema důkaz?
+	AI_Output(hero,self,"Info_XardasDemon_ICEHEART_15_01"); //Je toto srdce ledového Golema důkaz?
 
 	B_GiveInvItems(hero,self,ItAt_IceGolem_01,1);
 

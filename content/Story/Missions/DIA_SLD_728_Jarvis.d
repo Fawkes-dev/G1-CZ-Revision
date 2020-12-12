@@ -100,7 +100,7 @@ func void DIA_Jarvis_SldInfo_Info()
 	AI_Output(self,other,"DIA_Jarvis_SldInfo_08_02"); //Náš cíl je dostat se odtud. Tvrdě na tom pracujeme a nevidíme věci tak snadno jako ti hoši ze Starého tábora, kteří si užívají dobrých časů na zádech svých kopáčů.
 //	AI_Output(self,other,"DIA_Jarvis_SldInfo_08_03"); //And we all follow Lee. He's a great man. He's the one who holds this damn camp together.
 //	AI_Output(self,other,"DIA_Jarvis_SldInfo_08_03"); //Und wir alle folgen Lee. Er ist ein großer Mann. Nur er hält dieses verdammte Lager zusammen.
-	AI_Output(self,other,"DIA_Jarvis_SldInfo_08_03"); //Všichni následujeme Leeho. Je to velký muž. Je díky němu drží tenhle proklatý tábor pohromadě.
+	AI_Output(self,other,"DIA_Jarvis_SldInfo_08_03"); //Všichni následujeme Leeho. Je to velký muž. Jen díky němu drží tenhle proklatý tábor pohromadě.
 };
 
 // ************************************************************
@@ -140,7 +140,7 @@ func void DIA_Jarvis_Magier_Info()
 	AI_Output(self,other,"DIA_Jarvis_Magier_08_02"); //Jak tomu rouzmím já, chtějí vyhodit celou tu zpropadenou rudnou haldu do povětří, a tím strhnout Bariéru.
 //	AI_Output(other,self,"DIA_Jarvis_Magier_15_03"); //Sounds dangerous.
 //	AI_Output(other,self,"DIA_Jarvis_Magier_15_03"); //Klingt gefährlich.
-	AI_Output(other,self,"DIA_Jarvis_Magier_15_03"); //To vypadá nebezpečně.
+	AI_Output(other,self,"DIA_Jarvis_Magier_15_03"); //To zní nebezpečně.
 //	AI_Output(self,other,"DIA_Jarvis_Magier_08_04"); //They said we shouldn't worry.
 //	AI_Output(self,other,"DIA_Jarvis_Magier_08_04"); //Sie sagen, wir sollen uns keine Sorgen machen.
 	AI_Output(self,other,"DIA_Jarvis_Magier_08_04"); //Říkali, že si nemáme dělat starosti.

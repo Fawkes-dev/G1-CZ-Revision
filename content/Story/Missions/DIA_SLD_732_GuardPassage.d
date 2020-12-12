@@ -81,7 +81,7 @@ func void Info_SLD_732_Parole_CRONOS()
 	AI_Output(hero,self,"Info_SLD_732_Parole_CRONOS_15_01"); //Cronos mi dal povolení!
 //	AI_Output(self,hero,"Info_SLD_732_Parole_CRONOS_08_02"); //If that's so, he'd have given you the password. Get lost, you liar!
 //	AI_Output(self,hero,"Info_SLD_732_Parole_CRONOS_08_02"); //Wenn das so wäre, hätte er dir die Parole genannt. Verzieh dich, du Lügner!
-	AI_Output(self,hero,"Info_SLD_732_Parole_CRONOS_08_02"); //Jestli je to tak, pak ti taky řekl heslo. Ztrať se, lháři!
+	AI_Output(self,hero,"Info_SLD_732_Parole_CRONOS_08_02"); //Jestli to tak je, pak ti také řekl heslo. Ztrať se, lháři!
 	AI_StopProcessInfos(self);
 };
 

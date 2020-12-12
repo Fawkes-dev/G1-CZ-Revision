@@ -37,7 +37,7 @@ instance DIA_SLD_760_Soeldner_EXIT_1(C_INFO)
 	permanent = 0;
 //	description = "I'd best be going.";
 //	description = "Ich geh dann mal.";
-	description = "Raději půjdu!";
+	description = "Raději půjdu! (KONEC)";
 };
 
 func int DIA_SLD_760_Soeldner_EXIT_1_CONDITION()
@@ -68,7 +68,7 @@ instance DIA_SLD_760_Soeldner_EXIT_2(C_INFO)
 	permanent = 1;
 //	description = "I need to go on.";
 //	description = "Ich muss weiter.";
-	description = "Musím jít dál.";
+	description = "Musím jít. (KONEC)";
 };
 
 func int DIA_SLD_760_Soeldner_EXIT_2_CONDITION()

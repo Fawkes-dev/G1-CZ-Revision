@@ -178,7 +178,7 @@ func void DIA_SLD_752_OKYL_PERMIT_INFO()
 	AI_Output(other,self,"DIA_SLD_752_OKYL_PERMIT_INFO_15_01");//Dostanu povolení jít dovnitř?
 //	AI_Output(self,other,"DIA_SLD_752_OKYL_PERMIT_INFO_11_02");//I don't even know you. Why should I let you go into the mine?
 //	AI_Output(self,other,"DIA_SLD_752_OKYL_PERMIT_INFO_11_02");//Ich kenn' dich nicht einmal. Wieso sollte ich dir erlauben in die Mine zu gehen.
-	AI_Output(self,other,"DIA_SLD_752_OKYL_PERMIT_INFO_11_02");//Ještě tě ani enznám. Proč bych tě měl do dolu vůbec pouštět?
+	AI_Output(self,other,"DIA_SLD_752_OKYL_PERMIT_INFO_11_02");//Ještě tě ani neznám. Proč bych tě měl do dolu vůbec pouštět?
 //	AI_Output(self,other,"DIA_SLD_752_OKYL_PERMIT_INFO_11_03");//Now scram, I have things to see to.
 //	AI_Output(self,other,"DIA_SLD_752_OKYL_PERMIT_INFO_11_03");//Jetzt verschwinde, ich hab' zu tun.
 	AI_Output(self,other,"DIA_SLD_752_OKYL_PERMIT_INFO_11_03");//Teď zmiz, mám důležitější věci na práci.

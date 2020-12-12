@@ -37,7 +37,7 @@ instance DIA_SLD_761_Soeldner_EXIT_1(C_INFO)
 	permanent = 0;
 //	description = "I've still got some business to do.";
 //	description = "Ich hab' noch was zu erledigen.";
-	description = "Mám tu přád nějkaou práci.";
+	description = "Musím ještě něco zařídit. (KONEC)";
 };
 
 func int DIA_SLD_761_Soeldner_EXIT_1_CONDITION()
@@ -49,7 +49,7 @@ func void DIA_SLD_761_Soeldner_EXIT_1_INFO()
 {
 //	AI_Output(other,self,"DIA_SLD_761_Soeldner_EXIT_1_INFO_15_01"); //I've still got some business to do.
 //	AI_Output(other,self,"DIA_SLD_761_Soeldner_EXIT_1_INFO_15_01"); //Ich hab' noch was zu erledigen.
-	AI_Output(other,self,"DIA_SLD_761_Soeldner_EXIT_1_INFO_15_01"); //Mám tu přád nějkaou práci.
+	AI_Output(other,self,"DIA_SLD_761_Soeldner_EXIT_1_INFO_15_01"); //Musím ještě něco zařídit.
 //	AI_Output(self,other,"DIA_SLD_761_Soeldner_EXIT_1_INFO_03_02");//That's what I think as well.
 //	AI_Output(self,other,"DIA_SLD_761_Soeldner_EXIT_1_INFO_03_02");//Das denke ich auch.
 	AI_Output(self,other,"DIA_SLD_761_Soeldner_EXIT_1_INFO_03_02");//Taky si to myslím.
@@ -68,7 +68,7 @@ instance DIA_SLD_761_Soeldner_EXIT_2(C_INFO)
 	permanent = 1;
 //	description = "I'd best be going.";
 //	description = "Ich geh dann mal.";
-	description = "Raději půjdu!";
+	description = "Raději půjdu! (KONEC)";
 };
 
 func int DIA_SLD_761_Soeldner_EXIT_2_CONDITION()
@@ -130,7 +130,7 @@ instance DIA_SLD_761_Soeldner_INMINE(C_INFO)
 	permanent = 0;
 //	description = "I just wanted to see the mine.";
 //	description = "Ich wollte mir nur mal die Mine ansehen.";
-	description = "Jen jsem si chtěl ten důl.";
+	description = "Jen jsem si chtěl prohlédnout důl.";
 };
 
 func int DIA_SLD_761_Soeldner_INMINE_CONDITION()
@@ -142,7 +142,7 @@ func void DIA_SLD_761_Soeldner_INMINE_INFO()
 {
 //	AI_Output(other,self,"DIA_SLD_761_Soeldner_INMINE_INFO_15_01");//I just wanted to see the mine.
 //	AI_Output(other,self,"DIA_SLD_761_Soeldner_INMINE_INFO_15_01");//Ich wollte mir nur mal die Mine ansehen.
-	AI_Output(other,self,"DIA_SLD_761_Soeldner_INMINE_INFO_15_01");//Jen jsem si chtěl ten důl.
+	AI_Output(other,self,"DIA_SLD_761_Soeldner_INMINE_INFO_15_01");//Jen jsem si chtěl prohlédnout důl.
 //	AI_Output(self,other,"DIA_SLD_761_Soeldner_INMINE_INFO_03_02");//Suppose you can see that the mine is locked, so there's absolutely nothing for you to see.
 //	AI_Output(self,other,"DIA_SLD_761_Soeldner_INMINE_INFO_03_02");//Du siehst doch, dass die Mine abgeschlossen ist, also hier gibt´s nichts zu sehen.
 	AI_Output(self,other,"DIA_SLD_761_Soeldner_INMINE_INFO_03_02");//Snad vidíš, že důl je zamčený, takže tu není vůbec nic k vidění.

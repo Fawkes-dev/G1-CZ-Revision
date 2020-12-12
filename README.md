@@ -1,4 +1,4 @@
-# G1-CZ-revision
+# G1-CZ-revision status: WIP
 Gothic 1 CZ revision
 
 Idea here is to revisist Czech translation of Gothic 1.
@@ -45,7 +45,7 @@ func void DIA_Ricelord_Arbeit_Info()
 };
 ```
 
-# Plan ([X] - done, [ ] - WIP)
+### Plan ([X] - done, [ ] - WIP)
 1. [ ] First step - review all C_INFO.description texts, AI_Output dialogs, B_LogEntry & PrintScreen entries
 2. [ ] Then review all other czech texts (C_ITEM, SVM, etc.)
 3. [ ] Fix all bugs (not only dialog related, e.g. ZS_Sleep routine, where NPC actually don't use beds and don't sleep)

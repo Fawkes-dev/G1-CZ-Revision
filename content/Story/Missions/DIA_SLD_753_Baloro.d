@@ -105,7 +105,7 @@ func void DIA_SLD_753_Baloro_Worumgehts_Info()
 	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_Info_08_02"); //Ó ne! To všechno nestojí za nic!
 //	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_Info_08_03"); //I can give you something that'll make your eyes pop out of their sockets! I can give you a weapon that will defeat any foe!
 //	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_Info_08_03"); //Ich hab' dir was anzubieten, da werden dir die Augen übergehen! Ich kann dir eine Waffe besorgen, mit der du jeden Gegner besiegst!
-	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_Info_08_03"); //Můžu ti dát něco, co udrží tvoje oči na stopkách! Mohu ti dát zbraň, se kterou porazíš každého nepřítele!
+	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_Info_08_03"); //Mám tu něco, z čeho ti vypadnou oči z důlků! Mohu ti dát zbraň, se kterou porazíš každého nepřítele!
 //	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_Info_08_04"); //You only need to do me a small favor. Then it'll be yours! What do you say?
 //	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_Info_08_04"); //Das einzige, was du tun musst, um sie zu bekommen, ist mir einen kleinen Gefallen zu erweisen. Und sie gehört dir! Was sagst du?
 	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_Info_08_04"); //Jediné, co pro ni musíš udělat je prokázat mi malou službičku. Pak bude tvoje! Co říkáš?
@@ -130,7 +130,7 @@ func void DIA_SLD_753_Baloro_Worumgehts_ja()
 	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_ja_08_03"); //Velmi jednoduché!
 //	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_ja_08_04"); //Get me 5 apples, 2 bottles of rice schnapps, 5 bottles of beer, 3 loafs of bread, 2 pieces of cheese and 2 bunches of grapes, and we're in business!
 //	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_ja_08_04"); //Bring mir 5 Äpfel, 2 Flaschen Reisschnaps, 5 Flaschen Bier, 3 Laibe Brot, 2 Käsestücke und 2 Weintraubenreben und wir kommen ins Geschäft!
-	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_ja_08_04"); //Dej mi 5 jablek, 2 láhve rýžové pálenky, 5 láhví piva, 3 bochníky chleba, 2 kusy sýra a 2 hrozny vína a jsme domluveni!
+	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_ja_08_04"); //Přines mi 5 jablek, 2 láhve rýžové pálenky, 5 láhví piva, 3 bochníky chleba, 2 kusy sýra a 2 hrozny vína a jsme domluveni!
 //	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_ja_08_05"); //Believe me, you won't be sorry. As I just said: You'll really defeat any kind of enemy with it!
 //	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_ja_08_05"); //Glaub mir, du wirst es nicht bereuen. Wie ich schon sagte: Wirklich jeden Gegner machst du damit platt!
 	AI_Output(self,other,"DIA_SLD_753_Baloro_Worumgehts_ja_08_05"); //Věř mi, nebudeš litovat! Jak jsem řekl. Porazíš s ní jakéhokoliv nepřítele!
@@ -299,7 +299,7 @@ func void DIA_SLD_753_Baloro_habsdabei_Info()
 	B_GiveXP(300);
 //	B_LogEntry(Baloros_Waffe, "I should have known better than trusting this jerk! Nevermind, now I've learned my lesson!"); 
 //	B_LogEntry(Baloros_Waffe, "Hätte ich mir gleich denken können, daß der Typ mich nur verarschen will. Egal! Jetzt bin um eine Erfahrung reicher!"); 
-	B_LogEntry(Baloros_Waffe, "Měl jsem hned tušit, že si ten chlap ze mě chce vystřelit. Nevadí! Zase o zkušnost více!"); 
+	B_LogEntry(Baloros_Waffe, "Měl jsem hned tušit, že si ten chlap ze mě chce vystřelit. Nevadí! Zase o zkušenost více!"); 
 
 	Log_SetTopicStatus(Baloros_Waffe,LOG_SUCCESS);
 
@@ -408,7 +408,7 @@ instance DIA_SLD_753_Baloro_Exit(C_INFO)
 	permanent = 1;
 //	description = "I need to go on.";
 //	description = "Ich muss weiter!";
-	description = "Musím jít dál.";
+	description = "Musím jít dál. (KONEC)";
 
 };                       
 
@@ -423,11 +423,11 @@ func int DIA_SLD_753_Baloro_Exit_Condition()
 func void DIA_SLD_753_Baloro_Exit_Info()
 { 
 
-				if ((Npc_KnowsInfo(hero,DIA_SLD_753_Baloro_Wasmeinstdu))  && (SLD_753_Baloro_SC_choice == 0))  
+				if ((Npc_KnowsInfo(hero,DIA_SLD_753_Baloro_Wasmeinstdu)) && (SLD_753_Baloro_SC_choice == 0))  
 					{
 //						AI_Output(other,self,"DIA_SLD_753_Baloro_Exit_Info_15_01"); //No, no! Just leave it! I'm not interested!
 //						AI_Output(other,self,"DIA_SLD_753_Baloro_Exit_Info_15_01"); //Nee, nee! Lass mal! Kein Interesse!
-						AI_Output(other,self,"DIA_SLD_753_Baloro_Exit_Info_15_01"); //Ne, ne! Jdi pryč! Nezajímáš mě!
+						AI_Output(other,self,"DIA_SLD_753_Baloro_Exit_Info_15_01"); //Ne, nech to být! Nemám zájem!
 //						AI_Output(self,other,"DIA_SLD_753_Baloro_Exit_Info_08_02"); //Well then! As you wish! You've had your chance!
 //						AI_Output(self,other,"DIA_SLD_753_Baloro_Exit_Info_08_02"); //Na gut! Wie du willst! Du hattest deine Chance!
 						AI_Output(self,other,"DIA_SLD_753_Baloro_Exit_Info_08_02"); //Dobrá! Jak chceš! Dostal si šanci!
@@ -478,7 +478,7 @@ func void DIA_SLD_753_Baloro_Angebotdochannehmen_Info()
 			AI_Output(other,self,"DIA_SLD_753_Baloro_Angebotdochannehmen_Info_15_01"); //Přemýšlel jsem o tom! Chtěl bych tvoji nabídku přijmout.
 //			AI_Output(self,other,"DIA_SLD_753_Baloro_Angebotdochannehmen_Info_08_01"); //It's too late now! You've had your chance!
 //			AI_Output(self,other,"DIA_SLD_753_Baloro_Angebotdochannehmen_Info_08_01"); //Dafür ist es jetzt zu spät! Du hattest deine Chance!
-			AI_Output(self,other,"DIA_SLD_753_Baloro_Angebotdochannehmen_Info_08_01"); //To už je pozdě! Měl jsi možnost!
+			AI_Output(self,other,"DIA_SLD_753_Baloro_Angebotdochannehmen_Info_08_01"); //To už je pozdě! Svoji šanci si propásl!
 
 			AI_StopProcessInfos(self); 
 

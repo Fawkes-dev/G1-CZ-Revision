@@ -88,7 +88,7 @@ func void Sld_700_Lee_Define_Info()
 	AI_Output(self,other,"DIA_Lee_Define_08_01"); //Velmi jednoduché: Chránit rudu - chránit mágy.
 //	AI_Output(self,other,"DIA_Lee_Define_08_02"); //Sometimes the mages have a special task for one of us.
 //	AI_Output(self,other,"DIA_Lee_Define_08_02"); //Manchmal haben die Magier aber auch eine besondere Aufgabe für einen von uns.
-	AI_Output(self,other,"DIA_Lee_Define_08_02"); //Ale někdy mají mágové pro jednoho z nás speciální úkol.
+	AI_Output(self,other,"DIA_Lee_Define_08_02"); //Ale někdy mají mágové pro některého z nás speciální úkol.
 };
 
 //*********************************************************
@@ -300,7 +300,7 @@ func void Sld_700_Lee_BECOMESLDNOW_JUSTBECAUSE()
 	AI_Output(other,self,"Sld_700_Lee_BECOMESLDNOW_JUSTBECAUSE_15_01"); //Prostě to nějak vyplynulo.
 //	AI_Output(self,other,"Sld_700_Lee_BECOMESLDNOW_JUSTBECAUSE_08_02"); //I only hope it doesn't just sort of happen that we stay trapped in here forever. Welcome, MERCENARY.
 //	AI_Output(self,other,"Sld_700_Lee_BECOMESLDNOW_JUSTBECAUSE_08_02"); //Hauptsache, es ergibt sich nicht, dass uns die Barriere für immer hier drin gefangen hält. Willkommen, SÖLDNER.
-	AI_Output(self,other,"Sld_700_Lee_BECOMESLDNOW_JUSTBECAUSE_08_02"); //Hlavní věc je, aby z toho nakonec nevyplynulo to, že nás tu bude Bareéra věznit navždy. Vítej, ŽOLDÁKU!
+	AI_Output(self,other,"Sld_700_Lee_BECOMESLDNOW_JUSTBECAUSE_08_02"); //Hlavní věc je, aby z toho nakonec nevyplynulo to, že nás tu bude Bariéra věznit navždy. Vítej, ŽOLDÁKU!
 	CreateInvItem(self,SLD_ARMOR_L);
 	B_GiveInvItems(self,hero,SLD_ARMOR_L,1);
 	AI_EquipBestArmor(hero);
@@ -503,7 +503,7 @@ func void Sld_700_Lee_CHANGESIDE_Info()
 
 //	B_LogEntry(CH4_BannedFromOC,"I've changed sides. After the Old Camp has banished me, I've now joined the mercenaries. Now let's get back to Saturas!");
 //	B_LogEntry(CH4_BannedFromOC,"Ich habe die Seiten gewechselt. Nachdem das alte Lager mich verbannt hat, habe ich mich nun den Söldnern angeschlossen. Nun wieder zurück zu Saturas!");
-	B_LogEntry(CH4_BannedFromOC,"Změnil sjem strany. Poté, co mě vyhostili ze Starého tábora, přidal jsem se k žoldákům. A teď zpátky za Saturasem!");
+	B_LogEntry(CH4_BannedFromOC,"Změnil jsem strany. Poté, co mě vyhostili ze Starého tábora, přidal jsem se k žoldákům. A teď zpátky za Saturasem!");
 
 	Log_CreateTopic(GE_TeacherNC,LOG_NOTE);
 //	B_LogEntry(GE_TeacherNC,"Lee can teach me to fight with TWO-HANDED WEAPONS. Apart from that, he can teach me to improve my STRENGTH and my DEXTERITY.");
@@ -819,7 +819,7 @@ func void Sld_700_Lee_ZWEIHAND2_Info()
 		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_08"); //Po útoku přejdi do bloku a čekej na příležitost, abys mohl znovu udeřit.
 //		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_09"); //The key to success is varying your stances and changing positions.
 //		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_09"); //Abwechslung in den Kampfbewegungen und Positionswechsel sind der Schlüssel zum Sieg.
-		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_09"); //Změna postoje a úderl jsou klíčem k vítězství.
+		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_09"); //Změna postoje a úderů jsou klíčem k vítězství.
 
 		Sld_700_Lee_ZWEIHAND2.permanent = 0;
 	};

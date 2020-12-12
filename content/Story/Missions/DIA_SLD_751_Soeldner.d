@@ -22,7 +22,7 @@ func void DIA_SLD_751_Soeldner_INTRO_INFO()
 {
 //	AI_Output(self,other,"DIA_SLD_751_Soeldner_INTRO_INFO_01_01"); //Ah, a visitor! Don't make any trouble here or or else you'll be for it!
 //	AI_Output(self,other,"DIA_SLD_751_Soeldner_INTRO_INFO_01_01"); //Ah, Besuch! Mach uns keinen Ärger, sonst bekommst du welchen!
-	AI_Output(self,other,"DIA_SLD_751_Soeldner_INTRO_INFO_01_01"); //Á, návštěvník! Nedělej tady žádné rozbroje, jinak to schytáš!
+	AI_Output(self,other,"DIA_SLD_751_Soeldner_INTRO_INFO_01_01"); //Á, návštěvník! Nedělej nám tu žádné problémy, jinak to schytáš!
 };
 
 //-------------------- Exit 1 -----------------------------
@@ -52,7 +52,7 @@ func void DIA_SLD_751_Soeldner_EXIT_1_INFO()
 	AI_Output(other,self,"DIA_SLD_751_Soeldner_EXIT_1_INFO_15_01"); //Raději půjdu!
 //	AI_Output(self,other,"DIA_SLD_751_Soeldner_EXIT_1_INFO_01_02");//I hope we understand each other.
 //	AI_Output(self,other,"DIA_SLD_751_Soeldner_EXIT_1_INFO_01_02");//Ich hoffe, wir verstehen uns.
-	AI_Output(self,other,"DIA_SLD_751_Soeldner_EXIT_1_INFO_01_02");//To doufám.
+	AI_Output(self,other,"DIA_SLD_751_Soeldner_EXIT_1_INFO_01_02");//Doufám, že si rozumíme.
 	AI_StopProcessInfos(self);
 };
 
@@ -101,7 +101,7 @@ instance DIA_SLD_751_Soeldner_UMSEHEN(C_INFO)
 	permanent = 0;
 //	description = "I just want to have a look around here.";
 //	description = "Ich will mich hier nur mal umsehen.";
-	description = "Chci se tu porozhlédnout.";
+	description = "Chci se tu jen porozhlédnout.";
 };
 
 func int DIA_SLD_751_Soeldner_UMSEHEN_CONDITION()
@@ -113,7 +113,7 @@ func void DIA_SLD_751_Soeldner_UMSEHEN_INFO()
 {  
 //	AI_Output(other,self,"DIA_SLD_751_Soeldner_UMSEHEN_INFO_15_01"); //I just want to have a look around here.
 //	AI_Output(other,self,"DIA_SLD_751_Soeldner_UMSEHEN_INFO_15_01"); //Ich will mich hier nur mal umsehen.
-	AI_Output(other,self,"DIA_SLD_751_Soeldner_UMSEHEN_INFO_15_01"); //Chci se tu porozhlédnout.
+	AI_Output(other,self,"DIA_SLD_751_Soeldner_UMSEHEN_INFO_15_01"); //Chci se tu jen porozhlédnout.
 //	AI_Output(self,other,"DIA_SLD_751_Soeldner_UMSEHEN_INFO_01_02");//Then mind you don't step on anybody's feet.
 //	AI_Output(self,other,"DIA_SLD_751_Soeldner_UMSEHEN_INFO_01_02");//Dann pass auf, dass du niemanden auf die Füße trittst.
 	AI_Output(self,other,"DIA_SLD_751_Soeldner_UMSEHEN_INFO_01_02");//Pak dávej pozor, abys nikomu nešlápl na nohu.
@@ -145,7 +145,7 @@ func void DIA_SLD_751_Soeldner_INMINE_INFO()
 	AI_Output(other,self,"DIA_SLD_751_Soeldner_INMINE_INFO_15_01"); //Chci jít do dolu.
 //	AI_Output(self,other,"DIA_SLD_751_Soeldner_INMINE_INFO_01_02");//I can hardly believe you'll manage that. But just speak to Okyl.
 //	AI_Output(self,other,"DIA_SLD_751_Soeldner_INMINE_INFO_01_02");//Ich glaube kaum, dass dir dass gelingen wird. Aber sprich mal mit Okyl.
-	AI_Output(self,other,"DIA_SLD_751_Soeldner_INMINE_INFO_01_02");//Nevěřím, že se ti to povede. Promluv si ale s Okylem.
+	AI_Output(self,other,"DIA_SLD_751_Soeldner_INMINE_INFO_01_02");//Nevěřím, že se ti to povede, ale promluv si s Okylem.
 
 };
 

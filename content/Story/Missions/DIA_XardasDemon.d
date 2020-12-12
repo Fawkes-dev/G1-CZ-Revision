@@ -22,7 +22,7 @@ func void Info_XardasDemon_EXIT_Info()
 	AI_Output(self,other,"DIA_BaalCadar_NoTalk_Hi_02_01"); //(vzdech)
 //	AI_Output(hero,self,"Info_Saturas_EXIT_15_01"); //... Mortal?... who, me?... Okay, I'm on my way!
 //	AI_Output(hero,self,"Info_Saturas_EXIT_15_01"); //... Sterblicher? ...  Wer, ich? ... Ich geh ja schon!
-	AI_Output(hero,self,"Info_Saturas_EXIT_15_01"); //...Smrtelník? ...kdo, já? ...Dobrá,  já si jdu po svých!
+	AI_Output(hero,self,"Info_Saturas_EXIT_15_01"); //...Smrtelník? ...kdo, já? ...Dobrá, já si jdu po svých!
 
 	AI_StopProcessInfos(self);
 };
@@ -158,10 +158,10 @@ func void Info_XardasDemon_MASTERHOW_Info()
 	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_03"); //...Aaahhhh... Rozumím... Kdokoliv chce mluvit s tvým pánem, musí nejdříve prokázat, že je hoden!
 //	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_04"); //... Hold on, what was that?... The proof?... Victory over what?... Victory over the elements?
 //	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_04"); //... Moment, wie war das? ... Der Beweis? ... Sieg über was? ... Sieg über die Elemente?
-	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_04"); //... Zadrž, cože? ... Důkaz?... Vítězství nad čím?... Vítězství nad živly?...
+	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_04"); //...Zadrž, cože? ... Důkaz?... Vítězství nad čím?... Vítězství nad živly?...
 //	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_05"); //... Stone?... Ice?... Fire?
 //	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_05"); //... Stein? ... Eis? ... Feuer?
-	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_05"); //... Kámen? ...Led? ...Oheň?
+	AI_Output(hero,self,"Info_XardasDemon_MASTERHOW_15_05"); //...Kámen? ...Led? ...Oheň?
 
 	FindGolemHearts = 1; // Auftrag vergeben
 

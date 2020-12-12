@@ -44,7 +44,7 @@ func void Info_SLD_723_FirstWarn_Info()
 
 //	AI_Output(self,hero,"Info_SLD_723_FirstWarn_11_01"); //STOP! Nobody may pass without the password!
 //	AI_Output(self,hero,"Info_SLD_723_FirstWarn_11_01"); //HALT! Niemand darf ohne Parole passieren!
-	AI_Output(self,hero,"Info_SLD_723_FirstWarn_11_01"); //STŮJ! Nikdo nesmí dál bez hesla!
+	AI_Output(self,hero,"Info_SLD_723_FirstWarn_11_01"); //STŮJ! Nikdo nesmí bez hesla projít!
 
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,SLD_723_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_FIRSTWARN; 

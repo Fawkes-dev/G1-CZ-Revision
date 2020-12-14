@@ -56,7 +56,8 @@ func void DIA_Homer_Hello_Info()
 	AI_Output(self,other,"DIA_Homer_Hello_02_02"); //Ta bestie narušuje svými zuby a drápy kameny a dřevěné trámy pod vodou.
 //	AI_Output(self,other,"DIA_Homer_Hello_02_03"); //If it carries on, the whole dam will soon be undermined.
 //	AI_Output(self,other,"DIA_Homer_Hello_02_03"); //Auf diese Weise ist bald der gesamte Damm untergraben.
-	AI_Output(self,other,"DIA_Homer_Hello_02_03"); //Jestli to bude pokračovat, celá hráz bude co nevidět podhrabaná
+	//#Spacer_OU_special_characters
+	AI_Output(self,other,"DIA_Homer_Hello_02_03"); //Jestli to bude pokračovat, celá hráz bude co nevidět podhrabaná.
 };
 
 // ************************************************************

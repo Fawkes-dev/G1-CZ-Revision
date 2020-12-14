@@ -325,7 +325,8 @@ func void DIA_Orry_Waffe_Info()
 	AI_Output(self,other,"DIA_Orry_Waffe_06_01"); //V uzavřeném dolu za kaňonem by měly být nějaké staré zbraně.
 //	AI_Output(self,other,"DIA_Orry_Waffe_06_02"); //But don't go and start a war with nothing but a rusty pickaxe for a weapon - those things are slow and heavy.
 //	AI_Output(self,other,"DIA_Orry_Waffe_06_02"); //Aber mach bloß nicht den Fehler und zieh mit 'ner rostigen Spitzhacke in den Krieg - die Dinger sind schwer und langsam.
-	AI_Output(self,other,"DIA_Orry_Waffe_06_02"); //Nezačínej ale válku, aniž bys měl jinou zbraň než rezavý krumpáč - tyhle věci jsou pomalé a těžké
+	//#Spacer_OU_special_characters
+	AI_Output(self,other,"DIA_Orry_Waffe_06_02"); //Nezačínej ale válku, aniž bys měl jinou zbraň než rezavý krumpáč - tyhle věci jsou pomalé a těžké.
 //	AI_Output(self,other,"DIA_Orry_Waffe_06_03"); //An inexperienced fighter should never use one of them unless it's an emergency.
 //	AI_Output(self,other,"DIA_Orry_Waffe_06_03"); //Ein ungeübter Kämpfer sollte sie nur im Notfall benutzen.
 	AI_Output(self,other,"DIA_Orry_Waffe_06_03"); //Nezkušený bojovník by je měl použít jen v nouzi.

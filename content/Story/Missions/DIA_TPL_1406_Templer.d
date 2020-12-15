@@ -36,7 +36,7 @@ instance DIA_KalomsGuard_PERM(C_INFO)
 	permanent = 1;
 //	description = "I'm sure you won't mind my going in there...?";
 //	description = "Du hast doch nichts dagegen, wenn ich da reingehe?";
-	description = "Jistě nemáš nic proti tomu, abych šel dál...?";
+	description = "Jistě nemáš nic proti tomu, abych šel dál?";
 };                       
 
 func int DIA_KalomsGuard_PERM_Condition()
@@ -48,7 +48,7 @@ func void DIA_KalomsGuard_PERM_Info()
 {
 //	AI_Output(other,self,"DIA_KalomsGuard_PERM_15_00"); //I'm sure you won't mind me going in there...?
 //	AI_Output(other,self,"DIA_KalomsGuard_PERM_15_00"); //Du hast doch nichts dagegen, wenn ich da reingehe?
-	AI_Output(other,self,"DIA_KalomsGuard_PERM_15_00"); //Jistě nemáš nic proti tomu, abych šel dál...?
+	AI_Output(other,self,"DIA_KalomsGuard_PERM_15_00"); //Jistě nemáš nic proti tomu, abych šel dál?
 //	AI_Output(self,other,"DIA_KalomsGuard_PERM_13_01"); //If you're disrespectful to my master, I'll kill you.
 //	AI_Output(self,other,"DIA_KalomsGuard_PERM_13_01"); //Wenn du meinem Meister keinen Respekt entgegen bringst, werde ich dich töten.
 	AI_Output(self,other,"DIA_KalomsGuard_PERM_13_01"); //Jestli budeš k mému mistrovi neuctivý, zabiju tě!

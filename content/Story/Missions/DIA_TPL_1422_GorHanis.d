@@ -50,7 +50,7 @@ func void Info_GorHanis_What_Info()
 	AI_Output(other,self,"Info_GorHanis_What_15_00"); //Co tady děláš?
 //	AI_Output(self,other,"Info_GorHanis_What_08_01"); //Me? I'm fighting for the glory of the Sleeper!
 //	AI_Output(self,other,"Info_GorHanis_What_08_01"); //Ich? Ich kämpfe für den Ruhm des Schläfers!
-	AI_Output(self,other,"Info_GorHanis_What_08_01"); //Já?! Bojuju za slávu Spáče!
+	AI_Output(self,other,"Info_GorHanis_What_08_01"); //Já? Bojuju za slávu Spáče!
 };
 
 // **************************************************
@@ -87,7 +87,7 @@ func void Info_GorHanis_Arena_Info()
 	AI_Output(self,other,"Info_GorHanis_Arena_08_01"); //Byl jsem vyslaný svými mistry z bažin, abych bojoval za Spáče.
 //	AI_Output(self,other,"Info_GorHanis_Arena_08_02"); //I'll fight here for his higher glory - so all infidels can see how strong his power has made me!
 //	AI_Output(self,other,"Info_GorHanis_Arena_08_02"); //Zu seiner höheren Ehre kämpfe ich hier - Auf dass alle Ungläubigen sehen, wie stark ich dank seiner Macht geworden bin!
-	AI_Output(self,other,"Info_GorHanis_Arena_08_02"); //Budu tu bojovat za jeho větší slávu - tak můžou všichni nevěrci poznat, jakou silou mě obdařila jeho moc!
+	AI_Output(self,other,"Info_GorHanis_Arena_08_02"); //Bojuji tu za jeho vyšší čest - Ať všichni nevěřící vídí, jak silný jsem se díky jeho moci stal.
 };
 
 // **************************************************
@@ -124,13 +124,13 @@ func void Info_GorHanis_Sleeper_Info()
 	AI_Output(self,other,"Info_GorHanis_Sleeper_08_01"); //V našem táboře najdeš kněze, kteří ti tuhle otázku budou schopni zodpovědět lépe než já.
 //	AI_Output(self,other,"Info_GorHanis_Sleeper_08_02"); //I'll just tell you this much: The Sleeper is our redeemer, he has led us to this place and he'll get us out of here.
 //	AI_Output(self,other,"Info_GorHanis_Sleeper_08_02"); //Ich will dir nur so viel sagen: Der Schläfer ist unser Erlöser, er hat uns an diesen Ort geführt, und er wird uns auch wieder hier herausholen.
-	AI_Output(self,other,"Info_GorHanis_Sleeper_08_02"); //Můžu ti říci akorát tohle: Spáč je náš spasitel, který nás přivedl na tohle místo a který nás odtud zase vyvede.
+	AI_Output(self,other,"Info_GorHanis_Sleeper_08_02"); //Můžu ti říci jen tohle: Spáč je náš spasitel, který nás přivedl na tohle místo a který nás odtud zase vyvede.
 //	AI_Output(other,self,"Info_GorHanis_Sleeper_15_03"); //You mean you're waiting for your god to liberate you?
 //	AI_Output(other,self,"Info_GorHanis_Sleeper_15_03"); //Du meinst, ihr wartet darauf, dass euch euer Gott befreit?
 	AI_Output(other,self,"Info_GorHanis_Sleeper_15_03"); //Tím chceš říci, že čekáte, až vás váš bůh osvobodí?
 //	AI_Output(self,other,"Info_GorHanis_Sleeper_08_04"); //Yes! And the wait will soon be over. A great invocation is currently being prepared.
 //	AI_Output(self,other,"Info_GorHanis_Sleeper_08_04"); //Ja! Und das Warten wird bald ein Ende haben. Die Vorbereitungen für eine große Anrufung laufen schon.
-	AI_Output(self,other,"Info_GorHanis_Sleeper_08_04"); //Ano! A to čekání brzy skončí. Právě se připravuje velké vzývání!
+	AI_Output(self,other,"Info_GorHanis_Sleeper_08_04"); //Ano! A to čekání brzy skončí. Přípravy na velké vzývání už probíhají!
 };
 
 // **************************************************
@@ -201,7 +201,7 @@ func void Info_GorHanis_WayToST_Info()
 	AI_Output(other,self,"Info_GorHanis_WayToST_15_00"); //Můžeš mi popsat cestu do vašeho tábora?
 //	AI_Output(self,other,"Info_GorHanis_WayToST_08_01"); //There are always some novices around here in the Old Camp, willing to accompany newcomers like you to our camp. You only need to speak to them!
 //	AI_Output(self,other,"Info_GorHanis_WayToST_08_01"); //Hier im Alten Lager sind immer einige Novizen, die Neuankömmlinge wie dich in unser Lager begleiten. Du musst sie nur ansprechen!
-	AI_Output(self,other,"Info_GorHanis_WayToST_08_01"); //Ve Starém táboře je několik noviců, kteří jsou ochotní doprovázet nové příchozí jako jsi ty do našeho tábora. Musíš si jim jenom říci.
+	AI_Output(self,other,"Info_GorHanis_WayToST_08_01"); //Ve Starém táboře je několik noviců, kteří jsou ochotní doprovázet nové příchozí jako jsi ty do našeho tábora. Musíš jim jen říct!
 };
 
 // **************************************************
@@ -235,13 +235,13 @@ func void Info_GorHanis_Charge_Info()
 	AI_Output(other,self,"Info_GorHanis_Charge_15_00"); //Vyzývám tě na souboj v aréně!
 //	AI_Output(self,other,"Info_GorHanis_Charge_08_01"); //It will not serve the glory of the Sleeper if I slaughter just any bum in front of the audience.
 //	AI_Output(self,other,"Info_GorHanis_Charge_08_01"); //Es dient nicht der höheren Ehre des Schläfers, wenn ich einen dahergelaufenen Bauertölpel vorm Publikum niedermetzele.
-	AI_Output(self,other,"Info_GorHanis_Charge_08_01"); //Neposloužilo by příliš Spáčově slávě, kdybych před obecenstvem zabil nějakého břídila.
+	AI_Output(self,other,"Info_GorHanis_Charge_08_01"); //Neposloužilo by příliš Spáčově slávě, kdybych před obecenstvem zabil nějakého ťulpase.
 //	AI_Output(self,other,"Info_GorHanis_Charge_08_02"); //I'll only fight against you when you've become a worthy opponent.
 //	AI_Output(self,other,"Info_GorHanis_Charge_08_02"); //Ich werde erst gegen dich kämpfen, wenn du ein würdiger Gegner für mich bist.
 	AI_Output(self,other,"Info_GorHanis_Charge_08_02"); //Budu proti tobě bojovat jedině v případě, že mi budeš důstojným protivníkem.
 //	AI_Output(self,other,"Info_GorHanis_Charge_08_03"); //But I'm sure that the fighters from the Old or New Camp aren't all men of principle…
 //	AI_Output(self,other,"Info_GorHanis_Charge_08_03"); //Aber ich bin mir sicher, die Kämpfer aus dem Alten oder dem Neuen Lager haben nicht so einen hohen moralischen Anspruch ...
-	AI_Output(self,other,"Info_GorHanis_Charge_08_03"); //Jsem si jistý, že bojovníci ze Starého nebo Nového tábora nejsou všichni zásadoví muži...
+	AI_Output(self,other,"Info_GorHanis_Charge_08_03"); //Ale jsem si jistý, že bojovníci ze Starého nebo Nového tábora nemají tak vysoké morální zásady...
 };
 
 // **************************************************

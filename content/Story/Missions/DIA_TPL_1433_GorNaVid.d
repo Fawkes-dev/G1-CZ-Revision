@@ -54,13 +54,13 @@ func void Tpl_1433_GorNaVid_HEALTH_Info()
 	AI_Output(other,self,"Tpl_1433_GorNaVid_HEALTH_Info_15_01"); //Potřebuju tvoji pomoc.
 //	AI_Output(other,self,"Tpl_1433_GorNaVid_HEALTH_Info_15_02"); //I'm looking for secretion for Kalom and I know where the crawlers' nest is.
 //	AI_Output(other,self,"Tpl_1433_GorNaVid_HEALTH_Info_15_02"); //Ich bin auf der Suche nach Sekret für Kalom und weiß, wo sich das Nest der Crawler befindet.
-	AI_Output(other,self,"Tpl_1433_GorNaVid_HEALTH_Info_15_02"); //Hledám pro Kaloma výměšek a asi vím, kde je červí hnízdo.
+	AI_Output(other,self,"Tpl_1433_GorNaVid_HEALTH_Info_15_02"); //Hledám pro Kaloma výměšek a vím, kde je hnízdo důlních červů.
 //	AI_Output(other,self,"Tpl_1433_GorNaVid_HEALTH_Info_15_03"); //Will you be there when the passage is opened?
 //	AI_Output(other,self,"Tpl_1433_GorNaVid_HEALTH_Info_15_03"); //Wenn der Durchgang geöffnet wird, bist du dabei?
-	AI_Output(other,self,"Tpl_1433_GorNaVid_HEALTH_Info_15_03"); //Jestli otevřeme chodbu, budeš tam taky?
+	AI_Output(other,self,"Tpl_1433_GorNaVid_HEALTH_Info_15_03"); //Budeš tam, až otevřeme chodbu?
 //	AI_Output(self,other,"Tpl_1433_GorNaVid_HEALTH_Info_13_04"); //When fighting crawlers it often costs a lot of blood. If you bring me a healing potion, you can count me in.
 //	AI_Output(self,other,"Tpl_1433_GorNaVid_HEALTH_Info_13_04"); //Der Kampf gegen Crawler kostet Blut. Wenn du mir einen Heiltrank bringst, bin ich dabei.
-	AI_Output(self,other,"Tpl_1433_GorNaVid_HEALTH_Info_13_04"); //Když bojujeme s červy, často to znamená spousty krve. Když mi přineseš hojivý lektvar, můžeš se mnou počítat.
+	AI_Output(self,other,"Tpl_1433_GorNaVid_HEALTH_Info_13_04"); //Boj s důlními červy je krvavá záležitost. Když mi přineseš hojivý lektvar, můžeš se mnou počítat.
 
 };  
 // ***************** Infos *****************************
@@ -93,7 +93,7 @@ func void Tpl_1433_GorNaVid_IAN_Info()
 	AI_Output(other,self,"Tpl_1433_GorNaVid_IAN_Info_15_01"); //Hledám hnízdo důlních červů.
 //	AI_Output(self,other,"Tpl_1433_GorNaVid_IAN_Info_13_02"); //There are many caves next to the main shaft in the mine, but we haven't found any nest.
 //	AI_Output(self,other,"Tpl_1433_GorNaVid_IAN_Info_13_02"); //Hier in der Mine gibt es viele Höhlen neben dem Hauptschacht, aber dort haben wir noch kein Nest gefunden.
-	AI_Output(self,other,"Tpl_1433_GorNaVid_IAN_Info_13_02"); //Vedle hlavní šachty dolu je mnoho jeskyní, ale nenašli jsme tam žádné hnízdo.
+	AI_Output(self,other,"Tpl_1433_GorNaVid_IAN_Info_13_02"); //Tady v dole je hodně jeskyní vedle hlavní šachty, ale tam jsme žádné hnízdo nenašli.
 };  
 
 // ***************** Infos *****************************
@@ -124,7 +124,7 @@ func void Tpl_1433_GorNaVid_HEALTH_SUC_Info()
 {
 //	AI_Output(other,self,"Tpl_1433_GorNaVid_HEALTH_SUC_Info_15_01"); //Here, maybe that'll help.
 //	AI_Output(other,self,"Tpl_1433_GorNaVid_HEALTH_SUC_Info_15_01"); //Hier, vielleicht hilft dir das.
-	AI_Output(other,self,"Tpl_1433_GorNaVid_HEALTH_SUC_Info_15_01"); //Tady, to pomůže.
+	AI_Output(other,self,"Tpl_1433_GorNaVid_HEALTH_SUC_Info_15_01"); //Tady, možná ti to pomůže.
 //	AI_Output(self,other,"Tpl_1433_GorNaVid_HEALTH_SUC_Info_13_02"); //Thanks. You can count on me. We'll meet down below with Ashgan.
 //	AI_Output(self,other,"Tpl_1433_GorNaVid_HEALTH_SUC_Info_13_02"); //Danke. Du kannst auf meine Stärke zählen. Wir treffen uns unten bei Ashgan.
 	AI_Output(self,other,"Tpl_1433_GorNaVid_HEALTH_SUC_Info_13_02"); //Díky, můžeš se mnou počítat. Sejdeme se dole s Asghanem.
@@ -154,7 +154,7 @@ func void Tpl_1433_GorNaVid_HEALTH_SUC_Info()
 	B_GiveXP(XP_HireGorNaVid);
 //	B_LogEntry(CH2_MCEggs,"I had to give a healing potion to Gor Na Vid before he agreed to join the reinforcements at Asghan's gate."); 
 //	B_LogEntry(CH2_MCEggs,"Ich mußte Gor Na Vid erst einen Heiltrank geben, bevor er sich als Verstärkung bei Asghans Tor zur Verfügung stellte."); 
-	B_LogEntry(CH2_MCEggs,"Než Gor Na Vid souhlasil, že se přidá k posile u Asghanových vrat, musel jsem mu dát hojivý lektvar."); 
+	B_LogEntry(CH2_MCEggs,"Než Gor Na Vid souhlasil, že se přidá k posile u Asghanovy brány, musel jsem mu dát hojivý lektvar."); 
 
 	AI_StopProcessInfos(self);
 };
@@ -190,6 +190,6 @@ func void Tpl_1433_GorNavid_VICTORY_Info()
 	AI_Output(self,other,"Tpl_1433_GorNavid_VICTORY_Info_13_02"); //Děkuju ti ve jménu celého Bratrstva!
 //	AI_Output(self,other,"Tpl_1433_GorNavid_VICTORY_Info_13_03"); //May the Sleeper continue to hold his protective hand over you!
 //	AI_Output(self,other,"Tpl_1433_GorNavid_VICTORY_Info_13_03"); //Möge der Schläfer auch weiterhin seine schützende Hand über dich halten!
-	AI_Output(self,other,"Tpl_1433_GorNavid_VICTORY_Info_13_03"); //Nechť Spáč stále nad tebou drží ochrannou ruku!
+	AI_Output(self,other,"Tpl_1433_GorNavid_VICTORY_Info_13_03"); //Nechť nad tebou Spáč drží ochrannou ruku!
 };     
 

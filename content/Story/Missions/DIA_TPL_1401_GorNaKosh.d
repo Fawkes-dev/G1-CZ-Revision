@@ -35,7 +35,7 @@ instance Tpl_1401_GorNaKosh_SUGGEST(C_INFO)
 	permanent = 0;
 //	description = "I know where the nest of the crawlers is."; 
 //	description = "Ich weiß, wo das Nest der Crawler ist..."; 
-	description = "Vím, kde je červí hnízdo."; 
+	description = "Vím, kde je hnízdo důlních červů..."; 
 };
 
 func int Tpl_1401_GorNaKosh_SUGGEST_Condition()
@@ -51,7 +51,7 @@ func void Tpl_1401_GorNaKosh_SUGGEST_Info()
 {
 //	AI_Output(other,self,"Tpl_1401_GorNaKosh_SUGGEST_Info_15_01"); //I know where the crawlers' nest is. I'm going there to get something for Kalom, so he can brew a stronger potion.
 //	AI_Output(other,self,"Tpl_1401_GorNaKosh_SUGGEST_Info_15_01"); //Ich weiß, wo das Nest der Crawler ist und werde hineingehen und etwas suchen, aus dem Kalom ein stärkeres Elixier brauen kann.
-	AI_Output(other,self,"Tpl_1401_GorNaKosh_SUGGEST_Info_15_01"); //Vím, kde je červí hnízdo. Jdu tam vzít něco pro Kaloma, aby mohl připravit silnější lektvar.
+	AI_Output(other,self,"Tpl_1401_GorNaKosh_SUGGEST_Info_15_01"); //Vím, kde je hnízdo důlních červů. Jdu tam hledat něco pro Kaloma, z čeho by mohl připravit silnější elixír.
 //	AI_Output(self,other,"Tpl_1401_GorNaKosh_SUGGEST_Info_13_02"); //Then you'll need my blade. I'll join you.
 //	AI_Output(self,other,"Tpl_1401_GorNaKosh_SUGGEST_Info_13_02"); //Dann wirst du meine Klinge brauchen. Ich bin dabei.
 	AI_Output(self,other,"Tpl_1401_GorNaKosh_SUGGEST_Info_13_02"); //Pak budeš potřebovat mé ostří. Přidám se k tobě.
@@ -101,10 +101,10 @@ func void Tpl_1401_GorNaKosh_INFO_Info()
 	AI_Output(self,other,"Tpl_1401_GorNaKosh_INFO_Info_13_02"); //Lovím důlní červy.
 //	AI_Output(other,self,"Tpl_1401_GorNaKosh_INFO_Info_15_03"); //Can you tell me something about crawler hunting?
 //	AI_Output(other,self,"Tpl_1401_GorNaKosh_INFO_Info_15_03"); //Kannst du mir was über die Crawlerjagd erzählen?
-	AI_Output(other,self,"Tpl_1401_GorNaKosh_INFO_Info_15_03"); //Můžeš mi něco říci o lovu červů?
+	AI_Output(other,self,"Tpl_1401_GorNaKosh_INFO_Info_15_03"); //Můžeš mi něco říci o lovu důlních červů?
 //	AI_Output(self,other,"Tpl_1401_GorNaKosh_INFO_Info_13_04"); //There's just a single rule to remember when hunting crawlers: When you see them, run at them and kill them as fast as you can.
 //	AI_Output(self,other,"Tpl_1401_GorNaKosh_INFO_Info_13_04"); //Beim Crawlerjagen gibt's nur eine Regel. Wenn du sie siehst, lauf auf sie zu und töte sie, so schnell du kannst.
-	AI_Output(self,other,"Tpl_1401_GorNaKosh_INFO_Info_13_04"); //Při lovu červů si musíš pamatovat jednoduché pravidlo: když je spatříš, běž k nim a zabij je, jak nejrychleji umíš.
+	AI_Output(self,other,"Tpl_1401_GorNaKosh_INFO_Info_13_04"); //Při lovu důlních červů si musíš pamatovat jednoduché pravidlo. Když je spatříš, běž k nim a zabij je, jak nejrychleji umíš.
 //	AI_Output(self,other,"Tpl_1401_GorNaKosh_INFO_Info_13_05"); //Fight without fear and kill without mercy.
 //	AI_Output(self,other,"Tpl_1401_GorNaKosh_INFO_Info_13_05"); //Kämpfe ohne Furcht und töte ohne Gnade.
 	AI_Output(self,other,"Tpl_1401_GorNaKosh_INFO_Info_13_05"); //Bojuj beze strachu a zabíjej bez milosti.
@@ -123,7 +123,7 @@ instance Tpl_1401_GorNaKosh_CRAWLER(C_INFO)
 	permanent = 1;
 //	description = "Can you tell me more about the crawlers?"; 
 //	description = "Kannst du mir mehr von den Crawlern erzählen?"; 
-	description = "Můžeš mi říci něco o těch červech?"; 
+	description = "Můžeš mi říci něco víc o těch důlních červech?"; 
 };
 
 func int Tpl_1401_GorNaKosh_CRAWLER_Condition()
@@ -138,13 +138,13 @@ func void Tpl_1401_GorNaKosh_CRAWLER_Info()
 {
 //	AI_Output(other,self,"Tpl_1401_GorNaKosh_CRAWLER_Info_15_01"); //Can you tell me more about the crawlers?
 //	AI_Output(other,self,"Tpl_1401_GorNaKosh_CRAWLER_Info_15_01"); //Kannst du mir mehr von den Crawlern erzählen?
-	AI_Output(other,self,"Tpl_1401_GorNaKosh_CRAWLER_Info_15_01"); //Můžeš mi říci něco o těch červech?
+	AI_Output(other,self,"Tpl_1401_GorNaKosh_CRAWLER_Info_15_01"); //Můžeš mi říci něco víc o těch důlních červech?
 //	AI_Output(self,other,"Tpl_1401_GorNaKosh_CRAWLER_Info_13_02"); //They act instinctively, anything non-crawler is killed.
 //	AI_Output(self,other,"Tpl_1401_GorNaKosh_CRAWLER_Info_13_02"); //Sie handeln nach ihrem Instinkt. Alles, was kein Crawler ist, wird getötet.
-	AI_Output(self,other,"Tpl_1401_GorNaKosh_CRAWLER_Info_13_02"); //Chovají se instinktivně, vše, co není červ,  zabíjejí.
+	AI_Output(self,other,"Tpl_1401_GorNaKosh_CRAWLER_Info_13_02"); //Chovají se instinktivně. Vše, co není důlní červ, zabijí.
 //	AI_Output(self,other,"Tpl_1401_GorNaKosh_CRAWLER_Info_13_03"); //Use this knowledge in your fight against them.
 //	AI_Output(self,other,"Tpl_1401_GorNaKosh_CRAWLER_Info_13_03"); //Wenn du gegen sie kämpfst, mach dir dieses Wissen zu Nutze.
-	AI_Output(self,other,"Tpl_1401_GorNaKosh_CRAWLER_Info_13_03"); //Tyhle vědomosti použij v boji proti nim.
+	AI_Output(self,other,"Tpl_1401_GorNaKosh_CRAWLER_Info_13_03"); //Použij tyto vědomosti, když s nimi bojuješ.
 }; 
 
 // ***************************** Die Königin ist tot, lang lebe die Königin ****************************************//
@@ -158,7 +158,7 @@ instance Tpl_1401_GorNaKosh_VICTORY(C_INFO)
 	permanent = 0;
 //	description = "I've found the crawler nest!"; 
 //	description = "Ich habe das Nest der Crawler gefunden!"; 
-	description = "Našel jsem červí hnízdo!"; 
+	description = "Našel jsem hnízdo důlních červů!"; 
 };
 
 func int Tpl_1401_GorNaKosh_VICTORY_Condition()
@@ -173,11 +173,11 @@ func void Tpl_1401_GorNaKosh_VICTORY_Info()
 {
 //	AI_Output(other,self,"Tpl_1401_GorNaKosh_VICTORY_Info_15_01"); //I've found the crawler nest!
 //	AI_Output(other,self,"Tpl_1401_GorNaKosh_VICTORY_Info_15_01"); //Ich habe das Nest der Crawler gefunden!
-	AI_Output(other,self,"Tpl_1401_GorNaKosh_VICTORY_Info_15_01"); //Našel jsem červí hnízdo!
+	AI_Output(other,self,"Tpl_1401_GorNaKosh_VICTORY_Info_15_01"); //Našel jsem hnízdo důlních červů!
 //	AI_Output(self,other,"Tpl_1401_GorNaKosh_VICTORY_Info_13_02"); //Wonderful! Now go back to the Camp and finish this mission. Cor Kalom will be waiting for you!
 //	AI_Output(self,other,"Tpl_1401_GorNaKosh_VICTORY_Info_13_02"); //Wunderbar! Gehe nun zurück ins Lager und beende deine Mission. Cor Kalom erwartet dich bestimmt schon!
-	AI_Output(self,other,"Tpl_1401_GorNaKosh_VICTORY_Info_13_02"); //Výborně! Teď se vrátíme do tábora a dokončíme úkol. Cor Kalom nás bude očekávat!
+	AI_Output(self,other,"Tpl_1401_GorNaKosh_VICTORY_Info_13_02"); //Výborně! Jdizpátky do tábora a dokonči svůj úkol. Cor Kalom tě jistě očekává!
 //	B_LogEntry(CH2_MCEggs,"I'm to take the eggs to Cor Kalom, he's waiting for them.");
 //	B_LogEntry(CH2_MCEggs,"Ich sollte die Eier zu Cor-Kalom bringen, er wird sie schon sehnsüchtig erwarten.");
-	B_LogEntry(CH2_MCEggs,"Měl bych dát Cor Kalomovi vajíčka, na která čeká.");
+	B_LogEntry(CH2_MCEggs,"Měl bych donést ta vajíčka Cor Kalomovi, určitě na ně už čeká.");
 };  

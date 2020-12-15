@@ -54,13 +54,13 @@ func void Tpl_1400_GorNaBar_SUGGEST_Info()
 	AI_Output(other,self,"Tpl_1400_GorNaBar_SUGGEST_Info_15_01"); //Potřebuju tvoji pomoc.
 //	AI_Output(other,self,"Tpl_1400_GorNaBar_SUGGEST_Info_15_02"); //I'm looking for secretion for Kalom and I think I know where the crawlers' nest is.
 //	AI_Output(other,self,"Tpl_1400_GorNaBar_SUGGEST_Info_15_02"); //Ich bin auf der Suche nach Sekret für Kalom und glaube zu wissen, wo das Nest der Crawler ist.
-	AI_Output(other,self,"Tpl_1400_GorNaBar_SUGGEST_Info_15_02"); //Hledám pro Kaloma výměšek a asi vím, kde je červí hnízdo.
+	AI_Output(other,self,"Tpl_1400_GorNaBar_SUGGEST_Info_15_02"); //Hledám pro Kaloma výměšek a asi vím, kde je hnízdo důlních červů.
 //	AI_Output(other,self,"Tpl_1400_GorNaBar_SUGGEST_Info_15_03"); //If we open the passage, will you be there as well?
 //	AI_Output(other,self,"Tpl_1400_GorNaBar_SUGGEST_Info_15_03"); //Wenn der Durchgang geöffnet wird, bist du dabei?
-	AI_Output(other,self,"Tpl_1400_GorNaBar_SUGGEST_Info_15_03"); //Jestli otevřeme chodbu, budeš tam taky?
+	AI_Output(other,self,"Tpl_1400_GorNaBar_SUGGEST_Info_15_03"); //Jestli otevřeme průchod, budeš tam taky?
 //	AI_Output(self,other,"Tpl_1400_GorNaBar_SUGGEST_Info_09_04"); //The crawlers' nest! Finally. My sword is at your service!
 //	AI_Output(self,other,"Tpl_1400_GorNaBar_SUGGEST_Info_09_04"); //Das Nest der Crawler! Endlich. Mein Schwert kämpft für dich!
-	AI_Output(self,other,"Tpl_1400_GorNaBar_SUGGEST_Info_09_04"); //Hnízdo důlních červů. Konečně! Můj meč je ti k službám!
+	AI_Output(self,other,"Tpl_1400_GorNaBar_SUGGEST_Info_09_04"); //Hnízdo důlních červů! Konečně. Můj meč je ti k službám!
 
 	AI_StopProcessInfos(self);
 	Npc_ExchangeRoutine(self,"GATE"); 
@@ -69,7 +69,7 @@ func void Tpl_1400_GorNaBar_SUGGEST_Info()
 
 //	B_LogEntry(CH2_MCEggs,"When I mentioned the minecrawlers' nest, the templar Gor Na Bar joined my reinforcements at Asghan's gate. I'll find him there.");
 //	B_LogEntry(CH2_MCEggs,"Als ich das Nest der Minecrawler erwähnte, schloß sich der Templer Gor Na Bar sofort meiner Verstärkung bei Asghans Tor an. Ich werde ihn dort finden.");
-	B_LogEntry(CH2_MCEggs,"Když jsem se zmínil o hnízdě důlních červů, templář Gor Na Bar přislíbil posilu posádce u Asghanových vrat. Tam ho také najdu.");
+	B_LogEntry(CH2_MCEggs,"Templář Gor Na Bar se připojil k posile u Asghanovy brány hned, jak jsem se zmínil o hnízdě důlních červů. Tam ho také najdu.");
 };
 
 // ***************** Infos *****************************
@@ -101,7 +101,7 @@ func void Tpl_1400_GorNaBar_INFO_Info()
 	AI_Output(other,self,"Tpl_1400_GorNaBar_INFO_Info_15_01"); //Co víš o důlních červech?
 //	AI_Output(self,other,"Tpl_1400_GorNaBar_INFO_Info_09_02"); //The crawlers must have a nest somewhere. If we only knew where, we could destroy the whole brood!
 //	AI_Output(self,other,"Tpl_1400_GorNaBar_INFO_Info_09_02"); //Die Crawler müssen irgendwo ein Nest haben. Wenn wir nur wüssten, wo es ist, dann würden wir die ganze Brut ausrotten!
-	AI_Output(self,other,"Tpl_1400_GorNaBar_INFO_Info_09_02"); //Červi tu musí mít někde hnízdo. Kdybysme jenom věděli kde, mohli bysme zničit všechna mláďata.
+	AI_Output(self,other,"Tpl_1400_GorNaBar_INFO_Info_09_02"); //Důlmí červi tu musí mít někde hnízdo. Kdybychom jenom věděli kde, mohli bychom zničit všechna mláďata.
 };    
 
 // EIER AM START
@@ -137,5 +137,5 @@ func void Tpl_1400_GorNaBar_VICTORY_Info()
 	Log_CreateTopic(GE_BecomeTemplar,LOG_NOTE);
 //	B_LogEntry(GE_BecomeTemplar,"After bringing back the eggs, I should talk to Cor Angar. Maybe he'll let me join the templars.");
 //	B_LogEntry(GE_BecomeTemplar,"Wenn ich die Eier zurückgebracht habe, sollte ich mal mit Cor Angar reden. Vielleicht nimmt er mich in die Reihen der Templer auf.");
-	B_LogEntry(GE_BecomeTemplar,"Až přinesu ta vajíčka, měl bych si promluvit s Corem Angarem. Možná mi dovolí, abych se přidal k templářům.");
+	B_LogEntry(GE_BecomeTemplar,"Až přinesu ta vajíčka, měl bych si promluvit s Corem Angarem. Možná mě přijme k templářům.");
 };  

@@ -55,7 +55,7 @@ func void STT_301_IAN_HI_Info()
 	AI_Output(other,self,"STT_301_IAN_HI_Info_15_01"); //Ty jsi Ian, šéf tohoto dolu?
 //	AI_Output(self,other,"STT_301_IAN_HI_Info_13_02"); //Yes, I'm Ian. And this is my mine. So don't touch or break anything.
 //	AI_Output(self,other,"STT_301_IAN_HI_Info_13_02"); //Ja, ich bin Ian. Und das hier ist meine Mine. Also fass nichts an und mach nichts kaputt.
-	AI_Output(self,other,"STT_301_IAN_HI_Info_13_02"); //Ano, jsem Ian. A tohle je můj důl. Tak  se ničeho nedotýkej a nic nerozbij.
+	AI_Output(self,other,"STT_301_IAN_HI_Info_13_02"); //Ano, jsem Ian. A tohle je můj důl. Tak se ničeho nedotýkej a nic nerozbij.
 }; 
 // ***************** Infos *****************************
 instance STT_301_IAN_GOMEZ(C_INFO)

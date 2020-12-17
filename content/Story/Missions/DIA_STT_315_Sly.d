@@ -50,7 +50,7 @@ func void DIA_STT_315_Sly_Info()
 	AI_GotoNpc(self,other);
 //	AI_Output(self,other,"DIA_STT_315_Sly_10_01"); //New here, are you? I don't know your face.
 //	AI_Output(self,other,"DIA_STT_315_Sly_10_01"); //Neu hier, was? Dein Gesicht kenne ich nicht.
-	AI_Output(self,other,"DIA_STT_315_Sly_10_01"); //Jsi tady nový, že? Neznám tvou tvář.
+	AI_Output(self,other,"DIA_STT_315_Sly_10_01"); //Jsi tady nový, že? Ještě jsem tě tu neviděl.
 //	AI_Output(self,other,"DIA_STT_315_Sly_10_02"); //I'm Sly. I have a job on offer for a newcomer.
 //	AI_Output(self,other,"DIA_STT_315_Sly_10_02"); //Ich bin Sly. Ich hätte was zu tun für einen Neuen.
 	AI_Output(self,other,"DIA_STT_315_Sly_10_02"); //Jsem Sly. Měl bych něco na práci, pro nováčka.
@@ -86,7 +86,7 @@ func void DIA_STT_315_LostNek_Info()
 	AI_Output(other,self,"DIA_STT_315_LostNek_15_00"); //Máš pro mě práci? O co jde?
 //	AI_Output(self,other,"DIA_STT_315_LostNek_10_01"); //One of our guards has disappeared! He's called Nek. He might have gone over to the New Camp.
 //	AI_Output(self,other,"DIA_STT_315_LostNek_10_01"); //Einer unserer Gardisten ist verschwunden! Er heißt Nek. Er könnte ins Neue Lager übergelaufen sein.
-	AI_Output(self,other,"DIA_STT_315_LostNek_10_01"); //Jeden našich strážců zmizel! Jmenoval se Nek. Možná odešel do Nového tábora.
+	AI_Output(self,other,"DIA_STT_315_LostNek_10_01"); //Jeden z našich strážců zmizel! Jmenuje se Nek. Možná odešel do Nového tábora.
 //	AI_Output(self,other,"DIA_STT_315_LostNek_10_02"); //You're new here and you'll get around quite a lot. So keep your eyes peeled.
 //	AI_Output(self,other,"DIA_STT_315_LostNek_10_02"); //Du bist neu hier und kommst viel rum. Also halt die Augen offen.
 	AI_Output(self,other,"DIA_STT_315_LostNek_10_02"); //Jsi tady nový a hodně se tu potuluješ. Takže měj oči na stopkách.
@@ -106,7 +106,7 @@ func void DIA_STT_315_LostNek_Info()
 	{
 //		Info_AddChoice(DIA_STT_315_LostNek,"What good will your speaking up for me do?",DIA_STT_315_LostNek_Why);
 //		Info_AddChoice(DIA_STT_315_LostNek,"Was kann ein gutes Wort von dir denn bewirken?",DIA_STT_315_LostNek_Why);
-		Info_AddChoice(DIA_STT_315_LostNek,"Co mohu udělat, aby ses za mě přimluvil?",DIA_STT_315_LostNek_Why);
+		Info_AddChoice(DIA_STT_315_LostNek,"K čemu mi bude, že se za mě přimluvíš?",DIA_STT_315_LostNek_Why);
 	};
 };
 
@@ -114,7 +114,7 @@ func void DIA_STT_315_LostNek_Why()
 {
 //	AI_Output(other,self,"DIA_STT_315_LostNek_Why_15_00"); //What good will your speaking up for me do?
 //	AI_Output(other,self,"DIA_STT_315_LostNek_Why_15_00"); //Was kann ein gutes Wort von dir bewirken?
-	AI_Output(other,self,"DIA_STT_315_LostNek_Why_15_00"); //Co mohu udělat, aby ses za mě přimluvil?
+	AI_Output(other,self,"DIA_STT_315_LostNek_Why_15_00"); //K čemu mi bude, že se za mě přimluvíš?
 //	AI_Output(self,other,"DIA_STT_315_LostNek_Why_10_01"); //If you wannna join the Camp, you need people to speak up for you.
 //	AI_Output(self,other,"DIA_STT_315_LostNek_Why_10_01"); //Wenn du hier im Lager aufgenommen werden willst, brauchst du Leute, die für dich sprechen.
 	AI_Output(self,other,"DIA_STT_315_LostNek_Why_10_01"); //Jestli se chceš přidat do tábora, budeš potřebovat lidi, kteří se za tebe přimluví.
@@ -130,7 +130,7 @@ func void DIA_STT_315_LostNek_DoIt()
 	AI_Output(other,self,"DIA_STT_315_LostNek_DoIt_15_00"); //Uvidím, jestli ho dokážu najít.
 //	AI_Output(self,other,"DIA_STT_315_LostNek_DoIt_10_01"); //If you meet Fletcher, ask him about Nek. He's taken over his distric' since Nek disappeared.
 //	AI_Output(self,other,"DIA_STT_315_LostNek_DoIt_10_01"); //Wenn du Fletcher triffst, frag ihn über Nek. Er hat sein Viertel übernommen, seit Nek verschwunden ist.
-	AI_Output(self,other,"DIA_STT_315_LostNek_DoIt_10_01"); //Až potkáš Fletchera, zeptej se ho na Neka. Dohlíží na jeho obvod od doby, co Nek zmizel.
+	AI_Output(self,other,"DIA_STT_315_LostNek_DoIt_10_01"); //Až potkáš Fletchera, zeptej se ho na Neka. Dohlíží na jeho obvod od doby, co zmizel.
 //	AI_Output(other,self,"DIA_STT_315_LostNek_DoIt_15_02"); //Where will I find him?
 //	AI_Output(other,self,"DIA_STT_315_LostNek_DoIt_15_02"); //Wo finde ich ihn?
 	AI_Output(other,self,"DIA_STT_315_LostNek_DoIt_15_02"); //Kde ho najdu?
@@ -235,7 +235,7 @@ func void DIA_STT_315_LostNekSuccess_Proof()
 		Log_SetTopicStatus(CH1_JoinOC,LOG_RUNNING);
 //		B_LogEntry(CH1_JoinOC,"I've given Sly Nek's amulet. He'll talk to Diego and speak in my favor.");
 //		B_LogEntry(CH1_JoinOC,"Ich habe Sly das Amulett von Nek gegeben. Er wird mit Diego sprechen und ein gutes Wort für mich einlegen.");
-		B_LogEntry(CH1_JoinOC,"Dal jsem Slyovi Nekův amulet. Promluví si z Diegem a přimluví se za mě.");
+		B_LogEntry(CH1_JoinOC,"Promluví si z Diegem a přimluví se za mě.");
 	}
 	else
 	{ 
@@ -243,7 +243,7 @@ func void DIA_STT_315_LostNekSuccess_Proof()
 		Log_SetTopicStatus(CH1_JoinOC,LOG_FAILED);
 //		B_LogEntry(CH1_JoinOC,"I've given Sly Nek's amulet. Not that it's going to do me any good - the Old Camp won't let me join any more anyway.");
 //		B_LogEntry(CH1_JoinOC,"Ich habe Sly das Amulett von Nek gegeben, allerdings bringt mir das Nichts, denn im Alten Lager werde ich nicht mehr aufgenommen.");
-		B_LogEntry(CH1_JoinOC,"Dal jsem Slyovi Nekův amulet. Bohužel však z toho nic mít nebudu. Ke Starému táboru se už nemohu přidat.");
+		B_LogEntry(CH1_JoinOC,"Bohužel však z toho nic mít nebudu. Ke Starému táboru se už nemohu přidat.");
 	};
 	Info_ClearChoices(DIA_STT_315_LostNekSuccess);
 	AI_StopProcessInfos(self);
@@ -286,7 +286,6 @@ instance DIA_STT_315_Sly_AfterSuccess(C_INFO)
 //	description = "How's it going?";
 //	description = "Wie läuft's denn so?";
 	description = "Jak to jde?";
-
 };
 
 func int DIA_STT_315_Sly_AfterSuccess_Condition()

@@ -194,7 +194,7 @@ func void DIA_Fingers_Lehrer_Lockpick()
 		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick_05_02"); //Především se musíš ujistit, že se tvůj paklíč nezlomí.
 //		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick_05_03"); //If you're a little bit more patient in future, you'll see that you won't need that many lockpicks any more!
 //		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick_05_03"); //Wenn du in Zukunft mit weniger Gewalt an die Sache rangehst, wirst du merken, dass du weniger Dietriche verbrauchst!
-		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick_05_03"); //Pokud budeš budeš k zámkům přistupovat s menší silou, zjistíš, že nepotřebuješ tolik paklíčů.
+		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick_05_03"); //Pokud budeš k zámkům přistupovat s menší silou, zjistíš, že nepotřebuješ tolik paklíčů.
 	};
 };
 
@@ -208,13 +208,13 @@ func void DIA_Fingers_Lehrer_Lockpick2()
 	{
 //		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick2_05_01"); //Only when you've gained some experience can you tell when a lockpick is going to break. It makes a different sound!
 //		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick2_05_01"); //Nur wer schon einige Übung hat, merkt genau, wann ihm ein Dietrich abbricht und wann nicht. Du erkennst es am Geräusch!
-		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick2_05_01"); //Až když získáš nějaké zkušenosti odhadneš, kdy se poklíč zlomí. Poznáš to podle zvuku! 
+		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick2_05_01"); //Až když získáš nějaké zkušenosti odhadneš, kdy se paklíč zlomí. Poznáš to podle zvuku! 
 //		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick2_05_02"); //I think you have it. Learn to listen for the gentle clicking of the lock and you won't lose so many lockpicks in future.
 //		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick2_05_02"); //Ich denke, du bist jetzt so weit - lerne, auf das leise Klicken des Schlosses zu achten, und du wirst nur noch selten das Pech haben, einen Dietrich zu verlieren.
 		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick2_05_02"); //Myslím, že to máš. Nauč se dávat pozor na jemné cvaknutí v zámku, pak už nebudeš přicházet o tolik paklíčů.
 //		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick2_05_03"); //An expert in this field stands a good chance of opening a trunk without breaking his lockpick.
 //		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick2_05_03"); //Ein Meister des Fachs hat eine gute Chance, eine Truhe zu öffnen, ohne dass sein Dietrich überhaupt abbricht.
-		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick2_05_03"); //Odborník v tomto oboru má velkou šanci, že odemkne turhlici, aniž by svůj paklíč zlomil.
+		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick2_05_03"); //Odborník v tomto oboru má velkou šanci, že odemkne turhlici, aniž by zlomil jediný paklíč.
 	};
 };
 

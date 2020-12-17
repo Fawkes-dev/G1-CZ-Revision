@@ -64,7 +64,7 @@ func void Tpl_1401_GorNaKosh_SUGGEST_Info()
 	B_GiveXP(XP_HireGorNaKosh);
 //	B_LogEntry(CH2_MCEggs,"I convinced the templar Gor Na Kosh to join the reinforcements at Asghan's gate. He's waiting for me there."); 
 //	B_LogEntry(CH2_MCEggs,"Ich konnte den Templer Gor Na Kosh als Verstärkung für Asghans Tor gewinnen. Er wartet dort auf mich."); 
-	B_LogEntry(CH2_MCEggs,"Přesvědčil jsem templáře Gora Na Koshe, aby se přidal k  posádce u Asghanových vrat. Bude tam na mě čekat."); 
+	B_LogEntry(CH2_MCEggs,"Přesvědčil jsem templáře Gora Na Koshe, aby se přidal k posádce u Asghanových vrat. Bude tam na mě čekat."); 
 
 	AI_StopProcessInfos(self);
 };
@@ -176,7 +176,7 @@ func void Tpl_1401_GorNaKosh_VICTORY_Info()
 	AI_Output(other,self,"Tpl_1401_GorNaKosh_VICTORY_Info_15_01"); //Našel jsem hnízdo důlních červů!
 //	AI_Output(self,other,"Tpl_1401_GorNaKosh_VICTORY_Info_13_02"); //Wonderful! Now go back to the Camp and finish this mission. Cor Kalom will be waiting for you!
 //	AI_Output(self,other,"Tpl_1401_GorNaKosh_VICTORY_Info_13_02"); //Wunderbar! Gehe nun zurück ins Lager und beende deine Mission. Cor Kalom erwartet dich bestimmt schon!
-	AI_Output(self,other,"Tpl_1401_GorNaKosh_VICTORY_Info_13_02"); //Výborně! Jdizpátky do tábora a dokonči svůj úkol. Cor Kalom tě jistě očekává!
+	AI_Output(self,other,"Tpl_1401_GorNaKosh_VICTORY_Info_13_02"); //Výborně! Jdi zpátky do tábora a dokonči svůj úkol. Cor Kalom tě jistě očekává!
 //	B_LogEntry(CH2_MCEggs,"I'm to take the eggs to Cor Kalom, he's waiting for them.");
 //	B_LogEntry(CH2_MCEggs,"Ich sollte die Eier zu Cor-Kalom bringen, er wird sie schon sehnsüchtig erwarten.");
 	B_LogEntry(CH2_MCEggs,"Měl bych donést ta vajíčka Cor Kalomovi, určitě na ně už čeká.");

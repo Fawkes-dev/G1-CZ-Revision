@@ -38,7 +38,7 @@ instance STT_301_IAN_HI(C_INFO)
 	permanent = 0;
 //	description = "Are you Ian, the boss of the mine?"; 
 //	description = "Bist du Ian, der Chef der Mine?"; 
-	description = "Ty jsi Ian, šéf toho dolu?"; 
+	description = "Ty jsi Ian, šéf tohoto dolu?"; 
 };
 
 func int STT_301_IAN_HI_Condition()
@@ -52,10 +52,10 @@ func void STT_301_IAN_HI_Info()
 {
 //	AI_Output(other,self,"STT_301_IAN_HI_Info_15_01"); //Are you Ian, the boss of the mine?
 //	AI_Output(other,self,"STT_301_IAN_HI_Info_15_01"); //Bist du Ian, der Chef der Mine?
-	AI_Output(other,self,"STT_301_IAN_HI_Info_15_01"); //Ty jsi Ian, šéf toho dolu?
+	AI_Output(other,self,"STT_301_IAN_HI_Info_15_01"); //Ty jsi Ian, šéf tohoto dolu?
 //	AI_Output(self,other,"STT_301_IAN_HI_Info_13_02"); //Yes, I'm Ian. And this is my mine. So don't touch or break anything.
 //	AI_Output(self,other,"STT_301_IAN_HI_Info_13_02"); //Ja, ich bin Ian. Und das hier ist meine Mine. Also fass nichts an und mach nichts kaputt.
-	AI_Output(self,other,"STT_301_IAN_HI_Info_13_02"); //Ano, jsem Ian. A tohle je můj důl. Ničeho se nedotýkej a nic nerozbij.
+	AI_Output(self,other,"STT_301_IAN_HI_Info_13_02"); //Ano, jsem Ian. A tohle je můj důl. Tak se ničeho nedotýkej a nic nerozbij.
 }; 
 // ***************** Infos *****************************
 instance STT_301_IAN_GOMEZ(C_INFO)
@@ -97,7 +97,7 @@ instance STT_301_IAN_ORE(C_INFO)
 	permanent = 0;
 //	description = "Can you tell me something about the ore production here? "; 
 //	description = "Kannst du mir ein paar Takte zur Erzförderung erzählen?"; 
-	description = "Můžeš mi říci něco o zdejší produkci rudy?"; 
+	description = "Můžeš mi něco říci o zdejší produkci rudy?"; 
 };
 
 func int STT_301_IAN_ORE_Condition()
@@ -112,10 +112,10 @@ func void STT_301_IAN_ORE_Info()
 {
 //	AI_Output(other,self,"STT_301_IAN_ORE_Info_15_01"); //Can you tell me something about the ore production here?
 //	AI_Output(other,self,"STT_301_IAN_ORE_Info_15_01"); //Kannst du mir ein paar Takte zur Erzförderung erzählen?
-	AI_Output(other,self,"STT_301_IAN_ORE_Info_15_01"); //Můžeš mi říci něco o zdejší produkci rudy?
+	AI_Output(other,self,"STT_301_IAN_ORE_Info_15_01"); //Můžeš mi něco říci o zdejší produkci rudy?
 //	AI_Output(self,other,"STT_301_IAN_ORE_Info_13_02"); //We dig for ore day and night. This means a storage of 200 sacks per month and another 20 sacks which will be melted down.
 //	AI_Output(self,other,"STT_301_IAN_ORE_Info_13_02"); //Wir fördern hier rund um die Uhr Erz. Im Monat sind das über 200 Säcke Erz, die gelagert werden und noch mal 20 Säcke, die eingeschmolzen werden.
-	AI_Output(self,other,"STT_301_IAN_ORE_Info_13_02"); //Těžíme ve dne v noci. To znamená 200 pytlů měsíčně do skladu a dalších 20 pytlů na přetavení.
+	AI_Output(self,other,"STT_301_IAN_ORE_Info_13_02"); //Těžíme ve dne v noci. Každý měsíc to dělá přes 200 pytlů rudy a dalších 20 pytlů na přetavení.
 //	AI_Output(self,other,"STT_301_IAN_ORE_Info_13_03"); //Hundreds of blades can be forged with the ore we supply to the King.
 //	AI_Output(self,other,"STT_301_IAN_ORE_Info_13_03"); //Mit dem Erz, das wir dem König liefern, können hunderte von Klingen hergestellt werden.
 	AI_Output(self,other,"STT_301_IAN_ORE_Info_13_03"); //Z rudy, kterou dodáváme králi, se můžou ukovat stovky ostří.
@@ -146,7 +146,7 @@ func void STT_301_IAN_MORE_Info()
 	AI_Output(other,self,"STT_301_IAN_MORE_Info_15_01"); //Slyšel jsem, že ta ruda má kouzelnou moc. Řekni mi o tom něco.
 //	AI_Output(self,other,"STT_301_IAN_MORE_Info_13_02"); //The magic ore does have special qualities. Weapons forged from it don't break, their blades are sharper than usual ones.
 //	AI_Output(self,other,"STT_301_IAN_MORE_Info_13_02"); //Das magische Erz besitzt besondere Qualitäten. Es macht die Waffen unzerbrechlich und die Klingen sind schärfer als gewöhnliche.
-	AI_Output(self,other,"STT_301_IAN_MORE_Info_13_02"); //Ta magická moc dodává kovu speciální vlastnosti. Zbraně, které jsou z něj ukovány, se nelámou, jejich ostří jsou ostřejší než obyčejně.
+	AI_Output(self,other,"STT_301_IAN_MORE_Info_13_02"); //Magická ruda má zvláštní vlastnosti. Zbraně z magické rudy jsou nezlomitlné a jejich čepele jsou ostřejší než obyčejné zbraně.
 //	AI_Output(self,other,"STT_301_IAN_MORE_Info_13_03"); //An army equipped with these weapons has a decisive advantage in battle.
 //	AI_Output(self,other,"STT_301_IAN_MORE_Info_13_03"); //Eine Armee, die mit solchen Waffen ausgestattet ist, hat einen entscheidenden Vorteil in jeder Schlacht.
 	AI_Output(self,other,"STT_301_IAN_MORE_Info_13_03"); //Armáda vybavená takovými zbraněmi má rozhodující převahu v boji.
@@ -177,10 +177,10 @@ func void STT_301_IAN_MAGIC_Info()
 	AI_Output(other,self,"STT_301_IAN_MAGIC_Info_15_01"); //Řekni mi víc o té rudě.
 //	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_02"); //Unfortunately the magic powers of the ore vanish during the smelting process. They know the right smelting technique in the blast furnaces of Nordmar.
 //	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_02"); //Leider geht die magische Wirkung des Erzes beim Schmelzen verloren. In den Hochöfen von Nordmar, da kennen sie die richtige Schmelztechnik.
-	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_02"); //Naneštěstí během procesu tavení magické kouzlo rudy vyprchává. V horkovzdušných tavicích pecích u Severního moře znají správnou techniku tavení.
+	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_02"); //Naneštěstí se během procesu tavení magie z rudy vytrácí. Správnou techniku tavení znají jen ve vysokých pecích v Nordmaru. #NEEDS_ATTENTION překlad je korektní, ale je to kostrbaté
 //	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_03"); //But even without the magic powers, weapons made from this ore are extremely resistant and do more damage than normal weapons.
 //	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_03"); //Aber selbst ohne die magische Wirkung sind Waffen aus diesem Erz extrem widerstandsfähig und richten mehr Schaden an als gewöhnliche Waffen.
-	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_03"); //Ale zbraně vyrobené z téhle rudy jsou i bez magického kouzla výjimečně trvanlivé a mají daleko větší účinek než zbraně obyčejné.
+	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_03"); //Ale zbraně vyrobené z této rudy jsou i bez magických vlastností výjimečně odolné a působí daleko větší škody než zbraně obyčejné.
 
 };   
 // ***************** Infos *****************************   
@@ -214,14 +214,14 @@ func void STT_301_IAN_MINE_Info()
 //	AI_Output(self,other,"STT_301_IAN_MINE_Info_13_02"); //Wenn du dich hier weiter umsehen willst, sei vorsichtig. In den Höhlen sind Minecrawler. Am besten du bleibst in diesem Hauptschacht.
 	AI_Output(self,other,"STT_301_IAN_MINE_Info_13_02"); //Jestli se chceš tady porozhlédnout, musíš být opatrný. V jeskyních jsou důlní červi. Měl bys raději zůstat v hlavní šachtě.
 //	AI_Output(self,other,"STT_301_IAN_MINE_Info_13_03"); //And leave the templars alone. Even if they only hang around most of the time, they're the best fighters you can ever have at your side when it comes down to the crawlers.
-//	AI_Output(self,other,"STT_301_IAN_MINE_Info_13_03"); //Und lass die Templer in Ruhe. Sie lungern zwar die meiste Zeit nur rum, aber wenn die Crawler kommen,gibt es keinen besseren Kämpfer an deiner Seite.
-	AI_Output(self,other,"STT_301_IAN_MINE_Info_13_03"); //A nechat templáře na pokoji. Sice se většinu času jen tak procházejí, ale když přijdou červi, jsou to nejlepší bojovníci, jaké vůbec můžeme na naší straně mít.
+//	AI_Output(self,other,"STT_301_IAN_MINE_Info_13_03"); //Und lass die Templer in Ruhe. Sie lungern zwar die meiste Zeit nur rum, aber wenn die Crawler kommen, gibt es keinen besseren Kämpfer an deiner Seite.
+	AI_Output(self,other,"STT_301_IAN_MINE_Info_13_03"); //A nechat templáře na pokoji. Sice se většinu času jen tak procházejí, ale když přijdou červi, jsou to nejlepší bojovníci, jaké vůbec můžeš mít na své straně.
 //	AI_Output(other,self,"STT_301_IAN_MINE_Info_15_04"); //I'll keep that in mind.
 //	AI_Output(other,self,"STT_301_IAN_MINE_Info_15_04"); //Ich werd's mir merken.
 	AI_Output(other,self,"STT_301_IAN_MINE_Info_15_04"); //Budu si to pamatovat.
 //	AI_Output(self,other,"STT_301_IAN_MINE_Info_13_05"); //I have some work to do. And don't keep my boys from doing their work.
 //	AI_Output(self,other,"STT_301_IAN_MINE_Info_13_05"); //Ich hab' noch zu tun. Und halte meine Jungs nicht von der Arbeit ab.
-	AI_Output(self,other,"STT_301_IAN_MINE_Info_13_05"); //Musím něco dělat. A neruš moje chlapy při práci.
+	AI_Output(self,other,"STT_301_IAN_MINE_Info_13_05"); //Musím ještě něco dělat. A neruš moje chlapy při práci.
 //	AI_Output(other,self,"STT_301_IAN_MINE_Info_15_06"); //I'll just have a look around here.
 //	AI_Output(other,self,"STT_301_IAN_MINE_Info_15_06"); //Ich sehe mich nur mal um.
 	AI_Output(other,self,"STT_301_IAN_MINE_Info_15_06"); //Jen se tu rozhlížím.
@@ -336,7 +336,7 @@ func void STT_301_IAN_NEST_Info()
 	AI_Output(other,self,"STT_301_IAN_NEST_Info_15_03"); //Poslyš, potřebuju se teď dostat do jejich hnízda...
 //	AI_Output(self,other,"STT_301_IAN_NEST_Info_13_04"); //I don't have time to see to it now. Our masher doesn't work any more. The gearwheel broke a few hours ago.
 //	AI_Output(self,other,"STT_301_IAN_NEST_Info_13_04"); //Ich habe jetzt keine Zeit, mich darum zu kümmern. Unser Stampfer ist kaputt. Vor ein paar Stunden ist das Zahnrad gebrochen.
-	AI_Output(self,other,"STT_301_IAN_NEST_Info_13_04"); //Nemám čas se teď o to starat. Drtička přestala pracovat. Před několika hodinami se rozbilo ozubené kolo.
+	AI_Output(self,other,"STT_301_IAN_NEST_Info_13_04"); //Nemám teď čas se o to starat. Naše drtička je rozbitá. Před několika hodinami se rozbilo ozubené kolo.
 //	AI_Output(self,other,"STT_301_IAN_NEST_Info_13_05"); //I've no idea where to get a new one.
 //	AI_Output(self,other,"STT_301_IAN_NEST_Info_13_05"); //Ich hab' noch keine Idee, wo ich ein neues herbekommen kann.
 	AI_Output(self,other,"STT_301_IAN_NEST_Info_13_05"); //Nemám potuchy, kde vzít nové.
@@ -383,7 +383,7 @@ func void STT_301_IAN_GEAR_RUN_Info()
 	AI_Output(self,other,"STT_301_IAN_GEAR_RUN_Info_13_02"); //Nemám představu. Jsem stejně bezradný jako ty!
 //	AI_Output(self,other,"STT_301_IAN_GEAR_RUN_Info_13_03"); //But there's an old broken masher in a side shaft. Maybe you'll be lucky there.
 //	AI_Output(self,other,"STT_301_IAN_GEAR_RUN_Info_13_03"); //Aber es gibt in einem Nebenschacht noch einen alten, kaputten Stampfer. Vielleicht hast du ja dort Glück.
-	AI_Output(self,other,"STT_301_IAN_GEAR_RUN_Info_13_03"); //V postranní šachtě je ale stará porouchaná drtička. Možná by se dalo vzít tam.
+	AI_Output(self,other,"STT_301_IAN_GEAR_RUN_Info_13_03"); //Ale v postranní šachtě je stará porouchaná drtička. Možná budeš mít štěstí tam.
 };
 
 // ******************************MISSION SUCCESS********************************************  
@@ -427,14 +427,14 @@ func void STT_301_IAN_GEAR_SUC_Info()
 	AI_Output(self,other,"STT_301_IAN_GEAR_SUC_Info_13_02"); //Hej, dobrá práce. Myslím, že funguje. No a teď ty, hledáš hnízdo důlního červa... hmmm...
 //	AI_Output(self,other,"STT_301_IAN_GEAR_SUC_Info_13_03"); //Just go to Asghan and tell him to open the gate, so you can search the dark shafts.
 //	AI_Output(self,other,"STT_301_IAN_GEAR_SUC_Info_13_03"); //Geh mal zu Asghan, er soll das Tor öffnen, damit du die dunklen Schächte durchsuchen kannst.
-	AI_Output(self,other,"STT_301_IAN_GEAR_SUC_Info_13_03"); //Běž za Asghanem a řekni mu, aby ti otevřel vrata, aby ses dostal do temných šachet.
+	AI_Output(self,other,"STT_301_IAN_GEAR_SUC_Info_13_03"); //Běž za Asghanem a řekni mu, aby ti otevřel vrata, aby ses dostal do neosvětlených šachet.
 //	AI_Output(self,other,"STT_301_IAN_GEAR_SUC_Info_13_04"); //"Just tell him ""Everything's gonna be fine."" Then he'll know that I've given you permission."
 //	AI_Output(self,other,"STT_301_IAN_GEAR_SUC_Info_13_04"); //Sag ihm einfach, "Alles wird gut". Dann wird er wissen, das ich die Erlaubnis gegeben habe.
-	AI_Output(self,other,"STT_301_IAN_GEAR_SUC_Info_13_04"); //Řekni mu jenom 'Všechno jde dobře'. Tím bude srozuměný s tím, že jsem ti dal povolení.
+	AI_Output(self,other,"STT_301_IAN_GEAR_SUC_Info_13_04"); //Jednoduše mu řekni 'Všechno bude dobré'. Tak bude vědět, že jsem ti dal povolení.
 
 //	B_LogEntry(CH2_MCEggs,"I brought Ian the gearwheel from the abandoned ore masher. Ian said I should say EVERYTHING'S GOING TO BE FINE to Asghan. Apparently, that'll make him open the gate to the dark shafts.");
 //	B_LogEntry(CH2_MCEggs,"Ich habe Ian das Zahnrad des verlassenen Erzstampfers gebracht.Ian sagte mir,wenn ich Asgahn die Worte ALLES WIRD GUT sagen, dann wird er das Tor zu den dunklen Schächten öffnen.");
-	B_LogEntry(CH2_MCEggs,"Přinesl jsem Ianovi ozubené kolo z vyřazené drtičky rudy. Ian prohlásil, že mám Asghanovi říci VŠECHNO BUDE V POŘÁDKU. Potom mi otevře vrata do temných šachet.");
+	B_LogEntry(CH2_MCEggs,"Přinesl jsem Ianovi ozubené kolo z vyřazené drtičky rudy. Ian řekl, že mám Asghanovi říci VŠECHNO BUDE DOBRÉ. Potom mi otevře vrata do neosvětlených šachet.");
 };
 
 // ******************************GOTO ASGHAN********************************************  
@@ -499,13 +499,13 @@ func void STT_301_IAN_AFTERALL_Info()
 	AI_Output(other,self,"STT_301_IAN_AFTERALL_Info_15_01"); //Našel jsem hnízdo!
 //	AI_Output(self,other,"STT_301_IAN_AFTERALL_Info_13_02"); //Then we'll finally have peace and quiet here again. Hahaha!
 //	AI_Output(self,other,"STT_301_IAN_AFTERALL_Info_13_02"); //Dann kehrt jetzt hier endlich wieder Ruhe ein. Hahaha!
-	AI_Output(self,other,"STT_301_IAN_AFTERALL_Info_13_02"); //Tak už tady budeme konečně mít mír a klid, hahaha!
+	AI_Output(self,other,"STT_301_IAN_AFTERALL_Info_13_02"); //Tak už tady konečně budeme klid, hahaha!
 //	AI_Output(self,other,"STT_301_IAN_AFTERALL_Info_13_03"); //No offence. Good work, boy!
 //	AI_Output(self,other,"STT_301_IAN_AFTERALL_Info_13_03"); //Nichts für ungut. Gute Arbeit, Kleiner!
 	AI_Output(self,other,"STT_301_IAN_AFTERALL_Info_13_03"); //Bez urážky. Dobrá práce, hochu!
 //	AI_Output(self,other,"STT_301_IAN_AFTERALL_Info_13_04"); //Here, take this crate of beer for your efforts.
 //	AI_Output(self,other,"STT_301_IAN_AFTERALL_Info_13_04"); //Hier, nimm diese Kiste Bier für deine Mühen.
-	AI_Output(self,other,"STT_301_IAN_AFTERALL_Info_13_04"); //Tady si vezmi basu piv za svoji snahu.
+	AI_Output(self,other,"STT_301_IAN_AFTERALL_Info_13_04"); //Tady, vezmi si basu piv za svoji snahu.
 	CreateInvItems(self,ItFo_OM_Beer_01,6);
 	B_GiveInvItems(self,hero,ItFo_OM_Beer_01,6);
 };
@@ -538,5 +538,5 @@ func void STT_301_IAN_NOTENOUGH_Info()
 	AI_Output(other,self,"STT_301_IAN_NOTENOUGH_Info_15_01"); //Našel jsem hnízdo! A vajíčka královny důlních červů!
 //	AI_Output(self,other,"STT_301_IAN_NOTENOUGH_Info_13_02"); //What? Is that all the eggs you found? Well, so what. You've proved you can fight.
 //	AI_Output(self,other,"STT_301_IAN_NOTENOUGH_Info_13_02"); //Wie? Nur so wenig Eier? Na, was soll's. Du hast bewiesen, dass du kämpfen kannst.
-	AI_Output(self,other,"STT_301_IAN_NOTENOUGH_Info_13_02"); //Cože? Tohle jsou všechna vajíčka, co jsi našel? Nu, co. Ukázal jsi, že umíš bojovat.
+	AI_Output(self,other,"STT_301_IAN_NOTENOUGH_Info_13_02"); //Cože? Tak málo vajíček? Nu, co. Ukázal jsi, že umíš bojovat.
 };

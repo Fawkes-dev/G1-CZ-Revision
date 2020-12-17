@@ -77,7 +77,7 @@ func void Tpl_1437_Templer_LEAVE_Info()
 	AI_Output(other,self,"Tpl_1437_Templer_LEAVE_Info_15_01"); //Všechno v pořádku?
 //	AI_Output(self,other,"Tpl_1437_Templer_LEAVE_Info_13_02"); //I want my peace, got it? So just clear off and do something else - anything!
 //	AI_Output(self,other,"Tpl_1437_Templer_LEAVE_Info_13_02"); //Ich will meine Ruhe haben, verstanden? Also geh einfach weg und mach irgendwas, irgendwas anderes!
-	AI_Output(self,other,"Tpl_1437_Templer_LEAVE_Info_13_02"); //Chci svůj klid, jasný? Tak se kliď a dělej něco - jiného!
+	AI_Output(self,other,"Tpl_1437_Templer_LEAVE_Info_13_02"); //Chci svůj klid, jasný? Tak se kliď a dělej něco... něco jiného! #NEEDS_ATTENTION
 	AI_StopProcessInfos(self);
 };
 // ERNEUTES ANSPRECHEN ------------------------------------
@@ -117,10 +117,10 @@ func void Tpl_1437_Templer_LEAVENOW_Info()
 	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_04"); //Odejdi z dolu!
 //	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_05"); //NEVER address me again!
 //	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_05"); //Sprich mich NIE wieder an!
-	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_05"); //NIKDY mě už neoslovuj!
+	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_05"); //NIKDY už na mě nemluv!
 //	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_06"); //Clear off! Leave me alone!
 //	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_06"); //Hau ab! lass mich in Ruhe!
-	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_06"); //Vypadni! Nech mě o samotě!
+	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_06"); //Vypadni! Nech mě být!
 //	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_07"); //GET LOST!!
 //	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_07"); //VERPISS DICH !!!
 	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_07"); //ZTRAŤ SE!!

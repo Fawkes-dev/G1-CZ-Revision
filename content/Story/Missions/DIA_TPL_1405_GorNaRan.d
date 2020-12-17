@@ -9,7 +9,7 @@ instance DIA_GorNaRan_Exit(C_INFO)
 	condition = DIA_GorNaRan_Exit_Condition;
 	information = DIA_GorNaRan_Exit_Info;
 	permanent = 1;
-	description = "END";
+	description = DIALOG_ENDE;
 };                       
 
 func int DIA_GorNaRan_Exit_Condition()
@@ -53,7 +53,7 @@ func void DIA_GorNaRan_Wache_Info()
 	AI_Output(self,other,"DIA_GorNaRan_Wache_13_01"); //Dávám pozor, aby se močáloví žraloci nedostali příliš blízko k táboru.
 //	AI_Output(self,other,"DIA_GorNaRan_Wache_13_02"); //If I were you, I'd steer clear of the beasts. You don't stand a chance against them.
 //	AI_Output(self,other,"DIA_GorNaRan_Wache_13_02"); //Wenn ich du wäre, würde ich 'nen weiten Bogen um die Viecher machen. Du hast keine Chance gegen sie.
-	AI_Output(self,other,"DIA_GorNaRan_Wache_13_02"); //Být tebou, tak bych se od těch bestií držel dál. Nemáš proti nim vůbec šanci.
+	AI_Output(self,other,"DIA_GorNaRan_Wache_13_02"); //Být tebou, vyhnul bych se těm bestiím. Nemáš proti nim vůbec šanci.
 //	AI_Output(self,other,"DIA_GorNaRan_Wache_13_03"); //Now don't disturb me any more, I need to keep my eyes peeled.
 //	AI_Output(self,other,"DIA_GorNaRan_Wache_13_03"); //Jetzt stör' mich nicht weiter, ich muss die Augen aufhalten.
 	AI_Output(self,other,"DIA_GorNaRan_Wache_13_03"); //Teď už mě neruš, musím dávat bedlivý pozor.
@@ -112,7 +112,7 @@ func void Info_TPL_1405_GorNaRan2_Info()
 	AI_Output(other,self,"Info_TPL_1405_GorNaRan_Info_15_02"); //Co se tu vlastně děje?
 //	AI_Output(self,other,"Info_TPL_1405_GorNaRan_Info_13_03"); //You're asking me what's going on? Throw yourself into the dust and pay tribute to the Sleeper, because at this very moment he awakens to banish all infidels from this world.
 //	AI_Output(self,other,"Info_TPL_1405_GorNaRan_Info_13_03"); //Du fragst mich, was hier los ist? Wirf dich in den Staub und huldige dem Schläfer, denn just in diesem Moment erwacht er und wird alle Ungläubigen vom Antlitz dieser Welt verbannen.
-	AI_Output(self,other,"Info_TPL_1405_GorNaRan_Info_13_03"); //Ptáš se mě, co se tu děje? Vrhni se do prachu a vzdávej úctu Spáčovi, protože v okamžiku procitne, aby zatratil všechny bezvěrce na tomhle světě.
+	AI_Output(self,other,"Info_TPL_1405_GorNaRan_Info_13_03"); //Ptáš se mě, co se tu děje? Vrhni se do prachu a vzdej hold Spáčovi, který za okamžik procitne, a zatratí všechny bezvěrce na tomhle světě.
 };
 
 // ****************** ANGRIFF  *********************
@@ -126,7 +126,7 @@ instance Info_TPL_1405_GorNaRan3(C_INFO)
 	permanent = 1;
 //	description = "Just wanted to have a look around.";
 //	description = "Wollte mich nur umsehen";
-	description = "Chtěl jsem se jenom porozhlédnout.";
+	description = "Chtěl jsem se tu jen porozhlédnout.";
 };                       
 
 func int Info_TPL_1405_GorNaRan3_Condition()
@@ -140,10 +140,10 @@ func void Info_TPL_1405_GorNaRan3_Info()
 { 
 //	AI_Output(other,self,"Info_TPL_1405_GorNaRan_Info_15_04"); //Just wanted to have a look around.
 //	AI_Output(other,self,"Info_TPL_1405_GorNaRan_Info_15_04"); //Wollte mich nur umsehen.
-	AI_Output(other,self,"Info_TPL_1405_GorNaRan_Info_15_04"); //Chtěl jsem se jenom porozhlédnout.
+	AI_Output(other,self,"Info_TPL_1405_GorNaRan_Info_15_04"); //Chtěl jsem se tu jen porozhlédnout.
 //	AI_Output(self,other,"Info_TPL_1405_GorNaRan_Info_13_05"); //You worm, you and your kind have no business here when the Sleeper awakes! I'll have to clear you out of the way.
 //	AI_Output(self,other,"Info_TPL_1405_GorNaRan_Info_13_05"); //Du Wurm, du und deinesgleichen haben hier nichts zu suchen, wenn der Schläfer erwacht! Ich werde dich aus dem Weg räumen müssen.
-	AI_Output(self,other,"Info_TPL_1405_GorNaRan_Info_13_05"); //Ty červe, ty a tobě podobní tady nebudete mít co pohledávat, až se Spáč probudí! Budu tě odtud muset vyprovodit.
+	AI_Output(self,other,"Info_TPL_1405_GorNaRan_Info_13_05"); //Ty červe, ty a tobě podobní tady nemáte co pohledávat, až Spáč procitne! Budu tě muset odstranit z cesty.
 
 	AI_StopProcessInfos(self);
 

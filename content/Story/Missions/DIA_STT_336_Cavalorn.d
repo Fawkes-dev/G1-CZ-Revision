@@ -35,7 +35,7 @@ instance DIA_cavalorn_Hunter(C_INFO)
 	permanent = 0;
 //	description = "What are you doing out here?"; 
 //	description = "Was machst du hier draußen?"; 
-	description = "Co děláš tady venku?"; 
+	description = "Co tady venku děláš?"; 
 };
 
 func int DIA_cavalorn_Hunter_Condition()
@@ -47,10 +47,10 @@ func void DIA_cavalorn_Hunter_Info()
 {
 //	AI_Output(other,self,"DIA_cavalorn_Hunter_15_00"); //What are you doing out here?
 //	AI_Output(other,self,"DIA_cavalorn_Hunter_15_00"); //Was machst du hier draußen?
-	AI_Output(other,self,"DIA_cavalorn_Hunter_15_00"); //Co děláš tady venku?
+	AI_Output(other,self,"DIA_cavalorn_Hunter_15_00"); //Co tady venku děláš
 //	AI_Output(self,other,"DIA_cavalorn_Hunter_12_01"); //I'm a hunter - above all I hunt scavengers.
 //	AI_Output(self,other,"DIA_cavalorn_Hunter_12_01"); //Ich bin Jäger - ich jage vor allem Scavenger.
-	AI_Output(self,other,"DIA_cavalorn_Hunter_12_01"); //Jsem lovec - lovím především mrchožrouty..
+	AI_Output(self,other,"DIA_cavalorn_Hunter_12_01"); //Jsem lovec - lovím především mrchožrouty.
 
 };
 
@@ -134,10 +134,10 @@ func void DIA_Cavalorn_Lehrer_Bow()
 		AI_Output(self,other,"DIA_cavalorn_Lehrer_Bow_12_02"); //Rozkroč nohy hodně od sebe, drž ruce ve stejné výšce, nadechni se - a vystřel!
 //		AI_Output(self,other,"DIA_cavalorn_Lehrer_Bow_12_03"); //If you hit certain parts of the body, you only need one shot. As a beginner, you've only got a very small chance of hitting these parts.
 //		AI_Output(self,other,"DIA_cavalorn_Lehrer_Bow_12_03"); //An bestimmten Stellen des Körpers reicht ein Schuss aus, um dein Ziel zu erlegen. Als Anfänger hast du nur eine kleine Chance, diese Stellen zu erwischen.
-		AI_Output(self,other,"DIA_cavalorn_Lehrer_Bow_12_03"); //Pokud zasáhneš určité partie těla, stačí jediný výstřel. Jako začátečník máš jen nepatrnou naději zasáhnout tyhle partie.
+		AI_Output(self,other,"DIA_cavalorn_Lehrer_Bow_12_03"); //Pokud zasáhneš určité partie těla, stačí jediný výstřel. Jako začátečník máš jen nepatrnou naději tato místa zasáhnout.
 //		AI_Output(self,other,"DIA_cavalorn_Lehrer_Bow_12_04"); //But if you bear in mind what I've told you, you'll hit better next time.
 //		AI_Output(self,other,"DIA_cavalorn_Lehrer_Bow_12_04"); //Aber wenn du meine Ratschläge beherzigst, wirst du beim nächsten Mal besser treffen.
-		AI_Output(self,other,"DIA_cavalorn_Lehrer_Bow_12_04"); //Jestli si ale zapamatuješ, co ti řeknu, budeš už příště lepší.
+		AI_Output(self,other,"DIA_cavalorn_Lehrer_Bow_12_04"); //Pokud si vezmeš moje rady k srdci, budeš se už příště lépe ztrefovat.
 	};
 };
 
@@ -150,16 +150,16 @@ func void DIA_Cavalorn_Lehrer_Schleichen()
 		AI_Output(other,self,"DIA_cavalorn_Lehrer_Schleichen_15_00"); //Chci se naučit plížit.
 //		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_01"); //Good idea. That's most important if you want to enter huts to get at somebody from behind.
 //		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_01"); //Gute Entscheidung. Das ist vor allem wichtig, wenn du in Hütten eindringen willst oder dich von hinten an jemanden anschleichst.
-		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_01"); //Dobrý nápad. To je nejdůležitější věc, když se chceš nepozorovaně dostat do něčí chalupy.
+		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_01"); //Dobrý nápad. To je nejdůležitější věc, když se chceš k někomu nepozorovaně dostat zezadu, nebo se vloupat do něčí chatrče.
 //		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_02"); //If you bend your knees when walking, you can see the floor better and you have better control over your body as well.
 //		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_02"); //Wenn du tief nach unten gehst, hast du den Boden besser im Blick und deinen Körper besser unter Kontrolle.
-		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_02"); //Při chůzi se musíš prohnout v kolenou, abys viděl líp na zem a zároveň mohl líp kontrolovat celé tělo.
+		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_02"); //Při chůzi se musíš prohnout v kolenou, abys viděl lépe na zem a zároveň mohl lépe kontrolovat celé tělo.
 //		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_03"); //But everybody will notice you in this posture, so make sure nobody sees you when you sneak around!
 //		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_03"); //Aber in dieser Haltung wirst du natürlich sofort bemerkt, also, lass dich von keinem hier beim Schleichen sehen!
-		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_03"); //Každý si ale tvého postoje všimne, a tak musíš dbát na to, aby tě nikdo při plížení neviděl.
+		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_03"); //Každý si samozřejmě tvého postoje všimne, a tak musíš dbát na to, aby tě nikdo při plížení neviděl.
 //		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_04"); //Keep in mind what I told you, and above all: Never get caught!
 //		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_04"); //Beachte das, was ich dir sage und vor allem: Lass dich nie erwischen!
-		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_04"); //Pamatuj si, co jsem ti řekl, ale především - nikdy se nenech přistihnout!
+		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_04"); //Pamatuj si, co jsem ti řekl, ale především - nenech se nikdy přistihnout!
 	};
 };
 func void DIA_Cavalorn_Lehrer_Bow_2()
@@ -174,10 +174,10 @@ func void DIA_Cavalorn_Lehrer_Bow_2()
 			AI_Output(self,other,"DIA_Cavalorn_Lehrer_Bow_2_Info_12_03"); //Aby ses stal dobrým střelcem, musíš se o to přestat snažit.
 //			AI_Output(self,other,"DIA_Cavalorn_Lehrer_Bow_2_Info_12_04"); //Discover the laws of the eye, tension, trajectory and target. Always watch out and be prepared at all times.
 //			AI_Output(self,other,"DIA_Cavalorn_Lehrer_Bow_2_Info_12_04"); //Erkenne das Gesetz von Auge, Spannkraft, Flugbahn und Ziel. Sei immer auf der Hut, sei immer bereit.
-			AI_Output(self,other,"DIA_Cavalorn_Lehrer_Bow_2_Info_12_04"); //Objev zákony zraku, napětí, dráhy a cíle. Vždy buď ve střehu a buď připravený.
+			AI_Output(self,other,"DIA_Cavalorn_Lehrer_Bow_2_Info_12_04"); //Objev zákony zraku, napětí, dráhy a cíle. Vždy buď ve střehu a buď vždy připravený.
 //			AI_Output(self,other,"DIA_Cavalorn_Lehrer_Bow_2_Info_12_05"); //You've mastered the technique very well now. Now go and apply your knowledge and skill.
 //			AI_Output(self,other,"DIA_Cavalorn_Lehrer_Bow_2_Info_12_05"); //Die Technik beherrscht du schon lange zur Genüge. Geh einfach hin und wende dein Wissen und Können an.
-			AI_Output(self,other,"DIA_Cavalorn_Lehrer_Bow_2_Info_12_05"); //Teď už jsi velmi dobře zvládl techniku. Tak pojď a vyzkoušej své znalosti a umění.
+			AI_Output(self,other,"DIA_Cavalorn_Lehrer_Bow_2_Info_12_05"); //Teď už jsi velmi dobře zvládl techniku. Tak běž a využívej své znalosti a dovednoti.
 	};
 };
 /*------------------------------------------------------------------------

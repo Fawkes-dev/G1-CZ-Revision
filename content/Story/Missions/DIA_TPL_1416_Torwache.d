@@ -53,5 +53,5 @@ func void DIA_Tpl_1416_Torwache_Life_Info()
 	AI_Output(self,other,"DIA_Tpl_1416_Torwache_Life_08_01"); //Mám důležitý úkol. Osvícený a jeho žáci na mě spoléhají.
 //	AI_Output(self,other,"DIA_Tpl_1416_Torwache_Life_08_02"); //My previous life is a thing of the past now. From now on, I'm a GOR NA - a templar of the Sleeper.
 //	AI_Output(self,other,"DIA_Tpl_1416_Torwache_Life_08_02"); //Mein vorheriges Leben gehört der Vergangenheit an. Ab jetzt bin ich ein GOR NA - ein Templer des Schläfers.
-	AI_Output(self,other,"DIA_Tpl_1416_Torwache_Life_08_02"); //Můj dřívější život už je minulost. Teď jsem GOR NA - Spáčův templář.
+	AI_Output(self,other,"DIA_Tpl_1416_Torwache_Life_08_02"); //Můj dřívější život je věc minulosti. Teď jsem GOR NA - Spáčův templář.
 };

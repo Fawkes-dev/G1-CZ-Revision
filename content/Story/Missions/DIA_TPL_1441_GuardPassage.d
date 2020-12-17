@@ -72,7 +72,7 @@ func void Info_TPL_1441_FirstWarn_Condition_YBERION()
 	AI_Output(hero,self,"Info_TPL_1441_FirstWarn_Condition_YBERION_15_01"); //Y´Berion mi dal povolení.
 //	AI_Output(self,hero,"Info_TPL_1441_FirstWarn_Condition_YBERION_13_02"); //Liars tend to lose their tongues easily, so you'd better watch what you're saying.
 //	AI_Output(self,hero,"Info_TPL_1441_FirstWarn_Condition_YBERION_13_02"); //Lügner verlieren sehr schnell ihre Zunge, also pass besser auf, was du sagst.
-	AI_Output(self,hero,"Info_TPL_1441_FirstWarn_Condition_YBERION_13_02"); //Lháři můžou přijít snadno o své jazyky, tak si dávej lepší pozor na to, co říkáš.
+	AI_Output(self,hero,"Info_TPL_1441_FirstWarn_Condition_YBERION_13_02"); //Lhář může celkem snadno přijít o svůj jazyk, tak si radši dávej pozor na to, co říkáš.
 };
 
 func void Info_TPL_1441_FirstWarn_Condition_LESTER()
@@ -82,7 +82,7 @@ func void Info_TPL_1441_FirstWarn_Condition_LESTER()
 	AI_Output(hero,self,"Info_TPL_1441_FirstWarn_Condition_LESTER_15_01"); //Poslal mě novic Lester. Mám nabídnout Y´Berionovi své služby.
 //	AI_Output(self,hero,"Info_TPL_1441_FirstWarn_Condition_LESTER_13_02"); //Lester is trustworthy. I know him. You may pass.
 //	AI_Output(self,hero,"Info_TPL_1441_FirstWarn_Condition_LESTER_13_02"); //Lester ist vertrauenswürdig. Ich kenne ihn. Du kannst passieren.
-	AI_Output(self,hero,"Info_TPL_1441_FirstWarn_Condition_LESTER_13_02"); //Lester je důvěryhodný. Znám ho. Můžeš jít.
+	AI_Output(self,hero,"Info_TPL_1441_FirstWarn_Condition_LESTER_13_02"); //Lester je důvěryhodný. Znám ho. Můžeš projít.
 	Info_Clearchoices (Info_TPL_1441_FirstWarn);
 
 	//---- beide Wachen auf passieren schalten ----
@@ -119,7 +119,7 @@ func int Info_TPL_1441_LastWarn_Info()
 {
 //	AI_Output(self,hero,"Info_TPL_1441_LastWarn_13_01"); //One step further and you'll cease to exist.
 //	AI_Output(self,hero,"Info_TPL_1441_LastWarn_13_01"); //Noch einen Schritt weiter und du trittst deinem Schöpfer gegenüber!
-	AI_Output(self,hero,"Info_TPL_1441_LastWarn_13_01"); //Ještě krok a je s tebou konec.
+	AI_Output(self,hero,"Info_TPL_1441_LastWarn_13_01"); //Ještě krok a setkáš se s tvým stvořitelem!
 
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,TPL_1441_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_LASTWARN; 

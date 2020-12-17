@@ -46,6 +46,6 @@ func void STT_300_Alberto_BUY_Info()
 	AI_Output(other,self,"STT_300_Alberto_BUY_Info_15_01"); //Můžu s tebou něco vyměnit?
 //	AI_Output(self,other,"STT_300_Alberto_BUY_Info_12_02"); //Yep. Anything you want. If you have ore.
 //	AI_Output(self,other,"STT_300_Alberto_BUY_Info_12_02"); //Jupp. Alles, was du willst. Wenn du Erz hast.
-	AI_Output(self,other,"STT_300_Alberto_BUY_Info_12_02"); //Jistě, cokoliv. Jestli máš rudu.
+	AI_Output(self,other,"STT_300_Alberto_BUY_Info_12_02"); //Jistě. Cokoliv chceš, jestli máš rudu.
 
 };  

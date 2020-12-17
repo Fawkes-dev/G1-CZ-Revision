@@ -58,10 +58,10 @@ func void DIA_Whistler_IAmNew_Info()
 	AI_Output(other,self,"DIA_Whistler_IAmNew_15_02"); //Chci se stát jedním z vás - chci se přidat k táboru.
 //	AI_Output(self,other,"DIA_Whistler_IAmNew_11_03"); //Looking for people to support you, eh?
 //	AI_Output(self,other,"DIA_Whistler_IAmNew_11_03"); //Auf der Suche nach Fürsprechern, was?
-	AI_Output(self,other,"DIA_Whistler_IAmNew_11_03"); //Hledáš lidi, kteří by ti pomohli, viď?
+	AI_Output(self,other,"DIA_Whistler_IAmNew_11_03"); //Hledáš lidi, kteří by se za tebe přimluvili, co?
 //	AI_Output(self,other,"DIA_Whistler_IAmNew_11_04"); //If you want me to have a word with Diego about you, you need to do me a favor.
 //	AI_Output(self,other,"DIA_Whistler_IAmNew_11_04"); //Wenn ich ein gutes Wort bei Diego für dich einlegen soll, schuldest du mir einen Gefallen.
-	AI_Output(self,other,"DIA_Whistler_IAmNew_11_04"); //Jestli chceš, abych se za tebe přimluvil u Diega, musíš mi prokázat službičku.
+	AI_Output(self,other,"DIA_Whistler_IAmNew_11_04"); //Pokud se za tebe u Diega přimluvím, budeš mi dlužit službičku.
 };
 
 // **************************************************
@@ -80,7 +80,7 @@ instance DIA_Whistler_Favour(C_INFO)
 	permanent = 0;
 //	description = "What kind of favor do you want?";
 //	description = "Was ist das für ein Gefallen, den du von mir erwartest?";
-	description = "Jakou službičku bys chtěl?";
+	description = "Jakou službičku ode mě očekáváš?";
 };                       
 
 func int DIA_Whistler_Favour_Condition()
@@ -95,21 +95,21 @@ func void DIA_Whistler_Favour_Info()
 {
 //	AI_Output(other,self,"DIA_Whistler_Favour_15_00"); //What kind of favor do you want?
 //	AI_Output(other,self,"DIA_Whistler_Favour_15_00"); //Was ist das für ein Gefallen, den du von mir erwartest?
-	AI_Output(other,self,"DIA_Whistler_Favour_15_00"); //Jakou službičku bys chtěl?
+	AI_Output(other,self,"DIA_Whistler_Favour_15_00"); //Jakou službičku ode mě očekáváš?
 //	AI_Output(self,other,"DIA_Whistler_Favour_11_01"); //I want one of Fisk's weapons. He's one of the traders at the market place.
 //	AI_Output(self,other,"DIA_Whistler_Favour_11_01"); //Ich will eine Waffe von Fisk haben. Er ist einer der Händler am Marktplatz.
 	AI_Output(self,other,"DIA_Whistler_Favour_11_01"); //Chci jednu z Fiskových zbraní. Je to jeden obchodník z tržiště.
 //	AI_Output(self,other,"DIA_Whistler_Favour_11_02"); //He won't sell it to me. It's a broadsword with ornaments.
 //	AI_Output(self,other,"DIA_Whistler_Favour_11_02"); //Er will sie mir nicht mehr verkaufen. Es ist ein Breitschwert mit Ornamenten.
-	AI_Output(self,other,"DIA_Whistler_Favour_11_02"); //Nechce mi ji prodat. Je to zdobený meč se širokou čepelí.
+	AI_Output(self,other,"DIA_Whistler_Favour_11_02"); //Nechce mi ji prodat. Je to široký meč s ornamenty.
 //	AI_Output(self,other,"DIA_Whistler_Favour_11_03"); //I'll give you 100 ore to collect the weapon for me. But don't tell him about me.
 //	AI_Output(self,other,"DIA_Whistler_Favour_11_03"); //Ich gebe dir 100 Erz und du holst die Waffe für mich ab. Aber sag ihm nichts von mir, klar?
-	AI_Output(self,other,"DIA_Whistler_Favour_11_03"); //Dám ti 100 nugetů, abys mi tu zbraň obstaral. O mně mu ale neříkej.
+	AI_Output(self,other,"DIA_Whistler_Favour_11_03"); //Dám ti 100 nugetů a ty mi tu zbraň přineseš. Ale o mně mu nic neříkej, jasné?
 
 	Info_ClearChoices(DIA_Whistler_Favour);
 //	Info_AddChoice(DIA_Whistler_Favour,"Okay, give me the 100 ore nuggets. I'll get the thing.",DIA_Whistler_Favour_Ok);
 //	Info_AddChoice(DIA_Whistler_Favour,"Okay, her mit den 100 Erzbrocken. Ich hol das Ding.",DIA_Whistler_Favour_Ok);
-	Info_AddChoice(DIA_Whistler_Favour,"Dobře, dej mi těch 100 magických nugetů. Dostanu tu věc.",DIA_Whistler_Favour_Ok);
+	Info_AddChoice(DIA_Whistler_Favour,"Dobře, dej mi těch 100 magických nugetů. Přinesu ti tu věc.",DIA_Whistler_Favour_Ok);
 //	Info_AddChoice(DIA_Whistler_Favour,"Did you ever consider that I might just run off with the ore...?",DIA_Whistler_Favour_OreAway);
 //	Info_AddChoice(DIA_Whistler_Favour,"Hast du mal daran gedacht, dass ich mit dem Erz durchbrennen könnte...?",DIA_Whistler_Favour_OreAway);
 	Info_AddChoice(DIA_Whistler_Favour,"Nenapadlo tě snad, že bych mohl s tou rudou utéct...?",DIA_Whistler_Favour_OreAway);
@@ -122,10 +122,10 @@ func void DIA_Whistler_Favour_Ok()
 {
 //	AI_Output(other,self,"DIA_Whistler_Favour_Ok_15_00"); //Okay, give me the 100 ore nuggets. I'll get the thing.
 //	AI_Output(other,self,"DIA_Whistler_Favour_Ok_15_00"); //Okay, her mit den 100 Erzbrocken. Ich hol' das Ding.
-	AI_Output(other,self,"DIA_Whistler_Favour_Ok_15_00"); //Dobře, dej mi těch 100 magických nugetů. Dostanu tu věc.
+	AI_Output(other,self,"DIA_Whistler_Favour_Ok_15_00"); //Dobře, dej mi těch 100 magických nugetů. Přinesu ti tu věc.
 //	AI_Output(self,other,"DIA_Whistler_Favour_Ok_11_01"); //Here you go. Come straight back to me!
 //	AI_Output(self,other,"DIA_Whistler_Favour_Ok_11_01"); //Hier hast du sie. Kommt direkt zu mir zurück!
-	AI_Output(self,other,"DIA_Whistler_Favour_Ok_11_01"); //Tady jsi. Pojď hned sem!
+	AI_Output(self,other,"DIA_Whistler_Favour_Ok_11_01"); //Tady jsou. Přijď hned zpátky!
 
 	Whistler_BuyMySword = LOG_RUNNING;
 
@@ -136,7 +136,7 @@ func void DIA_Whistler_Favour_Ok()
 	};
 //	B_LogEntry(CH1_JoinOC,"Whistler will help me if I go to see Fisk at the market and buy him a sword. He's given me 100 ore.");
 //	B_LogEntry(CH1_JoinOC,"Whistler unterstützt mich, wenn ich ihm bei Fisk auf dem Marktplatz ein Schwert kaufe. Er hat mir 100 Erz gegeben.");
-	B_LogEntry(CH1_JoinOC,"Whistler mi pomůže, když půjdu na tržiště za Fistem a koupím pro něj meč. Dal mi na něj 100 nugetů.");
+	B_LogEntry(CH1_JoinOC,"Whistler mě podpoří, když mu na tržišti u Fiska koupím meč. Dal mi na něj 100 nugetů.");
 
 	var C_NPC fisk; fisk = Hlp_GetNpc(Stt_311_Fisk);
 
@@ -155,7 +155,7 @@ func void DIA_Whistler_Favour_OreAway()
 	AI_Output(other,self,"DIA_Whistler_Favour_OreAway_15_00"); //Nenapadlo tě snad, že bych mohl s tou rudou utéct...?
 //	AI_Output(self,other,"DIA_Whistler_Favour_OreAway_11_01"); //Don't forget: The colony is small! If you run off with my ore, I'll find you!
 //	AI_Output(self,other,"DIA_Whistler_Favour_OreAway_11_01"); //Vergiss nicht: Die Kolonie ist klein! Wenn du mit dem Erz durchbrennst, finde ich dich!
-	AI_Output(self,other,"DIA_Whistler_Favour_OreAway_11_01"); //Nezapomeň: kolonie je malá! Jestli mi s tou rudou utečeš, najdu si tě!
+	AI_Output(self,other,"DIA_Whistler_Favour_OreAway_11_01"); //Nezapomeň, Kolonie je malá! Jestli mi s tou rudou utečeš, najdu si tě!
 };
 
 func void DIA_Whistler_Favour_WhyNotSell()
@@ -165,13 +165,13 @@ func void DIA_Whistler_Favour_WhyNotSell()
 	AI_Output(other,self,"DIA_Whistler_Favour_WhyNotSell_15_00"); //Proč ti tu zbraň nechce prodat?
 //	AI_Output(self,other,"DIA_Whistler_Favour_WhyNotSell_11_01"); //We had a little argument.
 //	AI_Output(self,other,"DIA_Whistler_Favour_WhyNotSell_11_01"); //Wir hatten eine kleine Meinungsverschiedenheit.
-	AI_Output(self,other,"DIA_Whistler_Favour_WhyNotSell_11_01"); //Má k tomu malý důvod.
+	AI_Output(self,other,"DIA_Whistler_Favour_WhyNotSell_11_01"); //Trošku jsme se nepohodli.
 //	AI_Output(other,self,"DIA_Whistler_Favour_WhyNotSell_15_02"); //And?
 //	AI_Output(other,self,"DIA_Whistler_Favour_WhyNotSell_15_02"); //Und?
-	AI_Output(other,self,"DIA_Whistler_Favour_WhyNotSell_15_02"); //Jaký?
+	AI_Output(other,self,"DIA_Whistler_Favour_WhyNotSell_15_02"); //A?
 //	AI_Output(self,other,"DIA_Whistler_Favour_WhyNotSell_11_03"); //And that's all you need to know!
 //	AI_Output(self,other,"DIA_Whistler_Favour_WhyNotSell_11_03"); //Und das ist alles, was du wissen musst!
-	AI_Output(self,other,"DIA_Whistler_Favour_WhyNotSell_11_03"); //Tohle ti musí stačit!
+	AI_Output(self,other,"DIA_Whistler_Favour_WhyNotSell_11_03"); //A to je všechno, co musíš vědět!
 };
 
 // **************************************************
@@ -187,7 +187,7 @@ instance DIA_Whistler_Running110(C_INFO)
 	permanent = 0;
 //	description = "Fisk wants 110 ore for his sword now.";
 //	description = "Fisk will jetzt 110 Erz für dein Schwert";
-	description = "Fisk chce teď za tu zbraň 110 nugetů.";
+	description = "Fisk teď chce za tvůj meč 110 nugetů.";
 };                       
 
 func int DIA_Whistler_Running110_Condition()
@@ -202,16 +202,16 @@ func void DIA_Whistler_Running110_Info()
 {
 //	AI_Output(other,self,"DIA_Whistler_Running110_15_00"); //Fisk wants 110 ore for his sword now.
 //	AI_Output(other,self,"DIA_Whistler_Running110_15_00"); //Fisk will jetzt 110 Erz für dein Schwert.
-	AI_Output(other,self,"DIA_Whistler_Running110_15_00"); //Fisk chce teď za tu zbraň 110 nugetů.
+	AI_Output(other,self,"DIA_Whistler_Running110_15_00"); //Fisk teď chce za tvůj meč 110 nugetů.
 //	AI_Output(self,other,"DIA_Whistler_Running110_11_01"); //And you want me to give you the 10 ore now...
 //	AI_Output(self,other,"DIA_Whistler_Running110_11_01"); //Und ich soll dir jetzt noch 10 Erz geben ...
-	AI_Output(self,other,"DIA_Whistler_Running110_11_01"); //A ty chceš, abych ti teď dal těch 10 nugetů...
+	AI_Output(self,other,"DIA_Whistler_Running110_11_01"); //A já bych ti měl těch 10 nugetů dát...
 //	AI_Output(other,self,"DIA_Whistler_Running110_15_02"); //I thought you wanted to have that sword.
 //	AI_Output(other,self,"DIA_Whistler_Running110_15_02"); //Ich dachte, du legst Wert auf dein Schwert.
-	AI_Output(other,self,"DIA_Whistler_Running110_15_02"); //Myslel jsem, že chceš ten meč.
+	AI_Output(other,self,"DIA_Whistler_Running110_15_02"); //Myslel jsem, že ti na tom meči záleží.
 //	AI_Output(self,other,"DIA_Whistler_Running110_11_03"); //Here, take it, and now hurry!
 //	AI_Output(self,other,"DIA_Whistler_Running110_11_03"); //Hier, nimm, und jetzt beeil dich!
-	AI_Output(self,other,"DIA_Whistler_Running110_11_03"); //Tady, vem si to a už spěchej!
+	AI_Output(self,other,"DIA_Whistler_Running110_11_03"); //Tady, vem si to a pospíchej!
 	CreateInvItems(self,itminugget,10);
 	B_GiveInvItems(self,hero,itminugget, 10);
 }; 
@@ -250,13 +250,13 @@ func void DIA_Whistler_RunningPayBack_Info()
 	{
 //		AI_Output(self,other,"DIA_Whistler_RunningPayBack_11_01"); //You idiot! We don't need idiots like you here! Get lost!
 //		AI_Output(self,other,"DIA_Whistler_RunningPayBack_11_01"); //Du Idiot! So 'ne Flasche wie dich können wir hier nicht gebrauchen! Zieh Leine!
-		AI_Output(self,other,"DIA_Whistler_RunningPayBack_11_01"); //Ty idiote! Nepotřebujeme tu takové idioty! Ztrať se!
+		AI_Output(self,other,"DIA_Whistler_RunningPayBack_11_01"); //Ty idiote! Takové idioty, jako jsi ty, tu nepotřebujeme! Ztrať se!
 		B_GiveInvItems(hero,self,itminugget, 100);
 		Whistler_BuyMySword = LOG_OBSOLETE;
 
 //		B_LogEntry(CH1_JoinOC,"I've messed it up, Whistler will never get his sword.");
 //		B_LogEntry(CH1_JoinOC,"Ich habs vermasselt, Whistler kriegt sein Schwert nie.");
-		B_LogEntry(CH1_JoinOC,"Nepochodil jsem, Whistler svůj meč už nikdy nedostane.");
+		B_LogEntry(CH1_JoinOC,"Pokazil jsem to, Whistler svůj meč už nikdy nedostane.");
 
 		AI_StopProcessInfos(self);
 	}
@@ -301,7 +301,7 @@ func void DIA_Whistler_MySword_TooLate_Info()
 
 //	B_LogEntry(CH1_JoinOC,"I've messed it up. Whistler is really fed up with me.");
 //	B_LogEntry(CH1_JoinOC,"Ich hab's vermasselt. Whistler ist ganz schön sauer auf mich.");
-	B_LogEntry(CH1_JoinOC,"Nepochodil jsem, Whistler se na mě pořádně naštval.");
+	B_LogEntry(CH1_JoinOC,"Pokazil jsem to, Whistler je teď na mě pořádně naštvaný.");
 
 	AI_StopProcessInfos(self);
 
@@ -345,16 +345,16 @@ func void DIA_Whistler_MySword_Success_Info()
 
 //	AI_Output(self,other,"DIA_Whistler_MySword_Success_11_01"); //Wasn't too hard, was it. Whatever - you do me a favor and I'll do you one.
 //	AI_Output(self,other,"DIA_Whistler_MySword_Success_11_01"); //War ja auch nicht wirklich schwierig. Wie auch immer - eine Hand wäscht die andere.
-	AI_Output(self,other,"DIA_Whistler_MySword_Success_11_01"); //To nebylo tak těžké, že ne? Ale aťsi - prokázal jsi mi službu a já ti ji teď oplatím.
+	AI_Output(self,other,"DIA_Whistler_MySword_Success_11_01"); //To nebylo tak těžké, že ne? Ale aťsi - ruka ruku myje.
 	if (Npc_GetTrueGuild(hero) == GIL_NONE)
 	{
 //	AI_Output(self,other,"DIA_Whistler_MySword_Success_11_02"); //If Diego should ask after you, I'll speak in your favor. Until then - have a good time!
 //	AI_Output(self,other,"DIA_Whistler_MySword_Success_11_02"); //Falls Diego mich nach dir fragt, ist dir meine Stimme sicher. Bis dahin - mach's gut!
-	AI_Output(self,other,"DIA_Whistler_MySword_Success_11_02"); //Když se na tebe bude Diego ptát, budu mluvit v tvůj prospěch. Do té doby - měj se!
+	AI_Output(self,other,"DIA_Whistler_MySword_Success_11_02"); //Až se na tebe bude Diego ptát, budu mluvit v tvůj prospěch. Do té doby - měj se!
 
 //	B_LogEntry(CH1_JoinOC,"Whistler was content when I gave him the sword he wanted. He'll recommend me to Diego.");
 //	B_LogEntry(CH1_JoinOC,"Whistler war zufrieden, als ich ihm das gewünschte Schwert übergab. Er will sich bei Diego für mich einsetzen.");
-	B_LogEntry(CH1_JoinOC,"Whistler byl spokojený, když jsem mu dal meč, o který žádal. Doporučil mě Diegovi.");
+	B_LogEntry(CH1_JoinOC,"Whistler byl spokojený, když jsem mu dal meč, o který žádal. Přimluví se za mě u Diega.");
 	}
 	else
 	{

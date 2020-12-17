@@ -45,11 +45,11 @@ func void Stt_311_Fisk_First_Info()
 {
 //	AI_Output(self,other,"Stt_311_Fisk_First_12_00"); //Hey, man! I'm Fisk. I trade goods of all kinds. If you ever need anything - you're in the right place here.
 //	AI_Output(self,other,"Stt_311_Fisk_First_12_00"); //Hey, Mann! Ich bin Fisk. Ich handele mit Waren aller Art. Wenn du jemals etwas brauchen solltest - bei mir bist du richtig.
-	AI_Output(self,other,"Stt_311_Fisk_First_12_00"); //Hej, člověče. Já jsem Fisk. Obchoduju se zbožím všeho druhu. Jestli budeš kdykoliv a cokoliv potřebovat - tady jsi na správném místě.
+	AI_Output(self,other,"Stt_311_Fisk_First_12_00"); //Hej, člověče. Já jsem Fisk. Obchoduju se zbožím všeho druhu. Jestli budeš kdykoliv a cokoliv potřebovat - u mě jsi na správném místě.
 	Log_CreateTopic(GE_TraderOC,LOG_NOTE);
 //	B_LogEntry(GE_TraderOC,"Fisk, the Shadow, trades with all kinds of goods, especially WEAPONS. He's usually at the market."); 
 //	B_LogEntry(GE_TraderOC,"Fisk, der Schatten handelt mit Waren aller Art, vor allem WAFFEN. Er hält sich am Marktplatz auf."); 
-	B_LogEntry(GE_TraderOC,"Fisk, jeden ze Stínů, obchoduje se vším zbožím, zejména však se ZBRANĚMI. Bývá obvykle na tržišti."); 
+	B_LogEntry(GE_TraderOC,"Fisk, jeden ze Stínů, obchoduje se vším zbožím, zejména však se ZBRANĚMI. Obvykle se zdržuje na tržišti."); 
 
 };
 
@@ -91,7 +91,7 @@ instance Stt_311_Fisk_WhistlersSword(C_INFO)
 	permanent = 1;
 //	description = "I'd like to buy a sword - I'd like something more ornamental...";
 //	description = "Ich will ein Schwert kaufen. Was mit Ornamenten wär schön.";
-	description = "Chtěl bych koupit meč. Ne ale nějaký obyčejný. Chtěl bych nějaký se zdobením.";
+	description = "Chtěl bych koupit meč. Nějaký s ornamenty by byl hezký.";
 };                       
 
 func int Stt_311_Fisk_WhistlersSword_Condition()
@@ -106,13 +106,13 @@ func void Stt_311_Fisk_WhistlersSword_Info()
 {
 //	AI_Output(other,self,"Stt_311_Fisk_WhistlersSword_15_00"); //I'd like to buy a sword. But not just a simple one. I'd like something more ornamental.
 //	AI_Output(other,self,"Stt_311_Fisk_WhistlersSword_15_00"); //Ich will ein Schwert kaufen. Aber nicht so ein einfaches Ding. Was mit Ornamenten wär schön.
-	AI_Output(other,self,"Stt_311_Fisk_WhistlersSword_15_00"); //Chtěl bych koupit meč. Ne ale nějaký obyčejný. Chtěl bych nějaký se zdobením.
+	AI_Output(other,self,"Stt_311_Fisk_WhistlersSword_15_00"); //Chtěl bych koupit meč. Nějaký s ornamenty by byl hezký.
 //	AI_Output(self,other,"Stt_311_Fisk_WhistlersSword_12_01"); //I have one you'll like. The Shadow who wanted to collect it won't be coming any more.
 //	AI_Output(self,other,"Stt_311_Fisk_WhistlersSword_12_01"); //Ich hab' da eins, das dir gefallen könnte. Der Schatten, der es abholen sollte, kommt nicht mehr .
-	AI_Output(self,other,"Stt_311_Fisk_WhistlersSword_12_01"); //Mám jeden takový. Stín, který ho chtěl koupit, už ke mně nikdy znovu nepřišel.
+	AI_Output(self,other,"Stt_311_Fisk_WhistlersSword_12_01"); //Mám tu jeden, který by se ti mohl líbit. Stín, který si ho měl vyzvednout, už nikdy nepříjde.
 //	AI_Output(self,other,"Stt_311_Fisk_WhistlersSword_12_02"); //That'll be 110 ore. Interested?
 //	AI_Output(self,other,"Stt_311_Fisk_WhistlersSword_12_02"); //Kostet 110 Erz. Interessiert?
-	AI_Output(self,other,"Stt_311_Fisk_WhistlersSword_12_02"); //Bude to 110 nugetů, bereš?
+	AI_Output(self,other,"Stt_311_Fisk_WhistlersSword_12_02"); //Stojí 110 nugetů, máš zájem?
 	Fisk_SCknows110 = TRUE;
 
 	Info_ClearChoices(Stt_311_Fisk_WhistlersSword);
@@ -142,7 +142,7 @@ func void Stt_311_Fisk_WhistlersSword_Fault()
 	AI_Output(other,self,"Stt_311_Fisk_WhistlersSword_Fault_15_00"); //Whistlerovi jsi ho chtěl prodat za sto...
 //	AI_Output(self,other,"Stt_311_Fisk_WhistlersSword_Fault_12_01"); //Ah! Just wait... that's right, I nearly charged you too little! Of course I meant 500.
 //	AI_Output(self,other,"Stt_311_Fisk_WhistlersSword_Fault_12_01"); //Ah! Warte mal ... Stimmt, da hätte ich dir ja fast zu wenig abgeknöpft! Ich meinte natürlich fünfhundert.
-	AI_Output(self,other,"Stt_311_Fisk_WhistlersSword_Fault_12_01"); //Ach! Počkej... pravda, málem jsem ti řekl moc málo! Myslel jsem samozřejmě 500.
+	AI_Output(self,other,"Stt_311_Fisk_WhistlersSword_Fault_12_01"); //Ach! Počkej... Pravda, málem jsem ti řekl moc málo! Myslel jsem samozřejmě 500.
 //	AI_Output(other,self,"Stt_311_Fisk_WhistlersSword_Fault_15_02"); //Five hundred?
 //	AI_Output(other,self,"Stt_311_Fisk_WhistlersSword_Fault_15_02"); //Fünfhundert?
 	AI_Output(other,self,"Stt_311_Fisk_WhistlersSword_Fault_15_02"); //Pět set?
@@ -254,7 +254,7 @@ func void Stt_311_Fisk_MordragKO_Info()
 	Info_ClearChoices(Stt_311_Fisk_MordragKO);
 //	Info_AddChoice(Stt_311_Fisk_MordragKO,"You're trading the Ore Barons' belongings! Thorus will be interested...",Stt_311_Fisk_MordragKO_Petze);
 //	Info_AddChoice(Stt_311_Fisk_MordragKO,"Deine Ware gehört den Erzbaronen. Das wird Thorus sicher interessieren...",Stt_311_Fisk_MordragKO_Petze);
-	Info_AddChoice(Stt_311_Fisk_MordragKO,"Obchoduješ s majetkem Rudobaronů! To bude Thoruse zajímat...",Stt_311_Fisk_MordragKO_Petze);
+	Info_AddChoice(Stt_311_Fisk_MordragKO,"Obchoduješ s majetkem Rudobaronů! Thoruse to bude určitě zajímat...",Stt_311_Fisk_MordragKO_Petze);
 //	Info_AddChoice(Stt_311_Fisk_MordragKO,"Relax! Maybe I can make up for it, can't I?",Stt_311_Fisk_MordragKO_Relax);
 //	Info_AddChoice(Stt_311_Fisk_MordragKO,"Entspann dich! Die Sache läßt sich sicher wieder geradebiegen, oder?",Stt_311_Fisk_MordragKO_Relax);
 	Info_AddChoice(Stt_311_Fisk_MordragKO,"Klid! Možná to můžu nějak napravit, ne?",Stt_311_Fisk_MordragKO_Relax);
@@ -270,10 +270,10 @@ func void Stt_311_Fisk_MordragKO_Relax()
 	AI_Output(other,self,"Stt_311_Fisk_MordragKO_Relax_15_00"); //Klid! Možná to můžu nějak napravit, ne?
 //	AI_Output(self,other,"Stt_311_Fisk_MordragKO_Relax_12_01"); //I wouldn't know how you're gonna do that. Unless you get me a new fence from the New Camp!
 //	AI_Output(self,other,"Stt_311_Fisk_MordragKO_Relax_12_01"); //Ich wüsste nicht, wie du das wieder gutmachen kannst. Es sei denn, du schaffst mir einen neuen Hehler aus dem Neuen Lager ran!
-	AI_Output(self,other,"Stt_311_Fisk_MordragKO_Relax_12_01"); //Nevím ale, jak bys to chtěl udělat. Ledaže bys mi našel nového přechovávače věcí z Nového tábora!
+	AI_Output(self,other,"Stt_311_Fisk_MordragKO_Relax_12_01"); //Nevím ale, jak bys to chtěl udělat. Ledaže bys mi našel nového překupníka z Nového tábora!
 //	AI_Output(other,self,"Stt_311_Fisk_MordragKO_Relax_15_02"); //How am I supposed to find somebody like that?
 //	AI_Output(other,self,"Stt_311_Fisk_MordragKO_Relax_15_02"); //Wie soll ich so jemanden finden?
-	AI_Output(other,self,"Stt_311_Fisk_MordragKO_Relax_15_02"); //Jak si myslíš, že bych někoho takového našel?
+	AI_Output(other,self,"Stt_311_Fisk_MordragKO_Relax_15_02"); //Jak mám někoho takového najít?
 //	AI_Output(self,other,"Stt_311_Fisk_MordragKO_Relax_12_03"); //I just told you, I don't believe that you'll ever be on good terms with me.
 //	AI_Output(self,other,"Stt_311_Fisk_MordragKO_Relax_12_03"); //Ich sagte ja, ich glaube kaum, dass du bei mir noch mal gute Karten hast.
 	AI_Output(self,other,"Stt_311_Fisk_MordragKO_Relax_12_03"); //Jak jsem řekl, nevěřím, že bys to měl u mě někdy dobrý.
@@ -282,7 +282,7 @@ func void Stt_311_Fisk_MordragKO_Relax()
 	Log_SetTopicStatus(CH1_FiskNewDealer,LOG_RUNNING);
 //	B_LogEntry(CH1_FiskNewDealer,"The tradesman Fisk at the market in the Old Camp wants me to find him a new fence, after I've beaten up Mordrag.");
 //	B_LogEntry(CH1_FiskNewDealer,"Der Händler Fisk am Marktplatz des Alten Lagers verlangt, dass ich ihm einen neuen Hehler beschaffe, nachdem ich Mordrag vermöbelt habe.");
-	B_LogEntry(CH1_FiskNewDealer,"Poté, co jsem vyhnal Mordraga, chce po mě obchodník Fisk z tržiště, abych mu našel nového přechovávače.");
+	B_LogEntry(CH1_FiskNewDealer,"Poté, co jsem vyhnal Mordraga, chce po mě obchodník Fisk z tržiště, abych mu našel nového překupníka.");
 
 	Fisk_GetNewHehler = LOG_RUNNING;
 };
@@ -301,7 +301,7 @@ func void Stt_311_Fisk_MordragKO_Petze()
 {
 //	AI_Output(other,self,"Stt_311_Fisk_MordragKO_Petze_15_00"); //You're trading things which belong to the Ore Barons. Thorus will be interested in that...
 //	AI_Output(other,self,"Stt_311_Fisk_MordragKO_Petze_15_00"); //Du handelst mit Ware, die den Erzbaronen gehört. Das wird Thorus sicher interessieren ...
-	AI_Output(other,self,"Stt_311_Fisk_MordragKO_Petze_15_00"); //Obchoduješ s věcmi, které patří Rudobaronům. Thoruse to bude zajímat.
+	AI_Output(other,self,"Stt_311_Fisk_MordragKO_Petze_15_00"); //Obchoduješ s majetkem Rudobaronů! Thoruse to bude určitě zajímat...
 //	AI_Output(self,other,"Stt_311_Fisk_MordragKO_Petze_12_01"); //Don't try it on, pal!
 //	AI_Output(self,other,"Stt_311_Fisk_MordragKO_Petze_12_01"); //So nicht, Junge!
 	AI_Output(self,other,"Stt_311_Fisk_MordragKO_Petze_12_01"); //Tak takhle ne, mladíku!
@@ -320,7 +320,7 @@ instance Stt_311_Fisk_HehlerSuccess(C_INFO)
 	permanent = 0;
 //	description = "I have somebody from the New Camp who wants to get into business...";
 //	description = "Ich habe jemanden aus dem Neuen Lager, der mit dir handeln will.";
-	description = "Mám někoho z Nového tábora, kdo by chtěl s tebou obchodovat.";
+	description = "Mám někoho z Nového tábora, kdo by s tebou chtěl obchodovat.";
 };                       
 
 func int Stt_311_Fisk_HehlerSuccess_Condition()
@@ -341,7 +341,7 @@ func void Stt_311_Fisk_HehlerSuccess_Info()
 	AI_Output(self,other,"Stt_311_Fisk_HehlerSuccess_12_01"); //Ne! Kdo by si to byl pomyslel. Vypadá to, že se tu pokoušíš být oblíbený...
 //	AI_Output(self,other,"Stt_311_Fisk_HehlerSuccess_12_02"); //Seems like you managed it, too! Who is it?
 //	AI_Output(self,other,"Stt_311_Fisk_HehlerSuccess_12_02"); //Das ist dir auch gelungen! Wer ist es?
-	AI_Output(self,other,"Stt_311_Fisk_HehlerSuccess_12_02"); //Vypadá, že se ti to taky povedlo! Kdo to je?
+	AI_Output(self,other,"Stt_311_Fisk_HehlerSuccess_12_02"); //A to se ti také povedlo! Kdo to je?
 //	AI_Output(other,self,"Stt_311_Fisk_HehlerSuccess_15_03"); //His name is Sharky.
 //	AI_Output(other,self,"Stt_311_Fisk_HehlerSuccess_15_03"); //Sein Name ist Sharky.
 	AI_Output(other,self,"Stt_311_Fisk_HehlerSuccess_15_03"); //Jmenuje se Sharky.
@@ -358,7 +358,7 @@ func void Stt_311_Fisk_HehlerSuccess_Info()
 	Log_SetTopicStatus(CH1_FiskNewDealer,LOG_SUCCESS);
 //	B_LogEntry(CH1_FiskNewDealer,"Fisk is content, because Sharky will take over Mordrag's business.");
 //	B_LogEntry(CH1_FiskNewDealer,"Fisk is zufrieden ,denn Sharky wird Mordrags Geschäfte übernehmen.");
-	B_LogEntry(CH1_FiskNewDealer,"Fisk je spokojený, protože Sharky převzal Mordragovu práci.");
+	B_LogEntry(CH1_FiskNewDealer,"Fisk je spokojený, protože Sharky převzal Mordragovy obchody.");
 };
 /*------------------------------------------------------------------------
 							RÜSTUNG 

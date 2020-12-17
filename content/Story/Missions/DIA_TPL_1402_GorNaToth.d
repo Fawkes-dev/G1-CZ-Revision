@@ -131,7 +131,7 @@ func void DIA_GorNaToth_AngarTalked_Unworthy()
 	AI_Output(other,self,"DIA_GorNaToth_AngarTalked_Unworthy_15_00"); //Říká, že nejsi hoden nosit templářskou zbroj.
 //	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_Unworthy_11_01"); //Never! He could not have said that! Not about ME!
 //	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_Unworthy_11_01"); //Niemals! Das hat er nicht gesagt! Nicht über MICH!
-	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_Unworthy_11_01"); //Nikdy! To neměl říkat! Ne MNĚ!
+	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_Unworthy_11_01"); //Nikdy! To by neřekl! Ne o MNĚ!
 	Info_ClearChoices(DIA_GorNaToth_AngarTalked);
 	AI_StopProcessInfos(self);
 	Npc_SetTarget(self,other);
@@ -169,19 +169,19 @@ func void TPL_1402_GorNaToth_GETSTUFF_Info()
 	AI_Output(other,self,"TPL_1402_GorNaToth_GETSTUFF_Info_15_01"); //Chtěl bych si vzít svoji templářskou zbroj.
 //	AI_Output(self,other,"TPL_1402_GorNaToth_GETSTUFF_Info_11_02"); //I'm delighted to have the honor of handing our armor to the man who found the minecrawler eggs.
 //	AI_Output(self,other,"TPL_1402_GorNaToth_GETSTUFF_Info_11_02"); //Es ist mir eine Freude, dem Mann eine von unseren Rüstungen zu überreichen, der die Eier der Minecrawler gefunden hat.
-	AI_Output(self,other,"TPL_1402_GorNaToth_GETSTUFF_Info_11_02"); //Je mi potěšením mít tu čest předat naši zbroj muži,který našel vajíčka důlního červa.
+	AI_Output(self,other,"TPL_1402_GorNaToth_GETSTUFF_Info_11_02"); //Je mi potěšením mít tu čest předat naši zbroj muži, který našel vajíčka důlních červů.
 //	AI_Output(self,other,"TPL_1402_GorNaToth_GETSTUFF_Info_11_03"); //May this armor protect you, as the Sleeper protects the Brotherhood!
 //	AI_Output(self,other,"TPL_1402_GorNaToth_GETSTUFF_Info_11_03"); //Diese Rüstung soll dich schützen, so wie der Schläfer die Bruderschaft schützt!
 	AI_Output(self,other,"TPL_1402_GorNaToth_GETSTUFF_Info_11_03"); //Ať tě tahle zbroj ochraňuje tak, jako Spáč chrání Bratrstvo!
 
 //	B_LogEntry(GE_BecomeTemplar,"Gor Na Toth gave me my first templars' armor. Now I'm a proper member of the warrior clan!");
 //	B_LogEntry(GE_BecomeTemplar,"Gor Na Toth überreichte mir meine erste Templer-Rüstung. Nun bin ich ein vollwertiges Mitglied dieser Kriegergemeinschaft!");
-	B_LogEntry(GE_BecomeTemplar,"Gor Na Toth mi dal moji první templářskou zbroj. Právě jsem se stal řádným členem rodu bojovníků!");
+	B_LogEntry(GE_BecomeTemplar,"Gor Na Toth mi předal moji první templářskou zbroj. Právě jsem se stal řádným členem společenství bojovníků!");
 
 	Log_CreateTopic(GE_TraderPSI,LOG_NOTE);
 //	B_LogEntry(GE_TraderPSI,"Gor Na Toth has a better templar's ARMOR available. But in return he expects a generous donation to the Brotherhood. During the daytime, he's on the training ground.");
 //	B_LogEntry(GE_TraderPSI,"Gor Na Toth verteilt bessere Templer-RÜSTUNGEN. Dafür erwarteter allerdings eine großzügige Spende an die Bruderschaft. Er ist tagsüber auf dem Übungsplatz der Templer zu finden.");
-	B_LogEntry(GE_TraderPSI,"Gor Na Toth má k dispozici lepší templářskou ZBROJ. Výměnou očekává velkorysou dotaci Bratrstvu. Přes den ho najdu na cvičišti.");
+	B_LogEntry(GE_TraderPSI,"Gor Na Toth má k dispozici lepší templářskou ZBROJ. Výměnou očekává velkorysý dar pro Bratrstvo. Přes den ho najdu na cvičišti.");
 
 	CreateInvItem(hero,TPL_ARMOR_L);
 
@@ -222,7 +222,7 @@ func void TPL_1402_GorNaToth_ARMOR_Info()
 	AI_Output(other,self,"Info_GorNaToth_ARMOR_15_01"); //Potřebuji lepší zbroj.
 //	AI_Output(self,other,"Info_GorNaToth_ARMOR_11_02"); //I could give you better armor, but you must make a generous contribution to the Brotherhood!
 //	AI_Output(self,other,"Info_GorNaToth_ARMOR_11_02"); //Ich könnte dir eine bessere Rüstung zuteilen, doch dafür musst du einen großzügigen Beitrag an die Bruderschaft spenden!
-	AI_Output(self,other,"Info_GorNaToth_ARMOR_11_02"); //Mohl bych ti dát lepší zbroj, ale musíš poskytnout Bratrstvu šlechetný příspěvek.
+	AI_Output(self,other,"Info_GorNaToth_ARMOR_11_02"); //Mohl bych ti přidělit lepší zbroj, ale musíš poskytnout Bratrstvu velkorysý příspěvek.
 
 	Info_ClearChoices(TPL_1402_GorNaToth_ARMOR);
 	Info_AddChoice(TPL_1402_GorNaToth_ARMOR, DIALOG_BACK , TPL_1402_GorNaToth_ARMOR_BACK); 
@@ -241,19 +241,19 @@ func void TPL_1402_GorNaToth_ARMOR_M()
 	{
 //		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_02"); //You're not experienced enough! Prove your worth as a templar, then you'll earn the right to wear better armor.
 //		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_02"); //Du bist noch nicht so weit! Bewähre dich erst als Templer, dann wirst dir auch das Recht zuteil, eine bessere Rüstung zu tragen.
-		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_02"); //Ještě nemáš dost zkušeností! Prokaž svou vážnost jako templář a pak budeš hoden nosit lepší zbroj.
+		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_02"); //Ještě nemáš dost zkušeností! Prokaž svou vážnost jako templář, tím získáš právo nosit lepší zbroj.
 	}
 	else if (Npc_HasItems(hero,ItMiNugget)<VALUE_TPL_ARMOR_M)
 	{
 //		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_03"); //As soon as you are able to make a sufficient donation to our community, you shall have better armor!
 //		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_03"); //Sobald du in der Lage bist, eine ausreichend große Spende an unsere Gemeinschaft zu leisten, steht dir eine bessere Rüstung zur Verfügung!
-		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_03"); //Jakmile budeš schopen naší komunitě poskytnout příslušný dar, budeš mít lepší zbroj!
+		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_03"); //Jakmile budeš schopen naší komunitě poskytnout dostatečně veliký dar, budeš mít lepší zbroj!
 	}
 	else
 	{
 //		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_04"); //Now that you're able to make the donation, you'll be protected by new armor.
 //		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_04"); //Nun, da du in der Lage bist, die erforderliche Spende zu leisten, sollst du fortan von einer neuen Rüstung geschützt werden.
-		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_04"); //Teď, když jsi schopen poskytnout příslušný dar, bude tě chránit nová zbroj.
+		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_04"); //Teď, když jsi schopen poskytnout dostatečně veliký dar, budeš chráněn novou zbrojí.
 		B_GiveInvItems(hero,self,ItMiNugget, VALUE_TPL_ARMOR_M);
 
 		CreateInvItem(hero,TPL_ARMOR_M);
@@ -278,19 +278,19 @@ func void TPL_1402_GorNaToth_ARMOR_H()
 	{
 //		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_02"); //You're not experienced enough! Prove your worth as a member of our community, then you'll be allowed to wear such exquisite armor.
 //		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_02"); //Du bist noch nicht so weit! Bewähre dich erst noch weiter für unsere Gemeinschaft, dann wirst dir auch das Recht zuteil, solch eine erlesene Rüstung zu tragen.
-		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_02"); //Ještě nemáš dost zkušeností! Prokaž svou vážnost jako člen naší komunity a pak budeš hoden nosit takovouto vybranou zbroj.
+		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_02"); //Ještě nemáš dost zkušeností! Prokaž svou vážnost jako člen našeho společenství, tím získáš právo nosit takovou krásnou zbroj.
 	}
 	else if (Npc_HasItems(hero,ItMiNugget)<VALUE_TPL_ARMOR_H)
 	{
 //		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_03"); //Meanwhile, you have earned the right to wear such armor, but at the moment you're not able to make the sufficient donation to the community!
 //		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_03"); //Du hast dir mittlerweile das Recht verdient, einen solchen Panzer zu tragen, doch du bist zurzeit nicht in der Lage, eine ausreichende Spende an die Gemeinschaft zu leisten!
-		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_03"); //Zasloužil sis nosit takovouhle zbroj, ale v tomto okamžiku nejsi schopen poskytnout komunitě příslušný dar.
+		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_03"); //Získal jsi právo nosit tuto zbroj, ale v tomto okamžiku nejsi schopen poskytnout komunitě příslušný dar.
 	}
 	else
 	{
 //		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_04"); //From now on, wear this armor as a sign of the highest honor!
 //		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_04"); //Trage diese Rüstung fortan als Zeichen der höchsten Ehre!
-		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_04"); //On tohohle okamžiku nos tuto zbroj jako znamení nejvyšší cti!
+		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_04"); //Nos tuto zbroj jako znamení nejvyšší cti!
 
 		B_GiveInvItems(hero,self,ItMiNugget,VALUE_TPL_ARMOR_H);
 
@@ -347,7 +347,7 @@ func void TPL_1402_GorNaToth_Teach_Info()
 	AI_Output(other,self,"TPL_1402_GorNaToth_Teach_15_00"); //Můžeš mě cvičit?
 //	AI_Output(self,other,"TPL_1402_GorNaToth_Teach_11_01"); //Strength and dexterity are as important as the power of the mind.
 //	AI_Output(self,other,"TPL_1402_GorNaToth_Teach_11_01"); //Stärke und Geschicklichkeit sind ebenso wichtig wie geistige Kraft.
-	AI_Output(self,other,"TPL_1402_GorNaToth_Teach_11_01"); //Síla a obratnost jsou zrovna tak důležité jako síla mysli.
+	AI_Output(self,other,"TPL_1402_GorNaToth_Teach_11_01"); //Síla a obratnost jsou zrovna tak důležité jako duchovní síla.
 
 	Info_ClearChoices(TPL_1402_GorNaToth_Teach);
 	Info_AddChoice(TPL_1402_GorNaToth_Teach,DIALOG_BACK ,TPL_1402_GorNaToth_Teach_BACK);
@@ -485,31 +485,31 @@ func void TPL_1402_GorNaToth_TRAIN_Info()
 	};
 //	AI_Output(other,self,"TPL_1402_GorNaToth_TRAIN_Info_15_00"); //I want to improve my handling of one-handed weapons.
 //	AI_Output(other,self,"TPL_1402_GorNaToth_TRAIN_Info_15_00"); //Ich will besser mit Einhandwaffen umgehen können.
-	AI_Output(other,self,"TPL_1402_GorNaToth_TRAIN_Info_15_00"); //Chci se zlepšit v ovládání jednoručního meče.
+	AI_Output(other,self,"TPL_1402_GorNaToth_TRAIN_Info_15_00"); //Chci se zlepšit v ovládání jednoručních zbraní.
 
 	if B_GiveSkill(hero,NPC_TALENT_1H,1,LPCOST_TALENT_1H_1)
 	{
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_01"); //That's a good decision! Before you can improve your technique, you'll have to learn how to hold the weapon right.
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_01"); //Gute Entscheidung! Um deine Technik zu verbessern, musst du erst einmal lernen, deine Waffe richtig zu halten.
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_01"); //To je dobré rozhodnutí! Ještě než se začneš učit techniku, musíš se naučit správně držet zbraň.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_01"); //Dobrá volba! Abys mohl začít zlepšovat techniku, musíš se nejdříve naučit zbraň správně držet.
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_02"); //Beginners often tend to hold one-handed weapons with both hands. Now, you'd better not even start getting into that habit, it'll only get in the way.
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_02"); //Anfänger neigen dazu, Einhandwaffen mit beiden Händen zu halten. Mit so was fängst du am besten gar nicht erst an, das behindert dich nur.
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_02"); //Začátečníci obyčejně mívají snahu držet jednoruční meč oběma rukama. Tímto způsobem rozhodně nezačínej, to není dobré.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_02"); //Začátečníci mají tendenci držet jednoruční zbraň oběma rukama. Tímto způsobem rozhodně nezačínej, bylo by to jen na obtíž.
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_03"); //Hold the weapon with one hand, blade up, and keep swinging it.
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_03"); //Halt die Waffe mit einer Hand, Klinge nach oben, und dann immer schön schwingen lassen.
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_03"); //Drž zbraň v jedné ruce, čepelí vzhůru a šermuj s ní.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_03"); //Drž zbraň v jedné ruce, čepelí vzhůru a nech ji mírně pohupovat. #NEEDS_ATTENTION
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_04"); //You have to learn to harmonize your weapon's swing with your own movements. That'll make you faster in the attack.
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_04"); //Du musst lernen, den Schwung deiner Waffe mit deinen Bewegungen in Einklang zu bringen, dann kannst du schneller zuschlagen.
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_04"); //Musíš se naučit sladit pohyb zbraně s pohybem svého těla. Tak budeš při útoku rychlejší.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_04"); //Musíš se naučit sladit pohyb zbraně s pohybem svého těla. Pak můžeš rychleji útočit.
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_05"); //If you keep in mind what I've taught you, your fights will be more elegant and a lot faster in future.
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_05"); //Wenn du dich an meine Anweisungen hältst, wirst du in Zukunft eleganter und vor allem schneller kämpfen.
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_05"); //Když si zapamatuješ, co jsem tě naučil, tak bude tvůj boj v budoucnu elegantnější a rychlejší.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_05"); //Pokud se budeš držet mých rad, budeš v budoucnu bojovat elegantněji a rychleji.
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_06"); //Oh yeah, one more thing: Some hits cause more damage than others! As a beginner, you don't stand much of a chance of making critical hits.
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_06"); //Ach, und noch was: Manche Treffer richten mehr Schaden an als andere! Als Anfänger hast du nur eine geringe Chance, solche kritischen Treffer zu landen.
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_06"); //Ovšem, ještě jednu věc: Některé údery způsobí větší škodu než ostatní. Jako začátečníkovi se ti nebude často dostávat šance rozhodujících úderů.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_06"); //Ah, ještě jednu věc. Některé údery působí větší škodu než ostatní. Jako začátečníkovi se ti často nepovede takové údery zasadit.
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_07"); //But the further you progress, the better you get.
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_07"); //Aber je weiter du fortschreitest, desto besser wird diese Fähigkeit.
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_07"); //Ale časem budeš dělat pokroky a zlepšíš se.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_07"); //Ale čím více budeš trénovat, tím větší šanci budeš mít.
 		TPL_1402_GorNaToth_TRAIN.permanent = 0;
 
 		AI_StopProcessInfos(self);
@@ -545,21 +545,22 @@ func void TPL_1402_GorNaToth_TRAINAGAIN_Info()
 {
 //	AI_Output(other,self,"TPL_1402_GorNaToth_TRAINAGAIN_Info_15_01"); //Teach me how to handle one-handed weapons more skillfully.
 //	AI_Output(other,self,"TPL_1402_GorNaToth_TRAINAGAIN_Info_15_01"); //Zeige mir, wie ich im Umgang mit Waffen noch besser werden kann.
-	AI_Output(other,self,"TPL_1402_GorNaToth_TRAINAGAIN_Info_15_01"); //Nauč mě ještě lépe ovládat jednoruční meč.
+	AI_Output(other,self,"TPL_1402_GorNaToth_TRAINAGAIN_Info_15_01"); //Nauč mě ještě lépe ovládat jednoruční zbraně.
 	if B_GiveSkill(hero,NPC_TALENT_1H,2,LPCOST_TALENT_1H_2)
 	{
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_02"); //Okay, you know the basics. Holding the weapon lower down will let you put more force into your first strike.
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_02"); //Na gut, die Grundkenntnisse hast du ja schon. Wenn du die Waffe gesenkt hältst, dann kannst du direkt mehr Wucht in deinen ersten Schlag legen.
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_02"); //Dobrá, základy znáš. Když podržíš zbraň níž, umožní ti to mnohem silněji vést první švih.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_02"); //Dobrá, základy znáš. Když podržíš zbraň níž, budeš moci vložit do svého prvního švihu více síly.
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_03"); //Use the swing, remember? Okay, now you need to use your body more. When you've struck twice, spin around. That'll confuse the opponent and put you in an excellent position.
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_03"); //Nutze den Schwung, weißt du noch? Gut, der nächste Schritt ist, dass du deinen Körper mehr einsetzt. Wenn du zweimal geschlagen hast, drehe dich um die eigene Achse, damit überraschst du den Gegner und bist in einer optimalen Position.
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_03"); //Musíš se hýbat, pamatuješ? Dobře, teď musíš ještě víc pracovat tělem. Po druhém úderu se otoč. To protivníka zmate a tobě to umožní zaujmout optimální pozici.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_03"); //Využívej švihu, vzpomínáš? Dobře, dalším krokem je pohyb těla. Po druhém úderu se otoč kolem své vlastní osy, abys zmátl protivníka a získal optimální pozici.
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_04"); //Then bring your blade across from right to left once more.
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_04"); //Dann ziehst du deine Klinge noch einmal quer von rechts nach links .
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_04"); //Ještě jednou veď čepel zprava doleva.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_04"); //Poté veď čepel šikmo zprava doleva.
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_05"); //And back to the front. Don't forget: practice makes perfect. So, get going and become a real master of the art of one-handed fighting.
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_05"); //Und wieder von vorne. Vergiss nicht, Übung macht den Meister. Also, geh jetzt und werde ein wahrer Meister des einhändigen Kampfes.
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_05"); //A znovu kupředu. Nezapomeň: cvičením k dokonalosti. Takže vzhůru do toho, aby ses stal mistrem jednoručního meče.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_05"); //A znovu kupředu. Nezapomeň, cvičení dělá mistra. Tak běž a staň se mistrem jednoručních zbraní.
+		B_GiveInvItems(hero,self,ItMiNugget, 50);
 		TPL_1402_GorNaToth_TRAINAGAIN.permanent = 0;
 
 		AI_StopProcessInfos(self);

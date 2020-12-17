@@ -131,7 +131,7 @@ func void DIA_GorNaToth_AngarTalked_Unworthy()
 	AI_Output(other,self,"DIA_GorNaToth_AngarTalked_Unworthy_15_00"); //Říká, že nejsi hoden nosit templářskou zbroj.
 //	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_Unworthy_11_01"); //Never! He could not have said that! Not about ME!
 //	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_Unworthy_11_01"); //Niemals! Das hat er nicht gesagt! Nicht über MICH!
-	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_Unworthy_11_01"); //Nikdy! To neřekl! Ne o MNĚ!
+	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_Unworthy_11_01"); //Nikdy! To by neřekl! Ne o MNĚ!
 	Info_ClearChoices(DIA_GorNaToth_AngarTalked);
 	AI_StopProcessInfos(self);
 	Npc_SetTarget(self,other);
@@ -284,7 +284,7 @@ func void TPL_1402_GorNaToth_ARMOR_H()
 	{
 //		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_03"); //Meanwhile, you have earned the right to wear such armor, but at the moment you're not able to make the sufficient donation to the community!
 //		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_03"); //Du hast dir mittlerweile das Recht verdient, einen solchen Panzer zu tragen, doch du bist zurzeit nicht in der Lage, eine ausreichende Spende an die Gemeinschaft zu leisten!
-		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_03"); //Získal jsi práve nosit tutuo zbroj, ale v tomto okamžiku nejsi schopen poskytnout komunitě příslušný dar.
+		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_03"); //Získal jsi právo nosit tuto zbroj, ale v tomto okamžiku nejsi schopen poskytnout komunitě příslušný dar.
 	}
 	else
 	{
@@ -485,7 +485,7 @@ func void TPL_1402_GorNaToth_TRAIN_Info()
 	};
 //	AI_Output(other,self,"TPL_1402_GorNaToth_TRAIN_Info_15_00"); //I want to improve my handling of one-handed weapons.
 //	AI_Output(other,self,"TPL_1402_GorNaToth_TRAIN_Info_15_00"); //Ich will besser mit Einhandwaffen umgehen können.
-	AI_Output(other,self,"TPL_1402_GorNaToth_TRAIN_Info_15_00"); //Chci se zlepšit v ovládání jednoručního meče.
+	AI_Output(other,self,"TPL_1402_GorNaToth_TRAIN_Info_15_00"); //Chci se zlepšit v ovládání jednoručních zbraní.
 
 	if B_GiveSkill(hero,NPC_TALENT_1H,1,LPCOST_TALENT_1H_1)
 	{
@@ -545,7 +545,7 @@ func void TPL_1402_GorNaToth_TRAINAGAIN_Info()
 {
 //	AI_Output(other,self,"TPL_1402_GorNaToth_TRAINAGAIN_Info_15_01"); //Teach me how to handle one-handed weapons more skillfully.
 //	AI_Output(other,self,"TPL_1402_GorNaToth_TRAINAGAIN_Info_15_01"); //Zeige mir, wie ich im Umgang mit Waffen noch besser werden kann.
-	AI_Output(other,self,"TPL_1402_GorNaToth_TRAINAGAIN_Info_15_01"); //Nauč mě ještě lépe ovládat jednoruční meč.
+	AI_Output(other,self,"TPL_1402_GorNaToth_TRAINAGAIN_Info_15_01"); //Nauč mě ještě lépe ovládat jednoruční zbraně.
 	if B_GiveSkill(hero,NPC_TALENT_1H,2,LPCOST_TALENT_1H_2)
 	{
 //		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_02"); //Okay, you know the basics. Holding the weapon lower down will let you put more force into your first strike.

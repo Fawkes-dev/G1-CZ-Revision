@@ -50,7 +50,7 @@ func void DIA_GorNaDrak_Greet_Info()
 	AI_Output(other,self,"DIA_GorNaDrak_Greet_15_00"); //Zdar! Kam odcházíš?
 //	AI_Output(self,other,"DIA_GorNaDrak_Greet_09_01"); //We take the minecrawler secretion from our brothers in the Old Mine to Cor Kalom.
 //	AI_Output(self,other,"DIA_GorNaDrak_Greet_09_01"); //Wir bringen das Sekret der Minecrawler, das unsere Brüder in der Alten Mine gewinnen, zu Cor Kalom.
-	AI_Output(self,other,"DIA_GorNaDrak_Greet_09_01"); //Neseme Cor Kalomovi výměšek z důlního červa, který naši bratři získali ve Starém dole.
+	AI_Output(self,other,"DIA_GorNaDrak_Greet_09_01"); //Neseme Cor Kalomovi výměšek z důlních červů, který naši bratři získali ve Starém dole.
 //	AI_Output(self,other,"DIA_GorNaDrak_Greet_09_02"); //We go to the Old Mine every day to collect it.
 //	AI_Output(self,other,"DIA_GorNaDrak_Greet_09_02"); //Einmal täglich gehen wir zur Alten Mine, um es abzuholen.
 	AI_Output(self,other,"DIA_GorNaDrak_Greet_09_02"); //Každý den si jej chodíme vyzvednout před Starý důl.
@@ -103,7 +103,7 @@ instance DIA_GorNaDrak_TeachMandibles(C_INFO)
 	permanent = 0;
 //	description  = "Can you tell me how to get the secretion of a minecrawler?";
 //	description  = "Kannst du mir sagen, wie ich an das Sekret eines Minecrawlers herankomme?";
-	description  = "Můžeš mi říct, jak mohu výměšek důlního červa získat?";
+	description  = "Můžeš mi říct, jak mohu získat výměšek důlních červů?";
 };                       
 
 func int DIA_GorNaDrak_TeachMandibles_Condition()
@@ -118,7 +118,7 @@ func void DIA_GorNaDrak_TeachMandibles_Info()
 {
 //	AI_Output(other,self,"DIA_GorNaDrak_TeachMandibles_15_00"); //Can you tell me how to get the secretion of a minecrawler?
 //	AI_Output(other,self,"DIA_GorNaDrak_TeachMandibles_15_00"); //Kannst du mir sagen, wie ich an das Sekret eines Minecrawlers herankomme?
-	AI_Output(other,self,"DIA_GorNaDrak_TeachMandibles_15_00"); //Můžeš mi říct, jak mohu výměšek důlního červa získat?
+	AI_Output(other,self,"DIA_GorNaDrak_TeachMandibles_15_00"); //Můžeš mi říct, jak mohu získat výměšek důlních červů?
 //	AI_Output(self,other,"DIA_GorNaDrak_TeachMandibles_09_01"); //Of course. After you've killed the beast, you get hold of the mandibles and pull them straight out. This way you'll get the secretion gland without destroying it.
 //	AI_Output(self,other,"DIA_GorNaDrak_TeachMandibles_09_01"); //Klar, nachdem du das Vieh getötet hast, packst du es an den Beißzangen und reißt sie gerade heraus. Dann kommt die Sekretdrüse mit raus, ohne zu zerreißen.
 	AI_Output(self,other,"DIA_GorNaDrak_TeachMandibles_09_01"); //Jistě. Když tu bestii zabiješ, vezmeš její čelisti a jednoduše je vytáhneš. Tak získáš žlázu se sekretem bez toho, aniž by se poškodila.

@@ -101,7 +101,7 @@ func void Tpl_1400_GorNaBar_INFO_Info()
 	AI_Output(other,self,"Tpl_1400_GorNaBar_INFO_Info_15_01"); //Co víš o důlních červech?
 //	AI_Output(self,other,"Tpl_1400_GorNaBar_INFO_Info_09_02"); //The crawlers must have a nest somewhere. If we only knew where, we could destroy the whole brood!
 //	AI_Output(self,other,"Tpl_1400_GorNaBar_INFO_Info_09_02"); //Die Crawler müssen irgendwo ein Nest haben. Wenn wir nur wüssten, wo es ist, dann würden wir die ganze Brut ausrotten!
-	AI_Output(self,other,"Tpl_1400_GorNaBar_INFO_Info_09_02"); //Důlmí červi tu musí mít někde hnízdo. Kdybychom jenom věděli kde, mohli bychom zničit všechna mláďata.
+	AI_Output(self,other,"Tpl_1400_GorNaBar_INFO_Info_09_02"); //Důlní červi tu musí mít někde hnízdo. Kdybychom jenom věděli kde, mohli bychom zničit všechna mláďata.
 };    
 
 // EIER AM START

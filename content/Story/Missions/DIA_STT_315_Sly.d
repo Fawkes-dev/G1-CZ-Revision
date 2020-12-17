@@ -235,7 +235,7 @@ func void DIA_STT_315_LostNekSuccess_Proof()
 		Log_SetTopicStatus(CH1_JoinOC,LOG_RUNNING);
 //		B_LogEntry(CH1_JoinOC,"I've given Sly Nek's amulet. He'll talk to Diego and speak in my favor.");
 //		B_LogEntry(CH1_JoinOC,"Ich habe Sly das Amulett von Nek gegeben. Er wird mit Diego sprechen und ein gutes Wort für mich einlegen.");
-		B_LogEntry(CH1_JoinOC,"Promluví si z Diegem a přimluví se za mě.");
+		B_LogEntry(CH1_JoinOC,"Dal jsem Slyovi Nekův amulet. Promluví si z Diegem a přimluví se za mě.");
 	}
 	else
 	{ 
@@ -243,7 +243,7 @@ func void DIA_STT_315_LostNekSuccess_Proof()
 		Log_SetTopicStatus(CH1_JoinOC,LOG_FAILED);
 //		B_LogEntry(CH1_JoinOC,"I've given Sly Nek's amulet. Not that it's going to do me any good - the Old Camp won't let me join any more anyway.");
 //		B_LogEntry(CH1_JoinOC,"Ich habe Sly das Amulett von Nek gegeben, allerdings bringt mir das Nichts, denn im Alten Lager werde ich nicht mehr aufgenommen.");
-		B_LogEntry(CH1_JoinOC,"Bohužel však z toho nic mít nebudu. Ke Starému táboru se už nemohu přidat.");
+		B_LogEntry(CH1_JoinOC,"Dal jsem Slyovi Nekův amulet. Bohužel však z toho nic mít nebudu. Ke Starému táboru se už nemohu přidat.");
 	};
 	Info_ClearChoices(DIA_STT_315_LostNekSuccess);
 	AI_StopProcessInfos(self);

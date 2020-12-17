@@ -1,7 +1,7 @@
 # G1-CZ-revision status: WIP
 Gothic 1 CZ revision
 
-Idea here is to revisist Czech translation of Gothic 1.
+Idea here is to revisit Czech translation of Gothic 1.
 
 In order to figure out where there are issues with Czech translation I took English version of scripts published by NicoDE from WoG.de on 16.02.2017:
 gothic1_scripts-1.08j_enu-rev2.zip

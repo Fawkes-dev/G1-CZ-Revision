@@ -150,7 +150,7 @@ func void DIA_Cavalorn_Lehrer_Schleichen()
 		AI_Output(other,self,"DIA_cavalorn_Lehrer_Schleichen_15_00"); //Chci se naučit plížit.
 //		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_01"); //Good idea. That's most important if you want to enter huts to get at somebody from behind.
 //		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_01"); //Gute Entscheidung. Das ist vor allem wichtig, wenn du in Hütten eindringen willst oder dich von hinten an jemanden anschleichst.
-		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_01"); //Dobrý nápad. To je nejdůležitější věc, když se chceš k nepozorovaně zezadu dostat, nebo se mu vloupat do něčí chatrče.
+		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_01"); //Dobrý nápad. To je nejdůležitější věc, když se chceš k někomu nepozorovaně dostat zezadu, nebo se vloupat do něčí chatrče.
 //		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_02"); //If you bend your knees when walking, you can see the floor better and you have better control over your body as well.
 //		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_02"); //Wenn du tief nach unten gehst, hast du den Boden besser im Blick und deinen Körper besser unter Kontrolle.
 		AI_Output(self,other,"DIA_cavalorn_Lehrer_Schleichen_12_02"); //Při chůzi se musíš prohnout v kolenou, abys viděl lépe na zem a zároveň mohl lépe kontrolovat celé tělo.

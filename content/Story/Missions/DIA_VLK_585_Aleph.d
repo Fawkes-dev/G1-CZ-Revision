@@ -81,13 +81,13 @@ func void VLK_585_Aleph_GUARDS_Info()
 	AI_Output(other,self,"VLK_585_Aleph_GUARDS_Info_15_01"); //Jak to myslíš?
 //	AI_Output(self,other,"VLK_585_Aleph_GUARDS_Info_05_02"); //I only work when the guards are nearby or they can see me. Otherwise I just hang around here.
 //	AI_Output(self,other,"VLK_585_Aleph_GUARDS_Info_05_02"); //Ich arbeite nur, wenn Wachen in der Nähe sind oder mich sehen können. Ansonsten häng' ich hier meine Zeit ab.
-	AI_Output(self,other,"VLK_585_Aleph_GUARDS_Info_05_02"); //Pracuju jen tehdy, když jsou stráže blízko nebo když mě můžou vidět. Jinak se jenom procházím.
+	AI_Output(self,other,"VLK_585_Aleph_GUARDS_Info_05_02"); //Pracuju jen tehdy, když jsou stráže blízko nebo když mě vidí. Jinak se jenom procházím.
 //	AI_Output(other,self,"VLK_585_Aleph_GUARDS_Info_15_03"); //Don't they get suspicious?
 //	AI_Output(other,self,"VLK_585_Aleph_GUARDS_Info_15_03"); //Werden sie nicht misstrauisch?
-	AI_Output(other,self,"VLK_585_Aleph_GUARDS_Info_15_03"); //Nedostanou podezření?
+	AI_Output(other,self,"VLK_585_Aleph_GUARDS_Info_15_03"); //Nemají podezření?
 //	AI_Output(self,other,"VLK_585_Aleph_GUARDS_Info_05_04"); //Yeah, well of course, I dig less ore than all the others do. It's not always enough, so I have to do a bit of trading.
 //	AI_Output(self,other,"VLK_585_Aleph_GUARDS_Info_05_04"); //Nun ja, ich schürfe natürlich weniger Erz als alle anderen. Es reicht natürlich nicht immer, da muss ich halt mal ein bisschen geschickt tauschen.
-	AI_Output(self,other,"VLK_585_Aleph_GUARDS_Info_05_04"); //Jo, jistě, narubu míň rudy než ostatní. Není to nikdy dost, a tak musím dělat trochu obchod.
+	AI_Output(self,other,"VLK_585_Aleph_GUARDS_Info_05_04"); //Jo, jistě, natěžím méně rudy než ostatní. Samozřejmě to není to nikdy dost, a tak musím trošku obchodovat.
 //	AI_Output(self,other,"VLK_585_Aleph_GUARDS_Info_05_05"); //I keep my ears open, so I get to know many useful things. You don't happen to have some ore on you? Let's say about 10 ore?
 //	AI_Output(self,other,"VLK_585_Aleph_GUARDS_Info_05_05"); //Ich halt immer meine Ohren offen und bekomme viele nützliche Dinge mit. Du hast nicht zufällig etwas Erz bei dir? So ungefähr 10 Erz?
 	AI_Output(self,other,"VLK_585_Aleph_GUARDS_Info_05_05"); //Jsem jedno ucho, takže se dozvídám užitečné informace. Nemáš náhodou sebou nějakou rudu? Řekněme 10 nugetů?
@@ -110,7 +110,7 @@ instance VLK_585_Aleph_INFO(C_INFO)
 	permanent = 0;
 //	description = "(give 10 ore)";
 //	description = "(10 Erz geben)";
-	description = "(dej 10 nugetů)";
+	description = "Dobře, tady máš 10 nugetů."; //#COMMENT Zvyšuje immersion:tm: a ani není potřeba přidávat závorku s cenou, ta je přímo v dialogu :ok_hand:
 };
 
 func int VLK_585_Aleph_INFO_Condition()
@@ -128,13 +128,13 @@ func void VLK_585_Aleph_INFO_Info()
 	AI_Output(other,self,"VLK_585_Aleph_INFO_Info_15_01"); //Dobře, tady máš 10 nugetů.
 //	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_02"); //Thanks. If you go to the main shaft and follow the catwalks further down, you'll soon get to two side caves.
 //	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_02"); //Danke. Wenn du zurück zum Hauptschacht gehst und den Stegen weiter nach unten folgst, kommst du bald an zwei Nebenhöhlen.
-	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_02"); //Díky. Když půjdeš do hlavní šachty a půjdeš po lávkách pořád dolu, dostaneš se za chvíli do dvojité jeskyně.
+	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_02"); //Díky. Když půjdeš do hlavní šachty a půjdeš po lávkách pořád dolu, dostaneš se za chvíli do dvojité vedlejší jeskyně.
 //	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_03"); //There's a guard in the second one, and there's also an old masher.
 //	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_03"); //In der zweiten Höhle steht eine Wache. Da steht auch ein alter Stampfer.
 	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_03"); //V té druhé je stráž a také tam stojí stará drtička.
 //	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_04"); //There's a healing potion lying about somewhere, but be careful and beware of the crawlers!
 //	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_04"); //Dort liegt noch irgendwo ein Heiltrank, aber sei vorsichtig und nimm dich vor den Crawlern in Acht!
-	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_04"); //Povalují se tam hojivé lektvary, ale měj se na pozoru před červy!
+	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_04"); //Povaluje se tam někde hojivý lektvar, ale měj se na pozoru před důlními červy!
 //	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_05"); //And if you need or hear something, come back to me, I'm sure I'll be able to help....
 //	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_05"); //Und wenn du mal wieder was brauchst oder hörst, dann komm ruhig zu mir, ich kann dir bestimmt weiterhelfen ...
 	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_05"); //A kdybys něco potřeboval, nebo něco slyšel, vrať se zpátky ke mně, určitě ti budu schopen pomoci...
@@ -164,7 +164,7 @@ func void VLK_585_Aleph_ANGRY_Info()
 
 //	AI_Output(self,other,"VLK_585_Aleph_ANGRY_Info_05_01"); //You ran me down with Brandick? Get lost!
 //	AI_Output(self,other,"VLK_585_Aleph_ANGRY_Info_05_01"); //Du hast mich bei Brandick angeschwärzt? Mach, dass du wegkommst!
-	AI_Output(self,other,"VLK_585_Aleph_ANGRY_Info_05_01"); //Tys mě podvedl s Brandickem? Ztrať se!
+	AI_Output(self,other,"VLK_585_Aleph_ANGRY_Info_05_01"); //Tys mě prozradil Brandickovi? Ztrať se!
 
 	AI_StopProcessInfos(self);
 	Npc_SetTempAttitude(self,ATT_ANGRY);
@@ -209,7 +209,7 @@ instance VLK_585_Aleph_GLEN(C_INFO)
 	permanent = 0;
 //	description     = "(give 10 ore)";
 //	description     = "(10 Erz geben)";
-	description     = "(dej 10 nugetů)";
+	description     = "Za tuhle rudu očekávám dobré informace! (10 nugetů)";
 };
 func int VLK_585_Aleph_GLEN_Condition()
 {
@@ -227,7 +227,7 @@ func void VLK_585_Aleph_GLEN_Info()
 	AI_Output(other,self,"VLK_585_Aleph_GLEN_Info_15_01"); //Za tuhle rudu očekávám dobré informace!
 //	AI_Output(self,other,"VLK_585_Aleph_GLEN_Info_05_02"); //There's loads of locked chests here. Glen, the digger at the top, can get you a couple of lockpicks.
 //	AI_Output(self,other,"VLK_585_Aleph_GLEN_Info_05_02"); //Hier gibt's eine Menge verschlossener Truhen. Glen, der Buddler, der ganz oben steht, kann dir ein paar Dietriche besorgen.
-	AI_Output(self,other,"VLK_585_Aleph_GLEN_Info_05_02"); //Je tu hromada zamčených truhel. Glen, vrchní kopáč, ti může dát pár paklíčů.
+	AI_Output(self,other,"VLK_585_Aleph_GLEN_Info_05_02"); //Je tu hromada zamčených truhel. Glen, kopáč, který těží úplně nahoře, ti může obstarat pár paklíčů.
 
 	B_GiveInvItems(hero,self,ItMinugget,10); 
 };
@@ -248,7 +248,7 @@ instance VLK_585_Aleph_SCHUPPEN(C_INFO)
 	permanent = 0;
 //	description     = "Do you know anything about the key to the chests in the storage shed??";
 //	description     = "Weißt du was über den Schlüssel für die Truhen im Lagerschuppen?";
-	description     = "Víš něco o klíči od těch truhel ve skladové jeskyni?";
+	description     = "Víš něco o klíči od těch truhel ve skladu?";
 };
 func int VLK_585_Aleph_SCHUPPEN_Condition()
 {
@@ -263,13 +263,13 @@ func void VLK_585_Aleph_SCHUPPEN_Info()
 
 //	AI_Output(other,self,"VLK_585_Aleph_SCHUPPEN_Info_15_01"); //Do you know anything about the key for the chests in the storage shed??
 //	AI_Output(other,self,"VLK_585_Aleph_SCHUPPEN_Info_15_01"); //Weißt du was über den Schlüssel für die Truhen im Lagerschuppen?
-	AI_Output(other,self,"VLK_585_Aleph_SCHUPPEN_Info_15_01"); //Víš něco o klíči od těch truhel ve skladové jeskyni?
+	AI_Output(other,self,"VLK_585_Aleph_SCHUPPEN_Info_15_01"); //Víš něco o klíči od těch truhel ve skladu?
 //	AI_Output(self,other,"VLK_585_Aleph_SCHUPPEN_Info_05_02"); //Well, that depends...
 //	AI_Output(self,other,"VLK_585_Aleph_SCHUPPEN_Info_05_02"); //Nun, das kommt ganz darauf an ...
-	AI_Output(self,other,"VLK_585_Aleph_SCHUPPEN_Info_05_02"); //Jistě, to záleží na...
+	AI_Output(self,other,"VLK_585_Aleph_SCHUPPEN_Info_05_02"); //No, to záleží na...
 //	AI_Output(other,self,"VLK_585_Aleph_SCHUPPEN_Info_15_03"); //On how much ore I'll give you?
 //	AI_Output(other,self,"VLK_585_Aleph_SCHUPPEN_Info_15_03"); //Darauf, wieviel Erz ich dir gebe?
-	AI_Output(other,self,"VLK_585_Aleph_SCHUPPEN_Info_15_03"); //Tak kolik nugetů ti mám dát?
+	AI_Output(other,self,"VLK_585_Aleph_SCHUPPEN_Info_15_03"); //Na tom, kolik nugetů ti dám?
 //	AI_Output(self,other,"VLK_585_Aleph_SCHUPPEN_Info_05_04"); //You learn fast.
 //	AI_Output(self,other,"VLK_585_Aleph_SCHUPPEN_Info_05_04"); //Du lernst schnell.
 	AI_Output(self,other,"VLK_585_Aleph_SCHUPPEN_Info_05_04"); //Učíš se rychle.
@@ -279,13 +279,13 @@ func void VLK_585_Aleph_SCHUPPEN_Info()
 	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,DIALOG_BACK    ,VLK_585_Aleph_SCHUPPEN_Back);
 //	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,"Pay 50 ore.",VLK_585_Aleph_SCHUPPEN_50);
 //	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,"50 Erz zahlen",VLK_585_Aleph_SCHUPPEN_50);
-	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,"Zaplať 50 nugetů.",VLK_585_Aleph_SCHUPPEN_50);
+	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,"50 nugetů by ti mělo víc než stačit!",VLK_585_Aleph_SCHUPPEN_50);
 //	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,"Pay 30 ore.",VLK_585_Aleph_SCHUPPEN_30);
 //	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,"30 Erz zahlen",VLK_585_Aleph_SCHUPPEN_30);
-	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,"Zaplať 30 nugetů.",VLK_585_Aleph_SCHUPPEN_30);
+	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,"30 nugetů by mělo stačit.",VLK_585_Aleph_SCHUPPEN_30);
 //	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,"Pay 15 ore.",VLK_585_Aleph_SCHUPPEN_15);
 //	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,"15 Erz zahlen",VLK_585_Aleph_SCHUPPEN_15);
-	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,"Zaplať 15 nugetů.",VLK_585_Aleph_SCHUPPEN_15);
+	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,"Bude ti 15 nugetů stačit?",VLK_585_Aleph_SCHUPPEN_15);
 };
 
 func void VLK_585_Aleph_SCHUPPEN_50()
@@ -375,7 +375,7 @@ instance VLK_585_Aleph_DIRTY(C_INFO)
 	permanent = 0;
 //	description = "Do you know anything about the key for the chests in the storage shed??"; 
 //	description = "Weißt du was über den Schlüssel für die Truhen im Lagerschuppen?"; 
-	description = "Víš něco o klíči od těch truhel ve skladové jeskyni?"; 
+	description = "Víš něco o klíči od těch truhel ve skladu?"; 
 };
 
 func int VLK_585_Aleph_DIRTY_Condition()
@@ -390,13 +390,13 @@ func void VLK_585_Aleph_DIRTY_Info()
 {
 //	AI_Output(other,self,"VLK_585_Aleph_DIRTY_Info_15_01"); //Do you know anything about the key to the chests in the storage shed?
 //	AI_Output(other,self,"VLK_585_Aleph_DIRTY_Info_15_01"); //Weißt du was über den Schlüssel für die Truhen im Lagerschuppen?
-	AI_Output(other,self,"VLK_585_Aleph_DIRTY_Info_15_01"); //Víš něco o klíči od těch truhel ve skladové jeskyni?
+	AI_Output(other,self,"VLK_585_Aleph_DIRTY_Info_15_01"); //Víš něco o klíči od těch truhel ve skladu?
 //	AI_Output(self,other,"VLK_585_Aleph_DIRTY_Info_05_02"); //Well, that depends...
 //	AI_Output(self,other,"VLK_585_Aleph_DIRTY_Info_05_02"); //Nun, das kommt ganz darauf an ...
-	AI_Output(self,other,"VLK_585_Aleph_DIRTY_Info_05_02"); //Jistě, to záleží na...
+	AI_Output(self,other,"VLK_585_Aleph_DIRTY_Info_05_02"); //No , to záleží na...
 //	AI_Output(other,self,"VLK_585_Aleph_DIRTY_Info_15_03"); //On how much ore I'll give you?
 //	AI_Output(other,self,"VLK_585_Aleph_DIRTY_Info_15_03"); //Darauf, wieviel Erz ich dir gebe?
-	AI_Output(other,self,"VLK_585_Aleph_DIRTY_Info_15_03"); //Tak kolik nugetů ti mám dát?
+	AI_Output(other,self,"VLK_585_Aleph_DIRTY_Info_15_03"); //Na tom, kolik nugetů ti dám?
 //	AI_Output(self,other,"VLK_585_Aleph_DIRTY_Info_05_04"); //You learn quickly. I want 100 ore.
 //	AI_Output(self,other,"VLK_585_Aleph_DIRTY_Info_05_04"); //Du lernst schnell. Ich will 100 Erz.
 	AI_Output(self,other,"VLK_585_Aleph_DIRTY_Info_05_04"); //Učíš se rychle. Chci 100 nugetů.
@@ -405,10 +405,10 @@ func void VLK_585_Aleph_DIRTY_Info()
 
 //	Info_AddChoice(VLK_585_Aleph_DIRTY,"(Pay 100 ore)",VLK_585_Aleph_DIRTY_100);
 //	Info_AddChoice(VLK_585_Aleph_DIRTY,"(100 Erz zahlen)",VLK_585_Aleph_DIRTY_100);
-	Info_AddChoice(VLK_585_Aleph_DIRTY,"(zaplať 100 nugetů)",VLK_585_Aleph_DIRTY_100);
+	Info_AddChoice(VLK_585_Aleph_DIRTY,"Dobrá, ty vyděrači. Tady je 100 nugetů.",VLK_585_Aleph_DIRTY_100);
 //	Info_AddChoice(VLK_585_Aleph_DIRTY,"(Don't pay)",VLK_585_Aleph_DIRTY_NO);
 //	Info_AddChoice(VLK_585_Aleph_DIRTY,"(Nicht zahlen)",VLK_585_Aleph_DIRTY_NO);
-	Info_AddChoice(VLK_585_Aleph_DIRTY,"(neplať)",VLK_585_Aleph_DIRTY_NO);
+	Info_AddChoice(VLK_585_Aleph_DIRTY,"Nemůžu vyhodit 100 nugetů!",VLK_585_Aleph_DIRTY_NO);
 };  
 func void VLK_585_Aleph_DIRTY_100()
 {
@@ -416,10 +416,10 @@ func void VLK_585_Aleph_DIRTY_100()
 	{ 
 //		AI_Output(other,self,"VLK_585_Aleph_DIRTY_100_Info_15_01"); //Alright, you crook. Here are 100 ore.
 //		AI_Output(other,self,"VLK_585_Aleph_DIRTY_100_Info_15_01"); //Na gut, du Halsabschneider. Hier sind deine 100 Erz.
-		AI_Output(other,self,"VLK_585_Aleph_DIRTY_100_Info_15_01"); //Dobrá, ty podvodníku. Tady je 100 nugetů.
+		AI_Output(other,self,"VLK_585_Aleph_DIRTY_100_Info_15_01"); //Dobrá, ty vyděrači. Tady je 100 nugetů.
 //		AI_Output(self,other,"VLK_585_Aleph_DIRTY_100_Info_05_02"); //You shouldn't have grassed me up. Here's the key.
 //		AI_Output(self,other,"VLK_585_Aleph_DIRTY_100_Info_05_02"); //Du hättest mich halt nicht verpfeifen sollen. Hier ist der Schlüssel.
-		AI_Output(self,other,"VLK_585_Aleph_DIRTY_100_Info_05_02"); //Neměl bys mě dráždit. Tady je ten klíč.
+		AI_Output(self,other,"VLK_585_Aleph_DIRTY_100_Info_05_02"); //Neměl jsi mě prásknout. Tady je ten klíč.
 		B_GiveInvItems(hero,self,ItMinugget,100);
 		CreateInvItem(self,ItKe_OM_03);
 		B_GiveInvItems(self,other,ItKe_OM_03,1);
@@ -431,7 +431,7 @@ func void VLK_585_Aleph_DIRTY_100()
 	{
 //		AI_Output(self,other,"VLK_585_Aleph_DIRTY_100_Info_05_03"); //Do you think I'm stupid or what? 100 ore, and not a nugget less!
 //		AI_Output(self,other,"VLK_585_Aleph_DIRTY_100_Info_05_03"); //Für wie blöd hältst du mich eigentlich? 100 Erz, nicht einen Brocken weniger!
-		AI_Output(self,other,"VLK_585_Aleph_DIRTY_100_Info_05_03"); //Myslíš, že jsem tak stupidní nebo co? 100 nugetů a ani o jeden míň!
+		AI_Output(self,other,"VLK_585_Aleph_DIRTY_100_Info_05_03"); //Myslíš, že jsem tak hloupý nebo co? 100 nugetů a ani o jeden míň!
 		VLK_585_Aleph_DIRTY.permanent = 1;
 	};
 };
@@ -442,6 +442,6 @@ func void VLK_585_Aleph_DIRTY_NO()
 	AI_Output(other,self,"VLK_585_Aleph_DIRTY_NO_Info_15_01"); //Nemůžu vyhodit 100 nugetů!
 //	AI_Output(self,other,"VLK_585_Aleph_DIRTY_NO_Info_05_02"); //Hey, it's you who constantly starts talking to me!
 //	AI_Output(self,other,"VLK_585_Aleph_DIRTY_NO_Info_05_02"); //Hey, immerhin bist du derjenige, der mich die ganze Zeit anquatscht!
-	AI_Output(self,other,"VLK_585_Aleph_DIRTY_NO_Info_05_02"); //Hej, jsi to ty, kdo mě v jednom kuse přemlouvá!
+	AI_Output(self,other,"VLK_585_Aleph_DIRTY_NO_Info_05_02"); //Hej, ty mě v jednom kuse přemlouváš!
 	VLK_585_Aleph_DIRTY.permanent = 0; 
 };

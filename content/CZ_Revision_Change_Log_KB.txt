@@ -2,8 +2,8 @@
 #Spacer_OU_special_characters
 
 	Spacer removes special characters if they appear at the end of dialogs!
-	For example output unit:	'Jestli to bude pokraèovat, celá hráz bude co nevidìt podhrabaná'
-	would be compiled in OU.BIN as:	'Jestli to bude pokraèovat, celá hráz bude co nevidìt podhraban'
+	For example output unit:	'Jestli to bude pokračovat, celá hráz bude co nevidět podhrabaná'
+	would be compiled in OU.BIN as:	'Jestli to bude pokračovat, celá hráz bude co nevidět podhraban'
 
 	Issue explained by NiCoDE here:
 	https://forum.worldofplayers.de/forum/threads/1489670-%E3%80%8C%E6%AD%A1%E8%BF%8E%E4%BE%86%E5%88%B0%E6%AE%96%E6%B0%91%E5%9C%B0%E3%80%8D-Gothic-1-08j-Traditional-Chinese-scripts?p=25380418&viewfull=1#post25380418

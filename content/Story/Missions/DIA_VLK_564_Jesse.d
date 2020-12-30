@@ -91,12 +91,16 @@ func void DIA_Jesse_Warn_Info()
 	AI_Output(other,self,"DIA_Jesse_Warn_15_01"); //Co chceš?
 //	AI_Output(self,other,"DIA_Jesse_Warn_03_02"); //To warn you! Bloodwyn paid some people: They're gonna do you in.
 //	AI_Output(self,other,"DIA_Jesse_Warn_03_02"); //Dich warnen! Bloodwyn hat einige Leute bezahlt, damit sie dir Ärger machen.
+	//#Needs_Attention Skusit prebasnit ?
+	//AI_Output(self,other,"DIA_Jesse_Warn_03_02"); //Varovat tě! Bloodwyn zaplatil pár lidem: ti po tobě půjdou.
 	AI_Output(self,other,"DIA_Jesse_Warn_03_02"); //Varovat tě! Bloodwyn zaplatil pár lidem, aby ti udělali problémy.
 //	AI_Output(self,other,"DIA_Jesse_Warn_03_03"); //I saw how he talked to people like Herek over there, and God knows who else he hired!
 //	AI_Output(self,other,"DIA_Jesse_Warn_03_03"); //Ich hab' zum Beispiel gesehen, wie er mit Herek da drüben geredet hat. Und nur die Götter wissen, mit wem noch!
+	//#Needs_Attention nechame boha alebo prebasnime na Innosa ? :-) immersion!?
 	AI_Output(self,other,"DIA_Jesse_Warn_03_03"); //Viděl jsem například, jak mluví támhle s Herekem, a bůhví, koho si ještě najal!
 //	AI_Output(other,self,"DIA_Jesse_Warn_15_04"); //Your warning about Herek is a bit late.
 //	AI_Output(other,self,"DIA_Jesse_Warn_15_04"); //Was Herek betrifft, kommt deine Warnung etwas spät.
+	//#Needs_Attention týká alebo týče? týka mi pride Slovenske, ale mozno je to ok aj po cesky :))
 	AI_Output(other,self,"DIA_Jesse_Warn_15_04"); //Co se Hereka týká, je tvé varování trochu opožděné.
 //	AI_Output(self,other,"DIA_Jesse_Warn_03_05"); //He must have talked to somebody else as well, that much I know. So do take care.
 //	AI_Output(self,other,"DIA_Jesse_Warn_03_05"); //Er muss noch mit jemand anderem geredet haben - so viel hab' ich mitgekriegt. Also pass auf dich auf.
@@ -122,8 +126,10 @@ instance DIA_Jesse_Mission(C_INFO)
 };
 
 func int DIA_Jesse_Mission_Condition()
-{ 
-	if (Npc_KnowsInfo(hero,DIA_Jesse_Mission))
+{
+	//#Bugfix NPC_KnowsInfo pouzite na vlastnu instanciu dialogu - tento dialog by v hre nikdy nebol dostupny
+	//if (Npc_KnowsInfo(hero,DIA_Jesse_Mission))
+	if (Npc_KnowsInfo(hero,DIA_Jesse_Warn))
 	{
 		return 1;
 	};
@@ -147,7 +153,7 @@ func void DIA_Jesse_Mission_Info()
 	Info_AddChoice(DIA_Jesse_Mission,"Zapomeň na to! Nic ti nedlužím!",DIA_Jesse_Mission_ForgetIt);
 //	Info_AddChoice(DIA_Jesse_Mission,"What exactly do you have in mind?",DIA_Jesse_Mission_What);
 //	Info_AddChoice(DIA_Jesse_Mission,"An was hattest du denn da gedacht?",DIA_Jesse_Mission_What);
-	Info_AddChoice(DIA_Jesse_Mission,"Co máš přesně na mysli?",DIA_Jesse_Mission_What);
+	Info_AddChoice(DIA_Jesse_Mission,"Co přesně máš na mysli?",DIA_Jesse_Mission_What);
 };
 
 func void DIA_Jesse_Mission_ForgetIt()
@@ -166,13 +172,14 @@ func void DIA_Jesse_Mission_What()
 {
 //	AI_Output(other,self,"DIA_Jesse_Mission_What_15_00"); //What exactly do you have in mind?
 //	AI_Output(other,self,"DIA_Jesse_Mission_What_15_00"); //An was hattest du denn da gedacht?
-	AI_Output(other,self,"DIA_Jesse_Mission_What_15_00"); //Co máš přesně na mysli?
+	AI_Output(other,self,"DIA_Jesse_Mission_What_15_00"); //Co přesně máš na mysli?
 //	AI_Output(self,other,"DIA_Jesse_Mission_What_03_01"); //I don't have any ore left, and Bloodwyn has already fleeced me as well.
 //	AI_Output(self,other,"DIA_Jesse_Mission_What_03_01"); //Ich hab' kein Erz mehr, und Bloodwyn hat schon versucht, das letzte Bröckchen aus mir rauszupressen.
+	//#Needs_Attention dvakrat vyslovena informacia o tom, ze nema rudu, skusime prebasnit?
 	AI_Output(self,other,"DIA_Jesse_Mission_What_03_01"); //Už mi nezbyla žádná ruda a Bloodwyn už mě taky obral o poslední kousek rudy.
 //	AI_Output(self,other,"DIA_Jesse_Mission_What_03_02"); //Now that I've helped you, you could give him the 10 ore I owe him, couldn't you? Tell him it's from me.
 //	AI_Output(self,other,"DIA_Jesse_Mission_What_03_02"); //Jetzt, wo ich dir geholfen habe, könntest du ihm doch meine 10 Erz geben, oder? Sag ihm, sie kommen von mir.
-	AI_Output(self,other,"DIA_Jesse_Mission_What_03_02"); //Když jsem ti teď pomohl, mohl bys mu dát 10 nugetů, které mu dlužím, jo? Řekni mu, že je to ode mě.
+	AI_Output(self,other,"DIA_Jesse_Mission_What_03_02"); //Když jsem ti teď pomohl, mohl bys mu dát 10 nugetů, co mu dlužím, jo? Řekni mu, že je to ode mě.
 	Npc_SetTrueGuild(self,GIL_NONE); //KEIN Schutzgeld
 
 //	Info_AddChoice(DIA_Jesse_Mission,"Me, pay for you? Forget it!",DIA_Jesse_Mission_NO);

@@ -60,7 +60,7 @@ func void DIA_Herek_Bully_Info()
 	AI_Output(self,other,"DIA_Herek_Bully_01_03"); //To znamená, že my ostatní musíme platit tvůj podíl!
 //	AI_Output(self,other,"DIA_Herek_Bully_01_04"); //I'll make sure you remember next time he asks you.
 //	AI_Output(self,other,"DIA_Herek_Bully_01_04"); //Ich werde dafür sorgen, dass du dich daran erinnerst, wenn er dich das nächste Mal fragt ...
-	AI_Output(self,other,"DIA_Herek_Bully_01_04"); //Postarám se, aby sis na to příště vzpomněl, až se tě na to příště zeptá...
+	AI_Output(self,other,"DIA_Herek_Bully_01_04"); //Postarám se, aby sis na to vzpomněl, až se tě příště zeptá...
 
 	Npc_SetPermAttitude(self,ATT_ANGRY);
 
@@ -110,7 +110,7 @@ func void DIA_Herek_Motz_Info()
 	AI_Output(self,other,"DIA_Herek_Motz_01_03"); //Kdyby bylo po mém, už bys tu pěkně dlouho nebyl!
 //	AI_Output(self,other,"DIA_Herek_Motz_01_04"); //D'you know why I'm here? I killed a dozen people in one night, just like that... He he he!
 //	AI_Output(self,other,"DIA_Herek_Motz_01_04"); //Weißt du, warum ich hier bin? In einer Nacht habe ich ein Dutzend Leute umgebracht. Einfach nur so ... hä hä hä!
-	AI_Output(self,other,"DIA_Herek_Motz_01_04"); //Víš, proč jsem tady? Během jedné noci, jako je tahle, jsem zabil tucet lidí. Prostě jen tak... hehehe!
+	AI_Output(self,other,"DIA_Herek_Motz_01_04"); //Víš, proč jsem tady? Během jedné noci, jsem zabil tucet lidí. Prostě jen tak... hehehe!
 
 	Npc_SetPermAttitude(self,ATT_ANGRY);
 

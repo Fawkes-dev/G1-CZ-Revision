@@ -47,10 +47,10 @@ func void DIA_Gravo_Hallo_Info()
 {
 //	AI_Output(other,self,"DIA_Gravo_Hallo_15_00"); //How are you doing?
 //	AI_Output(other,self,"DIA_Gravo_Hallo_15_00"); //Wie steht's denn so?
-	AI_Output(other,self,"DIA_Gravo_Hallo_15_00"); //JJak to vypadá?
+	AI_Output(other,self,"DIA_Gravo_Hallo_15_00"); //Jak to vypadá?
 //	AI_Output(self,other,"DIA_Gravo_Hallo_04_01"); //Well, since I stopped working in the mine, I can't really complain.
 //	AI_Output(self,other,"DIA_Gravo_Hallo_04_01"); //Seit ich aufgehört habe, in der Mine zu arbeiten, lässt sich's hier richtig gut leben.
-	AI_Output(self,other,"DIA_Gravo_Hallo_04_01"); //Od té doby, co jsme přestal pracovat v dole, nemůžu si stěžovat.
+	AI_Output(self,other,"DIA_Gravo_Hallo_04_01"); //Nemůžu si stěžovat od té doby, co jsem přestal pracovat v dole.
 //	AI_Output(other,self,"DIA_Gravo_Hallo_15_02"); //And where do you get your ore from?
 //	AI_Output(other,self,"DIA_Gravo_Hallo_15_02"); //Und woher kriegst du dein Erz?
 	AI_Output(other,self,"DIA_Gravo_Hallo_15_02"); //A odkud teď bereš rudu?
@@ -75,7 +75,7 @@ instance DIA_Gravo_HelpHow(C_INFO)
 	permanent = 0;
 //	description = "If I was in trouble, YOU could help me? How?";
 //	description = "Wenn ich hier Ärger habe, kannst DU mir also helfen? Wie?";
-	description = "Když budu v nesnázích, TY bys mi mohl pomoci? Jak?";
+	description = "Když se dostanu do problémů, tak mi TY můžeš pomoci? Jak?";
 };                       
 
 func int DIA_Gravo_HelpHow_Condition()
@@ -90,13 +90,13 @@ func void DIA_Gravo_HelpHow_Info()
 {
 //	AI_Output(other,self,"DIA_Gravo_HelpHow_15_00"); //If I was in trouble, YOU could help me? How?
 //	AI_Output(other,self,"DIA_Gravo_HelpHow_15_00"); //Wenn ich hier Ärger habe, kannst DU mir also helfen? Wie?
-	AI_Output(other,self,"DIA_Gravo_HelpHow_15_00"); //Když budu v nesnázích, TY bys mi mohl pomoci? Jak?
+	AI_Output(other,self,"DIA_Gravo_HelpHow_15_00"); //Když se dostanu do problémů, tak mi TY můžeš pomoci? Jak?
 //	AI_Output(self,other,"DIA_Gravo_HelpHow_04_01"); //Well, let's assume you're in trouble with Thorus. You better never get into trouble with him, but then, well, you never know.
 //	AI_Output(self,other,"DIA_Gravo_HelpHow_04_01"); //Nun - sagen wir mal, du hast Ärger mit Thorus. Du solltest es besser nie dazu kommen lassen, aber man weiß ja nie, was passiert.
-	AI_Output(self,other,"DIA_Gravo_HelpHow_04_01"); //No, řekněme, že máš problém s Thorusem. Lepší bude, když se s ním do problému nikdy nedostaneš, ale jeden nikdy neví.
+	AI_Output(self,other,"DIA_Gravo_HelpHow_04_01"); //No, řekněme, že máš problém s Thorusem. Lepší bude, když se s ním do křížku nikdy nedostaneš, ale jeden nikdy neví.
 //	AI_Output(self,other,"DIA_Gravo_HelpHow_04_02"); //Thorus can be quite stubborn - when he's pissed off with you once, he'll never talk to you again. And that's a bad thing.
 //	AI_Output(self,other,"DIA_Gravo_HelpHow_04_02"); //Thorus kann ziemlich stur sein - wenn du's dir einmal mit ihm verscherzt hast, redet er nicht mehr mit dir. Das ist schlecht.
-	AI_Output(self,other,"DIA_Gravo_HelpHow_04_02"); //Thorus dokáže být pěkně neústupný - když se jednou na někoho naštve, už s ním nikdy nepromluví. A to je zlá věc.
+	AI_Output(self,other,"DIA_Gravo_HelpHow_04_02"); //Thorus dokáže být pěkně neústupný - když se jednou na někoho naštve, už s ním nikdy nepromluví. A to nechceš.
 //	AI_Output(self,other,"DIA_Gravo_HelpHow_04_03"); //As a greenhorn, you depend on him. So you come to see me. I know a lot of people here Thorus listens to.
 //	AI_Output(self,other,"DIA_Gravo_HelpHow_04_03"); //Denn als Neuer bist du auf ihn angewiesen. Also kommst du zu mir. Ich kenne 'ne Menge Leute hier, die Einfluss auf Thorus haben.
 	AI_Output(self,other,"DIA_Gravo_HelpHow_04_03"); //Jako nováček jsi na něm závislý. Pak teda přijdeš za mnou. Znám tady řadu lidí, kterým Thorus naslouchá.
@@ -126,7 +126,7 @@ func void B_Gravo_HelpAttitude(var C_NPC prob)
 		AI_Output(self,other,"B_Gravo_HelpAttitude_ANGRY_04_00"); //Pravda, moc dobře o tobě nemluvil.
 //		AI_Output(self,other,"B_Gravo_HelpAttitude_ANGRY_04_01"); //I'll have some people talk to him. 100 ore and I'll take care of the problem.
 //		AI_Output(self,other,"B_Gravo_HelpAttitude_ANGRY_04_01"); //Ich werd' zusehen, dass sich ein paar Leute mal mit ihm unterhalten. 100 Erz und ich erledige die Sache.
-		AI_Output(self,other,"B_Gravo_HelpAttitude_ANGRY_04_01"); //Zajdu za pár lidmi a popovídám si s nimi. 100 nugetů a já se o tu věc postarám.
+		AI_Output(self,other,"B_Gravo_HelpAttitude_ANGRY_04_01"); //Zajdu za pár lidmi a popovídám si s nimi. 100 nugetů a já se o to postarám.
 		if (Npc_HasItems(other,itminugget)>=100)
 		{
 //			AI_Output(self,other,"B_Gravo_HelpAttitude_ANGRY_04_02"); //Well, let's see how much you have... Ah! Yeah, that should be enough. You can consider the affair settled.
@@ -175,7 +175,7 @@ func void B_Gravo_HelpAttitude(var C_NPC prob)
 			AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01"); //Nemám tolik.
 //			AI_Output(self,other,"B_Gravo_HelpAttitude_NoOre_04_02"); //Dann kann ich nichts für dich tun - tut mit leid, Junge.
 //			AI_Output(self,other,"B_Gravo_HelpAttitude_NoOre_04_02"); //Dann kann ich nichts für dich tun - tut mit leid, Junge.
-			AI_Output(self,other,"B_Gravo_HelpAttitude_NoOre_04_02"); //Pak pro tebe nebudu moci nic udělat - je mi líto, chlapče.
+			AI_Output(self,other,"B_Gravo_HelpAttitude_NoOre_04_02"); //Pak pro tebe nemůžu nic udělat - je mi líto, chlapče.
 		};
 	}
 	else
@@ -305,7 +305,7 @@ func void DIA_Gravo_Influence_Info()
 	AI_Output(self,other,"DIA_Gravo_Influence_04_02"); //Diego má ze Stínů největší moc. Důvěřuje Fingersovi, Whistlerovi a Slyovi.
 //	AI_Output(self,other,"DIA_Gravo_Influence_04_03"); //Dexter and Fisk sell their stuff on the market square. They have many customers, even the guards, and that makes them rather influential.
 //	AI_Output(self,other,"DIA_Gravo_Influence_04_03"); //Dexter und Fisk verscherbeln ihre Sachen auf dem Marktplatz. Sie haben viele Kunden, selbst unter den Gardisten und sind dementsprechend einflussreich.
-	AI_Output(self,other,"DIA_Gravo_Influence_04_03"); //Dexter a Fisk prodávají své zboží na tržišti. Mají spousty zákazníků, dokonce i mezi strážci, a to z nich dělá důležité osoby.
+	AI_Output(self,other,"DIA_Gravo_Influence_04_03"); //Dexter a Fisk prodávají své zboží na tržišti. Mají spoustu zákazníků, dokonce i mezi strážci, a to z nich dělá důležité osoby.
 //	AI_Output(self,other,"DIA_Gravo_Influence_04_04"); //And then there's Scatty. He's in charge of the arena, and determines who fights and all that. Many people here owe him ore - he's important as well.
 //	AI_Output(self,other,"DIA_Gravo_Influence_04_04"); //Und dann wäre da noch Scatty, er leitet die Arena, bestimmt wer kämpft und so. Es gibt viele hier, die ihm noch Erz schulden - auch an ihn kannst du dich halten.
 	AI_Output(self,other,"DIA_Gravo_Influence_04_04"); //A pak je tu Scatty, stará se o arénu a rozhoduje, kdo bude bojovat a tak. Spousta lidí mu dluží rudu - je tedy dost důležitý.

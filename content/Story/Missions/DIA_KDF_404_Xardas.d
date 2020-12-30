@@ -146,7 +146,7 @@ func void Info_Xardas_SATURAS_Info()
 	AI_Output(hero,self,"Info_Xardas_SATURAS_15_02"); //Mágové Vody chtějí svou rudnou haldu...
 //	AI_Output(self,hero,"Info_Xardas_SATURAS_14_03"); //The ore mound is NOT the solution!
 //	AI_Output(self,hero,"Info_Xardas_SATURAS_14_03"); //Der Erzhaufen ist NICHT die Lösung!
-	AI_Output(self,hero,"Info_Xardas_SATURAS_14_03"); //Rudná halda NENÍ správné řešení!
+	AI_Output(self,hero,"Info_Xardas_SATURAS_14_03"); //Rudná halda NENÍ řešení!
 //	AI_Output(hero,self,"Info_Xardas_SATURAS_15_04"); //It isn't?
 //	AI_Output(hero,self,"Info_Xardas_SATURAS_15_04"); //Nein?
 	AI_Output(hero,self,"Info_Xardas_SATURAS_15_04"); //Ne?
@@ -206,7 +206,7 @@ instance Info_Xardas_SLEEPER(C_INFO)
 	permanent = 0;
 //	description = "The so-called Sleeper is said to be an evil arch demon.";
 //	description = "Der so genannte 'Schläfer' soll ein übler Erzdämon sein.";
-	description = "O tom takzvaném 'Spáčovi' se říká, že je to zlý arcidémon.";
+	description = "Takzvaný 'Spáč' je zlý arcidémon.";
 };
 
 func int Info_Xardas_SLEEPER_Condition()
@@ -221,10 +221,10 @@ func void Info_Xardas_SLEEPER_Info()
 {
 //	AI_Output(hero,self,"Info_Xardas_SLEEPER_15_01"); //"The so-called ""Sleeper"" is said to be an evil arch demon."
 //	AI_Output(hero,self,"Info_Xardas_SLEEPER_15_01"); //Der so genannte "Schläfer" soll ein übler Erzdämon sein.
-	AI_Output(hero,self,"Info_Xardas_SLEEPER_15_01"); //O tom takzvaném 'Spáčovi' se říká, že je to zlý arcidémon.
+	AI_Output(hero,self,"Info_Xardas_SLEEPER_15_01"); //Takzvaný 'Spáč' je zlý arcidémon.
 //	AI_Output(hero,self,"Info_Xardas_SLEEPER_15_02"); //That's what the Brotherhood in the swamp found out.
 //	AI_Output(hero,self,"Info_Xardas_SLEEPER_15_02"); //Das hat die Bruderschaft im Sumpf herausgefunden.
-	AI_Output(hero,self,"Info_Xardas_SLEEPER_15_02"); //To zjistilo Bratrstvo z bažin.
+	AI_Output(hero,self,"Info_Xardas_SLEEPER_15_02"); //Zjistilo to Bratrstvo z bažin.
 //	AI_Output(hero,self,"Info_Xardas_SLEEPER_15_03"); //Now the Magicians of Water believe that everybody in the colony is in great danger.
 //	AI_Output(hero,self,"Info_Xardas_SLEEPER_15_03"); //Die Wassermagier glauben nun, dass wir alle in der Kolonie in großer Gefahr seien.
 	AI_Output(hero,self,"Info_Xardas_SLEEPER_15_03"); //Teď si mágové Vody myslí, že jsme všichni v Kolonii ve velkém nebezpečí.
@@ -266,7 +266,7 @@ func void Info_Xardas_DANGER_Info()
 	AI_Output(self,hero,"Info_Xardas_DANGER_14_02"); //...Zapomeň na rudnou haldu! Její energie Bariéru neprolomí.
 //	AI_Output(self,hero,"Info_Xardas_DANGER_14_03"); //If Corristo and Saturas hadn't wasted their time fighting over foolish and vain issues throughout the past years, they'd all know what I know now.
 //	AI_Output(self,hero,"Info_Xardas_DANGER_14_03"); //Hätten Corristo und Saturas in den letzten Jahren weniger Zeit für ihre törichten und eitlen Streitereien verschwendet, dann wüssten sie jetzt vielleicht auch das, was ich weiß.
-	AI_Output(self,hero,"Info_Xardas_DANGER_14_03"); //Kdyby Corristo a Saturas netrávili v minulých letech čas zybtečnými pošetilými hádkami, mohli by znát to, co teď vím já.
+	AI_Output(self,hero,"Info_Xardas_DANGER_14_03"); //Kdyby Corristo a Saturas netrávili v minulých letech čas zbytečnými pošetilými hádkami, věděli by to, co teď vím já.
 //	AI_Output(hero,self,"Info_Xardas_DANGER_15_04"); //Which is?
 //	AI_Output(hero,self,"Info_Xardas_DANGER_15_04"); //Was denn?
 	AI_Output(hero,self,"Info_Xardas_DANGER_15_04"); //A co?
@@ -313,7 +313,7 @@ func void Info_Xardas_BARRIER_Info()
 	AI_Output(self,hero,"Info_Xardas_BARRIER_14_04"); //Skřeti nejsou zvířata, jak si mnozí myslí. Jejich kultura sahá do minulosti tak daleko jako lidská.
 //	AI_Output(self,hero,"Info_Xardas_BARRIER_14_05"); //A few centuries ago, five Orc shamen invoked a very old arch demon which they hoped would give their clan the power to defeat their enemies.
 //	AI_Output(self,hero,"Info_Xardas_BARRIER_14_05"); //Vor vielen hundert Jahren beschwörten fünf Ork-Schamanen einen uralten Erzdämonen, um ihrem Klan die Macht zu verleihen, ihre Feinde zu vernichten.
-	AI_Output(self,hero,"Info_Xardas_BARRIER_14_05"); //Před mnoha stoletími vyvolalo pět skřetích šamanů prastarého arcidémona, aby jejih klanu propůjčil sílu, se kterou by porazili své nepřátele.
+	AI_Output(self,hero,"Info_Xardas_BARRIER_14_05"); //Před mnoha stoletími vyvolalo pět skřetích šamanů prastarého arcidémona, aby jejich klanu propůjčil sílu, se kterou by porazili své nepřátele.
 //	AI_Output(hero,self,"Info_Xardas_BARRIER_15_06"); //This arch demon, was it the Sleeper?
 //	AI_Output(hero,self,"Info_Xardas_BARRIER_15_06"); //War dieser Erzdämon der Schläfer?
 	AI_Output(hero,self,"Info_Xardas_BARRIER_15_06"); //Ten arcidémon, to byl Spáč?
@@ -351,13 +351,13 @@ func void Info_Xardas_EVENT_Info()
 	AI_Output(hero,self,"Info_Xardas_EVENT_15_01"); //Proč ne?
 //	AI_Output(self,hero,"Info_Xardas_EVENT_14_02"); //I believe you could be... NO, to be really sure, you'll have to perform another task!
 //	AI_Output(self,hero,"Info_Xardas_EVENT_14_02"); //Ich glaube du könntest der ... NEIN, um mir ganz sicher zu sein, musst du noch eine weitere Aufgabe lösen!
-	AI_Output(self,hero,"Info_Xardas_EVENT_14_02"); //Věřím, že ty bys mohl... NE, abych se ale ujistil, musíš vyřešit ještě jeden úkol!
+	AI_Output(self,hero,"Info_Xardas_EVENT_14_02"); //Věřím, že ty bys mohl... NE, abych se ujistil, musíš vykonat ještě jeden úkol!
 //	AI_Output(hero,self,"Info_Xardas_EVENT_15_03"); //Which task?
 //	AI_Output(hero,self,"Info_Xardas_EVENT_15_03"); //Was für eine Aufgabe?
 	AI_Output(hero,self,"Info_Xardas_EVENT_15_03"); //Jaký úkol?
 //	AI_Output(self,hero,"Info_Xardas_EVENT_14_04"); //Listen carefully: The Orcs have exiled one of their shamen from the town.
 //	AI_Output(self,hero,"Info_Xardas_EVENT_14_04"); //Hör gut zu: Die Orks haben einen ihrer Schamanen aus ihrer Stadt verbannt.
-	AI_Output(self,hero,"Info_Xardas_EVENT_14_04"); //Pozorně poslouchej. Skřeti vyhostili z toho města jednoho šamana.
+	AI_Output(self,hero,"Info_Xardas_EVENT_14_04"); //Pozorně poslouchej. Skřeti vyhostili ze svého města jednoho šamana.
 }; 
 
 //---------------------------------------------------------------------
@@ -599,7 +599,7 @@ func void Info_Xardas_RETURN_Info()
 	AI_Output(self,hero,"Info_Xardas_RETURN_14_06"); //Velmi dobře, velmi dobře!
 //	AI_Output(hero,self,"Info_Xardas_RETURN_15_07"); //The Orcs locked the temple and started making sacrifices to appease the demon!
 //	AI_Output(hero,self,"Info_Xardas_RETURN_15_07"); //Die Orks verschlossen den Tempel und bringen ihm seitdem Opfer, um ihn zu besänftigen!
-	AI_Output(hero,self,"Info_Xardas_RETURN_15_07"); //Skřeti zavřeli chrám a začali přinášet oběti, aby toho démona usmířili!
+	AI_Output(hero,self,"Info_Xardas_RETURN_15_07"); //Skřeti zavřeli chrám a začali přinášet oběti, aby démona usmířili!
 //	AI_Output(self,hero,"Info_Xardas_RETURN_14_08"); //Have you found a way to enter the temple?
 //	AI_Output(self,hero,"Info_Xardas_RETURN_14_08"); //Hast du einen Weg gefunden, wie du in den Tempel gelangst?
 	AI_Output(self,hero,"Info_Xardas_RETURN_14_08"); //Našel jsi způsob, jak se dostat do chrámu?
@@ -669,7 +669,7 @@ func void Info_Xardas_FOUNDTEMPLE_Info()
 	AI_Output(self,other,"Info_Xardas_FOUNDTEMPLE_14_03"); //Stal ses velmi silným! Silnější než kdokoliv jiný uvnitř Bariéry.
 //	AI_Output(self,other,"Info_Xardas_FOUNDTEMPLE_14_04"); //Maybe you really are the man the Orcish prophecies told of!
 //	AI_Output(self,other,"Info_Xardas_FOUNDTEMPLE_14_04"); //Vielleicht bist du doch derjenige, von dem die alten orkischen Prophezeiungen sprechen!
-	AI_Output(self,other,"Info_Xardas_FOUNDTEMPLE_14_04"); //Možná jsi doopravdy ten muž ze skřetího proroctví!
+	AI_Output(self,other,"Info_Xardas_FOUNDTEMPLE_14_04"); //Možná jsi doopravdy muž ze skřetího proroctví!
 };
 
 //---------------------------------------------------------------------
@@ -764,10 +764,10 @@ func void Info_Xardas_LOADSWORD_Info()
 	AI_Output(self,other,"Info_Xardas_LOADSWORD_14_04"); //Už jsem o tom meči slyšel. Je to zbraň z dávných dob, kdy bylo lidstvo ještě mladé.
 //	AI_Output(self,other,"Info_Xardas_LOADSWORD_14_05"); //The weapon was forged from an unknown material. And there's nothing written about who created it!
 //	AI_Output(self,other,"Info_Xardas_LOADSWORD_14_05"); //Die Waffe ist aus einem völlig unbekannten Material geschmiedet. Auch über den Erschaffer steht nichts geschrieben!
-	AI_Output(self,other,"Info_Xardas_LOADSWORD_14_05"); //Ta zbraň je ukována z neznámého materiálu. Neexistují ani záznamy o tom, kdo ji vykoval!
+	AI_Output(self,other,"Info_Xardas_LOADSWORD_14_05"); //Ta zbraň byla ukována z neznámého materiálu. Neexistují ani záznamy o tom, kdo ji vykoval!
 //	AI_Output(self,other,"Info_Xardas_LOADSWORD_14_06"); //This blade was said to possess unbelievable powers, but I don't notice any magical aura! 
 //	AI_Output(self,other,"Info_Xardas_LOADSWORD_14_06"); //Angeblich soll diese Klinge unglaubliche Kräfte besessen haben, aber ich kann keinerlei magische Aura feststellen!
-	AI_Output(self,other,"Info_Xardas_LOADSWORD_14_06"); //Tato čepel má být údajně obdařena neuvěřitelnou mocí, ale necítím žádnou kouzelnou auru!
+	AI_Output(self,other,"Info_Xardas_LOADSWORD_14_06"); //Čepel má být údajně obdařena neuvěřitelnou mocí, ale necítím žádnou magickou auru!
 
 	Npc_RemoveInvItem(hero,Mythrilklinge); 
 	CreateInvItem(hero,Mythrilklinge01);
@@ -811,7 +811,7 @@ func void Info_Xardas_LOADSWORD01_Info()
 	AI_Output(other,self,"Info_Xardas_LOADSWORD01_15_03"); //Jak se mohla tato mocná zbraň skřetům dostat do rukou?
 //	AI_Output(self,other,"Info_Xardas_LOADSWORD01_14_04"); //It's claimed that the Orcs took it from a powerful warlord. They didn't know how to use it, but they did hide it!
 //	AI_Output(self,other,"Info_Xardas_LOADSWORD01_14_04"); //Es heißt, dass die Orks dieses Schwert damals einem mächtigen Feldherren der Menschen geraubt hatten. Sie konnten es zwar nicht benutzen, aber sie konnten es gut verstecken!
-	AI_Output(self,other,"Info_Xardas_LOADSWORD01_14_04"); //Říká se, že ji skřeti vzali jednomu mocnému lidskému vojevůdci. Nemohli ji použít, ale dokázali ji dobře ukrýt!
+	AI_Output(self,other,"Info_Xardas_LOADSWORD01_14_04"); //Říká se, že ji skřeti vzali jednomu mocnému lidskému vojevůdci. Nedokázali ji použít, proto ji ukryli!
 //	AI_Output(other,self,"Info_Xardas_LOADSWORD01_15_05"); //But they didn't hide it well enough!
 //	AI_Output(other,self,"Info_Xardas_LOADSWORD01_15_05"); //Nicht gut genug!
 	AI_Output(other,self,"Info_Xardas_LOADSWORD01_15_05"); //Neukryli ji ale dostatečně dobře!
@@ -899,7 +899,7 @@ func void Info_Xardas_BETTERARMOR_Info()
 	{
 //		AI_Output(other,self,"Info_Xardas_BETTERARMOR_15_02"); //These patchwork minecrawler plates have been pierced too often in the underground temple!
 //		AI_Output(other,self,"Info_Xardas_BETTERARMOR_15_02"); //Die paar zusammengeflickten Minecrawler-Platten haben im unterirdischen Tempel einfach zu viel Hiebe durchgelassen!
-		AI_Output(other,self,"Info_Xardas_BETTERARMOR_15_02"); //Tenhle pár sešitých plátů důlních červů byl v podzemním chrámu mnohokrát proražen!
+		AI_Output(other,self,"Info_Xardas_BETTERARMOR_15_02"); //Těchhle pár sešitých plátů důlních červů bylo v podzemním chrámu mnohokrát proraženo!
 	}
 	else if (armorinstance == KDW_ARMOR_H) || (armorinstance == KDW_ARMOR_L) 
 	{
@@ -922,7 +922,7 @@ func void Info_Xardas_BETTERARMOR_Info()
 	AI_Output(other,self,"Info_Xardas_BETTERARMOR_15_06"); //Tvé staré věže?
 //	AI_Output(self,other,"Info_Xardas_BETTERARMOR_14_07"); //It sank below one of the eastern lakes during one of the earthquakes. The spires are still visible above the surface.
 //	AI_Output(self,other,"Info_Xardas_BETTERARMOR_14_07"); //Er versank bei einem dieser Beben in einem See im Osten. Die Turmspitzen ragen noch immer aus dem Wasser heraus.
-	AI_Output(self,other,"Info_Xardas_BETTERARMOR_14_07"); //Potopila se v jednom z východních jezer při jednom zemětřesení. Vrcholy jsou nad povrchem stále viditelné.
+	AI_Output(self,other,"Info_Xardas_BETTERARMOR_14_07"); //Potopila se ve východním jezeru při jednom zemětřesení. Vrcholy jsou nad povrchem stále viditelné.
 //	AI_Output(self,other,"Info_Xardas_BETTERARMOR_14_08"); //There are still some artefacts inside it. I never made any effort to salvage them.
 //	AI_Output(self,other,"Info_Xardas_BETTERARMOR_14_08"); //Dort lagern noch einige Artefakte. Ich hatte mir nie die Mühe gemacht, sie zu bergen.
 	AI_Output(self,other,"Info_Xardas_BETTERARMOR_14_08"); //Jsou tam stále uloženy nějaké artefakty. Nikdy jsem se je nesnažil dostat zpátky.
@@ -1032,7 +1032,7 @@ func void Info_Xardas_FORMULA_Info()
 	AI_Output(other,self,"Info_Xardas_FORMULA_15_05"); //Pak se budu muset porozhlédnout po nějaké pomoci!
 //	AI_Output(self,other,"Info_Xardas_FORMULA_14_06"); //Take the formula and restore the sword's former power. You'll need it!
 //	AI_Output(self,other,"Info_Xardas_FORMULA_14_06"); //Nimm die Formel an dich und gib der Waffe ihre alte Macht zurück. Du wirst sie brauchen!
-	AI_Output(self,other,"Info_Xardas_FORMULA_14_06"); //Vazmi si tu formuli a obnov dřívější sílu meče. Budeš ji potřebovat!
+	AI_Output(self,other,"Info_Xardas_FORMULA_14_06"); //Vezmi si tu formuli a obnov dřívější sílu meče. Budeš ji potřebovat!
 
 	B_Story_LoadSword();
 };
@@ -1122,7 +1122,7 @@ instance Info_Xardas_MAKERUNE(C_INFO)
 	permanent = 0;
 //	description = "You said there might be a way to wield URIZIEL though I'm a magician!"; 
 //	description = "Du erwähntest einen Weg, wie ich URIZIEL auch als Magier führen könnte!"; 
-	description = "Zmínil jsi, že existuje nějaký způsob, jak bych mohl URIZIEL ovládat, přestože jsem mág?"; 
+	description = "Zmínil jsi, že existuje způsob, jak URIZIEL ovládat, i když jsem mág?"; 
 };
 
 func int Info_Xardas_MAKERUNE_Condition()
@@ -1138,13 +1138,13 @@ func void Info_Xardas_MAKERUNE_Info()
 {
 //	AI_Output(other,self,"Info_Xardas_MAKERUNE_15_01"); //You said there might be a way for me to wield URIZIEL though I'm a magician?
 //	AI_Output(other,self,"Info_Xardas_MAKERUNE_15_01"); //Du erwähntest einen Weg, wie ich URIZIEL auch als Magier wirksam führen könnte!
-	AI_Output(other,self,"Info_Xardas_MAKERUNE_15_01"); //Říkal jsi, že existuje nějaký způsob, jak bych mohl URIZIEL ovládat, přestože jsem mág?
+	AI_Output(other,self,"Info_Xardas_MAKERUNE_15_01"); //Říkal jsi, že existuje nějaký způsob, jak URIZIEL ovládat, i když jsem mág?
 //	AI_Output(self,other,"Info_Xardas_MAKERUNE_14_02"); //Look closely at URIZIEL. You'll notice the big blue jewel in the blade.
 //	AI_Output(self,other,"Info_Xardas_MAKERUNE_14_02"); //Wenn du URIZIEL genau betrachtest, wird dir der große, blau schimmernde Edelstein in der Klinge sofort auffallen.
-	AI_Output(self,other,"Info_Xardas_MAKERUNE_14_02"); //Pokud se na URIZIEL pořádně podíváš, všimneš si třpitivě modrého drahokamu zasazeného v čepeli.
+	AI_Output(self,other,"Info_Xardas_MAKERUNE_14_02"); //Pokud se na URIZIEL pořádně podíváš, všimneš si třpytivě modrého drahokamu zasazeného v čepeli.
 //	AI_Output(self,other,"Info_Xardas_MAKERUNE_14_03"); //It contains the magical powers of the blade.
 //	AI_Output(self,other,"Info_Xardas_MAKERUNE_14_03"); //Er ist das Gefäß für die magischen Kräfte der Klinge.
-	AI_Output(self,other,"Info_Xardas_MAKERUNE_14_03"); //V něm je obsažena magická síla ostří.
+	AI_Output(self,other,"Info_Xardas_MAKERUNE_14_03"); //To v něm je uložena magická síla ostří.
 //	AI_Output(self,other,"Info_Xardas_MAKERUNE_14_04"); //If I remove the jewel, I'll be able to create a magic rune which contains the attributes of URIZIEL itself.
 //	AI_Output(self,other,"Info_Xardas_MAKERUNE_14_04"); //Wenn ich den Stein entferne, kann ich daraus eine Zauberrune herstellen, welche die Eigenschaften von URIZIEL selbst in sich trägt.
 	AI_Output(self,other,"Info_Xardas_MAKERUNE_14_04"); //Když ten drahokam odstraním, budu z něj moci vytvořit kouzelnou runu, která ponese vlastnosti samotného URIZIELU.
@@ -1156,7 +1156,7 @@ func void Info_Xardas_MAKERUNE_Info()
 	AI_Output(self,other,"Info_Xardas_MAKERUNE_14_06"); //Se sílou této runy budeš moci porazit nepřátele stejně tak, jako kdybys používal celý meč!
 //	AI_Output(self,other,"Info_Xardas_MAKERUNE_14_07"); //But don't forget that only a Magician of the Sixth Circle will be able to control such a powerful magic rune!
 //	AI_Output(self,other,"Info_Xardas_MAKERUNE_14_07"); //Aber sei gewahr, dass nur ein Meister des sechsten Kreises der Magie eine solche machtvolle Zauberrune beherrschen kann!
-	AI_Output(self,other,"Info_Xardas_MAKERUNE_14_07"); //Nezapomeň ale, že jedině mistr Šestého kruhu magie je schopen ovládat takhle mocnou runu!
+	AI_Output(self,other,"Info_Xardas_MAKERUNE_14_07"); //Nezapomeň ale, že jedině mistr Šestého kruhu magie je schopen ovládat tak mocnou runu!
 };
 
 //---------------------------------------------------------------------
@@ -1215,7 +1215,7 @@ func void Info_Xardas_MAKERUNE_YES()
 	AI_Output(other,self,"Info_Xardas_MAKERUNEDOIT_15_04"); //ANO, udělej to!
 //	AI_Output(self,other,"Info_Xardas_MAKERUNEDOIT_14_05"); //Since it's what you want... Here, take the empty sword and the rune!
 //	AI_Output(self,other,"Info_Xardas_MAKERUNEDOIT_14_05"); //Du hast es so gewollt. Hier, nimm das leere Schwert und die Rune!
-	AI_Output(self,other,"Info_Xardas_MAKERUNEDOIT_14_05"); //Sám sis to zvolil. Tady, vezmi si prázdný meč a runu!
+	AI_Output(self,other,"Info_Xardas_MAKERUNEDOIT_14_05"); //Jak si přeješ. Tady, vezmi si prázdný meč a runu!
 
 	Npc_RemoveInvItem(hero,Mythrilklinge02);
 	CreateInvItems(self,UrizielRune, 2); 
@@ -1275,7 +1275,7 @@ func void Info_Xardas_LOADSWORD09_Info()
 		{
 //			AI_Output(self,other,"Info_Xardas_LOADSWORD09_14_02"); //I shall raise you into the Sixth Circle of Magic.
 //			AI_Output(self,other,"Info_Xardas_LOADSWORD09_14_02"); //Ich werde dich in den sechsten der magischen Kreise aufnehmen.
-			AI_Output(self,other,"Info_Xardas_LOADSWORD09_14_02"); //Zasvětím te do Šestého kruhu magie.
+			AI_Output(self,other,"Info_Xardas_LOADSWORD09_14_02"); //Zasvětím tě do Šestého kruhu magie.
 //			AI_Output(self,other,"Info_Xardas_LOADSWORD09_14_03"); //Notice that only the most powerful magicians may join the Sixth Circle. It's reserved to those whose life is a sign.
 //			AI_Output(self,other,"Info_Xardas_LOADSWORD09_14_03"); //Denn wisse, nur die mächtigsten Magier werden in den sechsten Kreis aufgenommen. Er ist denen vorbehalten, deren Leben ein Zeichen ist.
 			AI_Output(self,other,"Info_Xardas_LOADSWORD09_14_03"); //Uvědom si, že jen ti nejmocnější mágové ovládají kouzla z Šestého kruhu. Je vyhrazen pro ty, jejichž životy jsou znameními.
@@ -1284,7 +1284,7 @@ func void Info_Xardas_LOADSWORD09_Info()
 			AI_Output(self,other,"Info_Xardas_LOADSWORD09_14_04"); //Tvé znamení je sjednocení živlů.
 //			AI_Output(self,other,"Info_Xardas_LOADSWORD09_14_05"); //The Sixth Circle enables you to use the magic of any rune.
 //			AI_Output(self,other,"Info_Xardas_LOADSWORD09_14_05"); //Mit dem sechsten Kreis bist du in der Lage, die Magie sämtlicher Runen anzuwenden.
-			AI_Output(self,other,"Info_Xardas_LOADSWORD09_14_05"); //Šestý kruh ti umožní využít všechny runy.
+			AI_Output(self,other,"Info_Xardas_LOADSWORD09_14_05"); //Šestý kruh ti umožní používat všechny runy.
 //			AI_Output(self,other,"Info_Xardas_LOADSWORD09_14_06"); //And don't forget: Do not claim the power, but serve it.
 //			AI_Output(self,other,"Info_Xardas_LOADSWORD09_14_06"); //Und vergiss nie: Fordere nicht die Macht, sondern diene ihr.
 			AI_Output(self,other,"Info_Xardas_LOADSWORD09_14_06"); //A nezapomeň: Nevyužívej svou moc, ale služ jí.

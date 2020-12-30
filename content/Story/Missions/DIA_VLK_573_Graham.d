@@ -54,6 +54,7 @@ func void DIA_Graham_Hello_Info()
 
 //	B_LogEntry(GE_TraderOC,"The digger Graham sells maps left of the main gate.");
 //	B_LogEntry(GE_TraderOC,"Graham der Buddler verkauft Karten links vom Haupptor.");
+	//#Needs_Attention nalevo od hlavni brany? asi zalezi na tom ako sa na to clovek pozera, ked vstupis do tabora je napravo ... ked vychadzas nalavo :) idk
 	B_LogEntry(GE_TraderOC,"Kopáč Graham prodává mapy nalevo od hlavní brány.");
 };
 
@@ -98,7 +99,7 @@ func void DIA_Graham_SellMap_Info()
 	Info_AddChoice(DIA_Graham_SellMap,"Ještě přijdu.",DIA_Graham_SellMap_BACK);
 //	Info_AddChoice(DIA_Graham_SellMap,"I'll pay for the map. Here, take the ore.",DIA_Graham_SellMap_Pay);
 //	Info_AddChoice(DIA_Graham_SellMap,"Gut - ich werde die Karte bezahlen. Hier, nimm das Erz.",DIA_Graham_SellMap_Pay);
-	Info_AddChoice(DIA_Graham_SellMap,"Dobře - zaplatím za tu mapu. Tady, vezmi si tu rudu.",DIA_Graham_SellMap_Pay);
+	Info_AddChoice(DIA_Graham_SellMap,"Dobře - zaplatím za tu mapu. Tady, vezmi si rudu.",DIA_Graham_SellMap_Pay);
 //	Info_AddChoice(DIA_Graham_SellMap,"Give me the map or I'll take it!",DIA_Graham_SellMap_AufsMaul);
 //	Info_AddChoice(DIA_Graham_SellMap,"Rück die Karte raus, oder ich polier dir die Fresse!",DIA_Graham_SellMap_AufsMaul);
 	Info_AddChoice(DIA_Graham_SellMap,"Vytáhni tu mapu, nebo ti zmaluju obličej!",DIA_Graham_SellMap_AufsMaul);
@@ -134,7 +135,7 @@ func void DIA_Graham_SellMap_Pay()
 	{
 //		AI_Output(self,other,"DIA_Graham_SellMap_Pay_NoOre_02_00"); //Go and get some ore first. Hunt animals or collect mushrooms - you can sell the stuff here in the Camp.
 //		AI_Output(self,other,"DIA_Graham_SellMap_Pay_NoOre_02_00"); //Beschaff dir erst mal ein bisschen Erz. Geh Tiere jagen oder Pilze sammeln - du kannst den Krempel dann hier im Lager zu Erz machen.
-		AI_Output(self,other,"DIA_Graham_SellMap_Pay_NoOre_02_00"); //Napřed si opatři ěnjakou rudu. Jdi lovit zvěř nebo nasbírej nějaké houby - tyhle krámy potom můžeš tady v táboře prodat.
+		AI_Output(self,other,"DIA_Graham_SellMap_Pay_NoOre_02_00"); //Napřed si opatři nějakou rudu. Jdi lovit zvěř nebo nasbírej nějaké houby - tyhle krámy potom můžeš tady v táboře prodat.
 	};
 };
 
@@ -145,7 +146,7 @@ func void DIA_Graham_SellMap_AufsMaul()
 	AI_Output(other,self,"DIA_Graham_SellMap_AufsMaul_15_00"); //Vytáhni tu mapu, nebo ti zmaluju obličej!
 //	AI_Output(self,other,"DIA_Graham_SellMap_AufsMaul_02_01"); //Hey, be cool, man. I don't want trouble. Here, take the map and leave me alone!
 //	AI_Output(self,other,"DIA_Graham_SellMap_AufsMaul_02_01"); //Mach bloß keinen Mist, Mann. Ich will keinen Ärger. Hier, nimm die verdammte Karte und jetzt lass mich in Ruhe!
-	AI_Output(self,other,"DIA_Graham_SellMap_AufsMaul_02_01"); //Hej, opatrně, chlape. Nechci problémy. Tady si vezmi tu mapu a nech mě na pokoji!
+	AI_Output(self,other,"DIA_Graham_SellMap_AufsMaul_02_01"); //Hej, opatrně, chlape. Nechci problémy. Tady je ta mapa a nech mě na pokoji!
 	B_GiveInvItems(self,other,ItWrOMmap,1);
 	Info_ClearChoices(DIA_Graham_SellMap);
 	Npc_SetPermAttitude(self,ATT_ANGRY);

@@ -149,7 +149,7 @@ func void DIA_Dusty_MetMelvin_Info()
 	AI_Output(other,self,"DIA_Dusty_MetMelvin_15_04"); //Vážně? Proč ne?
 //	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_05"); //The guards have found out that I wanna leave, I guess I talk too much.
 //	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_05"); //Die Gardisten haben spitz gekriegt, dass ich mich verdrücken will - schätze, ich hab' zu viel geredet.
-	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_05"); //Stráže přišly na to, že chci proklouznout. Hádám, že jsme moc mluvil.
+	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_05"); //Stráže přišli na to, že chci proklouznout. Hádám, že jsme moc mluvil.
 //	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_06"); //I need at least 100 ore to bribe the guards.
 //	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_06"); //Ich bräuchte mindestens 100 Erz, um die Wachen zu bestechen.
 	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_06"); //Potřebuju alespoň 100 nugetů na uplacení stráží.
@@ -190,6 +190,7 @@ func void DIA_Dusty_Offer100Ore_Info()
 	AI_Output(self,other,"DIA_Dusty_Offer100Ore_03_01"); //To bys udělal? Proč?
 //	AI_Output(other,self,"DIA_Dusty_Offer100Ore_15_02"); //Well, let's say you aren't the only one who'd prefer you to hang around in the Sect Camp.
 //	AI_Output(other,self,"DIA_Dusty_Offer100Ore_15_02"); //Nun, sagen wir mal, du bist nicht der einzige, der dein dummes Grinsen gerne im Sektenlager sehen würde.
+	//#Needs_Attention 'hloupy usmev' by som prebasnil, nejak mi to nesedi :-/
 	AI_Output(other,self,"DIA_Dusty_Offer100Ore_15_02"); //No, řekněme, že nejsi jediný, kdo by rád viděl tvůj hloupý úsměv v Sektovním táboře.
 //	AI_Output(self,other,"DIA_Dusty_Offer100Ore_03_03"); //You mean you wanna come with me?
 //	AI_Output(self,other,"DIA_Dusty_Offer100Ore_03_03"); //Soll das heißen, du willst mit mir dahin gehen?
@@ -277,6 +278,8 @@ func void DIA_Dusty_LetsGo_Info()
 	AI_Output(self,other,"DIA_Dusty_LetsGo_03_01"); //Dobře - pojďme jižní branou - severní brána se nedá použít, stráže tam není možné podplatit.
 //	AI_Output(self,other,"DIA_Dusty_LetsGo_03_02"); //And perhaps you should see to the ore - I'm not very good at that kind of thing.
 //	AI_Output(self,other,"DIA_Dusty_LetsGo_03_02"); //Und die Sache mit dem Erz regelst du am besten - ich bin nicht sehr gut in so was.
+	//#Needs_Attention co tak alternativne
+	//AI_Output(self,other,"DIA_Dusty_LetsGo_03_02"); //Ten úplatek radši zařiď sám - nejsem v těchhle věcech moc dobrý.
 	AI_Output(self,other,"DIA_Dusty_LetsGo_03_02"); //Tu věc s rudou radši zařiď sám - nejsem v těchhle věcech moc dobrý.
 //	AI_Output(other,self,"DIA_Dusty_LetsGo_15_03"); //Okay - let's move!
 //	AI_Output(other,self,"DIA_Dusty_LetsGo_15_03"); //Gut - also los!
@@ -286,7 +289,7 @@ func void DIA_Dusty_LetsGo_Info()
 	{
 //		B_LogEntry(CH1_RecruitDusty,"Dusty warned me not to use the main gate in the north. It seems to be easier to bribe the guards at the gate to the south.");
 //		B_LogEntry(CH1_RecruitDusty,"Dusty warnte mich davor das Haupttor im Norden zu benutzen. Die Wachen am hinteren Südtor sind angeblich empfänglicher für Bestechungen.");
-		B_LogEntry(CH1_RecruitDusty,"Dusty mě varoval, abych se vyhnul severní bráně. Stráže u jižní brány jsou lehce podplatitelní");
+		B_LogEntry(CH1_RecruitDusty,"Dusty mě varoval, abych se vyhnul severní bráně. Stráže u jižní brány jsou lehce podplatitelní.");
 		Dusty_LetsGo = TRUE;
 	};
 

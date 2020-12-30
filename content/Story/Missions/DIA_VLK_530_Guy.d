@@ -102,9 +102,11 @@ func void DIA_Guy_AdOC_Info()
 	AI_Output(other,self,"DIA_Guy_AdOC_15_00"); //Jaké jsou výhody Starého tábora?
 //	AI_Output(self,other,"DIA_Guy_AdOC_03_01"); //If you pay protection money to the guards, you can have a laidback life here. They always interfere if one of the paying diggers is attacked.
 //	AI_Output(self,other,"DIA_Guy_AdOC_03_01"); //Wenn du den Gardisten dein Schutzgeld zahlst, hast du ein ruhiges Leben. Sie mischen sich in alle Kämpfe ein, in denen jemand angegriffen wird, den sie beschützen.
+	//#Needs_Attention 'Zasahují do všech rvaček, ve kterých je někdo, koho chrání.' by chcelo prebasnit, pride mi to krkolomne.
 	AI_Output(self,other,"DIA_Guy_AdOC_03_01"); //Když platíš strážím peníze za ochranu, můžeš tu vést klidný život. Zasahují do všech rvaček, ve kterých je někdo, koho chrání.
 //	AI_Output(self,other,"DIA_Guy_AdOC_03_02"); //Besides, you can only get the goods from the outside world cheap here. These things are unaffordable in the other camps.
 //	AI_Output(self,other,"DIA_Guy_AdOC_03_02"); //Außerdem kommt man nur hier günstig an Außenwelt-Waren. In den anderen Lagern sind diese Sachen unbezahlbar.
+	//#Needs_Attention 'V ostatních táborech jsou tyto věci k nezaplacení.' - mozno deformacia z prilisneho hrania povodnej cestiny - ale viac mi tu sedi 'V ostatních táborech jsou tyto věci nedostupné.'
 	AI_Output(self,other,"DIA_Guy_AdOC_03_02"); //Kromě toho můžeš jedině tady sehnat levné zboží z vnějšího světa. V ostatních táborech jsou tyto věci k nezaplacení.
 
 	Info_ClearChoices(DIA_Guy_AdOC);
@@ -146,6 +148,8 @@ func void DIA_Guy_AdOC_Warez()
 	AI_Output(self,other,"DIA_Guy_AdOC_Warez_03_03"); //Strážci si přivlastnili staré zbroje dozorců, potom, co je všechny zabili.
 //	AI_Output(self,other,"DIA_Guy_AdOC_Warez_03_04"); //You can always recognize them by their armor, they only sell it to other guards. You could never get hold of one as an outsider.
 //	AI_Output(self,other,"DIA_Guy_AdOC_Warez_03_04"); //Diese Rüstungen sind so was wie ihr Erkennungszeichen, die verkaufen sie nur an ihresgleichen, da kommst du als Fremder gar nicht ran.
+	//#Needs_Attention Mozno dalsia moja deformacia z povodnej cestiny, viac mi sedi povodny preklad, mozno len trochu prebasnit ten povodny?
+	//'Tyto zbroje jsou něco jako jejich znamení, které prodávají jen dalším strážcům' --> 'Podle této zbroje je můžeš bezpečně poznat, protože ji zase prodávají výhradně jiným strážcům.' --> 'Poznáš je právě podle zbroje, prodávají ji jenom dalším strážcům.'
 	AI_Output(self,other,"DIA_Guy_AdOC_Warez_03_04"); //Tyto zbroje jsou něco jako jejich znamení, které prodávají jen dalším strážcům. Jako cizinec se nemáš šnaci k takové zbroji dostat.
 };
 
@@ -156,6 +160,7 @@ func void DIA_Guy_AdOC_Protection()
 	AI_Output(other,self,"DIA_Guy_AdOC_Protection_15_00"); //A co když se do sebe pustí dva lidé, kteří oba platí peníze za ochranu?
 //	AI_Output(self,other,"DIA_Guy_AdOC_Protection_03_01"); //Then the guards just watch - until one of them kills the other: Then they do him in.
 //	AI_Output(self,other,"DIA_Guy_AdOC_Protection_03_01"); //Dann sehen sich die Gardisten das in aller Seelenruhe an. Aber wehe, wenn der eine den anderen umbringt. Dann ist er selber dran!
+	//#Needs_Attention 'Ale běda' by som mozno prebasnil na nieco ... viac Gothicovske :)
 	AI_Output(self,other,"DIA_Guy_AdOC_Protection_03_01"); //Pak se strážci v klidu dívají. Ale běda, jak jeden z nich zemře, zabijí toho druhého!
 };
 
@@ -190,6 +195,7 @@ func void DIA_Guy_AdNC_Info()
 	AI_Output(other,self,"DIA_Guy_AdNC_15_00"); //Jaké jsou výhody Nového tábora?
 //	AI_Output(self,other,"DIA_Guy_AdNC_03_01"); //If you're cool about getting your throat cut for a slice of bread, you should go there.
 //	AI_Output(self,other,"DIA_Guy_AdNC_03_01"); //Wenn du kein Problem damit hast, wegen einem Stück Brot die Kehle durchgeschnitten zu kriegen, bist du da richtig!
+	//#Needs_Attention :) Dalsia deformacia z povodneho prekladu? Viac mi sedi 'Jestli se chceš nechat podřezat kvůli bochníku chleba, tak tam běž!' (mozno prebasnit poslednu cast ', tak je to to správné místo!')
 	AI_Output(self,other,"DIA_Guy_AdNC_03_01"); //Jestli nemáš problém s tím, podřezat chlapa kvůli kousku chleba, jsi na správném místě!
 //	AI_Output(self,other,"DIA_Guy_AdNC_03_02"); //No - it's not that bad. But it's different from here.
 //	AI_Output(self,other,"DIA_Guy_AdNC_03_02"); //Nein - ganz so schlimm ist es nicht. Aber es geht anders zu als hier.
@@ -199,7 +205,7 @@ func void DIA_Guy_AdNC_Info()
 	AI_Output(self,other,"DIA_Guy_AdNC_03_03"); //Gomez se stará, aby tu byl jakýsi klid. V Novém táboře nemají žádné zákony.
 //	AI_Output(self,other,"DIA_Guy_AdNC_03_04"); //The only ones powerful enough to have a say there are the water mages, but they're too busy studying the Barrier all day.
 //	AI_Output(self,other,"DIA_Guy_AdNC_03_04"); //Die einzigen, die mächtig genug wären, den Laden zu schmeißen, sind die Wassermagier, und die forschen den ganzen Tag an der Barriere herum.
-	AI_Output(self,other,"DIA_Guy_AdNC_03_04"); //Jediný, kdo tam má opravdu moc, jsou mágové Vody, ale ti celé dny zkoumají Bariéru.
+	AI_Output(self,other,"DIA_Guy_AdNC_03_04"); //Jediný, kdo tam má opravdu moc, jsou mágové Vody, ale ti celé dny jen zkoumají Bariéru.
 }; 
 
 // **************************************************
@@ -236,6 +242,8 @@ func void DIA_Guy_AdST_Info()
 	AI_Output(self,other,"DIA_Guy_AdST_03_01"); //No, na to se raději zeptej někoho ze Sektovního tábora.
 //	AI_Output(self,other,"DIA_Guy_AdST_03_02"); //There are always a couple of novices in the Camp, and I'm sure they can tell you a lot about the sect.
 //	AI_Output(self,other,"DIA_Guy_AdST_03_02"); //Es sind immer einige Novizen im Lager, die können dir sicher 'ne Menge über die Sekte erzählen.
+	//#Needs_Attention prebasnit?
+	//AI_Output(self,other,"DIA_Guy_AdST_03_02"); //V táboře je vždycky pár noviců, co ti určitě o sektě řeknou víc.
 	AI_Output(self,other,"DIA_Guy_AdST_03_02"); //V táboře je vždycky pár noviců, kteří ti bezpochyby mohou o sektě říct víc.
 //	AI_Output(self,other,"DIA_Guy_AdST_03_03"); //I've never been there myself. But according to everything that's said, they must be really generous.
 //	AI_Output(self,other,"DIA_Guy_AdST_03_03"); //Ich war selbst nie da. Aber nach allem, was man hört, sollen sie sehr großzügig sein.

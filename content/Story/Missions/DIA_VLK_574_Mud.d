@@ -60,7 +60,7 @@ func void DIA_Mud_FirstEXIT_Info()
 	AI_Output(self,other,"DIA_Mud_FirstEXIT_07_00"); //Hej, člověče! Jsi tu nový? Nikdy jsem tě tu neviděl.
 //	AI_Output(self,other,"DIA_Mud_FirstEXIT_07_01"); //I'll join you for a while, if you don't mind. I'm sure you'll need a friend.
 //	AI_Output(self,other,"DIA_Mud_FirstEXIT_07_01"); //Wenn du nichts dagegen hast, komme ich ein Stück mit. Du kannst sicher einen Freund brauchen.
-	AI_Output(self,other,"DIA_Mud_FirstEXIT_07_01"); //Jestli proti tomu nicnemáš, půjdu kousek s tebou. Určitě potřebuješ kamaráda.
+	AI_Output(self,other,"DIA_Mud_FirstEXIT_07_01"); //Jestli proti tomu nic nemáš, půjdu kousek s tebou. Určitě potřebuješ kamaráda.
 	Info_ClearChoices(DIA_Mud_FirstEXIT);
 //	Info_AddChoice(DIA_Mud_FirstEXIT,"Get lost!",DIA_Mud_FirstEXIT_Verpiss);
 //	Info_AddChoice(DIA_Mud_FirstEXIT,"Verpiss dich!",DIA_Mud_FirstEXIT_Verpiss);
@@ -283,6 +283,8 @@ func void DIA_Mud_Nerve_2_Info()
 {
 //	AI_Output(self,other,"DIA_Mud_Nerve_2_07_00"); //Don't you have any plan of where you want to go?
 //	AI_Output(self,other,"DIA_Mud_Nerve_2_07_00"); //Hast du eigentlich keinen Plan, wo du hinwillst? Suchst du ein stilles Plätzchen? Wo wir ein bisschen reden können und so?
+	//#Needs_Attention toto je taky isty dialog ako DIA_Mud_Nerve_3_07_00. To je skoda. Anglicky dabing ponuka 2 varianty - rozseknuty dialog. Volil by som teda rozseknut ho aj tu
+	//AI_Output(self,other,"DIA_Mud_Nerve_2_07_00"); //Už máš nějaký plán, kam chceš dojít?
 	AI_Output(self,other,"DIA_Mud_Nerve_2_07_00"); //Už máš nějaký plán, kam chceš dojít? Hledáš klidné místečko? Kde si budeme moci trochu popovídat nebo tak?
 	Npc_SetRefuseTalk(self,NerveSec);
 	Mud_Nerve = 3;
@@ -312,6 +314,8 @@ func void DIA_Mud_Nerve_3_Info()
 {
 //	AI_Output(self,other,"DIA_Mud_Nerve_3_07_00"); //Are you looking for a quiet place? Where we can talk for a bit or something?
 //	AI_Output(self,other,"DIA_Mud_Nerve_3_07_00"); //Hast du eigentlich keinen Plan, wo du hinwillst? Suchst du ein stilles Plätzchen? Wo wir ein bisschen reden können und so?
+	//#Needs_Attention toto je taky isty dialog ako DIA_Mud_Nerve_2_07_00. To je skoda. Anglicky dabing ponuka 2 varianty - rozseknuty dialog. Volil by som teda rozseknut ho aj tu
+	//AI_Output(self,other,"DIA_Mud_Nerve_3_07_00"); //Hledáš klidné místečko? Kde si budeme moci trochu popovídat nebo tak?
 	AI_Output(self,other,"DIA_Mud_Nerve_3_07_00"); //Už máš nějaký plán, kam chceš dojít? Hledáš klidné místečko? Kde si budeme moci trochu popovídat nebo tak?
 	Npc_SetRefuseTalk(self,NerveSec);
 	Mud_Nerve = 4;
@@ -341,6 +345,7 @@ func void DIA_Mud_Nerve_4_Info()
 {
 //	AI_Output(self,other,"DIA_Mud_Nerve_4_07_00"); //Is it possible we're walking in circles? I mean, I don't know where you want to go...
 //	AI_Output(self,other,"DIA_Mud_Nerve_4_07_00"); //Kann es sein, dass du im Kreis läufst? Ich meine, ich weiß ja nicht, wo du hin willst ...
+	//#Needs_Attention 'Myslím, že nevím, kam chceš dojít...' prebasnit? je to nejake krkolomne
 	AI_Output(self,other,"DIA_Mud_Nerve_4_07_00"); //Je možné, že chodíme do kruhu? Myslím, že nevím, kam chceš dojít...
 	Npc_SetRefuseTalk(self,NerveSec);
 	Mud_Nerve = 5;
@@ -457,7 +462,7 @@ func void DIA_Mud_Nerve_8_Info()
 {
 //	AI_Output(self,other,"DIA_Mud_Nerve_8_07_00"); //There are some people who constantly try to beat me up. Horrible guys from the New Camp. Real cut-throats. The next time I'll tell them that they'll have you to deal with in the future. Then they'll be dead scared.
 //	AI_Output(self,other,"DIA_Mud_Nerve_8_07_00"); //Es gibt da ein paar Leute, die versuchen ständig, mich zu verprügeln. Fiese Typen aus dem Neuen Lager. Richtige Brutalos. Ich werde ihnen beim nächsten Mal gleich sagen, dass sie es in Zukunft mir dir zu tun kriegen. Das wird sie sicher abschrecken.
-	AI_Output(self,other,"DIA_Mud_Nerve_8_07_00"); //Jsou tady lidi, kteří se mě soustavně pokoušejí mlátit. Oškliví chlapi z Nového tábora. Opravdoví hrdlořezi. Příště jim řeknu, ať si to vyřídí s tebou. To je určitě odradí.
+	AI_Output(self,other,"DIA_Mud_Nerve_8_07_00"); //Jsou tady lidi, kteří se mě soustavně pokoušejí mlátit. Odporní chlapi z Nového tábora. Opravdoví hrdlořezi. Příště jim řeknu, ať si to vyřídí s tebou. To je určitě odradí.
 	Npc_SetRefuseTalk(self,NerveSec);
 	Mud_Nerve = 9;
 	AI_StopProcessInfos(self);
@@ -486,7 +491,7 @@ func void DIA_Mud_Nerve_9_Info()
 {
 //	AI_Output(self,other,"DIA_Mud_Nerve_9_07_00"); //Those bastards from the New Camp will be amazed when they get to know that I have a protector. They'll piss themselves. That'll be fun. Normally they finish people off quickly, but now they'll think twice.
 //	AI_Output(self,other,"DIA_Mud_Nerve_9_07_00"); //Diese fiesen Schweine aus dem Neuen Lager werden staunen, wenn sie erfahren, dass ich einen Beschützer habe. Die werden sich in die Hosen machen. Das wird ein Spaß. Sonst machen sie ja mit allen kurzen Prozess, aber jetzt werden sie sich das zweimal überlegen.
-	AI_Output(self,other,"DIA_Mud_Nerve_9_07_00"); //Ta ošklivá prasata z Nového tábora budou překvapená, až se dozví, že mám ochránce. Podělaj se strachy. To bude legrace. Obvykle jsou s lidmi hotoví razdva, ale teď se budou rozmýšlet dvakrát.
+	AI_Output(self,other,"DIA_Mud_Nerve_9_07_00"); //Ta ohavná prasata z Nového tábora budou překvapená, až se dozví, že mám ochránce. Podělaj se strachy. To bude legrace. Obvykle jsou s lidmi hotoví raz dva, ale teď se budou rozmýšlet dvakrát.
 	Npc_SetRefuseTalk(self,NerveSec);
 	Mud_Nerve = 10;
 	AI_StopProcessInfos(self);
@@ -544,7 +549,8 @@ func void DIA_Mud_Nerve_11_Info()
 {
 //	AI_Output(self,other,"DIA_Mud_Nerve_11_07_00"); //Some people think I'm a complete lunatic. But somebody like you would never hang out with a lunatic. People would talk about that. So they'll finally understand that they were wrong about me.
 //	AI_Output(self,other,"DIA_Mud_Nerve_11_07_00"); //Manche halten mich ja für einen durchgeknallten Spinner. Aber jemand wie du würde sich hier ja niemals mit einem Spinner sehen lassen. So was spricht sich ja rum. Also werden sie einsehen, dass sie sich in mir getäuscht haben.
-	AI_Output(self,other,"DIA_Mud_Nerve_11_07_00"); //Někteří lidé si myslí, že jsem úplný cvok. Ale někdo jako ty, by se nikdy s bláznem nebavil. Lidé se o tom začnou bavit. Pak by nakonec pochopí, že se ve mně mýlili.
+	//#Needs_Attention dvojite pouzitie bavit by som mozno prebasnil 'nebavil. Lidé se o tom začnou bavit' mozno druhu cast na 'nebavil. Lidé se o tom začnou povídat' ?
+	AI_Output(self,other,"DIA_Mud_Nerve_11_07_00"); //Někteří lidé si myslí, že jsem úplný cvok. Ale někdo jako ty, by se nikdy s bláznem nebavil. Lidé se o tom začnou bavit. Pak nakonec pochopí, že se ve mně mýlili.
 	Npc_SetRefuseTalk(self,NerveSec);
 	Mud_Nerve = 12;
 	AI_StopProcessInfos(self);
@@ -631,6 +637,7 @@ func void DIA_Mud_Nerve_14_Info()
 {
 //	AI_Output(self,other,"DIA_Mud_Nerve_14_07_00"); //You're like a big brother to me. I never had a big brother. Or a small one. My parents didn't want me. But I'm sure it was difficult for them.
 //	AI_Output(self,other,"DIA_Mud_Nerve_14_07_00"); //Du bist wie ein großer Bruder für mich. Ich hatte nie einen großen Bruder. Auch keinen kleinen. Meine Eltern wollten mich nicht behalten. Ich bin sicher, das fiel ihnen nicht leicht.
+	//#Needs_Attention prebasnit složité na těžké?
 	AI_Output(self,other,"DIA_Mud_Nerve_14_07_00"); //Připadáš mi jako starší bratr. Nikdy jsem neměl staršího bratra. Ani mladšího. Mí rodiče mě nechtěli. Ale určitě to pro ně bylo složité.
 //	AI_Output(other,self,"DIA_Mud_Nerve_14_15_01"); //Sure it was.
 //	AI_Output(other,self,"DIA_Mud_Nerve_14_15_01"); //Bestimmt nicht.
@@ -779,6 +786,8 @@ func void DIA_Mud_Nerve_19_Info()
 {
 //	AI_Output(self,other,"DIA_Mud_Nerve_19_07_00"); //The two of us are a dream team. We could take over the Old Camp. The Ore Barons wouldn't be a problem for us since we're a team. I'll think of a plan.
 //	AI_Output(self,other,"DIA_Mud_Nerve_19_07_00"); //Zusammen sind wir echt unschlagbar. Wir könnten das Alte Lager übernehmen. Mit den Erzbaronen werden wir schon fertig, wir sind ja zu zweit. Ich werde mir etwas ausdenken.
+	//#Needs_Attention asi by som sa drzal viac anglickeho dabingu. Prva cast je fajn 'Spolu jsme opravdu nepřekonatelní. Mohli bychom ovládnout Starý tábor.' ale druhu by som nechal 'Rudobaroni by nepředstavovali problém, dokud bysme byli tým. Vymyslím nějaký plán.'
+	//AI_Output(self,other,"DIA_Mud_Nerve_19_07_00"); //My dva jsme snový tým. Mohli bysme ovládnout Starý tábor. Rudobaroni by nepředstavovali problém, dokud bysme byli tým. Vymyslím nějaký plán.
 	AI_Output(self,other,"DIA_Mud_Nerve_19_07_00"); //Spolu jsme opravdu nepřekonatelní. Mohli bychom ovládnout Starý tábor. S rudobarony bychom byli hned hotoví, jsme na ně dva. Vymyslím nějaký plán.
 	Npc_SetRefuseTalk(self,NerveSec);
 	Mud_Nerve = 0;

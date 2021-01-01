@@ -50,7 +50,7 @@ func void DIA_Melvin_Hello_Info()
 	AI_Output(other,self,"DIA_Melvin_Hello_15_00"); //Zdar! Ty nejsi z tohoto tábora, že ne?
 //	AI_Output(self,other,"DIA_Melvin_Hello_03_01"); //Well, now I am! I left the Old Camp a week ago. Told my pal Dusty to come along but he wanted to wait.
 //	AI_Output(self,other,"DIA_Melvin_Hello_03_01"); //Jetzt schon! Ich bin vor 'ner Woche aus dem Alten Lager abgehauen. Hab' meinem Kumpel Dusty gesagt, er soll mitkommen, aber er wollte lieber noch warten.
-	AI_Output(self,other,"DIA_Melvin_Hello_03_01"); //Ano, jsem! Před týdnem jsem opustil Starý tábor. Řekl jsem svému kamarádovi Dustymu, aby šel se mnou, ale on chtěl raději počkat.
+	AI_Output(self,other,"DIA_Melvin_Hello_03_01"); //Ano, jsem! Před týdnem jsem opustil Starý tábor. Řekl jsem svému kamarádovi Dustymu, aby šel se mnou, ale chtěl raději počkat.
 
 	Log_CreateTopic(CH1_RecruitDusty,LOG_MISSION);
 	Log_SetTopicStatus(CH1_RecruitDusty,LOG_RUNNING);

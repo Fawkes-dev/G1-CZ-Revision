@@ -109,6 +109,8 @@ func void VLK_586_Grimes_KNOW_Info()
 	AI_Output(other,self,"VLK_586_Grimes_KNOW_Info_15_05"); //Nechci tu dalších deset let života těžit v dole!
 //	AI_Output(self,other,"VLK_586_Grimes_KNOW_Info_04_06"); //No, you won't. Perhaps you'll be one of the real big shots, who knows.
 //	AI_Output(self,other,"VLK_586_Grimes_KNOW_Info_04_06"); //Nein. Das wirst du nicht. Vielleicht wirst du zu den ganz Grossen gehören, wer weiß.
+	//#Needs_Attention prebasnit ? tu mi celkom chyba v kontextu 'velkých šéfů' ... 'velkých' samo o sebe mi pripada neslane nemastne
+	//AI_Output(self,other,"VLK_586_Grimes_KNOW_Info_04_06"); //Ne, nebudeš! Snad budeš jedním z těch velkých šéfů, kdo ví.
 	AI_Output(self,other,"VLK_586_Grimes_KNOW_Info_04_06"); //Ne, nebudeš! Třeba budeš jedním z těch velkých, kdo ví.
 //	AI_Output(self,other,"VLK_586_Grimes_KNOW_Info_04_07"); //You'll work your way up, but no matter how far you'll get, the Barrier will finally stop you.
 //	AI_Output(self,other,"VLK_586_Grimes_KNOW_Info_04_07"); //Du wirst dich nach oben arbeiten, aber ganz egal, wie weit du auch kommst, die Barriere wird dich aufhalten!

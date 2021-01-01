@@ -128,7 +128,7 @@ func void VLK_585_Aleph_INFO_Info()
 	AI_Output(other,self,"VLK_585_Aleph_INFO_Info_15_01"); //Dobře, tady máš 10 nugetů.
 //	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_02"); //Thanks. If you go to the main shaft and follow the catwalks further down, you'll soon get to two side caves.
 //	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_02"); //Danke. Wenn du zurück zum Hauptschacht gehst und den Stegen weiter nach unten folgst, kommst du bald an zwei Nebenhöhlen.
-	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_02"); //Díky. Když půjdeš do hlavní šachty a půjdeš po lávkách pořád dolu, dostaneš se za chvíli do dvojité vedlejší jeskyně.
+	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_02"); //Díky. Když půjdeš do hlavní šachty a půjdeš po lávkách pořád dolů, dostaneš se za chvíli do dvojité vedlejší jeskyně.
 //	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_03"); //There's a guard in the second one, and there's also an old masher.
 //	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_03"); //In der zweiten Höhle steht eine Wache. Da steht auch ein alter Stampfer.
 	AI_Output(self,other,"VLK_585_Aleph_INFO_Info_05_03"); //V té druhé je stráž a také tam stojí stará drtička.

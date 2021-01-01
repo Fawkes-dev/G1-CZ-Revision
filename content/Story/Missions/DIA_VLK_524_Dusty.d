@@ -50,16 +50,16 @@ func void DIA_Dusty_Hello_Info()
 	AI_Output(other,self,"DIA_Dusty_Hello_15_00"); //Zdar! Jsem tady nový - jak to jde?
 //	AI_Output(self,other,"DIA_Dusty_Hello_03_01"); //Go away! I've been working my ass off in the mines for the last two weeks. And what for?
 //	AI_Output(self,other,"DIA_Dusty_Hello_03_01"); //Ach hör auf! Ich hab' die letzten zwei Wochen in den Minen geschuftet. Und wofür?
-	AI_Output(self,other,"DIA_Dusty_Hello_03_01"); //Jdi pryč! Za poslední dva týdny jsem se v dolech sedřel k smrti. A co z toho?
+	AI_Output(self,other,"DIA_Dusty_Hello_03_01"); //Přestaň s tím! Poslední dva týdny jsem se plahočil v dole. A k čemu?
 //	AI_Output(self,other,"DIA_Dusty_Hello_03_02"); //Some sad lumps of ore is all I got. I had to spend most of it on food.
 //	AI_Output(self,other,"DIA_Dusty_Hello_03_02"); //Ein paar lausige Brocken Erz sind mir geblieben. Das meiste ging für Essen drauf.
-	AI_Output(self,other,"DIA_Dusty_Hello_03_02"); //Nějakej blbej kus rudy, to je všechno. Většinu z toho utratím za jídlo.
+	AI_Output(self,other,"DIA_Dusty_Hello_03_02"); //Zbylo mi jen pár kousků rudy. Většinu z toho utratím za jídlo.
 //	AI_Output(self,other,"DIA_Dusty_Hello_03_03"); //I talked to Baal Parvez down there. He told me some interesting things about the Sect Camp.
 //	AI_Output(self,other,"DIA_Dusty_Hello_03_03"); //Ich hab' mich mit Baal Parvez da unten unterhalten. Er hat mir ein paar interessante Sachen über das Lager der Sekte erzählt.
-	AI_Output(self,other,"DIA_Dusty_Hello_03_03"); //Mluvil jsem s Baalem Parvezem. Řekl mi o Sektovním táboře několik zajímavých věcí.
+	AI_Output(self,other,"DIA_Dusty_Hello_03_03"); //Mluvil jsem s Baalem Parvezem, tam dole. Řekl mi o Sektovním táboře pár zajímavých věcí.
 //	AI_Output(self,other,"DIA_Dusty_Hello_03_04"); //I think I'd better go there instead of slaving away for Gomez.
 //	AI_Output(self,other,"DIA_Dusty_Hello_03_04"); //Ich glaube, ich sollte besser zu denen gehen, als mir weiter für Gomez den Rücken krumm zu schuften.
-	AI_Output(self,other,"DIA_Dusty_Hello_03_04"); //Myslím, že by bylo lepší přejít tam, než tady dál otročit na Gomeze.
+	AI_Output(self,other,"DIA_Dusty_Hello_03_04"); //Myslím, že bych tam měl raději přejít, než se tady dál ohýbat záda pro Gomeze.
 };
 
 // **************************************************
@@ -75,7 +75,7 @@ instance DIA_Dusty_WhyNotLeave(C_INFO)
 	permanent = 0;
 //	description = "You don't like it here? Why don't you just go then?";
 //	description = "Dir gefällt's hier nicht? Wieso gehst du dann nicht einfach?";
-	description = "Tobě se tady nelíbí? Proč teda neodejdeš?";
+	description = "Tobě se tady nelíbí? Proč teda jednoduše neodejdeš?";
 };
 
 func int DIA_Dusty_WhyNotLeave_Condition()
@@ -91,19 +91,19 @@ func void DIA_Dusty_WhyNotLeave_Info()
 {
 //	AI_Output(other,self,"DIA_Dusty_WhyNotLeave_15_00"); //You don't like it here? Why don't you just go then?
 //	AI_Output(other,self,"DIA_Dusty_WhyNotLeave_15_00"); //Dir gefällt's hier nicht? Wieso gehst du dann nicht einfach?
-	AI_Output(other,self,"DIA_Dusty_WhyNotLeave_15_00"); //Tobě se tady nelíbí? Proč teda neodejdeš?
+	AI_Output(other,self,"DIA_Dusty_WhyNotLeave_15_00"); //Tobě se tady nelíbí? Proč teda jednoduše neodejdeš?
 //	AI_Output(self,other,"DIA_Dusty_WhyNotLeave_03_01"); //Because I'm not quite sure what to expect there. I had a pal here - his name was Melvin. He headed off to the Sect Camp a week ago.
 //	AI_Output(self,other,"DIA_Dusty_WhyNotLeave_03_01"); //Weil ich nicht sicher bin, was mich da erwartet. Ich habe 'nen Kumpel hier gehabt - Melvin heißt er. Er ist vor einer Woche ins Sektenlager abgehauen.
-	AI_Output(self,other,"DIA_Dusty_WhyNotLeave_03_01"); //Protože si nejsem úplně jistý, co tam můžu očekávat. Měl jsem tady kamaráda - jmenoval se Melvin. Odešel před týdnem do Sektovního tábora.
+	AI_Output(self,other,"DIA_Dusty_WhyNotLeave_03_01"); //Protože si nejsem úplně jistý, co mě tam čeká. Měl jsem tady kamaráda - jmenoval se Melvin. Před týdnem odešel do Sektovního tábora.
 //	AI_Output(self,other,"DIA_Dusty_WhyNotLeave_03_02"); //But since then I haven't heard of him. And as long as I don't get a message from him, I'll stay here!
 //	AI_Output(self,other,"DIA_Dusty_WhyNotLeave_03_02"); //Aber ich habe seitdem nichts mehr von ihm gehört. Und so lange sich das nicht ändert, bleibe ich besser hier!
-	AI_Output(self,other,"DIA_Dusty_WhyNotLeave_03_02"); //Od té doby jsem o něm neslyšel. A dokud o něm nedostanu zprávu, zůstanu tady!
+	AI_Output(self,other,"DIA_Dusty_WhyNotLeave_03_02"); //Od té doby jsem ale o něm neslyšel. A dokud se to nezmění, zůstanu tady!
 
 	Log_CreateTopic(CH1_RecruitDusty,LOG_MISSION);
 	Log_SetTopicStatus(CH1_RecruitDusty,LOG_RUNNING);
 //	B_LogEntry(CH1_RecruitDusty,"Dusty, a digger from the Old Camp, is no longer satisfied with living there. He's thinking about joining the Brotherhood in the swamp.");
 //	B_LogEntry(CH1_RecruitDusty,"Dusty, ein Buddler aus dem Alten Lager ist dort sehr unzufrieden. Er spielt mit dem Gedanken sich der Bruderschaft im Sumpf anzuschließen.");
-	B_LogEntry(CH1_RecruitDusty,"Dusty, kopáč ze Starého tábora, už je dlouho nespokojen se zdejším životem. Přemýšlí o tom, že se přidá k Bratrstvu v bažinách.");
+	B_LogEntry(CH1_RecruitDusty,"Dusty, kopáč ze Starého tábora, už je dlouho nespokojen s životem ve Starém táboře. Pohrává si s myšlenkou, přidat se k Bratrstvu.");
 };
 
 // **************************************************
@@ -137,22 +137,22 @@ func void DIA_Dusty_MetMelvin_Info()
 	AI_Output(other,self,"DIA_Dusty_MetMelvin_15_00"); //Byl jsem v Sektovním táboře a setkal se s Melvinem.
 //	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_01"); //And? What did he say?
 //	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_01"); //Und? Was sagt er?
-	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_01"); //No a? Co říkal?
+	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_01"); //A? Co říkal?
 //	AI_Output(other,self,"DIA_Dusty_MetMelvin_15_02"); //Apparently he likes it more than getting harassed by the guards.
 //	AI_Output(other,self,"DIA_Dusty_MetMelvin_15_02"); //Es gefällt ihm anscheinend besser, als sich von den Gardisten schikanieren zu lassen.
-	AI_Output(other,self,"DIA_Dusty_MetMelvin_15_02"); //Očividně mu to vyhovovalo líp, než se nechat utlačovat od stráží.
+	AI_Output(other,self,"DIA_Dusty_MetMelvin_15_02"); //Zřejmě je to lepší, než se nechat šikanovat od stráží.
 //	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_03"); //Hey man! He has all the fun for himself? I have to go there. But I'll never make it out of the Camp.
 //	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_03"); //Hey, Mann! Er hat den ganzen Spaß ohne mich? Ich muss da hin. Aber ich komme nie aus dem Lager raus.
-	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_03"); //No, těbuch! To si tu celou radost nechává sám pro sebe? Musím tam jít. Ale z tohohle tábora se nikdy nedostanu..
+	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_03"); //Hej, chlape! To si to tam užívá celé beze mě? Musím tam jít. Ale z tohohle tábora se nikdy nedostanu.
 //	AI_Output(other,self,"DIA_Dusty_MetMelvin_15_04"); //Really? Why not?
 //	AI_Output(other,self,"DIA_Dusty_MetMelvin_15_04"); //So? Warum nicht?
 	AI_Output(other,self,"DIA_Dusty_MetMelvin_15_04"); //Vážně? Proč ne?
 //	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_05"); //The guards have found out that I wanna leave, I guess I talk too much.
 //	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_05"); //Die Gardisten haben spitz gekriegt, dass ich mich verdrücken will - schätze, ich hab' zu viel geredet.
-	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_05"); //Stráže zjistily, že jsem chtěl odejít, protože jsem asi moc mluvil.
+	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_05"); //Stráže přišli na to, že chci proklouznout. Hádám, že jsme moc mluvil.
 //	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_06"); //I need at least 100 ore to bribe the guards.
 //	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_06"); //Ich bräuchte mindestens 100 Erz, um die Wachen zu bestechen.
-	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_06"); //Potřebuju aspoň 100 nugetů na uplacení stráží.
+	AI_Output(self,other,"DIA_Dusty_MetMelvin_03_06"); //Potřebuju alespoň 100 nugetů na uplacení stráží.
 };
 
 // **************************************************
@@ -168,7 +168,7 @@ instance DIA_Dusty_Offer100Ore(C_INFO)
 	permanent = 0;
 //	description = "What if I gave you the 100 ore for the guards?";
 //	description = "Was wäre, wenn ich dir die 100 Erz für die Wachen geben würde?";
-	description = "Co kdybych ti dal těch 100 nugetů pro stráže?";
+	description = "Co kdybych ti těch 100 nugetů pro stráže dal?";
 };
 
 func int DIA_Dusty_Offer100Ore_Condition()
@@ -184,16 +184,17 @@ func void DIA_Dusty_Offer100Ore_Info()
 {
 //	AI_Output(other,self,"DIA_Dusty_Offer100Ore_15_00"); //What if I gave you the 100 ore for the guards?
 //	AI_Output(other,self,"DIA_Dusty_Offer100Ore_15_00"); //Was wäre, wenn ich dir die 100 Erz für die Wachen geben würde?
-	AI_Output(other,self,"DIA_Dusty_Offer100Ore_15_00"); //Co kdybych ti dal těch 100 nugetů pro stráže?
+	AI_Output(other,self,"DIA_Dusty_Offer100Ore_15_00"); //Co kdybych ti těch 100 nugetů pro stráže dal?
 //	AI_Output(self,other,"DIA_Dusty_Offer100Ore_03_01"); //You'd do that? Why?
 //	AI_Output(self,other,"DIA_Dusty_Offer100Ore_03_01"); //Das würdest du tun? Warum?
 	AI_Output(self,other,"DIA_Dusty_Offer100Ore_03_01"); //To bys udělal? Proč?
 //	AI_Output(other,self,"DIA_Dusty_Offer100Ore_15_02"); //Well, let's say you aren't the only one who'd prefer you to hang around in the Sect Camp.
 //	AI_Output(other,self,"DIA_Dusty_Offer100Ore_15_02"); //Nun, sagen wir mal, du bist nicht der einzige, der dein dummes Grinsen gerne im Sektenlager sehen würde.
-	AI_Output(other,self,"DIA_Dusty_Offer100Ore_15_02"); //Dobrá, řekněme, že nejsi jediný, kdo by se chtěl do Sektovního tábora podívat.
+	//#Needs_Attention 'hloupy usmev' by som prebasnil, nejak mi to nesedi :-/
+	AI_Output(other,self,"DIA_Dusty_Offer100Ore_15_02"); //No, řekněme, že nejsi jediný, kdo by rád viděl tvůj hloupý úsměv v Sektovním táboře.
 //	AI_Output(self,other,"DIA_Dusty_Offer100Ore_03_03"); //You mean you wanna come with me?
 //	AI_Output(self,other,"DIA_Dusty_Offer100Ore_03_03"); //Soll das heißen, du willst mit mir dahin gehen?
-	AI_Output(self,other,"DIA_Dusty_Offer100Ore_03_03"); //Takže ty chceš jít se mnou?
+	AI_Output(self,other,"DIA_Dusty_Offer100Ore_03_03"); //Znamená to, že chceš jít se mnou?
 };
 
 // **************************************************
@@ -234,7 +235,7 @@ func void DIA_Dusty_IWouldGo_Info()
 
 //	B_LogEntry(CH1_RecruitDusty,"I managed to convince the digger Dusty to join the Brotherhood in the swamp camp. But I'll have to bribe the guards with some ore. It'll be best if I take him straight to Baal Tondral.");
 //	B_LogEntry(CH1_RecruitDusty,"Ich konnte den Buddler Dusty dazu überreden, mit mir ins Sumpflager der Bruderschaft zu gehen. Allerdings werde ich die Torwachen mit etwas Erz zum wegsehen bewegen müssen. Am besten bringe ich ihn gleich direkt zu Baal Tondral.");
-	B_LogEntry(CH1_RecruitDusty,"Podařilo se mi přesvědčit kopáče Dustyho, aby se přidal do Tábora v bažinách. Budu ale muset uplatit stráže nějakou rudou. Nejlepší bude, když ho přivedu přímo k Baalu Tondralovi.");
+	B_LogEntry(CH1_RecruitDusty,"Podařilo se mi přesvědčit kopáče Dustyho, aby se mnou šel do Tábora v bažinách. Budu ale muset podplatit stráže u brány nějakou rudou. Nejlepší bude, když ho přivedu přímo k Baalu Tondralovi.");
 	B_GiveXP(XP_DustyJoined);
 };
 
@@ -277,7 +278,9 @@ func void DIA_Dusty_LetsGo_Info()
 	AI_Output(self,other,"DIA_Dusty_LetsGo_03_01"); //Dobře - pojďme jižní branou - severní brána se nedá použít, stráže tam není možné podplatit.
 //	AI_Output(self,other,"DIA_Dusty_LetsGo_03_02"); //And perhaps you should see to the ore - I'm not very good at that kind of thing.
 //	AI_Output(self,other,"DIA_Dusty_LetsGo_03_02"); //Und die Sache mit dem Erz regelst du am besten - ich bin nicht sehr gut in so was.
-	AI_Output(self,other,"DIA_Dusty_LetsGo_03_02"); //Snad je ta ruda přesvědčí - nejsem v těchhle věcech moc dobrý.
+	//#Needs_Attention co tak alternativne
+	//AI_Output(self,other,"DIA_Dusty_LetsGo_03_02"); //Ten úplatek radši zařiď sám - nejsem v těchhle věcech moc dobrý.
+	AI_Output(self,other,"DIA_Dusty_LetsGo_03_02"); //Tu věc s rudou radši zařiď sám - nejsem v těchhle věcech moc dobrý.
 //	AI_Output(other,self,"DIA_Dusty_LetsGo_15_03"); //Okay - let's move!
 //	AI_Output(other,self,"DIA_Dusty_LetsGo_15_03"); //Gut - also los!
 	AI_Output(other,self,"DIA_Dusty_LetsGo_15_03"); //Dobrá - pojďme!
@@ -286,7 +289,7 @@ func void DIA_Dusty_LetsGo_Info()
 	{
 //		B_LogEntry(CH1_RecruitDusty,"Dusty warned me not to use the main gate in the north. It seems to be easier to bribe the guards at the gate to the south.");
 //		B_LogEntry(CH1_RecruitDusty,"Dusty warnte mich davor das Haupttor im Norden zu benutzen. Die Wachen am hinteren Südtor sind angeblich empfänglicher für Bestechungen.");
-		B_LogEntry(CH1_RecruitDusty,"Dusty mě varoval, abych se vyhnul severní bráně. Snazší prý bude uplatit stráže u jižní brány.");
+		B_LogEntry(CH1_RecruitDusty,"Dusty mě varoval, abych se vyhnul severní bráně. Stráže u jižní brány jsou lehce podplatitelní.");
 		Dusty_LetsGo = TRUE;
 	};
 

@@ -205,7 +205,7 @@ func void DIA_Snaf_ZutatenSuccess_Info()
 	Log_SetTopicStatus(CH1_SnafsRecipe,LOG_SUCCESS);
 //	B_LogEntry(CH1_SnafsRecipe,"Snaf was really satisfied when I gave him the ingredients.");
 //	B_LogEntry(CH1_SnafsRecipe,"Snaf war sehr zufrieden, als ich ihm die Zutaten übergab.");
-	B_LogEntry(CH1_SnafsRecipe,"Snaf byl velmi spokojený, když jsem mu přinesl ty přísady.");
+	B_LogEntry(CH1_SnafsRecipe,"Snaf byl velmi spokojený, když jsem mu přinesl přísady.");
 
 	if Snaf_FreeMBRagout==TRUE
 	{

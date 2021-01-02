@@ -53,7 +53,7 @@ func void DIA_Huno_YouKnowYourJob_Info()
 	AI_Output(self,other,"DIA_Huno_YouKnowYourJob_09_01"); //Zatím si nikdo nestěžoval.
 //	AI_Output(self,other,"DIA_Huno_YouKnowYourJob_09_02"); //But that would be a bad idea anyway. Every idiot here needs a sword, and that is what they get from me.
 //	AI_Output(self,other,"DIA_Huno_YouKnowYourJob_09_02"); //Aber das will ich auch keinem raten. Jeder Pisser hier braucht ein Schwert, und das kriegen sie von mir.
-	AI_Output(self,other,"DIA_Huno_YouKnowYourJob_09_02"); //Rozhodně to nebyl špatný nápad. Každý idiot tu potřebuje meč a to je věc, kterou dostane ode mě.
+	AI_Output(self,other,"DIA_Huno_YouKnowYourJob_09_02"); //A taky bych to ani nikomu neradil. Každý idiot tu potřebuje meč a ten sežene u mě.
 };
 
 // **************************************************
@@ -87,10 +87,12 @@ func void DIA_Huno_HowLong_Info()
 	AI_Output(other,self,"DIA_Huno_HowLong_15_00"); //Jak dlouho ti trvá výroba jedné čepele?
 //	AI_Output(self,other,"DIA_Huno_HowLong_09_01"); //That depends. I'm as fast as a hurricane with simple swords.
 //	AI_Output(self,other,"DIA_Huno_HowLong_09_01"); //Kommt drauf an. Ein einfaches Schwert mach' ich dir schneller, als deine müden Augen zuschauen können.
-	AI_Output(self,other,"DIA_Huno_HowLong_09_01"); //Záleží na typu. Jednoruční meče dělám rychle jako hurikán.
+	//#Needs_Attention hmmm, tu ten original preklad moc nesedi (ked zvazim Anglicky dabing) mozno by bolo lepsie sa vratit k povodnemu prekladu?
+	//AI_Output(self,other,"DIA_Huno_HowLong_09_01"); //Záleží na typu. Jednoruční meče dělám rychle jako hurikán.
+	AI_Output(self,other,"DIA_Huno_HowLong_09_01"); //Záleží na tom. Jednoduché meče dělám rychleji, než to stačíš svýma unavenýma očima sledovat.
 //	AI_Output(self,other,"DIA_Huno_HowLong_09_02"); //Of course only on condition that the price motivates me.
 //	AI_Output(self,other,"DIA_Huno_HowLong_09_02"); //Vorausgesetzt, du motivierst mich mit einer entsprechenden Bezahlung.
-	AI_Output(self,other,"DIA_Huno_HowLong_09_02"); //Samozřejmě v případě, kdy mě motivuje cena.
+	AI_Output(self,other,"DIA_Huno_HowLong_09_02"); //Za předpokladu, že mě motivuje cena.
 //	AI_Output(self,other,"DIA_Huno_HowLong_09_03"); //A freak like Whistler usually has to wait longer for his toy than other people.
 //	AI_Output(self,other,"DIA_Huno_HowLong_09_03"); //So'n Spinner wie der Whistler muss aber meistens länger auf sein Schmuckstück warten.
 	AI_Output(self,other,"DIA_Huno_HowLong_09_03"); //Podivín jako Whistler obvykle musí čekat na svou hračku déle než ostatní lidi.
@@ -99,13 +101,15 @@ func void DIA_Huno_HowLong_Info()
 	AI_Output(other,self,"DIA_Huno_HowLong_15_04"); //Proč? Neplatí dost?
 //	AI_Output(self,other,"DIA_Huno_HowLong_09_05"); //No, on the contrary. He gave me 150 ore for his last sword.
 //	AI_Output(self,other,"DIA_Huno_HowLong_09_05"); //Doch, ganz im Gegenteil. Für sein letztes Schwert hat er 150 Erz locker gemacht.
-	AI_Output(self,other,"DIA_Huno_HowLong_09_05"); //Ne, naopak. Za poslední meč dal 150 nugetů.
+	AI_Output(self,other,"DIA_Huno_HowLong_09_05"); //Ne, právě naopak. Za poslední meč dal 150 nugetů.
 //	AI_Output(self,other,"DIA_Huno_HowLong_09_06"); //The guy is into ornaments and girlie stuff like that, and of course that's not cheap.
 //	AI_Output(self,other,"DIA_Huno_HowLong_09_06"); //Irgendwie hat der Typ ein Faible für Ornamente und so 'nen Weiberkram, und das hat natürlich seinen Preis.
-	AI_Output(self,other,"DIA_Huno_HowLong_09_06"); //Ten chlapík má zálibu v ozdobách a lákadlech na holky, proto to není levné.
+	//#Needs_Attention mozno este skusit inu variantu tohoto dialogu:
+	//AI_Output(self,other,"DIA_Huno_HowLong_09_06"); //Ten chlapík má zálibu v ozdobách a lákadlech na holky, proto to není levné.
+	AI_Output(self,other,"DIA_Huno_HowLong_09_06"); //Ten chlapík má zálibu v ozdobách a ženských věcech, a to má samozřejmě svou cenu.
 //	AI_Output(self,other,"DIA_Huno_HowLong_09_07"); //Hey, you ain't curious at all, are you, pal.
 //	AI_Output(self,other,"DIA_Huno_HowLong_09_07"); //Hey, du bist ganz schön neugierig, Freundchen.
-	AI_Output(self,other,"DIA_Huno_HowLong_09_07"); //Hele, nejsi trochu moc zvědavý, příteli?
+	AI_Output(self,other,"DIA_Huno_HowLong_09_07"); //Hele, nejsi trochu moc zvědavý, kamarádíčku?
 };
 
 // **************************************************
@@ -151,7 +155,7 @@ func void DIA_Huno_HowsYourBusiness_Info()
 	AI_Output(other,self,"DIA_Huno_HowsYourBusiness_15_04"); //Budu o tom přemýšlet.
 //	AI_Output(self,other,"DIA_Huno_HowsYourBusiness_09_05"); //Come back when you really need something and don't get on my nerves.
 //	AI_Output(self,other,"DIA_Huno_HowsYourBusiness_09_05"); //Komm wieder, wenn du was brauchst, und geh mir nicht auf die Nerven.
-	AI_Output(self,other,"DIA_Huno_HowsYourBusiness_09_05"); //Přijď, až budeš něco opravdu potřebovat a přestaň mi lézt na nervy.
+	AI_Output(self,other,"DIA_Huno_HowsYourBusiness_09_05"); //Přijď zase, až budeš něco opravdu potřebovat a přestaň mi lézt na nervy.
 };
 
 // **************************************************
@@ -188,7 +192,8 @@ func void DIA_Huno_LEARNSMITH_Info()
 	AI_Output(other,self,"DIA_Huno_LEARNSMITH_15_00"); //Chtěl bych tu zkusit pracovat.
 //	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_01"); //Oh, but don't you think that you can make great blades!
 //	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_01"); //So so, aber glaub nur nicht, dass du tolle Klingen herstellen kannst!
-	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_01"); //Och, ale nemysli si, že tě nechám dělat výstřední čepele!
+	//#Needs_Attention tu myslim, ze ten kontext dialogu naznacuje, ze hrac nebude vediet vykovat perfektne cepele.
+	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_01"); //Och, ale nemysli si, že tě nechám kovat skvělé čepele!
 //	AI_Output(other,self,"DIA_Huno_LEARNSMITH_15_02"); //What do I have to do?
 //	AI_Output(other,self,"DIA_Huno_LEARNSMITH_15_02"); //Was muss ich tun?
 	AI_Output(other,self,"DIA_Huno_LEARNSMITH_15_02"); //Co musím dělat?
@@ -197,19 +202,19 @@ func void DIA_Huno_LEARNSMITH_Info()
 	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_03"); //Dobře, vezmi ocel a vlož ji do výhně.
 //	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_04"); //Then you have to lay the red-hot steel across the anvil.
 //	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_04"); //Dann musst du den glühenden Stahl am Amboss schmieden.
-	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_04"); //Potom musíš do ruda rozžhavenou ocel položit na kovadlinu.
+	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_04"); //Potom musíš do ruda rozžhavenou ocel na kovadlině vytvarovat.
 //	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_05"); //When you're finished, you put the hot blade into the water bucket over there to temper it.
 //	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_05"); //Stecke dann die glühende Klinge dort drüben in den Wassereimer, um sie zu härten.
-	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_05"); //Když budeš hotový, vložíš horkou ocel do támhletoho kbelíku s vodou, aby se ochladila.
+	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_05"); //Až to bude, ponoř ji támhle do toho kbelíku s vodou, abys ji zakalil.
 //	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_06"); //The cooled blade finally has to be sharpened on the grindstone.
 //	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_06"); //Am Ende muss die abgekühlte Klinge noch am Schleifstein geschärft werden.
-	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_06"); //Vychladlá čepel se musí nakonec nabrousit na brusu.
+	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_06"); //Nakonec musíš vychladlou čepel nabrousit na brusu.
 //	AI_Output(other,self,"DIA_Huno_LEARNSMITH_15_07"); //I see.
 //	AI_Output(other,self,"DIA_Huno_LEARNSMITH_15_07"); //Verstehe.
-	AI_Output(other,self,"DIA_Huno_LEARNSMITH_15_07"); //Aha.
+	AI_Output(other,self,"DIA_Huno_LEARNSMITH_15_07"); //Rozumím.
 //	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_08"); //However, you'll need some things for that. I could sell them to you.
 //	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_08"); //Allerdings brauchst du dafür ein paar Sachen. Ich kann sie dir verkaufen.
-	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_08"); //Budeš k tomu samozřejmě potřebovat nějaké věci, které ti můžu prodat.
+	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_08"); //Budeš k tomu samozřejmě potřebovat nějaké věci, které ti mohu prodat.
 
 	Huno_LearnSmith = TRUE;
 };

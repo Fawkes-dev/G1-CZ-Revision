@@ -30,10 +30,11 @@
 #GE_OrkTempel
 
 	TODO: add to LOG_Constants.d new entry
-	const string GE_OrkTempel = "Skøetí chrám";
+	const string GE_OrkTempel = "Skøetí chrám;
 
 ----------------------------------------------------------------------------------------------------
+#COMMENT
 
-description = "Vyøíznout èelisti dùlních èervù (1 dovednostní bod)"; 
-B_LogEntry(GE_AnimalTrophies,"Jak vyøíznout èelisti - dùlní èervi");
-PrintScreen("Nauèil ses: Vyøíznutí èelistí dùlních èervù", -1,-1,"FONT_OLD_20_WHITE.TGA",2); 
+	Pretty self-explanatory :) Comments on translation or bug fixes
+
+----------------------------------------------------------------------------------------------------

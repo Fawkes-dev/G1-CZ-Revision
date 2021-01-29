@@ -50,14 +50,14 @@ func void DIA_Homer_Hello_Info()
 	AI_Output(other,self,"DIA_Homer_Hello_15_00"); //Hledáš něco?
 //	AI_Output(self,other,"DIA_Homer_Hello_02_01"); //I'm looking for leaks in the dam. I reckon there's a lurker gnawing at the foundations.
 //	AI_Output(self,other,"DIA_Homer_Hello_02_01"); //Ich suche undichte Stellen im Damm. Ich habe den Verdacht, dass ein Lurker am Fundament des Damms nagt.
-	AI_Output(self,other,"DIA_Homer_Hello_02_01"); //Hledám praskliny v hrázi. Řekl bych, že budou někde u základů.
+	AI_Output(self,other,"DIA_Homer_Hello_02_01"); //Hledám trhliny v hrázi. Mám podezření, že se u základů prokousává číhavec.
 //	AI_Output(self,other,"DIA_Homer_Hello_02_02"); //The beast grinds its teeth and claws against the stones and wooden beams under water.
 //	AI_Output(self,other,"DIA_Homer_Hello_02_02"); //Das Vieh wetzt seine Zähne und Krallen an den Steinen und Holzbalken unter Wasser.
-	AI_Output(self,other,"DIA_Homer_Hello_02_02"); //Ta bestie narušuje svými zuby a drápy kameny a dřevěné trámy pod vodou.
+	AI_Output(self,other,"DIA_Homer_Hello_02_02"); //Ta bestie si o kameny a trámy pod vodou brousí své zuby a drápy.
 //	AI_Output(self,other,"DIA_Homer_Hello_02_03"); //If it carries on, the whole dam will soon be undermined.
 //	AI_Output(self,other,"DIA_Homer_Hello_02_03"); //Auf diese Weise ist bald der gesamte Damm untergraben.
 	//#Spacer_OU_special_characters
-	AI_Output(self,other,"DIA_Homer_Hello_02_03"); //Jestli to bude pokračovat, celá hráz bude co nevidět podhrabaná.
+	AI_Output(self,other,"DIA_Homer_Hello_02_03"); //Jestli to bude pokračovat, bude celá hráz co nevidět podhrabaná.
 };
 
 // ************************************************************
@@ -112,7 +112,7 @@ instance DIA_Homer_WannaHelp(C_INFO)
 	permanent = 0;
 //	description = "Is there anything I can do to help?";
 //	description = "Kann ich dir helfen?";
-	description = "Je tu něco, s čím bych mohl pomoci?";
+	description = "Mohu ti s něčím pomoci?";
 };                       
 
 func int DIA_Homer_WannaHelp_Condition()
@@ -127,7 +127,7 @@ func void DIA_Homer_WannaHelp_Info()
 { 
 //	AI_Output(other,self,"DIA_Homer_WannaHelp_15_00"); //Is there anything I can do to help?
 //	AI_Output(other,self,"DIA_Homer_WannaHelp_15_00"); //Kann ich dir helfen?
-	AI_Output(other,self,"DIA_Homer_WannaHelp_15_00"); //Je tu něco, s čím bych mohl pomoci?
+	AI_Output(other,self,"DIA_Homer_WannaHelp_15_00"); //Mohu ti s něčím pomoci?
 //	AI_Output(self,other,"DIA_Homer_WannaHelp_02_01"); //Sure, stop that beast from gnawing at my dam.
 //	AI_Output(self,other,"DIA_Homer_WannaHelp_02_01"); //Klar, halt das Vieh davon ab, weiter an meinem Damm rumzunagen.
 	AI_Output(self,other,"DIA_Homer_WannaHelp_02_01"); //Jistě, zařiď, aby ta bestie přestala podhlodávat moji hráz.
@@ -173,12 +173,12 @@ func void DIA_Homer_Running_Info()
 	AI_Output(other,self,"DIA_Homer_Running_15_00"); //Kde tu bestii najdu?
 //	AI_Output(self,other,"DIA_Homer_Running_02_01"); //I'd hunt round on the other side of the lake. Nobody ever goes there. That's probably where its den is.
 //	AI_Output(self,other,"DIA_Homer_Running_02_01"); //Ich würde auf der anderen Seite des Sees suchen. Keiner von den Leuten hier geht da hin. Wahrscheinlich hat es da seine Höhle.
-	AI_Output(self,other,"DIA_Homer_Running_02_01"); //Já bych na ní šel na druhou stranu jezera. Tam nikdo nechodí. Tam budou mít nejspíš doupě.
+	AI_Output(self,other,"DIA_Homer_Running_02_01"); //Já bych jí hledal na druhé straně jezera. Tam nikdo nechodí. Nejspíš tam bude mít doupě.
 
 	Homer_DamLurker = LOG_RUNNING;
 //	B_LogEntry(CH1_DamLurker,"The lurker must have its nesting place somewhere at the secluded side of the reservoir.");
 //	B_LogEntry(CH1_DamLurker,"Der Lurker muss seinen Ruheplatz irgendwo auf der abgelegenen Seite des Stausees haben.");
-	B_LogEntry(CH1_DamLurker,"Ten číhavec musí mít své hnízdo někde na druhé straně hráze. ");
+	B_LogEntry(CH1_DamLurker,"Ten číhavec musí mít své doupě někde na druhé straně hráze.");
 
 };
 
@@ -195,7 +195,7 @@ instance DIA_Homer_Success(C_INFO)
 	permanent = 0;
 //	description = "I've killed the beast!";
 //	description = "Ich hab' das Biest erledigt!";
-	description = "Zabil jsem tu bestii!";
+	description = "Postaral jsem se o tu bestii!";
 };                       
 
 func int DIA_Homer_Success_Condition()
@@ -215,13 +215,13 @@ func void DIA_Homer_Success_Info()
 { 
 //	AI_Output(other,self,"DIA_Homer_Success_15_00"); //I've killed the beast!
 //	AI_Output(other,self,"DIA_Homer_Success_15_00"); //Ich hab' das Biest erledigt!
-	AI_Output(other,self,"DIA_Homer_Success_15_00"); //Zabil jsem tu bestii!
+	AI_Output(other,self,"DIA_Homer_Success_15_00"); //Postaral jsem se o tu bestii!
 //	AI_Output(self,other,"DIA_Homer_Success_02_01"); //Great! I got some of the Rice Lord's men to help me fix some of the damage it's caused.
 //	AI_Output(self,other,"DIA_Homer_Success_02_01"); //Gut! Ich habe schon zusammen mit einigen von Reislords Leuten die Schäden behoben, die es bisher angerichtet hat.
-	AI_Output(self,other,"DIA_Homer_Success_02_01"); //Skvělé! Vezmu někoho z mužů Rýžového Lorda, aby mi pomohl opravit něco z toho, co poničila.
+	AI_Output(self,other,"DIA_Homer_Success_02_01"); //Dobře! Už jsem společně s lidmi Rýžového lorda odstranil škode, které ta bestie způsobila.
 //	AI_Output(self,other,"DIA_Homer_Success_02_02"); //Now I can finally get some sleep.
 //	AI_Output(self,other,"DIA_Homer_Success_02_02"); //Jetzt kann ich mich endlich mal wieder in Ruhe schlafen legen.
-	AI_Output(self,other,"DIA_Homer_Success_02_02"); //A teď můžu jít konečně spát.
+	AI_Output(self,other,"DIA_Homer_Success_02_02"); //Teď se konečně mohu jít zase v klidu vyspat.
 
 	Homer_DamLurker = LOG_SUCCESS;
 	Log_SetTopicStatus(CH1_DamLurker,LOG_SUCCESS);
@@ -265,6 +265,6 @@ func void DIA_Homer_PERM_Info()
 	AI_Output(other,self,"DIA_Homer_PERM_15_00"); //Je s hrází všechno v pořádku?
 //	AI_Output(self,other,"DIA_Homer_PERM_02_01"); //It's strong as a fortress, nothing can knock it down.
 //	AI_Output(self,other,"DIA_Homer_PERM_02_01"); //Steht wie 'ne Festung, den kriegt so schnell nichts klein.
-	AI_Output(self,other,"DIA_Homer_PERM_02_01"); //Je pevná jako hrad, nic ji nerozboří.
+	AI_Output(self,other,"DIA_Homer_PERM_02_01"); //Stojí jako pevnost, jen tak rychle ji nic nerozboří.
 };
 

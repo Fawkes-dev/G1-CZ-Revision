@@ -2,8 +2,8 @@
 #Spacer_OU_special_characters
 
 	Spacer removes special characters if they appear at the end of dialogs!
-	For example output unit:	'Jestli to bude pokraƒçovat, cel√° hr√°z bude co nevidƒõt podhraban√°'
-	would be compiled in OU.BIN as:	'Jestli to bude pokraƒçovat, cel√° hr√°z bude co nevidƒõt podhraban'
+	For example output unit:	'Jestli to bude pokraËovat, cel· hr·z bude co nevidÏt podhraban·'
+	would be compiled in OU.BIN as:	'Jestli to bude pokraËovat, cel· hr·z bude co nevidÏt podhraban'
 
 	Issue explained by NiCoDE here:
 	https://forum.worldofplayers.de/forum/threads/1489670-%E3%80%8C%E6%AD%A1%E8%BF%8E%E4%BE%86%E5%88%B0%E6%AE%96%E6%B0%91%E5%9C%B0%E3%80%8D-Gothic-1-08j-Traditional-Chinese-scripts?p=25380418&viewfull=1#post25380418
@@ -12,18 +12,29 @@
 	\content\Story\Missions\DIA_GRD_254_Orry.d
 
 ----------------------------------------------------------------------------------------------------
+#NPC_KnowsInfo_Permanent
+
+	Gothic standard function NPC_KnowsInfo does not work with C_Info.permanent == TRUE dialog instances!
+
+----------------------------------------------------------------------------------------------------
+#Bugfix
+
+	There are some bugs in original scripts ... so we have fixed them.
+
+----------------------------------------------------------------------------------------------------
 #Needs_Attention
 
 	Well - needs attention :) English translation which differs from German original text - we need verification
 
 ----------------------------------------------------------------------------------------------------
+#GE_OrkTempel
+
+	TODO: add to LOG_Constants.d new entry
+	const string GE_OrkTempel = "Sk¯etÌ chr·m;
+
+----------------------------------------------------------------------------------------------------
 #COMMENT
 
 	Pretty self-explanatory :) Comments on translation or bug fixes
-
-----------------------------------------------------------------------------------------------------
-#NPC_KnowsInfo_Permanent
-
-	Gothic standard function NPC_KnowsInfo does not work with C_Info.permanent == TRUE dialog instances!
 
 ----------------------------------------------------------------------------------------------------

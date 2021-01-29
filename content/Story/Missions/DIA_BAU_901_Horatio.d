@@ -56,7 +56,7 @@ func void Info_Horatio_Wasser_Info()
 	{
 //		AI_Output(self,other,"Info_Horatio_Wasser_09_01"); //Thanks, man! I was just about to start drinking the mud.
 //		AI_Output(self,other,"Info_Horatio_Wasser_09_01"); //Danke, Mann! Ich war schon kurz davor, den Schlamm zu saufen.
-		AI_Output(self,other,"Info_Horatio_Wasser_09_01"); //Díky, příteli! Ještě chvíli a začal bych pít bahno!
+		AI_Output(self,other,"Info_Horatio_Wasser_09_01"); //Díky, chlape! Ještě chvíli a začal bych pít bahno!
 		B_GiveInvItems(other,self,ItFo_Potion_Water_01,1);
 		if (C_BodystateContains(self,BS_SIT))
 		{
@@ -75,7 +75,7 @@ func void Info_Horatio_Wasser_Info()
 	{
 //		AI_Output(self,other,"Info_Horatio_Wasser_NOWATER_09_00"); //You've run out. I'll get some from the others.
 //		AI_Output(self,other,"Info_Horatio_Wasser_NOWATER_09_00"); //Du hast nichts mehr. Ich hol mir von den anderen was.
-		AI_Output(self,other,"Info_Horatio_Wasser_NOWATER_09_00"); //Už nic nezbylo. Vezmu si trochu od ostatních.
+		AI_Output(self,other,"Info_Horatio_Wasser_NOWATER_09_00"); //Už žádnou nemáš. Vezmu si trochu od ostatních.
 	};
 };
 
@@ -106,7 +106,7 @@ func void DIA_Horatio_Hello_Info()
 
 //	AI_Output(self,other,"DIA_Horatio_Hello_09_00"); //What are you doing here? You looking for trouble?
 //	AI_Output(self,other,"DIA_Horatio_Hello_09_00"); //Was machst du hier? Willst du Ärger haben?
-	AI_Output(self,other,"DIA_Horatio_Hello_09_00"); //Co tady děláš? Hledáš problémy?
+	AI_Output(self,other,"DIA_Horatio_Hello_09_00"); //Co tady děláš? Chceš mít problémy?
 
 	Info_ClearChoices(DIA_Horatio_Hello);
 //	Info_AddChoice(DIA_Horatio_Hello,"Trouble? Who with? A peasant?",DIA_Horatio_Hello_PissOff);
@@ -114,17 +114,17 @@ func void DIA_Horatio_Hello_Info()
 	Info_AddChoice(DIA_Horatio_Hello,"Problémy? S kým? S nějakým rolníkem?",DIA_Horatio_Hello_PissOff);
 //	Info_AddChoice(DIA_Horatio_Hello,"Hey, relax! I'm a newcomer.",DIA_Horatio_Hello_BeCool);
 //	Info_AddChoice(DIA_Horatio_Hello,"Entspann dich! Ich bin neu hier.",DIA_Horatio_Hello_BeCool);
-	Info_AddChoice(DIA_Horatio_Hello,"Hej, klídek! Jsem tady nový.",DIA_Horatio_Hello_BeCool);
+	Info_AddChoice(DIA_Horatio_Hello,"Klídek! Jsem tady nový.",DIA_Horatio_Hello_BeCool);
 };
 
 func void DIA_Horatio_Hello_BeCool()
 {
 //	AI_Output(other,self,"DIA_Horatio_Hello_BeCool_15_00"); //Hey, relax! I'm a newcomer.
 //	AI_Output(other,self,"DIA_Horatio_Hello_BeCool_15_00"); //Entspann dich! Ich bin neu hier.
-	AI_Output(other,self,"DIA_Horatio_Hello_BeCool_15_00"); //Hej, klídek! Jsem tady nový.
+	AI_Output(other,self,"DIA_Horatio_Hello_BeCool_15_00"); //Klídek! Jsem tady nový.
 //	AI_Output(self,other,"DIA_Horatio_Hello_BeCool_09_01"); //Huh... You look okay though. You never know. You get new guys come along thinking they're it every day.
 //	AI_Output(self,other,"DIA_Horatio_Hello_BeCool_09_01"); //Hm ... siehst mir ganz in Ordnung aus - hier weiß man nie. Da kommt jeden Tag ein neuer Mistkerl, der's wissen will.
-	AI_Output(self,other,"DIA_Horatio_Hello_BeCool_09_01"); //Ha... Připadáš mi v pořádku... Jeden nikdy neví. Pořád přicházejí noví chlapi.
+	AI_Output(self,other,"DIA_Horatio_Hello_BeCool_09_01"); //Hm... připadá mi, že jsi v pohodě... Jeden nikdy neví. Pořád přicházejí noví chlapi.
 	Info_ClearChoices(DIA_Horatio_Hello);
 };
 
@@ -135,7 +135,7 @@ func void DIA_Horatio_Hello_PissOff()
 	AI_Output(other,self,"DIA_Horatio_Hello_PissOff_15_00"); //Problémy? S kým? S nějakým rolníkem?
 //	AI_Output(self,other,"DIA_Horatio_Hello_PissOff_09_01"); //Just because I work in the fields, doesn't mean I can't defend myself against guys like you.
 //	AI_Output(self,other,"DIA_Horatio_Hello_PissOff_09_01"); //Nur weil ich auf den Feldern arbeite, heißt das nicht, dass ich mich nicht gegen Typen wie dich wehren kann.
-	AI_Output(self,other,"DIA_Horatio_Hello_PissOff_09_01"); //Že pracuju na polích ještě neznamená, že se nedokážu ubránit takovým chlapíkům, jako jsi ty.
+	AI_Output(self,other,"DIA_Horatio_Hello_PissOff_09_01"); //To, že pracuji na polích ještě neznamená, že se nedokážu ubránit takovým chlapíkům, jako jsi ty.
 //	AI_Output(self,other,"DIA_Horatio_Hello_PissOff_09_02"); //So come here if you want trouble!
 //	AI_Output(self,other,"DIA_Horatio_Hello_PissOff_09_02"); //Also komm nur her, wenn du Ärger willst!
 	AI_Output(self,other,"DIA_Horatio_Hello_PissOff_09_02"); //Tak pojď, jestli chceš mít problémy!
@@ -176,7 +176,7 @@ func void DIA_Horatio_SORRY_Info()
 	AI_Output(other,self,"DIA_Horatio_SORRY_15_00"); //Je mi líto toho, co jsem řekl o rolnících.
 //	AI_Output(self,other,"DIA_Horatio_SORRY_09_01"); //You should have thought of that before, boy!
 //	AI_Output(self,other,"DIA_Horatio_SORRY_09_01"); //Das hättest du dir eher überlegen sollen, Junge!
-	AI_Output(self,other,"DIA_Horatio_SORRY_09_01"); //Měl bys napřed myslet, hochu!
+	AI_Output(self,other,"DIA_Horatio_SORRY_09_01"); //Měl sis to napřed promyslet, hochu!
 };
 
 // ************************************************************
@@ -192,7 +192,7 @@ instance DIA_Horatio_Story(C_INFO)
 	permanent = 0;
 //	description = "What's a man like you doing with the peasants?";
 //	description = "Was macht ein Kerl wie du bei den Bauern?";
-	description = "Co dělá chlap jako ty mezi rolníkama?";
+	description = "Co dělá chlap jako ty mezi rolníky?";
 };                       
 
 func int DIA_Horatio_Story_Condition()
@@ -207,22 +207,22 @@ func void DIA_Horatio_Story_Info()
 { 
 //	AI_Output(other,self,"DIA_Horatio_Story_15_00"); //What's a man like you doing with the peasants?
 //	AI_Output(other,self,"DIA_Horatio_Story_15_00"); //Was macht ein Kerl wie du bei den Bauern?
-	AI_Output(other,self,"DIA_Horatio_Story_15_00"); //Co dělá chlap jako ty mezi rolníkama?
+	AI_Output(other,self,"DIA_Horatio_Story_15_00"); //Co dělá chlap jako ty mezi rolníky?
 //	AI_Output(self,other,"DIA_Horatio_Story_09_01"); //Lee asked me that. I don't fight any more - except to defend myself.
 //	AI_Output(self,other,"DIA_Horatio_Story_09_01"); //Das hat Lee mich auch gefragt, aber ich kämpfe nicht mehr - außer um mich zu verteidigen.
-	AI_Output(self,other,"DIA_Horatio_Story_09_01"); //Lee mě o to požádal. Ale už se neperu - s výjimkou sebeobrany.
+	AI_Output(self,other,"DIA_Horatio_Story_09_01"); //Lee se mě také už ptal. Ale už se neperu - s výjimkou sebeobrany.
 //	AI_Output(self,other,"DIA_Horatio_Story_09_02"); //I killed a guy once, and that was once too many. That's why they chucked me in this goddamn colony - it was justice.
 //	AI_Output(self,other,"DIA_Horatio_Story_09_02"); //Ich habe einmal getötet, das war einmal zu viel. Deswegen haben sie mich in diese gottverdammte Kolonie geworfen - und das war nur gerecht.
-	AI_Output(self,other,"DIA_Horatio_Story_09_02"); //Jednou jsem zabil jednoho chlapíka, a to jednou bylo až moc. To je důvod, proč mě poslali do téhle zpropadené kolonie - takový je zákon.
+	AI_Output(self,other,"DIA_Horatio_Story_09_02"); //Jednou jsem zabil jednoho chlapíka, a to jednou bylo až moc. To je důvod, proč mě poslali do téhle zpropadené Kolonie - a to bylo spravedlivé.
 //	AI_Output(other,self,"DIA_Horatio_Story_15_03"); //How did it happen?
 //	AI_Output(other,self,"DIA_Horatio_Story_15_03"); //Was ist passiert?
 	AI_Output(other,self,"DIA_Horatio_Story_15_03"); //Jak se to stalo?
 //	AI_Output(self,other,"DIA_Horatio_Story_09_04"); //It was just an ordinary bar fight. I didn't mean to kill the guy, I just must have hit him too hard.
 //	AI_Output(self,other,"DIA_Horatio_Story_09_04"); //Es war ein einfacher Streit in einer Kneipe. Ich wollte den Mann nicht töten, aber ich habe zu stark zugeschlagen.
-	AI_Output(self,other,"DIA_Horatio_Story_09_04"); //Byla to obyčejná hospodská rvačka. Nechtěl jsem toho kluka zabít, jenom jsem ho praštil moc silně.
+	AI_Output(self,other,"DIA_Horatio_Story_09_04"); //Byla to obyčejná hospodská rvačka. Nechtěl jsem toho chlapa zabít, jenom jsem ho praštil moc silně.
 //	AI_Output(self,other,"DIA_Horatio_Story_09_05"); //I was a blacksmith at the time. I didn't know my own strength...
 //	AI_Output(self,other,"DIA_Horatio_Story_09_05"); //Ich habe damals als Schmied gearbeitet. Ich konnte meine Kraft nicht kontrollieren ...
-	AI_Output(self,other,"DIA_Horatio_Story_09_05"); //Byl jsem tehdy kovář. Nevěděl jsem, jakou mám vlastně sílu...
+	AI_Output(self,other,"DIA_Horatio_Story_09_05"); //Byl jsem tehdy kovář. Neuměl jsem ovládat svou sílu...
 };
 
 // ************************************************************
@@ -256,16 +256,16 @@ func void DIA_Horatio_WhyHere_Info()
 	AI_Output(other,self,"DIA_Horatio_WhyHere_15_00"); //Proč ses dal k TOMUHLE táboru?
 //	AI_Output(self,other,"DIA_Horatio_WhyHere_09_01"); //I'll tell you: My only option was to join those sect loonies, and I didn't wanna let those Gurus of theirs mess about with my brain.
 //	AI_Output(self,other,"DIA_Horatio_WhyHere_09_01"); //Das will ich dir sagen: Die einzig andere Wahl wären die Sektenspinner gewesen, aber ich habe keine Lust, mir von den Gurus den Kopf waschen zu lassen.
-	AI_Output(self,other,"DIA_Horatio_WhyHere_09_01"); //Jedno ti řeknu: jediná další možnost byla dát se k těm sektářským bláznům. Ale já nemám nejmenší chuť nechat si od jejich Guru vymýt mozek.
+	AI_Output(self,other,"DIA_Horatio_WhyHere_09_01"); //Jedno ti řeknu. Jediná další možnost byla dát se k těm sektářským bláznům. Ale já nemám nejmenší chuť nechat si od jejich Guru vymýt mozek.
 //	AI_Output(self,other,"DIA_Horatio_WhyHere_09_02"); //In the Old Camp, I'd have had too much trouble with the guards, but the mercenaries and rogues do have some respect.
 //	AI_Output(self,other,"DIA_Horatio_WhyHere_09_02"); //Im Alten Lager hätte ich keine Ruhe vor den Gardisten gehabt, aber die Söldner und Banditen haben Respekt.
-	AI_Output(self,other,"DIA_Horatio_WhyHere_09_02"); //Ve Starém táboře jsem měl spoustu problémů se strážemi, ale u žoldáků a banditů jsem měl aspoň nějaký respekt.
+	AI_Output(self,other,"DIA_Horatio_WhyHere_09_02"); //Ve Starém táboře jsem neměl od stráží klid, ale žoldáci a banditi mají alespoň nějaký respekt.
 //	AI_Output(other,self,"DIA_Horatio_WhyHere_15_03"); //They're afraid of you...
 //	AI_Output(other,self,"DIA_Horatio_WhyHere_15_03"); //Sie fürchten dich ...
-	AI_Output(other,self,"DIA_Horatio_WhyHere_15_03"); //Měli z tebe strach...
+	AI_Output(other,self,"DIA_Horatio_WhyHere_15_03"); //Bojí se tě...
 //	AI_Output(self,other,"DIA_Horatio_WhyHere_09_04"); //Maybe. Anyway, I've found peace here, and you should try the same.
 //	AI_Output(self,other,"DIA_Horatio_WhyHere_09_04"); //Kann schon sein. Immerhin habe ICH hier meinen Frieden gefunden. Und das solltest du auch versuchen.
-	AI_Output(self,other,"DIA_Horatio_WhyHere_09_04"); //Možná. Ale každopádně jsem našel svoje místo tady a ty bys měl zkusit to samé.
+	AI_Output(self,other,"DIA_Horatio_WhyHere_09_04"); //Možná. Ale každopádně jsem našel svůj klid tady a to bys měl také zkusit.
 };
 
 // ************************************************************
@@ -283,7 +283,7 @@ instance DIA_Horatio_PleaseTeachSTR(C_INFO)
 	permanent = 0;
 //	description = "Can you teach me to be as strong as you are?";
 //	description = "Kannst du mir beibringen, auch so stark zuzuschlagen?";
-	description = "Naučíš mě, jak se stát tak silným jako jsi ty?";
+	description = "Naučíš mě, jak se stát tak silným jako jsi ty?"; //#Needs_Attention Tady by mělo být: "Můžeš mě naučit uděřit také tak silně uděřit?" ale asi to nezní tak dobže
 };                       
 
 func int DIA_Horatio_PleaseTeachSTR_Condition()
@@ -301,14 +301,14 @@ func void DIA_Horatio_PleaseTeachSTR_Info()
 	AI_Output(other,self,"DIA_Horatio_PleaseTeachSTR_15_00"); //Naučíš mě, jak se stát tak silným jako jsi ty?
 //	AI_Output(self,other,"DIA_Horatio_PleaseTeachSTR_09_01"); //Even if I could - WHAT would you use your strength for?
 //	AI_Output(self,other,"DIA_Horatio_PleaseTeachSTR_09_01"); //Selbst wenn - zu WAS würde jemand wie du seine Stärke einsetzen?
-	AI_Output(self,other,"DIA_Horatio_PleaseTeachSTR_09_01"); //I kdybych mohl - JAK bys pak svoji sílu využil?
+	AI_Output(self,other,"DIA_Horatio_PleaseTeachSTR_09_01"); //I kdybych mohl - k ČEMU bys pak svoji sílu využil?
 	Info_ClearChoices(DIA_Horatio_PleaseTeachSTR);
 	var C_NPC ricelord; ricelord = Hlp_GetNpc(Bau_900_Ricelord);
 	if Npc_KnowsInfo(hero,DIA_Jeremiah_Horatio)
 	{
 //		Info_AddChoice(DIA_Horatio_PleaseTeachSTR,"So I can wipe out the Rice Lord and his thugs!",DIA_Horatio_PleaseTeachSTR_Ricelord);
 //		Info_AddChoice(DIA_Horatio_PleaseTeachSTR,"Damit ich Reislord und seine Schläger fertigmachen kann!",DIA_Horatio_PleaseTeachSTR_Ricelord);
-		Info_AddChoice(DIA_Horatio_PleaseTeachSTR,"Mohl bych pak vyřídit Rýžového Lorda a jeho tlupu!",DIA_Horatio_PleaseTeachSTR_Ricelord);
+		Info_AddChoice(DIA_Horatio_PleaseTeachSTR,"Abych mohl vyřídit Rýžového Lorda a jeho tlupu!",DIA_Horatio_PleaseTeachSTR_Ricelord);
 	}
 	else
 	{
@@ -337,7 +337,7 @@ func void DIA_Horatio_PleaseTeachSTR_Attack()
 	AI_Output(other,self,"DIA_Horatio_PleaseTeachSTR_Attack_15_00"); //Naučil bych ty bastardy, jak se mnou mají správně mluvit!
 //	AI_Output(self,other,"DIA_Horatio_PleaseTeachSTR_Attack_09_01"); //And before you knew it, you'd become another of those bastards yourself... No, sir, I'm not training you for that.
 //	AI_Output(self,other,"DIA_Horatio_PleaseTeachSTR_Attack_09_01"); //Und bevor du dich versiehst, bist du nur ein weiterer Mistkerl mehr ... Nein! Dafür werde ich dir nichts beibringen.
-	AI_Output(self,other,"DIA_Horatio_PleaseTeachSTR_Attack_09_01"); //Předtím bys měl vědět, že ses sám stal jedním z těch bastardů... Ne, sire, na to tě připravovat nebudu.
+	AI_Output(self,other,"DIA_Horatio_PleaseTeachSTR_Attack_09_01"); //A předtím, než se naděješ, jsi jedním z těch bastardů... Ne! Na to tě připravovat nebudu.
 	Info_ClearChoices(DIA_Horatio_PleaseTeachSTR);
 };
 
@@ -384,7 +384,7 @@ instance DIA_Horatio_ThoughtSTR(C_INFO)
 	permanent = 1;
 //	description = "I've been thinking the whole thing over...";
 //	description = "Ich hab' nochmal über die Sache nachgedacht...";
-	description = "Celé jsem si to ještě promyslel...";
+	description = "Celé jsem si to znovu promyslel...";
 };                       
 
 func int DIA_Horatio_ThoughtSTR_Condition()
@@ -399,10 +399,10 @@ func void DIA_Horatio_ThoughtSTR_Info()
 { 
 //	AI_Output(other,self,"DIA_Horatio_ThoughtSTR_15_00"); //I've been thinking the whole thing over...
 //	AI_Output(other,self,"DIA_Horatio_ThoughtSTR_15_00"); //Ich hab' noch einmal über die Sache nachgedacht ...
-	AI_Output(other,self,"DIA_Horatio_ThoughtSTR_15_00"); //Celé jsem si to ještě promyslel...
+	AI_Output(other,self,"DIA_Horatio_ThoughtSTR_15_00"); //Celé jsem si to znovu promyslel...
 //	AI_Output(self,other,"DIA_Horatio_ThoughtSTR_09_01"); //And? Have you thought of anything better?
 //	AI_Output(self,other,"DIA_Horatio_ThoughtSTR_09_01"); //Und? Ist dir was Besseres eingefallen?
-	AI_Output(self,other,"DIA_Horatio_ThoughtSTR_09_01"); //No a? Vymyslel jsi něco lepšího?
+	AI_Output(self,other,"DIA_Horatio_ThoughtSTR_09_01"); //A? Napadlo tě něco lepšího?
 
 	Info_ClearChoices(DIA_Horatio_ThoughtSTR);
 //	Info_AddChoice(DIA_Horatio_ThoughtSTR,"No.",DIA_Horatio_ThoughtSTR_NoIdea);
@@ -465,13 +465,13 @@ func void DIA_Horatio_HelpSTR_LEARN_NOW()
 
 //	AI_Output(self,other,"DIA_Horatio_HelpSTR_LEARN_NOW_09_00"); //If you want to hit powerfully, you need to know the right tactics. That's the first thing you learn as a smith.
 //	AI_Output(self,other,"DIA_Horatio_HelpSTR_LEARN_NOW_09_00"); //Wenn du stark zuschlagen willst, kommt es auf die richtige Technik an. Das ist das Erste, was du beim Schmieden lernst.
-	AI_Output(self,other,"DIA_Horatio_HelpSTR_LEARN_NOW_09_00"); //Pokud chceš udeřit plnou silou, musíš znát správnou taktiku.To je první věc, kterou se jako kovář naučíš.
+	AI_Output(self,other,"DIA_Horatio_HelpSTR_LEARN_NOW_09_00"); //Pokud chceš udeřit plnou silou, musíš znát správnou taktiku. To je první věc, kterou se jako kovář naučíš.
 //	AI_Output(self,other,"DIA_Horatio_HelpSTR_LEARN_NOW_09_01"); //Learn to push your whole arm through, from the shoulder down to the wrist.
 //	AI_Output(self,other,"DIA_Horatio_HelpSTR_LEARN_NOW_09_01"); //Lerne jeden Teil deines Arms, von der Schulter bis zum Handgelenk, gleichzeitig nach vorne schnellen zu lassen.
 	AI_Output(self,other,"DIA_Horatio_HelpSTR_LEARN_NOW_09_01"); //Nauč se rozmáchnout celou rukou, od ramene po zápěstí.
 //	AI_Output(self,other,"DIA_Horatio_HelpSTR_LEARN_NOW_09_02"); //The better you get at that, the more powerful the blow. You'll get the hang of it pretty quick.
 //	AI_Output(self,other,"DIA_Horatio_HelpSTR_LEARN_NOW_09_02"); //Je besser die Technik, umso härter der Schlag. Du wirst es schnell raushaben.
-	AI_Output(self,other,"DIA_Horatio_HelpSTR_LEARN_NOW_09_02"); //Čím líp to zvládneš, tím silnější bude rána. Rychle tě to vyčerpá.
+	AI_Output(self,other,"DIA_Horatio_HelpSTR_LEARN_NOW_09_02"); //Čím lepší technika, tím silnější bude rána. Dostaneš se do toho docela rychle.
 };
 
 //--------------------------------------------------------------
@@ -512,7 +512,7 @@ func void DIA_Horatio_HelpSTR_Info()
 	Log_SetTopicStatus(CH1_HoratiosTeachings,LOG_SUCCESS);
 //	B_LogEntry(CH1_HoratiosTeachings,"Horatio showed me how to use my strength in battle and how to strike harder. A real pure soul, that one.");
 //	B_LogEntry(CH1_HoratiosTeachings,"Horatio zeigt mir, wie ich meine Kraft im Kampf besser nutzen und damit stärker zuschlagen kann. Eine wahrhaft geläuterte Seele, dieser Mann.");
-	B_LogEntry(CH1_HoratiosTeachings,"Horatio mě naučil, jak v boji používat sílu a jak silněji udeřit. Ryzí duše, tenhle chlapík.");
+	B_LogEntry(CH1_HoratiosTeachings,"Horatio mi ukázal, jak v boji lépe využívat sílu a jak silněji udeřit. Skutečně ryzí duše, tenhle chlapík.");
 };
 
 // ************************************************************
@@ -546,6 +546,6 @@ func void DIA_Horatio_Thanks_Info()
 	AI_Output(other,self,"DIA_Horatio_Thanks_15_00"); //Díky za tvou pomoc!
 //	AI_Output(self,other,"DIA_Horatio_Thanks_09_01"); //Use your knowledge for a just cause, and for NOTHING ELSE.
 //	AI_Output(self,other,"DIA_Horatio_Thanks_09_01"); //Nutze dein Wissen für die gerechte Sache! Und NUR DAFÜR.
-	AI_Output(self,other,"DIA_Horatio_Thanks_09_01"); //Použij své umění pro dobro věci a pro NIC JINÉHO.
+	AI_Output(self,other,"DIA_Horatio_Thanks_09_01"); //Použij své umění pro dobrou věc! Ne pro NIC JINÉHO!
 };
 

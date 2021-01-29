@@ -236,7 +236,7 @@ func void DIA_Milten_Letter_Give()
 	AI_Output(other,self,"DIA_Milten_Letter_Give_15_04"); //A co je na tom tak divného?
 //	AI_Output(self,other,"DIA_Milten_Letter_Give_02_05"); //Xardas has not been a servant of Innos for ages. He left us some years ago and turned towards black magic.
 //	AI_Output(self,other,"DIA_Milten_Letter_Give_02_05"); //Xardas ist schon lange kein Diener Innos mehr. Vor einigen Jahren hat er uns verlassen und sich der schwarzen Magie zugewandt.
-	AI_Output(self,other,"DIA_Milten_Letter_Give_02_05"); //Xardas už dlouho není Innosovým služebníkem. Odešel od nás už před celými věky a dal se na černou magii.
+	AI_Output(self,other,"DIA_Milten_Letter_Give_02_05"); //Xardas už dlouho není Innosovým služebníkem. Odešel od nás už před pár lety a dal se na černou magii.
 //	AI_Output(self,other,"DIA_Milten_Letter_Give_02_06"); //He lives in a tower in the middle of the Orc land and concentrates on his studies.
 //	AI_Output(self,other,"DIA_Milten_Letter_Give_02_06"); //Er lebt in einem Turm mitten im Orkgebiet und widmet sich dort seinen Studien.
 	AI_Output(self,other,"DIA_Milten_Letter_Give_02_06"); //Žije ve věži uprostřed skřetího území a soustředí se na svá studia.

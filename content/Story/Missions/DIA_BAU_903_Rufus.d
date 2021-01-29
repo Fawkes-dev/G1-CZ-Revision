@@ -35,7 +35,7 @@ instance Info_Rufus_Wasser(C_INFO) // E1
 	permanent = 1;
 //	description = "Lefty sent me. I've brought you some water.";
 //	description = "Lefty schickt mich. Ich hab' Wasser für dich.";
-	description = "Lefty mě poslal. Přinesl jsem ti trochu vody.";
+	description = "Poslal mě Lefty. Přinesl jsem ti trochu vody.";
 };                       
 
 func int Info_Rufus_Wasser_Condition()
@@ -75,7 +75,7 @@ func void Info_Rufus_Wasser_Info()
 	{
 //		AI_Output(self,other,"Info_Rufus_Wasser_NOWATER_02_00"); //Water! Hey, man! There's none left! Don't tell me everyone got some except me, again?
 //		AI_Output(self,other,"Info_Rufus_Wasser_NOWATER_02_00"); //Wasser! Hey, Mann! Du hast nichts mehr! Haben wieder alle was gekriegt bis auf mich?
-		AI_Output(self,other,"Info_Rufus_Wasser_NOWATER_02_00"); //Vodu! Hej, příteli! Už tu žádná není! Neříkej mi, že zase dostal každý kromě mě!
+		AI_Output(self,other,"Info_Rufus_Wasser_NOWATER_02_00"); //Vodu! Hej, chlape! Už žádnou nemáš! Zase ji dostali všichni kromě mě?
 	};
 };
 
@@ -107,10 +107,10 @@ func void DIA_Rufus_Hello_Info()
 	AI_Output(other,self,"DIA_Rufus_Hello_15_00"); //Zdar! Jsem tady nový. Jen jsem chtěl vědět, co se tu děje.
 //	AI_Output(self,other,"DIA_Rufus_Hello_02_01"); //Ask someone else, will ya. I do nothin' but work out here in the fields, I don't know nothin'.
 //	AI_Output(self,other,"DIA_Rufus_Hello_02_01"); //Frag jemand anderen. Ich arbeite den ganzen Tag auf den Feldern und krieg nichts von dem mit, was hier läuft.
-	AI_Output(self,other,"DIA_Rufus_Hello_02_01"); //Zeptej se někoho jiného. Nedělám nic jiného, než že tu pracuju na polích, nevím nic.
+	AI_Output(self,other,"DIA_Rufus_Hello_02_01"); //Zeptej se někoho jiného. Celý den pracuji na polích a nestarám se o to, co se tu děje.
 //	AI_Output(self,other,"DIA_Rufus_Hello_02_02"); //Man, I'd love to tell the Rice Lord to do his own damn dirty work!
 //	AI_Output(self,other,"DIA_Rufus_Hello_02_02"); //Mann, wie gerne würd' ich zum Reislord gehen und ihm sagen, er soll seinen Scheiß alleine machen!
-	AI_Output(self,other,"DIA_Rufus_Hello_02_02"); //Člověče, nejraději bych Rýžovému Lordovi řekl, aby si tu svoji zpropadenou práci dělal sám!
+	AI_Output(self,other,"DIA_Rufus_Hello_02_02"); //Člověče, nejraději bych šel za Rýžovým Lordem a řekl mu, aby si tu svoji špinavou práci dělal sám!
 };
 
 // ************************************************************
@@ -144,19 +144,19 @@ func void DIA_Rufus_Why_Info()
 	AI_Output(other,self,"DIA_Rufus_Why_15_00"); //Když se ti to nelíbí, tak proč tu pracuješ?
 //	AI_Output(self,other,"DIA_Rufus_Why_02_01"); //It happened the first day I got here. Lefty, one of the thugs that works for the Rice Lord, came up to me and asked if I could lend a hand in the rice fields.
 //	AI_Output(self,other,"DIA_Rufus_Why_02_01"); //Es war am ersten Tag als ich hier war. Lefty, einer der Schläger, die für den Reislord arbeiten, kam zu mir und fragte mich, ob ich mal kurz auf den Reisfeldern helfen könnte.
-	AI_Output(self,other,"DIA_Rufus_Why_02_01"); //Stalo se to první den, když jsem se sem dostal. Přišel ke mně Lefty, jeden z hrdlořezů, co dělají pro Rýžového Lorda, a zeptal se mě, jestli nechci pracovat na rýžových polích.
+	AI_Output(self,other,"DIA_Rufus_Why_02_01"); //Stalo se to první den, když jsem sem přišel. Přišel ke mně Lefty, jeden z hrdlořezů, co dělají pro Rýžového Lorda, a zeptal se mě, jestli nechci na chvilku pomoci s prací na rýžových polích.
 //	AI_Output(self,other,"DIA_Rufus_Why_02_02"); //Sure, I said. I was new here and I wanted to make myself useful.
 //	AI_Output(self,other,"DIA_Rufus_Why_02_02"); //Klar, hab' ich gesagt. Ich war neu und wollte mich nützlich machen.
-	AI_Output(self,other,"DIA_Rufus_Why_02_02"); //Jasně, řekl jsem. Byl jsem tu nový a chtěl jsem dělat něco užitečného.
+	AI_Output(self,other,"DIA_Rufus_Why_02_02"); //Jasně, řekl jsem. Byl jsem tu nový a chtěl jsem být užitečný.
 //	AI_Output(self,other,"DIA_Rufus_Why_02_03"); //The next day, when I was taking a short rest, the guy turned up again.
 //	AI_Output(self,other,"DIA_Rufus_Why_02_03"); //Als ich mich am nächsten Tag von der Arbeit ausruhte, steht der Typ schon wieder vor mir.
-	AI_Output(self,other,"DIA_Rufus_Why_02_03"); //Příští den, když jsem si dával chvilku odpočinku, ke mně ten chlapík přišel znovu.
+	AI_Output(self,other,"DIA_Rufus_Why_02_03"); //Když jsem příští den odpočíval, stál ten chlápek zase přede mnou.
 //	AI_Output(self,other,"DIA_Rufus_Why_02_04"); //You don't wanna let your colleagues do all their work by themselves, do you?' he asked.
 //	AI_Output(self,other,"DIA_Rufus_Why_02_04"); //Du willst doch nicht deine Kollegen ganz alleine schuften lassen?', hat er gesagt.
-	AI_Output(self,other,"DIA_Rufus_Why_02_04"); //Nechceš snad nechávat své kolegy, aby pracovali sami, že ne?
+	AI_Output(self,other,"DIA_Rufus_Why_02_04"); //'Nechceš snad nechávat své kolegy, aby pracovali sami, že ne?' zeptal se.
 //	AI_Output(self,other,"DIA_Rufus_Why_02_05"); //I told him I was exhausted from the previous day's work, that I needed a rest and all that. But he never listened.
 //	AI_Output(self,other,"DIA_Rufus_Why_02_05"); //Ich hab' ihm erklärt, dass ich kaputt bin vom Tag vorher, dass ich mich ausruhen muss und so. Aber er hat mir nicht zugehört.
-	AI_Output(self,other,"DIA_Rufus_Why_02_05"); //Řekl jsem mu, že jsem vyčerpaný z předešlého dne a že si potřebuji jen trochu odpočinout. Vůbec mě neposlouchal.
+	AI_Output(self,other,"DIA_Rufus_Why_02_05"); //Vysvětlil jsem mu, že jsem vyčerpaný z předešlého dne a že si potřebuji jen trochu odpočinout. Vůbec mě neposlouchal.
 //	AI_Output(self,other,"DIA_Rufus_Why_02_06"); //He grabbed me by the collar and dragged me back to the field.
 //	AI_Output(self,other,"DIA_Rufus_Why_02_06"); //Er hat mich am Kragen gepackt und auf die Felder geschleift.
 	AI_Output(self,other,"DIA_Rufus_Why_02_06"); //Chytil mě za límec a odvlekl zpátky na pole.
@@ -201,10 +201,10 @@ func void DIA_Rufus_Ricelord_Info()
 	AI_Output(other,self,"DIA_Rufus_Ricelord_15_00"); //Kdo je Rýžový Lord?
 //	AI_Output(self,other,"DIA_Rufus_Ricelord_02_01"); //He was one of the first to arrive here. He helped found the Camp and start up the rice fields.
 //	AI_Output(self,other,"DIA_Rufus_Ricelord_02_01"); //Er war einer der Ersten hier. Hat das Lager mit gegründet und die Reisfelder angelegt.
-	AI_Output(self,other,"DIA_Rufus_Ricelord_02_01"); //Byl jedním z prvních zdejších přistěhovalců. Pomáhal budovat tábor a založil rýžová pole.
+	AI_Output(self,other,"DIA_Rufus_Ricelord_02_01"); //Byl jedním z prvních, kteří sem přišli. Pomáhal založit tábor a vybudovat rýžová pole.
 //	AI_Output(self,other,"DIA_Rufus_Ricelord_02_02"); //These days he just hangs out at the warehouse stretching his stomach, the fat pig!
 //	AI_Output(self,other,"DIA_Rufus_Ricelord_02_02"); //Heute steht er nur noch vor seinem Lagerhaus und streckt seine Wampe raus, der alte Fettsack!
-	AI_Output(self,other,"DIA_Rufus_Ricelord_02_02"); //Teď už jenom postává ve skladišti a cpe si břicho, to tlustý prase!
+	AI_Output(self,other,"DIA_Rufus_Ricelord_02_02"); //Dnes už jen postává před skladištěm a cpe si břicho, to tlustý prase!
 	var C_NPC Ricelord; Ricelord = Hlp_GetNpc(Bau_900_Ricelord);
 	Ricelord.aivar[AIV_FINDABLE] = TRUE; 
 };

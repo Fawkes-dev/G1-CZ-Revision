@@ -87,7 +87,7 @@ func void DIA_SCAR_What_Info()
 	AI_Output(self,other,"DIA_SCAR_What_08_01"); //Spolu s Artem dáváme pozor, aby se nikdo nedostal ke Gomezovi bez pozvání.
 //	AI_Output(self,other,"DIA_SCAR_What_08_02"); //And I make sure the women don't get restless.
 //	AI_Output(self,other,"DIA_SCAR_What_08_02"); //Außerdem kümmere ich mich darum, dass die Frauen hier nicht zu kurz kommen .
-	AI_Output(self,other,"DIA_SCAR_What_08_02"); //A já dávám pozor na ženy, aby je nikdo nerušil.
+	AI_Output(self,other,"DIA_SCAR_What_08_02"); //Kromě toho se starám o to, aby se tu ženy nenudily. #Needs_Attention nepřišly zkrátka.
 };
 
 // ************************************************************

@@ -218,7 +218,7 @@ func void DIA_Homer_Success_Info()
 	AI_Output(other,self,"DIA_Homer_Success_15_00"); //Postaral jsem se o tu bestii!
 //	AI_Output(self,other,"DIA_Homer_Success_02_01"); //Great! I got some of the Rice Lord's men to help me fix some of the damage it's caused.
 //	AI_Output(self,other,"DIA_Homer_Success_02_01"); //Gut! Ich habe schon zusammen mit einigen von Reislords Leuten die Schäden behoben, die es bisher angerichtet hat.
-	AI_Output(self,other,"DIA_Homer_Success_02_01"); //Dobře! Už jsem společně s lidmi Rýžového lorda odstranil škode, které ta bestie způsobila.
+	AI_Output(self,other,"DIA_Homer_Success_02_01"); //Dobře! Už jsem společně s lidmi Rýžového lorda odstranil škody, které ta bestie způsobila.
 //	AI_Output(self,other,"DIA_Homer_Success_02_02"); //Now I can finally get some sleep.
 //	AI_Output(self,other,"DIA_Homer_Success_02_02"); //Jetzt kann ich mich endlich mal wieder in Ruhe schlafen legen.
 	AI_Output(self,other,"DIA_Homer_Success_02_02"); //Teď se konečně mohu jít zase v klidu vyspat.

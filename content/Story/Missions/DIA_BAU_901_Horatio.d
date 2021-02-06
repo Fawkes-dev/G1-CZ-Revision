@@ -169,6 +169,9 @@ func int DIA_Horatio_SORRY_Condition()
 	};
 };
 
+//#NEEDS_ATTENTION hmmmm viem, ze sme hovorili revizia cestiny :) ale co tak upravit aj logiku niektorych dialogov?
+//Napriklad tento dialog je permanentny --> chceme ho nechat permanentny? (nestaci nam takyto dialog iba raz?)
+//Tu by sme mohli nastavit horatio_trouble zase na false, Horatio uz nebude 'nastvany' a dialog nebude zbytocne dostupny.
 func void DIA_Horatio_SORRY_Info()
 { 
 //	AI_Output(other,self,"DIA_Horatio_SORRY_15_00"); //I'm sorry I said what I did about the peasants.
@@ -448,6 +451,7 @@ func void DIA_Horatio_ThoughtSTR_Ricelord()
 
 func void DIA_Horatio_HelpSTR_LEARN_NOW()
 {
+	//#NEEDS_ATENTION toto je v podstate bug, ak ma hrac silu > 100 (napriklad s prstenom/amuletom) tak skript dole hracovi nastavi silu na 100 - a teda efektivne znizi hracovi silu
 	if (other.attribute[ATR_STRENGTH]<=(100-5))
 	{
 		other.attribute[ATR_STRENGTH] = other.attribute[ATR_STRENGTH] + 5;

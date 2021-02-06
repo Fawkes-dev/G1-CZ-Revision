@@ -119,6 +119,7 @@ func void DIA_Gomez_Hello_ThorusSays()
 	AI_Output(other,self,"DIA_Gomez_Hello_ThorusSays_15_00"); //Složil jsem zkoušku poctivosti a Thorus říkal, že jsem správný chlap.
 //	AI_Output(self,other,"DIA_Gomez_Hello_ThorusSays_11_01"); //You wouldn't have gotten in here alive if that weren't so. I hope that's not the best you can do.
 //	AI_Output(self,other,"DIA_Gomez_Hello_ThorusSays_11_01"); //Du wärst hier nicht lebend reingekommen, wenn das nicht so wäre. Ich hoffe, das war nicht schon alles.
+	//#NEEDS_ATTENTION tento dialog mi nikdy nesedel, prebasnit?
 	AI_Output(self,other,"DIA_Gomez_Hello_ThorusSays_11_01"); //Kdyby to tak opravdu nebylo, nebyl by ses sem dostal živý. Doufám ale, že to nebylo všechno, co umíš.
 };
 
@@ -130,6 +131,7 @@ func void DIA_Gomez_Hello_Kontakte()
 	AI_Output(other,self,"DIA_Gomez_Hello_Kontakte_15_00"); //Chodil jsem po Kolonii a mám známe ve všech táborech.
 //	AI_Output(self,other,"DIA_Gomez_Hello_Kontakte_11_01"); //Now that could prove useful. Who are you in contact with?
 //	AI_Output(self,other,"DIA_Gomez_Hello_Kontakte_11_01"); //Das ist tatsächlich ein guter Grund. Zu wem hast du Kontakte?
+	//#NEEDS_ATTENTION tu je Gomez nejaky prilis nadseny, radsej by som ho mal voci hracovi neutralneho :) - prebasnit?
 	AI_Output(self,other,"DIA_Gomez_Hello_Kontakte_11_01"); //To je skutečně skvělý základ. S kým jsi v kontaktu?
 	Info_ClearChoices(DIA_Gomez_Hello);
 //	Info_AddChoice(DIA_Gomez_Hello,"Those were the important ones.",DIA_Gomez_Hello_Kontakte_ThatsAll);
@@ -193,10 +195,10 @@ func void DIA_Gomez_Hello_Kontakte_YBerion()
 	AI_Output(self,other,"DIA_Gomez_Hello_Kontakte_YBerion_11_02"); //Lžeš mi, jako bych byl nějaký idiot.
 //	AI_Output(self,other,"DIA_Gomez_Hello_Kontakte_YBerion_11_03"); //I'm disappointed to see you think I'm STUPID.
 //	AI_Output(self,other,"DIA_Gomez_Hello_Kontakte_YBerion_11_03"); //Dass du mich für DUMM hältst, enttäuscht mich.
-	AI_Output(self,other,"DIA_Gomez_Hello_Kontakte_YBerion_11_03"); //Mrzí mě, když vidím, že mě máš za HLUPÁKA.
+	AI_Output(self,other,"DIA_Gomez_Hello_Kontakte_YBerion_11_03"); //Myslíš si, že jsem HLUPÁK. Jaké zklamání.
 //	AI_Output(self,other,"DIA_Gomez_Hello_Kontakte_YBerion_11_04"); //I hate being disappointed.
 //	AI_Output(self,other,"DIA_Gomez_Hello_Kontakte_YBerion_11_04"); //Ich hasse es, enttäuscht zu werden.
-	AI_Output(self,other,"DIA_Gomez_Hello_Kontakte_YBerion_11_04"); //Nerad se cítím zklamaný.
+	AI_Output(self,other,"DIA_Gomez_Hello_Kontakte_YBerion_11_04"); //Nesnáším zklamání.
 	AI_StopProcessInfos(self);
 	Npc_SetPermAttitude(self,ATT_HOSTILE);
 	Npc_SetTarget(self,other);

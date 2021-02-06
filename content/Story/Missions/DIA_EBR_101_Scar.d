@@ -66,7 +66,7 @@ instance DIA_SCAR_What(C_INFO)
 	permanent = 0;
 //	description = "What's your job?";
 //	description = "Was ist deine Aufgabe hier?";
-	description = "Co je tvá práce?";
+	description = "Co tu máš na práci?";
 };                       
 
 func int DIA_SCAR_What_Condition()
@@ -81,13 +81,13 @@ func void DIA_SCAR_What_Info()
 { 
 //	AI_Output(other,self,"DIA_SCAR_What_15_00"); //What's your job?
 //	AI_Output(other,self,"DIA_SCAR_What_15_00"); //Was ist deine Aufgabe hier?
-	AI_Output(other,self,"DIA_SCAR_What_15_00"); //Co je tvá práce?
+	AI_Output(other,self,"DIA_SCAR_What_15_00"); //Co tu máš na práci?
 //	AI_Output(self,other,"DIA_SCAR_What_08_01"); //Me and Arto make sure nobody gets to see Gomez unless they're invited.
 //	AI_Output(self,other,"DIA_SCAR_What_08_01"); //Ich und Arto passen auf, dass Gomez niemand zu nahe kommt, der hier nicht eingeladen wurde,
 	AI_Output(self,other,"DIA_SCAR_What_08_01"); //Spolu s Artem dáváme pozor, aby se nikdo nedostal ke Gomezovi bez pozvání.
 //	AI_Output(self,other,"DIA_SCAR_What_08_02"); //And I make sure the women don't get restless.
 //	AI_Output(self,other,"DIA_SCAR_What_08_02"); //Außerdem kümmere ich mich darum, dass die Frauen hier nicht zu kurz kommen .
-	AI_Output(self,other,"DIA_SCAR_What_08_02"); //A já dávám pozor na ženy, aby je nikdo nerušil.
+	AI_Output(self,other,"DIA_SCAR_What_08_02"); //Kromě toho se starám o to, aby se tu ženy nenudily. #Needs_Attention nepřišly zkrátka.
 };
 
 // ************************************************************
@@ -170,6 +170,6 @@ func void DIA_SCAR_PERM_Info()
 	AI_Output(self,other,"DIA_SCAR_PERM_08_01"); //Všechno, co potřebuješ vědět je to, že je to nejmocnější muž v kolonii.
 //	AI_Output(self,other,"DIA_SCAR_PERM_08_02"); //He gets what he wants, but all he really wants is power.
 //	AI_Output(self,other,"DIA_SCAR_PERM_08_02"); //Er kann alles haben, was er will, aber das einzige, was ihn WIRKLICH interessiert, ist Einfluss.
-	AI_Output(self,other,"DIA_SCAR_PERM_08_02"); //Dostane, co chce, ale to, co chce nejvíc, je moc.
+	AI_Output(self,other,"DIA_SCAR_PERM_08_02"); //Dostane vše, co chce, ale to, co chce opravdu nejvíce, je moc.
 };
 

@@ -89,7 +89,7 @@ func void DIA_Jeremiah_PERM_Info()
 	AI_Output(other,self,"DIA_Jeremiah_PERM_15_00"); //Jak to chodí v palírně?
 //	AI_Output(self,other,"DIA_Jeremiah_PERM_04_01"); //I can hardly keep up with these guys. Man, can they drink!
 //	AI_Output(self,other,"DIA_Jeremiah_PERM_04_01"); //Ich kann kaum soviel nachlegen, wie die Kerle wegsaufen.
-	AI_Output(self,other,"DIA_Jeremiah_PERM_04_01"); //Sotva stačím vypálit dostatek kořelky, ti chlapi ale pijou!
+	AI_Output(self,other,"DIA_Jeremiah_PERM_04_01"); //Sotva stačím vypálit dostatek kořalky, ti chlapi ale pijou!
 //	AI_Output(self,other,"DIA_Jeremiah_PERM_04_02"); //It's a good thing really. While I'm busy, the Rice Lord's lapdogs leave me alone.
 //	AI_Output(self,other,"DIA_Jeremiah_PERM_04_02"); //Ist auch ganz gut so - solange ich hier genug zu tun habe, lassen mich die Jungs vom Reislord in Ruhe.
 	AI_Output(self,other,"DIA_Jeremiah_PERM_04_02"); //Je to vážně dobré. Dokud mám co dělat, poskoci Rýžového Lorda mě nechávají na pokoji.

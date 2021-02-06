@@ -550,6 +550,7 @@ func void DIA_Horatio_Thanks_Info()
 	AI_Output(other,self,"DIA_Horatio_Thanks_15_00"); //Díky za tvou pomoc!
 //	AI_Output(self,other,"DIA_Horatio_Thanks_09_01"); //Use your knowledge for a just cause, and for NOTHING ELSE.
 //	AI_Output(self,other,"DIA_Horatio_Thanks_09_01"); //Nutze dein Wissen für die gerechte Sache! Und NUR DAFÜR.
+	//#NEEDS_ATENTION Tu mi ta dvojita negacia uplne nesedi, nebrebasnime? : Ne pro NIC JINÉHO 
 	AI_Output(self,other,"DIA_Horatio_Thanks_09_01"); //Použij své umění pro dobrou věc! Ne pro NIC JINÉHO!
 };
 

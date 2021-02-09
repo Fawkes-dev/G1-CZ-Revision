@@ -80,7 +80,7 @@ func void DIA_Raven_Who_Info()
 	AI_Output(other,self,"DIA_Raven_Who_15_00"); //Kdo jsi?
 //	AI_Output(self,other,"DIA_Raven_Who_10_01"); //I'm Raven. Gomez' right hand man. Anyone who wants to see Gomez has to talk to ME first.
 //	AI_Output(self,other,"DIA_Raven_Who_10_01"); //Ich bin Raven. Gomez' rechte Hand. Jeder, der hier ist, um mit Gomez zu reden, redet vorher mit MIR.
-	AI_Output(self,other,"DIA_Raven_Who_10_01"); //Jsem Raven. Gomezova pravá ruka. Každý, kdo chce navštívit Gomeze, to musí říci nejdřív MNĚ.
+	AI_Output(self,other,"DIA_Raven_Who_10_01"); //Jsem Raven, Gomezova pravá ruka. Každý, kdo chce mluvit s Gomezem, musí mluvit nejdříve se MNOU.
 };
 
 // **************************************
@@ -96,7 +96,7 @@ instance DIA_Raven_Krautbote(C_INFO)
 	permanent = 0;
 //	description = "I have some weed for Gomez from Cor Kalom.";
 //	description = "Ich habe eine Ladung Kraut für Gomez von Cor Kalom.";
-	description = "Mám pro Gomeze trochu drogy z bažin od Cora Kaloma.";
+	description = "Mám pro Gomeze dodávku drogy z bažin od Cor Kaloma.";
 };                       
 
 func int DIA_Raven_Krautbote_Condition()
@@ -111,13 +111,13 @@ func void DIA_Raven_Krautbote_Info()
 {
 //	AI_Output(other,self,"DIA_Raven_Krautbote_15_00"); //I have some weed for Gomez from Cor Kalom.
 //	AI_Output(other,self,"DIA_Raven_Krautbote_15_00"); //Ich habe eine Ladung Kraut für Gomez von Cor Kalom.
-	AI_Output(other,self,"DIA_Raven_Krautbote_15_00"); //Mám pro Gomeze trochu drogy z bažin od Cora Kaloma.
+	AI_Output(other,self,"DIA_Raven_Krautbote_15_00"); //Mám pro Gomeze dodávku drogy z bažin od Cor Kaloma.
 //	AI_Output(self,other,"DIA_Raven_Krautbote_10_01"); //Bartholo deals with that kind of thing. Gomez isn't bothered with gofers.
 //	AI_Output(self,other,"DIA_Raven_Krautbote_10_01"); //Bartholo kümmert sich um diese Sachen, Gomez selbst gibt sich nicht mit Boten ab.
-	AI_Output(self,other,"DIA_Raven_Krautbote_10_01"); //Tyhle věci domlouvá Bartholo. Gomez se s poslíčky nebaví.
+	AI_Output(self,other,"DIA_Raven_Krautbote_10_01"); //O tyhle věci se stará Bartholo. Gomez se poslíčky nezabývá.
 //	AI_Output(self,other,"DIA_Raven_Krautbote_10_02"); //You'll find him in the room on the right, behind the entrance, or in the kitchen in the big tower.
 //	AI_Output(self,other,"DIA_Raven_Krautbote_10_02"); //Du findest ihn in der Kammer hier rechts hinter dem Eingang oder in der Küche im großen Turm.
-	AI_Output(self,other,"DIA_Raven_Krautbote_10_02"); //Najdeš ho v místnosti hned vpravo za vchodem. Nebo v kuchyni ve velké věži.
+	AI_Output(self,other,"DIA_Raven_Krautbote_10_02"); //Najdeš ho v komnatě hned vpravo za vchodem. Nebo v kuchyni ve velké věži.
 //	AI_Output(self,other,"DIA_Raven_Krautbote_10_03"); //Course he sleeps at night. I wouldn't disturb him then, if I were you.
 //	AI_Output(self,other,"DIA_Raven_Krautbote_10_03"); //Nachts schläft er natürlich. Da würd' ich es nicht wagen, ihn zu stören.
 	AI_Output(self,other,"DIA_Raven_Krautbote_10_03"); //V noci samozřejmě spí. Být tebou, tak bych ho nevyrušoval.
@@ -140,7 +140,7 @@ instance DIA_Raven_Aufnahme(C_INFO)
 	permanent = 0;
 //	description = "I want to see Gomez. Thorus says I'm to be taken on as a Shadow.";
 //	description = "Ich will zu Gomez. Thorus sagt, ich soll als Schatten aufgenommen werden.";
-	description = "Chci vidět Gomeze. Thorus říká, že patřím ke Stínům.";
+	description = "Chci ke Gomezovi. Thorus říká, že bych měl být přijat ke Stínům.";
 };                       
 
 func int DIA_Raven_Aufnahme_Condition()
@@ -156,13 +156,13 @@ func void DIA_Raven_Aufnahme_Info()
 {
 //	AI_Output(other,self,"DIA_Raven_Aufnahme_15_00"); //I want to see Gomez. Thorus says I'm to be taken on as a Shadow.
 //	AI_Output(other,self,"DIA_Raven_Aufnahme_15_00"); //Ich will zu Gomez. Thorus sagt, ich soll als Schatten aufgenommen werden.
-	AI_Output(other,self,"DIA_Raven_Aufnahme_15_00"); //Chci vidět Gomeze. Thorus říká, že patřím ke Stínům.
+	AI_Output(other,self,"DIA_Raven_Aufnahme_15_00"); //Chci ke Gomezovi. Thorus říká, že bych měl být přijat ke Stínům.
 //	AI_Output(self,other,"DIA_Raven_Aufnahme_10_01"); //We're always on the lookout for good men. You seem to have your wits about you. You might be okay.
 //	AI_Output(self,other,"DIA_Raven_Aufnahme_10_01"); //Wir sind immer auf der Suche nach guten Leuten. Du scheinst mir nicht auf den Kopf gefallen zu sein. Du könntest es hier zu was bringen.
-	AI_Output(self,other,"DIA_Raven_Aufnahme_10_01"); //Vždycky rozpoznáme poctivé muže. Vypadáš, že takový jseš. Jsi v pohodě.
+	AI_Output(self,other,"DIA_Raven_Aufnahme_10_01"); //Pořád hledáme nové lidi. Něpřipadá mi, že bys byl padlý na hlavu. Můžeš nám být užitečný. #Needs_Attention
 //	AI_Output(self,other,"DIA_Raven_Aufnahme_10_02"); //I'll take you to Gomez. Follow me. And don't touch anything!
 //	AI_Output(self,other,"DIA_Raven_Aufnahme_10_02"); //Ich werde dich zu Gomez führen. Folge mir. Und fass nichts an!
-	AI_Output(self,other,"DIA_Raven_Aufnahme_10_02"); //Zavedu tě ke Gomezovi. A na nic nesahej!
+	AI_Output(self,other,"DIA_Raven_Aufnahme_10_02"); //Zavedu tě ke Gomezovi. Pojď za mnou. A na nic nesahej!
 
 	AI_StopProcessInfos(self);
 	Npc_ExchangeRoutine(self,"GUIDE");
@@ -194,7 +194,7 @@ func void DIA_Raven_There_Info()
 {
 //	AI_Output(self,other,"DIA_Raven_There_10_01"); //Gomez is over there. If you don't show him some respect, I'll take pleasure in teaching it to you personally, have you got that?
 //	AI_Output(self,other,"DIA_Raven_There_10_01"); //Dort hinten ist Gomez. Wenn du ihm keinen Respekt zeigst, werde ich dir persönlich welchen beibringen, ist das klar?
-	AI_Output(self,other,"DIA_Raven_There_10_01"); //Gomez tě očekává. Jestli k němu se k němu nebudeš chovat uctivě, bude mi potěšením tě to naučit, je ti to jasné?
+	AI_Output(self,other,"DIA_Raven_There_10_01"); //Gomez je támhle vzadu. Jestli k němu se k němu nebudeš chovat uctivě, tak tě to osobně naučím, je to jasné?
 	AI_StopProcessInfos(self);
 
 	Npc_ExchangeRoutine(self,"START");
@@ -231,7 +231,7 @@ func void DIA_Raven_PERM_Info()
 	AI_Output(other,self,"DIA_Raven_PERM_15_00"); //Jak jde obchod s rudou?
 //	AI_Output(self,other,"DIA_Raven_PERM_10_01"); //The Old Mine's doing well. The last load of supplies from the outside world was massive.
 //	AI_Output(self,other,"DIA_Raven_PERM_10_01"); //Die Alte Mine spuckt genug aus. Die letzte Lieferung aus der Außenwelt war ziemlich fett.
-	AI_Output(self,other,"DIA_Raven_PERM_10_01"); //Ve Starém dolu to jde dobře. Poslední dodávka zásob z vnějšího světa byla obrovská.
+	AI_Output(self,other,"DIA_Raven_PERM_10_01"); //Ve Starém dolu to jde dobře. Poslední dodávka zásob z vnějšího světa byla skutečně obrovská.
 };
 
 // **************************************
@@ -274,7 +274,7 @@ func void DIA_Raven_BinDabei_Info()
 	AI_Output(self,other,"DIA_Raven_BinDabei_10_01"); //Výborně! V tom případě to můžeš dokázat svým prvním úkolem.
 //	AI_Output(self,other,"DIA_Raven_BinDabei_10_02"); //It shouldn't be too difficult for you, provided your connections are as good as you say.
 //	AI_Output(self,other,"DIA_Raven_BinDabei_10_02"); //Wenn deine Verbindungen wirklich so gut sind, wie du sagst, solltest du keine Probleme damit haben.
-	AI_Output(self,other,"DIA_Raven_BinDabei_10_02"); //Když říkáš, že jsou tvé kontakty tak dobré, nemělo by to pro tebe být těžké.
+	AI_Output(self,other,"DIA_Raven_BinDabei_10_02"); //Pokud jsou tvé kontakty tak dobré, jak říkáš, neměl bys s tím mít žádný problém.
 
 	AI_EquipBestArmor(hero); 
 };
@@ -294,7 +294,7 @@ instance DIA_Raven_SpySect(C_INFO)
 	permanent = 0;
 //	description = "What d'you want me to do?";
 //	description = "Was soll ich für dich erledigen?";
-	description = "Co mám pro tebe udělat?";
+	description = "Co mám pro tebe zařídit?";
 };
 
 func int DIA_Raven_SpySect_Condition()
@@ -309,10 +309,10 @@ func void DIA_Raven_SpySect_Info()
 {
 //	AI_Output(other,self,"DIA_Raven_SpySect_15_00"); //What d'you want me to do?
 //	AI_Output(other,self,"DIA_Raven_SpySect_15_00"); //Was soll ich für dich erledigen?
-	AI_Output(other,self,"DIA_Raven_SpySect_15_00"); //Co mám pro tebe udělat?
+	AI_Output(other,self,"DIA_Raven_SpySect_15_00"); //Co mám pro tebe zařídit?
 //	AI_Output(self,other,"DIA_Raven_SpySect_10_01"); //We do a lot of trade with the Brotherhood. That doesn't mean to say we trust 'em.
 //	AI_Output(self,other,"DIA_Raven_SpySect_10_01"); //Wir stehen mit der Bruderschaft in Handelskontakt. Das bedeutet nicht, das wir ihnen unbedingt vertrauen.
-	AI_Output(self,other,"DIA_Raven_SpySect_10_01"); //Děláme hodně obchodů s Bratrstvem. To ale neznamená, že jsme s nimi ve svazku.
+	AI_Output(self,other,"DIA_Raven_SpySect_10_01"); //Hodně obchodujeme s lidmi z Bratrstva. To ale neznamená, že jim bezmezně věříme.
 //	AI_Output(self,other,"DIA_Raven_SpySect_10_02"); //Go to the swamp.
 //	AI_Output(self,other,"DIA_Raven_SpySect_10_02"); //Mach dich auf den Weg in den Sumpf.
 	AI_Output(self,other,"DIA_Raven_SpySect_10_02"); //Jdi do močálů.
@@ -321,7 +321,7 @@ func void DIA_Raven_SpySect_Info()
 	AI_Output(self,other,"DIA_Raven_SpySect_10_03"); //Až dorazíš do tábora, měj uši nastražené. Vše, co se dozvíš, se nám může hodit.
 //	AI_Output(self,other,"DIA_Raven_SpySect_10_04"); //The more you find out, the better. It'll take a bit of tact, if you know what I mean.
 //	AI_Output(self,other,"DIA_Raven_SpySect_10_04"); //Und je mehr du erfährst, desto besser. Das Ganze erfordert ein gewisses Feingefühl. Du weißt, was ich meine?
-	AI_Output(self,other,"DIA_Raven_SpySect_10_04"); //Čím víc toho zjistíš, tím líp. Měl bys být opatrný, jestli chápeš, co tím myslím.
+	AI_Output(self,other,"DIA_Raven_SpySect_10_04"); //Čím víc toho zjistíš, tím lépe. Celá akce vyžaduje určitý takt, jestli víš, co tím myslím.
 //	AI_Output(other,self,"DIA_Raven_SpySect_15_05"); //Keep cool, I'm not going to get them angry.
 //	AI_Output(other,self,"DIA_Raven_SpySect_15_05"); //Bleib ruhig, ich werde ihren Zorn nicht heraufbeschwören.
 	AI_Output(other,self,"DIA_Raven_SpySect_15_05"); //Buď v klidu, nemám v úmyslu je naštvat.
@@ -335,7 +335,7 @@ func void DIA_Raven_SpySect_Info()
 	Log_SetTopicStatus(CH1_GoToPsi,LOG_RUNNING);
 //	B_LogEntry(CH1_GoToPsi,"Raven has sent me to the Brotherhood in the swamp on behalf of the Old Camp. I'm to have a look around there and keep my ears open. Maybe I'll get some useful information for the Ore Barons there.");
 //	B_LogEntry(CH1_GoToPsi,"Raven hat mich im Auftrag des Alten Lagers zur Bruderschaft im Sumpf geschickt. Ich soll mich dort umsehen und -hören. Vielleicht gibt es ein paar nützliche Informationen für die Erzbarone");
-	B_LogEntry(CH1_GoToPsi,"Raven mě vyslal jako zástupce Starého tábora k Bratrstvu do bažin. Musím se tam porozhlédnout a mít nastražené uši. Možná se mi tu podaří získat nějaké užitečné informace pro Rudobarony.");
+	B_LogEntry(CH1_GoToPsi,"Raven mě vyslal jako zástupce Starého tábora k Bratrstvu do bažin. Musím se tam porozhlédnout a mít nastražené uši. Možná se mi tam podaří získat nějaké užitečné informace pro Rudobarony.");
 };
 
 // *********************************************
@@ -351,7 +351,7 @@ instance DIA_Raven_Equipment(C_INFO)
 	permanent = 0;
 //	description = "Where can I get better equipment?";
 //	description = "Wo bekomme ich bessere Ausrüstung her?";
-	description = "Kde dostanu lepší výbavu?";
+	description = "Kde tu dostanu lepší výbavu?";
 };
 
 func int DIA_Raven_Equipment_Condition()
@@ -366,21 +366,21 @@ func void DIA_Raven_Equipment_Info()
 {
 //	AI_Output(other,self,"DIA_Raven_Equipment_15_00"); //Where can I get better equipment?
 //	AI_Output(other,self,"DIA_Raven_Equipment_15_00"); //Wo bekomme ich bessere Ausrüstung her?
-	AI_Output(other,self,"DIA_Raven_Equipment_15_00"); //Kde dostanu lepší výbavu?
+	AI_Output(other,self,"DIA_Raven_Equipment_15_00"); //Kde tu dostanu lepší výbavu?
 //	AI_Output(self,other,"DIA_Raven_Equipment_10_01"); //Go and see Diego, he'll give you some armor. It'll stop you from getting killed and it'll serve as an ID at the same time.
 //	AI_Output(self,other,"DIA_Raven_Equipment_10_01"); //Geh zu Diego, er wird dir 'ne Rüstung geben. Damit wirst du nicht so schnell umgebracht und sie dient auch gleichzeitig als Ausweis.
-	AI_Output(self,other,"DIA_Raven_Equipment_10_01"); //Jdi za Diegem, dá ti nějakou výzbroj. S ní nebudeš tak rychle mrtvý a zároveň ti poslouží jako průkaz.
+	AI_Output(self,other,"DIA_Raven_Equipment_10_01"); //Jdi za Diegem, dá ti nějakou zbroj. S ní tě jen tak něco nezabije a zároveň ti poslouží jako průkaz.
 //	AI_Output(self,other,"DIA_Raven_Equipment_10_02"); //Your armor should give you access to all the places you need to go.
 //	AI_Output(self,other,"DIA_Raven_Equipment_10_02"); //Mit deiner neuen Rüstung solltest du hier überall hinkommen, wo du hin musst.
-	AI_Output(self,other,"DIA_Raven_Equipment_10_02"); //Tvoje výzbroj ti umožní přístup do všech míst, kam se budeš potřebovat dostat.
+	AI_Output(self,other,"DIA_Raven_Equipment_10_02"); //Tvoje zbroj ti umožní přístup do všech míst, kam se budeš potřebovat dostat.
 //	AI_Output(self,other,"DIA_Raven_Equipment_10_03"); //If you need any weapons, go and talk to Skip. You'll find him in the big shed right at the back, left of the castle courtyard.
 //	AI_Output(self,other,"DIA_Raven_Equipment_10_03"); //Und wenn du Waffen brauchst, geh zu Skip, er ist in der großen Scheune hinten links auf den Burgplatz.
-	AI_Output(self,other,"DIA_Raven_Equipment_10_03"); //Jestli budeš potřebovat jakékoliv zbraně, zajdi za Skipem. Najdeš ho v té velké dílně přímo vzadu, nalevo od hradního nádvoří.
+	AI_Output(self,other,"DIA_Raven_Equipment_10_03"); //Jestli budeš potřebovat zbraně, zajdi za Skipem. Najdeš ho v té velké dílně vzadu, nalevo na hradním nádvoří.
 
 	Log_CreateTopic(GE_TraderOC,LOG_NOTE);
 //	B_LogEntry(GE_TraderOC,"Diego has better ARMORS for Gomez' shadows. He's at the entry of the castle.");
 //	B_LogEntry(GE_TraderOC,"Diego verteilt bessere RÜSTUNGEN für Gomez' Schatten. Er hängt vor dem Eingang zur Burg herum.");
-	B_LogEntry(GE_TraderOC,"Diego má lepší ZBROJ pro Gomezovy Stíny. Je u hradní brány.");
+	B_LogEntry(GE_TraderOC,"Diego rozdává lepší ZBROJE pro Gomezovy Stíny. Najdu ho před branou do hradu.");
 	if !Npc_KnowsInfo(hero,DIA_Skip_First)
 	{
 //		B_LogEntry(GE_TraderOC,"The guard Skip in the rear courtyard sells WEAPONS. But only to Gomez' men.");
@@ -434,10 +434,10 @@ func void DIA_Raven_SpyBericht_Info()
 		{
 //			AI_Output(other,self,"Org_826_Mordrag_RUNNING_15_04"); //The great invocation has taken place.
 //			AI_Output(other,self,"Org_826_Mordrag_RUNNING_15_04"); //Die große Beschwörung hat stattgefunden.
-			AI_Output(other,self,"Org_826_Mordrag_RUNNING_15_04"); //Nadešlo velké vzývání.
+			AI_Output(other,self,"Org_826_Mordrag_RUNNING_15_04"); //Došlo k velkému vzývání.
 //			AI_Output(self,other,"DIA_Raven_SpyBericht_10_04"); //You have done well.
 //			AI_Output(self,other,"DIA_Raven_SpyBericht_10_04"); //Du hast deine Sache gut gemacht.
-			AI_Output(self,other,"DIA_Raven_SpyBericht_10_04"); //Dobrá práce.
+			AI_Output(self,other,"DIA_Raven_SpyBericht_10_04"); //Dobře jsi splnil svůj úkol.
 			Raven_SpySect=LOG_SUCCESS;
 			B_GiveXP(XP_ReportToRaven);
 			Log_SetTopicStatus(CH1_GoToPsi,LOG_SUCCESS);
@@ -474,7 +474,7 @@ func void DIA_Raven_SpyBericht_Info()
 	{
 //		AI_Output(other,self,"DIA_Raven_SpyBericht_15_05"); //I don't really know what they're planning yet.
 //		AI_Output(other,self,"DIA_Raven_SpyBericht_15_05"); //Ich weiß noch nicht GENAU was sie vorhaben.
-		AI_Output(other,self,"DIA_Raven_SpyBericht_15_05"); //Vlastně ve skutečnosti nevím, co plánují.
+		AI_Output(other,self,"DIA_Raven_SpyBericht_15_05"); //Vlastně ve skutečnosti PŘESNĚ nevím, co plánují.
 //		AI_Output(self,other,"DIA_Raven_SpyBericht_10_06"); //Then why are you bothering me?
 //		AI_Output(self,other,"DIA_Raven_SpyBericht_10_06"); //Was belästigst du mich dann?
 		AI_Output(self,other,"DIA_Raven_SpyBericht_10_06"); //Tak proč mě obtěžuješ?

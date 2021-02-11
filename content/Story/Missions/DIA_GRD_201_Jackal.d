@@ -56,10 +56,10 @@ func void Info_Jackal_Hello_Info()
 	AI_Output(other,self,"Info_Jackal_Hello_15_01"); //Co chceš?
 //	AI_Output(self,other,"Info_Jackal_Hello_07_02"); //I wanna offer you help. You're new here, an' new 'uns always get into trouble... You could save yourself a lot by makin' a small donation.
 //	AI_Output(self,other,"Info_Jackal_Hello_07_02"); //Ich will dir meine Hilfe anbieten. Du bist neu hier und Neue bekommen schnell Ärger ... Mit einer kleinen Spende an mich könntest du dir einiges davon ersparen.
-	AI_Output(self,other,"Info_Jackal_Hello_07_02"); //Chci ti nabídnout pomoc. Jsi tady nový a nováčci se vždycky dostanou do problémů... Spoustu by sis jich mohl ušetřit poskytnutím malé dotace.
+	AI_Output(self,other,"Info_Jackal_Hello_07_02"); //Chci ti nabídnout pomoc. Jsi tady nový a nováčci se vždycky dostanou do problémů... Mohl by sis jich spoustu ušetřit poskytnutím malého příspěvku.
 //	AI_Output(self,other,"Info_Jackal_Hello_07_03"); //Just 10 ore, man! It ain't much to ask.
 //	AI_Output(self,other,"Info_Jackal_Hello_07_03"); //Nur 10 Erz, Mann! Das ist nicht viel.
-	AI_Output(self,other,"Info_Jackal_Hello_07_03"); //Jen 10 nugetů, člověče! Snad toho tolik nežádám.
+	AI_Output(self,other,"Info_Jackal_Hello_07_03"); //Jen 10 nugetů, člověče! Není to moc.
 
 	Info_ClearChoices(Info_Jackal_Hello);
 //	Info_AddChoice(Info_Jackal_Hello,"What if I don't pay?",Info_Jackal_Hello_WhatIf);
@@ -70,14 +70,14 @@ func void Info_Jackal_Hello_Info()
 	Info_AddChoice(Info_Jackal_Hello,"A co za to?",Info_Jackal_Hello_WhatDoIGet);
 //	Info_AddChoice(Info_Jackal_Hello,"Here's 10 ore. And you'll have to help me if I get into trouble.",Info_Jackal_Hello_Pay);
 //	Info_AddChoice(Info_Jackal_Hello,"Hier. 10 Erz. Und du hilfst mir, wenn ich Ärger habe.",Info_Jackal_Hello_Pay);
-	Info_AddChoice(Info_Jackal_Hello,"Tady je 10 nugetů. A jestli budu mít potíže, tak mi pomůžeš.",Info_Jackal_Hello_Pay);
+	Info_AddChoice(Info_Jackal_Hello,"Tady. 10 nugetů. A jestli budu mít potíže, tak mi pomůžeš.",Info_Jackal_Hello_Pay);
 };
 
 func void Info_Jackal_Hello_Pay()
 {
 //	AI_Output(other,self,"Info_Jackal_Hello_Pay_15_00"); //Here's 10 ore. And you'll have to help me if I get into trouble.
 //	AI_Output(other,self,"Info_Jackal_Hello_Pay_15_00"); //Hier. 10 Erz. Und du hilfst mir, wenn ich Ärger habe.
-	AI_Output(other,self,"Info_Jackal_Hello_Pay_15_00"); //Tady je 10 nugetů. A jestli budu mít potíže, tak mi pomůžeš.
+	AI_Output(other,self,"Info_Jackal_Hello_Pay_15_00"); //Tady. 10 nugetů. A jestli budu mít potíže, tak mi pomůžeš.
 
 	if (Npc_HasItems(other,itminugget)>=10)
 	{
@@ -86,7 +86,7 @@ func void Info_Jackal_Hello_Pay()
 		AI_Output(self,other,"Info_Jackal_Hello_Pay_07_01"); //Pokud budu nablízku, můžeš se mnou počítat. Najdeš mě mezi tržištěm a jižní bránou.
 //		AI_Output(self,other,"Info_Jackal_Hello_Pay_07_02"); //The other areas are Fletcher and Bloodwyn's affair.
 //		AI_Output(self,other,"Info_Jackal_Hello_Pay_07_02"); //Um die anderen Bereiche kümmern sich Fletcher und Bloodwyn.
-		AI_Output(self,other,"Info_Jackal_Hello_Pay_07_02"); //Ostatní oblasti patří Fletcherovi a Bloodwynovi.
+		AI_Output(self,other,"Info_Jackal_Hello_Pay_07_02"); //O ostatní oblasti se stará Fletcher a Bloodwyn.
 		Jackal_ProtectionPaid = TRUE;
 		Npc_SetPermAttitude(self,ATT_FRIENDLY);
 		Jackal_PayDay = B_SetDayTolerance();
@@ -108,7 +108,7 @@ func void Info_Jackal_Hello_WhatDoIGet()
 	AI_Output(other,self,"Info_Jackal_Hello_WhatDoIGet_15_00"); //A co za to?
 //	AI_Output(self,other,"Info_Jackal_Hello_WhatDoIGet_07_01"); //While you're in my district, I'll protect you.
 //	AI_Output(self,other,"Info_Jackal_Hello_WhatDoIGet_07_01"); //Solange du in meinem Viertel bist, passe ich auf dich auf.
-	AI_Output(self,other,"Info_Jackal_Hello_WhatDoIGet_07_01"); //Pokud budeš na mém území, budeš pod mojí ochranou.
+	AI_Output(self,other,"Info_Jackal_Hello_WhatDoIGet_07_01"); //Pokud budeš v mé čtvrti, budeš pod mojí ochranou.
 //	AI_Output(self,other,"Info_Jackal_Hello_WhatDoIGet_07_02"); //If you get into any trouble with the guys from the New Camp or if one of the sect loonies gets on your nerves, you can count on me.
 //	AI_Output(self,other,"Info_Jackal_Hello_WhatDoIGet_07_02"); //Wenn du mal Ärger mit Typen aus dem Neuen Lager haben solltest oder mit einem der Sektenspinner, die dir die Backe voll quatschen, kannst du auf mich zählen.
 	AI_Output(self,other,"Info_Jackal_Hello_WhatDoIGet_07_02"); //Pokud se dostaneš do problémů s chlapy z Nového tábora, nebo ti bude hrát na nervy někdo z těch sektářských bláznů, můžeš se mnou počítat.
@@ -120,7 +120,7 @@ func void Info_Jackal_Hello_WhatDoIGet()
 	AI_Output(other,self,"Info_Jackal_Hello_WhatDoIGet_15_04"); //A co když zaplatíme oba?
 //	AI_Output(self,other,"Info_Jackal_Hello_WhatDoIGet_07_05"); //Then we sit back an' watch the show. But that don't happen too often.
 //	AI_Output(self,other,"Info_Jackal_Hello_WhatDoIGet_07_05"); //Dann sehen wir uns die Show an. Aber oft kommt das nicht vor.
-	AI_Output(self,other,"Info_Jackal_Hello_WhatDoIGet_07_05"); //Pak si sedneme na zadek a budeme se na to dívat. To se ale nestává moc často.
+	AI_Output(self,other,"Info_Jackal_Hello_WhatDoIGet_07_05"); //Pak se na to předsavení podíváme. To se ale nestává moc často.
 };
 
 func void Info_Jackal_Hello_WhatIf()
@@ -130,7 +130,7 @@ func void Info_Jackal_Hello_WhatIf()
 	AI_Output(other,self,"Info_Jackal_Hello_WhatIf_15_00"); //A co když nezaplatím?
 //	AI_Output(self,other,"Info_Jackal_Hello_WhatIf_07_01"); //Hey man, don't stress yourself! You're a newcomer - take a look around. Collect a bit of ore and when you're ready to pay, then pay.
 //	AI_Output(self,other,"Info_Jackal_Hello_WhatIf_07_01"); //Hey Mann, mach dir keinen Stress! Du bist neu hier - sieh dich mal ein bisschen um. Sammel' erst mal etwas Erz und wenn du bereit bist zu zahlen - dann zahlst du.
-	AI_Output(self,other,"Info_Jackal_Hello_WhatIf_07_01"); //Poslyš, člověče, nedělej si problémy! Jsi tady nový - tak se rozhlédni kolem. Dej dohromady trochu rudy a až budeš moci zaplatit, zaplať.
+	AI_Output(self,other,"Info_Jackal_Hello_WhatIf_07_01"); //Poslyš, člověče, nedělej si starosti! Jsi tady nový - tak se rozhlédni kolem. Dej dohromady trochu rudy a až budeš moci zaplatit, zaplať.
 //	AI_Output(self,other,"Info_Jackal_Hello_WhatIf_07_02"); //You can do it anytime - but don't count on my help until you've made your contribution to my expenses - I'm sure you'll understand.
 //	AI_Output(self,other,"Info_Jackal_Hello_WhatIf_07_02"); //Du kannst das jederzeit nachholen - nur bitte rechne nicht mit meiner Hilfe, solange du nicht einen kleinen Beitrag zu meinen Unkosten geleistet hast - das verstehst du doch?
 	AI_Output(self,other,"Info_Jackal_Hello_WhatIf_07_02"); //Můžeš zaplatit kdykoliv - dokud ale nepřispěješ na moje výdaje, nepočítej s mojí pomocí. Jsem si jistý, že tomu rozumíš.
@@ -259,7 +259,7 @@ func void GRD_201_Jackal_WELCOME_Info()
 {
 //	AI_Output(self,other,"GRD_201_Jackal_WELCOME_Info_07_01"); //You've worked your way up pretty fast! Well done, man!
 //	AI_Output(self,other,"GRD_201_Jackal_WELCOME_Info_07_01"); //Du hast dich ziemlich schnell nach oben gearbeitet! Gut gemacht, Mann!
-	AI_Output(self,other,"GRD_201_Jackal_WELCOME_Info_07_01"); //Vypracoval jsi se velmi rychle! Dobrá práce, chlape!
+	AI_Output(self,other,"GRD_201_Jackal_WELCOME_Info_07_01"); //Vypracoval jsi se docela rychle! Dobrá práce, chlape!
 };
 
 //#####################################################################
@@ -312,14 +312,14 @@ func void Info_Jackal_PAYDAY_Info()
 			AI_Output(self,other,"Info_Jackal_PAYDAY_07_03"); //Hej, podívej se na to! To je ten chlapík z Nového tábora, ten, co nás dostal do potíží!
 //			AI_Output(self,other,"Info_Jackal_PAYDAY_07_04"); //If you'd shown a bit more sense back then, you could be on our side now - the side of the winners!
 //			AI_Output(self,other,"Info_Jackal_PAYDAY_07_04"); //Wenn du damals schlauer gewesen wärst, würdest du heute zu uns - den Siegern - gehören!
-			AI_Output(self,other,"Info_Jackal_PAYDAY_07_04"); //Kdybys pobral více zdravého rozumu, mohl bys teď být na naší straně - na straně vítězů!
+			AI_Output(self,other,"Info_Jackal_PAYDAY_07_04"); //Kdybys byl tehndy chytřejší, byl bys teď na naší straně - na straně vítězů!
 		};
 	}
 	else
 	{
 //		AI_Output(self,other,"Info_Jackal_PAYDAY_07_05"); //Will you look at that. It's the guy from the swamp camp.
 //		AI_Output(self,other,"Info_Jackal_PAYDAY_07_05"); //Sieh mal einer an. Der Typ aus dem Sumpflager.
-		AI_Output(self,other,"Info_Jackal_PAYDAY_07_05"); //Podívej se na to. To je ten chlapík z tábora u bažin.
+		AI_Output(self,other,"Info_Jackal_PAYDAY_07_05"); //Podívej se na to. To je ten chlapík z tábora v bažinách.
 //		AI_Output(self,other,"Info_Jackal_PAYDAY_07_06"); //You've been around those loonies too long, they've made you soft in the head!
 //		AI_Output(self,other,"Info_Jackal_PAYDAY_07_06"); //Du hast dich zu lange bei diesen Spinnern aufgehalten, die haben dein Hirn weich gekocht!
 		AI_Output(self,other,"Info_Jackal_PAYDAY_07_06"); //Byls mezi těmi blázny tak dlouho, že ti z nich změkl mozek!
@@ -340,13 +340,13 @@ func void Info_Jackal_PAYDAY_Info()
 
 //	AI_Output(other,self,"Info_Jackal_PAYDAY_15_09"); //You've gone too far! It was a dumb idea to attack the mine!
 //	AI_Output(other,self,"Info_Jackal_PAYDAY_15_09"); //Ihr seid zu weit gegangen! Der Überfall auf die Mine war dumm von euch!
-	AI_Output(other,self,"Info_Jackal_PAYDAY_15_09"); //Zašli jste příliš daleko! To byl pitomý nápad, zaútočit na důl!
+	AI_Output(other,self,"Info_Jackal_PAYDAY_15_09"); //Zašli jste příliš daleko! Přepadení dolu byl ale hloupý nápad!
 //	AI_Output(self,other,"Info_Jackal_PAYDAY_07_10"); //Seems to have worked though. And you ain't gonna change that, believe me!
 //	AI_Output(self,other,"Info_Jackal_PAYDAY_07_10"); //Scheint aber funktioniert zu haben. Und du wirst daran auch nichts ändern, dafür werde ich persönlich Sorge tragen!
-	AI_Output(self,other,"Info_Jackal_PAYDAY_07_10"); //Vypadá, že to funguje. A ty to nezměníš, věř mi!
+	AI_Output(self,other,"Info_Jackal_PAYDAY_07_10"); //Vypadá, že to fungovalo. A ty na tom nic nezměníš, o to se osobně postarám!
 //	AI_Output(self,other,"Info_Jackal_PAYDAY_07_11"); //HEY GUYS, LET'S TAKE HIM OUT!!!
 //	AI_Output(self,other,"Info_Jackal_PAYDAY_07_11"); //LOS, WIR MACHEN IHN KALT, JUNGS!!!
-	AI_Output(self,other,"Info_Jackal_PAYDAY_07_11"); //HEJ CHLAPI, DOSTAŇTE HO!!!
+	AI_Output(self,other,"Info_Jackal_PAYDAY_07_11"); //HEJ CHLAPI, ZABTE HO!!!
 
 	AI_StopProcessInfos(self);
 

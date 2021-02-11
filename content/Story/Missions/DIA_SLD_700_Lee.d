@@ -735,7 +735,7 @@ func void Sld_700_Lee_ZWEIHAND1_Info()
 {
 //	AI_Output(other,self,"Sld_700_Lee_ZWEIHAND1_Info_15_01"); //I want to learn how to handle a two-handed sword.
 //	AI_Output(other,self,"Sld_700_Lee_ZWEIHAND1_Info_15_01"); //Ich möchte den Umgang mit Zweihändern lernen.
-	AI_Output(other,self,"Sld_700_Lee_ZWEIHAND1_Info_15_01"); //Chci se naučit zacházet s obouručním mečem.
+	AI_Output(other,self,"Sld_700_Lee_ZWEIHAND1_Info_15_01"); //Chci se naučit zacházet s obouručními zbraněmi.
 
 	if (B_GiveSkill(other,NPC_TALENT_2H , 1, LPCOST_TALENT_2H_1))
 	{
@@ -792,7 +792,7 @@ func void Sld_700_Lee_ZWEIHAND2_Info()
 {
 //	AI_Output(other,self,"Sld_700_Lee_ZWEIHAND2_Info_15_01"); //I want to learn more about fighting with a two-handed sword.
 //	AI_Output(other,self,"Sld_700_Lee_ZWEIHAND2_Info_15_01"); //Ich möchte mehr über den zweihändigen Kampf lernen.
-	AI_Output(other,self,"Sld_700_Lee_ZWEIHAND2_Info_15_01"); //Chci se dozvědět víc o boji s obouručním mečem.
+	AI_Output(other,self,"Sld_700_Lee_ZWEIHAND2_Info_15_01"); //Chci se dozvědět víc o boji s obouručními zbraněmi.
 
 	if (B_GiveSkill(other,NPC_TALENT_2H , 2, LPCOST_TALENT_2H_2))
 	{

@@ -72,11 +72,14 @@ instance Info_Bartholo_PERM(C_INFO)
 	nr = 4;
 	condition = Info_Bartholo_PERM_Condition;
 	information = Info_Bartholo_PERM_Info;
+	//#Needs_Attention toto obchodovanie nieje permanentne - takze po jednom obchodovani dialog zmizne.
+	//Chceme ale aby Bartholo obchodoval?
+	//Predava kluc od skladu ItKe_Storage_01 - zadarmo :-/
 	permanent = 0;
 //	description = "I want to make a deal with you.";
 //	description = "Ich will mit dir handeln.";
 	description = "Chtěl bych s tebou obchodovat.";
-	Trade = 1;
+	trade = 1;
 };                       
 
 func int Info_Bartholo_PERM_Condition()
@@ -138,7 +141,7 @@ func void Info_Bartholo_Krautbote_Info()
 		AI_Output(self,other,"Info_Bartholo_Krautbote_12_02"); //Hmmmmmmm...
 //		AI_Output(self,other,"Info_Bartholo_Krautbote_12_03"); //Alright! Gomez has been getting impatient. It's lucky for you that you delivered it today!
 //		AI_Output(self,other,"Info_Bartholo_Krautbote_12_03"); //Gut! Gomez ist beinahe ungeduldig geworden. Sei froh, dass du es heute noch abgeliefert hast!
-		AI_Output(self,other,"Info_Bartholo_Krautbote_12_03"); //Dobrá! Gomez už začíná být netrpělivý. Máš štěstí, žes ji přinesl už dneska!
+		AI_Output(self,other,"Info_Bartholo_Krautbote_12_03"); //Dobrá! Gomez už začínal být netrpělivý. Máš štěstí, žes ji přinesl už dneska!
 //		AI_Output(other,self,"Info_Bartholo_Krautbote_15_04"); //What about the pay?
 //		AI_Output(other,self,"Info_Bartholo_Krautbote_15_04"); //Was ist mit der Bezahlung?
 		AI_Output(other,self,"Info_Bartholo_Krautbote_15_04"); //A co bude s mým platem?
@@ -192,7 +195,7 @@ func void DIA_EBR_106_Bartholo_Wait4SC_Info()
 	AI_GotoNpc(self,other);
 //	AI_Output(self,other,"Info_Bartholo_12_01"); //I knew that somebody would try to get at us through the pentagram!
 //	AI_Output(self,other,"Info_Bartholo_12_01"); //Ich hatte mir fast gedacht, dass es jemand durch das Pentagramm versuchen würde!
-	AI_Output(self,other,"Info_Bartholo_12_01"); //Věděl jsem, že se k nám někdo pokouší dostat přes pentagram!
+	AI_Output(self,other,"Info_Bartholo_12_01"); //Věděl jsem, že se k nám někdo pokusí dostat přes pentagram!
 //	AI_Output(self,other,"Info_Bartholo_12_02"); //But, unlike that traitorous smith Stone, we don't need you any more!
 //	AI_Output(self,other,"Info_Bartholo_12_02"); //Aber im Gegensatz zu diesem verräterischen Schmied Stone brauchen wir dich nicht mehr!
 	AI_Output(self,other,"Info_Bartholo_12_02"); //Ale na rozdíl od toho zrádného kováře Stonea tebe už nebudeme potřebovat!

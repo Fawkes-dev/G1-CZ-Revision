@@ -656,10 +656,10 @@ func void Info_Gorn_RUINJOIN_Info()
 {
 //	AI_Output(other,self,"Info_Gorn_RUINJOIN_15_01"); //We could go on together.
 //	AI_Output(other,self,"Info_Gorn_RUINJOIN_15_01"); //Wir können unseren Weg gemeinsam fortsetzen.
-	AI_Output(other,self,"Info_Gorn_RUINJOIN_15_01"); //Mohli bysme pokračovat společně.
+	AI_Output(other,self,"Info_Gorn_RUINJOIN_15_01"); //Mohli bychom pokračovat společně.
 //	AI_Output(self,other,"Info_Gorn_RUINJOIN_09_02"); //Good idea. This area is crowded with snappers.
 //	AI_Output(self,other,"Info_Gorn_RUINJOIN_09_02"); //Gute Idee. Hier wimmelt es nur so von Snappern.
-	AI_Output(self,other,"Info_Gorn_RUINJOIN_09_02"); //Dobrý nápad. Tahle oblast se hemží kousavci.
+	AI_Output(self,other,"Info_Gorn_RUINJOIN_09_02"); //Dobrý nápad. Tahle oblast se hemží chňapavci.
 //	AI_Output(self,other,"Info_Gorn_RUINJOIN_09_03"); //When they're on their own, they're no problem for an experienced hunter. Most of the time they hunt in packs though.
 //	AI_Output(self,other,"Info_Gorn_RUINJOIN_09_03"); //Einzeln sind sie für einen geübten Kämpfer zwar kein Problem, aber sie jagen meistens in Rudeln.
 	AI_Output(self,other,"Info_Gorn_RUINJOIN_09_03"); //Samotní nejsou pro zkušeného lovce problém, ale většinou loví ve smečkách.
@@ -1806,7 +1806,7 @@ func void Info_Gorn_RAZOR_Info()
 	AI_Output(self,hero,"Info_Gorn_RAZOR_09_01"); //POZOR, BŘITVY!!!
 //	AI_Output(self,hero,"Info_Gorn_RAZOR_09_02"); //They hunt in packs like snappers, but they bite much harder!
 //	AI_Output(self,hero,"Info_Gorn_RAZOR_09_02"); //Die arbeiten genauso in Rudeln wie die Snapper, nur dass sie viel heftiger zubeißen!
-	AI_Output(self,hero,"Info_Gorn_RAZOR_09_02"); //Loví ve smečkách jako chňapavce, ale koušou daleko hůř!
+	AI_Output(self,hero,"Info_Gorn_RAZOR_09_02"); //Loví ve smečkách jako chňapavci, ale koušou daleko hůř!
 //	AI_Output(self,hero,"Info_Gorn_RAZOR_09_03"); //We should do away with them. You know me, I like to know what's at my back.
 //	AI_Output(self,hero,"Info_Gorn_RAZOR_09_03"); //Wir sollten sie aus dem Weg räumen! Du weißt ja, ich habe gerne einen freien Rücken!
 	AI_Output(self,hero,"Info_Gorn_RAZOR_09_03"); //Měli bychom je sprovodit ze světa. Znáš mě, mám rád, když vím, co mám za zády.

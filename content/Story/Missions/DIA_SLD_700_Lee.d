@@ -88,7 +88,7 @@ func void Sld_700_Lee_Define_Info()
 	AI_Output(self,other,"DIA_Lee_Define_08_01"); //Velmi jednoduché: Chránit rudu - chránit mágy.
 //	AI_Output(self,other,"DIA_Lee_Define_08_02"); //Sometimes the mages have a special task for one of us.
 //	AI_Output(self,other,"DIA_Lee_Define_08_02"); //Manchmal haben die Magier aber auch eine besondere Aufgabe für einen von uns.
-	AI_Output(self,other,"DIA_Lee_Define_08_02"); //Ale někdy mají mágové pro některého z nás speciální úkol.
+	AI_Output(self,other,"DIA_Lee_Define_08_02"); //Z času na čas mají mágové pro některé z nás speciální úkoly.
 };
 
 //*********************************************************
@@ -342,7 +342,7 @@ func void Sld_700_Lee_DAMNPAST_Info()
 {
 //	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_01"); //There was a time when I led a very different life.
 //	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_01"); //Einst führte ich ein anderes Leben.
-	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_01"); //Kdysy jsem vedl úplně jiný život.
+	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_01"); //Kdysi jsem vedl úplně jiný život.
 //	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_02"); //I was one of the best generals of this country.
 //	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_02"); //Ich zählte zu den besten Generälen dieses Landes.
 	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_02"); //Byl jsem jedním z nejlepších generálů této země.
@@ -351,13 +351,13 @@ func void Sld_700_Lee_DAMNPAST_Info()
 	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_03"); //Celý život jsem bojoval za tuto zemi.
 //	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_04"); //But the nobles didn't like me, because the King listened to my advice. And they knew I posed a threat to their dirty business.
 //	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_04"); //Den Adeligen war ich ein Dorn im Auge, denn der König hörte auf meinen Rat. Und sie sahen ihre schmutzigen Geschäfte in Gefahr.
-	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_04"); //Byl jsem trnem v oku šlechtě, protože král dával na mé rady. A také věděla, že představuji hrozbu pro jejich špinavé obchody.
+	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_04"); //Byl jsem trnem v oku šlechtě, protože král dal na mé rady. Věděli, že představuji hrozbu pro jejich špinavé obchody.
 //	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_05"); //I hadn't counted on their insidiousness. They used the King's wife to get me.
 //	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_05"); //Ich habe nicht mit ihrer Hinterhältigkeit gerechnet. Sie haben des Königs Frau benutzt, um mich zu kriegen.
 	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_05"); //Nepočítal jsem s jejich zákeřností. Aby mě dostali, použili královu ženu.
 //	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_06"); //I was blamed for her pointless murder. King Rhobar had no other choice.
 //	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_06"); //Der sinnlose Mord an ihr wurde mir angehängt. König Rhobar blieb keine Wahl.
-	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_06"); //Její nesmyslnou vraždu hodili na mě. Král Rhobar neměl jinou volbu.
+	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_06"); //Její nesmyslnou vraždu hodili na mě. Král Rhobar neměl jinou možnost.
 //	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_07"); //The services I had rendered my country saved me from the gallows. But they robbed me of my freedom.
 //	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_07"); //Meine Verdienste um das Land retteten mich vor dem Strick. Aber sie haben mir meine Freiheit genommen.
 	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_07"); //Služby, které jsem prokázal vlasti, mě zachránily před šibenicí. Ale vzali mi svobodu.
@@ -541,7 +541,7 @@ func void Sld_700_Lee_ARMOR_Info()
 	AI_Output(other,self,"Sld_700_Lee_ARMOR_Info_15_01"); //Potřebuju lepší zbroj.
 //	AI_Output(self,other,"Sld_700_Lee_ARMOR_Info_08_02"); //You'll first have to earn your armor. Apart from that they don't come cheap.
 //	AI_Output(self,other,"Sld_700_Lee_ARMOR_Info_08_02"); //Die Rüstungen musst du dir erst verdienen. Außerdem sind sie nicht ganz billig.
-	AI_Output(self,other,"Sld_700_Lee_ARMOR_Info_08_02"); //Na svoji zbroj si musíš nejdříve vydělat. Navíc není úplně levná.
+	AI_Output(self,other,"Sld_700_Lee_ARMOR_Info_08_02"); //Na svoji zbroj si musíš nejdříve zasloužit. Krom toho není levná.
 
 	Info_ClearChoices(Sld_700_Lee_ARMOR);
 	Info_AddChoice(Sld_700_Lee_ARMOR,DIALOG_BACK,Sld_700_Lee_ARMOR_BACK);
@@ -723,9 +723,9 @@ instance Sld_700_Lee_ZWEIHAND1(C_INFO)
 func int Sld_700_Lee_ZWEIHAND1_Condition()
 { 
 	if ( 
-			(Npc_GetTalentSkill  (hero,NPC_TALENT_2H) < 1)
-			&& ((Npc_GetTrueGuild(hero) == GIL_SLD) || ((Npc_GetTrueGuild(hero)==GIL_KDW) && (Kapitel >= 4))  ) //jetzt auch als Wassermagier im 4. Kapitel möglich ***BJÖRN***
-		)
+		(Npc_GetTalentSkill(hero,NPC_TALENT_2H) < 1)
+		&& ((Npc_GetTrueGuild(hero) == GIL_SLD) || ((Npc_GetTrueGuild(hero)==GIL_KDW) && (Kapitel >= 4))) //jetzt auch als Wassermagier im 4. Kapitel möglich ***BJÖRN***
+	)
 	{
 		return TRUE;
 	};
@@ -735,7 +735,7 @@ func void Sld_700_Lee_ZWEIHAND1_Info()
 {
 //	AI_Output(other,self,"Sld_700_Lee_ZWEIHAND1_Info_15_01"); //I want to learn how to handle a two-handed sword.
 //	AI_Output(other,self,"Sld_700_Lee_ZWEIHAND1_Info_15_01"); //Ich möchte den Umgang mit Zweihändern lernen.
-	AI_Output(other,self,"Sld_700_Lee_ZWEIHAND1_Info_15_01"); //Chci se naučit zacházet s obouručním mečem.
+	AI_Output(other,self,"Sld_700_Lee_ZWEIHAND1_Info_15_01"); //Chci se naučit zacházet s obouručními zbraněmi.
 
 	if (B_GiveSkill(other,NPC_TALENT_2H , 1, LPCOST_TALENT_2H_1))
 	{
@@ -778,11 +778,10 @@ instance Sld_700_Lee_ZWEIHAND2(C_INFO)
 
 func int Sld_700_Lee_ZWEIHAND2_Condition()
 { 
-	if
-		( 
-			(Npc_GetTalentSkill  (hero,NPC_TALENT_2H) == 1)
-			&& ((Npc_GetTrueGuild(hero) == GIL_SLD) ||  ((Npc_GetTrueGuild(hero)==GIL_KDW) && (Kapitel >= 4))  ) //jetzt auch als Wassermagier im 4. Kapitel möglich ***BJÖRN***
-		)
+	if ( 
+		(Npc_GetTalentSkill(hero,NPC_TALENT_2H) == 1)
+		&& ((Npc_GetTrueGuild(hero) == GIL_SLD) || ((Npc_GetTrueGuild(hero)==GIL_KDW) && (Kapitel >= 4))) //jetzt auch als Wassermagier im 4. Kapitel möglich ***BJÖRN***
+	)
 	{
 		return TRUE;
 	};
@@ -792,9 +791,9 @@ func void Sld_700_Lee_ZWEIHAND2_Info()
 {
 //	AI_Output(other,self,"Sld_700_Lee_ZWEIHAND2_Info_15_01"); //I want to learn more about fighting with a two-handed sword.
 //	AI_Output(other,self,"Sld_700_Lee_ZWEIHAND2_Info_15_01"); //Ich möchte mehr über den zweihändigen Kampf lernen.
-	AI_Output(other,self,"Sld_700_Lee_ZWEIHAND2_Info_15_01"); //Chci se dozvědět víc o boji s obouručním mečem.
+	AI_Output(other,self,"Sld_700_Lee_ZWEIHAND2_Info_15_01"); //Chci se dozvědět víc o boji s obouručními zbraněmi.
 
-	if (B_GiveSkill(other,NPC_TALENT_2H , 2, LPCOST_TALENT_2H_2))
+	if (B_GiveSkill(other,NPC_TALENT_2H,2,LPCOST_TALENT_2H_2))
 	{
 //		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_02"); //First of all, you need to change your basic stance. Hold the sword vertically, grasp the hilt firmly in both hands and hold it at the side of your body.
 //		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_02"); //Ändere zunächst deine Grundhaltung. Halte das Schwert aufrecht, fasse den Griff mit beiden Händen und halte es seitlich am Körper.

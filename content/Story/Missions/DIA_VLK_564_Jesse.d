@@ -127,7 +127,7 @@ instance DIA_Jesse_Mission(C_INFO)
 
 func int DIA_Jesse_Mission_Condition()
 {
-	//#Bugfix NPC_KnowsInfo pouzite na vlastnu instanciu dialogu - tento dialog by v hre nikdy nebol dostupny
+	//#Bugfix NPC_KnowsInfo incorrectly used with 'this' dialog instance DIA_Jesse_Mission - dialog option would never display
 	//if (Npc_KnowsInfo(hero,DIA_Jesse_Mission))
 	if (Npc_KnowsInfo(hero,DIA_Jesse_Warn))
 	{

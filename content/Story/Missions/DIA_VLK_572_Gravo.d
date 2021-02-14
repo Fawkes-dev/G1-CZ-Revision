@@ -109,6 +109,8 @@ func void DIA_Gravo_HelpHow_Info()
 
 //	B_LogEntry(GE_TraderOC,"The digger Gravo is selling a special kind of service. If I get in trouble with important people in the Camp, I can pay him to settle it.");
 //	B_LogEntry(GE_TraderOC,"Der Buddler Gravo verkauft eine Dienstleistung besonderer Art. Wenn ich es mir bei wichtigen Leuten im Alten Lager verscherzt habe, kann ich ihn bezahlen, um den Streit beizulegen.");
+	//#Bugfix Log_CreateTopic added
+	Log_CreateTopic (GE_TraderOC,LOG_NOTE);
 	B_LogEntry(GE_TraderOC,"Kopáč Gravo poskytuje zvláštní služby. Pokud se v táboře dostanu do konfliktu s důležitými lidmi, můžu mu zaplatit za to, že vše urovná.");
 };
 
@@ -119,6 +121,7 @@ func void DIA_Gravo_HelpHow_Info()
 //---------------------------------------------------
 func void B_Gravo_HelpAttitude(var C_NPC prob)
 {
+	//#Needs_Attention tu by sme mali Gravovi odstranit rudu - inak ju hrac moze vymlatit naspat. A Gravo tu rudu predsa pouzije aby uplatil NPC #Immerion
 	if (Npc_GetPermAttitude(prob, other)==ATT_ANGRY)
 	{
 //		AI_Output(self,other,"B_Gravo_HelpAttitude_ANGRY_04_00"); //That's right, you're in his bad books.
@@ -278,6 +281,7 @@ instance DIA_Gravo_Influence(C_INFO)
 	nr = 2;
 	condition = DIA_Gravo_Influence_Condition;
 	information = DIA_Gravo_Influence_Info;
+	//#Needs_Attention toto nemusi byt permanent - kedze mame aj zapis do denniku :-/
 	permanent = 1;
 //	description = "Could you tell me who belongs to the influential people here?";
 //	description = "Kannst du mir sagen, wer hier zu den einflussreichen Leuten gehört?";

@@ -96,6 +96,7 @@ instance DIA_Raven_Krautbote(C_INFO)
 	permanent = 0;
 //	description = "I have some weed for Gomez from Cor Kalom.";
 //	description = "Ich habe eine Ladung Kraut für Gomez von Cor Kalom.";
+	//#NEEDS_ATTENTION dodávku alebo donášku?
 	description = "Mám pro Gomeze dodávku drogy z bažin od Cor Kaloma.";
 };                       
 
@@ -194,7 +195,7 @@ func void DIA_Raven_There_Info()
 {
 //	AI_Output(self,other,"DIA_Raven_There_10_01"); //Gomez is over there. If you don't show him some respect, I'll take pleasure in teaching it to you personally, have you got that?
 //	AI_Output(self,other,"DIA_Raven_There_10_01"); //Dort hinten ist Gomez. Wenn du ihm keinen Respekt zeigst, werde ich dir persönlich welchen beibringen, ist das klar?
-	AI_Output(self,other,"DIA_Raven_There_10_01"); //Gomez je támhle vzadu. Jestli k němu se k němu nebudeš chovat uctivě, tak tě to osobně naučím, je to jasné?
+	AI_Output(self,other,"DIA_Raven_There_10_01"); //Gomez je támhle vzadu. Jestli se k němu nebudeš chovat uctivě, tak tě to osobně naučím, je to jasné?
 	AI_StopProcessInfos(self);
 
 	Npc_ExchangeRoutine(self,"START");
@@ -321,6 +322,7 @@ func void DIA_Raven_SpySect_Info()
 	AI_Output(self,other,"DIA_Raven_SpySect_10_03"); //Až dorazíš do tábora, měj uši nastražené. Vše, co se dozvíš, se nám může hodit.
 //	AI_Output(self,other,"DIA_Raven_SpySect_10_04"); //The more you find out, the better. It'll take a bit of tact, if you know what I mean.
 //	AI_Output(self,other,"DIA_Raven_SpySect_10_04"); //Und je mehr du erfährst, desto besser. Das Ganze erfordert ein gewisses Feingefühl. Du weißt, was ich meine?
+	//#NEEDS_ATTENTION takt, alebo cit?
 	AI_Output(self,other,"DIA_Raven_SpySect_10_04"); //Čím víc toho zjistíš, tím lépe. Celá akce vyžaduje určitý takt, jestli víš, co tím myslím.
 //	AI_Output(other,self,"DIA_Raven_SpySect_15_05"); //Keep cool, I'm not going to get them angry.
 //	AI_Output(other,self,"DIA_Raven_SpySect_15_05"); //Bleib ruhig, ich werde ihren Zorn nicht heraufbeschwören.
@@ -380,7 +382,7 @@ func void DIA_Raven_Equipment_Info()
 	Log_CreateTopic(GE_TraderOC,LOG_NOTE);
 //	B_LogEntry(GE_TraderOC,"Diego has better ARMORS for Gomez' shadows. He's at the entry of the castle.");
 //	B_LogEntry(GE_TraderOC,"Diego verteilt bessere RÜSTUNGEN für Gomez' Schatten. Er hängt vor dem Eingang zur Burg herum.");
-	B_LogEntry(GE_TraderOC,"Diego rozdává lepší ZBROJE pro Gomezovy Stíny. Najdu ho před branou do hradu.");
+	B_LogEntry(GE_TraderOC,"Diego nabízí lepší ZBROJE pro Gomezovy Stíny. Najdu ho před branou do hradu.");
 	if !Npc_KnowsInfo(hero,DIA_Skip_First)
 	{
 //		B_LogEntry(GE_TraderOC,"The guard Skip in the rear courtyard sells WEAPONS. But only to Gomez' men.");
@@ -437,6 +439,7 @@ func void DIA_Raven_SpyBericht_Info()
 			AI_Output(other,self,"Org_826_Mordrag_RUNNING_15_04"); //Došlo k velkému vzývání.
 //			AI_Output(self,other,"DIA_Raven_SpyBericht_10_04"); //You have done well.
 //			AI_Output(self,other,"DIA_Raven_SpyBericht_10_04"); //Du hast deine Sache gut gemacht.
+			//#NEEDS_ATTENTION original bolo jednoduche Dobrá práce. Nie je toto trochu prebasnene?
 			AI_Output(self,other,"DIA_Raven_SpyBericht_10_04"); //Dobře jsi splnil svůj úkol.
 			Raven_SpySect=LOG_SUCCESS;
 			B_GiveXP(XP_ReportToRaven);

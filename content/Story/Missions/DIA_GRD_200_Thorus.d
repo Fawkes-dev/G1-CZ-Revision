@@ -128,7 +128,7 @@ func void Info_Thorus_DiegoSentMe_Info()
 	AI_Output(self,other,"Info_Thorus_DiegoSentMe_09_02"); //Poslouchej, vysvětlím ti, jak to tu chodí. Diego tě vyzkouší. Jestli si ON myslí, že jsi dost dobrý, tak tě pustím za Gomezem na hrad.
 //	AI_Output(self,other,"Info_Thorus_DiegoSentMe_09_03"); //Whatever happens after that is up to you, okay?
 //	AI_Output(self,other,"Info_Thorus_DiegoSentMe_09_03"); //Was dann passiert, liegt an dir. Kapiert?
-	AI_Output(self,other,"Info_Thorus_DiegoSentMe_09_03"); //Cokoliv se stane potom, je to na tobě, jasný?
+	AI_Output(self,other,"Info_Thorus_DiegoSentMe_09_03"); //Cokoliv se stane potom, je jen na tobě, jasný?
 //	AI_Output(other,self,"Info_Thorus_DiegoSentMe_15_04"); //I'll talk to Diego.
 //	AI_Output(other,self,"Info_Thorus_DiegoSentMe_15_04"); //Ich werde mit Diego reden.
 	AI_Output(other,self,"Info_Thorus_DiegoSentMe_15_04"); //Řeknu to Diegovi.
@@ -172,7 +172,7 @@ func void Info_Thorus_TryMe_Info()
 	AI_Output(self,other,"Info_Thorus_TryMe_09_01"); //To není tak jednoduché, chlapče! Každý nováček, který se chce kamkoliv dostat, musí mít ochránce.
 //	AI_Output(self,other,"Info_Thorus_TryMe_09_02"); //That patron has to be one of Gomez' people. He'll test you.
 //	AI_Output(self,other,"Info_Thorus_TryMe_09_02"); //Der Fürsprecher muss einer von Gomez' Leuten sein. Er wird dich auf die Probe stellen.
-	AI_Output(self,other,"Info_Thorus_TryMe_09_02"); //A tím ochráncem musí být někdo z Gomezových lidí. Vyzkouší tě sám.
+	AI_Output(self,other,"Info_Thorus_TryMe_09_02"); //A tím ochráncem musí být někdo z Gomezových lidí. Vyzkouší si tě.
 //	AI_Output(self,other,"Info_Thorus_TryMe_09_03"); //And if you fail, you're his responsibility - that's the law around here.
 //	AI_Output(self,other,"Info_Thorus_TryMe_09_03"); //Und wenn du Mist baust, ist er für dich verantwortlich - so läuft das hier.
 	AI_Output(self,other,"Info_Thorus_TryMe_09_03"); //A jestli zklameš, je za tebe zodpovědný - to tady chodí.
@@ -209,7 +209,7 @@ func void Info_Thorus_TryMeAgain_Info()
 	AI_Output(other,self,"Info_Thorus_TryMeAgain_15_00"); //Je tu určitě něco, co chceš udělat.
 //	AI_Output(self,other,"Info_Thorus_TryMeAgain_09_01"); //No. The things we guards deal with are a bit above you, kid.
 //	AI_Output(self,other,"Info_Thorus_TryMeAgain_09_01"); //Nein. Die Dinge, um die wir Gardisten uns kümmern, sind 'ne Nummer zu groß für dich, Kleiner.
-	AI_Output(self,other,"Info_Thorus_TryMeAgain_09_01"); //Ne. Věci o které se staráme my, strážci, jsme trochu víc než ty, hochu.
+	AI_Output(self,other,"Info_Thorus_TryMeAgain_09_01"); //Ne. Věci o které se staráme my, strážci, jsou trochu větší než ty, hochu.
 //	AI_Output(self,other,"Info_Thorus_TryMeAgain_09_02"); //You just stick to the tasks your patron sets for you.
 //	AI_Output(self,other,"Info_Thorus_TryMeAgain_09_02"); //Halt dich lieber an die Prüfungen, die dein Fürsprecher dir stellen wird.
 	AI_Output(self,other,"Info_Thorus_TryMeAgain_09_02"); //Raději splň své úkoly, které pro tebe tvůj ochránce přichystal.
@@ -351,7 +351,7 @@ func void Info_Thorus_MordragKo_KillHim()
 	AI_Output(other,self,"Info_Thorus_MordragKo_KillHim_15_00"); //Mám toho chlapíka zabít?
 //	AI_Output(self,other,"Info_Thorus_MordragKo_KillHim_09_01"); //I want you to make sure I never see his face around here again. I don't care how you do it.
 //	AI_Output(self,other,"Info_Thorus_MordragKo_KillHim_09_01"); //Du sollst dafür sorgen, dass ich ihn hier nie wieder sehen muss. Wie du das anstellst, ist deine Sache.
-	AI_Output(self,other,"Info_Thorus_MordragKo_KillHim_09_01"); //Chci, abys zařídil, abych se už na něj nikdy nemusel podívat. Je mi jedno, jak to uděláš.
+	AI_Output(self,other,"Info_Thorus_MordragKo_KillHim_09_01"); //Zařiď abych se už na něj nikdy nemusel podívat. Je mi jedno, jak to uděláš.
 };
 
 func void Info_Thorus_MordragKo_Where()
@@ -361,7 +361,7 @@ func void Info_Thorus_MordragKo_Where()
 	AI_Output(other,self,"Info_Thorus_MordragKo_Where_15_00"); //Kde Mordraga najdu?
 //	AI_Output(self,other,"Info_Thorus_MordragKo_Where_09_01"); //You'll find him at the south gate on the other side of the castle, just beyond the entrance. The bastard wouldn't dare come any further into the Camp.
 //	AI_Output(self,other,"Info_Thorus_MordragKo_Where_09_01"); //Du findest ihn am Südtor, auf der anderen Seite der Burg, direkt hinter dem Eingang. Weiter traut sich dieser Halunke nicht ins Lager.
-	AI_Output(self,other,"Info_Thorus_MordragKo_Where_09_01"); //Najdeš ho u jižní brány na druhé straně hradu, přímo za vstupem. Ten bastard by se nikdy neodvážil přijít hlouběji do tábora.
+	AI_Output(self,other,"Info_Thorus_MordragKo_Where_09_01"); //Najdeš ho u jižní brány na druhé straně hradu, přímo za vstupem. Ten bastard se neodváží přijít hlouběji do tábora.
 //	B_LogEntry(CH1_MordragKO,"Mordrag is at the south gate at the back of the castle.");
 //	B_LogEntry(CH1_MordragKO,"Mordrag hält sich am Südtor auf der Rückseite der Burg auf.");
 	B_LogEntry(CH1_MordragKO,"Mordrag je u jižní brány za hradem.");
@@ -377,13 +377,13 @@ func void Info_Thorus_MordragKo_MagesProtect()
 	AI_Output(self,other,"Info_Thorus_MordragKo_MagesProtect_09_01"); //Protože jim slouží jako poslíček. Naši mágové jsou v kontaktu s mágy v Novém táboře. Pravidelně posílají poslíčky tam a zpátky.
 //	AI_Output(self,other,"Info_Thorus_MordragKo_MagesProtect_09_02"); //They're likely to become VERY unpleasant if I throw one of their gofers out of the Camp or have him killed.
 //	AI_Output(self,other,"Info_Thorus_MordragKo_MagesProtect_09_02"); //Wenn ich einen ihrer Boten aus dem Lager werfe oder umlegen lasse, könnten sie SEHR unangenehm werden.
-	AI_Output(self,other,"Info_Thorus_MordragKo_MagesProtect_09_02"); //Mohlo by je to DOST rozzlobit, kdybych vyhodil některého z jejich poslíčků z tábora
+	AI_Output(self,other,"Info_Thorus_MordragKo_MagesProtect_09_02"); //Mohlo by je to DOST rozzlobit, kdybych vyhodil některého z jejich poslíčků z tábora anebo ho nechal zabít.
 //	AI_Output(other,self,"Info_Thorus_MordragKo_MagesProtect_15_03"); //What about ME? What do you think the mages will do to ME?
 //	AI_Output(other,self,"Info_Thorus_MordragKo_MagesProtect_15_03"); //Was ist mit MIR? Was glaubst du machen die Magier mit MIR?
 	AI_Output(other,self,"Info_Thorus_MordragKo_MagesProtect_15_03"); //A co JÁ? Co myslíš, že udělají MNĚ?
 //	AI_Output(self,other,"Info_Thorus_MordragKo_MagesProtect_09_04"); //You're new here. You'll be okay. But I'm responsible for what my boys do. That's why it's vital that you keep your mouth shut.
 //	AI_Output(self,other,"Info_Thorus_MordragKo_MagesProtect_09_04"); //Du bist neu. Dir passiert gar nichts. ICH dagegen bin für das verantwortlich, was meine Jungs tun. Deswegen ist es ja so wichtig, dass du die Klappe hältst.
-	AI_Output(self,other,"Info_Thorus_MordragKo_MagesProtect_09_04"); //Jsi tu nový, Tobě se nic nestane. JÁ ale zodpovídám za to, co dělají moji chlapi. Proto je nesmírně důležité, abys držel jazyk za zuby.
+	AI_Output(self,other,"Info_Thorus_MordragKo_MagesProtect_09_04"); //Jsi tu nový. Tobě se nic nestane. JÁ ale zodpovídám za to, co dělají moji chlapi. Proto je nesmírně důležité, abys držel jazyk za zuby.
 	Thorus_MordragMageMessenger = TRUE;
 };
 
@@ -581,7 +581,7 @@ func void Info_Thorus_BribeGuard_Info()
 	AI_Output(other,self,"Info_Thorus_BribeGuard_15_04"); //1000 nugetů?
 //	AI_Output(self,other,"Info_Thorus_BribeGuard_09_04"); //Well, you could join up with Gomez, that'd get you in the castle for free.
 //	AI_Output(self,other,"Info_Thorus_BribeGuard_09_04"); //Nun, du könntest dich Gomez' Leuten anschließen, dann kommst du auch in die Burg - ganz umsonst.
-	AI_Output(self,other,"Info_Thorus_BribeGuard_09_04"); //Dobře, tak se přidej ke Gomezovi, a budeš mít vstup na hrad zdarma.
+	AI_Output(self,other,"Info_Thorus_BribeGuard_09_04"); //Anebo se přidej ke Gomezovi a budeš mít vstup na hrad zdarma.
 };
 
 // ************************************************************
@@ -725,7 +725,7 @@ func void Info_Thorus_ReadyForGomez_Info()
 	AI_Output(self,other,"Info_Thorus_ReadyForGomez_09_05"); //Dobrá! Můžeš jít za Gomezem. Sám rozhodne, jestli se k nám přidáš, nebo ne.
 //	AI_Output(self,other,"Info_Thorus_ReadyForGomez_09_06"); //From now on, you're on your own, kid.
 //	AI_Output(self,other,"Info_Thorus_ReadyForGomez_09_06"); //Ab jetzt bist du auf dich allein gestellt, Kleiner.
-	AI_Output(self,other,"Info_Thorus_ReadyForGomez_09_06"); //Od teďka jsi na to sám, hochu.
+	AI_Output(self,other,"Info_Thorus_ReadyForGomez_09_06"); //Od teď je to na tobě, hochu.
 
 	var C_NPC wache212; wache212 = Hlp_GetNpc(Grd_212_Torwache);
 	var C_NPC wache213; wache213 = Hlp_GetNpc(Grd_213_Torwache);
@@ -745,10 +745,12 @@ instance Info_Thorus_Krautbote(C_INFO)
 	nr = 4;
 	condition = Info_Thorus_Krautbote_Condition;
 	information = Info_Thorus_Krautbote_Info;
+	//#Needs_Attention - tento dialog nieje permanentny - to moze byt problem ak hrac nema dost travy z bazin !
+	//Mali by sme zmenit na permanentny dialog. (a pridat dalsiu premennu, ktora zrusi dialog ak hrac ma dost travy)
 	permanent = 0;
 //	description = "I have a consignment of weed for Gomez from Cor Kalom.";
 //	description = "Ich habe ne Ladung Kraut von Cor Kalom für Gomez.";
-	description = "Mám tady od Cora Kaloma zásilku drogy z bažin pro Gomeze.";
+	description = "Mám tady od Cor Kaloma zásilku drogy z bažin pro Gomeze.";
 };                       
 
 func int Info_Thorus_Krautbote_Condition()
@@ -763,7 +765,7 @@ func void Info_Thorus_Krautbote_Info()
 {
 //	AI_Output(other,self,"Info_Thorus_Krautbote_15_00"); //I have a consignment of weed for Gomez from Cor Kalom.
 //	AI_Output(other,self,"Info_Thorus_Krautbote_15_00"); //Ich habe 'ne Ladung Kraut von Cor Kalom für Gomez.
-	AI_Output(other,self,"Info_Thorus_Krautbote_15_00"); //Mám tady od Cora Kaloma pro Gomeze zásilku drogy z bažin.
+	AI_Output(other,self,"Info_Thorus_Krautbote_15_00"); //Mám tady od Cor Kaloma pro Gomeze zásilku drogy z bažin.
 //	AI_Output(self,other,"Info_Thorus_Krautbote_09_01"); //Show me!
 //	AI_Output(self,other,"Info_Thorus_Krautbote_09_01"); //Zeig her!
 	AI_Output(self,other,"Info_Thorus_Krautbote_09_01"); //Ukaž mi ji!
@@ -844,7 +846,7 @@ func void Info_Thorus_KdWSiegel_Info()
 	{
 //		AI_Output(self,other,"Info_Thorus_KdWSiegel_09_03"); //Sure you are. I guess you must have mislaid your amulet, eh?
 //		AI_Output(self,other,"Info_Thorus_KdWSiegel_09_03"); //Natürlich bist du das. Und dein Amulett hast du verlegt, was?
-		AI_Output(self,other,"Info_Thorus_KdWSiegel_09_03"); //Samozřejmě, že jsi. A tvůj amulet kurýra jsi někde nechal, co?
+		AI_Output(self,other,"Info_Thorus_KdWSiegel_09_03"); //Samozřejmě, že jsi. A svůj amulet kurýra jsi někde zapomněl, co?
 	};
 };
 
@@ -919,7 +921,7 @@ func void Info_Thorus_PERM2_Info()
 {
 //	AI_Output(other,self,"Info_Thorus_PERM2_15_00"); //How are you doing?
 //	AI_Output(other,self,"Info_Thorus_PERM2_15_00"); //Wie sieht's bei dir aus?
-	AI_Output(other,self,"Info_Thorus_PERM2_15_00"); //Jak se máš?
+	AI_Output(other,self,"Info_Thorus_PERM2_15_00"); //Jak to jde?
 //	AI_Output(self,other,"Info_Thorus_PERM2_09_01"); //We're not having much trouble from the New Camp. I'm more worried about those sect loonies.
 //	AI_Output(self,other,"Info_Thorus_PERM2_09_01"); //Wir haben wenig Ärger mit den Typen aus dem Neuen Lager. Mir machen eher die Sektenspinner Sorgen.
 	AI_Output(self,other,"Info_Thorus_PERM2_09_01"); //S lidmi z Nového tábora už nemáme tolik starostí. Spíš mám obavy z těch sektářských bláznů.
@@ -959,6 +961,7 @@ func int GRD_200_Thorus_GARDIST_Condition()
 	};
 
 };
+
 func void GRD_200_Thorus_GARDIST_Info()
 {
 	var C_Npc KDFWache; 
@@ -988,6 +991,7 @@ func void GRD_200_Thorus_GARDIST_Info()
 		AI_Output(self,other,"GRD_200_Thorus_GARDIST_Info_09_05"); //Dám ti šanci. Co na to říkáš?
 	};
 };
+
 //---------------------------------------------------------------
 // GARDIST WERDEN
 //---------------------------------------------------------------
@@ -1012,6 +1016,7 @@ func int GRD_200_Thorus_AUFNAHME_Condition()
 	};
 
 };
+
 func void GRD_200_Thorus_AUFNAHME_Info()
 {
 //	AI_Output(other,self,"GRD_200_Thorus_AUFNAHME_Info_15_01"); //I want to become a guard.
@@ -1025,6 +1030,7 @@ func void GRD_200_Thorus_AUFNAHME_Info()
 	AI_Output(self,other,"GRD_200_Thorus_AUFNAHME_Info_09_03"); //Dosud jsi jednal na vlastní pěst. S tím už je konec. Mí chlapci drží pohromadě. My, strážci, chráníme Rudobarony, rudu, tábor a důl.
 //	AI_Output(self,other,"GRD_200_Thorus_AUFNAHME_Info_09_04"); //The diggers collect the ore, but we make sure that they don't get eaten by crawlers. The Ore Barons negotiate with the King, but we're the ones that protect them.
 //	AI_Output(self,other,"GRD_200_Thorus_AUFNAHME_Info_09_04"); //Die Buddler schürfen das Erz, aber wir sorgen dafür, dass sie nicht von den Crawlern gefressen werden. Die Barone verhandeln mit dem König, aber wir decken ihren Arsch dabei.
+	//#Needs_Attention hmmm tie zadky, neprebasnime? :)
 	AI_Output(self,other,"GRD_200_Thorus_AUFNAHME_Info_09_04"); //Kopáči dobývají rudu a my se staráme o to, aby je nesežrali důlní červi. Rudobaroni vyjednávají s králem, ale my jsme ti, co jim kryjí zadky.
 //	AI_Output(self,other,"GRD_200_Thorus_AUFNAHME_Info_09_05"); //Day and night, we're in the mine. Day and night, we stand at the gates of the Camp and make sure folks get to sleep peacefully.
 //	AI_Output(self,other,"GRD_200_Thorus_AUFNAHME_Info_09_05"); //Wir stehen Tag und Nacht in der Mine. Wir stehen Tag und Nacht an den Toren des Lagers und passen auf, dass alle ruhig schlafen können.
@@ -1055,6 +1061,7 @@ func void GRD_200_Thorus_AUFNAHME_Info()
 	Npc_SetTrueGuild(hero,GIL_GRD);
 	hero.guild = GIL_GRD;
 };  
+
 //---------------------------------------------------------------
 // GARDIST WERDEN TEIL 2
 //---------------------------------------------------------------
@@ -1170,7 +1177,7 @@ func void GRD_200_Thorus_Teach_Info()
 		log_thorustrain = TRUE;
 	};
 	Info_ClearChoices(GRD_200_Thorus_Teach);
-	Info_AddChoice(GRD_200_Thorus_Teach,DIALOG_BACK ,GRD_200_Thorus_Teach_BACK);
+	Info_AddChoice(GRD_200_Thorus_Teach,DIALOG_BACK,GRD_200_Thorus_Teach_BACK);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),GRD_200_Thorus_Teach_STR_5);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),GRD_200_Thorus_Teach_STR_1);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),GRD_200_Thorus_Teach_DEX_5);
@@ -1179,15 +1186,14 @@ func void GRD_200_Thorus_Teach_Info()
 
 func void GRD_200_Thorus_Teach_BACK()
 {
-
 	Info_ClearChoices(GRD_200_Thorus_Teach);
 };
 
 func void GRD_200_Thorus_Teach_STR_1()
 {
-	B_BuyAttributePoints(other,ATR_STRENGTH, LPCOST_ATTRIBUTE_STRENGTH);
+	B_BuyAttributePoints(other,ATR_STRENGTH,LPCOST_ATTRIBUTE_STRENGTH);
 	Info_ClearChoices(GRD_200_Thorus_Teach);
-	Info_AddChoice(GRD_200_Thorus_Teach,DIALOG_BACK ,GRD_200_Thorus_Teach_BACK);
+	Info_AddChoice(GRD_200_Thorus_Teach,DIALOG_BACK,GRD_200_Thorus_Teach_BACK);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),GRD_200_Thorus_Teach_STR_5);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),GRD_200_Thorus_Teach_STR_1);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),GRD_200_Thorus_Teach_DEX_5);
@@ -1196,9 +1202,9 @@ func void GRD_200_Thorus_Teach_STR_1()
 
 func void GRD_200_Thorus_Teach_STR_5()
 {
-	B_BuyAttributePoints(other,ATR_STRENGTH, 5*LPCOST_ATTRIBUTE_STRENGTH);
+	B_BuyAttributePoints(other,ATR_STRENGTH,5*LPCOST_ATTRIBUTE_STRENGTH);
 	Info_ClearChoices(GRD_200_Thorus_Teach);
-	Info_AddChoice(GRD_200_Thorus_Teach,DIALOG_BACK ,GRD_200_Thorus_Teach_BACK);
+	Info_AddChoice(GRD_200_Thorus_Teach,DIALOG_BACK,GRD_200_Thorus_Teach_BACK);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),GRD_200_Thorus_Teach_STR_5);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),GRD_200_Thorus_Teach_STR_1);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),GRD_200_Thorus_Teach_DEX_5);
@@ -1209,7 +1215,7 @@ func void GRD_200_Thorus_Teach_DEX_1()
 {
 	B_BuyAttributePoints(other,ATR_DEXTERITY,LPCOST_ATTRIBUTE_DEXTERITY);
 	Info_ClearChoices(GRD_200_Thorus_Teach);
-	Info_AddChoice(GRD_200_Thorus_Teach,DIALOG_BACK ,GRD_200_Thorus_Teach_BACK);
+	Info_AddChoice(GRD_200_Thorus_Teach,DIALOG_BACK,GRD_200_Thorus_Teach_BACK);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),GRD_200_Thorus_Teach_STR_5);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),GRD_200_Thorus_Teach_STR_1);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),GRD_200_Thorus_Teach_DEX_5);
@@ -1218,9 +1224,9 @@ func void GRD_200_Thorus_Teach_DEX_1()
 
 func void GRD_200_Thorus_Teach_DEX_5()
 {
-	B_BuyAttributePoints(other,ATR_DEXTERITY, 5*LPCOST_ATTRIBUTE_DEXTERITY);
+	B_BuyAttributePoints(other,ATR_DEXTERITY,5*LPCOST_ATTRIBUTE_DEXTERITY);
 	Info_ClearChoices(GRD_200_Thorus_Teach);
-	Info_AddChoice(GRD_200_Thorus_Teach,DIALOG_BACK ,GRD_200_Thorus_Teach_BACK);
+	Info_AddChoice(GRD_200_Thorus_Teach,DIALOG_BACK,GRD_200_Thorus_Teach_BACK);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),GRD_200_Thorus_Teach_STR_5);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),GRD_200_Thorus_Teach_STR_1);
 	Info_AddChoice(GRD_200_Thorus_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),GRD_200_Thorus_Teach_DEX_5);
@@ -1243,8 +1249,8 @@ instance GRD_200_Thorus_ZWEIHAND1(C_INFO)
 
 func int GRD_200_Thorus_ZWEIHAND1_Condition()
 { 
-	if (Npc_GetTalentSkill  (hero,NPC_TALENT_1H) == 2)
-	&& (Npc_GetTalentSkill  (hero,NPC_TALENT_2H) < 1)
+	if (Npc_GetTalentSkill(hero,NPC_TALENT_1H) == 2)
+	&& (Npc_GetTalentSkill(hero,NPC_TALENT_2H) < 1)
 	&& (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
 		return TRUE;
@@ -1265,7 +1271,7 @@ func void GRD_200_Thorus_ZWEIHAND1_Info()
 //	AI_Output(other,self,"GRD_200_Thorus_ZWEIHAND1_Info_15_01"); //Ich möchte den Umgang mit dem Zweihänder lernen.
 	AI_Output(other,self,"GRD_200_Thorus_ZWEIHAND1_Info_15_01"); //Chci se naučit zacházet s obouručními zbraněmi.
 
-	if (B_GiveSkill(other,NPC_TALENT_2H , 1, LPCOST_TALENT_2H_1))
+	if (B_GiveSkill(other,NPC_TALENT_2H,1,LPCOST_TALENT_2H_1))
 	{
 //		AI_Output(self,other,"GRD_200_Thorus_ZWEIHAND1_Info_09_02"); //Okay, let's go through the basics first.
 //		AI_Output(self,other,"GRD_200_Thorus_ZWEIHAND1_Info_09_02"); //Nun, dann gehen wir zuerst die Grundbegriffe durch.
@@ -1305,7 +1311,7 @@ instance GRD_200_Thorus_ZWEIHAND2(C_INFO)
 
 func int GRD_200_Thorus_ZWEIHAND2_Condition()
 { 
-	if (Npc_GetTalentSkill  (hero,NPC_TALENT_2H) == 1)
+	if (Npc_GetTalentSkill(hero,NPC_TALENT_2H) == 1)
 	&& (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
 		return TRUE;
@@ -1318,7 +1324,7 @@ func void GRD_200_Thorus_ZWEIHAND2_Info()
 //	AI_Output(other,self,"GRD_200_Thorus_ZWEIHAND2_Info_15_01"); //Ich möchte mehr über den zweihändigen Kampf lernen.
 	AI_Output(other,self,"GRD_200_Thorus_ZWEIHAND2_Info_15_01"); //Chci se dozvědět víc o boji s obouručními zbraněmi.
 
-	if (B_GiveSkill(other,NPC_TALENT_2H , 2, LPCOST_TALENT_2H_2))
+	if (B_GiveSkill(other,NPC_TALENT_2H,2,LPCOST_TALENT_2H_2))
 	{
 //		AI_Output(self,other,"GRD_200_Thorus_ZWEIHAND2_Info_09_02"); //First of all, you need to change your basic stance. Hold the sword vertically, grasp the hilt firmly in both hands and hold it at the side of your body.
 //		AI_Output(self,other,"GRD_200_Thorus_ZWEIHAND2_Info_09_02"); //Zunächst ändere deine Grundhaltung. Halte das Schwert aufrecht, fasse den Griff mit beiden Händen und halte es seitlich am Körper.
@@ -1344,6 +1350,6 @@ func void GRD_200_Thorus_ZWEIHAND2_Info()
 //		AI_Output(self,other,"GRD_200_Thorus_ZWEIHAND2_Info_09_09"); //The key to success is varying your stances and changing positions.
 //		AI_Output(self,other,"GRD_200_Thorus_ZWEIHAND2_Info_09_09"); //Abwechslung in den Kampfbewegungen und Positionswechsel sind der Schlüssel zum Sieg.
 		AI_Output(self,other,"GRD_200_Thorus_ZWEIHAND2_Info_09_09"); //Změna postoje a úderů jsou klíčem k vítězství.
-		GRD_200_Thorus_ZWEIHAND2.permanent = 0 ;
+		GRD_200_Thorus_ZWEIHAND2.permanent = 0;
 	};
 };  

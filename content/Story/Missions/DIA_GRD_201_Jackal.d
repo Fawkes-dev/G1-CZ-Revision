@@ -173,6 +173,8 @@ instance Info_Jackal_Schutz(C_INFO)
 
 func int Info_Jackal_Schutz_Condition()
 {
+	//#Needs_Attention tento dialog je dostupny aj ked je hrac Stin/Strazca/Mag
+	//Vlastne by asi nemal byt dostupny ak je hrac <> GIL_NONE hmmm
 	if ((Npc_KnowsInfo(hero,Info_Jackal_Hello)) && (Jackal_ProtectionPaid == FALSE))
 	{
 		return 1;

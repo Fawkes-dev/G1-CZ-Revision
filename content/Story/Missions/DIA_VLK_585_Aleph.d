@@ -31,6 +31,7 @@ func void VLK_585_Aleph_Exit_Info()
 	AI_StopProcessInfos(self);
 
 };
+
 // ***************** ALEPH IST EIN FAULPELZ *****************************
 instance VLK_585_Aleph_CLEVER(C_INFO)
 {
@@ -304,6 +305,7 @@ func void VLK_585_Aleph_SCHUPPEN_50()
 		B_GiveInvItems(self,hero,ItKe_OM_03, 2);
 		Npc_RemoveInvItem(hero,ItKe_OM_03);
 
+		//#Needs_Attention toto je bug - ak hrac zmlati Alepha a zoberie mu prsten tak sa tu vygeneruje druhy prsten
 		Npc_RemoveInvItem(self,Staerkering);
 		CreateInvItem(hero,Staerkering);
 
@@ -311,6 +313,9 @@ func void VLK_585_Aleph_SCHUPPEN_50()
 
 		Npc_SetPermAttitude(self,ATT_FRIENDLY); 
 		Info_ClearChoices(VLK_585_Aleph_SCHUPPEN);
+		//#Needs_Attention toto zahravanie sa s permanent property ... to sposobuje problemy pri Save/Loade dialog moze zmiznut
+		//Najlepsie by bolo zmenit dialog na permanent a pridat premennu, ktora vyrusi dialog ak hrac ziskal kluc
+		//+ nezabudnut upravit podmienku u dialogu VLK_585_Aleph_DIRTY
 		VLK_585_Aleph_SCHUPPEN.permanent = 0;
 		B_Aleph_StorageShedKey();
 	}
@@ -381,6 +386,8 @@ instance VLK_585_Aleph_DIRTY(C_INFO)
 func int VLK_585_Aleph_DIRTY_Condition()
 {
 	if (Npc_KnowsInfo(hero,GRD_271_ULBERT_DRUNK)) && (Npc_KnowsInfo(hero,GRD_261_Brandick_ALEPH))
+	//#Bugfix this dialog should not be available if player already got key from Aleph in dialog VLK_585_Aleph_SCHUPPEN
+	&& (!Npc_KnowsInfo (hero, VLK_585_Aleph_SCHUPPEN))
 	{
 		return 1;
 	};

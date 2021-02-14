@@ -332,6 +332,7 @@ func void Info_Thorus_MordragKo_Offer_Info()
 	B_LogEntry(CH1_MordragKO,"Thorus mě požádal, abych z tábora vyhnal lumpa jménem Mordrag. Jak to udělám, je prý má věc. Nikdo však nesmí vědět, že za tím stojí Thorus.");
 	Log_SetTopicStatus(CH1_MordragKO,LOG_RUNNING);
 
+	//#Needs_Attention toto je tu naco ? :)
 	var C_Npc Mordrag; 
 	Mordrag = Hlp_GetNpc(ORG_826_Mordrag);
 };
@@ -601,7 +602,9 @@ instance Info_Thorus_Give1000Ore(C_INFO)
 };                       
 
 func int Info_Thorus_Give1000Ore_Condition()
-{ 
+{
+	//#Needs_Attention tento dialog je permanentne dostupny ... aj ked hrac ma pristup na hrad - to by sme mohli zrusit
+	//Mozeme pouzit Diego_GomezAudience a mali by sme zohladnit moznost uplatit Thorusa (extra premenna ?)
 	if (Npc_KnowsInfo(hero,Info_Thorus_BribeGuard))
 	{
 		return 1;
@@ -651,6 +654,7 @@ instance Info_Thorus_LetterForMages(C_INFO)
 
 func int Info_Thorus_LetterForMages_Condition()
 { 
+	//#Needs_Attention tento dialog je permanentne dostupny ... aj ked hrac ma pristup na hrad - to by sme mohli zrusit podobne ako dialog hore
 	if Npc_KnowsInfo(hero,Info_Thorus_EnterCastle)
 	&& (Npc_HasItems(hero,ItWr_Fire_Letter_01) || Npc_HasItems(hero,ItWr_Fire_Letter_02))
 	{
@@ -797,7 +801,7 @@ func void Info_Thorus_Krautbote_Info()
 // ************************************************************
 // 					SIEGEL der KdW
 // ************************************************************
-	var int thorus_Amulettgezeigt;
+var int thorus_Amulettgezeigt;
 // ************************************************************
 
 instance Info_Thorus_KdWSiegel(C_INFO)
@@ -815,8 +819,7 @@ instance Info_Thorus_KdWSiegel(C_INFO)
 func int Info_Thorus_KdWSiegel_Condition()
 { 
 	if (((Npc_KnowsInfo(hero,Org_826_Mordrag_Courier))||(Npc_HasItems(other,KdW_Amulett)>=1))
-		&& (thorus_Amulettgezeigt == FALSE) 
-		)
+	&& (thorus_Amulettgezeigt == FALSE))
 	{
 		return 1;
 	};
@@ -1135,7 +1138,8 @@ func void GRD_200_Thorus_WANNABEMAGE_Info()
 	Corristo = Hlp_GetNpc(KDF_402_Corristo);
 	Npc_ExchangeRoutine(Corristo,"WAITFORSC");
 	AI_ContinueRoutine(Corristo);
-};  
+};
+
 //---------------------------------------------------------------
 //	 						STR + DEX
 //---------------------------------------------------------------

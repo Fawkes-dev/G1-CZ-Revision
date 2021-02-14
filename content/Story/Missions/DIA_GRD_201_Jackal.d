@@ -36,7 +36,7 @@ instance Info_Jackal_Hello(C_INFO)
 	condition = Info_Jackal_Hello_Condition;
 	information = Info_Jackal_Hello_Info;
 	permanent = 0;
-	important   = 1;
+	important = 1;
 };                       
 
 func int Info_Jackal_Hello_Condition()
@@ -120,7 +120,7 @@ func void Info_Jackal_Hello_WhatDoIGet()
 	AI_Output(other,self,"Info_Jackal_Hello_WhatDoIGet_15_04"); //A co když zaplatíme oba?
 //	AI_Output(self,other,"Info_Jackal_Hello_WhatDoIGet_07_05"); //Then we sit back an' watch the show. But that don't happen too often.
 //	AI_Output(self,other,"Info_Jackal_Hello_WhatDoIGet_07_05"); //Dann sehen wir uns die Show an. Aber oft kommt das nicht vor.
-	AI_Output(self,other,"Info_Jackal_Hello_WhatDoIGet_07_05"); //Pak se na to předsavení podíváme. To se ale nestává moc často.
+	AI_Output(self,other,"Info_Jackal_Hello_WhatDoIGet_07_05"); //Pak se na to představení podíváme. To se ale moc často nestává.
 };
 
 func void Info_Jackal_Hello_WhatIf()
@@ -300,6 +300,7 @@ func void Info_Jackal_PAYDAY_Info()
 		{
 //			AI_Output(self,other,"Info_Jackal_PAYDAY_07_01"); //Hey, look at that! It's the traitor that switched camps!
 //			AI_Output(self,other,"Info_Jackal_PAYDAY_07_01"); //Sieh mal einer an. Der Verräter, der das Lager gewechselt hat!
+			//#Needs_Attention neprebasnime? který přešel z tábora do tábora! --> který přeběhl!
 			AI_Output(self,other,"Info_Jackal_PAYDAY_07_01"); //Hej, podívej se na to! To je ten zrádce, který přešel z tábora do tábora!
 //			AI_Output(self,other,"Info_Jackal_PAYDAY_07_02"); //You shouldn't have got involved with those losers, you'd still be one of us!
 //			AI_Output(self,other,"Info_Jackal_PAYDAY_07_02"); //Du hättest dich nicht mit diesen Verlierern einlassen sollen, dann würdest du noch zu uns gehören!
@@ -312,7 +313,7 @@ func void Info_Jackal_PAYDAY_Info()
 			AI_Output(self,other,"Info_Jackal_PAYDAY_07_03"); //Hej, podívej se na to! To je ten chlapík z Nového tábora, ten, co nás dostal do potíží!
 //			AI_Output(self,other,"Info_Jackal_PAYDAY_07_04"); //If you'd shown a bit more sense back then, you could be on our side now - the side of the winners!
 //			AI_Output(self,other,"Info_Jackal_PAYDAY_07_04"); //Wenn du damals schlauer gewesen wärst, würdest du heute zu uns - den Siegern - gehören!
-			AI_Output(self,other,"Info_Jackal_PAYDAY_07_04"); //Kdybys byl tehndy chytřejší, byl bys teď na naší straně - na straně vítězů!
+			AI_Output(self,other,"Info_Jackal_PAYDAY_07_04"); //Kdybys byl tehdy chytřejší, byl bys teď na naší straně - na straně vítězů!
 		};
 	}
 	else
@@ -322,7 +323,7 @@ func void Info_Jackal_PAYDAY_Info()
 		AI_Output(self,other,"Info_Jackal_PAYDAY_07_05"); //Podívej se na to. To je ten chlapík z tábora v bažinách.
 //		AI_Output(self,other,"Info_Jackal_PAYDAY_07_06"); //You've been around those loonies too long, they've made you soft in the head!
 //		AI_Output(self,other,"Info_Jackal_PAYDAY_07_06"); //Du hast dich zu lange bei diesen Spinnern aufgehalten, die haben dein Hirn weich gekocht!
-		AI_Output(self,other,"Info_Jackal_PAYDAY_07_06"); //Byls mezi těmi blázny tak dlouho, že ti z nich změkl mozek!
+		AI_Output(self,other,"Info_Jackal_PAYDAY_07_06"); //Byls mezi těmi blázny tak dlouho, že ti z toho změkl mozek!
 	};
 
 	if Jackal_ProtectionPaid

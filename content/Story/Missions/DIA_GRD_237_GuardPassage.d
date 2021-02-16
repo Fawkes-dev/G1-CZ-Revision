@@ -36,7 +36,7 @@ func void Info_Grd_237_FirstWarn_Info()
 {
 //	AI_Output(self,hero,"Info_Grd_237_FirstWarn_07_01"); //You'd better not stay here. The Orc land starts behind that barricade!
 //	AI_Output(self,hero,"Info_Grd_237_FirstWarn_07_01"); //Verschwinde hier lieber. Hinter dieser Barrikade beginnt das Orkgebiet!
-	AI_Output(self,hero,"Info_Grd_237_FirstWarn_07_01"); //Neměl bys tu zůstávat. Za tímhle zátarasem začíná země skřetů!
+	AI_Output(self,hero,"Info_Grd_237_FirstWarn_07_01"); //Neměl bys tu zůstávat. Za touhle barikádou začíná země skřetů!
 //	AI_Output(hero,self,"Info_Grd_237_FirstWarn_15_02"); //Is it dangerous?
 //	AI_Output(hero,self,"Info_Grd_237_FirstWarn_15_02"); //Ist das gefährlich?
 	AI_Output(hero,self,"Info_Grd_237_FirstWarn_15_02"); //Je to nebezpečné?
@@ -83,7 +83,7 @@ func void Info_Grd_237_FirstWarn_Info_YES()
 	AI_Output(hero,self,"Info_Grd_237_FirstWarn_15_06"); //Jistě, tady je moje ruda!
 //	AI_Output(self,hero,"Info_Grd_237_FirstWarn_07_07"); //Oh, now I call that very civil of you.
 //	AI_Output(self,hero,"Info_Grd_237_FirstWarn_07_07"); //Oh, das ist aber sehr umsichtig von dir.
-	AI_Output(self,hero,"Info_Grd_237_FirstWarn_07_07"); //Och, to je od tebe nesmírně zdvořilé.
+	AI_Output(self,hero,"Info_Grd_237_FirstWarn_07_07"); //Och, to je od tebe nesmírně obezřetné.
 
 	var int ore;
 	ore = Npc_HasItems(hero,ItMiNugget);

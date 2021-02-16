@@ -84,13 +84,13 @@ func void DIA_Orry_GuardGate_Info()
 	AI_Output(other,self,"DIA_Orry_GuardGate_15_00"); //Co tady děláš?
 //	AI_Output(self,other,"DIA_Orry_GuardGate_06_01"); //Making sure no-one gets near the exchange place. Especially none of those cut-throats from the New Camp.
 //	AI_Output(self,other,"DIA_Orry_GuardGate_06_01"); //Dafür sorgen, dass keiner an die Austauschstelle rankommt. Vor allem nicht die Halsabschneider aus dem Neuen Lager.
-	AI_Output(self,other,"DIA_Orry_GuardGate_06_01"); //Zajišťujeme, aby se nikdo nedostal do blízkosti místa výměny. Hlavně nikdo z těch vrahounů z Nového tábora.
+	AI_Output(self,other,"DIA_Orry_GuardGate_06_01"); //Zajišťujeme, aby se nikdo nedostal do blízkosti místa výměny. Hlavně nikdo z těch hrdlořezů z Nového tábora.
 //	AI_Output(self,other,"DIA_Orry_GuardGate_06_02"); //You're the new guy they chucked in today, right?
 //	AI_Output(self,other,"DIA_Orry_GuardGate_06_02"); //Du bist der Neue, den sie heute reingeworfen haben, nicht?
 	AI_Output(self,other,"DIA_Orry_GuardGate_06_02"); //Ty jsi ten novej, co ho dneska vyhodili, že jo?
 //	AI_Output(other,self,"DIA_Orry_GuardGate_15_03"); //That's me.
 //	AI_Output(other,self,"DIA_Orry_GuardGate_15_03"); //Sieht so aus.
-	AI_Output(other,self,"DIA_Orry_GuardGate_15_03"); //Jo, já.
+	AI_Output(other,self,"DIA_Orry_GuardGate_15_03"); //Už to tak vypadá.
 //	AI_Output(self,other,"DIA_Orry_GuardGate_06_04"); //Then you'd better watch out for the guys from the New Camp!
 //	AI_Output(self,other,"DIA_Orry_GuardGate_06_04"); //Dann solltest du wissen, dass du dich vor den Typen aus dem Neuen Lager in Acht nehmen musst!
 	AI_Output(self,other,"DIA_Orry_GuardGate_06_04"); //Pak uděláš nejlíp, když se budeš mít na pozoru před těma chlapíkama z Nového tábora!
@@ -116,10 +116,10 @@ func void DIA_Orry_GuardGate_No()
 	AI_Output(other,self,"DIA_Orry_GuardGate_No_15_00"); //Ne.
 //	AI_Output(self,other,"DIA_Orry_GuardGate_No_06_01"); //Then do so! He's the one that deals with newcomers.
 //	AI_Output(self,other,"DIA_Orry_GuardGate_No_06_01"); //Dann solltest du das tun! Er kümmert sich um die Neuen.
-	AI_Output(self,other,"DIA_Orry_GuardGate_No_06_01"); //Tak to udělej! To on se stará o nováčky.
+	AI_Output(self,other,"DIA_Orry_GuardGate_No_06_01"); //Tak bys to měl udělat! To on se stará o nováčky.
 //	AI_Output(self,other,"DIA_Orry_GuardGate_No_06_02"); //He knows a lot about the colony - things that are important to new people like you.
 //	AI_Output(self,other,"DIA_Orry_GuardGate_No_06_02"); //Er weiß viele Dinge über die Kolonie, die für einen Neuen sehr wichtig sein können.
-	AI_Output(self,other,"DIA_Orry_GuardGate_No_06_02"); //Ví toho o kolonii hodně - věci, které jsou pro nováčky, jako jsi ty, důležité.
+	AI_Output(self,other,"DIA_Orry_GuardGate_No_06_02"); //Ví toho o Kolonii hodně - věci, které jsou pro nováčky, jako jsi ty, důležité.
 	Info_ClearChoices(DIA_Orry_GuardGate);
 };
 
@@ -202,7 +202,7 @@ func void DIA_Orry_OldCamp_Info()
 	AI_Output(other,self,"DIA_Orry_OldCamp_15_00"); //A Starý tábor?
 //	AI_Output(self,other,"DIA_Orry_OldCamp_06_01"); //The Ore Barons have everything under control. Next in line to them are the guards, followed by the Shadows. The diggers are the lowest.
 //	AI_Output(self,other,"DIA_Orry_OldCamp_06_01"); //Die Erzbarone haben alles unter Kontrolle. Unter ihnen stehen die Gardisten. Unter denen wiederum stehen die Schatten. Ganz am Ende kommen die Buddler.
-	AI_Output(self,other,"DIA_Orry_OldCamp_06_01"); //Rudobaroni mají všechno pod kontrolou. Hned po nich následují stráže a po nich Stíny. Kopáči jsou až vespodu.
+	AI_Output(self,other,"DIA_Orry_OldCamp_06_01"); //Rudobaroni mají všechno pod kontrolou. Hned po nich následují strážci a po nich Stínové. Kopáči jsou až vespodu.
 //	AI_Output(self,other,"DIA_Orry_OldCamp_06_02"); //Everyone who arrives here starts out as a digger. If you want to become something better than that, you'll have to get accepted as a Shadow first.
 //	AI_Output(self,other,"DIA_Orry_OldCamp_06_02"); //Buddler ist jeder, der hier ankommt. Wenn du was Besseres werden willst, musst du als erstes bei den Schatten aufgenommen werden.
 	AI_Output(self,other,"DIA_Orry_OldCamp_06_02"); //Každý nový příchozí začíná jako kopáč. Pokud se chceš stát něčím lepším, musíš být nejprve přijat mezi Stíny.
@@ -221,7 +221,7 @@ instance DIA_Orry_Shore(C_INFO)
 	permanent = 0;
 //	description = "When I was washed ashore, one of the guys punched me in the face."; 
 //	description = "Als ich ans Ufer gespült wurde. hat mich einer von den Typen geschlagen."; 
-	description = "Když jsem se sem dostal, jeden z těch chlapů mě praštil do tváře."; 
+	description = "Když jsem se dostal na břeh, jeden z těch chlapů mě praštil do tváře."; 
 };
 
 func int DIA_Orry_Shore_Condition()
@@ -236,13 +236,13 @@ func void DIA_Orry_Shore_Info()
 {
 //	AI_Output(other,self,"DIA_Orry_Shore_15_00"); //When I was washed ashore, one of the guys punched me in the face.
 //	AI_Output(other,self,"DIA_Orry_Shore_15_00"); //Als ich ans Ufer gespült wurde, hat mich einer von den Typen mit einem Schlag ins Gesicht begrüßt.
-	AI_Output(other,self,"DIA_Orry_Shore_15_00"); //Když jsem se sem dostal, jeden z těch chlapů mě praštil do tváře.
+	AI_Output(other,self,"DIA_Orry_Shore_15_00"); //Když jsem se dostal na břeh, jeden z těch chlapů mě praštil do tváře.
 //	AI_Output(self,other,"DIA_Orry_Shore_06_01"); //They do that to all the newcomers. They call it 'Standing Godfather'.
 //	AI_Output(self,other,"DIA_Orry_Shore_06_01"); //Das machen sie mit jedem Neuen. Sie nennen es 'Die Taufe'.
-	AI_Output(self,other,"DIA_Orry_Shore_06_01"); //Dělají to všem nováčkům. Říkají tomu 'Kmotr'.
+	AI_Output(self,other,"DIA_Orry_Shore_06_01"); //Dělají to všem nováčkům. Říkají tomu 'křest'. #Needs_Attention Tady nevím, jestli to přeložit, nevím, který blb to přeložil do angilčtiny jako stojící kmotr :|
 //	AI_Output(other,self,"DIA_Orry_Shore_15_02"); //Oh. Are all the guys like that in the Old Camp?
 //	AI_Output(other,self,"DIA_Orry_Shore_15_02"); //Habt ihr im Alten Lager noch mehr so nette Leute?
-	AI_Output(other,self,"DIA_Orry_Shore_15_02"); //Och. Jsou všichni ti chlapi ve Starém táboře takoví?
+	AI_Output(other,self,"DIA_Orry_Shore_15_02"); //Máte ve Starém táboře víc takových milých lidí?
 //	AI_Output(self,other,"DIA_Orry_Shore_06_03"); //We do have a few suckers. But they won't touch you as long as you pay them protection money.
 //	AI_Output(self,other,"DIA_Orry_Shore_06_03"); //Es gibt schon einige Schweine. Aber solange du dein Schutzgeld zahlst, kann dir nichts passieren.
 	AI_Output(self,other,"DIA_Orry_Shore_06_03"); //Je tam dost gaunerů. Ale když jim platíš za ochranu, nechají tě být.
@@ -279,7 +279,7 @@ func void DIA_Orry_Woman_Info()
 	AI_Output(other,self,"DIA_Orry_Woman_15_00"); //Viděl jsem, jak dolů se zbožím poslali i nějakou ženu.
 //	AI_Output(self,other,"DIA_Orry_Woman_06_01"); //Yeah, the Ore Barons get everything they want.
 //	AI_Output(self,other,"DIA_Orry_Woman_06_01"); //Ja, die Erzbarone bekommen alles, was sie wollen.
-	AI_Output(self,other,"DIA_Orry_Woman_06_01"); //Jistě, Rudobaroni dostanou všechno, co se jim zachce.
+	AI_Output(self,other,"DIA_Orry_Woman_06_01"); //Ano, Rudobaroni dostanou všechno, co se jim zachce.
 //	AI_Output(other,self,"DIA_Orry_Woman_15_02"); //D'you mean to say the King exchanges women for ore?
 //	AI_Output(other,self,"DIA_Orry_Woman_15_02"); //Du meinst, der König tauscht Erz gegen Frauen?
 	AI_Output(other,self,"DIA_Orry_Woman_15_02"); //Chceš tím říci, že Král vyměňuje ženy za rudu?
@@ -322,14 +322,14 @@ func void DIA_Orry_Waffe_Info()
 	AI_Output(other,self,"DIA_Orry_Waffe_15_00"); //Hledám nějakou zbraň...
 //	AI_Output(self,other,"DIA_Orry_Waffe_06_01"); //There should be some old weapons by the derelict mine further down the canyon.
 //	AI_Output(self,other,"DIA_Orry_Waffe_06_01"); //Bei der verlassenen Mine weiter hinten im Canyon müsstest du alte Waffen finden.
-	AI_Output(self,other,"DIA_Orry_Waffe_06_01"); //V uzavřeném dolu za kaňonem by měly být nějaké staré zbraně.
+	AI_Output(self,other,"DIA_Orry_Waffe_06_01"); //U opuštěného dolu za kaňonem bys měl nějaké staré zbraně najít.
 //	AI_Output(self,other,"DIA_Orry_Waffe_06_02"); //But don't go and start a war with nothing but a rusty pickaxe for a weapon - those things are slow and heavy.
 //	AI_Output(self,other,"DIA_Orry_Waffe_06_02"); //Aber mach bloß nicht den Fehler und zieh mit 'ner rostigen Spitzhacke in den Krieg - die Dinger sind schwer und langsam.
 	//#Spacer_OU_special_characters
 	AI_Output(self,other,"DIA_Orry_Waffe_06_02"); //Nezačínej ale válku, aniž bys měl jinou zbraň než rezavý krumpáč - tyhle věci jsou pomalé a těžké.
 //	AI_Output(self,other,"DIA_Orry_Waffe_06_03"); //An inexperienced fighter should never use one of them unless it's an emergency.
 //	AI_Output(self,other,"DIA_Orry_Waffe_06_03"); //Ein ungeübter Kämpfer sollte sie nur im Notfall benutzen.
-	AI_Output(self,other,"DIA_Orry_Waffe_06_03"); //Nezkušený bojovník by je měl použít jen v nouzi.
+	AI_Output(self,other,"DIA_Orry_Waffe_06_03"); //Nezkušený bojovník by ho měl použít jen v nouzi.
 
 };
 

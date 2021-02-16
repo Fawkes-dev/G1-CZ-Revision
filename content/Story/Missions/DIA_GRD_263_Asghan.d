@@ -49,13 +49,13 @@ func void Grd_263_Asghan_NEST_Info()
 	AI_Output(other,self,"Grd_263_Asghan_NEST_Info_15_01"); //Tady někde musí být hnízdo důlních červů.
 //	AI_Output(self,other,"Grd_263_Asghan_NEST_Info_06_02"); //The whole bloody mountain is just one big crawler nest!
 //	AI_Output(self,other,"Grd_263_Asghan_NEST_Info_06_02"); //Dieser ganze verdammte Berg ist ein einziges Nest.
-	AI_Output(self,other,"Grd_263_Asghan_NEST_Info_06_02"); //Celá tahle zpropadená hora je hnízdo červů!
+	AI_Output(self,other,"Grd_263_Asghan_NEST_Info_06_02"); //Celá tahle zpropadená hora je jedno velké hnízdo důlních červů!
 //	AI_Output(other,self,"Grd_263_Asghan_NEST_Info_15_03"); //Why have you closed this shaft?
 //	AI_Output(other,self,"Grd_263_Asghan_NEST_Info_15_03"); //Warum ist dieser Schacht versperrt?
 	AI_Output(other,self,"Grd_263_Asghan_NEST_Info_15_03"); //Proč je ta šachta zavřená?
 //	AI_Output(self,other,"Grd_263_Asghan_NEST_Info_06_04"); //It didn't matter how many crawlers we killed, more and more just kept coming out.
 //	AI_Output(self,other,"Grd_263_Asghan_NEST_Info_06_04"); //Egal wie viele Crawler wir getötet haben, von dort kamen immer wieder mehr.
-	AI_Output(self,other,"Grd_263_Asghan_NEST_Info_06_04"); //Nemám představu, kolik červů jsme zabili, ale pořád se objevují další a další.
+	AI_Output(self,other,"Grd_263_Asghan_NEST_Info_06_04"); //Bylo jedno, kolik červů jsme zabili, z té šachy vylézali další a další.
 //	AI_Output(other,self,"Grd_263_Asghan_NEST_Info_15_05"); //Sounds like there must be a nest somewhere near. Let me open the gate!
 //	AI_Output(other,self,"Grd_263_Asghan_NEST_Info_15_05"); //Dann wird dort irgendwo ein Nest sein. Lass mich das Tor öffnen!
 	AI_Output(other,self,"Grd_263_Asghan_NEST_Info_15_05"); //Vypadá to, že tady někde musí být hnízdo. Nech mě otevřít ty vrata!
@@ -65,7 +65,7 @@ func void Grd_263_Asghan_NEST_Info()
 
 //	B_LogEntry(CH2_MCEggs,"Asghan, the boss of the mine guards, won't open the gate. He wants Ian's permission.");
 //	B_LogEntry(CH2_MCEggs,"Asghan, der Chef der Minengardisten weigert sich das Tor zu öffnen. Er will erst die Erlaubnis von Ian haben.");
-	B_LogEntry(CH2_MCEggs,"Asghan, velitel důlní stráže, nechce otevřít bránu. Chce vidět Ianovo povolení.");
+	B_LogEntry(CH2_MCEggs,"Asghan, velitel důlní stráže, nechce otevřít bránu. Nejprve chce vidět Ianovo povolení.");
 
 };
 /*------------------------------------------------------------------------
@@ -112,7 +112,7 @@ func void Grd_263_Asghan_OPEN_Info()
 	AI_Output(other,self,"Grd_263_Asghan_OPEN_Info_15_05"); //Jakou podmínkou?
 //	AI_Output(self,other,"Grd_263_Asghan_OPEN_Info_06_06"); //Just get me two or three templars for support, I don't want to be here on my own when the crawlers come out of the shaft!
 //	AI_Output(self,other,"Grd_263_Asghan_OPEN_Info_06_06"); //Besorge erst mal zwei bis drei Templer zur Verstärkung, ich will nicht alleine hier stehen, falls die Crawler aus dem Schacht kommen!
-	AI_Output(self,other,"Grd_263_Asghan_OPEN_Info_06_06"); //Dáš mi dva nebo tři templáře na pomoc, protože tady nechci být sám, až ze šachty vylezou červi!
+	AI_Output(self,other,"Grd_263_Asghan_OPEN_Info_06_06"); //Sežeň mi dva nebo tři templáře na pomoc, protože tady nechci být sám, až ze šachty vylezou červi!
 
 //	B_LogEntry(CH2_MCEggs,"Although Ian has given me permission, Asghan won't open the gate until I've united some templars as reinforcements in front of the gate.");
 //	B_LogEntry(CH2_MCEggs,"Trotz Ian's Einwilligung will Asghan das Tor erst öffnen, wenn ich einige Templer als Verstärkung vor dem Tor versammelt habe.");
@@ -159,7 +159,7 @@ func void Grd_263_Asghan_OPEN_NOW_Info()
 	B_GiveXP(XP_OpenAsghansGate);
 //	B_LogEntry(CH2_MCEggs,"I managed to unite sufficient templars in front of Asghan's gate. What will be awaiting us in the darkness behind the gate?");
 //	B_LogEntry(CH2_MCEggs,"Ich habe genug Templer vor Asghans Tor versammeln können. Was uns wohl in der Dunkelheit hinter dem Tor erwartet?");
-	B_LogEntry(CH2_MCEggs,"Podařilo se mi před Asghanovu bránu přivést dostatečný počet templářů. Co nás čeká v temnotách za branou?");
+	B_LogEntry(CH2_MCEggs,"Podařilo se mi před Asghanovu bránu přivést dostatečný počet templářů. Co nás čeká v temnotě za branou?");
 
 	AI_StopProcessInfos(self);
 };    
@@ -174,7 +174,7 @@ instance Grd_263_Asghan_LAIRFOUND(C_INFO)
 	permanent = 0;
 //	description = "The minecrawlers shouldn't be a threat anymore!"; 
 //	description = "Die Bedrohung durch die Minecrawler dürfte beendet sein!"; 
-	description = "Důlní červi nebudou už nikdy hrozbou!"; 
+	description = "Důlní červi by už nikdy neměli být hrozbou!"; 
 };
 
 func int Grd_263_Asghan_LAIRFOUND_Condition()
@@ -190,10 +190,10 @@ func void Grd_263_Asghan_LAIRFOUND_Info()
 {
 //	AI_Output(other,self,"Grd_263_Asghan_LAIRFOUND_Info_15_01"); //The minecrawlers shouldn't be a threat anymore!
 //	AI_Output(other,self,"Grd_263_Asghan_LAIRFOUND_Info_15_01"); //Die Bedrohung durch die Minecrawler dürfte beendet sein!
-	AI_Output(other,self,"Grd_263_Asghan_LAIRFOUND_Info_15_01"); //Důlní červi nebudou už nikdy hrozbou!
+	AI_Output(other,self,"Grd_263_Asghan_LAIRFOUND_Info_15_01"); //Důlní červi by už nikdy neměli být hrozbou!
 //	AI_Output(self,other,"Grd_263_Asghan_LAIRFOUND_Info_06_02"); //That's good news. I'll just send a messenger to Thorus!
 //	AI_Output(self,other,"Grd_263_Asghan_LAIRFOUND_Info_06_02"); //Das ist eine gute Nachricht. Werde gleich einen Boten zu Thorus schicken!
-	AI_Output(self,other,"Grd_263_Asghan_LAIRFOUND_Info_06_02"); //Dobré zprávy. Pošlu k Thorusovi posla!
+	AI_Output(self,other,"Grd_263_Asghan_LAIRFOUND_Info_06_02"); //To je dobrá zpráva. Pošlu k Thorusovi posla!
 
 	AI_StopProcessInfos(self);
 };    
@@ -235,6 +235,6 @@ func void Grd_263_Asghan_SMALLTALK_Info()
 	AI_Output(other,self,"Grd_263_Asghan_SMALLTALK_Info_15_03"); //Co je na těch vratech tak zvláštního?
 //	AI_Output(self,other,"Grd_263_Asghan_SMALLTALK_Info_06_04"); //Minecrawlers. Big, bad minecrawlers. Lots and lots and lots of them.
 //	AI_Output(self,other,"Grd_263_Asghan_SMALLTALK_Info_06_04"); //Minecrawler. Große böse Minecrawler. Und zwar sehr...sehr...sehr viele.
-	AI_Output(self,other,"Grd_263_Asghan_SMALLTALK_Info_06_04"); //Důlní červi. Velcí zlí červi. Hromady, hromady a hromady červů.
+	AI_Output(self,other,"Grd_263_Asghan_SMALLTALK_Info_06_04"); //Důlní červi. Velcí zlí důlní červi. Hromady, hromady a hromady červů.
 };  
 

@@ -35,7 +35,7 @@ instance DIA_Grd_214_Torwache_job(C_INFO)
 	permanent = 1;
 //	description = "What do you do all day?"; 
 //	description = "Was machst du hier?"; 
-	description = "Co takhle děláš celý den?"; 
+	description = "Co tady děláš?"; 
 };
 
 func int DIA_Grd_214_Torwache_job_Condition()
@@ -47,13 +47,13 @@ func void DIA_Grd_214_Torwache_job_Info()
 {
 //	AI_Output(other,self,"DIA_Grd_214_Torwache_job_15_00"); //What do you do all day?
 //	AI_Output(other,self,"DIA_Grd_214_Torwache_job_15_00"); //Was machst du hier?
-	AI_Output(other,self,"DIA_Grd_214_Torwache_job_15_00"); //Co takhle děláš celý den?
+	AI_Output(other,self,"DIA_Grd_214_Torwache_job_15_00"); //Co tady děláš?
 //	AI_Output(self,other,"DIA_Grd_214_Torwache_job_07_01"); //I make sure no-one gets in if Gomez don't want 'em to.
 //	AI_Output(self,other,"DIA_Grd_214_Torwache_job_07_01"); //Ich passe auf, dass hier keiner reinkommt, der von Gomez nicht erwünscht ist.
 	AI_Output(self,other,"DIA_Grd_214_Torwache_job_07_01"); //Dávám pozor, aby se dovnitř nedostal nikdo, koho tam Gomez nechce.
 //	AI_Output(self,other,"DIA_Grd_214_Torwache_job_07_02"); //So don't make trouble when you're inside, or you won't be going nowhere.
 //	AI_Output(self,other,"DIA_Grd_214_Torwache_job_07_02"); //Also mach keinen Ärger, wenn du drin bist, sonst bist du das letzte Mal hier gewesen.
-	AI_Output(self,other,"DIA_Grd_214_Torwache_job_07_02"); //Když budeš uvnitř, nedělej problémy, nebo se nikam nedostaneš.
+	AI_Output(self,other,"DIA_Grd_214_Torwache_job_07_02"); //Když budeš uvnitř, nedělej problémy, jinak jsi tu byl naposledy.
 };
 
 //-----------------------------------------------------------------
@@ -82,13 +82,13 @@ func void Grd_214_Torwache_SEETHORUS_Info()
 {
 //	AI_Output(self,other,"Grd_214_Torwache_SEETHORUS_Info_07_01"); //Hey, I'm glad you're here. Thorus wants to see you!
 //	AI_Output(self,other,"Grd_214_Torwache_SEETHORUS_Info_07_01"); //Hey, gut dass du da bist. Thorus will dich sprechen!
-	AI_Output(self,other,"Grd_214_Torwache_SEETHORUS_Info_07_01"); //Jsem rád, že tady jsi. Thorus tě chce vidět!
+	AI_Output(self,other,"Grd_214_Torwache_SEETHORUS_Info_07_01"); //Hej, dobře že jsi tady. Thorus s tebou chce mluvit!
 //	AI_Output(other,self,"Grd_214_Torwache_SEETHORUS_Info_15_02"); //What does he want?
 //	AI_Output(other,self,"Grd_214_Torwache_SEETHORUS_Info_15_02"); //Was will er denn?
 	AI_Output(other,self,"Grd_214_Torwache_SEETHORUS_Info_15_02"); //Co chce?
 //	AI_Output(self,other,"Grd_214_Torwache_SEETHORUS_Info_07_03"); //I'm sure he'll tell you soon enough.
 //	AI_Output(self,other,"Grd_214_Torwache_SEETHORUS_Info_07_03"); //Das wird er dir schon selber sagen.
-	AI_Output(self,other,"Grd_214_Torwache_SEETHORUS_Info_07_03"); //Určitě ti to brzy řekne.
+	AI_Output(self,other,"Grd_214_Torwache_SEETHORUS_Info_07_03"); //Určitě ti to brzy sám řekne.
 };
 
 //-----------------------------------------------------------------
@@ -116,7 +116,7 @@ func void Grd_214_Torwache_NODUSTY_Info()
 {
 //	AI_Output(self,other,"Grd_214_Torwache_NODUSTY_Info_07_01"); //HEY, YOU!!! You wouldn't be trying to smuggle Dusty out o' here, would you?
 //	AI_Output(self,other,"Grd_214_Torwache_NODUSTY_Info_07_01"); //HEY DU!!! Versuchst wohl Dusty hier herauszuschmuggeln, was?
-	AI_Output(self,other,"Grd_214_Torwache_NODUSTY_Info_07_01"); //HEJ, TY!!! Nepokoušíš se odtud propašovat rudný prach, že ne?
+	AI_Output(self,other,"Grd_214_Torwache_NODUSTY_Info_07_01"); //HEJ, TY!!! Nepokoušíš se odtud propašovat Dustyho, že ne?
 //	AI_Output(other,self,"Grd_214_Torwache_NODUSTY_Info_15_02"); //We just wanted...
 //	AI_Output(other,self,"Grd_214_Torwache_NODUSTY_Info_15_02"); //Wir wollen doch nur...
 	AI_Output(other,self,"Grd_214_Torwache_NODUSTY_Info_15_02"); //Chceme přece jen...

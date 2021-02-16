@@ -121,7 +121,7 @@ func void Info_Grd_218_FirstWarn_Info()
 	AI_Output(hero,self,"Info_Grd_218_FirstWarn_Info_15_02"); //Proč?
 //	AI_Output(self,hero,"Info_Grd_218_FirstWarn_Info_07_03"); //The Ore Barons' house is out of bounds for scum like you!
 //	AI_Output(self,hero,"Info_Grd_218_FirstWarn_Info_07_03"); //Das Haus der Erzbarone ist tabu für Abschaum wie dich!
-	AI_Output(self,hero,"Info_Grd_218_FirstWarn_Info_07_03"); //Rudobaronův dům je tabu pro takové pobudy jako ty!
+	AI_Output(self,hero,"Info_Grd_218_FirstWarn_Info_07_03"); //Dům rudobaronů je tabu pro takové pobudy jako ty!
 
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,Grd_218_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_FIRSTWARN; 

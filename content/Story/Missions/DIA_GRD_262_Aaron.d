@@ -81,10 +81,10 @@ func void GRD_262_Aaron_BLUFF_Info()
 	Info_AddChoice(GRD_262_Aaron_BLUFF,DIALOG_BACK ,GRD_262_Aaron_BLUFF_BACK);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"Ian sent me. You should go to see him at once!",GRD_262_Aaron_BLUFF_IAN);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"Ian schickt mich. Du sollst sofort zu ihm kommen!",GRD_262_Aaron_BLUFF_IAN);
-	Info_AddChoice(GRD_262_Aaron_BLUFF,"Poslal mě Ian. Měl bys za ním ihned zajít!",GRD_262_Aaron_BLUFF_IAN);
+	Info_AddChoice(GRD_262_Aaron_BLUFF,"Poslal mě Ian. Máš za ním ihned zajít!",GRD_262_Aaron_BLUFF_IAN);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"I've heard that there are gangsters in the mine here.",GRD_262_Aaron_BLUFF_BANDIT);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"Ich hab' gehört, das Banditen in der Mine sind.",GRD_262_Aaron_BLUFF_BANDIT);
-	Info_AddChoice(GRD_262_Aaron_BLUFF,"Slyšel jsem, že v dole jsou banditi. Chtějí rudu!",GRD_262_Aaron_BLUFF_BANDIT);
+	Info_AddChoice(GRD_262_Aaron_BLUFF,"Slyšel jsem, že v dole jsou banditi.",GRD_262_Aaron_BLUFF_BANDIT);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"The diggers have found a massive ore nugget!",GRD_262_Aaron_BLUFF_ORE);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"Die Buddler haben einen riesigen Erzbrocken gefunden!",GRD_262_Aaron_BLUFF_ORE);
 	Info_AddChoice(GRD_262_Aaron_BLUFF,"Kopáči našli masivní magický nuget!",GRD_262_Aaron_BLUFF_ORE);
@@ -109,16 +109,16 @@ func void GRD_262_Aaron_BLUFF_BANDIT()
 {
 //	AI_Output(other,self,"GRD_262_Aaron_BLUFF_BANDIT_15_01"); //I've heard that there are gangsters in the mine here. They want the ore!
 //	AI_Output(other,self,"GRD_262_Aaron_BLUFF_BANDIT_15_01"); //Ich hab' gehört, dass Banditen in der Mine sind. Sie wollen das Erz!
-	AI_Output(other,self,"GRD_262_Aaron_BLUFF_BANDIT_15_01"); //Slyšel jsem, že v dole jsou banditi. Chtějí rudu!
+	AI_Output(other,self,"GRD_262_Aaron_BLUFF_BANDIT_15_01"); //Slyšel jsem, že v dole jsou banditi.
 //	AI_Output(self,other,"GRD_262_Aaron_BLUFF_BANDIT_09_02"); //Do you think I'm stupid? They'd never dare to do anything like that!
 //	AI_Output(self,other,"GRD_262_Aaron_BLUFF_BANDIT_09_02"); //Hältst du mich für blöd? Das würden sie niemals wagen!
-	AI_Output(self,other,"GRD_262_Aaron_BLUFF_BANDIT_09_02"); //Myslíš, že jsem takový hlupák? Něčeho takového by se nikdy neodvážili!
+	AI_Output(self,other,"GRD_262_Aaron_BLUFF_BANDIT_09_02"); //Máš mě za hlupáka? Něčeho takového by se nikdy neodvážili!
 };
 func void GRD_262_Aaron_BLUFF_IAN()
 {
 //	AI_Output(other,self,"GRD_262_Aaron_BLUFF_IAN_15_01"); //Ian sent me. You should go to see him at once!
 //	AI_Output(other,self,"GRD_262_Aaron_BLUFF_IAN_15_01"); //Ian schickt mich. Du sollst sofort zu ihm kommen!
-	AI_Output(other,self,"GRD_262_Aaron_BLUFF_IAN_15_01"); //Poslal mě Ian. Měl bys za ním ihned zajít!
+	AI_Output(other,self,"GRD_262_Aaron_BLUFF_IAN_15_01"); //Poslal mě Ian. Máš za ním ihned zajít!
 //	AI_Output(self,other,"GRD_262_Aaron_BLUFF_IAN_09_02"); //What does he want?
 //	AI_Output(self,other,"GRD_262_Aaron_BLUFF_IAN_09_02"); //Was will er denn?
 	AI_Output(self,other,"GRD_262_Aaron_BLUFF_IAN_09_02"); //Co chce?
@@ -129,7 +129,7 @@ func void GRD_262_Aaron_BLUFF_IAN()
 	Info_AddChoice(GRD_262_Aaron_BLUFF,"Netuším.",GRD_262_Aaron_BLUFF_UGLY);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"He'll kill you.",GRD_262_Aaron_BLUFF_BAD);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"Es gibt Ärger für dich",GRD_262_Aaron_BLUFF_BAD);
-	Info_AddChoice(GRD_262_Aaron_BLUFF,"Zabije tě.",GRD_262_Aaron_BLUFF_BAD);
+	Info_AddChoice(GRD_262_Aaron_BLUFF,"Má s tebou problém.",GRD_262_Aaron_BLUFF_BAD);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"He wants to give you a reward.",GRD_262_Aaron_BLUFF_GOOD);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"Belohnung für gute Dienste",GRD_262_Aaron_BLUFF_GOOD);
 	Info_AddChoice(GRD_262_Aaron_BLUFF,"Chce ti dát odměnu.",GRD_262_Aaron_BLUFF_GOOD);
@@ -149,7 +149,7 @@ func void GRD_262_Aaron_BLUFF_BAD()
 {
 //	AI_Output(other,self,"GRD_262_Aaron_BLUFF_BAD_15_01"); //He'll kill you 'cos you're so lazy.
 //	AI_Output(other,self,"GRD_262_Aaron_BLUFF_BAD_15_01"); //Er will dir kräftig in den Arsch treten, weil du so faul bist.
-	AI_Output(other,self,"GRD_262_Aaron_BLUFF_BAD_15_01"); //Zabije tě, protože jsi strašně línej!
+	AI_Output(other,self,"GRD_262_Aaron_BLUFF_BAD_15_01"); //Chce ti pořádně nakopat zadek, protože jsi strašně línej!
 //	AI_Output(self,other,"GRD_262_Aaron_BLUFF_BAD_09_02"); //Well, that's no news. Scram!
 //	AI_Output(self,other,"GRD_262_Aaron_BLUFF_BAD_09_02"); //Na, das ist doch nichts Neues. Geh weg!
 	AI_Output(self,other,"GRD_262_Aaron_BLUFF_BAD_09_02"); //To není žádná novinka. Zmiz!

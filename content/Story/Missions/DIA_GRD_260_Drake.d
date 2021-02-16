@@ -59,10 +59,10 @@ func void Grd_260_Drake_Gefahr_Info()
 	AI_Output(other,self,"Grd_260_Drake_Gefahr_Info_15_04");//Vyprávěj mi o těch červech.
 //	AI_Output(self,other,"Grd_260_Drake_Gefahr_Info_11_05");//Oh, but my tongue's so dry...
 //	AI_Output(self,other,"Grd_260_Drake_Gefahr_Info_11_05");//Nun, ich hab' eine ziemlich trockene Kehle.
-	AI_Output(self,other,"Grd_260_Drake_Gefahr_Info_11_05");//Och, když já mám tak sucho na jazyku...
+	AI_Output(self,other,"Grd_260_Drake_Gefahr_Info_11_05");//No, když já mám tak sucho na jazyku...
 //	AI_Output(self,other,"Grd_260_Drake_Gefahr_Info_11_06");//You bring me a beer, and I'll tell you something about the crawlers.
 //	AI_Output(self,other,"Grd_260_Drake_Gefahr_Info_11_06");//Wenn du ein Bier ausgibst, erzähl ich dir noch was über die Crawler.
-	AI_Output(self,other,"Grd_260_Drake_Gefahr_Info_11_06");//Přines mi pivo a já ti za to povím něco o těch červech.
+	AI_Output(self,other,"Grd_260_Drake_Gefahr_Info_11_06");//Když mi přineseš mi pivo, povím ti něco o těch červech.
 
 };
 /**************** CRAWLER, MEHR GEFAHREN INFOS *********************/
@@ -76,7 +76,7 @@ instance Grd_260_Drake_Crawler_Okay(C_INFO) //E1
 	permanent = 0;
 //	description = "(give beer)";
 //	description = "(Bier ausgeben)";
-	description = "(podej pivo)";
+	description = "Tady, napij se na moje zdraví! (podej pivo)";
 };
 
 func int Grd_260_Drake_Crawler_Okay_Condition()
@@ -104,7 +104,7 @@ func void Grd_260_Drake_Crawler_Okay_Info()
 
 //		AI_Output(self,hero,"Grd_260_Drake_Crawler_Okay_11_02");//Thanks. Well, crawlers live in large packs, mostly in the side caves.
 //		AI_Output(self,hero,"Grd_260_Drake_Crawler_Okay_11_02");//Danke. Also die Crawler gibt es hier zuhauf in vielen Nebenhöhlen.
-		AI_Output(self,hero,"Grd_260_Drake_Crawler_Okay_11_02");//Díky. Tak dobře. Červi žijou ve velkých skupinách, většinou v postranních jeskyních.
+		AI_Output(self,hero,"Grd_260_Drake_Crawler_Okay_11_02");//Díky. Takže, červi žijou ve velkých skupinách, většinou v postranních jeskyních.
 //		AI_Output(self,hero,"Grd_260_Drake_Crawler_Okay_11_03");//They've never attacked us here in the main shaft yet. If you ever meet one of 'em, run!
 //		AI_Output(self,hero,"Grd_260_Drake_Crawler_Okay_11_03");//Hier im Hauptschacht haben sie noch nicht angegriffen. Wenn du ihnen mal begegnest, dann lauf!
 		AI_Output(self,hero,"Grd_260_Drake_Crawler_Okay_11_03");//V hlavní šachtě na nás ještě nikdy nezaútočili. Kdybys ale nějakého viděl, uteč!
@@ -147,10 +147,10 @@ func void Grd_260_Drake_Mine_Info()
 	AI_Output(other,self,"Grd_260_Drake_Mine_Info_15_01");//Můžeš mi říci něco o tom dole?
 //	AI_Output(self,other,"Grd_260_Drake_Mine_Info_11_02");//Well, this part we're standing in now is the main shaft. A system of catwalks takes you down to the bottom.
 //	AI_Output(self,other,"Grd_260_Drake_Mine_Info_11_02");//Hier, wo wir uns befinden, das ist der Hauptschacht. Über ein Stegsystem kommst du bis ganz nach unten.
-	AI_Output(self,other,"Grd_260_Drake_Mine_Info_11_02");//Dobrá, ta část, v které právě jsme, je v současnosti hlavní šachta. Po systému úzkých můstků se dostaneš až na dno.
+	AI_Output(self,other,"Grd_260_Drake_Mine_Info_11_02");//Tohle, kde právě stojíme, je v současnosti hlavní šachta. Po systému úzkých můstků se dostaneš až na dno.
 //	AI_Output(self,other,"Grd_260_Drake_Mine_Info_11_03");//And they're digging for ore everywhere. But you need to be careful, there are many minecrawlers there as well.
 //	AI_Output(self,other,"Grd_260_Drake_Mine_Info_11_03");//Und überall wird Erz geschürft. Doch sei vorsichtig, hier gibt's auch eine Menge Minecrawler.
-	AI_Output(self,other,"Grd_260_Drake_Mine_Info_11_03");//Magická ruda se kope všude. Musíš být ale opatrný, je tady spousta důlních červů.
+	AI_Output(self,other,"Grd_260_Drake_Mine_Info_11_03");//Magická ruda se tu kope všude. Musíš být ale opatrný, je tady spousta důlních červů.
 //	AI_Output(self,other,"Grd_260_Drake_Mine_Info_11_04");//Right at the bottom is the smelting place. We're smelting a part of the ore to use it right there.
 //	AI_Output(self,other,"Grd_260_Drake_Mine_Info_11_04");//Ganz unten steht die Schmelze. Einen Teil des Erzes schmelzen wir direkt ein und verarbeiten es.
 	AI_Output(self,other,"Grd_260_Drake_Mine_Info_11_04");//Přímo na dně je tavírna. Tady tavíme část rudy pro místní použití.
@@ -166,7 +166,7 @@ instance Grd_260_Drake_Mine_Mehr(C_INFO) //E1
 	permanent = 0;
 //	description = "Tell me more about the mine!";
 //	description = "Erzähl mehr von der Mine";
-	description = "Řekni mi víc o tom dolu!";
+	description = "Řekni mi víc o tomto dole!";
 };
 
 func int Grd_260_Drake_Mine_Mehr_Condition()
@@ -180,7 +180,7 @@ func void Grd_260_Drake_Mine_Mehr_Info()
 {
 //	AI_Output(other,self,"Grd_260_Drake_Mine_Mehr_Info_15_01");//Tell me more about it!
 //	AI_Output(other,self,"Grd_260_Drake_Mine_Mehr_Info_15_01");//Erzähl mir mehr davon!
-	AI_Output(other,self,"Grd_260_Drake_Mine_Mehr_Info_15_01");//Řekni mi o tom ještě víc!
+	AI_Output(other,self,"Grd_260_Drake_Mine_Mehr_Info_15_01");//Řekni mi o něm víc!
 //	AI_Output(self,other,"Grd_260_Drake_Mine_Mehr_Info_11_02");//If you want to know more, go to Viper. He's the smelter.
 //	AI_Output(self,other,"Grd_260_Drake_Mine_Mehr_Info_11_02");//Wenn du mehr wissen willst, dann wende dich an Viper. Er ist der Schmelzer.
 	AI_Output(self,other,"Grd_260_Drake_Mine_Mehr_Info_11_02");//Když chceš vědět víc, zajdi za Viperem. To je tavič.
@@ -218,10 +218,10 @@ func void Grd_260_Drake_Ian_Info()
 	AI_Output(other,self,"Grd_260_Drake_Ian_Info_15_01");//Kde najdu Iana?
 //	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_02");//He's right in the middle of the main shaft, next to the storeroom.
 //	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_02");//Er steht in der Mitte des Hauptschachtes, beim Warenlager.
-	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_02");//Je přímo uprostřed hlavní šachty, za skladištěm.
+	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_02");//Stojí uprostřed hlavní šachty, vedle skladiště.
 //	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_03");//Oh, one more thing - you know Thorus, don't you? Forget him!
 //	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_03");//Ach noch was, du kennst doch Thorus? Vergiss ihn!
-	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_03");//Jo, a ještě něco - znáš Thoruse, že jo? Pus't ho z hlavy!
+	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_03");//Jo, a ještě něco - znáš Thoruse, že jo? Pusť ho z hlavy!
 //	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_04");//There's just one person who has the say in here and that's Ian. He's the boss.
 //	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_04");//Hier drin hat nur einer das Sagen und das ist Ian. Er ist hier der Chef.
 	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_04");//Jediný, kdo tady má co říci, je Ian. On je tu šéf.
@@ -258,11 +258,11 @@ func void Grd_260_Drake_GARDEAUFNAHME_Info()
 	AI_Output(self,other,"Grd_260_Drake_GARDEAUFNAHME_Info_11_01"); //Hej, s těmi červy jsi odvedl skvělou práci! Tím jsi si zasloužil jmenování ke strážím.
 //	AI_Output(self,other,"Grd_260_Drake_GARDEAUFNAHME_Info_11_02"); //Just go over to the Old Camp and speak to Thorus about it!
 //	AI_Output(self,other,"Grd_260_Drake_GARDEAUFNAHME_Info_11_02"); //Geh doch mal zum Alten Lager und sprich mit Thorus darüber!
-	AI_Output(self,other,"Grd_260_Drake_GARDEAUFNAHME_Info_11_02"); //Běž do Starého tábora a řekni to Thorusovi!
+	AI_Output(self,other,"Grd_260_Drake_GARDEAUFNAHME_Info_11_02"); //Běž do Starého tábora a promluv si o tom s Thorusem!
 
 	Log_CreateTopic(GE_BecomeGuard,LOG_NOTE);
 //	B_LogEntry(GE_BecomeGuard,"As soon as I've returned the eggs, I should have a word with Thorus. Maybe he'll let me join the guards.");
 //	B_LogEntry(GE_BecomeGuard,"Wenn ich die Eier zurückgebracht habe, sollte ich mal mit Thorus reden. Vielleicht nimmt er mich in die Reihen der Gardisten auf.");
-	B_LogEntry(GE_BecomeGuard,"Jakmile přinesu ta vajíčka, musím si promluvit s Thorusem. Možná mě přijme ke strážím.");
+	B_LogEntry(GE_BecomeGuard,"Jakmile přinesu ta vajíčka, mám si promluvit s Thorusem. Možná mě přijme ke strážím.");
 };
 

@@ -47,7 +47,7 @@ func void Grd_264_Gardist_GARDEAUFNAHME_Info()
 {
 //	AI_Output(self,other,"Grd_264_Gardist_GARDEAUFNAHME_Info_07_01"); //Hey, that was a good job you did with the crawlers! You've earned your place among the guards!
 //	AI_Output(self,other,"Grd_264_Gardist_GARDEAUFNAHME_Info_07_01"); //Hey, gute Arbeit, das mit den Crawlern! Damit hast du dir deine Aufnahme bei den Gardisten verdient!
-	AI_Output(self,other,"Grd_264_Gardist_GARDEAUFNAHME_Info_07_01"); //Poslyš, to byla dobrá práce, cos provedl s těmi červy! Zasloužíš si své místo mezi strážemi!
+	AI_Output(self,other,"Grd_264_Gardist_GARDEAUFNAHME_Info_07_01"); //Poslyš, to byla dobrá práce, cos provedl s těmi červy! Zasloužíš sis přijetí mezi stráže!
 //	AI_Output(self,other,"Grd_264_Gardist_GARDEAUFNAHME_Info_07_02"); //Go over to the Old Camp and speak to Thorus about it!
 //	AI_Output(self,other,"Grd_264_Gardist_GARDEAUFNAHME_Info_07_02"); //Geh doch mal zum Alten Lager und sprich mit Thorus darüber!
 	AI_Output(self,other,"Grd_264_Gardist_GARDEAUFNAHME_Info_07_02"); //Jdi do Starého tábora a promluv si o tom s Thorusem!
@@ -55,6 +55,6 @@ func void Grd_264_Gardist_GARDEAUFNAHME_Info()
 	Log_CreateTopic(GE_BecomeGuard,LOG_NOTE);
 //	B_LogEntry(GE_BecomeGuard,"As soon as I've returned the eggs, I should have a word with Thorus. Maybe he'll let me join the guards.");
 //	B_LogEntry(GE_BecomeGuard,"Wenn ich die Eier zurückgebracht habe, sollte ich mal mit Thorus reden. Vielleicht nimmt er mich in die Reihen der Gardisten auf.");
-	B_LogEntry(GE_BecomeGuard,"Jakmile přinesu ta vajíčka, musím si promluvit s Thorusem. Možná mě přijme ke strážím.");
+	B_LogEntry(GE_BecomeGuard,"Jakmile přinesu ta vajíčka, měl bych si promluvit s Thorusem. Možná mě přijme ke strážím.");
 
 };

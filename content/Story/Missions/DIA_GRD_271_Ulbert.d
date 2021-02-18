@@ -76,13 +76,13 @@ func void GRD_271_ULBERT_TRICK_Info()
 	AI_Output(other,self,"GRD_271_ULBERT_TRICK_Info_15_01"); //Když tady jsi tak dlouho, musíš mít z toho žízeň.
 //	AI_Output(self,other,"GRD_271_ULBERT_TRICK_Info_07_02"); //You bet! Man, I could use a good swig now. Got anything on you?
 //	AI_Output(self,other,"GRD_271_ULBERT_TRICK_Info_07_02"); //Und wie! Mann, ich könnte wohl den ein oder anderen Schluck vertragen. Hast du was dabei?
-	AI_Output(self,other,"GRD_271_ULBERT_TRICK_Info_07_02"); //To si piš! Člověče, mohl bych to do sebe lejt! A co ty?
+	AI_Output(self,other,"GRD_271_ULBERT_TRICK_Info_07_02"); //A jakou! Chlape, doušek nebo dva by přišly vhod! Máš něco u sebe?
 
 	Log_CreateTopic(CH2_StorageShed,LOG_MISSION);
 	Log_SetTopicStatus(CH2_StorageShed,LOG_RUNNING);
 //	B_LogEntry(CH2_StorageShed,"The guard Ulbert is protecting the store shed in the Old Mine. I should get him something to drink!"); 
 //	B_LogEntry(CH2_StorageShed,"Der Gardist Ulbert hält Wache vor dem Lagerschuppen der Alten Mine. Ich sollte ihm was zu trinken besorgen!"); 
-	B_LogEntry(CH2_StorageShed,"Strážce Ulbert hlídá skladiště ve Starém dole. Měl bych mu dát něco k pití!"); 
+	B_LogEntry(CH2_StorageShed,"Strážce Ulbert hlídá skladiště ve Starém dole. Měl bych mu obstarat něco k pití!"); 
 };  
 
 // ***************** Infos *****************************
@@ -101,9 +101,7 @@ instance GRD_271_ULBERT_DRINK(C_INFO)
 
 func int GRD_271_ULBERT_DRINK_Condition()
 { 
-	if (Npc_KnowsInfo(hero,GRD_271_ULBERT_TRICK)) && (Npc_HasItems(hero,ItFobeer )|| 
-															 Npc_HasItems(hero,ItFoWine )||
-															 Npc_HasItems(hero,ItFoBooze)  )
+	if (Npc_KnowsInfo(hero,GRD_271_ULBERT_TRICK)) && (Npc_HasItems(hero,ItFobeer )|| Npc_HasItems(hero,ItFoWine )|| Npc_HasItems(hero,ItFoBooze)  )
 	{
 		return 1;
 	};
@@ -221,7 +219,7 @@ func void GRD_271_ULBERT_LOCK_Info()
 
 //	B_LogEntry(CH2_StorageShed,"It was an easy game to get Ulbert away from the store shed. He doesn't seem to be exactly bright!");
 //	B_LogEntry(CH2_StorageShed,"Ulbert ließ sich sehr leicht vom Lagerschuppen weglocken. Er scheint nicht gerade der Hellste zu sein!");
-	B_LogEntry(CH2_StorageShed,"Dostat Ulberta ze skladiště bylo snadné. Nepůsobí příliš bystrým dojmem!");
+	B_LogEntry(CH2_StorageShed,"Dostat Ulberta ze skladiště bylo velice snadné. Nepůsobí příliš bystrým dojmem!");
 
 	Npc_ExchangeRoutine(self,"away");
 	AI_StopProcessInfos(self);
@@ -259,7 +257,7 @@ func void GRD_271_ULBERT_ANGRY_Info()
 
 //	B_LogEntry(CH2_StorageShed,"I've met Ulbert again. Oh man, he didn't even understand that I'd taken him for a ride. That boy is so naive!");
 //	B_LogEntry(CH2_StorageShed,"Habe Ulbert wiedergetroffen. Oh Mann, er hat nicht mal jetzt kapiert, dass ich ihn reingelegt habe. Wirklich naiv der Junge!");
-	B_LogEntry(CH2_StorageShed,"Znovu jsem potkal Ulberta. Člověče, ten vůbec nepochopil, že jsem ho zatáhl do té hry. Tak naivní je ten chlapík!");
+	B_LogEntry(CH2_StorageShed,"Znovu jsem potkal Ulberta. Člověče, ten vůbec nepochopil, že jsem ho odlákal. Vskutku naivní chlap!");
 	Log_SetTopicStatus(CH2_StorageShed,LOG_SUCCESS);
 
 	Npc_ExchangeRoutine(self,"start");

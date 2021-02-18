@@ -24,7 +24,7 @@ func void Info_GRD_275_PreExit_Info()
 {
 //	AI_Output(self,other,"Info_GRD_275_PreExit_06_01"); //Make sure you get to the Old Camp, they're holding a pickaxe for you, hee, hee!
 //	AI_Output(self,other,"Info_GRD_275_PreExit_06_01"); //Sieh zu, dass du zum Alten Lager kommst, sie halten schon ne Spitzhacke für dich bereit, hee, hee!
-	AI_Output(self,other,"Info_GRD_275_PreExit_06_01"); //Určitě se musíš zastavit ve Starém táboře, mají tam pro tebe krumpáč, haha!
+	AI_Output(self,other,"Info_GRD_275_PreExit_06_01"); //Určitě se zastav ve Starém táboře, mají tam pro tebe připravený krumpáč, haha!
 	AI_StopProcessInfos(self);
 };
 
@@ -66,7 +66,7 @@ instance Info_GRD_275_WasMachtIhrHier(C_INFO)
 	permanent = 1;
 //	description = "What are you doing here?";
 //	description = "Was macht ihr hier?";
-	description = "Co tady děláš?";
+	description = "Co tady dělate?";
 };                       
 
 func int Info_GRD_275_WasMachtIhrHier_Condition()
@@ -78,13 +78,13 @@ func void Info_GRD_275_WasMachtIhrHier_Info()
 {
 //	AI_Output(other,self,"Info_GRD_275_WasMachtIhrHier_15_00"); //What are you doing here?
 //	AI_Output(other,self,"Info_GRD_275_WasMachtIhrHier_15_00"); //Was macht ihr hier?
-	AI_Output(other,self,"Info_GRD_275_WasMachtIhrHier_15_00"); //Co tady děláte?
+	AI_Output(other,self,"Info_GRD_275_WasMachtIhrHier_15_00"); //Co tady dělate?
 //	AI_Output(self,other,"Info_GRD_275_WasMachtIhrHier_06_01"); //What's it look like? We're guarding the bridge, of course!
 //	AI_Output(self,other,"Info_GRD_275_WasMachtIhrHier_06_01"); //Wonach sieht's denn aus? Wir bewachen die Brücke!
 	AI_Output(self,other,"Info_GRD_275_WasMachtIhrHier_06_01"); //Co myslíš? Hlídáme tady přece most!
 //	AI_Output(self,other,"Info_GRD_275_WasMachtIhrHier_06_02"); //We make sure that no beasts cross the bridge.
 //	AI_Output(self,other,"Info_GRD_275_WasMachtIhrHier_06_02"); //Wir passen auf, dass keine Viecher über die Brücke kommen.
-	AI_Output(self,other,"Info_GRD_275_WasMachtIhrHier_06_02"); //Dáváme pozor, aby tu přes něj nepřešly ty bestie.
+	AI_Output(self,other,"Info_GRD_275_WasMachtIhrHier_06_02"); //Dáváme pozor, aby se přes něj nedostaly ty bestie.
 };
 
 // *****************************************************************

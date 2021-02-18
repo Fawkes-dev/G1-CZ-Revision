@@ -86,6 +86,6 @@ func void Info_GRD_276_Bla_Info()
 	AI_Output(other,self,"Info_GRD_276_Bla_15_00"); //Je támhleto Starý tábor?
 //	AI_Output(self,other,"Info_GRD_276_Bla_07_01"); //No, that's the New Camp. The Old Camp is underneath the bridge.
 //	AI_Output(self,other,"Info_GRD_276_Bla_07_01"); //Nein, das ist das Neue Lager. Das Alte Lager liegt unter der Brücke.
-	AI_Output(self,other,"Info_GRD_276_Bla_07_01"); //Ne, to je Nový tábor. Starý tábor je za mostem.
+	AI_Output(self,other,"Info_GRD_276_Bla_07_01"); //Ne, to je Nový tábor. Starý tábor je pod mostem.
 	AI_StopProcessInfos(self);
 };

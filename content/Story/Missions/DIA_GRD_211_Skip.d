@@ -42,6 +42,7 @@ instance DIA_Skip_First(C_INFO)
 
 func int DIA_Skip_First_Condition()
 {
+	//#NEEDS_ATTENTION - dialog dostupny pre Magov Ohna? GIL_KDF
 	if ( !((Npc_GetTrueGuild(other)==GIL_STT) || (Npc_GetTrueGuild(other)==GIL_GRD) || (Npc_GetTrueGuild(other)==GIL_KDF)))
 	{ 
 		return 1;
@@ -106,7 +107,7 @@ func void DIA_Skip_First_Thorus()
 	AI_Output(other,self,"DIA_Skip_First_Thorus_15_00"); //Poslal mě Thorus. Mám si obstarat zbraň.
 //	AI_Output(self,other,"DIA_Skip_First_Thorus_12_01"); //Oh?
 //	AI_Output(self,other,"DIA_Skip_First_Thorus_12_01"); //So?
-	AI_Output(self,other,"DIA_Skip_First_Thorus_12_01"); //Tak?
+	AI_Output(self,other,"DIA_Skip_First_Thorus_12_01"); //Opravdu?
 	Info_ClearChoices(DIA_Skip_First);
 //	Info_Addchoice (DIA_Skip_First,"Why don't you go and ask him?",DIA_Skip_First_Thorus_AskHim);
 //	Info_Addchoice (DIA_Skip_First,"Geh und frag ihn.",DIA_Skip_First_Thorus_AskHim);
@@ -139,7 +140,7 @@ func void DIA_Skip_First_Thorus_Stranger()
 	Info_ClearChoices(DIA_Skip_First);
 //	Info_Addchoice (DIA_Skip_First,"Why don't you go and ask him?",DIA_Skip_First_Thorus_AskHim);
 //	Info_Addchoice (DIA_Skip_First,"Geh und frag ihn.",DIA_Skip_First_Thorus_AskHim);
-	Info_Addchoice (DIA_Skip_First,"Jdi a zeptej se ho",DIA_Skip_First_Thorus_AskHim);
+	Info_Addchoice (DIA_Skip_First,"Jdi a zeptej se ho.",DIA_Skip_First_Thorus_AskHim);
 //	Info_Addchoice (DIA_Skip_First,"He said to give you a big kick in the butt unless you give me a weapon.",DIA_Skip_First_Thorus_KickAssAGAIN);
 //	Info_Addchoice (DIA_Skip_First,"Wenn du keine Waffe rausrückst, soll ich dir in den Hintern treten.",DIA_Skip_First_Thorus_KickAssAGAIN);
 	Info_Addchoice (DIA_Skip_First,"Říkal, že když mi nedáš zbraň, tak tě mám pořádně nakopat do zadku.",DIA_Skip_First_Thorus_KickAssAGAIN);
@@ -270,7 +271,6 @@ instance GRD_211_Skip_WELCOME(C_INFO)
 
 func int GRD_211_Skip_WELCOME_Condition()
 { 
-
 	if (Npc_GetTrueGuild(hero) == GIL_GRD) 
 	{
 		return TRUE;

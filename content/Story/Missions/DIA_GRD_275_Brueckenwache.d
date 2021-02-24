@@ -63,10 +63,11 @@ instance Info_GRD_275_WasMachtIhrHier(C_INFO)
 	nr = 1;
 	condition = Info_GRD_275_WasMachtIhrHier_Condition;
 	information = Info_GRD_275_WasMachtIhrHier_Info;
+	//#Needs_Attention zbytocny permanent dialog - to by som zrusil
 	permanent = 1;
 //	description = "What are you doing here?";
 //	description = "Was macht ihr hier?";
-	description = "Co tady dělate?";
+	description = "Co tady děláte?";
 };                       
 
 func int Info_GRD_275_WasMachtIhrHier_Condition()
@@ -78,7 +79,7 @@ func void Info_GRD_275_WasMachtIhrHier_Info()
 {
 //	AI_Output(other,self,"Info_GRD_275_WasMachtIhrHier_15_00"); //What are you doing here?
 //	AI_Output(other,self,"Info_GRD_275_WasMachtIhrHier_15_00"); //Was macht ihr hier?
-	AI_Output(other,self,"Info_GRD_275_WasMachtIhrHier_15_00"); //Co tady dělate?
+	AI_Output(other,self,"Info_GRD_275_WasMachtIhrHier_15_00"); //Co tady děláte?
 //	AI_Output(self,other,"Info_GRD_275_WasMachtIhrHier_06_01"); //What's it look like? We're guarding the bridge, of course!
 //	AI_Output(self,other,"Info_GRD_275_WasMachtIhrHier_06_01"); //Wonach sieht's denn aus? Wir bewachen die Brücke!
 	AI_Output(self,other,"Info_GRD_275_WasMachtIhrHier_06_01"); //Co myslíš? Hlídáme tady přece most!
@@ -97,6 +98,7 @@ instance Info_GRD_275_Tips(C_INFO)
 	nr = 1;
 	condition = Info_GRD_275_Tips_Condition;
 	information = Info_GRD_275_Tips_Info;
+	//#Needs_Attention zbytocny permanent dialog - to by som zrusil
 	permanent = 1;
 //	description = "Have you got any advice for me?";
 //	description = "Hast du irgendwelche Tipps für mich?";

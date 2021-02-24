@@ -13,10 +13,9 @@ instance DIA_Orry_PreExit(C_INFO)
 };                       
 
 func int DIA_Orry_PreExit_Condition()
-
-	{
-		return 1;
-	};
+{
+	return 1;
+};
 
 func void DIA_Orry_PreExit_Info()
 {
@@ -66,7 +65,7 @@ instance DIA_Orry_GuardGate(C_INFO)
 	permanent = 0;
 //	description = "What are you doing here?"; 
 //	description = "Was machst du hier?"; 
-	description = "Co tady děláš?"; 
+	description = "Co tady děláte?"; 
 };
 
 func int DIA_Orry_GuardGate_Condition()
@@ -81,13 +80,13 @@ func void DIA_Orry_GuardGate_Info()
 {
 //	AI_Output(other,self,"DIA_Orry_GuardGate_15_00"); //What are you doing here?
 //	AI_Output(other,self,"DIA_Orry_GuardGate_15_00"); //Was machst du hier?
-	AI_Output(other,self,"DIA_Orry_GuardGate_15_00"); //Co tady děláš?
+	AI_Output(other,self,"DIA_Orry_GuardGate_15_00"); //Co tady děláte?
 //	AI_Output(self,other,"DIA_Orry_GuardGate_06_01"); //Making sure no-one gets near the exchange place. Especially none of those cut-throats from the New Camp.
 //	AI_Output(self,other,"DIA_Orry_GuardGate_06_01"); //Dafür sorgen, dass keiner an die Austauschstelle rankommt. Vor allem nicht die Halsabschneider aus dem Neuen Lager.
 	AI_Output(self,other,"DIA_Orry_GuardGate_06_01"); //Zajišťujeme, aby se nikdo nedostal do blízkosti místa výměny. Hlavně nikdo z těch hrdlořezů z Nového tábora.
 //	AI_Output(self,other,"DIA_Orry_GuardGate_06_02"); //You're the new guy they chucked in today, right?
 //	AI_Output(self,other,"DIA_Orry_GuardGate_06_02"); //Du bist der Neue, den sie heute reingeworfen haben, nicht?
-	AI_Output(self,other,"DIA_Orry_GuardGate_06_02"); //Ty jsi ten novej, co ho dneska vyhodili, že jo?
+	AI_Output(self,other,"DIA_Orry_GuardGate_06_02"); //Ty jsi ten novej, co ho dneska vhodili, že jo?
 //	AI_Output(other,self,"DIA_Orry_GuardGate_15_03"); //That's me.
 //	AI_Output(other,self,"DIA_Orry_GuardGate_15_03"); //Sieht so aus.
 	AI_Output(other,self,"DIA_Orry_GuardGate_15_03"); //Už to tak vypadá.
@@ -322,6 +321,7 @@ func void DIA_Orry_Waffe_Info()
 	AI_Output(other,self,"DIA_Orry_Waffe_15_00"); //Hledám nějakou zbraň...
 //	AI_Output(self,other,"DIA_Orry_Waffe_06_01"); //There should be some old weapons by the derelict mine further down the canyon.
 //	AI_Output(self,other,"DIA_Orry_Waffe_06_01"); //Bei der verlassenen Mine weiter hinten im Canyon müsstest du alte Waffen finden.
+	//#Needs_Attention neprebasnime? pripada mi to krkolomne
 	AI_Output(self,other,"DIA_Orry_Waffe_06_01"); //U opuštěného dolu za kaňonem bys měl nějaké staré zbraně najít.
 //	AI_Output(self,other,"DIA_Orry_Waffe_06_02"); //But don't go and start a war with nothing but a rusty pickaxe for a weapon - those things are slow and heavy.
 //	AI_Output(self,other,"DIA_Orry_Waffe_06_02"); //Aber mach bloß nicht den Fehler und zieh mit 'ner rostigen Spitzhacke in den Krieg - die Dinger sind schwer und langsam.

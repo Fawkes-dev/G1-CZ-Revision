@@ -41,13 +41,13 @@ func int GRD_261_Brandick_ALEPH_Condition()
 	{
 		return 1;
 	};
-
 };
+
 func void GRD_261_Brandick_ALEPH_Info()
 {
 //	AI_Output(other,self,"GRD_261_Brandick_ALEPH_Info_15_01"); //Listen, when you're not there Aleph just sits around there all the time without doing any work.
 //	AI_Output(other,self,"GRD_261_Brandick_ALEPH_Info_15_01"); //Hör mal, wenn du nicht da bist, sitzt Aleph die ganze Zeit nur rum, ohne zu arbeiten.
-	AI_Output(other,self,"GRD_261_Brandick_ALEPH_Info_15_01"); //Poslyš, když tady nejsi, Aleph tu akorát celý den posedává a ani nehne prstem.
+	AI_Output(other,self,"GRD_261_Brandick_ALEPH_Info_15_01"); //Poslyš, když tady nejsi, Aleph tu akorát celý den posedává a nehne ani prstem.
 //	AI_Output(self,other,"GRD_261_Brandick_ALEPH_Info_06_02"); //Is that true?
 //	AI_Output(self,other,"GRD_261_Brandick_ALEPH_Info_06_02"); //Ist das so?
 	AI_Output(self,other,"GRD_261_Brandick_ALEPH_Info_06_02"); //Je to pravda?

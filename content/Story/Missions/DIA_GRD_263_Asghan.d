@@ -40,8 +40,8 @@ func int Grd_263_Asghan_NEST_Condition()
 	{
 		return 1;
 	};
-
 };
+
 func void Grd_263_Asghan_NEST_Info()
 {
 //	AI_Output(other,self,"Grd_263_Asghan_NEST_Info_15_01"); //There must be a nest of minecrawlers here somewhere.
@@ -55,18 +55,18 @@ func void Grd_263_Asghan_NEST_Info()
 	AI_Output(other,self,"Grd_263_Asghan_NEST_Info_15_03"); //Proč je ta šachta zavřená?
 //	AI_Output(self,other,"Grd_263_Asghan_NEST_Info_06_04"); //It didn't matter how many crawlers we killed, more and more just kept coming out.
 //	AI_Output(self,other,"Grd_263_Asghan_NEST_Info_06_04"); //Egal wie viele Crawler wir getötet haben, von dort kamen immer wieder mehr.
-	AI_Output(self,other,"Grd_263_Asghan_NEST_Info_06_04"); //Bylo jedno, kolik červů jsme zabili, z té šachy vylézali další a další.
+	AI_Output(self,other,"Grd_263_Asghan_NEST_Info_06_04"); //Bylo jedno, kolik červů jsme zabili, ze šachty vylézali další a další.
 //	AI_Output(other,self,"Grd_263_Asghan_NEST_Info_15_05"); //Sounds like there must be a nest somewhere near. Let me open the gate!
 //	AI_Output(other,self,"Grd_263_Asghan_NEST_Info_15_05"); //Dann wird dort irgendwo ein Nest sein. Lass mich das Tor öffnen!
 	AI_Output(other,self,"Grd_263_Asghan_NEST_Info_15_05"); //Vypadá to, že tady někde musí být hnízdo. Nech mě otevřít ty vrata!
 //	AI_Output(self,other,"Grd_263_Asghan_NEST_Info_06_06"); //No! This gate can only be opened with Ian's permission! Nothing will be done before.
 //	AI_Output(self,other,"Grd_263_Asghan_NEST_Info_06_06"); //Nein! Erst wenn Ian die Erlaubnis gibt, wird dieses Tor geöffnet! Vorher geht gar nichts.
+	//#Needs_Attention: neprebasnime?
 	AI_Output(self,other,"Grd_263_Asghan_NEST_Info_06_06"); //Ne! Tyhle vrata se smí otevírat jen s Ianovým svolením! Bez něj se nic nesmí udělat!
 
 //	B_LogEntry(CH2_MCEggs,"Asghan, the boss of the mine guards, won't open the gate. He wants Ian's permission.");
 //	B_LogEntry(CH2_MCEggs,"Asghan, der Chef der Minengardisten weigert sich das Tor zu öffnen. Er will erst die Erlaubnis von Ian haben.");
-	B_LogEntry(CH2_MCEggs,"Asghan, velitel důlní stráže, nechce otevřít bránu. Nejprve chce vidět Ianovo povolení.");
-
+	B_LogEntry(CH2_MCEggs,"Asghan, velitel důlní stráže, nechce otevřít bránu. Nejprve chce Ianovo svolení.");
 };
 /*------------------------------------------------------------------------
 							ERLAUBNIS VON IAN GEHOLT 
@@ -103,7 +103,7 @@ func void Grd_263_Asghan_OPEN_Info()
 	AI_Output(self,other,"Grd_263_Asghan_OPEN_Info_06_02"); //Už jsem ti jednou řekl, jen s Ianovým...
 //	AI_Output(other,self,"Grd_263_Asghan_OPEN_Info_15_03"); //Asghan... Everything's going to be fine... and best regards from Ian.
 //	AI_Output(other,self,"Grd_263_Asghan_OPEN_Info_15_03"); //Asghan...Alles wird gut... und einen schönen Gruß von Ian.
-	AI_Output(other,self,"Grd_263_Asghan_OPEN_Info_15_03"); //Asghane... Všechno jde dobře... a Ian tě pozdravuje.
+	AI_Output(other,self,"Grd_263_Asghan_OPEN_Info_15_03"); //Asghane... Všechno bude v pořádku... a Ian tě pozdravuje.
 //	AI_Output(self,other,"Grd_263_Asghan_OPEN_Info_06_04"); //Well then, if Ian is responsible for this... but only under one condition!
 //	AI_Output(self,other,"Grd_263_Asghan_OPEN_Info_06_04"); //Na gut, wenn Ian die Verantwortung übernimmt... aber nur unter einer Bedingung!
 	AI_Output(self,other,"Grd_263_Asghan_OPEN_Info_06_04"); //Jestli je Ian za to zodpovědný.. ale pod jednou podmínkou!
@@ -112,11 +112,11 @@ func void Grd_263_Asghan_OPEN_Info()
 	AI_Output(other,self,"Grd_263_Asghan_OPEN_Info_15_05"); //Jakou podmínkou?
 //	AI_Output(self,other,"Grd_263_Asghan_OPEN_Info_06_06"); //Just get me two or three templars for support, I don't want to be here on my own when the crawlers come out of the shaft!
 //	AI_Output(self,other,"Grd_263_Asghan_OPEN_Info_06_06"); //Besorge erst mal zwei bis drei Templer zur Verstärkung, ich will nicht alleine hier stehen, falls die Crawler aus dem Schacht kommen!
-	AI_Output(self,other,"Grd_263_Asghan_OPEN_Info_06_06"); //Sežeň mi dva nebo tři templáře na pomoc, protože tady nechci být sám, až ze šachty vylezou červi!
+	AI_Output(self,other,"Grd_263_Asghan_OPEN_Info_06_06"); //Sežeň mi dva nebo tři templáře na pomoc, protože tady nechci být sám, až ze šachty začnou vylézat červi!
 
 //	B_LogEntry(CH2_MCEggs,"Although Ian has given me permission, Asghan won't open the gate until I've united some templars as reinforcements in front of the gate.");
 //	B_LogEntry(CH2_MCEggs,"Trotz Ian's Einwilligung will Asghan das Tor erst öffnen, wenn ich einige Templer als Verstärkung vor dem Tor versammelt habe.");
-	B_LogEntry(CH2_MCEggs,"Třebaže mi Ian dal povolení, Asghan nechce otevřít bránu, dokud nepřivedu nějaké templáře jako posilu před vchod.");
+	B_LogEntry(CH2_MCEggs,"Třebaže mi Ian dal povolení, Asghan nechce otevřít bránu, dokud nepřivedu nějaké templáře jako posilu před bránu.");
 
 	AI_StopProcessInfos(self);
 };  
@@ -136,14 +136,14 @@ instance Grd_263_Asghan_OPEN_NOW(C_INFO)
 
 func int Grd_263_Asghan_OPEN_NOW_Condition()
 { 
-	if (Npc_KnowsInfo(hero,Tpl_1400_GorNaBar_SUGGEST )) && (Npc_KnowsInfo(hero,Tpl_1401_GorNaKosh_SUGGEST))
-	|| (Npc_KnowsInfo(hero,Tpl_1401_GorNaKosh_SUGGEST)) && (Npc_KnowsInfo(hero,Tpl_1433_GorNaVid_HEALTH_SUC ))
-	|| (Npc_KnowsInfo(hero,Tpl_1433_GorNaVid_HEALTH_SUC)) && (Npc_KnowsInfo(hero,Tpl_1400_GorNaBar_SUGGEST ))   
+	if (Npc_KnowsInfo(hero,Tpl_1400_GorNaBar_SUGGEST)) && (Npc_KnowsInfo(hero,Tpl_1401_GorNaKosh_SUGGEST))
+	|| (Npc_KnowsInfo(hero,Tpl_1401_GorNaKosh_SUGGEST)) && (Npc_KnowsInfo(hero,Tpl_1433_GorNaVid_HEALTH_SUC))
+	|| (Npc_KnowsInfo(hero,Tpl_1433_GorNaVid_HEALTH_SUC)) && (Npc_KnowsInfo(hero,Tpl_1400_GorNaBar_SUGGEST))
 	{
 		return TRUE;
 	};
-
 };
+
 func void Grd_263_Asghan_OPEN_NOW_Info()
 {
 //	AI_Output(other,self,"Grd_263_Asghan_OPEN_NOW_Info_15_01"); //All preparations have been made. The gate can now be opened!
@@ -184,8 +184,8 @@ func int Grd_263_Asghan_LAIRFOUND_Condition()
 	{
 		return TRUE;
 	};
-
 };
+
 func void Grd_263_Asghan_LAIRFOUND_Info()
 {
 //	AI_Output(other,self,"Grd_263_Asghan_LAIRFOUND_Info_15_01"); //The minecrawlers shouldn't be a threat anymore!
@@ -235,6 +235,5 @@ func void Grd_263_Asghan_SMALLTALK_Info()
 	AI_Output(other,self,"Grd_263_Asghan_SMALLTALK_Info_15_03"); //Co je na těch vratech tak zvláštního?
 //	AI_Output(self,other,"Grd_263_Asghan_SMALLTALK_Info_06_04"); //Minecrawlers. Big, bad minecrawlers. Lots and lots and lots of them.
 //	AI_Output(self,other,"Grd_263_Asghan_SMALLTALK_Info_06_04"); //Minecrawler. Große böse Minecrawler. Und zwar sehr...sehr...sehr viele.
-	AI_Output(self,other,"Grd_263_Asghan_SMALLTALK_Info_06_04"); //Důlní červi. Velcí zlí důlní červi. Hromady, hromady a hromady červů.
+	AI_Output(self,other,"Grd_263_Asghan_SMALLTALK_Info_06_04"); //Důlní červi. Velcí, zlí důlní červi. Hromady, hromady a hromady červů.
 };  
-

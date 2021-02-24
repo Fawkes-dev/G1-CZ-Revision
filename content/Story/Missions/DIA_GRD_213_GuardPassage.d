@@ -123,7 +123,6 @@ func int Info_Grd_213_Attack_Condition()
 
 func int Info_Grd_213_Attack_Info()
 {
-
 	hero.aivar[AIV_LASTDISTTOWP] = 0;
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_PUNISH; 
 

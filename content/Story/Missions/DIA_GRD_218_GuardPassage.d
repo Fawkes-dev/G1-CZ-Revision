@@ -1,7 +1,13 @@
 // **************************************
 //					EXIT 
 // **************************************
+/*
+	#Bugfix: This NPC has already assigned another exit dialog via
+		B_AssignAmbientInfos > B_AssignAmbientInfos_grd_7 > Info_grd_7_EXIT(C_INFO)
 
+	Grd_218_Gardist.NpcType == npctype_guard
+	Grd_218_Gardist.voice == 7
+	
 instance DIA_Grd_218_Exit(C_INFO)
 {
 	npc = Grd_218_GArdist;
@@ -21,6 +27,7 @@ func void DIA_Grd_218_Exit_Info()
 {
 	AI_StopProcessInfos(self);
 };
+*/
 
 // **************************************
 //			Erstes Mal rein
@@ -156,7 +163,6 @@ func int Info_Grd_218_Attack_Condition()
 
 func int Info_Grd_218_Attack_Info()
 {
-
 	hero.aivar[AIV_LASTDISTTOWP] = 0;
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_PUNISH; 
 

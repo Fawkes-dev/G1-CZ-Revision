@@ -99,8 +99,8 @@ func int GRD_219_Stone_GETSTUFF_Condition()
 	{
 		return TRUE;
 	};
-
 };
+
 func void GRD_219_Stone_GETSTUFF_Info()
 {
 //	AI_Output(other,self,"GRD_219_Stone_GETSTUFF_Info_15_01"); //I need armor.
@@ -164,7 +164,7 @@ func void GRD_219_Stone_BETTERARMOR_Info()
 	AI_Output(self,other,"GRD_219_Stone_BETTERARMOR_Info_06_02"); //Až přijde ten správný čas a až budeš mít dost rudy...
 
 	Info_ClearChoices(GRD_219_Stone_BETTERARMOR);
-	Info_AddChoice(GRD_219_Stone_BETTERARMOR, DIALOG_BACK , GRD_219_Stone_BETTERARMOR_BACK); 
+	Info_AddChoice(GRD_219_Stone_BETTERARMOR, DIALOG_BACK, GRD_219_Stone_BETTERARMOR_BACK); 
 	Info_AddChoice(GRD_219_Stone_BETTERARMOR, B_BuildBuyArmorString(NAME_StoneHeavyGuards,VALUE_GRD_ARMOR_H),GRD_219_Stone_BETTERARMOR_H); 
 	Info_AddChoice(GRD_219_Stone_BETTERARMOR, B_BuildBuyArmorString(NAME_StoneGuards,VALUE_GRD_ARMOR_M), GRD_219_Stone_BETTERARMOR_M); 
 };  
@@ -193,6 +193,8 @@ func void GRD_219_Stone_BETTERARMOR_M()
 //		AI_Output(self,hero,"GRD_219_Stone_BETTERARMOR_Info_M_06_04"); //In Ordnung, hier ist deine neue Garderüstung! Lass sie dir nicht zu sehr von den Söldnern zerbeulen, hahaha!
 		AI_Output(self,hero,"GRD_219_Stone_BETTERARMOR_Info_M_06_04"); //V pořádku, tady je tvá nová zbroj pro stráže! Nedovol žoldákům, aby ti ji moc poškodili, hahaha!
 		B_GiveInvItems(hero,self,ItMiNugget, VALUE_GRD_ARMOR_M);
+		//#NEEDS_ATTENTION funkcia B_GiveInvItems na 100% buguje pri presune zbroji. Idealne by sme mali vsetky dialogy, kde je pouzite B_GiveInvItems prepisat,
+		//vytvorit item priamo u hraca v inventari a na obrazovku vypisat, aky item hrac dostal. #Immersion :TM:
 		B_GiveInvItems(self,hero,GRD_ARMOR_M,1);
 		AI_EquipBestArmor(hero);
 	};
@@ -243,7 +245,7 @@ func int DIA_GRD_219_Stone_Exit_Condition()
 
 func void DIA_GRD_219_Stone_Exit_Info()
 {
-	if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone4  ))
+	if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone4))
 	{
 		AI_StopProcessInfos(self);
 
@@ -304,7 +306,7 @@ func void DIA_GRD_219_Stone_Info()
 {
 //	AI_Output(self,other,"DIA_GRD_219_Stone_06_01"); //What do you want? You don't look like one of Gomez' henchmen?
 //	AI_Output(self,other,"DIA_GRD_219_Stone_06_01"); //Was willst du, du siehst nicht aus wie einer von Gomez' Schergen?
-	AI_Output(self,other,"DIA_GRD_219_Stone_06_01"); //Co chceš, nevypadáš jkao jeden z Gomezových poskoků.
+	AI_Output(self,other,"DIA_GRD_219_Stone_06_01"); //Co chceš, nevypadáš jako jeden z Gomezových poskoků.
 };
 
 //---------------------------------------------------------------------
@@ -324,7 +326,7 @@ instance DIA_GRD_219_Stone1(C_INFO)
 
 func int DIA_GRD_219_Stone1_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone )) 
+	if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone)) 
 	{ 
 		return 1;
 	}; 
@@ -380,7 +382,7 @@ instance DIA_GRD_219_Stone3(C_INFO)
 
 func int DIA_GRD_219_Stone3_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone1 )) && (Hlp_StrCmp(Npc_GetNearestWP (self), "OCC_STABLE_LEFT_FRONT" ))
+	if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone1)) && (Hlp_StrCmp(Npc_GetNearestWP (self), "OCC_STABLE_LEFT_FRONT"))
 	{
 			return 1;
 	}; 
@@ -417,7 +419,7 @@ instance DIA_GRD_219_Stone2(C_INFO)
 
 func int DIA_GRD_219_Stone2_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone3 ))
+	if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone3))
 	{ 
 		return 1;
 	}; 
@@ -454,42 +456,42 @@ instance DIA_GRD_219_Stone4(C_INFO)
 
 func int DIA_GRD_219_Stone4_Condition()
 {
-	 if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone3 )) && (Npc_HasItems(hero,ORE_ARMOR_M)) && ( KnowStone == 0 )  {
-			return 1;
+	 if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone3)) && (Npc_HasItems(hero,ORE_ARMOR_M)) && (KnowStone == 0)  {
+		return 1;
 	 }; 
 };
 
 func void DIA_GRD_219_Stone4_Info()
 {
-//		AI_Output(other,self,"DIA_GRD_219_Stone4_15_01"); //Can you reinforce this ore armor for me?
-//		AI_Output(other,self,"DIA_GRD_219_Stone4_15_01"); //Kannst du mir diese Erzrüstung verstärken?
-		AI_Output(other,self,"DIA_GRD_219_Stone4_15_01"); //Můžeš mi vyztužit tuhle rudnou zbroj?
-//		AI_Output(self,other,"DIA_GRD_219_Stone4_06_02"); //Sure I can. Hand it over and hang on a minute.
-//		AI_Output(self,other,"DIA_GRD_219_Stone4_06_02"); //Natürlich kann ich sie verstärken? Gib sie mir und warte kurz.
-		AI_Output(self,other,"DIA_GRD_219_Stone4_06_02"); //Samozřejmě, že můžu. Sundej jí a chvilku počkej.
+//	AI_Output(other,self,"DIA_GRD_219_Stone4_15_01"); //Can you reinforce this ore armor for me?
+//	AI_Output(other,self,"DIA_GRD_219_Stone4_15_01"); //Kannst du mir diese Erzrüstung verstärken?
+	AI_Output(other,self,"DIA_GRD_219_Stone4_15_01"); //Můžeš mi vyztužit tuhle rudnou zbroj?
+//	AI_Output(self,other,"DIA_GRD_219_Stone4_06_02"); //Sure I can. Hand it over and hang on a minute.
+//	AI_Output(self,other,"DIA_GRD_219_Stone4_06_02"); //Natürlich kann ich sie verstärken? Gib sie mir und warte kurz.
+	AI_Output(self,other,"DIA_GRD_219_Stone4_06_02"); //Samozřejmě, že můžu. Sundej jí a chvilku počkej.
 
-		AI_UnequipArmor(hero);
-		B_GiveInvItems(hero,self,ORE_ARMOR_M,1);
-		Npc_RemoveInvItem(self,ORE_ARMOR_M);
+	AI_UnequipArmor(hero);
+	B_GiveInvItems(hero,self,ORE_ARMOR_M,1);
+	Npc_RemoveInvItem(self,ORE_ARMOR_M);
 
-		B_StartUseMob(self,"BSFIRE"); 
-		AI_Wait(self,1);
-		B_StopUseMob(self,"BSFIRE"); 
-		AI_Wait(self,1);
-		B_StartUseMob(self,"BSANVIL"); 
-		AI_Wait(self,1);
-		B_StopUseMob(self,"BSANVIL"); 
-		AI_Wait(self,1);
-		AI_GotoNpc(self,hero);
+	B_StartUseMob(self,"BSFIRE"); 
+	AI_Wait(self,1);
+	B_StopUseMob(self,"BSFIRE"); 
+	AI_Wait(self,1);
+	B_StartUseMob(self,"BSANVIL"); 
+	AI_Wait(self,1);
+	B_StopUseMob(self,"BSANVIL"); 
+	AI_Wait(self,1);
+	AI_GotoNpc(self,hero);
 
-		CreateInvItem(self,ORE_ARMOR_H);
-		B_GiveInvItems(self,hero,ORE_ARMOR_H,1); 
+	CreateInvItem(self,ORE_ARMOR_H);
+	B_GiveInvItems(self,hero,ORE_ARMOR_H,1); 
 
-//		AI_Output(self,other,"DIA_GRD_219_Stone4_06_03"); //Here is the reinforced armor. We're quits now.
-//		AI_Output(self,other,"DIA_GRD_219_Stone4_06_03"); //Hier ist die verstärkte Rüstung, damit habe ich meine Schuld beglichen.
-		AI_Output(self,other,"DIA_GRD_219_Stone4_06_03"); //Tady je vyztužená zbroj, tím jsem splatil svůj dluh.
+//	AI_Output(self,other,"DIA_GRD_219_Stone4_06_03"); //Here is the reinforced armor. We're quits now.
+//	AI_Output(self,other,"DIA_GRD_219_Stone4_06_03"); //Hier ist die verstärkte Rüstung, damit habe ich meine Schuld beglichen.
+	AI_Output(self,other,"DIA_GRD_219_Stone4_06_03"); //Tady je vyztužená zbroj, tím jsem splatil svůj dluh.
 
-		KnowStone = 1;
+	KnowStone = 1;
 };
 
 // Ring des Lebens
@@ -507,38 +509,38 @@ instance DIA_GRD_219_Stone5(C_INFO)
 
 func int DIA_GRD_219_Stone5_Condition()
 {
-	 if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone3 )) && ( KnowStone == 0 ) {
-			return 1;
+	 if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone3)) && (KnowStone == 0) {
+		return 1;
 	 }; 
 };
 
 func void DIA_GRD_219_Stone5_Info()
 {
-//		AI_Output(other,self,"DIA_GRD_219_Stone5_15_01"); //I could use a ring to increase my life energy.
-//		AI_Output(other,self,"DIA_GRD_219_Stone5_15_01"); //Ich könnte einen Ring gebrauchen, der meine Lebenskraft steigert.
-		AI_Output(other,self,"DIA_GRD_219_Stone5_15_01"); //Potřeboval bych prsten, který zvyšuje životní energii.
-//		AI_Output(self,other,"DIA_GRD_219_Stone5_06_02"); //That's not difficult, hold on.
-//		AI_Output(self,other,"DIA_GRD_219_Stone5_06_02"); //Das ist nicht so schwer, warte kurz.
-		AI_Output(self,other,"DIA_GRD_219_Stone5_06_02"); //To není tak těžké, počkej chvilku.
+//	AI_Output(other,self,"DIA_GRD_219_Stone5_15_01"); //I could use a ring to increase my life energy.
+//	AI_Output(other,self,"DIA_GRD_219_Stone5_15_01"); //Ich könnte einen Ring gebrauchen, der meine Lebenskraft steigert.
+	AI_Output(other,self,"DIA_GRD_219_Stone5_15_01"); //Potřeboval bych prsten, který zvyšuje životní energii.
+//	AI_Output(self,other,"DIA_GRD_219_Stone5_06_02"); //That's not difficult, hold on.
+//	AI_Output(self,other,"DIA_GRD_219_Stone5_06_02"); //Das ist nicht so schwer, warte kurz.
+	AI_Output(self,other,"DIA_GRD_219_Stone5_06_02"); //To není tak těžké, počkej chvilku.
 
-		B_StartUseMob(self,"BSFIRE"); 
-		AI_Wait(self,1);
-		B_StopUseMob(self,"BSFIRE"); 
-		AI_Wait(self,1);
-		B_StartUseMob(self,"BSANVIL"); 
-		AI_Wait(self,1);
-		B_StopUseMob(self,"BSANVIL"); 
-		AI_Wait(self,1);
-		AI_GotoNpc(self,hero);
+	B_StartUseMob(self,"BSFIRE"); 
+	AI_Wait(self,1);
+	B_StopUseMob(self,"BSFIRE"); 
+	AI_Wait(self,1);
+	B_StartUseMob(self,"BSANVIL"); 
+	AI_Wait(self,1);
+	B_StopUseMob(self,"BSANVIL"); 
+	AI_Wait(self,1);
+	AI_GotoNpc(self,hero);
 
-//		AI_Output(self,other,"DIA_GRD_219_Stone5_06_03"); //This ring will give you extra life energy. That should be more than enough to settle the score between us.
-//		AI_Output(self,other,"DIA_GRD_219_Stone5_06_03"); //Dieser Ring verleiht dir Lebenskraft, damit müsste meine Schuld mehr als beglichen sein.
-		AI_Output(self,other,"DIA_GRD_219_Stone5_06_03"); //Tenhle prsten ti dodá zvláštní životní energii. Tohle by mělo být víc než dost pro naše vyrovnání.
+//	AI_Output(self,other,"DIA_GRD_219_Stone5_06_03"); //This ring will give you extra life energy. That should be more than enough to settle the score between us.
+//	AI_Output(self,other,"DIA_GRD_219_Stone5_06_03"); //Dieser Ring verleiht dir Lebenskraft, damit müsste meine Schuld mehr als beglichen sein.
+	AI_Output(self,other,"DIA_GRD_219_Stone5_06_03"); //Tenhle prsten ti dodá zvláštní životní energii. Tohle by mělo být víc než dost pro naše vyrovnání.
 
-		CreateInvItem(self,Ring_des_Lebens2); 
-		B_GiveInvItems(self,other,Ring_des_Lebens2,1); 
+	CreateInvItem(self,Ring_des_Lebens2); 
+	B_GiveInvItems(self,other,Ring_des_Lebens2,1); 
 
-		KnowStone = 1;
+	KnowStone = 1;
 };
 
 // Schutzring
@@ -556,38 +558,38 @@ instance DIA_GRD_219_Stone6(C_INFO)
 
 func int DIA_GRD_219_Stone6_Condition()
 {
-	 if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone3 )) && ( KnowStone == 0 ){
-			return 1;
+	 if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone3)) && (KnowStone == 0){
+		return 1;
 	 }; 
 };
 
 func void DIA_GRD_219_Stone6_Info()
 {
-//		AI_Output(other,self,"DIA_GRD_219_Stone6_15_01"); //I want you to forge me a protection ring.
-//		AI_Output(other,self,"DIA_GRD_219_Stone6_15_01"); //Ich will einen Schutzring geschmiedet haben.
-		AI_Output(other,self,"DIA_GRD_219_Stone6_15_01"); //Chci, abys mi vykoval ochranný prsten.
-//		AI_Output(self,other,"DIA_GRD_219_Stone6_06_02"); //A protection ring? Okay, I'll start right away. Just wait a while. 
-//		AI_Output(self,other,"DIA_GRD_219_Stone6_06_02"); //Einen Schutzring, dann gehe ich an die Arbeit. Warte solange.
-		AI_Output(self,other,"DIA_GRD_219_Stone6_06_02"); //Ochranný prsten? Dobře, hned s tím začnu. Počkej chvilku.
+//	AI_Output(other,self,"DIA_GRD_219_Stone6_15_01"); //I want you to forge me a protection ring.
+//	AI_Output(other,self,"DIA_GRD_219_Stone6_15_01"); //Ich will einen Schutzring geschmiedet haben.
+	AI_Output(other,self,"DIA_GRD_219_Stone6_15_01"); //Chci, abys mi vykoval ochranný prsten.
+//	AI_Output(self,other,"DIA_GRD_219_Stone6_06_02"); //A protection ring? Okay, I'll start right away. Just wait a while. 
+//	AI_Output(self,other,"DIA_GRD_219_Stone6_06_02"); //Einen Schutzring, dann gehe ich an die Arbeit. Warte solange.
+	AI_Output(self,other,"DIA_GRD_219_Stone6_06_02"); //Ochranný prsten? Dobře, hned s tím začnu. Počkej chvilku.
 
-		B_StartUseMob(self,"BSFIRE"); 
-		AI_Wait(self,1);
-		B_StopUseMob(self,"BSFIRE"); 
-		AI_Wait(self,1);
-		B_StartUseMob(self,"BSANVIL"); 
-		AI_Wait(self,1);
-		B_StopUseMob(self,"BSANVIL"); 
-		AI_Wait(self,1);
-		AI_GotoNpc(self,hero);
+	B_StartUseMob(self,"BSFIRE"); 
+	AI_Wait(self,1);
+	B_StopUseMob(self,"BSFIRE"); 
+	AI_Wait(self,1);
+	B_StartUseMob(self,"BSANVIL"); 
+	AI_Wait(self,1);
+	B_StopUseMob(self,"BSANVIL"); 
+	AI_Wait(self,1);
+	AI_GotoNpc(self,hero);
 
-//		AI_Output(self,other,"DIA_GRD_219_Stone6_06_03"); //You asked for a protection ring, you have one, so now we're quits.
-//		AI_Output(self,other,"DIA_GRD_219_Stone6_06_03"); //Einen Schutzring wolltest du, hier ist er, jetzt sind wir quitt.
-		AI_Output(self,other,"DIA_GRD_219_Stone6_06_03"); //Chtěl jsi ochranný prsten, tady ho máš. Teď jsme vyrovnáni.
+//	AI_Output(self,other,"DIA_GRD_219_Stone6_06_03"); //You asked for a protection ring, you have one, so now we're quits.
+//	AI_Output(self,other,"DIA_GRD_219_Stone6_06_03"); //Einen Schutzring wolltest du, hier ist er, jetzt sind wir quitt.
+	AI_Output(self,other,"DIA_GRD_219_Stone6_06_03"); //Chtěl jsi ochranný prsten, tady ho máš. Teď jsme vyrovnáni.
 
-		CreateInvItem(self,Schutzring_Total2);
-		B_GiveInvItems(self,other,Schutzring_Total2,1);
+	CreateInvItem(self,Schutzring_Total2);
+	B_GiveInvItems(self,other,Schutzring_Total2,1);
 
-		KnowStone = 1;
+	KnowStone = 1;
 };
 
 instance DIA_GRD_219_Stone7(C_INFO)
@@ -604,36 +606,36 @@ instance DIA_GRD_219_Stone7(C_INFO)
 
 func int DIA_GRD_219_Stone7_Condition()
 {
-	 if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone3 )) && ( KnowStone == 0 ) {
-			return 1;
+	 if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone3)) && (KnowStone == 0) {
+		return 1;
 	 }; 
 };
 
 func void DIA_GRD_219_Stone7_Info()
 {
-//		AI_Output(other,self,"DIA_GRD_219_Stone7_15_01"); //Make me something to increase my magic powers.
-//		AI_Output(other,self,"DIA_GRD_219_Stone7_15_01"); //Schmiede mir einen Gegenstand, der meine magische Energie vermehrt.
-		AI_Output(other,self,"DIA_GRD_219_Stone7_15_01"); //Udělej mi něco, co by zvýšilo moji magickou moc.
-//		AI_Output(self,other,"DIA_GRD_219_Stone7_06_02"); //... Something to increase magic powers...? An amulet! That's it, I'll forge an amulet for you. It won't take long.
-//		AI_Output(self,other,"DIA_GRD_219_Stone7_06_02"); //... Einen Gegenstand, der magische Energie vermehrt ... ein Amulett, ich schmiede dir ein Amulett. Das dauert nicht lange.
-		AI_Output(self,other,"DIA_GRD_219_Stone7_06_02"); //...Něco, co by zvýšilo magickou moc... Amulet! To je ono! Udělám ti amulet. Nebude to dlouho trvat.
+//	AI_Output(other,self,"DIA_GRD_219_Stone7_15_01"); //Make me something to increase my magic powers.
+//	AI_Output(other,self,"DIA_GRD_219_Stone7_15_01"); //Schmiede mir einen Gegenstand, der meine magische Energie vermehrt.
+	AI_Output(other,self,"DIA_GRD_219_Stone7_15_01"); //Udělej mi něco, co by zvýšilo moji magickou moc.
+//	AI_Output(self,other,"DIA_GRD_219_Stone7_06_02"); //... Something to increase magic powers...? An amulet! That's it, I'll forge an amulet for you. It won't take long.
+//	AI_Output(self,other,"DIA_GRD_219_Stone7_06_02"); //... Einen Gegenstand, der magische Energie vermehrt ... ein Amulett, ich schmiede dir ein Amulett. Das dauert nicht lange.
+	AI_Output(self,other,"DIA_GRD_219_Stone7_06_02"); //...Něco, co by zvýšilo magickou moc... Amulet! To je ono! Udělám ti amulet. Nebude to dlouho trvat.
 
-		B_StartUseMob(self,"BSFIRE"); 
-		AI_Wait(self,1);
-		B_StopUseMob(self,"BSFIRE"); 
-		AI_Wait(self,1);
-		B_StartUseMob(self,"BSANVIL"); 
-		AI_Wait(self,1);
-		B_StopUseMob(self,"BSANVIL"); 
-		AI_Wait(self,1);
-		AI_GotoNpc(self,hero);
+	B_StartUseMob(self,"BSFIRE"); 
+	AI_Wait(self,1);
+	B_StopUseMob(self,"BSFIRE"); 
+	AI_Wait(self,1);
+	B_StartUseMob(self,"BSANVIL"); 
+	AI_Wait(self,1);
+	B_StopUseMob(self,"BSANVIL"); 
+	AI_Wait(self,1);
+	AI_GotoNpc(self,hero);
 
-//		AI_Output(self,other,"DIA_GRD_219_Stone7_06_03"); //Right, the amulet's finished, and I must say I've made a good job of it. We're quits now.
-//		AI_Output(self,other,"DIA_GRD_219_Stone7_06_03"); //So, das Amulett ist fertig, und ich muss sagen, es ist mir gut gelungen. Somit ist die Schuld beglichen.
-		AI_Output(self,other,"DIA_GRD_219_Stone7_06_03"); //Tak, amulet je hotový a musím říci, že se mi povedl. Teď jsme vyrovnáni.
+//	AI_Output(self,other,"DIA_GRD_219_Stone7_06_03"); //Right, the amulet's finished, and I must say I've made a good job of it. We're quits now.
+//	AI_Output(self,other,"DIA_GRD_219_Stone7_06_03"); //So, das Amulett ist fertig, und ich muss sagen, es ist mir gut gelungen. Somit ist die Schuld beglichen.
+	AI_Output(self,other,"DIA_GRD_219_Stone7_06_03"); //Tak, amulet je hotový a musím říci, že se mi povedl. Teď jsme vyrovnáni.
 
-		CreateInvItem(self,Amulett_der_Magie);
-		B_GiveInvItems(self,other,Amulett_der_Magie,1); 
+	CreateInvItem(self,Amulett_der_Magie);
+	B_GiveInvItems(self,other,Amulett_der_Magie,1); 
 
-		KnowStone = 1;
+	KnowStone = 1;
 };

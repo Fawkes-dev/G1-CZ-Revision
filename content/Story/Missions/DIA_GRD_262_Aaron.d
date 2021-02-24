@@ -73,8 +73,8 @@ func int GRD_262_Aaron_BLUFF_Condition()
 	{
 		return 1;
 	};
-
 };
+
 func void GRD_262_Aaron_BLUFF_Info()
 {
 	Info_ClearChoices(GRD_262_Aaron_BLUFF);
@@ -84,6 +84,8 @@ func void GRD_262_Aaron_BLUFF_Info()
 	Info_AddChoice(GRD_262_Aaron_BLUFF,"Poslal mě Ian. Máš za ním ihned zajít!",GRD_262_Aaron_BLUFF_IAN);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"I've heard that there are gangsters in the mine here.",GRD_262_Aaron_BLUFF_BANDIT);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"Ich hab' gehört, das Banditen in der Mine sind.",GRD_262_Aaron_BLUFF_BANDIT);
+	//#Needs_Attention: Ten original vyzera to, je prelozeny spravne podla dialogu dole, chceme to menit?
+	//Slyšel jsem, že v dole jsou banditi. Chtějí rudu!
 	Info_AddChoice(GRD_262_Aaron_BLUFF,"Slyšel jsem, že v dole jsou banditi.",GRD_262_Aaron_BLUFF_BANDIT);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"The diggers have found a massive ore nugget!",GRD_262_Aaron_BLUFF_ORE);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"Die Buddler haben einen riesigen Erzbrocken gefunden!",GRD_262_Aaron_BLUFF_ORE);
@@ -104,7 +106,8 @@ func void GRD_262_Aaron_BLUFF_ORE()
 //	AI_Output(self,other,"GRD_262_Aaron_BLUFF_ORE_09_04");//Forget it.
 //	AI_Output(self,other,"GRD_262_Aaron_BLUFF_ORE_09_04");//Vergiss es.
 	AI_Output(self,other,"GRD_262_Aaron_BLUFF_ORE_09_04");//Na to zapomeň!
-};  
+};
+
 func void GRD_262_Aaron_BLUFF_BANDIT()
 {
 //	AI_Output(other,self,"GRD_262_Aaron_BLUFF_BANDIT_15_01"); //I've heard that there are gangsters in the mine here. They want the ore!
@@ -114,6 +117,7 @@ func void GRD_262_Aaron_BLUFF_BANDIT()
 //	AI_Output(self,other,"GRD_262_Aaron_BLUFF_BANDIT_09_02"); //Hältst du mich für blöd? Das würden sie niemals wagen!
 	AI_Output(self,other,"GRD_262_Aaron_BLUFF_BANDIT_09_02"); //Máš mě za hlupáka? Něčeho takového by se nikdy neodvážili!
 };
+
 func void GRD_262_Aaron_BLUFF_IAN()
 {
 //	AI_Output(other,self,"GRD_262_Aaron_BLUFF_IAN_15_01"); //Ian sent me. You should go to see him at once!
@@ -133,7 +137,8 @@ func void GRD_262_Aaron_BLUFF_IAN()
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"He wants to give you a reward.",GRD_262_Aaron_BLUFF_GOOD);
 //	Info_AddChoice(GRD_262_Aaron_BLUFF,"Belohnung für gute Dienste",GRD_262_Aaron_BLUFF_GOOD);
 	Info_AddChoice(GRD_262_Aaron_BLUFF,"Chce ti dát odměnu.",GRD_262_Aaron_BLUFF_GOOD);
-};  
+};
+
 func void GRD_262_Aaron_BLUFF_GOOD()
 {
 //	AI_Output(other,self,"GRD_262_Aaron_BLUFF_GOOD_15_01"); //He wants to give you a reward for your good work.
@@ -145,6 +150,7 @@ func void GRD_262_Aaron_BLUFF_GOOD()
 	Npc_SetTempAttitude(self,ATT_ANGRY);
 	AI_StopProcessInfos(self);
 };
+
 func void GRD_262_Aaron_BLUFF_BAD()
 {
 //	AI_Output(other,self,"GRD_262_Aaron_BLUFF_BAD_15_01"); //He'll kill you 'cos you're so lazy.
@@ -155,6 +161,7 @@ func void GRD_262_Aaron_BLUFF_BAD()
 	AI_Output(self,other,"GRD_262_Aaron_BLUFF_BAD_09_02"); //To není žádná novinka. Zmiz!
 	AI_StopProcessInfos(self);
 };
+
 func void GRD_262_Aaron_BLUFF_UGLY()
 {
 //	AI_Output(other,self,"GRD_262_Aaron_BLUFF_UGLY_15_01"); //No idea. Ian will tell you that himself! Do you think he'd tell me something like that?
@@ -200,6 +207,7 @@ func int GRD_262_Aaron_PISSED_Condition()
 		return TRUE;
 	};
 };
+
 func void GRD_262_Aaron_PISSED_Info()
 {
 	AI_DrawWeapon (self);
@@ -274,6 +282,7 @@ func int GRD_262_Aaron_SELLNOW_Condition()
 		return 1;
 	};
 };
+
 func void GRD_262_Aaron_SELLNOW_Info()
 {
 //	AI_Output(other,self,"Info_Aaron_SELLNOW_15_01"); //Here's your key.
@@ -297,4 +306,3 @@ func void GRD_262_Aaron_SELLNOW_Info()
 	B_LogEntry(CH2_SnipesDeal,"Prodal jsem Aaronovi jeho vlastní klíč. Celkem vzato, nakonec jsem na tom vydělal!"); 
 	Log_SetTopicStatus(CH2_SnipesDeal,LOG_SUCCESS);
 };
-

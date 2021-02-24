@@ -85,6 +85,8 @@ func void Info_Grd_237_FirstWarn_Info_YES()
 //	AI_Output(self,hero,"Info_Grd_237_FirstWarn_07_07"); //Oh, das ist aber sehr umsichtig von dir.
 	AI_Output(self,hero,"Info_Grd_237_FirstWarn_07_07"); //Och, to je od tebe nesmírně obezřetné.
 
+	//#NEEDS_ATTENTION ak hrac nema rudu, tak by sa nemala volat B_GiveInvItems funkcia.
+	//Tieto NPC su zbytocne :-/
 	var int ore;
 	ore = Npc_HasItems(hero,ItMiNugget);
 	B_GiveInvItems(hero,self,ItMiNugget, ore);

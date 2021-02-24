@@ -101,12 +101,12 @@ instance GRD_271_ULBERT_DRINK(C_INFO)
 
 func int GRD_271_ULBERT_DRINK_Condition()
 { 
-	if (Npc_KnowsInfo(hero,GRD_271_ULBERT_TRICK)) && (Npc_HasItems(hero,ItFobeer )|| Npc_HasItems(hero,ItFoWine )|| Npc_HasItems(hero,ItFoBooze)  )
+	if (Npc_KnowsInfo(hero,GRD_271_ULBERT_TRICK)) && (Npc_HasItems(hero,ItFobeer )|| Npc_HasItems(hero,ItFoWine )|| Npc_HasItems(hero,ItFoBooze))
 	{
 		return 1;
 	};
-
 };
+
 func void GRD_271_ULBERT_DRINK_Info()
 {
 //	AI_Output(other,self,"GRD_271_ULBERT_DRINK_Info_15_01"); //Here you go, have one on me as well!
@@ -157,7 +157,7 @@ instance GRD_271_ULBERT_DRUNK(C_INFO)
 	permanent = 0;
 //	description = "Is there anything special in the storeroom NOW?"; 
 //	description = "Gibt es denn JETZT in dem Schuppen etwas besonderes?"; 
-	description = "Je TEĎ v tom skladišti něco mimořádného?"; 
+	description = "Je TEĎ v tom skladišti něco zajímavého?"; 
 };
 
 func int GRD_271_ULBERT_DRUNK_Condition()
@@ -166,13 +166,13 @@ func int GRD_271_ULBERT_DRUNK_Condition()
 	{
 		return 1;
 	};
-
 };
+
 func void GRD_271_ULBERT_DRUNK_Info()
 {
 //	AI_Output(other,self,"GRD_271_ULBERT_DRUNK_Info_15_01"); //Is there anything special in the storeroom NOW?
 //	AI_Output(other,self,"GRD_271_ULBERT_DRUNK_Info_15_01"); //Gibt's denn JETZT in dem Schuppen was Besonderes?
-	AI_Output(other,self,"GRD_271_ULBERT_DRUNK_Info_15_01"); //Je TEĎ v tom skladišti něco mimořádného?
+	AI_Output(other,self,"GRD_271_ULBERT_DRUNK_Info_15_01"); //Je TEĎ v tom skladišti něco zajímavého?
 //	AI_Output(self,other,"GRD_271_ULBERT_DRUNK_Info_07_02"); //Some chests that we store supplies in. The key has disappeared though.
 //	AI_Output(self,other,"GRD_271_ULBERT_DRUNK_Info_07_02"); //Ein paar Truhen, in denen wir Vorräte lagern. Allerdings ist der Schlüssel verschwunden.
 	AI_Output(self,other,"GRD_271_ULBERT_DRUNK_Info_07_02"); //Nějaké truhly, ve kterých skladujeme zásoby. Ztratil se ale klíč.
@@ -181,12 +181,13 @@ func void GRD_271_ULBERT_DRUNK_Info()
 	AI_Output(other,self,"GRD_271_ULBERT_DRUNK_Info_15_03"); //Ztratil?
 //	AI_Output(self,other,"GRD_271_ULBERT_DRUNK_Info_07_04"); //I bet Aleph was involved. That guy can't be trusted.
 //	AI_Output(self,other,"GRD_271_ULBERT_DRUNK_Info_07_04"); //Ich wette, Aleph hat da seine Finger im Spiel. Dem Kerl kann man nicht trauen.
-	AI_Output(self,other,"GRD_271_ULBERT_DRUNK_Info_07_04"); //Vsadím se, že v tom má prsty Aleph. Tomu klukovi se nedá věřit.
+	AI_Output(self,other,"GRD_271_ULBERT_DRUNK_Info_07_04"); //Vsadím se, že v tom má prsty Aleph. Tomu chlapovi se nedá věřit.
 
 //	B_LogEntry(CH2_StorageShed,"After I got Ulbert something to drink, he told me that he's missing the key for the chests. Allegedly Aleph the digger is somehow involved!");
 //	B_LogEntry(CH2_StorageShed,"Nachdem ich Ulbert was zu trinken  gegeben habe, erzählte er mir, dass er den Schlüssel für die Truhen vermißt. Angeblich soll Aleph der Buddler seine Finger im Spiel haben!");
 	B_LogEntry(CH2_StorageShed,"Když jsem dal Ulbertovi napít, řekl mi, že ztratil klíč od truhlic. Údajně v tom má prsty kopáč Aleph!");
-};  
+};
+
 // ***************** Infos *****************************
 instance GRD_271_ULBERT_LOCK(C_INFO)
 {
@@ -206,8 +207,8 @@ func int GRD_271_ULBERT_LOCK_Condition()
 	{
 		return 1;
 	};
-
 };
+
 func void GRD_271_ULBERT_LOCK_Info()
 {
 //	AI_Output(other,self,"GRD_271_ULBERT_LOCK_Info_15_01"); //Listen, Ian and the others are sitting at the bottom having grilled meat.
@@ -215,7 +216,7 @@ func void GRD_271_ULBERT_LOCK_Info()
 	AI_Output(other,self,"GRD_271_ULBERT_LOCK_Info_15_01"); //Poslyš, Ian sedí s ostatními dole a opékají si tam maso.
 //	AI_Output(self,other,"GRD_271_ULBERT_LOCK_Info_07_02"); //What? Without me? Well, I'll collect my share!
 //	AI_Output(self,other,"GRD_271_ULBERT_LOCK_Info_07_02"); //Was? Ohne mich? Na, ich werde mir meinen Anteil schon holen!
-	AI_Output(self,other,"GRD_271_ULBERT_LOCK_Info_07_02"); //Cože? Beze mě? Dobře, vezmu si svůj díl.
+	AI_Output(self,other,"GRD_271_ULBERT_LOCK_Info_07_02"); //Cože? Beze mě? Dobře, vezmu si svůj podíl.
 
 //	B_LogEntry(CH2_StorageShed,"It was an easy game to get Ulbert away from the store shed. He doesn't seem to be exactly bright!");
 //	B_LogEntry(CH2_StorageShed,"Ulbert ließ sich sehr leicht vom Lagerschuppen weglocken. Er scheint nicht gerade der Hellste zu sein!");
@@ -242,8 +243,8 @@ func int GRD_271_ULBERT_ANGRY_Condition()
 	{
 		return TRUE;
 	};
-
 };
+
 func void GRD_271_ULBERT_ANGRY_Info()
 {
 //	AI_Output(self,other,"GRD_271_ULBERT_ANGRY_Info_07_01"); //Hey you, there was no grilled meat at all!

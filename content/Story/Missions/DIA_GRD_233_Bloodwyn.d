@@ -56,7 +56,9 @@ instance Info_Bloodwyn_Hello(C_INFO)
 
 func int Info_Bloodwyn_Hello_Condition()
 { 
-	if (Kapitel <= 2) 
+	if (Kapitel <= 2)
+	//#NEEDS_ATTENTION Bloodwyn ma tento dialog aj ked hrac patri k nejakej guilde - asi by sme mali zamedzit kontrolou guildy:
+	//if ((Kapitel <= 2) && (Npc_GetTrueGuild(other) == GIL_NONE))
 	{
 		return 1;
 	};
@@ -205,6 +207,8 @@ func void Info_Bloodwyn_Hello_NotNow()
 		AI_Output(self,other,"Info_Bloodwyn_Hello_NotNow_NoOre_08_00"); //Hm, opravdu nic nemáš. Dobrá, tak řekněme, že příště...
 	};
 
+	//#NEEDS_ATTENTION co ak hrac nema ziadnu rudu ? presun rudy by mal byt skor hore v podmienke
+	//if (Npc_HasItems(other,itminugget) > 0)
 	B_GiveInvItems(other,self,itminugget, Npc_HasItems(other,itminugget));//Alle Nuggets entfernen
 	Bloodwyn_ProtectionPaid = TRUE;
 	Herek_ProtectionBully = FALSE;
@@ -231,6 +235,8 @@ instance Info_Bloodwyn_PayDay(C_INFO)
 func int Info_Bloodwyn_PayDay_Condition()
 {
 	if ((Kapitel <= 2) && (Bloodwyn_PayDay <= Wld_GetDay()-1) && (Npc_HasItems(other,itminugget)>=10))
+	//#NEEDS_ATTENTION ak hrac zaplatil ako GIL_NONE, tak od neho Bloodwyn bude stale pytat rudu, mali by sme obmedzit na GIL_NONE
+	//if ((Kapitel <= 2) && (Bloodwyn_PayDay <= Wld_GetDay()-1) && (Npc_HasItems(other,itminugget)>=10) && (Npc_GetTrueGuild(other) == GIL_NONE))
 	{ 
 		return 1;
 	};
@@ -255,6 +261,7 @@ func void Info_Bloodwyn_PayDay_Info()
 //		Info_AddChoice(Info_Bloodwyn_PayDay,"Ich werde nicht mehr zahlen - du hast schon genug gekriegt.",Info_Bloodwyn_PayDay_PayNoMore);
 		Info_AddChoice(Info_Bloodwyn_PayDay,"Nezaplatím - už jste ze mě vytáhli dost.",Info_Bloodwyn_PayDay_PayNoMore);
 	}
+	//#NEEDS_ATTENTION - zbytocna podmienka, staci else :)
 	else if (Bloodwyn_ProtectionPaid == FALSE)
 	{
 //		AI_Output(self,other,"Info_Bloodwyn_PayDay_Den_08_00"); //Hey, you!
@@ -330,6 +337,8 @@ instance Info_Bloodwyn_Doch(C_INFO)
 func int Info_Bloodwyn_Doch_Condition()
 {
 	if (Bloodwyn_ProtectionPaid == FALSE)
+	//#NEEDS_ATTENTION, zase by som obmedzil na GIL_NONE
+	//if ((Bloodwyn_ProtectionPaid == FALSE) && (Npc_GetTrueGuild(other) == GIL_NONE))
 	{ 
 		return 1;
 	};
@@ -431,12 +440,12 @@ instance GRD_233_Bloodwyn_WELCOME(C_INFO)
 
 func int GRD_233_Bloodwyn_WELCOME_Condition()
 { 
-
 	if (Npc_GetTrueGuild(hero) == GIL_GRD) 
 	{
 		return TRUE;
 	};
 };
+
 func void GRD_233_Bloodwyn_WELCOME_Info()
 {
 //	AI_Output(self,other,"GRD_233_Bloodwyn_WELCOME_Info_08_01"); //You're one of us now. Well done. The Guards need men like you!
@@ -601,4 +610,3 @@ func void Info_Bloodwyn_DIE_Info()
 
 	AI_StopProcessInfos(self);
 };
-

@@ -71,7 +71,7 @@ instance Info_Kirgo_Good(C_INFO)
 	permanent = 0;
 //	description = "Are you good? At fighting, I mean?";
 //	description = "Bist du gut? - Im Kämpfen meine ich.";
-	description = "A jsi dobrý? Myslím v boji, chápeš?";
+	description = "A jsi dobrý? Myslím v boji.";
 };                       
 
 func int Info_Kirgo_Good_Condition()
@@ -140,7 +140,7 @@ func void Info_Kirgo_Charge_NOW()
 	AI_Output(other,self,"Info_Kirgo_Charge_NOW_15_00"); //Ne! Chci proti tobě bojovat. Teď!
 //	AI_Output(self,other,"Info_Kirgo_Charge_NOW_05_01"); //In that case... I'm ready when you are.
 //	AI_Output(self,other,"Info_Kirgo_Charge_NOW_05_01"); //Wie du willst ... Ich bin bereit, wenn du es bist.
-	AI_Output(self,other,"Info_Kirgo_Charge_NOW_05_01"); //Jestli jsi připraven... Jestli jsi připraven, já taky.
+	AI_Output(self,other,"Info_Kirgo_Charge_NOW_05_01"); //Jak si přeješ... Jestli jsi připraven, tak já taky.
 	Info_ClearChoices(Info_Kirgo_Charge);
 };
 
@@ -160,6 +160,7 @@ func void Info_Kirgo_Charge_Beer()
 	AI_Output(self,other,"Info_Kirgo_Charge_Beer_05_03"); //Škoda... No nic... Hej, na někoho, kdo byl dva měsíce pod zámkem, ale vypadáš docela dobře.
 //	AI_Output(other,self,"Info_Kirgo_Charge_Beer_15_04"); //I'd like it to stay that way, too.
 //	AI_Output(other,self,"Info_Kirgo_Charge_Beer_15_04"); //Ich werde zusehen, dass das so bleibt.
+	//#NEEDS_ATTENTION neprebasnime?
 	AI_Output(other,self,"Info_Kirgo_Charge_Beer_15_04"); //Postarám se, aby to tak zůstalo.
 //	AI_Output(self,other,"Info_Kirgo_Charge_Beer_05_05"); //Then why do you insist on fighting one of us?
 //	AI_Output(self,other,"Info_Kirgo_Charge_Beer_05_05"); //Warum willst du dann unbedingt gegen einen von uns antreten?
@@ -169,16 +170,19 @@ func void Info_Kirgo_Charge_Beer()
 	AI_Output(other,self,"Info_Kirgo_Charge_Beer_15_06"); //Chci, aby mě v táboře uznávali!
 //	AI_Output(self,other,"Info_Kirgo_Charge_Beer_05_07"); //By Scatty, you mean? Hm, he's one of the most influential men in the Outer Ring... You might be able to impress him by defeating me...
 //	AI_Output(self,other,"Info_Kirgo_Charge_Beer_05_07"); //Bei Scatty, meinst du? Hm, er ist einer der einflussreichsten Leute hier im Außenring ... Wenn du mich besiegst, könnte ihn das schon beeindrucken ...
-	AI_Output(self,other,"Info_Kirgo_Charge_Beer_05_07"); //Myslíš Scattyho? Hm, to je jeden z nejvýznamnějších mužů z Vnějšího okruhu... Když mě porazíš, určitě to ne něj zapůsobí...
+	AI_Output(self,other,"Info_Kirgo_Charge_Beer_05_07"); //Myslíš Scattyho? Hm, to je jeden z nejvýznamnějších mužů z Vnějšího okruhu... Když mě porazíš, určitě to na něj zapůsobí...
 //	AI_Output(self,other,"Info_Kirgo_Charge_Beer_05_08"); //But if you really want to impress him, it's Kharim you need to beat. Only thing is, I'm afraid he might be too good for you!
 //	AI_Output(self,other,"Info_Kirgo_Charge_Beer_05_08"); //Aber wenn du ihm richtig imponieren willst, müsstest du Kharim umhauen. Ich fürchte nur, er ist viel zu gut für dich!
-	AI_Output(self,other,"Info_Kirgo_Charge_Beer_05_08"); //Ale jestli ho doopravdy chceš zaujmout, pak musíš porazit Kharima. Akorát mám obavu, že na tebe bude příliš silný!
+	AI_Output(self,other,"Info_Kirgo_Charge_Beer_05_08"); //Ale jestli ho doopravdy chceš zaujmout, pak musíš porazit Kharima. Jen se bojím, že na tebe bude příliš silný!
 //	AI_Output(self,other,"Info_Kirgo_Charge_Beer_05_09"); //If you still want to fight me, let me know! But I won't enjoy knocking you out cold.
 //	AI_Output(self,other,"Info_Kirgo_Charge_Beer_05_09"); //Falls du immer noch gegen mich kämpfen willst - sag mir Bescheid! Aber ich werd' dir nicht gerne die Fresse polieren.
-	AI_Output(self,other,"Info_Kirgo_Charge_Beer_05_09"); //Jestli chceš ještě pořád bojovat se mnou, dej mi vědět. Nebudu mít ale radost z toho, až ti zmaluju obličej.
+	AI_Output(self,other,"Info_Kirgo_Charge_Beer_05_09"); //Jestli chceš ještě pořád se mnou bojovat, dej mi vědět. Nebudu mít ale radost z toho, až ti zmaluju obličej.
 
-	CreateInvItem(other,ItFoBeer);
-	B_GiveInvItems(other,self,ItFoBeer,1);
+	//#Bugfix Kirgo si od hraca zobral pivo :)
+	//CreateInvItem(other,ItFoBeer);
+	//B_GiveInvItems(other,self,ItFoBeer,1);
+	CreateInvItem(self, ItFoBeer);
+	B_GiveInvItems(self, other, ItFoBeer, 1);
 
 	self.npctype = npctype_FRIEND;
 
@@ -255,7 +259,7 @@ func void Info_Kirgo_InArena_Info()
 	{
 //		AI_Output(self,other,"Info_Kirgo_InArena_05_00"); //Right, let's get to it. May the best man win!
 //		AI_Output(self,other,"Info_Kirgo_InArena_05_00"); //So, dann wollen wir mal. Möge der Bessere gewinnen!
-		AI_Output(self,other,"Info_Kirgo_InArena_05_00"); //Dobře, pojďme do toho. Ať vyhraje ten nejlepší!
+		AI_Output(self,other,"Info_Kirgo_InArena_05_00"); //Dobře, pojďme na to. Ať vyhraje ten nejlepší!
 
 		AI_StopProcessInfos(self);
 

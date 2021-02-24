@@ -95,7 +95,7 @@ func void DIA_Grd_216_DustyZoll_Info()
 {
 //	AI_Output(self,other,"DIA_Grd_216_Dusty_Zoll_13_00"); //Stop! Where d'you think you're going with our friend?
 //	AI_Output(self,other,"DIA_Grd_216_Dusty_Zoll_13_00"); //Halt! Wo soll's denn mit unserem Freund hier hingehen?
-	AI_Output(self,other,"DIA_Grd_216_Dusty_Zoll_13_00"); //Stůj! Kamže máš za svým přítelem namířeno?
+	AI_Output(self,other,"DIA_Grd_216_Dusty_Zoll_13_00"); //Stůj! Kamže máš se svým přítelem namířeno?
 	Info_ClearChoices(DIA_Grd_216_DustyZoll);
 //	Info_AddChoice(DIA_Grd_216_DustyZoll,"That's none of your business!",DIA_Grd_216_DustyZoll_PissOff);
 //	Info_AddChoice(DIA_Grd_216_DustyZoll,"Das geht dich einen Dreck an!",DIA_Grd_216_DustyZoll_PissOff);
@@ -162,7 +162,7 @@ func void DIA_Grd_216_DustyZoll_LittleWalk()
 		DIA_Grd_216_DustyZoll.permanent = 0;
 //		B_LogEntry(CH1_RecruitDusty,"I managed to bribe the guards at the rear south gate. Everyone has a price!");
 //		B_LogEntry(CH1_RecruitDusty,"Die Wache am hinteren Südtor hat sich tatsächlich bestechen lassen. Es hat einfach jeder seinen Preis!");
-		B_LogEntry(CH1_RecruitDusty,"Stráže u jižní brány se nechali lechce uplatit. Každý má svoji cenu!");
+		B_LogEntry(CH1_RecruitDusty,"Stráže u jižní brány se nechali lehce uplatit. Každý má svoji cenu!");
 		B_GiveXP(XP_BribedDustyGuard);
 
 		AI_StopProcessInfos(self);
@@ -201,7 +201,6 @@ func int GRD_216_Torwache_SEETHORUS_Condition()
 	&& ((CorKalom_BringMCQBalls == LOG_SUCCESS) || (Npc_HasItems(hero,ItAt_Crawlerqueen) >= 3))
 	&& (!Npc_KnowsInfo(hero,GRD_200_Thorus_GARDIST))
 	&& (Npc_GetTrueGuild(hero) == GIL_STT) 
-
 	{
 		return TRUE;
 	};

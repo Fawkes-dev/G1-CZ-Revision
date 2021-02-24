@@ -105,7 +105,7 @@ func void DIA_Scorpio_Hello_Kraut()
 	AI_Output(other,self,"DIA_Scorpio_Hello_Kraut_15_00"); //Nesu zásilku drogy z bažin pro Gomeze.
 //	AI_Output(self,other,"DIA_Scorpio_Hello_Kraut_13_01"); //Then take it to the house with the two guards outside the door.
 //	AI_Output(self,other,"DIA_Scorpio_Hello_Kraut_13_01"); //Dann bring sie in das Haus mit den beiden Wachen vor der Tür.
-	AI_Output(self,other,"DIA_Scorpio_Hello_Kraut_13_01"); //Tak ji vezmi do budouvy se dvěma strážci přede dveřmi.
+	AI_Output(self,other,"DIA_Scorpio_Hello_Kraut_13_01"); //Tak ji vezmi do budovy se dvěma strážci přede dveřmi.
 	Info_ClearChoices(DIA_Scorpio_Hello);
 };
 
@@ -145,6 +145,9 @@ instance DIA_Scorpio_REFUSETRAIN(C_INFO)
 func int DIA_Scorpio_REFUSETRAIN_Condition()
 {
 	if (Npc_KnowsInfo(hero,DIA_Scorpio_Hello) && (Npc_GetTrueGuild(hero) != GIL_GRD))
+	//#NEEDS_ATTENTION - tento dialog by nemal byt dostupny od prepadnutia Svobodneho dolu - to uz je Scorpio pri Cavalornovi
+	//Teoreticky postaci dialog obmedzit 3. kapitolou
+	//if (Npc_KnowsInfo(hero,DIA_Scorpio_Hello) && (Npc_GetTrueGuild (hero) != GIL_GRD) && (Kapitel <= 3))
 	{
 		return 1;
 	};
@@ -262,9 +265,9 @@ func void GRD_205_Scorpio_CROSSBOW_OK()
 //	AI_Output(other,self,"GRD_205_Scorpio_CROSSBOW_OK_15_01"); //It's a deal. So show me how to handle a crossbow.
 //	AI_Output(other,self,"GRD_205_Scorpio_CROSSBOW_OK_15_01"); //Einverstanden. Zeig mir den Umgang mit der Armbrust.
 	AI_Output(other,self,"GRD_205_Scorpio_CROSSBOW_OK_15_01"); //Nauč mě ještě lépe zacházet s kuší.
-	if (Npc_HasItems(hero,ItMiNugget)>= 200)
+	if (Npc_HasItems(hero,ItMiNugget)>=200)
 	{
-		if (B_GiveSkill(other,NPC_TALENT_CROSSBOW , 1, LPCOST_TALENT_CROSSBOW_1))
+		if (B_GiveSkill(other,NPC_TALENT_CROSSBOW,1,LPCOST_TALENT_CROSSBOW_1))
 		{
 //			AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW_OK_13_02"); //Okay, let's get started.
 //			AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW_OK_13_02"); //Gut, fangen wir direkt an.
@@ -289,7 +292,7 @@ func void GRD_205_Scorpio_CROSSBOW_OK()
 	{
 //	 AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW_OK_13_07"); //TWO HUNDRED ORE, right here, in my hand. If you don't have enough ore, then get some!
 //	 AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW_OK_13_07"); //ZWEIHUNDERT ERZ. Jeder einzelne Brocken in meine Hand. Wenn du das Erz nicht hast, dann besorge es dir!
-	 AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW_OK_13_07"); //DVĚ STĚ nugetů pěkně sem, na ruku. Jestli nemáš dost nugetů, tak si je obstarej!
+	 AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW_OK_13_07"); //DVĚ STĚ nugetů pěkně sem, na ruku. Jestli nemáš dost rudy, tak si ji obstarej!
 	};
 };
 
@@ -311,7 +314,7 @@ instance GRD_205_Scorpio_CROSSBOW2(C_INFO)
 
 func int GRD_205_Scorpio_CROSSBOW2_Condition()
 {
-	if (Npc_GetTalentSkill  ( hero,NPC_TALENT_CROSSBOW ) == 1) 
+	if (Npc_GetTalentSkill(hero,NPC_TALENT_CROSSBOW) == 1) 
 	{
 		return TRUE;
 	};
@@ -327,8 +330,8 @@ func void GRD_205_Scorpio_CROSSBOW2_Info()
 	AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_Info_13_02"); //Bude to stát 300 nugetů.
 
 	Info_ClearChoices(GRD_205_Scorpio_CROSSBOW2);
-	Info_Addchoice (GRD_205_Scorpio_CROSSBOW2,B_BuildLearnString(NAME_LearnCrossbow_2, LPCOST_TALENT_CROSSBOW_2,300),GRD_205_Scorpio_CROSSBOW2_OK);
-	Info_Addchoice (GRD_205_Scorpio_CROSSBOW2,DIALOG_BACK,  GRD_205_Scorpio_CROSSBOW2_BACK);
+	Info_Addchoice (GRD_205_Scorpio_CROSSBOW2,B_BuildLearnString(NAME_LearnCrossbow_2,LPCOST_TALENT_CROSSBOW_2,300),GRD_205_Scorpio_CROSSBOW2_OK);
+	Info_Addchoice (GRD_205_Scorpio_CROSSBOW2,DIALOG_BACK,GRD_205_Scorpio_CROSSBOW2_BACK);
 
 };  
 func void GRD_205_Scorpio_CROSSBOW2_BACK()
@@ -341,9 +344,9 @@ func void GRD_205_Scorpio_CROSSBOW2_OK()
 //	AI_Output(other,self,"GRD_205_Scorpio_CROSSBOW2_OK_15_01"); //Let's start now.
 //	AI_Output(other,self,"GRD_205_Scorpio_CROSSBOW2_OK_15_01"); //Lass uns direkt anfangen.
 	AI_Output(other,self,"GRD_205_Scorpio_CROSSBOW2_OK_15_01"); //Tak začneme.
-	if (Npc_HasItems(hero,ItMiNugget)>= 300)
+	if (Npc_HasItems(hero,ItMiNugget)>=300)
 	{
-		if (B_GiveSkill(other,NPC_TALENT_CROSSBOW , 2, LPCOST_TALENT_CROSSBOW_2))
+		if (B_GiveSkill(other,NPC_TALENT_CROSSBOW,2,LPCOST_TALENT_CROSSBOW_2))
 		{
 //		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_02"); //Right. Your shots'll be more accurate and straight if you bend your knees when firing.
 //		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_02"); //Gut. Du bekommst mehr Treffsicherheit und Ruhe, wenn du beim Schuss in die Knie gehst
@@ -353,7 +356,7 @@ func void GRD_205_Scorpio_CROSSBOW2_OK()
 		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_03"); //Musíš se naučit odhadnout, jakou rychlostí se pohybuje tvůj protivník.
 //		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_04"); //Fire your bolt into the moving target's path to hit it and slow it down.
 //		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_04"); //Schieß in die Laufbahn des Zieles, dann wirst du es treffen und es dadurch auch in seiner Bewegung aufhalten.
-		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_04"); //Vystřel šipu do dráhy pohybujícího se cíle, abys jej zasáhl a zpomalil.
+		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_04"); //Vystřel šipku do dráhy pohybujícího se cíle, abys jej zasáhl a zpomalil.
 //		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_05"); //If there's more than one target, don't waste any time. Nail 'em all down one after the other with calculated shots.
 //		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_05"); //Wenn du mehrere Ziele hast, dann verschwende keine Zeit, sondern nagel' alle Ziele mit gezielten Schüssen fest und strecke sie abwechselnd nieder.
 		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_05"); //Pokud máš více než jeden cíl, pak nesmíš plýtvat časem. Sundej je jednoho po druhém v naplánovaném pořadí.
@@ -431,7 +434,7 @@ func void GRD_205_Scorpio_BANISHED_Info()
 	AI_Output(other,self,"GRD_205_Scorpio_BANISHED_Info_15_01"); //Jsi v pořádku?
 //	AI_Output(self,other,"GRD_205_Scorpio_BANISHED_Info_13_02"); //I'm hiding away here. I don't care for the trash those guards are pulling off.
 //	AI_Output(self,other,"GRD_205_Scorpio_BANISHED_Info_13_02"); //Ich habe mich hier her verzogen. Für den Mist, den die Gardisten gerade abziehen, habe ich nichts übrig.
-	AI_Output(self,other,"GRD_205_Scorpio_BANISHED_Info_13_02"); //Přesunul jsem se sem. S tím, co stráže na hradě provádí, nechci mítnic společného.
+	AI_Output(self,other,"GRD_205_Scorpio_BANISHED_Info_13_02"); //Přesunul jsem se sem. S tím, co stráže na hradě provádí, nechci mít nic společného.
 //	AI_Output(self,other,"GRD_205_Scorpio_BANISHED_Info_13_03"); //But I've taken some pretty good stuff from the arsenal. If you need a weapon, just let me know.
 //	AI_Output(self,other,"GRD_205_Scorpio_BANISHED_Info_13_03"); //Aber ich habe mir ein paar gute Stücke aus der Waffenkammer mitgenommen. Wenn du eine Waffe brauchst, sag mir Bescheid.
 	AI_Output(self,other,"GRD_205_Scorpio_BANISHED_Info_13_03"); //Ale vzal jsem s sebou pár pěkných kousků ze zbrojnice. Když budeš potřebovat nějakou zbraň, dej mi vědět.

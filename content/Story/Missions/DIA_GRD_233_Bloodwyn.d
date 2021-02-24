@@ -35,7 +35,7 @@ func void Info_Bloodwyn_EXIT_Schutzgeld_Info()
 	{
 //		AI_Output(self,other,"Info_Bloodwyn_EXIT_Schutzgeld_08_02"); //Don't you worry about anything here in the Camp! We'll be looking out for you.
 //		AI_Output(self,other,"Info_Bloodwyn_EXIT_Schutzgeld_08_02"); //Mach dir keine Sorgen, während du hier im Lager bist! Wir passen auf dich auf.
-		AI_Output(self,other,"Info_Bloodwyn_EXIT_Schutzgeld_08_02"); //Tady v táboře se ničím neznepokojuj. Dohlédneme na tebe.
+		AI_Output(self,other,"Info_Bloodwyn_EXIT_Schutzgeld_08_02"); //Nedělej si starosti. Když jsi v táboře, dohlédneme na tebe.
 	};
 
 	AI_StopProcessInfos(self);
@@ -56,7 +56,9 @@ instance Info_Bloodwyn_Hello(C_INFO)
 
 func int Info_Bloodwyn_Hello_Condition()
 { 
-	if (Kapitel <= 2) 
+	if (Kapitel <= 2)
+	//#NEEDS_ATTENTION Bloodwyn ma tento dialog aj ked hrac patri k nejakej guilde - asi by sme mali zamedzit kontrolou guildy:
+	//if ((Kapitel <= 2) && (Npc_GetTrueGuild(other) == GIL_NONE))
 	{
 		return 1;
 	};
@@ -71,7 +73,7 @@ func void Info_Bloodwyn_Hello_Info()
 	AI_Output(other,self,"Info_Bloodwyn_Hello_15_01"); //To mluvíš se mnou?
 //	AI_Output(self,other,"Info_Bloodwyn_Hello_08_02"); //I'm warning you! People like you can get into trouble awfully quick round here!
 //	AI_Output(self,other,"Info_Bloodwyn_Hello_08_02"); //Ich will dich warnen! Jemand wie du hat hier schnell Ärger am Hals!
-	AI_Output(self,other,"Info_Bloodwyn_Hello_08_02"); //Varuju tě! Lidi jako ty se tady dostanou do problémů razdva!
+	AI_Output(self,other,"Info_Bloodwyn_Hello_08_02"); //Chci tě varovat! Lidi jako ty se tady dostanou do problémů razdva!
 //	AI_Output(self,other,"Info_Bloodwyn_Hello_08_03"); //And most of the guys they chuck in here are bastards!
 //	AI_Output(self,other,"Info_Bloodwyn_Hello_08_03"); //Und die meisten, die sie hier reingeworfen haben, sind Arschlöcher!
 	AI_Output(self,other,"Info_Bloodwyn_Hello_08_03"); //A většina chlapů, se kterými se tu setkáš, jsou bastardi!
@@ -80,10 +82,10 @@ func void Info_Bloodwyn_Hello_Info()
 	AI_Output(self,other,"Info_Bloodwyn_Hello_08_04"); //Myslí si, že si s tebou můžou dělat, co je napadne. Ale my jim to nedovolíme.
 //	AI_Output(self,other,"Info_Bloodwyn_Hello_08_05"); //Gomez wants some peace in the Camp, and we guards make sure he gets it. But it's a job that doesn't come cheap.
 //	AI_Output(self,other,"Info_Bloodwyn_Hello_08_05"); //Gomez will, dass Ruhe im Lager herrscht. Und wir Gardisten sorgen dafür. Aber so eine Aufgabe ist extrem kostspielig.
-	AI_Output(self,other,"Info_Bloodwyn_Hello_08_05"); //Gomez chce, aby byl v táboře klid, a tak ho my, stráže, zajišťujeme. Je to ale práce, která není nijak laciná.
+	AI_Output(self,other,"Info_Bloodwyn_Hello_08_05"); //Gomez chce, aby byl v táboře klid, a o to se staráme my, stráže. Je to ale práce, která není nijak laciná.
 //	AI_Output(self,other,"Info_Bloodwyn_Hello_08_06"); //That's why I'm asking you for some ore. Look at it as a kind of token of friendship. You help us, and we'll help you. If you get in trouble, we'll be there for you.
 //	AI_Output(self,other,"Info_Bloodwyn_Hello_08_06"); //Darum bitte ich dich um etwas Erz. Du musst das als Freundschaftsdienst verstehen. Du hilfst uns und wir helfen dir. Wenn du mal Ärger hast, sind wir da.
-	AI_Output(self,other,"Info_Bloodwyn_Hello_08_06"); //To je důvod, proč ti říkám o pár nugetů. Ber to jako jakýsi projev přátelství. Ty pomůžeš nám, my pomůžeme tobě. Když se dostaneš do maléru, my tě z něj vytáhneme.
+	AI_Output(self,other,"Info_Bloodwyn_Hello_08_06"); //Proto tě prosím o pár nugetů. Ber to jako jakýsi projev přátelství. Ty pomůžeš nám, my pomůžeme tobě. Když se dostaneš do maléru, my tě z něj vytáhneme.
 
 	Info_ClearChoices(Info_Bloodwyn_Hello);
 //	Info_AddChoice(Info_Bloodwyn_Hello,"Why not? How much ore were you thinking of?",Info_Bloodwyn_Hello_HowMuch);
@@ -104,7 +106,7 @@ func void Info_Bloodwyn_Hello_ForgetIt()
 	AI_Output(other,self,"Info_Bloodwyn_ForgetIt_15_00"); //Myslíš, že ti mám zaplatit za ochranu? Ne, díky, postarám se o sebe sám!
 //	AI_Output(self,other,"Info_Bloodwyn_ForgetIt_08_01"); //Have it your own way, kid. You'll soon regret turning down a friendly offer!
 //	AI_Output(self,other,"Info_Bloodwyn_ForgetIt_08_01"); //Wie du meinst, Kleiner. Wirst schon sehen, was du davon hast, ein Freundschaftsangebot abzulehnen!
-	AI_Output(self,other,"Info_Bloodwyn_ForgetIt_08_01"); //Dělej, jak myslíš, hochu. Brzy budeš litovat, že jsi tuhle přátelskou nabídku odmítl!
+	AI_Output(self,other,"Info_Bloodwyn_ForgetIt_08_01"); //Jak myslíš, hochu. Brzy budeš litovat, že jsi tuhle přátelskou nabídku odmítl!
 	Bloodwyn_ProtectionPaid = FALSE;
 	Herek_ProtectionBully = TRUE;
 	Grim_ProtectionBully = TRUE;
@@ -139,7 +141,7 @@ func void Info_Bloodwyn_Hello_HowMuch()
 	{
 //		Info_AddChoice(Info_Bloodwyn_Hello,"Here's your ore. I can always use a friend or two.",Info_Bloodwyn_Hello_OkTakeIt);
 //		Info_AddChoice(Info_Bloodwyn_Hello,"Hier hast du das Erz. Ich kann Freunde brauchen.",Info_Bloodwyn_Hello_OkTakeIt);
-		Info_AddChoice(Info_Bloodwyn_Hello,"Tady je tvoje ruda. Jeden či dva přátelé se vždycky můžou hodit.",Info_Bloodwyn_Hello_OkTakeIt);
+		Info_AddChoice(Info_Bloodwyn_Hello,"Tady je tvoje ruda. Přátelé se vždycky hodí.",Info_Bloodwyn_Hello_OkTakeIt);
 	};
 };
 // -------------------------------------------------------
@@ -147,13 +149,13 @@ func void Info_Bloodwyn_Hello_OkTakeIt()
 {
 //	AI_Output(other,self,"Info_Bloodwyn_Hello_OkTakeIt_15_00"); //Here's your ore. I can always use a friend or two.
 //	AI_Output(other,self,"Info_Bloodwyn_Hello_OkTakeIt_15_00"); //Hier hast du das Erz. Ich kann Freunde gebrauchen.
-	AI_Output(other,self,"Info_Bloodwyn_Hello_OkTakeIt_15_00"); //Tady jsou. Přítele nebo dva můžu vždycky potřebovat.
+	AI_Output(other,self,"Info_Bloodwyn_Hello_OkTakeIt_15_00"); //Tady je tvoje ruda. Přátelé se vždycky hodí.
 //	AI_Output(self,other,"Info_Bloodwyn_Hello_OkTakeIt_08_01"); //You seem to be a clever lad. From now on, we'll be watching out for you.
 //	AI_Output(self,other,"Info_Bloodwyn_Hello_OkTakeIt_08_01"); //Du scheinst mir ein kluges Bürschchen zu sein. Von nun an werden wir auf dich aufpassen.
 	AI_Output(self,other,"Info_Bloodwyn_Hello_OkTakeIt_08_01"); //Vypadá to, že jsi rozumný mladík. Od teďka tě budeme ochraňovat.
 //	AI_Output(self,other,"Info_Bloodwyn_Hello_OkTakeIt_08_02"); //But that doesn't mean to say you can do what you like around here, okay?
 //	AI_Output(self,other,"Info_Bloodwyn_Hello_OkTakeIt_08_02"); //Aber das heißt nicht, dass du hier machen kannst, was du willst, verstanden?
-	AI_Output(self,other,"Info_Bloodwyn_Hello_OkTakeIt_08_02"); //Tím jsem ale neřekl, že si tu můžeš dělat, co se ti zlíbí, jasný?
+	AI_Output(self,other,"Info_Bloodwyn_Hello_OkTakeIt_08_02"); //To ale neznamená, že si tu můžeš dělat, co se ti zlíbí, jasný?
 
 	B_GiveInvItems(other,self,itminugget, 10);
 	Bloodwyn_ProtectionPaid = TRUE;
@@ -183,7 +185,7 @@ func void Info_Bloodwyn_Hello_NotNow()
 		{
 //			AI_Output(self,other,"Info_Bloodwyn_Hello_NotNow_TenOreMore_08_00"); //Hey, look at that? Looks like someone can't count to 10, eh?
 //			AI_Output(self,other,"Info_Bloodwyn_Hello_NotNow_TenOreMore_08_00"); //Na, was haben wir denn da? Kann da jemand nicht bis 10 zählen?
-			AI_Output(self,other,"Info_Bloodwyn_Hello_NotNow_TenOreMore_08_00"); //Podívej se na to. Vypadá snad jako někdo, kdo nemůže zaplatit 10 nugetů, co?
+			AI_Output(self,other,"Info_Bloodwyn_Hello_NotNow_TenOreMore_08_00"); //A, kohopak to tu máme. Někdo, kdo neumí počítat do deseti, co?
 //			AI_Output(self,other,"Info_Bloodwyn_Hello_NotNow_TenOreMore_08_01"); //I'm just gonna take everything you have. That'll help me forget you lied to me.
 //			AI_Output(self,other,"Info_Bloodwyn_Hello_NotNow_TenOreMore_08_01"); //Ich werd einfach alles nehmen, was du hast. Dafür vergesse ich, dass du mich belogen hast.
 			AI_Output(self,other,"Info_Bloodwyn_Hello_NotNow_TenOreMore_08_01"); //Vezmu si všechno, co máš. To mi pomůže zapomenout, žes mi lhal.
@@ -192,7 +194,7 @@ func void Info_Bloodwyn_Hello_NotNow()
 		{
 //			AI_Output(self,other,"Info_Bloodwyn_Hello_NotNow_LessThanTen_08_00"); //Oh, I take small donations too. It's the thought that counts! Thanks for the ore, kid!
 //			AI_Output(self,other,"Info_Bloodwyn_Hello_NotNow_LessThanTen_08_00"); //Ich nehme auch kleine Spenden, es ist der gute Wille, der zählt! Danke für das Erz, Kleiner!
-			AI_Output(self,other,"Info_Bloodwyn_Hello_NotNow_LessThanTen_08_00"); //Vezmu si také malý dárek. Dobrá vůle se počítá. Díky za ty nugety, hochu!
+			AI_Output(self,other,"Info_Bloodwyn_Hello_NotNow_LessThanTen_08_00"); //Vezmu si také malý příspěvek. Dobrá vůle se počítá. Díky za ty nugety, hochu!
 //			AI_Output(self,other,"Info_Bloodwyn_Hello_NotNow_LessThanTen_08_01"); //From now on, I'll be watching out for you whenever you're in the Camp.
 //			AI_Output(self,other,"Info_Bloodwyn_Hello_NotNow_LessThanTen_08_01"); //Von jetzt an werden wir ein Auge auf dich haben, solange du im Lager bist.
 			AI_Output(self,other,"Info_Bloodwyn_Hello_NotNow_LessThanTen_08_01"); //Od teďka budu na tebe dávat pozor po celou dobu, co budeš v táboře.
@@ -205,6 +207,8 @@ func void Info_Bloodwyn_Hello_NotNow()
 		AI_Output(self,other,"Info_Bloodwyn_Hello_NotNow_NoOre_08_00"); //Hm, opravdu nic nemáš. Dobrá, tak řekněme, že příště...
 	};
 
+	//#NEEDS_ATTENTION co ak hrac nema ziadnu rudu ? presun rudy by mal byt skor hore v podmienke
+	//if (Npc_HasItems(other,itminugget) > 0)
 	B_GiveInvItems(other,self,itminugget, Npc_HasItems(other,itminugget));//Alle Nuggets entfernen
 	Bloodwyn_ProtectionPaid = TRUE;
 	Herek_ProtectionBully = FALSE;
@@ -231,6 +235,8 @@ instance Info_Bloodwyn_PayDay(C_INFO)
 func int Info_Bloodwyn_PayDay_Condition()
 {
 	if ((Kapitel <= 2) && (Bloodwyn_PayDay <= Wld_GetDay()-1) && (Npc_HasItems(other,itminugget)>=10))
+	//#NEEDS_ATTENTION ak hrac zaplatil ako GIL_NONE, tak od neho Bloodwyn bude stale pytat rudu, mali by sme obmedzit na GIL_NONE
+	//if ((Kapitel <= 2) && (Bloodwyn_PayDay <= Wld_GetDay()-1) && (Npc_HasItems(other,itminugget)>=10) && (Npc_GetTrueGuild(other) == GIL_NONE))
 	{ 
 		return 1;
 	};
@@ -255,6 +261,7 @@ func void Info_Bloodwyn_PayDay_Info()
 //		Info_AddChoice(Info_Bloodwyn_PayDay,"Ich werde nicht mehr zahlen - du hast schon genug gekriegt.",Info_Bloodwyn_PayDay_PayNoMore);
 		Info_AddChoice(Info_Bloodwyn_PayDay,"Nezaplatím - už jste ze mě vytáhli dost.",Info_Bloodwyn_PayDay_PayNoMore);
 	}
+	//#NEEDS_ATTENTION - zbytocna podmienka, staci else :)
 	else if (Bloodwyn_ProtectionPaid == FALSE)
 	{
 //		AI_Output(self,other,"Info_Bloodwyn_PayDay_Den_08_00"); //Hey, you!
@@ -280,7 +287,7 @@ func void Info_Bloodwyn_PayDay_PayAgain()
 	AI_Output(other,self,"Info_Bloodwyn_PayDay_PayAgain_15_00"); //Tady jsou. 10 nugetů není mezi přáteli mnoho.
 //	AI_Output(self,other,"Info_Bloodwyn_PayDay_PayAgain_08_01"); //My thoughts exactly!
 //	AI_Output(self,other,"Info_Bloodwyn_PayDay_PayAgain_08_01"); //Genau so sehe ich das auch.
-	AI_Output(self,other,"Info_Bloodwyn_PayDay_PayAgain_08_01"); //Moje slova!
+	AI_Output(self,other,"Info_Bloodwyn_PayDay_PayAgain_08_01"); //Přesně tak!
 
 	Bloodwyn_ProtectionPaid = TRUE;
 	Herek_ProtectionBully = FALSE;
@@ -302,7 +309,7 @@ func void Info_Bloodwyn_PayDay_PayNoMore()
 	AI_Output(other,self,"Info_Bloodwyn_PayDay_PayNoMore_15_02"); //Neměj obavy, postarám se o sebe docela dobře sám.
 //	AI_Output(self,other,"Info_Bloodwyn_PayDay_PayNoMore_08_03"); //We'll see...
 //	AI_Output(self,other,"Info_Bloodwyn_PayDay_PayNoMore_08_03"); //Das werden wir ja sehen ...
-	AI_Output(self,other,"Info_Bloodwyn_PayDay_PayNoMore_08_03"); //Dobrá, uvidíme...
+	AI_Output(self,other,"Info_Bloodwyn_PayDay_PayNoMore_08_03"); //To se uvidí...
 
 	Bloodwyn_ProtectionPaid = FALSE;
 	Herek_ProtectionBully = TRUE;
@@ -330,6 +337,8 @@ instance Info_Bloodwyn_Doch(C_INFO)
 func int Info_Bloodwyn_Doch_Condition()
 {
 	if (Bloodwyn_ProtectionPaid == FALSE)
+	//#NEEDS_ATTENTION, zase by som obmedzil na GIL_NONE
+	//if ((Bloodwyn_ProtectionPaid == FALSE) && (Npc_GetTrueGuild(other) == GIL_NONE))
 	{ 
 		return 1;
 	};
@@ -404,7 +413,7 @@ func void Info_Bloodwyn_PayForJesse_Info()
 		AI_Output(other,self,"Info_Bloodwyn_PayForJesse_15_03"); //Ne - platím za něj. Tak vem si těch 10 nugetů a nech ho na pokoji!
 //		AI_Output(self,other,"Info_Bloodwyn_PayForJesse_08_04"); //Okay, man, if that's the way you want it.
 //		AI_Output(self,other,"Info_Bloodwyn_PayForJesse_08_04"); //Wie du willst, Mann - wie du willst.
-		AI_Output(self,other,"Info_Bloodwyn_PayForJesse_08_04"); //Dobrá, člověče, když teda myslíš.
+		AI_Output(self,other,"Info_Bloodwyn_PayForJesse_08_04"); //Dobrá, člověče. Jak myslíš.
 		Jesse_PayForMe = LOG_SUCCESS;
 	}
 	else
@@ -431,12 +440,12 @@ instance GRD_233_Bloodwyn_WELCOME(C_INFO)
 
 func int GRD_233_Bloodwyn_WELCOME_Condition()
 { 
-
 	if (Npc_GetTrueGuild(hero) == GIL_GRD) 
 	{
 		return TRUE;
 	};
 };
+
 func void GRD_233_Bloodwyn_WELCOME_Info()
 {
 //	AI_Output(self,other,"GRD_233_Bloodwyn_WELCOME_Info_08_01"); //You're one of us now. Well done. The Guards need men like you!
@@ -484,36 +493,36 @@ func void Info_Bloodwyn_DIE_Info()
 		{
 //			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_01"); //It's the traitor in our midst! PAH! And we called you a guard!
 //			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_01"); //Da ist der Verräter aus unserer Mitte. PAH! Und dich haben wir mal Gardist genannt!
-			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_01"); //Mezi námi je zrádce! PCHÁ! A my jsme tě nazvali strážcem!
+			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_01"); //Tady je ten zrádce! PCHÁ! A my jsme tě nazvali strážcem!
 		}
 		else if (oldHeroGuild == GIL_KDF)
 		{
 //			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_02"); //Looks like we've overlooked one of the rebellious fire mages!
 //			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_02"); //Wir haben wohl einen der aufständischen Feuermagier übersehen!
-			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_02"); //Vypadá to, jako bysme přehlídli jednoho z těch vzbouřených mágů Ohně!
+			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_02"); //Vypadá to, jako bychom přehlédli jednoho z těch vzpurných mágů Ohně!
 		}
 		else
 		{
 //			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_03"); //It's the Shadow that betrayed us!
 //			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_03"); //Das ist der Schatten, der uns verraten hat!
-			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_03"); //To Stín nás zradil!
+			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_03"); //To je ten Stín co nás zradil!
 		}; 
 
 //		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_04"); //Hold on. What are you talking about, Bloodwyn?
 //		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_04"); //Moment. Was redest du da, Bloodwyn?
-		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_04"); //Počkej. O čem jsi to mluvil, Bloodwyne?
+		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_04"); //Počkej. O čem to mluvíš, Bloodwyne?
 //		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_05"); //So you're in cahoots with the New Camp, huh?
 //		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_05"); //Machst gemeinsame Sache mit dem Neuen Lager, was?
 		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_05"); //Tak ty jsi ve spolčení s Novým táborem, jo?
 //		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_06"); //No, wait, I'm still...
 //		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_06"); //Warte mal, ich bin doch noch immer ...
-		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_06"); //Ne, počkej, pořád jsem...
+		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_06"); //Ne, počkej, pořád jsem přece...
 //		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_07"); //Guess you must have thought you could go on like that forever.
 //		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_07"); //Glaubtest wohl, das könnte ewig so gehen.
 		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_07"); //Asi sis myslel, že ti to bude procházet věčně.
 //		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_08"); //Stop this nonsense...
 //		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_08"); //Jetzt hör aber auf mit diesem Unsinn ...
-		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_08"); //Přestaň s tím nesmyslem...
+		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_08"); //Přestaň s těmi nesmysly...
 //		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_09"); //Traitors like you must die.
 //		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_09"); //Verräter wie dich machen wir kalt.
 		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_09"); //Zrádce jako ty musí zemřít.
@@ -533,7 +542,7 @@ func void Info_Bloodwyn_DIE_Info()
 			Log_SetTopicStatus(CH4_BannedFromOC,LOG_RUNNING);
 //			B_LogEntry(CH4_BannedFromOC,"Bloodwyn, who's guarding the back gate of the Old Camp with a group of guards, called me a traitor and a renegade. He wouldn't listen to me and attacked me at once!");
 //			B_LogEntry(CH4_BannedFromOC,"Bloodwyn, der nun mit einer Gruppe Gardisten am hinteren Tor des Alten Lagers Wache hält, bezeichnete mich als Verräter und Abtrünniger. Er lies sich auf keine Diskussion ein und griff mich sofort an!");
-			B_LogEntry(CH4_BannedFromOC,"Bloodwyn, který se skupinou vojáků střeží zadní bránu Starého tábora, mě nazval zrádcem a odpadlíkem. Ani mě nevyslechl a zaútočil na mě!");
+			B_LogEntry(CH4_BannedFromOC,"Bloodwyn, který se skupinou strážců střeží zadní bránu Starého tábora, mě nazval zrádcem a odpadlíkem. Ani mě nevyslechl a zaútočil na mě!");
 //			B_LogEntry(CH4_BannedFromOC,"It looks like I've been banished from the Old Camp!");
 //			B_LogEntry(CH4_BannedFromOC,"Es sieht so aus, als ob ich nun aus dem alten Lager verbannt wurde!");
 			B_LogEntry(CH4_BannedFromOC,"Vypadá to, že jsem vyhoštěn ze Starého tábora.");
@@ -545,13 +554,13 @@ func void Info_Bloodwyn_DIE_Info()
 		{
 //			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_11"); //So you've ventured out of your New Camp? That was mighty stupid of you!
 //			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_11"); //Du wagst dich tatsächlich aus deinem Neuen Lager heraus? Wie dumm von dir!
-			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_11"); //Tak ty ses odvážil opustit Nový tábor? To byl hodně stupidní nápad!
+			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_11"); //Tak ty ses odvážil opustit Nový tábor? To byl hodně špatný nápad!
 		}
 		else
 		{
 //			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_12"); //Oh, so you've ventured out of your swamp camp? That was mighty stupid of you!
 //			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_12"); //Du wagst dich tatsächlich aus deinem Sumpflager heraus? Wie dumm von dir!
-			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_12"); //Och, tak ty ses odvážil opustit tábor u bažin? To byl hodně stupidní nápad!
+			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_12"); //Och, tak ty ses odvážil opustit tábor v bažinách? To byl hodně špatný nápad!
 		};
 
 //		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_13"); //What? What do you mean?
@@ -565,7 +574,7 @@ func void Info_Bloodwyn_DIE_Info()
 		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_15"); //Co...
 //		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_16"); //Sorry, but we can't let you go shooting your mouth off!
 //		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_16"); //Leider können wir es nicht zulassen, dass du das irgendwo herumerzählst!
-		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_16"); //Je nám líto, ale nemůžeme tě nechat pouštět si takhle hubu na špacír!
+		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_16"); //Bohužel tě to němůžeme nechat jít vyzvonit!
 //		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_17"); //Hey, I don't want any trouble...
 //		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_17"); //Hey, ich will keinen Streit ...
 		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_17"); //Hej, nechci žádné problémy...
@@ -577,7 +586,7 @@ func void Info_Bloodwyn_DIE_Info()
 		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_19"); //Poslyš, už toho mám dost...
 //		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_20"); //So have I! KILL HIM!
 //		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_20"); //Richtig! TÖTET IHN!
-		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_20"); //I já! ZABIJTE HO!
+		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_20"); //Správně! ZABIJTE HO!
 	};
 
 	Npc_ExchangeRoutine(self,"FMTaken2"); // Verstärkung vor das Hinterem Tor (Anführer)
@@ -601,4 +610,3 @@ func void Info_Bloodwyn_DIE_Info()
 
 	AI_StopProcessInfos(self);
 };
-

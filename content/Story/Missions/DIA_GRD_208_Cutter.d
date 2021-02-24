@@ -35,7 +35,7 @@ instance DIA_Cutter_Hello(C_INFO)
 	permanent = 0;
 //	description = "This castle's pretty roomy.";
 //	description = "Ihr habt ganz schön viel Platz hier in der Burg.";
-	description = "Tenhle hrad je pořádně velký.";
+	description = "Máte tady na hradě dost místa.";
 };                       
 
 func int DIA_Cutter_Hello_Condition()
@@ -49,7 +49,7 @@ func void DIA_Cutter_Hello_Info()
 {
 //	AI_Output(other,self,"DIA_Cutter_Hello_15_00"); //This castle's pretty roomy.
 //	AI_Output(other,self,"DIA_Cutter_Hello_15_00"); //Ihr habt ganz schön viel Platz hier in der Burg.
-	AI_Output(other,self,"DIA_Cutter_Hello_15_00"); //Tenhle hrad je pořádně velký.
+	AI_Output(other,self,"DIA_Cutter_Hello_15_00"); //Máte tady na hradě dost místa.
 //	AI_Output(self,other,"DIA_Cutter_Hello_08_01"); //I don't think I've seen you here before. Who are you?
 //	AI_Output(self,other,"DIA_Cutter_Hello_08_01"); //Ich habe dich hier noch nie gesehen. Wer bist du?
 	AI_Output(self,other,"DIA_Cutter_Hello_08_01"); //Nemyslím, že bych tě už někdy viděl. Kdo jsi?
@@ -165,6 +165,6 @@ func void GRD_208_Cutter_WELCOME_Info()
 {
 //	AI_Output(self,other,"GRD_208_Cutter_WELCOME_Info_08_01"); //You've made the right choice. You'll enjoy being a guard!
 //	AI_Output(self,other,"GRD_208_Cutter_WELCOME_Info_08_01"); //Du hast die richtige Entscheidung getroffen. Das Leben als Gardist wird dir gefallen!
-	AI_Output(self,other,"GRD_208_Cutter_WELCOME_Info_08_01"); //Dobře sis zvolil. Jako strážce budeš mít dobrý život!
+	AI_Output(self,other,"GRD_208_Cutter_WELCOME_Info_08_01"); //Zvolil sis dobře. Život strážce se ti bude líbit!
 	AI_StopProcessInfos(self);
 };

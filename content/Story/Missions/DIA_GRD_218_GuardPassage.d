@@ -1,7 +1,13 @@
 // **************************************
 //					EXIT 
 // **************************************
+/*
+	#Bugfix: This NPC has already assigned another exit dialog via
+		B_AssignAmbientInfos > B_AssignAmbientInfos_grd_7 > Info_grd_7_EXIT(C_INFO)
 
+	Grd_218_Gardist.NpcType == npctype_guard
+	Grd_218_Gardist.voice == 7
+	
 instance DIA_Grd_218_Exit(C_INFO)
 {
 	npc = Grd_218_GArdist;
@@ -21,6 +27,7 @@ func void DIA_Grd_218_Exit_Info()
 {
 	AI_StopProcessInfos(self);
 };
+*/
 
 // **************************************
 //			Erstes Mal rein
@@ -121,7 +128,7 @@ func void Info_Grd_218_FirstWarn_Info()
 	AI_Output(hero,self,"Info_Grd_218_FirstWarn_Info_15_02"); //Proč?
 //	AI_Output(self,hero,"Info_Grd_218_FirstWarn_Info_07_03"); //The Ore Barons' house is out of bounds for scum like you!
 //	AI_Output(self,hero,"Info_Grd_218_FirstWarn_Info_07_03"); //Das Haus der Erzbarone ist tabu für Abschaum wie dich!
-	AI_Output(self,hero,"Info_Grd_218_FirstWarn_Info_07_03"); //Rudobaronův dům je tabu pro takové pobudy jako ty!
+	AI_Output(self,hero,"Info_Grd_218_FirstWarn_Info_07_03"); //Dům rudobaronů je tabu pro takové pobudy jako ty!
 
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,Grd_218_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_FIRSTWARN; 
@@ -156,7 +163,6 @@ func int Info_Grd_218_Attack_Condition()
 
 func int Info_Grd_218_Attack_Info()
 {
-
 	hero.aivar[AIV_LASTDISTTOWP] = 0;
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_PUNISH; 
 

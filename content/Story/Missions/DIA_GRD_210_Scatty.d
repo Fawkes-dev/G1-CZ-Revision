@@ -50,7 +50,7 @@ func void DIA_Scatty_WhatDoYouDo_Info()
 	AI_Output(other,self,"DIA_Scatty_WhatDoYouDo_15_00"); //Co tady máš na práci?
 //	AI_Output(self,other,"DIA_Scatty_WhatDoYouDo_01_01"); //I'm in charge of the arena. I organize the bets, hire new fighters... You know.
 //	AI_Output(self,other,"DIA_Scatty_WhatDoYouDo_01_01"); //Ich kümmere mich um die Arena. Organisiere die Wetten, heuere neue Kämpfer an und so weiter ...
-	AI_Output(self,other,"DIA_Scatty_WhatDoYouDo_01_01"); //Střežím arénu. Organizuju vsázení, najímám nové bojovníky... Však víš.
+	AI_Output(self,other,"DIA_Scatty_WhatDoYouDo_01_01"); //Starám se o arénu. Organizuju sázky, najímám nové bojovníky a tak ...
 };
 
 // **************************************************
@@ -70,27 +70,32 @@ instance DIA_Scatty_JoinOC(C_INFO)
 	permanent = 0;
 //	description = "I want to join the Camp. Can you help me?";
 //	description = "Ich will mich dem Lager anschließen. Kannst du mir dabei helfen?";
-	description = "Chci se přidat k táboru. Pomůžeš mi?";
+	description = "Chci se přidat k táboru. Můžeš mi s tím pomoci?";
 };                       
 
 func int DIA_Scatty_JoinOC_Condition()
-{ 
+{
 	if (Npc_GetTrueGuild(hero) == GIL_NONE)
+	//#NEEDS_ATTENTION hmmm od 4.tej kapitoly ma hrac GIL_NONE, dialog by bol teoreticky dostupny ...
+	//ale zaroven su k nemu GIL_STT ATT_HOSTILE, takze to mozno nevadi ?
+	//overthinking it --> hrac moze pouzit sarm na NPC a dialog bude dostupny :-) mozno obmedzit kapitolou?
+	//if ((Npc_GetTrueGuild(hero) == GIL_NONE) && (Kapitel < 4))
 	{
 		return 1;
 	};
 };
+
 func void DIA_Scatty_JoinOC_Info()
 {
 //	AI_Output(other,self,"DIA_Scatty_JoinOC_15_00"); //I want to join the Camp. Can you help me?
 //	AI_Output(other,self,"DIA_Scatty_JoinOC_15_00"); //Ich will mich dem Lager anschließen. Kannst du mir dabei helfen?
-	AI_Output(other,self,"DIA_Scatty_JoinOC_15_00"); //Chci se přidat k táboru. Pomůžeš mi?
+	AI_Output(other,self,"DIA_Scatty_JoinOC_15_00"); //Chci se přidat k táboru. Můžeš mi s tím pomoci?
 //	AI_Output(self,other,"DIA_Scatty_JoinOC_01_01"); //I might be able to, if you manage to impress me.
 //	AI_Output(self,other,"DIA_Scatty_JoinOC_01_01"); //Wenn du es schaffst, mich zu beeindrucken - vielleicht.
-	AI_Output(self,other,"DIA_Scatty_JoinOC_01_01"); //Možná bych mohl, musel bys mě ale nějak přesvědčit.
+	AI_Output(self,other,"DIA_Scatty_JoinOC_01_01"); //Pokud na mě zapůsobíš - možná.
 //	AI_Output(self,other,"DIA_Scatty_JoinOC_01_02"); //Some of the best fighters from all three camps come here to compete against each other.
 //	AI_Output(self,other,"DIA_Scatty_JoinOC_01_02"); //Einige der besten Kämpfer aller drei Lager kommen hier her um sich zu messen.
-	AI_Output(self,other,"DIA_Scatty_JoinOC_01_02"); //Několik nejlepších bojovníků ze všech tří táborů sem chodí, aby si zde navzájem poměřilo síly.
+	AI_Output(self,other,"DIA_Scatty_JoinOC_01_02"); //Jedni z nejlepších bojovníků ze všech tří táborů sem chodí, aby si zde navzájem poměřili síly.
 //	AI_Output(self,other,"DIA_Scatty_JoinOC_01_03"); //Challenge one of them to a fight. I'll watch you, and if you're good maybe I'll think about it.
 //	AI_Output(self,other,"DIA_Scatty_JoinOC_01_03"); //Fordere einen von ihnen heraus und kämpfe gegen ihn. Je nachdem, wie gut du dich schlägst, wird mein Urteil über dich ausfallen.
 	AI_Output(self,other,"DIA_Scatty_JoinOC_01_03"); //Vyzvi někoho z nich na souboj. Budu tě sledovat a když budeš dobrý, zamyslím se nad tím.
@@ -104,7 +109,7 @@ func void DIA_Scatty_JoinOC_Info()
 
 //	B_LogEntry(CH1_JoinOC,"Scatty, the master of the arena, will be impressed if I challenge one of the fighters.");
 //	B_LogEntry(CH1_JoinOC,"Scatty der Arenameister wird von mir beeindruckt sein, wenn ich einen der Kämpfer fordere.");
-	B_LogEntry(CH1_JoinOC,"Scatty, mistr arény, ocení, když vyzvu jednoho z bojovníků.");
+	B_LogEntry(CH1_JoinOC,"Na Scattyho, mistra arény, zapůsobím nejlépe tak, že vyzvu jednoho z bojovníků.");
 };
 
 // **************************************************
@@ -144,10 +149,10 @@ func void DIA_Scatty_KirgoSuccess_Info()
 	{
 //		AI_Output(self,other,"DIA_Scatty_KirgoSuccess_01_01"); //Yeah, and you lost!
 //		AI_Output(self,other,"DIA_Scatty_KirgoSuccess_01_01"); //Und du hast dich besiegen lassen!
-		AI_Output(self,other,"DIA_Scatty_KirgoSuccess_01_01"); //Jistě, a prohrál jsi.
+		AI_Output(self,other,"DIA_Scatty_KirgoSuccess_01_01"); //A nechal ses porazit!
 //		AI_Output(self,other,"DIA_Scatty_KirgoSuccess_01_02"); //Surely you don't expect me to be impressed by that...
 //		AI_Output(self,other,"DIA_Scatty_KirgoSuccess_01_02"); //Du erwartest hoffentlich nicht, dass ich durch dein Versagen beeindruckt bin ...
-		AI_Output(self,other,"DIA_Scatty_KirgoSuccess_01_02"); //Určitě si nemyslíš, že mě tímhle přesvědčíš...
+		AI_Output(self,other,"DIA_Scatty_KirgoSuccess_01_02"); //Doufám, že nečekáš, že mě tímhle přesvědčíš...
 		Scatty_ChargeKirgo = LOG_FAILED;
 
 //		B_LogEntry(CH1_JoinOC,"The fact that Kirgo has defeated me didn't impress Scatty at all.");
@@ -163,7 +168,7 @@ func void DIA_Scatty_KirgoSuccess_Info()
 
 //		B_LogEntry(CH1_JoinOC,"Scatty was impressed by my fight against Kirgo.");
 //		B_LogEntry(CH1_JoinOC,"Scatty ist beeindruckt von meinem Kampf gegen Kirgo.");
-		B_LogEntry(CH1_JoinOC,"Scatty byl zaujat mým bojem proti Kirgovi.");
+		B_LogEntry(CH1_JoinOC,"Vítězství nad Kirgem na Scattyho zapůsobilo!");
 		B_GiveXP(XP_kirgovictory);
 	};
 };
@@ -181,7 +186,7 @@ instance DIA_Scatty_KHARIMSuccess(C_INFO)
 	permanent = 0;
 //	description = "I challenged Kharim!";
 //	description = "Ich bin gegen Kharim angetreten!";
-	description = "Vyzval jsem  Kharima!";
+	description = "Vyzval jsem Kharima!";
 };                       
 
 func int DIA_Scatty_KHARIMSuccess_Condition()
@@ -200,33 +205,33 @@ func void DIA_Scatty_KHARIMSuccess_Info()
 
 //	AI_Output(other,self,"DIA_Scatty_KHARIMSuccess_15_00"); //I challenged Kharim!
 //	AI_Output(other,self,"DIA_Scatty_KHARIMSuccess_15_00"); //Ich bin gegen Kharim angetreten!
-	AI_Output(other,self,"DIA_Scatty_KHARIMSuccess_15_00"); //Vyzval jsem  Kharima!
+	AI_Output(other,self,"DIA_Scatty_KHARIMSuccess_15_00"); //Vyzval jsem Kharima!
 	if (KHARIM.aivar[AIV_HASDEFEATEDSC] == TRUE)
 	{
 //		AI_Output(self,other,"DIA_Scatty_KHARIMSuccess_01_01"); //And boy, did he whack you!
 //		AI_Output(self,other,"DIA_Scatty_KHARIMSuccess_01_01"); //Er hat dir ganz schön in den Arsch getreten.
-		AI_Output(self,other,"DIA_Scatty_KHARIMSuccess_01_01"); //A ten tě zmlátil, hochu!
+		AI_Output(self,other,"DIA_Scatty_KHARIMSuccess_01_01"); //Ten ti pěkně nakopal zadek!
 		if (Npc_GetTrueGuild(hero) == GIL_NONE)
 		{
 //			AI_Output(self,other,"DIA_Scatty_KHARIMSuccess_01_02"); //Still, you chose the right opponent! I just can't stand those bastards from the New Camp.
 //			AI_Output(self,other,"DIA_Scatty_KHARIMSuccess_01_02"); //Trotzdem hast du dir den richtigen Gegner gewählt! Ich kann diese Bastarde aus dem Neuen Lager nicht ausstehen.
-			AI_Output(self,other,"DIA_Scatty_KHARIMSuccess_01_02"); //Vybral sis vhodného protivníka! Ty bastardy z Nového tábora nemůžu vystát.
+			AI_Output(self,other,"DIA_Scatty_KHARIMSuccess_01_02"); //Přesto sis vybral vhodného protivníka! Ty bastardy z Nového tábora nemůžu vystát.
 //			AI_Output(self,other,"DIA_Scatty_KHARIMSuccess_01_03"); //Seems like you feel the same way - you're just the kind of guy we need!
 //			AI_Output(self,other,"DIA_Scatty_KHARIMSuccess_01_03"); //Scheint dir ja genauso zu gehen - so jemanden können wir hier brauchen!
-			AI_Output(self,other,"DIA_Scatty_KHARIMSuccess_01_03"); //Vypadá to, že to vidíš podobně - jsi přesně ten typ chlapa, jaký potřebujeme!
+			AI_Output(self,other,"DIA_Scatty_KHARIMSuccess_01_03"); //Vypadá to, že to vidíš podobně - někoho takového můžeme potřebovat!
 		};
 		Scatty_ChargeKHARIM = LOG_FAILED;
 		B_GiveXP(XP_Kharimlost);
 //		B_LogEntry(CH1_JoinOC,"I've been beaten by Kharim! Scatty liked my courage, but not my fighting.");
 //		B_LogEntry(CH1_JoinOC,"Ich bin Kharim unterlegen! Mein Mut hat Scatty gefallen, aber meine Kampffähigkeiten nicht.");
-		B_LogEntry(CH1_JoinOC,"Kharim mě zbil! Scattymu se líbila moje odvaha, ne však můj boj.");
+		B_LogEntry(CH1_JoinOC,"Kharim mě porazil! Scattymu se líbila moje odvaha, ne však můj boj.");
 
 	}
 	else if (KHARIM.aivar[AIV_WASDEFEATEDBYSC] == TRUE)
 	{
 //		AI_Output(self,other,"DIA_Scatty_KHARIMSuccess_01_04"); //And you knocked him down! I have to admit that wasn't bad going. He's always been known as one of the toughest fighters.
 //		AI_Output(self,other,"DIA_Scatty_KHARIMSuccess_01_04"); //Und du hast ihn umgehauen! Ich muss schon sagen, nicht schlecht. Er war immer einer der besten Kämpfer hier.
-		AI_Output(self,other,"DIA_Scatty_KHARIMSuccess_01_04"); //A srazil jsi ho! Musím uznat, že to nebylo špatné. Vždycky byl jedním z nejpovažovanějších bojovníků.
+		AI_Output(self,other,"DIA_Scatty_KHARIMSuccess_01_04"); //A srazil jsi ho! Musím uznat, že to nebylo špatné. Vždycky byl jedním z nejlepších bojovníků.
 //		AI_Output(self,other,"DIA_Scatty_KHARIMSuccess_01_05"); //I'm deeply impressed!
 //		AI_Output(self,other,"DIA_Scatty_KHARIMSuccess_01_05"); //Du hast mich schwer beeindruckt!
 		AI_Output(self,other,"DIA_Scatty_KHARIMSuccess_01_05"); //Tohle na mě opravdu udělalo dojem!
@@ -234,7 +239,7 @@ func void DIA_Scatty_KHARIMSuccess_Info()
 
 //		B_LogEntry(CH1_JoinOC,"I've given it to Kharim! Scatty was impressed.");
 //		B_LogEntry(CH1_JoinOC,"Ich habe es Kharim gezeigt! Scatty hat gestaunt.");
-		B_LogEntry(CH1_JoinOC,"Nandal jsem to Kharimovi! Scatty byl dojatý.");
+		B_LogEntry(CH1_JoinOC,"Nandal jsem to Kharimovi! Scatty byl ohromen.");
 		B_GiveXP(XP_kharimvictory);
 	};
 };
@@ -252,6 +257,7 @@ instance DIA_Scatty_OtherCamps(C_INFO)
 	permanent = 0;
 //	description = "Why do you let the people from the other camps fight here?";
 //	description = "Wieso lasst ihr die Leute aus den anderen Lagern hier kämpfen?";
+	//#NEEDS_ATTENTION - neprebasnime?
 	description = "Proč necháváš lidi z jiných táborů, aby se tady bili?";
 };                       
 
@@ -270,12 +276,13 @@ func void DIA_Scatty_OtherCamps_Info()
 	AI_Output(other,self,"DIA_Scatty_OtherCamps_15_00"); //Myslel jsem, že Starý a Nový tábor spolu nevycházejí dobře - tak proč tady necháváš jejich lidi bojovat?
 //	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_01"); //It's simple: There's fights here once a week, and the diggers always like to see one of the rogues from the New Camp get flattened.
 //	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_01"); //Ganz einfach: Wenn es hier einmal die Woche einen Kampf gibt, sehen es die Buddler am liebsten, wenn einer der Banditen aus dem Neuen Lager was aufs Maul bekommt.
-	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_01"); //To je jednoduché - odehrávají se tady jednou týdně souboje a kopáči pokaždé rádi vidí, když je některý z hrdlořezů z Nového tábora rozdrcen.
+	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_01"); //To je jednoduché - odehrávají se tady jednou týdně souboje a kopáči pokaždé rádi vidí, když některý z pobudů z Nového tábora dostane po hubě.
 //	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_02"); //If one of them fights, there's more bets - and that's good for business!
 //	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_02"); //Wenn einer von denen kämpft, wird mehr gewettet - das ist gut!
-	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_02"); //Pokud bojuje jeden z nich, pak se uzavře více sázek - a to je skvělé pro obchod!
+	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_02"); //Vždy když bojuje jeden z nich, tak se uzavře více sázek - a to je skvělé!
 //	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_03"); //Personally, I can't stand the swines from the New Camp - but business is business...
 //	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_03"); //Ich persönlich kann die Schweine aus dem Neuen Lager ja nicht ausstehen - aber Geschäft ist nun mal Geschäft ...
+	//#NEEDS_ATTENTION grazly alebo svine? je svine moc?
 	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_03"); //Mezi námi, já ty grázly z Nového tábora nemůžu vystát - ale obchod je obchod.
 };
 
@@ -313,7 +320,7 @@ func void DIA_Scatty_WannaBet_Info()
 	AI_Output(self,other,"DIA_Scatty_WannaBet_01_01"); //Teď ale není žádný souboj.
 //	AI_Output(self,other,"DIA_Scatty_WannaBet_01_02"); //The next fight's due in a couple of days. There'll be an announcement.
 //	AI_Output(self,other,"DIA_Scatty_WannaBet_01_02"); //Der nächste Kampf ist in ein paar Tagen - er wird vorher angekündigt.
-	AI_Output(self,other,"DIA_Scatty_WannaBet_01_02"); //Příští boje budou za několik dní. Bude to vyhlášeno.
+	AI_Output(self,other,"DIA_Scatty_WannaBet_01_02"); //Další souboj bude za několik dní. Bude to vyhlášeno.
 
 };
 
@@ -335,6 +342,8 @@ instance DIA_Scatty_WannaFight(C_INFO)
 
 func int DIA_Scatty_WannaFight_Condition()
 {
+	//#NEEDS_ATTENTION v gothic1_scripts-1.08j_enu-rev2 verzii skriptov, ktore som pouzil ako 'master' je tento dialog uplne vypnuty, v ceskych skriptoch je dostupny
+	//Nemecke skripty to maju takisto vypnute
 //	if (Npc_KnowsInfo(hero,DIA_Scatty_WhatDoYouDo))
 //	{
 //		return 1;
@@ -424,25 +433,25 @@ func void DIA_Scatty_TRAIN_1h()
 		{
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_01"); //That's a good decision! Before you can improve your technique, you'll have to learn how to hold the weapon right.
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_01"); //Gute Entscheidung! Um deine Technik zu verbessern, musst du erst einmal lernen, deine Waffe richtig zu halten.
-			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_01"); //To je dobré rozhodnutí! Ještě než se začneš učit techniku, musíš se naučit správně držet zbraň.
+			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_01"); //Dobrá volba! Abys mohl začít zlepšovat techniku, musíš se nejdříve naučit zbraň správně držet.
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_02"); //Beginners often tend to hold one-handed weapons with both hands. Now, don't even start getting into that habit, it'll do you no good.
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_02"); //Anfänger neigen dazu, Einhandwaffen mit beiden Händen zu halten. Mit so was fängst du am besten gar nicht erst an, das behindert dich nur.
-			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_02"); //Začátečníci obyčejně mívají snahu držet jednoruční meč oběma rukama. Tímto způsobem rozhodně nezačínej, to není dobré.
+			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_02"); //Začátečníci mají tendenci držet jednoruční zbraň oběma rukama. Tímto způsobem rozhodně nezačínej, bylo by to jen na obtíž.
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_03"); //Hold the weapon with one hand, blade up, and keep swinging it.
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_03"); //Halt die Waffe mit einer Hand, Klinge nach oben, und dann immer schön schwingen lassen.
-			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_03"); //Drž zbraň v jedné ruce, čepelí vzhůru a šermuj s ní.
+			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_03"); //Drž zbraň v jedné ruce, čepelí vzhůru a nech ji mírně pohupovat. #NEEDS_ATTENTION
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_04"); //You have to learn to harmonize your weapon's swing with your own movements. That'll make you faster in the attack.
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_04"); //Du musst lernen, den Schwung deiner Waffe mit deinen Bewegungen in Einklang zu bringen, dann kannst du schneller zuschlagen.
-			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_04"); //Musíš se naučit sladit pohyb zbraně s pohybem svého těla. Tak budeš při útoku rychlejší.
+			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_04"); //Musíš se naučit sladit pohyb zbraně s pohybem svého těla. Pak můžeš rychleji útočit.
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_05"); //If you keep in mind what I've taught you, your fights will be more elegant and a lot faster in future.
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_05"); //Wenn du dich an meine Anweisungen hältst, wirst du in Zukunft eleganter und vor allem schneller kämpfen.
-			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_05"); //Když si zapamatuješ, co jsem tě naučil, tak bude tvůj boj v budoucnu elegantnější a rychlejší.
+			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_05"); //Pokud se budeš držet mých rad, budeš v budoucnu bojovat elegantněji a rychleji.
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_06"); //Oh yeah, one more thing: Some hits cause more damage than others! As a beginner, you don't stand much of a chance of making critical hits.
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_06"); //Ach und noch was: Manche Treffer richten mehr Schaden an als andere! Als Anfänger hast du nur eine geringe Chance, solche kritischen Treffer zu landen.
-			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_06"); //Ovšem, ještě jednu věc: Některé údery způsobí větší škodu než ostatní. Jako začátečníkovi se ti nebude často dostávat šance rozhodujících úderů.
+			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_06"); //Ah, ještě jednu věc. Některé údery působí větší škodu než ostatní. Jako začátečníkovi se ti často nepovede takové údery zasadit.
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_07"); //But the further you progress, the better you get.
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_07"); //Aber je weiter du fortschreitest, desto besser wird diese Fähigkeit.
-			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_07"); //Ale časem budeš dělat pokroky a zlepšíš se.
+			AI_Output(self,other,"DIA_Scatty_TRAIN_1h_01_07"); //Ale čím více budeš trénovat, tím větší šanci budeš mít.
 			B_GiveInvItems(other,self,itminugget,50);
 		};
 	}
@@ -458,7 +467,7 @@ func void DIA_Scatty_TRAIN_2h()
 {
 //	AI_Output(other,self,"DIA_Scatty_TRAIN_2h_15_01"); //Teach me how to handle one-handed weapons more skillfully.
 //	AI_Output(other,self,"DIA_Scatty_TRAIN_2h_15_01"); //Bring mir bei, noch besser mit Einhandwaffen umzugehen.
-	AI_Output(other,self,"DIA_Scatty_TRAIN_2h_15_01"); //Nauč mě ještě lépe ovládat jednoruční meč.
+	AI_Output(other,self,"DIA_Scatty_TRAIN_2h_15_01"); //Nauč mě ještě lépe ovládat jednoruční zbraně.
 
 	if (Npc_HasItems(other,itminugget) >= 150)
 	{
@@ -466,16 +475,16 @@ func void DIA_Scatty_TRAIN_2h()
 		{
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_2h_Info_01_02"); //Okay, you know the basics. Holding the weapon lower down will let you put more force into your first strike.
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_2h_Info_01_02"); //Na gut, die Grundkenntnisse hast du ja schon. Wenn du die Waffe gesenkt hältst, dann kannst du direkt mehr Wucht in deinen ersten Schlag legen.
-			AI_Output(self,other,"DIA_Scatty_TRAIN_2h_Info_01_02"); //Dobrá, základy znáš. Když podržíš zbraň níž, umožní ti to mnohem silněji vést první švih.
+			AI_Output(self,other,"DIA_Scatty_TRAIN_2h_Info_01_02"); //Dobrá, základy znáš. Když podržíš zbraň níž, budeš moci vložit do svého prvního švihu více síly.
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_2h_Info_01_03"); //Use the swing, remember? Okay, now you need to use your body more. When you've struck twice, spin around. That'll confuse the opponent and put you in an excellent position.
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_2h_Info_01_03"); //Nutze den Schwung, weißt du noch? Gut, der nächste Schritt ist, du musst deinen Körper mehr einsetzen. Wenn du zweimal geschlagen hast, drehe dich um die eigene Achse, damit überraschst du den Gegner und bist in einer optimalen Position.
-			AI_Output(self,other,"DIA_Scatty_TRAIN_2h_Info_01_03"); //Musíš se hýbat, pamatuješ? Dobře, teď musíš ještě víc pracovat tělem. Po druhém úderu se otoč. To protivníka zmate a tobě to umožní zaujmout optimální pozici.
+			AI_Output(self,other,"DIA_Scatty_TRAIN_2h_Info_01_03"); //Využívej švihu, vzpomínáš? Dobře, dalším krokem je pohyb těla. Po druhém úderu se otoč kolem své vlastní osy, abys zmátl protivníka a získal optimální pozici.
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_2h_Info_01_04"); //Then bring your blade across from right to left once more.
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_2h_Info_01_04"); //Dann ziehst du deine Klinge noch einmal quer von rechts nach links.
-			AI_Output(self,other,"DIA_Scatty_TRAIN_2h_Info_01_04"); //Ještě jednou veď čepel zprava doleva.
+			AI_Output(self,other,"DIA_Scatty_TRAIN_2h_Info_01_04"); //Poté veď čepel šikmo zprava doleva.
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_2h_Info_01_05"); //And back to the front. Don't forget: practice makes perfect. So, get going and master the art of one-handed fighting.
 //			AI_Output(self,other,"DIA_Scatty_TRAIN_2h_Info_01_05"); //Und wieder von vorne. Vergiss nicht, Übung macht den Meister. Also, geh jetzt und werde ein wahrer Meister des einhändigen Kampfes.
-			AI_Output(self,other,"DIA_Scatty_TRAIN_2h_Info_01_05"); //A znovu kupředu. Nezapomeň: cvičením k dokonalosti. Takže vzhůru do toho, aby ses stal mistrem jednoručního meče.
+			AI_Output(self,other,"DIA_Scatty_TRAIN_2h_Info_01_05"); //A znovu kupředu. Nezapomeň, cvičení dělá mistra. Tak běž a staň se mistrem jednoručních zbraní.
 			B_GiveInvItems(other,self,itminugget,150);
 		};
 	}

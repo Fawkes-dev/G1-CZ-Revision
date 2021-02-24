@@ -24,7 +24,7 @@ func void Info_GRD_275_PreExit_Info()
 {
 //	AI_Output(self,other,"Info_GRD_275_PreExit_06_01"); //Make sure you get to the Old Camp, they're holding a pickaxe for you, hee, hee!
 //	AI_Output(self,other,"Info_GRD_275_PreExit_06_01"); //Sieh zu, dass du zum Alten Lager kommst, sie halten schon ne Spitzhacke für dich bereit, hee, hee!
-	AI_Output(self,other,"Info_GRD_275_PreExit_06_01"); //Určitě se musíš zastavit ve Starém táboře, mají tam pro tebe krumpáč, haha!
+	AI_Output(self,other,"Info_GRD_275_PreExit_06_01"); //Určitě se zastav ve Starém táboře, mají tam pro tebe připravený krumpáč, haha!
 	AI_StopProcessInfos(self);
 };
 
@@ -63,10 +63,11 @@ instance Info_GRD_275_WasMachtIhrHier(C_INFO)
 	nr = 1;
 	condition = Info_GRD_275_WasMachtIhrHier_Condition;
 	information = Info_GRD_275_WasMachtIhrHier_Info;
+	//#Needs_Attention zbytocny permanent dialog - to by som zrusil
 	permanent = 1;
 //	description = "What are you doing here?";
 //	description = "Was macht ihr hier?";
-	description = "Co tady děláš?";
+	description = "Co tady děláte?";
 };                       
 
 func int Info_GRD_275_WasMachtIhrHier_Condition()
@@ -84,7 +85,7 @@ func void Info_GRD_275_WasMachtIhrHier_Info()
 	AI_Output(self,other,"Info_GRD_275_WasMachtIhrHier_06_01"); //Co myslíš? Hlídáme tady přece most!
 //	AI_Output(self,other,"Info_GRD_275_WasMachtIhrHier_06_02"); //We make sure that no beasts cross the bridge.
 //	AI_Output(self,other,"Info_GRD_275_WasMachtIhrHier_06_02"); //Wir passen auf, dass keine Viecher über die Brücke kommen.
-	AI_Output(self,other,"Info_GRD_275_WasMachtIhrHier_06_02"); //Dáváme pozor, aby tu přes něj nepřešly ty bestie.
+	AI_Output(self,other,"Info_GRD_275_WasMachtIhrHier_06_02"); //Dáváme pozor, aby se přes něj nedostaly ty bestie.
 };
 
 // *****************************************************************
@@ -97,6 +98,7 @@ instance Info_GRD_275_Tips(C_INFO)
 	nr = 1;
 	condition = Info_GRD_275_Tips_Condition;
 	information = Info_GRD_275_Tips_Info;
+	//#Needs_Attention zbytocny permanent dialog - to by som zrusil
 	permanent = 1;
 //	description = "Have you got any advice for me?";
 //	description = "Hast du irgendwelche Tipps für mich?";

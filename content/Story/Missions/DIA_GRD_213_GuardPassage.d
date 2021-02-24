@@ -48,7 +48,7 @@ func void Info_Grd_213_FirstWarn_Info()
 	AI_Output(self,hero,"Info_Grd_213_FirstWarn_Info_07_01"); //STŮJ!
 //	AI_Output(hero,self,"Info_Grd_213_FirstWarn_Info_15_02"); //What's up?
 //	AI_Output(hero,self,"Info_Grd_213_FirstWarn_Info_15_02"); //Was ist?
-	AI_Output(hero,self,"Info_Grd_213_FirstWarn_Info_15_02"); //Co se děje?
+	AI_Output(hero,self,"Info_Grd_213_FirstWarn_Info_15_02"); //Co je?
 //	AI_Output(self,hero,"Info_Grd_213_FirstWarn_Info_07_03"); //You can't go in the castle! Beat it!
 //	AI_Output(self,hero,"Info_Grd_213_FirstWarn_Info_07_03"); //Du darfst nicht in die Burg! Hau ab!
 	AI_Output(self,hero,"Info_Grd_213_FirstWarn_Info_07_03"); //Na hrad nesmíš! Vypadni!
@@ -123,7 +123,6 @@ func int Info_Grd_213_Attack_Condition()
 
 func int Info_Grd_213_Attack_Info()
 {
-
 	hero.aivar[AIV_LASTDISTTOWP] = 0;
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_PUNISH; 
 

@@ -49,13 +49,13 @@ func void DIA_Grd_215_Torwache_First_Info()
 {
 //	AI_Output(self,other,"DIA_Grd_215_Torwache_First_06_00"); //Where d'you think you're going?
 //	AI_Output(self,other,"DIA_Grd_215_Torwache_First_06_00"); //Wo soll's denn hingehen?
-	AI_Output(self,other,"DIA_Grd_215_Torwache_First_06_00"); //Kam máš namířeno?
+	AI_Output(self,other,"DIA_Grd_215_Torwache_First_06_00"); //Kampak máš namířeno?
 //	AI_Output(other,self,"DIA_Grd_215_Torwache_First_15_01"); //To the Camp.
 //	AI_Output(other,self,"DIA_Grd_215_Torwache_First_15_01"); //Ich will ins Lager.
 	AI_Output(other,self,"DIA_Grd_215_Torwache_First_15_01"); //Do tábora.
 //	AI_Output(self,other,"DIA_Grd_215_Torwache_First_06_02"); //You ain't come to make trouble, have you?
 //	AI_Output(self,other,"DIA_Grd_215_Torwache_First_06_02"); //Du bist doch nicht hergekommen, um Ärger zu machen, oder?
-	AI_Output(self,other,"DIA_Grd_215_Torwache_First_06_02"); //Nechceš se dostat do problémů, viď?
+	AI_Output(self,other,"DIA_Grd_215_Torwache_First_06_02"); //Nepřišel jsi sem dělat problémy, že?
 
 	Info_ClearChoices(DIA_Grd_215_Torwache_First);
 //	Info_AddChoice(DIA_Grd_215_Torwache_First,"Sure, I plan to take on the whole Camp!",DIA_Grd_215_Torwache_First_Trouble);
@@ -79,7 +79,7 @@ func void DIA_Grd_215_Torwache_First_Trouble()
 	AI_Output(other,self,"DIA_Grd_215_Torwache_First_Trouble_15_00"); //Jistě, mám v úmyslu zabrat celý tábor.
 //	AI_Output(self,other,"DIA_Grd_215_Torwache_First_Trouble_06_01"); //Hey, this guy's funny... I don't like funny guys.
 //	AI_Output(self,other,"DIA_Grd_215_Torwache_First_Trouble_06_01"); //Ein witziger Kerl ... Ich mag keine witzigen Kerle.
-	AI_Output(self,other,"DIA_Grd_215_Torwache_First_Trouble_06_01"); //No, to je pěknej šprýmař... A já nemám šprýmaře rád .
+	AI_Output(self,other,"DIA_Grd_215_Torwache_First_Trouble_06_01"); //No, to je pěknej šprýmař... A já nemám šprýmaře rád.
 	Info_ClearChoices(DIA_Grd_215_Torwache_First);
 
 	AI_StopProcessInfos(self);
@@ -94,7 +94,7 @@ func void DIA_Grd_215_Torwache_First_JustLooking()
 	AI_Output(other,self,"DIA_Grd_215_Torwache_First_JustLooking_15_00"); //Chci se tu jenom porozhlédnout.
 //	AI_Output(self,other,"DIA_Grd_215_Torwache_First_JustLooking_06_01"); //That'll cost you 10 ore.
 //	AI_Output(self,other,"DIA_Grd_215_Torwache_First_JustLooking_06_01"); //Umsehen kostet 10 Erz.
-	AI_Output(self,other,"DIA_Grd_215_Torwache_First_JustLooking_06_01"); //To tě bude stát 10 nugetů.
+	AI_Output(self,other,"DIA_Grd_215_Torwache_First_JustLooking_06_01"); //Bude tě to stát 10 nugetů.
 
 	Info_ClearChoices(DIA_Grd_215_Torwache_First);
 //	Info_AddChoice(DIA_Grd_215_Torwache_First,"Forget it.",DIA_Grd_215_Torwache_First_NoPay);
@@ -167,7 +167,7 @@ instance DIA_Grd_215_Torwache_PERM(C_INFO)
 	permanent = 1;
 //	description = "Any news?";
 //	description = "Irgendwas Neues passiert?";
-	description = "Něco nového?";
+	description = "Stalo se něco nového?";
 };                       
 
 func int DIA_Grd_215_Torwache_PERM_Condition()

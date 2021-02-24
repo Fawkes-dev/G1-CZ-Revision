@@ -48,10 +48,10 @@ func void Info_Grd_212_FirstWarn_Info()
 	AI_Output(self,hero,"Info_Grd_212_FirstWarn_Info_13_01"); //STŮJ!
 //	AI_Output(hero,self,"Info_Grd_212_FirstWarn_Info_15_02"); //What's up?
 //	AI_Output(hero,self,"Info_Grd_212_FirstWarn_Info_15_02"); //Was ist?
-	AI_Output(hero,self,"Info_Grd_212_FirstWarn_Info_15_02"); //Co se děje?
+	AI_Output(hero,self,"Info_Grd_212_FirstWarn_Info_15_02"); //Co je?
 //	AI_Output(self,hero,"Info_Grd_212_FirstWarn_Info_13_03"); //You can't enter the castle without permission! Now get out of here!
 //	AI_Output(self,hero,"Info_Grd_212_FirstWarn_Info_13_03"); //Die Burg darf nur mit Genehmigung betreten werden! Mach, dass du verschwindest!
-	AI_Output(self,hero,"Info_Grd_212_FirstWarn_Info_13_03"); //Nemůžeš vstoupit do hradu bez povolení! Jdi odsud!
+	AI_Output(self,hero,"Info_Grd_212_FirstWarn_Info_13_03"); //Nemůžeš vstoupit do hradu bez povolení! Padej pryč!
 
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,Grd_212_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_FIRSTWARN; 
@@ -123,7 +123,6 @@ func int Info_Grd_212_Attack_Condition()
 
 func int Info_Grd_212_Attack_Info()
 {
-
 	hero.aivar[AIV_LASTDISTTOWP] = 0;
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_PUNISH; 
 
@@ -190,7 +189,7 @@ func void Info_Grd_212_Abblitzen_Info()
 	AI_Output(other,self,"Info_Grd_212_Abblitzen_15_00"); //Chci se dostat na hrad!
 //	AI_Output(self,other,"Info_Grd_212_Abblitzen_13_01"); //Interesting! I wanna get out of the goddamn colony!
 //	AI_Output(self,other,"Info_Grd_212_Abblitzen_13_01"); //Das ist ja interessant! ICH will raus aus der verdammten Kolonie!
-	AI_Output(self,other,"Info_Grd_212_Abblitzen_13_01"); //Zajímavé! Já se chci dostat z té proklaté kolonie!
+	AI_Output(self,other,"Info_Grd_212_Abblitzen_13_01"); //Zajímavé! Já se chci dostat z téhle proklaté Kolonie!
 //	AI_Output(self,other,"Info_Grd_212_Abblitzen_13_02"); //I can think of better things than stopping bums like you from going where they've no business.
 //	AI_Output(self,other,"Info_Grd_212_Abblitzen_13_02"); //Kann mir nämlich was Besseres vorstellen, als Pennern wie dir den Eintritt zu verbieten.
 	AI_Output(self,other,"Info_Grd_212_Abblitzen_13_02"); //Umím si představit lepší práci, než zastavovat takové pobudy jako ty, aby nelezli tam, kde nemají co dělat!
@@ -235,7 +234,7 @@ func void Info_Grd_212_FirstIn_Info()
 	AI_Output(other,self,"Info_Grd_212_FirstIn_15_01"); //Klid. Mluvil jsem s Thorusem. Smím dovnitř.
 //	AI_Output(self,other,"Info_Grd_212_FirstIn_13_02"); //I won't forget your face, pal! You get into trouble and it won't end quickly!
 //	AI_Output(self,other,"Info_Grd_212_FirstIn_13_02"); //Ich werd' mir deine Visage merken. Wenn du Ärger machst, bist du dran!
-	AI_Output(self,other,"Info_Grd_212_FirstIn_13_02"); //Budu si tě pamatovat, příteli! Dostaneš se do maléru a pak to vezme rychlej konec!
+	AI_Output(self,other,"Info_Grd_212_FirstIn_13_02"); //Budu si tě pamatovat, příteli! Pokud budeš dělat problémy, je s tebou konec!
 	AI_StopProcessInfos(self);
 };
 
@@ -270,6 +269,6 @@ func void Info_Grd_212_Passgate_Info()
 	AI_Output(other,self,"Info_Grd_212_Passgate_15_00"); //Můžu ještě pořád dovnitř?
 //	AI_Output(self,other,"Info_Grd_212_Passgate_13_01"); //Only if you quit asking stupid questions.
 //	AI_Output(self,other,"Info_Grd_212_Passgate_13_01"); //Wenn du noch mal so dämlich fragst, nicht mehr.
-	AI_Output(self,other,"Info_Grd_212_Passgate_13_01"); //Jen když se přestaneš takhle stupidně vyptávat.
+	AI_Output(self,other,"Info_Grd_212_Passgate_13_01"); //Jen když se přestaneš takhle blbě ptát.
 	AI_StopProcessInfos(self);
 };

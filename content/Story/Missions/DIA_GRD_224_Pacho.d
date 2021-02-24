@@ -71,13 +71,13 @@ func void Info_Pacho_STOP_Info()
 	AI_Output(self,hero,"Info_Pacho_STOP_13_07"); //Člověče, to je cesta do země skřetů...
 //	AI_Output(self,hero,"Info_Pacho_STOP_13_08"); //They'll make mincemeat out of you!
 //	AI_Output(self,hero,"Info_Pacho_STOP_13_08"); //Die machen Kleinholz aus dir!
-	AI_Output(self,hero,"Info_Pacho_STOP_13_08"); //Udělají z tebe sekanou!
+	AI_Output(self,hero,"Info_Pacho_STOP_13_08"); //Rozsekají tě na třísky!
 //	AI_Output(hero,self,"Info_Pacho_STOP_15_09"); //Oh.
 //	AI_Output(hero,self,"Info_Pacho_STOP_15_09"); //Oh.
-	AI_Output(hero,self,"Info_Pacho_STOP_15_09"); //Och.
+	AI_Output(hero,self,"Info_Pacho_STOP_15_09"); //Ou.
 //	AI_Output(self,hero,"Info_Pacho_STOP_13_10"); //You're welcome!
 //	AI_Output(self,hero,"Info_Pacho_STOP_13_10"); //Gern geschehen!
-	AI_Output(self,hero,"Info_Pacho_STOP_13_10"); //Vítej!
+	AI_Output(self,hero,"Info_Pacho_STOP_13_10"); //Nemáš zač!
 
 	AI_StopProcessInfos(self);
 };

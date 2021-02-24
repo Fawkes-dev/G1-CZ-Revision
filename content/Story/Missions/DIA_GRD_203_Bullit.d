@@ -45,7 +45,7 @@ func void DIA_Bullit_First_Info()
 {
 //	AI_Output(self,other,"DIA_Bullit_First_06_00"); //Who have we here? Ain't you the guy I baptized earlier? What do you want? You come back for more?
 //	AI_Output(self,other,"DIA_Bullit_First_06_00"); //Wen haben wir denn da? Du bist doch der Typ, den ich getauft habe? Was willst du? Noch mehr Schläge?
-	AI_Output(self,other,"DIA_Bullit_First_06_00"); //Kohopak to tady máme? Není to ten hoch, kterého jsem kdysi pokřtil? Co chceš? Vracíš se a chceš ještě víc?
+	AI_Output(self,other,"DIA_Bullit_First_06_00"); //Kohopak to tady máme? Není to ten hoch, kterého jsem pokřtil? Co chceš? Další ránu?
 };
 
 //******************************************
@@ -73,10 +73,10 @@ func void DIA_Bullit_AufsMAul_Info()
 {
 //	AI_Output(other,self,"DIA_Bullit_AufsMAul_15_00"); //I've come to stuff your big mouth for you.
 //	AI_Output(other,self,"DIA_Bullit_AufsMAul_15_00"); //Ich bin gekommen, um dir dein großes Maul zu stopfen.
-	AI_Output(other,self,"DIA_Bullit_AufsMAul_15_00"); //Přišel jsem, abych ti zacpal tu tvoji velkou hubu.
+	AI_Output(other,self,"DIA_Bullit_AufsMAul_15_00"); //Přišel jsem, abych ti zacpal tu tvojí velkou hubu.
 //	AI_Output(self,other,"DIA_Bullit_AufsMAul_06_01"); //Hah, well come here an' give it a try, sonny!
 //	AI_Output(self,other,"DIA_Bullit_AufsMAul_06_01"); //Ja, dann komm mal her, Bürschchen!
-	AI_Output(self,other,"DIA_Bullit_AufsMAul_06_01"); //Ha, tak pojď a zkus to, zlatíčko!
+	AI_Output(self,other,"DIA_Bullit_AufsMAul_06_01"); //Ha, tak pojď a zkus to, chlapečku!
 
 	Npc_SetAttitude(self,ATT_HOSTILE);
 	Npc_SetTempAttitude(self,ATT_HOSTILE);

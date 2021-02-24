@@ -32,6 +32,7 @@ instance DIA_Grd_281_GuardGate(C_INFO)
 	nr = 1;
 	condition = DIA_Grd_281_GuardGate_Condition;
 	information = DIA_Grd_281_GuardGate_Info;
+	//#Needs_Attention - zbytocny permanentny dialog - zrusil by som to
 	permanent = 1;
 //	description = "How's it going?"; 
 //	description = "Wie steht's?"; 
@@ -45,6 +46,7 @@ func int DIA_Grd_281_GuardGate_Condition()
 		return 1;
 	};
 };
+
 func void DIA_Grd_281_GuardGate_Info()
 {
 //	AI_Output(other,self,"DIA_Grd_281_GuardGate_15_00"); //How's it going?
@@ -52,6 +54,6 @@ func void DIA_Grd_281_GuardGate_Info()
 	AI_Output(other,self,"DIA_Grd_281_GuardGate_15_00"); //Jak to jde?
 //	AI_Output(self,other,"DIA_Grd_281_GuardGate_07_01"); //Good. None of the rogues from the New Camp are to be seen anywhere!
 //	AI_Output(self,other,"DIA_Grd_281_GuardGate_07_01"); //Gut. Weit und breit keiner von den Banditen aus dem Neuen Lager zu sehen!
-	AI_Output(self,other,"DIA_Grd_281_GuardGate_07_01"); //Dobře. Nikdo z té lůzy z Nového tábora se tu neukázal!
+	AI_Output(self,other,"DIA_Grd_281_GuardGate_07_01"); //Dobře. Široko daleko žádný bandita z Nového tábora!
 	AI_StopProcessInfos(self);
 };

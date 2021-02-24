@@ -106,7 +106,7 @@ func void DIA_Fletcher_Hello_Info()
 	AI_Output(self,other,"DIA_Fletcher_Hello_06_01"); //Pokud se chceš zbavit svých peněz za ochranu - pak sis zvolil špatný den.
 //	AI_Output(other,self,"DIA_Fletcher_Hello_15_02"); //Yeah? Why's that?
 //	AI_Output(other,self,"DIA_Fletcher_Hello_15_02"); //So? Und warum nicht?
-	AI_Output(other,self,"DIA_Fletcher_Hello_15_02"); //Tak? A proč ne?
+	AI_Output(other,self,"DIA_Fletcher_Hello_15_02"); //Hm? A pročpak?
 //	AI_Output(self,other,"DIA_Fletcher_Hello_06_03"); //Cos I'm not here.
 //	AI_Output(self,other,"DIA_Fletcher_Hello_06_03"); //Weil ich gar nicht da bin.
 	AI_Output(self,other,"DIA_Fletcher_Hello_06_03"); //Protože už tady nejsem.
@@ -195,8 +195,13 @@ func void DIA_Fletcher_WoNek_Info()
 //	AI_Output(self,other,"DIA_Fletcher_WoNek_06_03"); //Vor allem nicht jetzt, denn sie wissen, dass ich diese Drecksarbeit hier verabscheue, und insgeheim lachen sie sich über mich tot!
 	AI_Output(self,other,"DIA_Fletcher_WoNek_06_03"); //Obzvlášť ne teď, když vědí, jak já tuhle špinavou práci nenávidím. Vsadím se, že se mi vysmívají za zádama.
 
-	Log_CreateTopic(CH1_LostNek,LOG_MISSION);
-	Log_SetTopicStatus(CH1_LostNek,LOG_RUNNING);
+	//BugFix: tento dialog znovu otvoril quest o Nekovi, pridana podmienka, checkujuca ci je quest uzatvoreny
+	//Log_CreateTopic(CH1_LostNek,LOG_MISSION);
+	//Log_SetTopicStatus(CH1_LostNek,LOG_RUNNING);
+	if (Sly_LostNek != LOG_SUCCESS) {
+		Log_CreateTopic(CH1_LostNek,LOG_MISSION);
+		Log_SetTopicStatus(CH1_LostNek,LOG_RUNNING);
+	};
 //	B_LogEntry(CH1_LostNek,"Maybe the diggers in the arena district know where Nek disappeared to.");
 //	B_LogEntry(CH1_LostNek,"Die Buddler im Arenaviertel wissen vielleicht, wohin Nek verschwunden ist.");
 	B_LogEntry(CH1_LostNek,"Možná budou kopáči kolem arény vědět, kam zmizel Nek.");
@@ -233,7 +238,7 @@ func void DIA_Fletcher_TroSchu_Info()
 	AI_Output(other,self,"DIA_Fletcher_TroSchu_15_00"); //Proč přesto nevybereš nějaké peníze za ochranu?
 //	AI_Output(self,other,"DIA_Fletcher_TroSchu_06_01"); //Nek did his rounds before he disappeared. There's not much left to collect now.
 //	AI_Output(self,other,"DIA_Fletcher_TroSchu_06_01"); //Kurz bevor er verschwunden ist, hat Nek noch einmal alle kräftig zur Kasse gebeten. Da ist nicht mehr viel zu holen.
-	AI_Output(self,other,"DIA_Fletcher_TroSchu_06_01"); //Nek už je vybral krátce před tím, než zmizel. Už tu není moc co vybírat.
+	AI_Output(self,other,"DIA_Fletcher_TroSchu_06_01"); //Nek už je vybral krátce před tím, než zmizel. Už tu není co vybírat.
 };
 
 // ************************************************************
@@ -321,7 +326,7 @@ instance DIA_Fletcher_Problem(C_INFO)
 
 func int DIA_Fletcher_Problem_Condition()
 { 
-	if ( fletcher_foundNek == TRUE )
+	if (fletcher_foundNek == TRUE)
 	{
 		return 1;
 	};
@@ -358,13 +363,13 @@ instance Grd_255_Fletcher_WELCOME(C_INFO)
 };
 
 func int Grd_255_Fletcher_WELCOME_Condition()
-{ 
-
+{
 	if (Npc_GetTrueGuild(hero) == GIL_GRD) 
 	{
 		return TRUE;
 	};
 };
+
 func void Grd_255_Fletcher_WELCOME_Info()
 {
 //	AI_Output(self,other,"Grd_255_Fletcher_WELCOME_Info_06_01"); //You have got used to our ways pretty fast. Welcome to the Guards!
@@ -412,13 +417,13 @@ func void Info_Fletcher_DIE_Info()
 		{
 //			AI_Output(self,hero,"Info_Fletcher_DIE_06_01"); //Traitor! To think we let a thing like you join the Guards. BAH!
 //			AI_Output(self,hero,"Info_Fletcher_DIE_06_01"); //Du Verräter! Na dich haben wir mal zum Gardisten gemacht. PAH!
-			AI_Output(self,hero,"Info_Fletcher_DIE_06_01"); //Zrádce! A to jsme z tebe udělali strážce. BRR!
+			AI_Output(self,hero,"Info_Fletcher_DIE_06_01"); //Zrádce! A to jsme z tebe udělali strážce. PCHE!
 		}
 		else if (oldHeroGuild == GIL_KDF)
 		{
 //			AI_Output(self,hero,"Info_Fletcher_DIE_06_02"); //It's one of those traitorous fire mages! BAH!
 //			AI_Output(self,hero,"Info_Fletcher_DIE_06_02"); //Da ist noch einer von diesen verräterischen Feuermagiern! PAH!
-			AI_Output(self,hero,"Info_Fletcher_DIE_06_02"); //Je to jeden z těch zrádných mágů Ohně! BRR!
+			AI_Output(self,hero,"Info_Fletcher_DIE_06_02"); //Je to jeden z těch zrádných mágů Ohně! PCHE!
 		}
 		else
 		{
@@ -453,7 +458,7 @@ func void Info_Fletcher_DIE_Info()
 		{
 //			B_LogEntry(CH4_BannedFromOC,"Bloodwyn has entrenched himself at the back gate. He reacted the same way as Fletcher at the main gate. I don't really know why, but it must have something to do with my search for the focus on behalf of the New Camp.");
 //			B_LogEntry(CH4_BannedFromOC,"Bloodwyn, hat sich am hinteren Tor verschanzt. Er reagierte ähnlich wie Fletcher am Haupttor. Mir ist nicht klar warum, aber es muss etwas mit meiner Fokussuche für das Neue Lager zu tun haben.");
-			B_LogEntry(CH4_BannedFromOC,"Bloodwyn se opevnil u zadní brány. Zachoval se stejně jako Fletcher, který teď střeží hlavní bránu. Nevím sice jak, ale musí to nějak souviset s mým hledáním ohniska v pro Nový tábor.");
+			B_LogEntry(CH4_BannedFromOC,"Bloodwyn se opevnil u zadní brány. Zachoval se stejně jako Fletcher, který teď střeží hlavní bránu. Nevím sice jak, ale musí to nějak souviset s mým hledáním ohnisek pro Nový tábor.");
 		}
 		else if (Npc_GetTrueGuild(hero) == GIL_NONE)
 		{

@@ -50,7 +50,7 @@ func void DIA_Scatty_WhatDoYouDo_Info()
 	AI_Output(other,self,"DIA_Scatty_WhatDoYouDo_15_00"); //Co tady máš na práci?
 //	AI_Output(self,other,"DIA_Scatty_WhatDoYouDo_01_01"); //I'm in charge of the arena. I organize the bets, hire new fighters... You know.
 //	AI_Output(self,other,"DIA_Scatty_WhatDoYouDo_01_01"); //Ich kümmere mich um die Arena. Organisiere die Wetten, heuere neue Kämpfer an und so weiter ...
-	AI_Output(self,other,"DIA_Scatty_WhatDoYouDo_01_01"); //Starám se o arénu. Organizuju zásky, najímám nové bojovníky a tak ...
+	AI_Output(self,other,"DIA_Scatty_WhatDoYouDo_01_01"); //Starám se o arénu. Organizuju sázky, najímám nové bojovníky a tak ...
 };
 
 // **************************************************
@@ -74,12 +74,17 @@ instance DIA_Scatty_JoinOC(C_INFO)
 };                       
 
 func int DIA_Scatty_JoinOC_Condition()
-{ 
+{
 	if (Npc_GetTrueGuild(hero) == GIL_NONE)
+	//#NEEDS_ATTENTION hmmm od 4.tej kapitoly ma hrac GIL_NONE, dialog by bol teoreticky dostupny ...
+	//ale zaroven su k nemu GIL_STT ATT_HOSTILE, takze to mozno nevadi ?
+	//overthinking it --> hrac moze pouzit sarm na NPC a dialog bude dostupny :-) mozno obmedzit kapitolou?
+	//if ((Npc_GetTrueGuild(hero) == GIL_NONE) && (Kapitel < 4))
 	{
 		return 1;
 	};
 };
+
 func void DIA_Scatty_JoinOC_Info()
 {
 //	AI_Output(other,self,"DIA_Scatty_JoinOC_15_00"); //I want to join the Camp. Can you help me?
@@ -147,7 +152,7 @@ func void DIA_Scatty_KirgoSuccess_Info()
 		AI_Output(self,other,"DIA_Scatty_KirgoSuccess_01_01"); //A nechal ses porazit!
 //		AI_Output(self,other,"DIA_Scatty_KirgoSuccess_01_02"); //Surely you don't expect me to be impressed by that...
 //		AI_Output(self,other,"DIA_Scatty_KirgoSuccess_01_02"); //Du erwartest hoffentlich nicht, dass ich durch dein Versagen beeindruckt bin ...
-		AI_Output(self,other,"DIA_Scatty_KirgoSuccess_01_02"); //Doufám, že nečekáč, že mě tímhle přesvědčíš...
+		AI_Output(self,other,"DIA_Scatty_KirgoSuccess_01_02"); //Doufám, že nečekáš, že mě tímhle přesvědčíš...
 		Scatty_ChargeKirgo = LOG_FAILED;
 
 //		B_LogEntry(CH1_JoinOC,"The fact that Kirgo has defeated me didn't impress Scatty at all.");
@@ -163,7 +168,7 @@ func void DIA_Scatty_KirgoSuccess_Info()
 
 //		B_LogEntry(CH1_JoinOC,"Scatty was impressed by my fight against Kirgo.");
 //		B_LogEntry(CH1_JoinOC,"Scatty ist beeindruckt von meinem Kampf gegen Kirgo.");
-		B_LogEntry(CH1_JoinOC,"Má výhra na Kirgem na Scattyho zapůsobila!");
+		B_LogEntry(CH1_JoinOC,"Vítězství nad Kirgem na Scattyho zapůsobilo!");
 		B_GiveXP(XP_kirgovictory);
 	};
 };
@@ -181,7 +186,7 @@ instance DIA_Scatty_KHARIMSuccess(C_INFO)
 	permanent = 0;
 //	description = "I challenged Kharim!";
 //	description = "Ich bin gegen Kharim angetreten!";
-	description = "Vyzval jsem  Kharima!";
+	description = "Vyzval jsem Kharima!";
 };                       
 
 func int DIA_Scatty_KHARIMSuccess_Condition()
@@ -219,7 +224,7 @@ func void DIA_Scatty_KHARIMSuccess_Info()
 		B_GiveXP(XP_Kharimlost);
 //		B_LogEntry(CH1_JoinOC,"I've been beaten by Kharim! Scatty liked my courage, but not my fighting.");
 //		B_LogEntry(CH1_JoinOC,"Ich bin Kharim unterlegen! Mein Mut hat Scatty gefallen, aber meine Kampffähigkeiten nicht.");
-		B_LogEntry(CH1_JoinOC,"Kharim mě zbil! Scattymu se líbila moje odvaha, ne však můj boj.");
+		B_LogEntry(CH1_JoinOC,"Kharim mě porazil! Scattymu se líbila moje odvaha, ne však můj boj.");
 
 	}
 	else if (KHARIM.aivar[AIV_WASDEFEATEDBYSC] == TRUE)
@@ -252,6 +257,7 @@ instance DIA_Scatty_OtherCamps(C_INFO)
 	permanent = 0;
 //	description = "Why do you let the people from the other camps fight here?";
 //	description = "Wieso lasst ihr die Leute aus den anderen Lagern hier kämpfen?";
+	//#NEEDS_ATTENTION - neprebasnime?
 	description = "Proč necháváš lidi z jiných táborů, aby se tady bili?";
 };                       
 
@@ -270,12 +276,13 @@ func void DIA_Scatty_OtherCamps_Info()
 	AI_Output(other,self,"DIA_Scatty_OtherCamps_15_00"); //Myslel jsem, že Starý a Nový tábor spolu nevycházejí dobře - tak proč tady necháváš jejich lidi bojovat?
 //	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_01"); //It's simple: There's fights here once a week, and the diggers always like to see one of the rogues from the New Camp get flattened.
 //	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_01"); //Ganz einfach: Wenn es hier einmal die Woche einen Kampf gibt, sehen es die Buddler am liebsten, wenn einer der Banditen aus dem Neuen Lager was aufs Maul bekommt.
-	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_01"); //To je jednoduché - odehrávají se tady jednou týdně souboje a kopáči pokaždé rádi vidí, když je některý z pobuda z Nového tábora dostane po hubě.
+	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_01"); //To je jednoduché - odehrávají se tady jednou týdně souboje a kopáči pokaždé rádi vidí, když některý z pobudů z Nového tábora dostane po hubě.
 //	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_02"); //If one of them fights, there's more bets - and that's good for business!
 //	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_02"); //Wenn einer von denen kämpft, wird mehr gewettet - das ist gut!
-	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_02"); //Pokud bojuje jeden z nich, pak se uzavře více sázek - a to je skvělé!
+	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_02"); //Vždy když bojuje jeden z nich, tak se uzavře více sázek - a to je skvělé!
 //	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_03"); //Personally, I can't stand the swines from the New Camp - but business is business...
 //	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_03"); //Ich persönlich kann die Schweine aus dem Neuen Lager ja nicht ausstehen - aber Geschäft ist nun mal Geschäft ...
+	//#NEEDS_ATTENTION grazly alebo svine? je svine moc?
 	AI_Output(self,other,"DIA_Scatty_OtherCamps_01_03"); //Mezi námi, já ty grázly z Nového tábora nemůžu vystát - ale obchod je obchod.
 };
 
@@ -313,7 +320,7 @@ func void DIA_Scatty_WannaBet_Info()
 	AI_Output(self,other,"DIA_Scatty_WannaBet_01_01"); //Teď ale není žádný souboj.
 //	AI_Output(self,other,"DIA_Scatty_WannaBet_01_02"); //The next fight's due in a couple of days. There'll be an announcement.
 //	AI_Output(self,other,"DIA_Scatty_WannaBet_01_02"); //Der nächste Kampf ist in ein paar Tagen - er wird vorher angekündigt.
-	AI_Output(self,other,"DIA_Scatty_WannaBet_01_02"); //Příští souboj budeu za několik dní. Bude to vyhlášeno.
+	AI_Output(self,other,"DIA_Scatty_WannaBet_01_02"); //Další souboj bude za několik dní. Bude to vyhlášeno.
 
 };
 
@@ -335,6 +342,8 @@ instance DIA_Scatty_WannaFight(C_INFO)
 
 func int DIA_Scatty_WannaFight_Condition()
 {
+	//#NEEDS_ATTENTION v gothic1_scripts-1.08j_enu-rev2 verzii skriptov, ktore som pouzil ako 'master' je tento dialog uplne vypnuty, v ceskych skriptoch je dostupny
+	//Nemecke skripty to maju takisto vypnute
 //	if (Npc_KnowsInfo(hero,DIA_Scatty_WhatDoYouDo))
 //	{
 //		return 1;

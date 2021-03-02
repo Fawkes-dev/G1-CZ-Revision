@@ -139,7 +139,7 @@ func void GUR_1202_CorAngar_Teach_Info()
 	AI_Output(other,self,"GUR_1202_CorAngar_Teach_15_00"); //Můžeš cvičit mojí sílu a obratnost?
 //	AI_Output(self,other,"GUR_1202_CorAngar_Teach_08_01"); //Every warrior requires strength and dexterity.
 //	AI_Output(self,other,"GUR_1202_CorAngar_Teach_08_01"); //Kampfkraft und Wendigkeit sind die Vorraussetzungen für jeden Kämpfer.
-	AI_Output(self,other,"GUR_1202_CorAngar_Teach_08_01"); //Každý bojovník musí být silný a obratný.
+	AI_Output(self,other,"GUR_1202_CorAngar_Teach_08_01"); //Síla a obratnost jsou předpoklady každého dobrého bojovníka.
 
 	Info_ClearChoices(GUR_1202_CorAngar_Teach);
 	Info_AddChoice(GUR_1202_CorAngar_Teach,DIALOG_BACK ,GUR_1202_CorAngar_Teach_BACK);
@@ -245,7 +245,7 @@ func void GUR_1202_CorAngar_WANNABETPL_Info()
 		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_04"); //Pamatuj, že templář není jen dobrým bojovníkem a strážcem tábora. Jsme vyvolení strážci Spáče. Strážci ducha.
 //		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_05"); //We make use of both our physical and our spiritual strength. Only those whose body and spirit are in unison can become true templars.
 //		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_05"); //Wir nutzen unsere geistige und unsere körperliche Kraft zu gleichen Teilen. Nur ein Mann, dessen Körper und Geist sich in Einklang befinden, kann ein aufrechter Templer sein.
-		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_05"); //Používáme jak fyzickou, tak duchovní sílu. Jen ti, jejichž těla i duše splývají v jednotě, jsou praví templáři.
+		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_05"); //Používáme jak fyzickou, tak duchovní sílu. Jen ti, jejichž těla i duše splývají v jedno, jsou praví templáři.
 //		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_06"); //I'm really pleased that you managed to achieve a great deal within such a short time. Now you are ready to join us.
 //		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_06"); //Es freut mich, dass du es in so kurzer Zeit geschafft hast, so weit zu kommen, dass du nun bereit bist, einer der Unseren zu werden.
 		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_06"); //Jsem opravdu potěšen, že jsi došel tak daleko v tak krátké době. Nyní jsi připraven se k nám přidat.
@@ -254,7 +254,7 @@ func void GUR_1202_CorAngar_WANNABETPL_Info()
 		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_07"); //Zapamatuj si: soustředěná duše a trénované tělo odolají každé hrozbě.
 //		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_08"); //Now go to Gor Na Toth at the training ground. He'll give you new armor.
 //		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_08"); //Gehe nun zu Gor Na Toth am Übungsplatz. Er wird dir deine neue Rüstung geben.
-		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_08"); //Teď jdi na cvičiště za Gorem Na Tothem. Dá ti novou zbroj.
+		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_08"); //Teď jdi na cvičiště za Gor Na Tothem. Dá ti novou zbroj.
 		GUR_1202_CorAngar_WANNABETPL.permanent = 0;
 		Npc_SetTrueGuild(hero,GIL_TPL);
 		hero.guild = GIL_TPL;
@@ -306,13 +306,13 @@ func void GUR_1202_CorAngar_ZWEIHAND1_Info()
 	{
 //		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_02"); //Fighting with two-handed weapons requires certain levels of strength and dexterity.
 //		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_02"); //Der Kampf mit zweihändigen Waffen setzt nicht nur ein Mindestmaß an Stärke und Geschick voraus.
-		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_02"); //Boj s obouručním mečem vyžaduje určitou sílu a obratnost.
+		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_02"); //Boj s obouručními zbraněmi nevyžaduje jen určitou sílu a obratnost.
 //		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_03"); //To wield a two-handed weapon, you will not only need to master your body, but your mind as well.
 //		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_03"); //Um eine zweihändige Waffe zu führen, musst du nicht nur deinen Körper, sondern auch deinen Geist beherrschen.
-		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_03"); //Abys dokázal zacházet s obouručním mečem, musíš být nejen pánem svého těla, ale zrovna tak své mysli.
+		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_03"); //Abys dokázal zacházet s obouruční zbraní, musíš být nejen pánem svého těla, ale zrovna tak své mysli.
 //		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_04"); //Only if you master both mind and body will you be able to learn the skill.
 //		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_04"); //Nur wenn du Körper und Geist ganz beherrscht, kannst du das Talent lernen.
-		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_04"); //Jedině když se staneš pánem svého těla i mysli zároveň, můžeš se naučit umění boje.
+		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_04"); //Jedině když se staneš pánem svého těla i mysli zároveň, můžeš se umění boje naučit.
 //		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_05"); //Concentration is the key. Body and mind unite in concentration.
 //		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_05"); //Konzentration ist der Schlüssel. Körper und Geist verschmelzen in Konzentration zusammen.
 		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_05"); //Klíčem úspěchu je soustředění. Soustředěná jednota těla a mysli.
@@ -426,7 +426,7 @@ func void GUR_1202_CorAngar_SENDS_Info()
 	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_02"); //Vidina byla příliš nejasná. Přinesla nám víc hádanek než odpovědí.
 //	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_03"); //But one thing was perfectly clear: I saw an Orc in a cave. There is an old abandoned Orcish place of worship nearby.
 //	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_03"); //Aber eines war klar. Mann konnte einen Ork in einer Höhle erkennen. Es gibt eine alte verlassene Kultstätte der Orks ganz hier in der Nähe.
-	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_03"); //Jedna věc je však docela jasná: viděl jsem jednoho skřeta v jeskyni. Nedaleko je jedna stará opuštěná jeskyně skřetů, kterou  používali pro bohoslužby.
+	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_03"); //Jedna věc je však docela jasná. Viděl jsem jednoho skřeta v jeskyni. Nedaleko je jedna stará opuštěná skřetí jeskyně, kterou používali pro bohoslužby.
 //	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_04"); //The Orcs used to bury their dead there, that's why we call this system of caves the Orc cemetery.
 //	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_04"); //Früher haben dort die Orks ihre Verstorbenen beigesetzt, daher nennen wir dieses Höhlensystem den Ork-Friedhof.
 	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_04"); //Skřeti tam pohřbívali své mrtvé, proto tomu systému jeskyní říkáme Skřetí hřbitov.
@@ -435,7 +435,7 @@ func void GUR_1202_CorAngar_SENDS_Info()
 	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_05"); //Guru Baal Lukor tam odešel s několika templáři. Možná tam najdeme něco, co by nám pomohlo porozumět té vidině.
 //	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_06"); //I need somebody to have a look around that place and to report to me about the situation.
 //	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_06"); //Ich brauche jemanden, der dort nach dem Rechten sieht und mir von der Situation berichtet.
-	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_06"); //Potřebuji, aby se tam někdo porozhlédl a dal mi zprávu o stavu věcí.
+	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_06"); //Potřebuji, aby se tam někdo porozhlédl a dal mi zprávu o tom, jak se věci mají.
 //	AI_Output(other,self,"GUR_1202_CorAngar_SENDS_Info_15_07"); //Why don't you go yourself? You are the leader of the templars!
 //	AI_Output(other,self,"GUR_1202_CorAngar_SENDS_Info_15_07"); //Warum gehst du nicht selber? Du bist doch der Anführer der Templer!
 	AI_Output(other,self,"GUR_1202_CorAngar_SENDS_Info_15_07"); //Proč tam nejdeš sám? Jsi přece vůdce templářů!
@@ -444,10 +444,10 @@ func void GUR_1202_CorAngar_SENDS_Info()
 	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_08"); //Můj úkol je chránit Osvíceného. Musím tu zůstat s Y´Berionem a střežit ho.
 //	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_09"); //You have done good service for the Camp. I trust you more than anybody else here.
 //	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_09"); //Du hast dem Lager schon große Dienste erwiesen. Ich vertraue dir mehr als jedem anderen hier.
-	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_09"); //Odvedl jsi táboru dobré služby. Věřím ti víc než komukoliv jinému odtud.
+	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_09"); //Vykonal jsi pro tábor veliké služby. Věřím ti víc než komukoliv jinému odtud.
 //	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_10"); //I am asking you to go to the Orc cemetery and report to me what the templars have found.
 //	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_10"); //Ich bitte dich, gehe zum Ork-Friedhof und berichte mir, was die Templer dort gefunden haben.
-	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_10"); //Chci tě požádat, abys šel do Skřetího hřbitova a podal mi zprávu, co tam templáři našli.
+	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_10"); //Žádám tě, abys šel do Skřetího hřbitova a podal mi zprávu, co tam templáři našli.
 
 	Info_ClearChoices(GUR_1202_CorAngar_SENDS);
 //	Info_AddChoice(GUR_1202_CorAngar_SENDS,"What will I get in exchange?", GUR_1202_CorAngar_SENDS_EARN);
@@ -476,7 +476,7 @@ func void GUR_1202_CorAngar_SENDS_KNOW()
 	AI_Output(other,self,"GUR_1202_CorAngar_SENDS_KNOW_Info_15_01"); //Ihned se vydám na cestu!
 //	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_KNOW_Info_08_02"); //Before you go, take this ring. May it protect you in battle!
 //	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_KNOW_Info_08_02"); //Bevor du losgehst, nimm diesen Ring. Er möge dich im Kampf schützen!
-	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_KNOW_Info_08_02"); //Ještě než odejdeš, vem si tenhle prsten. Ať tě ochrání v boji!
+	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_KNOW_Info_08_02"); //Ještě než odejdeš, vezmi si tenhle prsten. Ochrání tě v boji!
 
 	B_Story_GotoOrcGraveyard();
 
@@ -516,7 +516,7 @@ func void GUR_1202_CorAngar_WHERE_Info()
 
 //	B_LogEntry(CH3_OrcGraveyard,"The novice Talas will show me the way to the Orc cemetery. He's waiting for me at the temple forecourt.");
 //	B_LogEntry(CH3_OrcGraveyard,"Der Novize Talas wird mir den Weg zum Ork-Friedhof zeigen. Er wartet auf dem Tempelvorplatz auf mich.");
-	B_LogEntry(CH3_OrcGraveyard,"Novic Talas mi ukáže cestu k skřetímu hřbitovu. Počká na mě na nádvoří chrámu.");
+	B_LogEntry(CH3_OrcGraveyard,"Novic Talas mi ukáže cestu k Skřetímu hřbitovu. Počká na mě na nádvoří chrámu.");
 };  
 
 // **************************************************************************
@@ -531,7 +531,7 @@ instance GUR_1202_CorAngar_AFTER(C_INFO)
 	permanent = 0;
 //	description = "I've been to the Orc cemetery."; 
 //	description = "Ich war im Ork Friedhof"; 
-	description = "Byl jsem na Skřetím hřbitově. Není TAM NIC. Žádný Spáč, žádné znamení, prostě nic."; 
+	description = "Byl jsem na Skřetím hřbitově."; 
 };
 
 func int GUR_1202_CorAngar_AFTER_Condition()
@@ -554,10 +554,10 @@ func void GUR_1202_CorAngar_AFTER_Info()
 	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_02"); //A co Baal Lukor a templáři?
 //	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_03"); //They're all dead.
 //	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_03"); //Sie sind alle tot.
-	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_03"); //Jsou mrtví.
+	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_03"); //Všichni jsou mrtví.
 //	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_04"); //Dead? But why, what happened?
 //	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_04"); //Tot? Aber warum, was ist dort vorgefallen?
-	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_04"); //Mrtví? Ale proč? Jak se to stalo?
+	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_04"); //Mrtví? Ale proč, jak se to stalo?
 //	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_05"); //The entire cave system is teeming with Orcs. They killed all of the templars.
 //	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_05"); //Im gesamten Höhlensystem wimmelte es von Orks. Sie haben alle Templer getötet.
 	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_05"); //Celý jeskynní systém se hemží skřety. Zabili všechny templáře.
@@ -627,7 +627,7 @@ func void Info_CorAngar_FindHerb_Info()
 	AI_Output(self,other,"Mis_3_NC_CorAngar_FindHerb_08_04"); //Přines mi z bažin léčivé byliny. Pět nejsilnějších druhů by mělo stačit!
 //	AI_Output(self,other,"Mis_3_NC_CorAngar_FindHerb_08_05"); //Please hurry!
 //	AI_Output(self,other,"Mis_3_NC_CorAngar_FindHerb_08_05"); //Und bitte beeile dich!
-	AI_Output(self,other,"Mis_3_NC_CorAngar_FindHerb_08_05"); //Prosím rychle!
+	AI_Output(self,other,"Mis_3_NC_CorAngar_FindHerb_08_05"); //A prosím pospěš si!
 	AI_StopProcessInfos(self);
 	CorAngar_FindHerb = LOG_RUNNING;
 
@@ -670,12 +670,12 @@ func void Info_CorAngar_FindHerb_WHERE_Info()
 	AI_Output(self,other,"Info_CorAngar_FindHerb_WHERE_08_02"); //Hledej je v bažinách za táborem. Musíš pro ně jít hluboko do močálu, ale dávej pozor, ať tě nedostanou močáloví žraloci.
 //	AI_Output(self,other,"Info_CorAngar_FindHerb_WHERE_08_03"); //And now don't waste my time. Go!
 //	AI_Output(self,other,"Info_CorAngar_FindHerb_WHERE_08_03"); //Und jetzt verliere nicht noch mehr Zeit. Geh!
-	AI_Output(self,other,"Info_CorAngar_FindHerb_WHERE_08_03"); //A teď už mě nezdržuj. Běž!
+	AI_Output(self,other,"Info_CorAngar_FindHerb_WHERE_08_03"); //A teď už se nezdržuj. Běž!
 	AI_StopProcessInfos(self);
 
 //	B_LogEntry(CH3_FindHerbs,"The required medical herbs for Y'Berion grow deep in the swamp behind the camp of the Brotherhood. The dangerous swampsharks are there as well, though. I'll need to keep my eyes peeled.");
 //	B_LogEntry(CH3_FindHerbs,"Die benötigten Heilkräuter für Y'Berion wachsen tief im Sumpf hinter dem Lager der Bruderschaft. Allerdings gibt es dort die gefährlichen Sumpfhaie. Ich muss die Augen offen halten.");
-	B_LogEntry(CH3_FindHerbs,"Léčivé byliny na lék pro Y´Beriona rostou hluboko v bažinách za táborem Bratrstva. Jsou tam také nebezpeční močáloví žraloci. Musím mít oči na stopkách.");
+	B_LogEntry(CH3_FindHerbs,"Léčivé byliny na lék pro Y´Beriona rostou hluboko v bažinách za táborem Bratrstva. Jsou tam také nebezpeční močáloví žraloci. Musím si na ně dát pozor.");
 };
 
 // ---------------------------- FindHerb - LOOK ---------------------------------------
@@ -715,7 +715,7 @@ func void Info_CorAngar_FindHerb_LOOK_Info()
 
 //	B_LogEntry(CH3_FindHerbs,"The medical herbs look like a star with four green and four orange leaves.");
 //	B_LogEntry(CH3_FindHerbs,"Die Heilkräuter sehen aus wie ein Stern mit vier grünen und vier orangefarbenen Blättern.");
-	B_LogEntry(CH3_FindHerbs,"Léčivé byliny vypadají jako hvězdice s čtyřmi zelenými a čtyřmi oranžovými okvětními lístky.");
+	B_LogEntry(CH3_FindHerbs,"Léčivé byliny vypadají jako hvězdice s čtyřmi zelenými a čtyřmi oranžovými listy.");
 };
 
 // ---------------------------- RUNNING ---------------------------------------
@@ -729,7 +729,7 @@ instance Info_CorAngar_FindHerb_Running(C_INFO)
 	important = 0; 
 //	description = "I haven't found enough healing herbs yet.";
 //	description = "Ich habe noch nicht genug Heilkräuter gefunden";
-	description = "Ještě jsem nenašel léčivých bylin dost.";
+	description = "Ještě jsem nenašel dost léčivých bylin.";
 };                       
 
 func int Info_CorAngar_FindHerb_Running_Condition()
@@ -753,7 +753,7 @@ func void Info_CorAngar_FindHerb_Running_Info()
 	AI_Output(self,other,"Info_CorAngar_FindHerb_Running_08_02");//Možná má nějaké na skladě Fortuno, obchodník bylinami.
 //	AI_Output(self,other,"Info_CorAngar_FindHerb_Running_08_03");//Hurry. I need five of them. Y'Berion doesn't have much time left.
 //	AI_Output(self,other,"Info_CorAngar_FindHerb_Running_08_03");//Beeil dich. Ich brauche fünf Stück. Y'Berion bleibt nicht mehr viel Zeit.
-	AI_Output(self,other,"Info_CorAngar_FindHerb_Running_08_03");//Pospěš. Potřebuji jich pět. Y´Berion ztratil příliš času.
+	AI_Output(self,other,"Info_CorAngar_FindHerb_Running_08_03");//Pospěš si. Potřebuji jich pět. Y´Berion ztratil příliš času.
 	AI_StopProcessInfos(self);
 
 	//-------- Fortuno die Kräuter "unterschieben" --------
@@ -817,7 +817,7 @@ func void Info_CorAngar_FindHerb_Success_Info()
 
 //	B_LogEntry(CH3_FindHerbs,"I've given Cor Angar enough medical herbs. Now we can only hope that we're not too late.");
 //	B_LogEntry(CH3_FindHerbs,"Ich habe Cor Angar ausreichend der dringend benötigten Heilkräuter übergeben. Jetzt können wir nur noch hoffen, dass ich nicht zu spät kam.");
-	B_LogEntry(CH3_FindHerbs,"Dodal jsem Coru Angarovi dostatek léčivých bylin. Teď můžeme jen doufat, že nebylo příliš pozdě.");
+	B_LogEntry(CH3_FindHerbs,"Dodal jsem Cor Angarovi dostatek léčivých bylin. Teď můžeme jen doufat, že nebylo příliš pozdě.");
 	Log_SetTopicStatus(CH3_FindHerbs,LOG_SUCCESS);
 
 	//-------- Versuch YBerion zu heilen... --------
@@ -849,7 +849,7 @@ func void Info_CorAngar_FindHerb_Success_Info()
 	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_04"); //Pak bychom měli mágům Vody s jejich plánem pomoci.
 //	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_05"); //They'll need the focus and the almanac. Both things are still in Cor Kalom's possession.
 //	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_05"); //Sie werden den Fokus und den Almanach benötigen. Beides befindet sich noch in Cor Kaloms Besitz.
-	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_05"); //Potřebují ohnisko a almanach. Obě věci jsou stále majetkem Cora Kaloma.
+	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_05"); //Budou potřebovat ohnisko a almanach. Obě věci jsou stále majetkem Cora Kaloma.
 //	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_06"); //Where is Cor Kalom?
 //	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_06"); //Wo ist Cor Kalom?
 	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_06"); //Kde je Cor Kalom?
@@ -861,7 +861,7 @@ func void Info_CorAngar_FindHerb_Success_Info()
 	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_08"); //Sakra, jak teď to ohnisko dostaneme?
 //	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_09"); //I believe he left the book and focus in his laboratory. Here is the key for the chest.
 //	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_09"); //Ich schätze, er ließ Buch und Fokus in seinem Labor zurück. Hier ist der Schlüssel für seine Truhe.
-	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_09"); //Doufám, že to ohnisko i almanach nechal ve své dílně. Tady je klíč k té truhle.
+	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_09"); //Myslím, že to ohnisko i almanach nechal ve své laboratoři. Tady je klíč k té truhle.
 
 	CreateInvItem(self,ITKE_PSI_KALOM_01); 
 	B_GiveInvItems(self,other,ITKE_PSI_KALOM_01,1);
@@ -896,10 +896,10 @@ func void Info_CorAngar_TELEPORT_Info()
 	AI_Output(hero,self,"Info_CorAngar_TELEPORT_15_02"); //Ano?
 //	AI_Output(self,hero,"Info_CorAngar_TELEPORT_08_03"); //Take this rune of magic as a sign of our gratitude for your great deeds.
 //	AI_Output(self,hero,"Info_CorAngar_TELEPORT_08_03"); //Nimm diese Zauberrune als Zeichen unseres Dankes für deine großen Taten.
-	AI_Output(self,hero,"Info_CorAngar_TELEPORT_08_03"); //Vem si tuhle magickou runu jako vyjádření našeho vděku za tvoje velké činy.
+	AI_Output(self,hero,"Info_CorAngar_TELEPORT_08_03"); //Vezmi si tuhle magickou runu jako vyjádření našeho vděku za tvoje velké činy.
 //	AI_Output(self,hero,"Info_CorAngar_TELEPORT_08_04"); //This will allow you to teleport fast and easily to the courtyard of our temple whenever the need arises.
 //	AI_Output(self,hero,"Info_CorAngar_TELEPORT_08_04"); //Damit kannst du dich jederzeit schnell und bequem auf unseren Tempelvorplatz teleportieren.
-	AI_Output(self,hero,"Info_CorAngar_TELEPORT_08_04"); //Pomůže ti snadno a rychle se přenést do chrámového dvora, kdykoliv to budeš potřebovat.
+	AI_Output(self,hero,"Info_CorAngar_TELEPORT_08_04"); //S pomocí této runy se snadno a rychle přeneseš do chrámového dvora, kdykoliv budeš potřebovat.
 //	AI_Output(hero,self,"Info_CorAngar_TELEPORT_15_05"); //Thank you!
 //	AI_Output(hero,self,"Info_CorAngar_TELEPORT_15_05"); //Ich danke dir!
 	AI_Output(hero,self,"Info_CorAngar_TELEPORT_15_05"); //Děkuju!

@@ -59,20 +59,20 @@ func void GUR_1201_CorKalom_WannaJoin_Info()
 	AI_Output(other,self,"GUR_1201_CorKalom_WannaJoin_15_00"); //Chci se přidat k Bratrstvu.
 //	AI_Output(other,self,"GUR_1201_CorKalom_WannaJoin_15_01"); //I've heard you're the master of the novices and that you decide who's allowed to join.
 //	AI_Output(other,self,"GUR_1201_CorKalom_WannaJoin_15_01"); //Ich habe gehört, du bist der Meister der Novizen, und entscheidest, wer aufgenommen wird.
-	AI_Output(other,self,"GUR_1201_CorKalom_WannaJoin_15_01"); //Slyšel jsem, že jsi vedoucí noviců a že rozhoduješ o tom, kdo se může přidat.
+	AI_Output(other,self,"GUR_1201_CorKalom_WannaJoin_15_01"); //Slyšel jsem, že jsi mistr noviců a že TY rozhoduješ o tom, kdo se může přidat.
 //	AI_Output(self,other,"GUR_1201_CorKalom_WannaJoin_10_02"); //I don't have time! My experiments are too important for me to spend any time on new novices.
 //	AI_Output(self,other,"GUR_1201_CorKalom_WannaJoin_10_02"); //Ich habe keine Zeit! Meine Experimente sind zu wichtig, als dass ich mich um neue Novizen kümmern könnte.
 	AI_Output(self,other,"GUR_1201_CorKalom_WannaJoin_10_02"); //Nemám čas! Mé experimenty jsou příliš důležité, než abych ztrácel čas s novými novici.
 //	AI_Output(self,other,"GUR_1201_CorKalom_WannaJoin_10_03"); //I'll rely on the judgement of the Baals. When they say you're ready to wear the robe of a novice, come back to me.
 //	AI_Output(self,other,"GUR_1201_CorKalom_WannaJoin_10_03"); //Ich verlasse mich auf das Urteil der Baals. Wenn sie sagen, dass du bereit bist, die Robe eines Novizen zu tragen, kehre zu mir zurück.
-	AI_Output(self,other,"GUR_1201_CorKalom_WannaJoin_10_03"); //Budu spoléhat na názor Baalů. Až řeknou, že jsi hoden nosit roucho novice, přijď znovu.
+	AI_Output(self,other,"GUR_1201_CorKalom_WannaJoin_10_03"); //Spoléhám se na názor Baalů. Až řeknou, že jsi hoden nosit roucho novice, přijď znovu.
 	AI_StopProcessInfos(self);
 
 	Log_CreateTopic(CH1_JoinPsi,LOG_MISSION);
 	Log_SetTopicStatus(CH1_JoinPsi,LOG_RUNNING);
 //	B_LogEntry(CH1_JoinPsi,"Cor Kalom will let me join the Brotherhood as a novice if I manage to convince four of the Baals to speak in my favor.");
 //	B_LogEntry(CH1_JoinPsi,"Cor Kalom nimmt mich als Novize in die Bruderschaft auf, wenn ich mindestens vier der Baal's davon überzeugen kann, für mich zu sprechen.");
-	B_LogEntry(CH1_JoinPsi,"Cor Kalom mě nechá přidat se k Bratrstvu, pokud se mi podaří přesvědčit čtyři z Baalů, aby se za mě přimluvili.");
+	B_LogEntry(CH1_JoinPsi,"Cor Kalom mě nechá přidat se k Bratrstvu, pokud se mi podaří přesvědčit nejméně čtyři z Baalů, aby se za mě přimluvili.");
 };  
 
 // ****************************************
@@ -110,7 +110,7 @@ func void GUR_1201_CorKalom_Recipe_Info()
 
 //	B_LogEntry(CH1_KalomsRecipe,"Cor Kalom will not give me the recipe. But there are chests in his lab ... and he seemed to be quite busy ...");
 //	B_LogEntry(CH1_KalomsRecipe,"Cor Kalom will das Rezept nicht herausrücken. Aber in seinem Labor stehen Truhen... Und er schien ziemlich beschäftigt zu sein...");
-	B_LogEntry(CH1_KalomsRecipe,"Cor Kalom mi nedá ten recept. V jeho dílně jsou však truhlice... a vypadá, že bude mít docela rušno...");
+	B_LogEntry(CH1_KalomsRecipe,"Cor Kalom mi ten recept nedá. V jeho dílně jsou však truhlice... a vypadá, že je docela zaneprázdněný...");
 };  
 
 // ****************************************
@@ -181,14 +181,14 @@ func void GUR_1201_CorKalom_BRINGWEED_Info()
 	{
 //		AI_Output(self,other,"GUR_1201_CorKalom_BRINGWEED_10_01"); //And THAT's supposed to be the lot??? I expect the COMPLETE harvest, which means at least a 100 stalks!!!
 //		AI_Output(self,other,"GUR_1201_CorKalom_BRINGWEED_10_01"); //Und DAS soll alles sein??? Ich erwarte die KOMPLETTE Ernte, das sind mindestens 100 Stengel!!!
-		AI_Output(self,other,"GUR_1201_CorKalom_BRINGWEED_10_01"); //A TOMUHLE ty říkáš nějaké množství??? Očekávám CELOU sklizeň, což znamená aspoň 100 lodyh!!!
+		AI_Output(self,other,"GUR_1201_CorKalom_BRINGWEED_10_01"); //A TOHLE má být všechno??? Očekávám CELOU sklizeň, což znamená alespoň 100 lodyh!!!
 		AI_StopProcessInfos(self);
 	}
 	else
 	{
 //		AI_Output(self,other,"GUR_1201_CorKalom_BRINGWEED_10_02"); //Aargh, give it to me. And now get out of my sight!
 //		AI_Output(self,other,"GUR_1201_CorKalom_BRINGWEED_10_02"); //Ah, gib her. Und verzieh dich wieder!
-		AI_Output(self,other,"GUR_1201_CorKalom_BRINGWEED_10_02"); //Ach jo, dej mi to. A teď se mi ztrať z očí!
+		AI_Output(self,other,"GUR_1201_CorKalom_BRINGWEED_10_02"); //Ah, dej mi to. A teď se mi ztrať z očí!
 
 		B_GiveInvItems(hero,self,ItMi_Plants_Swampherb_01, 100);
 		Npc_RemoveInvItems(self,ItMi_Plants_Swampherb_01, 100);
@@ -217,7 +217,7 @@ instance GUR_1201_CorKalom_Crawlerzangen(C_INFO)
 	permanent = 1;
 //	description = "I have crawlers' mandibles for you..."; 
 //	description = "Ich habe Crawlerzangen für dich..."; 
-	description = "Mám pro tebe čelisti červů..."; 
+	description = "Mám pro tebe čelisti důlních červů..."; 
 };
 
 func int GUR_1201_CorKalom_Crawlerzangen_Condition()
@@ -232,13 +232,13 @@ func void GUR_1201_CorKalom_Crawlerzangen_Info()
 {
 //	AI_Output(other,self,"GUR_1201_CorKalom_Crawlerzangen_15_00"); //I have crawlers' mandibles for you...
 //	AI_Output(other,self,"GUR_1201_CorKalom_Crawlerzangen_15_00"); //Ich habe Crawlerzangen für dich...
-	AI_Output(other,self,"GUR_1201_CorKalom_Crawlerzangen_15_00"); //Mám pro tebe čelisti červů...
+	AI_Output(other,self,"GUR_1201_CorKalom_Crawlerzangen_15_00"); //Mám pro tebe čelisti důlních červů...
 
 	if (Npc_HasItems(other,ItAt_Crawler_01) > 9)
 	{
 //		AI_Output(self,other,"GUR_1201_CorKalom_Crawlerzangen_10_01"); //Very good. Take some of my best potions as reward.
 //		AI_Output(self,other,"GUR_1201_CorKalom_Crawlerzangen_10_01"); //Sehr gut. Nimm einige meiner besten Tränke als Belohnung.
-		AI_Output(self,other,"GUR_1201_CorKalom_Crawlerzangen_10_01"); //Výborně. Dám ti za ně pár svých nejlepších lektvarů.
+		AI_Output(self,other,"GUR_1201_CorKalom_Crawlerzangen_10_01"); //Výborně. Jako odměnu si vezmi mé nejlepší lektvary.
 		CreateInvItems(self,ItFo_Potion_Mana_03, 3);
 		B_GiveInvItems(self,hero,ItFo_Potion_Mana_03, 3);
 	}
@@ -246,7 +246,7 @@ func void GUR_1201_CorKalom_Crawlerzangen_Info()
 	{
 //		AI_Output(self,other,"GUR_1201_CorKalom_Crawlerzangen_10_02"); //Good. Take some potions as a reward.
 //		AI_Output(self,other,"GUR_1201_CorKalom_Crawlerzangen_10_02"); //Gut. Nimm ein paar Tränke als Belohnung.
-		AI_Output(self,other,"GUR_1201_CorKalom_Crawlerzangen_10_02"); //Dobře. Dám ti za to pár lektvarů.
+		AI_Output(self,other,"GUR_1201_CorKalom_Crawlerzangen_10_02"); //Dobře. Jako odměnu si vezmi tyto lektvary.
 		CreateInvItems(self,ItFo_Potion_Mana_02, 2);
 		B_GiveInvItems(self,hero,ItFo_Potion_Mana_02, 2);
 	}
@@ -254,7 +254,7 @@ func void GUR_1201_CorKalom_Crawlerzangen_Info()
 	{
 //		AI_Output(self,other,"GUR_1201_CorKalom_Crawlerzangen_10_03"); //Hm. That's all of them? Here, take a mana potion and disappear.
 //		AI_Output(self,other,"GUR_1201_CorKalom_Crawlerzangen_10_03"); //Hm. Das soll alles sein? Hier, nimm einen Manatrank und verschwinde.
-		AI_Output(self,other,"GUR_1201_CorKalom_Crawlerzangen_10_03"); //Hmm. To je všechno? Tady je lektvar many a zmiz.
+		AI_Output(self,other,"GUR_1201_CorKalom_Crawlerzangen_10_03"); //Hm. To má být všechno? Tady, vezmi si lektvar many a zmiz.
 		CreateInvItems(self,ItFo_Potion_Mana_01,1);
 		B_GiveInvItems(self,hero,ItFo_Potion_Mana_01,1);
 		AI_StopProcessInfos(self);
@@ -301,7 +301,7 @@ func void GUR_1201_CorKalom_JoinPSI_Info()
 	{
 //		AI_Output(other,self,"GUR_1201_CorKalom_JoinPSI_15_01"); //Baal Orun says I have proven to be a worthy servant of the Sleeper.
 //		AI_Output(other,self,"GUR_1201_CorKalom_JoinPSI_15_01"); //Baal Orun sagt, ich habe mich als würdiger Diener des Schläfers erwiesen.
-		AI_Output(other,self,"GUR_1201_CorKalom_JoinPSI_15_01"); //Baal Orun říká, že jsem uspěl jako dobrý služebník Spáče.
+		AI_Output(other,self,"GUR_1201_CorKalom_JoinPSI_15_01"); //Baal Orun říká, že jsem jako dobrý služebník Spáče uspěl.
 		counter = counter + 1;
 	};
 	if (Npc_KnowsInfo(hero,DIA_BaalCadar_SleepSpell))
@@ -332,7 +332,7 @@ func void GUR_1201_CorKalom_JoinPSI_Info()
 	{
 //		AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_06"); //And?
 //		AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_06"); //Und?
-		AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_06"); //No a?
+		AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_06"); //A?
 //		AI_Output(other,self,"GUR_1201_CorKalom_JoinPSI_15_07"); //Baal Tondral says, I should receive the robe. I have brought him a new student.
 //		AI_Output(other,self,"GUR_1201_CorKalom_JoinPSI_15_07"); //Baal Tondral sagt, ich soll die Robe erhalten. Ich habe einen neuen Schüler zu ihm geführt.
 		AI_Output(other,self,"GUR_1201_CorKalom_JoinPSI_15_07"); //Baal Tondral říká, že bych měl obdržet roucho. Přivedl jsem mu nového žáka.
@@ -348,7 +348,7 @@ func void GUR_1201_CorKalom_JoinPSI_Info()
 			AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_08"); //Dobře. Jestli máš podporu Baalů, tak mi to stačí.
 //			AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_09"); //Here, put this on. And now go and make yourself useful.
 //			AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_09"); //Hier, zieh das an. Und jetzt geh und mach dich nützlich.
-			AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_09"); //Tady, vem si to. A teď běž a snaž se být užitečný.
+			AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_09"); //Tady, obleč si ho. A teď běž a snaž se být užitečný.
 
 			// Ernennung zum Novizen
 			CreateInvItem(self,NOV_ARMOR_M);
@@ -358,10 +358,10 @@ func void GUR_1201_CorKalom_JoinPSI_Info()
 			hero.guild = GIL_NOV;
 //			B_LogEntry(CH1_JoinPsi,"Today Cor Kalom has appointed me a novice. He was as unbearable as always, but now I really belong to the Brotherhood of the Sleeper in the swamp camp.");
 //			B_LogEntry(CH1_JoinPsi,"Heute hat mich Cor Kalom zum Novizen ernannt. Er war zwar unausstehlich wie immer, doch nun gehöre ich endlich fest zur Bruderschaft im Sumpflager.");
-			B_LogEntry(CH1_JoinPsi,"Dnes mě Cor Kalom přijal jako novice. Byl jako obvykle nesnesitelný, ale konečně patřím mezi Bratrstvo Spáče z Tábora v bažinách.");
+			B_LogEntry(CH1_JoinPsi,"Dnes mě Cor Kalom jmenoval novicem. Byl jako obvykle nesnesitelný, ale konečně patřím k Bratrstvu Spáče z Tábora v bažinách.");
 //			B_LogEntry(GE_TraderPSI,"I'll get better NOVICE ARMOR from Baal Namib.");
 //			B_LogEntry(GE_TraderPSI,"Bessere NOVIZENRÜSTUNGEN bekomme ich von Baal Namib.");
-			B_LogEntry(GE_TraderPSI,"Dostanu od Baala Namiba lepší NOVICKOU ZBROJ.");
+			B_LogEntry(GE_TraderPSI,"Od Baala Namiba dostanu lepší NOVICKOU ZBROJ.");
 			Log_SetTopicStatus(CH1_JoinPsi,LOG_SUCCESS);
 			B_GiveXP(XP_BecomeNovice);
 
@@ -376,7 +376,7 @@ func void GUR_1201_CorKalom_JoinPSI_Info()
 			Log_SetTopicStatus(CH1_JoinNC,LOG_FAILED);
 //			B_LogEntry(CH1_JoinNC,"I can't join the rogues of the New Camp any more, because my new place is with the Brotherhood of the Sleeper.");
 //			B_LogEntry(CH1_JoinNC,"Eine Aufnahme bei den Banditen des Neuen Lagers ist nun nicht mehr möglich, denn meine neue Heimat ist die Bruderschaft des Schläfers");
-			B_LogEntry(CH1_JoinNC,"Nemohu se už přidat k tlupě Nového tábora, protože moje nové místo je teď v Bratrstvu Spáče.");
+			B_LogEntry(CH1_JoinNC,"Nemohu se už přidat k banditům z Nového tábora, protože moje nové místo je teď v Bratrstvu Spáče.");
 
 			//Log_SetTopicStatus(CH1_LostNek,LOG_FAILED);
 			//Log_SetTopicStatus(CH1_FiskNewDealer,LOG_FAILED);
@@ -388,13 +388,13 @@ func void GUR_1201_CorKalom_JoinPSI_Info()
 		{
 //			AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_NOT_10_00"); //And?
 //			AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_NOT_10_00"); //Und?
-			AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_NOT_10_00"); //No a?
+			AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_NOT_10_00"); //A?
 //			AI_Output(other,self,"GUR_1201_CorKalom_JoinPSI_NOT_15_01"); //That was it.
 //			AI_Output(other,self,"GUR_1201_CorKalom_JoinPSI_NOT_15_01"); //Das war alles.
 			AI_Output(other,self,"GUR_1201_CorKalom_JoinPSI_NOT_15_01"); //To bylo všechno.
 //			AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_NOT_10_02"); //You're wasting my precious time! Come back as soon as four of the Baals consider you worthy!
 //			AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_NOT_10_02"); //Du stiehlst mir meine kostbare Zeit! Komm wieder, wenn mindestens vier der Baals dich für würdig erachten!
-			AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_NOT_10_02"); //Okrádáš mě o drahocenný čas! Vrať se, až čtyři z Baalů rozhodnou, že jsi způsobilý.
+			AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_NOT_10_02"); //Okrádáš mě o drahocenný čas! Vrať se, až nejméně čtyři z Baalů rozhodnou, že jsi hoden.
 		};
 	}
 	else
@@ -416,7 +416,7 @@ instance GUR_1201_CorKalom_JoinPSI2(C_INFO)
 	permanent = 0;
 //	description = "That was it? No welcome, no nothing?"; 
 //	description = "Das war alles? Kein 'Herzlich Willkommen', kein gar nichts?"; 
-	description = "To bylo všechno? Žádné přivítání, nic?"; 
+	description = "To bylo všechno? Žádné 'Vítej', nic?"; 
 };
 
 func int GUR_1201_CorKalom_JoinPSI2_Condition()
@@ -431,13 +431,13 @@ func void GUR_1201_CorKalom_JoinPSI2_Info()
 {
 //	AI_Output(other,self,"GUR_1201_CorKalom_JoinPSI_15_10"); //"That was it? No ""welcome"", no nothing?"
 //	AI_Output(other,self,"GUR_1201_CorKalom_JoinPSI_15_10"); //Das war alles? Kein "Herzlich Willkommen", kein gar nichts?
-	AI_Output(other,self,"GUR_1201_CorKalom_JoinPSI_15_10"); //To bylo všechno? Žádné přivítání, nic?
+	AI_Output(other,self,"GUR_1201_CorKalom_JoinPSI_15_10"); //To bylo všechno? Žádné 'Vítej', nic?
 //	AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_11"); //Welcome.
 //	AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_11"); //Herzlich willkommen.
 	AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_11"); //Vítej.
 //	AI_Output(other,self,"GUR_1201_CorKalom_JoinPSI_15_12"); //Sounds much better.
 //	AI_Output(other,self,"GUR_1201_CorKalom_JoinPSI_15_12"); //Gefällt mir schon viel besser.
-	AI_Output(other,self,"GUR_1201_CorKalom_JoinPSI_15_12"); //To zní líp.
+	AI_Output(other,self,"GUR_1201_CorKalom_JoinPSI_15_12"); //To zní mnohem líp.
 //	AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_13"); //Don't hang around here! Do something. Take these weeds and give them to Gomez in the Old Camp.
 //	AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_13"); //Steh hier nicht rum! Tu was. Hier, nimm dieses Kraut und bring es zu Gomez ins alte Lager.
 	AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_13"); //Nemotej se tady! Dělej něco! Vezmi tuhle drogu a dones ji Gomezovi do Starého tábora.
@@ -453,7 +453,7 @@ func void GUR_1201_CorKalom_JoinPSI2_Info()
 	Log_SetTopicStatus(CH1_KrautBote,LOG_RUNNING);
 //	B_LogEntry(CH1_KrautBote,"Cor Kalom sent me to Gomez in the Old Camp to deliver him weed."); 
 //	B_LogEntry(CH1_KrautBote,"Auf seine charmante Art und Weise schickte Cor Kalom mich zu Gomez ins Alte Lager, um ihm eine Lieferung Kraut zu bringen."); 
-	B_LogEntry(CH1_KrautBote,"Cor Kalom mě vyslal s dodávkou drogy z bažin za Gomezem do Starého tábora."); 
+	B_LogEntry(CH1_KrautBote,"Cor Kalom mě svým osobitým způsobem vyslal s dodávkou drogy z bažin za Gomezem do Starého tábora."); 
 
 //	AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_15"); //What, are you still here?
 //	AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_15"); //Du bist ja immer noch hier!
@@ -497,10 +497,10 @@ func void Info_Kalom_DrugMonopol_Info()
 	//AI_Output(self,other,"Mis_1_Psi_Kalom_DrugMonopol_10_02"); //Sie wollen unsere Kunden im Neuen Lager abwerben, Das werden wir nicht zulassen.
 //	AI_Output(self,other,"Mis_1_Psi_Kalom_DrugMonopol_10_03"); //See to it that they stop their production.
 //	AI_Output(self,other,"Mis_1_Psi_Kalom_DrugMonopol_10_03"); //Kümmere dich darum, dass sie die Produktion einstellen.
-	AI_Output(self,other,"Mis_1_Psi_Kalom_DrugMonopol_10_03"); //Dohlédni na to, aby tu produkci ukončili.
+	AI_Output(self,other,"Mis_1_Psi_Kalom_DrugMonopol_10_03"); //Postarej se, aby tu produkci ukončili.
 //	AI_Output(other,self,"Mis_1_Psi_Kalom_DrugMonopol_15_04"); //How...
 //	AI_Output(other,self,"Mis_1_Psi_Kalom_DrugMonopol_15_04"); //Und wie ...
-	AI_Output(other,self,"Mis_1_Psi_Kalom_DrugMonopol_15_04"); //Jak...
+	AI_Output(other,self,"Mis_1_Psi_Kalom_DrugMonopol_15_04"); //A jak...
 //	AI_Output(self,other,"Mis_1_Psi_Kalom_DrugMonopol_10_05"); //Do not bother me with details!
 //	AI_Output(self,other,"Mis_1_Psi_Kalom_DrugMonopol_10_05"); //Belästige mich nicht mit Details!
 	AI_Output(self,other,"Mis_1_Psi_Kalom_DrugMonopol_10_05"); //Neobtěžuj mě s podrobnostmi!
@@ -574,16 +574,16 @@ func void Info_Kalom_Success_Info()
  	{
 //		AI_Output(other,self,"Mis_1_Psi_Kalom_Success_15_04"); //They are gone.
 //		AI_Output(other,self,"Mis_1_Psi_Kalom_Success_15_04"); //Es gibt sie nicht mehr.
-		AI_Output(other,self,"Mis_1_Psi_Kalom_Success_15_04"); //Jsou pryč.
+		AI_Output(other,self,"Mis_1_Psi_Kalom_Success_15_04"); //Už neexistuje.
 //		AI_Output(self,other,"Mis_1_Psi_Kalom_Success_10_05"); //You surprise me. I underestimated your abilities. Maybe you could be useful after all.
 //		AI_Output(self,other,"Mis_1_Psi_Kalom_Success_10_05"); //Du überraschst mich. Ich hatte dich unterschätzt. Vielleicht könntest du uns doch zu etwas nützen.
-		AI_Output(self,other,"Mis_1_Psi_Kalom_Success_10_05"); //Překvapuješ mě. Podcenil jsem tvoje kvality. Možná bys přece jen mohl být užitečný.
+		AI_Output(self,other,"Mis_1_Psi_Kalom_Success_10_05"); //Překvapuješ mě. Podcenil jsem tě. Možná bys přece jen mohl být užitečný.
 		//AI_Output(self,other,"Mis_1_Psi_Kalom_Success_10_06"); //Rede mit den Baals.
 
 		Kalom_DrugMonopol = LOG_SUCCESS;
 //		B_LogEntry(CH1_DrugMonopol,"I've informed Cor Kalom that the rivaling weed production in the New Camp has been stopped. His reaction was as 'friendly' as always.");
 //		B_LogEntry(CH1_DrugMonopol,"Ich habe Cor Kalom die Einstellung der konkurrierenden Krautproduktion im Neuen Lager gemeldet. Er reagierte 'freundlich' wie immer.");
-		B_LogEntry(CH1_DrugMonopol,"Informoval jsem Cora Kaloma, že konkurenční produkce drogy v Novém táboře je zastavena. Jeho odezva byla 'přátelská' jako vždy.");
+		B_LogEntry(CH1_DrugMonopol,"Informoval jsem Cora Kaloma o tom, jak sjem zastavil produkci drogy v Novém táboře. Jeho reakce byla 'přátelská' jako vždy.");
 		Log_SetTopicStatus(CH1_DrugMonopol,LOG_SUCCESS);
 		B_GiveXP(XP_DrugMonopol);
 	};
@@ -623,7 +623,7 @@ func void Info_Kalom_KrautboteBACK_Info()
 	{
 //		AI_Output(self,other,"Mis_1_Psi_Kalom_KrautboteBACK_10_01"); //Good. Get another task somewhere else.
 //		AI_Output(self,other,"Mis_1_Psi_Kalom_KrautboteBACK_10_01"); //Gut. Mach dich anderweitig nützlich.
-		AI_Output(self,other,"Mis_1_Psi_Kalom_KrautboteBACK_10_01"); //Dobře. Dostaneš další úkol někde jinde.
+		AI_Output(self,other,"Mis_1_Psi_Kalom_KrautboteBACK_10_01"); //Dobře. Buď užitečný někde jinde.
 
 		Kalom_DrugMonopol = LOG_SUCCESS;
 //		B_LogEntry(CH1_KrautBote,"Cor Kalom received money for the weed delivery to the Ore Barons.");
@@ -675,7 +675,7 @@ func void Info_CorKalom_BringFocus_Info()
 	AI_Output(other,self,"Sit_2_PSI_Yberion_BringFocus_Info3_15_01"); //Poslal mě Y´Berion. Mám to ohnisko.
 //	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_Info3_10_02"); //Ahhhh - the focus... At last. Now I can study the magic of these artefacts.
 //	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_Info3_10_02"); //Ahhhh - der Fokus ... Jetzt kann ich mich endlich den Studien über die Magie dieser Artefakte widmen.
-	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_Info3_10_02"); //Aaahh - to ohnisko... Konečně. Teď můžu studovat kouzlo těchto artefaktů.
+	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_Info3_10_02"); //Aaahh - ohnisko... Teď se konečně mohu věnovat studiu magie tohot artefaktu.
 //	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_Info3_10_03"); //If I only had enough secretion... damn!
 //	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_Info3_10_03"); //Wenn ich nur ausreichend Sekret hätte ... Verflucht!
 	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_Info3_10_03"); //Kdybych jen měl dostatek výměšku... sakra!
@@ -700,7 +700,7 @@ instance Info_CorKalom_BLUFF(C_INFO)
 	permanent = 0;
 //	description = "Y'Berion said you'd pay me if I brought you the focus!";
 //	description = "Y'Berion sagte mir, du würdest mich entlohnen";
-	description = "Y´Berion řekl, že mi máš zaplatit, až ti to ohnisko donesu!";
+	description = "Y´Berion řekl, že mě odměníš, až ti to ohnisko donesu!";
 };
 
 func int Info_CorKalom_BLUFF_Condition()
@@ -716,7 +716,7 @@ func void Info_CorKalom_BLUFF_Info()
 {
 //	AI_Output(other,self,"Sit_2_PSI_Yberion_BLUFF_Info3_15_01"); //Y'Berion said you'd pay me if I brought you the focus!
 //	AI_Output(other,self,"Sit_2_PSI_Yberion_BLUFF_Info3_15_01"); //Y'Berion sagte mir, du würdest mich entlohnen, wenn ich dir den Fokus bringe!
-	AI_Output(other,self,"Sit_2_PSI_Yberion_BLUFF_Info3_15_01"); //Y´Berion řekl, že mi máš zaplatit, až ti to ohnisko donesu!
+	AI_Output(other,self,"Sit_2_PSI_Yberion_BLUFF_Info3_15_01"); //Y´Berion řekl, že mě odměníš, až ti to ohnisko donesu!
 //	AI_Output(self,other,"Sit_2_PSI_Yberion_BLUFF_Info3_10_02"); //Really? He said that? Well then. I suppose 50 ore should be enough!
 //	AI_Output(self,other,"Sit_2_PSI_Yberion_BLUFF_Info3_10_02"); //Tatsächlich? Hat er das gesagt? Nun gut. Ich denke, 50 Erz sollten reichen!
 	AI_Output(self,other,"Sit_2_PSI_Yberion_BLUFF_Info3_10_02"); //Opravdu? To, že řekl? Dobrá tedy. Předpokládám, že 50 nugetů by mělo stačit!
@@ -753,7 +753,7 @@ func void GUR_1201_CorKalom_SACHE_Info()
 	AI_Output(other,self,"GUR_1201_CorKalom_SACHE_Info_15_01"); //Výměšek?
 //	AI_Output(self,other,"GUR_1201_CorKalom_SACHE_Info_10_02"); //Yes. As you must know, I produce the magic potions for the invocation of the Sleeper. For this purpose I need the secretion from the minecrawlers' mandibles.
 //	AI_Output(self,other,"GUR_1201_CorKalom_SACHE_Info_10_02"); //Ja. Wie du sicher schon weißt, stelle ich die Elixiere für die Anrufung des Schläfers her. Ich benutze dafür das Sekret aus den Zangen der Minecrawler.
-	AI_Output(self,other,"GUR_1201_CorKalom_SACHE_Info_10_02"); //Ano... Jak jistě víš, vyrábím magický lektvar pro vzývání Spáče. Pro tento účel potřebuji výměšek z čelistí důlních červů.
+	AI_Output(self,other,"GUR_1201_CorKalom_SACHE_Info_10_02"); //Ano. Jak jistě víš, připravuji magický lektvar pro vzývání Spáče. Pro tento účel potřebuji výměšek z čelistí důlních červů.
 //	AI_Output(self,other,"GUR_1201_CorKalom_SACHE_Info_10_03"); //You know what minecrawlers are, don't you?
 //	AI_Output(self,other,"GUR_1201_CorKalom_SACHE_Info_10_03"); //Du weißt doch, was Minecrawler sind?
 	AI_Output(self,other,"GUR_1201_CorKalom_SACHE_Info_10_03"); //Víš přece, co jsou důlní červi, ne?
@@ -774,13 +774,13 @@ func void GUR_1201_CorKalom_SACHE_NEIN()
 	AI_Output(other,self,"GUR_1201_CorKalom_SACHE_NEIN_15_01"); //Ne.
 //	AI_Output(self,other,"GUR_1201_CorKalom_SACHE_NEIN_10_02"); //They are dangerous beasts that creep through dark mines and devour any human flesh they can get.
 //	AI_Output(self,other,"GUR_1201_CorKalom_SACHE_NEIN_10_02"); //Das sind gefährliche Bestien, die durch die dunklen Minen kriechen und jeden Menschen verspeisen, den sie fassen können.
-	AI_Output(self,other,"GUR_1201_CorKalom_SACHE_NEIN_10_02"); //Jsou to nebezpečné bestie, které se plíží temnými doly a sežerou všechno lidské maso, na které přijdou.
+	AI_Output(self,other,"GUR_1201_CorKalom_SACHE_NEIN_10_02"); //Jsou to nebezpečné bestie, které se plíží temnými doly a sežerou každého, na které přijdou.
 //	AI_Output(self,other,"GUR_1201_CorKalom_SACHE_NEIN_10_03"); //Their mandibles contain a special secretion.
 //	AI_Output(self,other,"GUR_1201_CorKalom_SACHE_NEIN_10_03"); //Ihre Zangen enthalten ein ganz besonderes Sekret.
 	AI_Output(self,other,"GUR_1201_CorKalom_SACHE_NEIN_10_03"); //Jejich čelisti obsahují zvláštní výměšek.
 //	AI_Output(self,other,"GUR_1201_CorKalom_SACHE_NEIN_10_04"); //I use it to produce a potion which guides the spiritual path to the Sleeper.
 //	AI_Output(self,other,"GUR_1201_CorKalom_SACHE_NEIN_10_04"); //Aus diesem Sekret stelle ich ein Elixier her, das uns den spirituellen Weg zum Schläfer zeigt.
-	AI_Output(self,other,"GUR_1201_CorKalom_SACHE_NEIN_10_04"); //Používám ho k výrobě lektvaru, který provádí po duchovní cestě ke Spáčovi.
+	AI_Output(self,other,"GUR_1201_CorKalom_SACHE_NEIN_10_04"); //Z tohoto výměšku připravuji eliciír, který nás provádí po duchovní cestě ke Spáčovi.
 	Info_ClearChoices(GUR_1201_CorKalom_SACHE);
 };
 //------------------------------------------------------
@@ -804,7 +804,7 @@ instance GUR_1201_CorKalom_VISION(C_INFO)
 	permanent = 0;
 //	description = "Speak on!"; 
 //	description = "Erzähl weiter!"; 
-	description = "Mluv!"; 
+	description = "Mluv dál!"; 
 };
 
 func int GUR_1201_CorKalom_VISION_Condition()
@@ -828,7 +828,7 @@ func void GUR_1201_CorKalom_VISION_Info()
 	AI_Output(self,other,"GUR_1201_CorKalom_VISION_Info_10_03"); //Sdělil mi, že existuje ještě jiný prostředek, než ten výměšek z čelistí.
 //	AI_Output(self,other,"GUR_1201_CorKalom_VISION_Info_10_04"); //And he chose me to pass on this mission. You're not getting this mission from me. You're getting it from the Sleeper!
 //	AI_Output(self,other,"GUR_1201_CorKalom_VISION_Info_10_04"); //Und er wählte mich, diese Mission weiterzugeben. Du bekommst diese Mission nicht von mir. Du bekommst sie vom Schläfer!
-	AI_Output(self,other,"GUR_1201_CorKalom_VISION_Info_10_04"); //A vybral mě, abych předal toto poselství. Toto poselství není ode mě. Toto poselství je od Spáče!
+	AI_Output(self,other,"GUR_1201_CorKalom_VISION_Info_10_04"); //A vybral si mě, abych předal toto poselství. Toto poselství není ode mě. Toto poselství je od Spáče!
 //	AI_Output(other,self,"GUR_1201_CorKalom_VISION_Info_15_05"); //Impossible!
 //	AI_Output(other,self,"GUR_1201_CorKalom_VISION_Info_15_05"); //Nicht möglich!
 	AI_Output(other,self,"GUR_1201_CorKalom_VISION_Info_15_05"); //To není možné!
@@ -840,7 +840,7 @@ func void GUR_1201_CorKalom_VISION_Info()
 	AI_Output(self,other,"GUR_1201_CorKalom_VISION_Info_10_07"); //Srozuměl mě, že cesta, na kterou jsem se dal, je ta pravá, ale ten prostředek v lektvaru není dostatečně silný.
 //	AI_Output(self,other,"GUR_1201_CorKalom_VISION_Info_10_08"); //The right means can be found with the minecrawlers, but the mandibles are not sufficient.
 //	AI_Output(self,other,"GUR_1201_CorKalom_VISION_Info_10_08"); //Das bedeutet, das Mittel, was wir suchen, finden wir bei den Minecrawlern, nur die Zangen sind nicht ausreichend.
-	AI_Output(self,other,"GUR_1201_CorKalom_VISION_Info_10_08"); //Správný prostředek můžeme najít v červech, ale čelisti na to nestačí.
+	AI_Output(self,other,"GUR_1201_CorKalom_VISION_Info_10_08"); //To znamená... ten prostředek, co potřebujeme najdeme u důlních červů, ale čelisti to nejsou.
 //	AI_Output(self,other,"GUR_1201_CorKalom_VISION_Info_10_09"); //There must be something else.
 //	AI_Output(self,other,"GUR_1201_CorKalom_VISION_Info_10_09"); //Es muss etwas anderes geben.
 	AI_Output(self,other,"GUR_1201_CorKalom_VISION_Info_10_09"); //Musí tu být ještě něco jiného.
@@ -871,7 +871,7 @@ func void GUR_1201_CorKalom_NEST_Info()
 {
 //	AI_Output(other,self,"GUR_1201_CorKalom_NEST_Info_15_01"); //Have you never examined the minecrawlers? I mean, maybe there's another body part which contains more of the secretion.
 //	AI_Output(other,self,"GUR_1201_CorKalom_NEST_Info_15_01"); //Habt ihr die Minecrawler nie untersucht? Ich meine, vielleicht gibt es ein anders Körperteil, das mehr von dem Sekret enthält.
-	AI_Output(other,self,"GUR_1201_CorKalom_NEST_Info_15_01"); //Vy jste důlní červy nikdy nezkoumali? Myslím, že ještě nějaká jiná část jejich těla obsahuje více toho výměšku.
+	AI_Output(other,self,"GUR_1201_CorKalom_NEST_Info_15_01"); //Vy jste důlní červy nikdy nezkoumali? Myslím, že třeba ještě nějaká jiná část jejich těla obsahuje více toho výměšku.
 //	AI_Output(self,other,"GUR_1201_CorKalom_NEST_Info_10_02"); //Of course we have taken some minecrawlers apart, but only their mandibles seemed to contain the secretion.
 //	AI_Output(self,other,"GUR_1201_CorKalom_NEST_Info_10_02"); //Natürlich haben wir schon einige Minecrawler seziert, aber nur ihre Zangen scheinen das Sekret zu enthalten.
 	AI_Output(self,other,"GUR_1201_CorKalom_NEST_Info_10_02"); //Samozřejmě jsme několik důlních červů pitvali, ale zdá se, že jedině čelisti obsahují ten výměšek.
@@ -890,7 +890,7 @@ func void GUR_1201_CorKalom_WEG_ACCEPT()
 	Log_SetTopicStatus(CH2_MCEggs,LOG_RUNNING);
 //	B_LogEntry(CH2_MCEggs,"The Guru Cor Kalom asked me to look for a source of minecrawler secretion in the Old Mine. So far the monsters' mandibles have been used, but I'm to find something different to produce a stronger secretion.");
 //	B_LogEntry(CH2_MCEggs,"Der Guru Cor Kalom hat mich beauftragt in der Alten Mine nach einer Quelle für Minecrawlersekret zu suchen. Bisher wurden dafür die Zangen dieser Monster benutzt, doch ich soll etwas anderes, besonderes finden, aus dem man ein besonders starkes Sekret herstellen könnte");
-	B_LogEntry(CH2_MCEggs,"Guru Cor Kalom mě požádal, abych nalezl zdroj výměšku důlních červů ve Starém dole. Doposud se používaly čelisti těch oblud a já mám objevit jiný zdroj, který obsahuje silnější výměšek.");
+	B_LogEntry(CH2_MCEggs,"Guru Cor Kalom mě požádal, abych našel jiný zdroj výměšku důlních červů ve Starém dole. Doposud se používaly čelisti těch oblud a já mám objevit jiný zdroj, který obsahuje silnější výměšek.");
 
 	if (PresseTourJanuar2001)
 	{
@@ -927,10 +927,10 @@ func void GUR_1201_CorKalom_WEG_Info()
 	AI_Output(other,self,"GUR_1201_CorKalom_WEG_Info_15_01"); //To vypadá na temné a zlověstné pátrání!
 //	AI_Output(self,other,"GUR_1201_CorKalom_WEG_Info_10_02"); //Take these spell scrolls of light, you'll be able to make good use of them in the dark shafts.
 //	AI_Output(self,other,"GUR_1201_CorKalom_WEG_Info_10_02"); //Nimm diese Spruchrollen des Lichts, du wirst sie in den dunklen Stollen gut gebrauchen können.
-	AI_Output(self,other,"GUR_1201_CorKalom_WEG_Info_10_02"); //Vezmi si tyhle kouzelné světelné svitky - v temných šachtách ti můžou být velmi užitečné.
+	AI_Output(self,other,"GUR_1201_CorKalom_WEG_Info_10_02"); //Vezmi si tyhle kouzelné světelné svitky - v temných šachtách ti mohou být velmi užitečné.
 //	AI_Output(self,other,"GUR_1201_CorKalom_WEG_Info_10_03"); //The templars in the mines will help you.
 //	AI_Output(self,other,"GUR_1201_CorKalom_WEG_Info_10_03"); //Die Templer in den Minen werden dir helfen.
-	AI_Output(self,other,"GUR_1201_CorKalom_WEG_Info_10_03"); //Templáři v dolech ti pomůžou.
+	AI_Output(self,other,"GUR_1201_CorKalom_WEG_Info_10_03"); //Templáři v dolech ti pomohou.
 //	AI_Output(self,other,"GUR_1201_CorKalom_WEG_Info_10_04"); //May the Sleeper give you power, may his light shine on your path and enlighten your spirit, and may he strengthen your will!
 //	AI_Output(self,other,"GUR_1201_CorKalom_WEG_Info_10_04"); //Möge der Schläfer dir Kraft schenken, möge sein Licht auf deinem Weg leuchten, deinen Geist erhellen und deinen Willen festigen!
 	AI_Output(self,other,"GUR_1201_CorKalom_WEG_Info_10_04"); //Ať ti Spáč dodá sílu, ať ti svítí na cestu a osvítí ducha a nechť posílí tvoji mysl!
@@ -970,10 +970,10 @@ func void GUR_1201_CorKalom_RAT_Info()
 	AI_Output(other,self,"GUR_1201_CorKalom_RAT_Info_15_01"); //Uvědom si, že by to mohlo být docela krvavé dobrodružství!
 //	AI_Output(self,other,"GUR_1201_CorKalom_RAT_Info_10_02"); //Take these potions with you.
 //	AI_Output(self,other,"GUR_1201_CorKalom_RAT_Info_10_02"); //Nimm diese Heiltränke mit.
-	AI_Output(self,other,"GUR_1201_CorKalom_RAT_Info_10_02"); //Vezmi si sebou tyhle lektvary.
+	AI_Output(self,other,"GUR_1201_CorKalom_RAT_Info_10_02"); //Vezmi si s sebou tyhle lektvary.
 //	AI_Output(self,other,"GUR_1201_CorKalom_RAT_Info_10_03"); //I am not giving them to you because I want you to stay alive, but because this task needs to be done.
 //	AI_Output(self,other,"GUR_1201_CorKalom_RAT_Info_10_03"); //Ich gebe sie dir nicht, weil ich unbedingt will, das du am Leben bleibst, sondern weil diese Aufgabe erfüllt werden muss.
-	AI_Output(self,other,"GUR_1201_CorKalom_RAT_Info_10_03"); //Nedávám ti je, protože bych chtěl, abys zůstal naživu, ale protože se tento úkol musí splnit.
+	AI_Output(self,other,"GUR_1201_CorKalom_RAT_Info_10_03"); //Nedávám ti je, protože bych chtěl, abys zůstal naživu, ale protože tento úkol musí být splněn.
 
 	CreateInvItems(self,ItFo_Potion_Health_02, 5);
 	B_GiveInvItems(self,other,ItFo_Potion_Health_02, 5);
@@ -1054,7 +1054,7 @@ func void GUR_1201_CorKalom_CRAWLER_Info()
 	AI_Output(other,self,"GUR_1201_CorKalom_CRAWLER_Info_15_01"); //Jaký je nejlepší způsob boje s důlními červy?
 //	AI_Output(self,other,"GUR_1201_CorKalom_CRAWLER_Info_10_02"); //There are templars in the mine. They hunt the crawlers for their mandibles. Speak to Gor Na Vid. He will help you.
 //	AI_Output(self,other,"GUR_1201_CorKalom_CRAWLER_Info_10_02"); //In der Mine sind Templer. Sie jagen die Crawler wegen ihrer Zangen. Wende dich an Gor Na Vid. Er wird dir helfen.
-	AI_Output(self,other,"GUR_1201_CorKalom_CRAWLER_Info_10_02"); //V dole jsou templáři. Loví červy kvůli čelistem. Zeptej se Gora Na Vida. Pomůže ti.
+	AI_Output(self,other,"GUR_1201_CorKalom_CRAWLER_Info_10_02"); //V dole jsou templáři. Loví červy kvůli čelistem. Zeptej se Gor Na Vida. Pomůže ti.
 };
 
 // ***************************** INFOS ****************************************//
@@ -1085,7 +1085,7 @@ func void GUR_1201_CorKalom_FIND_Info()
 	AI_Output(other,self,"GUR_1201_CorKalom_FIND_Info_15_01"); //Jak najdu v dole hnízdo?
 //	AI_Output(self,other,"GUR_1201_CorKalom_FIND_Info_10_02"); //That's the hardest part of the mission. I can't tell you where to search, nor what to search for. But the Sleeper will be with you.
 //	AI_Output(self,other,"GUR_1201_CorKalom_FIND_Info_10_02"); //Das ist der schwierige Teil der Mission. Ich kann dir weder sagen wo, noch was du suchen musst. Aber der Schläfer wird bei dir sein.
-	AI_Output(self,other,"GUR_1201_CorKalom_FIND_Info_10_02"); //To je nejobtížnější bod tvého poslání. Neřeknu ti, kde je hledat, ani co v nich hledat. Spáč však bude při tobě.
+	AI_Output(self,other,"GUR_1201_CorKalom_FIND_Info_10_02"); //To je nejobtížnější část tvého úkolu. Neřeknu ti, kde jej hledat, ani co v něm hledat. Spáč však bude při tobě.
 //	AI_Output(other,self,"GUR_1201_CorKalom_FIND_Info_15_03"); //Well, that's a comfort.
 //	AI_Output(other,self,"GUR_1201_CorKalom_FIND_Info_15_03"); //Na dann bin ich ja beruhigt.
 	AI_Output(other,self,"GUR_1201_CorKalom_FIND_Info_15_03"); //Dobrá, to je útěcha.
@@ -1100,7 +1100,7 @@ instance Info_CorKalom_BringMCQBalls_Success(C_INFO)
 	permanent = 0;
 //	description = "I found eggs belonging to a crawler queen";
 //	description = "Ich habe Eier einer Crawler-Königin gefunden";
-	description = "Našel jsem vajíčka červí královny.";
+	description = "Našel jsem vajíčka královny důlních červů.";
 };                       
 
 func int Info_CorKalom_BringMCQBalls_Success_Condition()
@@ -1114,13 +1114,13 @@ func void Info_CorKalom_BringMCQBalls_Success_Info()
 { 
 //	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_15_01"); //I found eggs belonging to a crawler queen
 //	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_15_01"); //Ich habe Eier einer Crawler-Königin gefunden
-	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_15_01"); //Našel jsem vajíčka červí královny.
+	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_15_01"); //Našel jsem vajíčka královny důlních červů.
 //	AI_Output(self,other,"Mis_2_PSI_Kalom_BringMCQEggs_Success_10_02"); //I knew it. My vision was a sign. The queen's eggs must contain the strong secretion!
 //	AI_Output(self,other,"Mis_2_PSI_Kalom_BringMCQEggs_Success_10_02"); //Ich wusste es. Meine Vision war ein Zeichen. Die Eier ihrer Königin enthalten also das starke Sekret!
-	AI_Output(self,other,"Mis_2_PSI_Kalom_BringMCQEggs_Success_10_02"); //Znám je. Má vidina byla znamení. Královnina vajíčka musí obsahovat ten výměšek.
+	AI_Output(self,other,"Mis_2_PSI_Kalom_BringMCQEggs_Success_10_02"); //Znám je. Má vidina byla znamení. Královnina vajíčka musí obsahovat ten silnější výměšek.
 //	AI_Output(self,other,"Mis_2_PSI_Kalom_BringMCQEggs_Success_10_03"); //Excellent, with it I can create a potion to contact the Sleeper!
 //	AI_Output(self,other,"Mis_2_PSI_Kalom_BringMCQEggs_Success_10_03"); //Ausgezeichnet, damit kann ich ein Elixier brauen, das uns den Kontakt zum Schläfer ermöglicht!
-	AI_Output(self,other,"Mis_2_PSI_Kalom_BringMCQEggs_Success_10_03"); //Výborně, s tím vytvořím ten lektvar pro spojení se Spáčem.
+	AI_Output(self,other,"Mis_2_PSI_Kalom_BringMCQEggs_Success_10_03"); //Výborně, s ním vytvořím ten elixír pro spojení se Spáčem.
 //	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_15_04"); //What about my reward?
 //	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_15_04"); //Was ist mit der Belohnung?
 	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_15_04"); //A co má odměna?
@@ -1129,17 +1129,17 @@ func void Info_CorKalom_BringMCQBalls_Success_Info()
 	AI_Output(self,other,"Mis_2_PSI_Kalom_BringMCQEggs_Success_10_05"); //Správně... Děkuju ti.
 //	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_15_06"); //I mean a TANGIBLE reward.
 //	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_15_06"); //Ich meine eine HANDFESTE Belohnung.
-	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_15_06"); //Myslel jsem HMATATELNOU odměnu.
+	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_15_06"); //Myslím HMATATELNOU odměnu.
 //	AI_Output(self,other,"Mis_2_PSI_Kalom_BringMCQEggs_Success_10_07"); //Okay, okay. What do you want?
 //	AI_Output(self,other,"Mis_2_PSI_Kalom_BringMCQEggs_Success_10_07"); //Na gut, na gut. Was willst du?
-	AI_Output(self,other,"Mis_2_PSI_Kalom_BringMCQEggs_Success_10_07"); //Dobře, dobře. Co bys chtěl?
+	AI_Output(self,other,"Mis_2_PSI_Kalom_BringMCQEggs_Success_10_07"); //No dobře, dobře. Co bys chtěl?
 	CorKalom_BringMCQBalls = LOG_SUCCESS;
 	B_GiveInvItems(hero,self,ItAt_Crawlerqueen,3);
 	Npc_RemoveInvItems(self,ItAt_Crawlerqueen,3);
 	B_GiveXP(XP_BringMCEggs);
 //	B_LogEntry(CH2_MCEggs,"I've given Cor Kalom three of the minecrawlers' eggs. He was really unfriendly and I had to ask for my meager reward!");
 //	B_LogEntry(CH2_MCEggs,"Ich habe Cor Kalom 3 der Minecrawler-Eier übergeben. Er war recht unhöflich und ich mußte meine karge Belohnung erst penetrant einfordern!");
-	B_LogEntry(CH2_MCEggs,"Dal jsem Cor Kalomovi tři vajíčka důlních červů. Tvářil se velmi nepřátelsky a já ho musel požádat o svoji hubenou odměnu.");
+	B_LogEntry(CH2_MCEggs,"Předal jsem Cor Kalomovi tři vajíčka důlních červů. Tvářil se velmi nepřátelsky a já ho musel požádat o svoji malou odměnu.");
 	Log_SetTopicStatus(CH2_MCEggs,LOG_SUCCESS);
 
 //	B_LogEntry(CH1_GotoPsiCamp,"I believe I now know enough about the sect business, so I can report to Mordrag about it.");
@@ -1164,7 +1164,7 @@ func void Info_CorKalom_BringMCQBalls_Success_Info()
 	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"Rudu.",Info_CorKalom_BringMCQBalls_Success_ORE);
 //	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"Mana.",Info_CorKalom_BringMCQBalls_Success_MANA);
 //	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"Manatrank",Info_CorKalom_BringMCQBalls_Success_MANA);
-	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"Manu.",Info_CorKalom_BringMCQBalls_Success_MANA);
+	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"Letvar many.",Info_CorKalom_BringMCQBalls_Success_MANA);
 };
 func void Info_CorKalom_BringMCQBalls_Success_RUNE()
 {
@@ -1219,7 +1219,7 @@ func void Info_CorKalom_BringMCQBalls_Success_MANA()
 {
 //	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_MANA_15_01"); //Mana.
 //	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_MANA_15_01"); //Mana.
-	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_MANA_15_01"); //Manu.
+	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_MANA_15_01"); //Letvar many.
 //	AI_Output(self,other,"Mis_2_PSI_Kalom_BringMCQEggs_Success_MANA_10_02"); //May this potion strengthen the magic within you!
 //	AI_Output(self,other,"Mis_2_PSI_Kalom_BringMCQEggs_Success_MANA_10_02"); //Möge dieser Trank die magische Energie in dir stärken!
 	AI_Output(self,other,"Mis_2_PSI_Kalom_BringMCQEggs_Success_MANA_10_02"); //Kéž tento lektvar probudí kouzlo, které v tobě dřímá!
@@ -1256,10 +1256,10 @@ func void Info_CorKalom_BringBook_Info()
 	AI_Output(other,self,"Info_CorKalom_BringBook_Info_15_01"); //Můžeme začít vzývat Spáče?
 //	AI_Output(self,other,"Info_CorKalom_BringBook_Info_10_02"); //No! I haven't found a method to charge the focus yet.
 //	AI_Output(self,other,"Info_CorKalom_BringBook_Info_10_02"); //Nein! Es ist mir noch nicht gelungen, eine Methode zu entwickeln, den Fokus aufzuladen.
-	AI_Output(self,other,"Info_CorKalom_BringBook_Info_10_02"); //Ne! Nenašel jsem ještě způsob, jak používat to ohnisko.
+	AI_Output(self,other,"Info_CorKalom_BringBook_Info_10_02"); //Ne! Nenašel jsem ještě způsob, jak nabít to ohnisko.
 //	AI_Output(self,other,"Info_CorKalom_BringBook_Info_10_03"); //We are missing the ancient knowledge about these artefacts.
 //	AI_Output(self,other,"Info_CorKalom_BringBook_Info_10_03"); //Uns fehlt das Alte Wissen über diese Artefakte.
-	AI_Output(self,other,"Info_CorKalom_BringBook_Info_10_03"); //Pozbyli jsme prastaré znalosti o těchto artefaktech.
+	AI_Output(self,other,"Info_CorKalom_BringBook_Info_10_03"); //Chybí nám staré znalosti o těchto artefaktech.
 //	AI_Output(other,self,"Info_CorKalom_BringBook_Info_15_04"); //Do you mean to say I collected the eggs for nothing?
 //	AI_Output(other,self,"Info_CorKalom_BringBook_Info_15_04"); //Heißt das, es war vergebens, die Eier zu holen?
 	AI_Output(other,self,"Info_CorKalom_BringBook_Info_15_04"); //Chceš říci, že jsem sbíral ta vajíčka nadarmo?
@@ -1274,7 +1274,7 @@ func void Info_CorKalom_BringBook_Info()
 	AI_Output(self,other,"Info_CorKalom_BringBook_Info_10_07"); //Byla však ukradena, když se jí sem pokoušeli ze Starého tábor přinést.
 //	AI_Output(self,other,"Info_CorKalom_BringBook_Info_10_08"); //I had charged Talas, a novice, with collecting the book for me, but he was robbed.
 //	AI_Output(self,other,"Info_CorKalom_BringBook_Info_10_08"); //Ich hatte Talas, einen Novizen, damit beauftragt, das Buch zu mir zu bringen, aber er wurde überfallen.
-	AI_Output(self,other,"Info_CorKalom_BringBook_Info_10_08"); //Pověřil jsem novice Talase, aby ji pro mě vyzvedl, ale on byl přepaden.
+	AI_Output(self,other,"Info_CorKalom_BringBook_Info_10_08"); //Pověřil jsem novice Talase, aby ji pro mě vyzvedl, ale byl přepaden.
 //	AI_Output(self,other,"Info_CorKalom_BringBook_Info_10_09"); //He let me down, but I've given him another chance. He must get the stolen almanac back.
 //	AI_Output(self,other,"Info_CorKalom_BringBook_Info_10_09"); //Er hat mich enttäuscht, aber ich habe ihm noch eine Chance gegeben. Er hat nun den Auftrag, den gestohlenen Almanach zurückzuholen.
 	AI_Output(self,other,"Info_CorKalom_BringBook_Info_10_09"); //Zklamal mě, ale já mu dal ještě jednu šanci. Musí přinést ukradený almanach zpátky.
@@ -1314,7 +1314,7 @@ func void Info_CorKalom_BringBook_WHERE()
 	AI_Output(other,self,"Info_CorKalom_BringBook_Where_15_01"); //Kde najdu Talase?
 //	AI_Output(self,other,"Info_CorKalom_BringBook_Where_10_02"); //He's in the forecourt at the temple hill, trying to get people to help him.
 //	AI_Output(self,other,"Info_CorKalom_BringBook_Where_10_02"); //Er versucht auf dem Vorplatz des Tempelbergs Leute zu finden, die ihm helfen.
-	AI_Output(self,other,"Info_CorKalom_BringBook_Where_10_02"); //Je na nádvoří u chrámového vršku, kde se snaží získat lidi, aby mu pomohli.
+	AI_Output(self,other,"Info_CorKalom_BringBook_Where_10_02"); //Je na nádvoří u chrámu, kde se snaží najít lidi, kteří by mu pomohli.
 };
 func void Info_CorKalom_BringBook_WHO()
 {
@@ -1332,7 +1332,7 @@ func void Info_CorKalom_BringBook_EARN()
 	AI_Output(other,self,"Info_CorKalom_BringBook_Earn_15_01"); //Co za to dostanu?
 //	AI_Output(self,other,"Info_CorKalom_BringBook_Earn_10_02"); //Have I not already proven my generosity to you? You will receive a just reward.
 //	AI_Output(self,other,"Info_CorKalom_BringBook_Earn_10_02"); //Habe ich nicht schon mehr als einmal meine Großzügigkeit bewiesen? Du wirst angemessen entlohnt werden.
-	AI_Output(self,other,"Info_CorKalom_BringBook_Earn_10_02"); //To jsem ti ještě neprokázal dost velkomyslnosti? Dostaneš odměnu.
+	AI_Output(self,other,"Info_CorKalom_BringBook_Earn_10_02"); //To jsem ti ještě neprokázal dost velkorysosti? Dostaneš odměnu.
 };
 
 // ------------------------------ SUCCESS ----------------------------------
@@ -1372,7 +1372,7 @@ func void Info_CorKalom_BringBook_Success_Info()
 	AI_Output(other,self,"Info_CorKalom_BringBook_Success_15_04"); //Kdy bude probíhat vzývání?
 //	AI_Output(self,other,"Info_CorKalom_BringBook_Success_10_05"); //Wait till nighttime, then come to the temple courtyard. We will gather there to invoke the almighty Sleeper.
 //	AI_Output(self,other,"Info_CorKalom_BringBook_Success_10_05"); //Komme bei Nacht zum Tempelvorplatz. Dort werden wir uns versammeln, um den allmächtigen Schläfer zu rufen.
-	AI_Output(self,other,"Info_CorKalom_BringBook_Success_10_05"); //Přijď v noci na chrámové nádvoří. Budeme se soustředit na vyvolání všemohoucího Spáče.
+	AI_Output(self,other,"Info_CorKalom_BringBook_Success_10_05"); //Přijď v noci na chrámové nádvoří. Tam se sejdeme, abychom probudili všemohoucího spáče.
 
 	B_GiveInvItems(hero,self,ItWrFokusbuch,1);
 	Npc_RemoveInvItem(self,ItWrFokusbuch);
@@ -1381,7 +1381,7 @@ func void Info_CorKalom_BringBook_Success_Info()
 
 //	B_LogEntry(CH2_Book,"After I took the almanac to Cor Kalom, he's now preparing the Brotherhood for the great invocation of the Sleeper. It shall take place at the temple forecourt during the night.");
 //	B_LogEntry(CH2_Book,"Nachdem ich den Almanach bei Cor Kalom abgeliefert habe, bereitet sich die Bruderschaft nun auf die Große Anrufung des Schläfers vor. Sie soll bei Nacht auf dem Tempelvorplatz stattfinden.");
-	B_LogEntry(CH2_Book,"Předal jsem rukopis Coru Kalomovi, který teď Bratrstvo připravuje na velké vzývání Spáče. To se bude se odehrávat na nádvoří chrámu.");
+	B_LogEntry(CH2_Book,"Předal jsem rukopis Cor Kalomovi, který teď Bratrstvo připravuje na velké vzývání Spáče. To se bude se odehrávat v noci na chrámovém nádvoří.");
 	Log_SetTopicStatus(CH2_Book,LOG_SUCCESS);
 
 	//-------- Gurus und Novizen auf dem Tempelvorplatz versammeln --------
@@ -1426,7 +1426,7 @@ func void Info_CorKalom_Belohnung_Info()
 	Info_Addchoice(Info_CorKalom_Belohnung,"Kouzelný svitek",Info_CorKalom_Belohnung_SCROLL);
 //	Info_Addchoice(Info_CorKalom_Belohnung,"Ore",Info_CorKalom_Belohnung_ORE);
 //	Info_Addchoice(Info_CorKalom_Belohnung,"Erz",Info_CorKalom_Belohnung_ORE);
-	Info_Addchoice(Info_CorKalom_Belohnung,"Ruda",Info_CorKalom_Belohnung_ORE);
+	Info_Addchoice(Info_CorKalom_Belohnung,"Rudu",Info_CorKalom_Belohnung_ORE);
 //	Info_Addchoice(Info_CorKalom_Belohnung,"Mana potion",Info_CorKalom_Belohnung_MANA);
 //	Info_Addchoice(Info_CorKalom_Belohnung,"Manatrank",Info_CorKalom_Belohnung_MANA);
 	Info_Addchoice(Info_CorKalom_Belohnung,"Lektvar many",Info_CorKalom_Belohnung_MANA);
@@ -1436,7 +1436,7 @@ func void Info_CorKalom_Belohnung_SCROLL()
 {
 //	AI_Output(other,self,"Info_CorKalom_Belohnung_SCROLL_15_00");//Give me these spell scrolls.
 //	AI_Output(other,self,"Info_CorKalom_Belohnung_SCROLL_15_00");//Gib mir die Spruchrollen.
-	AI_Output(other,self,"Info_CorKalom_Belohnung_SCROLL_15_00");//Dej mi tyhle čarovné svitky.
+	AI_Output(other,self,"Info_CorKalom_Belohnung_SCROLL_15_00");//Dej mi tyhle kouzelné svitky.
 //	AI_Output(self,other,"Info_CorKalom_Belohnung_SCROLL_10_01");//Use these spells wisely.
 //	AI_Output(self,other,"Info_CorKalom_Belohnung_SCROLL_10_01");//Setze diese Zauber hier mit Bedacht ein!
 	AI_Output(self,other,"Info_CorKalom_Belohnung_SCROLL_10_01");//Užívej tyto svitky moudře.

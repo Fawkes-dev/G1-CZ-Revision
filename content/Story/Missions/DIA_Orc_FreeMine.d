@@ -50,19 +50,19 @@ func void Info_FreemineOrc_EXIT_Info()
 	{
 //		AI_Output(hero,self,"Info_FreemineOrc_EXIT_15_01"); //I need to move on!
 //		AI_Output(hero,self,"Info_FreemineOrc_EXIT_15_01"); //Ich muss weiter!
-		AI_Output(hero,self,"Info_FreemineOrc_EXIT_15_01"); //Musím pokračovat!
+		AI_Output(hero,self,"Info_FreemineOrc_EXIT_15_01"); //Musím jít dál!
 //		AI_Output(self,hero,"Info_FreemineOrc_EXIT_17_02"); //Stranger come again!
 //		AI_Output(self,hero,"Info_FreemineOrc_EXIT_17_02"); //Fremder kommen wieder!
-		AI_Output(self,hero,"Info_FreemineOrc_EXIT_17_02"); //Pojď dál, cizinče!
+		AI_Output(self,hero,"Info_FreemineOrc_EXIT_17_02"); //Cizinec zase příjde!
 	}                                                              
 	else                                                           
 	{
 //		AI_Output(hero,self,"Info_FreemineOrc_EXIT_15_03"); //Thank you. I'll be on my way now.
 //		AI_Output(hero,self,"Info_FreemineOrc_EXIT_15_03"); //Ich danke dir. Ich werde mich jetzt wieder auf den Weg machen.
-		AI_Output(hero,self,"Info_FreemineOrc_EXIT_15_03"); //Děkuju. Půjdu si svou cestou.
+		AI_Output(hero,self,"Info_FreemineOrc_EXIT_15_03"); //Děkuji. Půjdu si svou cestou.
 //		AI_Output(self,hero,"Info_FreemineOrc_EXIT_17_04"); //Stranger have good journey!
 //		AI_Output(self,hero,"Info_FreemineOrc_EXIT_17_04"); //Fremder haben gute Reise!
-		AI_Output(self,hero,"Info_FreemineOrc_EXIT_17_04"); //Šťastnou cestu, cizinče!
+		AI_Output(self,hero,"Info_FreemineOrc_EXIT_17_04"); //Cizinec mít dobrá cesta!
 	};
 	AI_StopProcessInfos(self);
 };
@@ -166,10 +166,10 @@ func void Info_FreemineOrc_WASTUN_Info()
 	AI_Output(self,hero,"Info_FreemineOrc_WASTUN_17_02"); //Tarrok potřebovat silný lék. Tarrok jinak brzy zemřít.
 //	AI_Output(hero,self,"Info_FreemineOrc_WASTUN_15_03"); //What kind of medicine?
 //	AI_Output(hero,self,"Info_FreemineOrc_WASTUN_15_03"); //Was für Medizin?
-	AI_Output(hero,self,"Info_FreemineOrc_WASTUN_15_03"); //Jaký druh léku?
+	AI_Output(hero,self,"Info_FreemineOrc_WASTUN_15_03"); //Jaký lék?
 //	AI_Output(self,hero,"Info_FreemineOrc_WASTUN_17_04"); //GACH LUG poison Tarrok. Tarrok need medicine!
 //	AI_Output(self,hero,"Info_FreemineOrc_WASTUN_17_04"); //GACH LUG mich vergiftet. Tarrok brauchen Medizin!
-	AI_Output(self,hero,"Info_FreemineOrc_WASTUN_17_04"); //GACH LUGŮV lektvar. Tarrok potřebovat lék.
+	AI_Output(self,hero,"Info_FreemineOrc_WASTUN_17_04"); //GACH LUG otrávit Tarroka. Tarrok potřebovat lék.
 //	AI_Output(self,hero,"Info_FreemineOrc_WASTUN_17_05"); //Tarrok have medicine, but Tarrok lost. Tarrok no find!
 //	AI_Output(self,hero,"Info_FreemineOrc_WASTUN_17_05"); //Tarrok haben Medizin, aber Tarrok verlieren. Tarrok nicht finden!
 	AI_Output(self,hero,"Info_FreemineOrc_WASTUN_17_05"); //Tarrok mít lék, ale Tarrok ztratit. Tarrok ho nenajít!
@@ -320,7 +320,7 @@ func void Info_FreemineOrc_SearchPotion_Info()
 	AI_Output(self,hero,"Info_FreemineOrc_SEARCHPOTION_17_02"); //Cizinec ještě hledat! Lék být tady.
 //	AI_Output(self,hero,"Info_FreemineOrc_SEARCHPOTION_17_03"); //Tarrok flee GACH LUG! Tarrok hide when flee!
 //	AI_Output(self,hero,"Info_FreemineOrc_SEARCHPOTION_17_03"); //Torrok fliehen vor GACH LUG! Tarrok sich bei Flucht verstecken!
-	AI_Output(self,hero,"Info_FreemineOrc_SEARCHPOTION_17_03"); //Tarrok utekl GACH LUGOVI! Tarrok se schovat na útěku.
+	AI_Output(self,hero,"Info_FreemineOrc_SEARCHPOTION_17_03"); //Tarrok utekl před GACH LUG! Tarrok se schovat na útěku.
 //	AI_Output(self,hero,"Info_FreemineOrc_SEARCHPOTION_17_04"); //Stranger search niches too!
 //	AI_Output(self,hero,"Info_FreemineOrc_SEARCHPOTION_17_04"); //Fremder auch suchen in Nischen!
 	AI_Output(self,hero,"Info_FreemineOrc_SEARCHPOTION_17_04"); //Cizinec také hledat ve výklenku.
@@ -361,7 +361,7 @@ func void Info_FreemineOrc_SUCHEULUMULU_Info()
 	AI_Output(self,hero,"Info_FreemineOrc_SUCHEULUMULU_17_02"); //Ur-Shak být otrok, jako Tarrok. Ur-Shak utéct! Být pryč už mnoho zim.
 //	AI_Output(hero,self,"Info_FreemineOrc_SUCHEULUMULU_15_03"); //Your friend said you could make an Ulu-Mulu for me!
 //	AI_Output(hero,self,"Info_FreemineOrc_SUCHEULUMULU_15_03"); //Dein Freund sagte, du könntest mir ein Ulu-Mulu machen!
-	AI_Output(hero,self,"Info_FreemineOrc_SUCHEULUMULU_15_03"); //Tvůj přítel říkal, že bys mně mohl udělat Ulu-Mulu!
+	AI_Output(hero,self,"Info_FreemineOrc_SUCHEULUMULU_15_03"); //Tvůj přítel říkal, že bys mi mohl vyrobit Ulu-Mulu!
 	if (FreemineOrc_SuchePotion == LOG_SUCCESS)
 	{
 //		AI_Output(self,hero,"Info_FreemineOrc_SUCHEULUMULU_17_04"); //You help me, so I help you!
@@ -421,7 +421,7 @@ func void Info_FreemineOrc_GIVEPOTION_Info()
 
 //	AI_Output(self,hero,"Info_FreemineOrc_GIVEPOTION_17_02"); //Stranger no bad like other people! Stranger good!
 //	AI_Output(self,hero,"Info_FreemineOrc_GIVEPOTION_17_02"); //Fremder nicht böse wie andere Menschen! Fremder gut!
-	AI_Output(self,hero,"Info_FreemineOrc_GIVEPOTION_17_02"); //Cizinec nebýt špatný jako ostatní lidé! Cizinec být dobrý!
+	AI_Output(self,hero,"Info_FreemineOrc_GIVEPOTION_17_02"); //Cizinec nebýt zlý jako ostatní lidé! Cizinec být dobrý!
 //	AI_Output(self,hero,"Info_FreemineOrc_GIVEPOTION_17_03"); //Tarrok owe thanks!
 //	AI_Output(self,hero,"Info_FreemineOrc_GIVEPOTION_17_03"); //Tarrok schulden Dank!
 	AI_Output(self,hero,"Info_FreemineOrc_GIVEPOTION_17_03"); //Tarrok dlužit díky!
@@ -519,7 +519,7 @@ func void Info_FreemineOrc_FIREWARAN2_Info()
 
 //	B_LogEntry(CH4_UluMulu,"Tarrok needs the tongue of a fire lizard for the Ulu-Mulu. They mainly live in the Orc area and on sandy beaches. Wasn't there a shipwreck full of lizards?");
 //	B_LogEntry(CH4_UluMulu,"Tarrok benötigt für das Ulu-Mulu die Zunge eines Feuerwarans. Sie leben vor allem im Orkgebiet und an sandigen Stränden. Gab es da nicht dieses Schiffswrack, bei dem es vor Waranen nur so wimmelte?");
-	B_LogEntry(CH4_UluMulu,"Tarok potřebuje k výrobě ULU-MULU jazyk ohnivé ještěrky. Tyto ještěrky žijí hlavně v skřetích oblastech a na písčitém pobřeží. Nebyl tam lodní vrak plný ještěrek?");
+	B_LogEntry(CH4_UluMulu,"Tarrok potřebuje k výrobě ULU-MULU jazyk ohnivé ještěrky. Tyto ještěrky žijí hlavně v skřetích oblastech a na písčitém pobřeží. Nebyl tam lodní vrak plný ještěrek?");
 };
 
 //---------------------------------------------------------------------
@@ -588,14 +588,14 @@ func void Info_FreemineOrc_SHADOWBEAST2_Info()
 	AI_Output(hero,self,"Info_FreemineOrc_SHADOWBEAST2_Info_15_01"); //Kde najdu stínovou obludu?
 //	AI_Output(self,hero,"Info_FreemineOrc_SHADOWBEAST2_Info_17_02"); //Live in forest or cave. No like light.
 //	AI_Output(self,hero,"Info_FreemineOrc_SHADOWBEAST2_Info_17_02"); //Leben in Wald oder in Höhle. Nicht mögen Licht.
-	AI_Output(self,hero,"Info_FreemineOrc_SHADOWBEAST2_Info_17_02"); //Žít v lese nebo v jeskyni. Ne na světle.
+	AI_Output(self,hero,"Info_FreemineOrc_SHADOWBEAST2_Info_17_02"); //Žít v lese nebo v jeskyni. Nemít ráda světlo.
 //	AI_Output(self,hero,"Info_FreemineOrc_SHADOWBEAST2_Info_17_03"); //Be very dangerous. Stranger watch out!
 //	AI_Output(self,hero,"Info_FreemineOrc_SHADOWBEAST2_Info_17_03"); //Seien sehr gefährlich. Fremder aufpassen!
 	AI_Output(self,hero,"Info_FreemineOrc_SHADOWBEAST2_Info_17_03"); //Být moc nebezpečná. Cizinec být opatrný!
 
 //	B_LogEntry(CH4_UluMulu,"Tarrok needs the horn of a shadowbeast for the Ulu-Mulu. They mainly live in dark forests and caves. The biggest forest of the colony is between the Old Camp and the swamp camp as far as I know.");
 //	B_LogEntry(CH4_UluMulu,"Tarrok benötigt für das Ulu-Mulu das Horns eines Schattenläufers. Sie leben vor allem in dunklen Wäldern und Höhlen. Soviel ich weiß, liegt der größte Wald in der Kolonie zwischen Altem Lager und Sumpflager.");
-	B_LogEntry(CH4_UluMulu,"Tarok potřebuje k výrobě ULU-MULU roh stínové šelmy. Tyto šelmy žijí hlavně v tmavých lesích a jeskyních. Pokud vím, tak největší les kolonie je mezi Starým táborem a Táborem v bažinách.");
+	B_LogEntry(CH4_UluMulu,"Tarrok potřebuje k výrobě ULU-MULU roh stínové šelmy. Tyto šelmy žijí hlavně v tmavých lesích a jeskyních. Pokud vím, tak největší les kolonie je mezi Starým táborem a Táborem v bažinách.");
 };
 
 //---------------------------------------------------------------------
@@ -668,7 +668,7 @@ func void Info_FreemineOrc_SWAMPSHARK2_Info()
 
 //	B_LogEntry(CH4_UluMulu,"Tarrok needs the teeth of a swampshark for the Ulu-Mulu. There are loads of the beasts behind the camp of the Brotherhood."); 
 //	B_LogEntry(CH4_UluMulu,"Tarrok benötigt für das Ulu-Mulu Zähne eines Sumpfhais. Im Sumpf hinter dem Lager der Bruderschaft gibt es massenhaft Ungetüme dieser Art."); 
-	B_LogEntry(CH4_UluMulu,"Tarok potřebuje k výrobě ULU-MULU zuby močálového žraloka. Spousty těchto bestií žijí za táborem Bratrstva."); 
+	B_LogEntry(CH4_UluMulu,"Tarrok potřebuje k výrobě ULU-MULU zuby močálového žraloka. Spousty těchto bestií žije v močále za táborem Bratrstva."); 
 };
 
 //---------------------------------------------------------------------
@@ -701,7 +701,7 @@ func void Info_FreemineOrc_TROLL_Info()
 	AI_Output(hero,self,"Info_FreemineOrc_TROLL_15_01"); //Co je to ORTH-ANTAK?
 //	AI_Output(self,hero,"Info_FreemineOrc_TROLL_17_02"); //Be tooth of big troll! Make big hole in prey!
 //	AI_Output(self,hero,"Info_FreemineOrc_TROLL_17_02"); //Hauer von großes Troll! Machen großes Löcher in Beute!
-	AI_Output(self,hero,"Info_FreemineOrc_TROLL_17_02"); //Být zub velkého trola! Udělat velkou díru do kořisti!
+	AI_Output(self,hero,"Info_FreemineOrc_TROLL_17_02"); //Být zub od velký trol! Udělat velkou díru do kořisti!
 };
 
 //---------------------------------------------------------------------
@@ -746,7 +746,7 @@ func void Info_FreemineOrc_TROLL2_Info()
 
 //	B_LogEntry(CH4_UluMulu,"Tarrok needs the tusks of a troll for the Ulu-Mulu. These monsters live in the northern mountains of the colony. I should search the ravines there.");
 //	B_LogEntry(CH4_UluMulu,"Tarrok benötigt für das Ulu-Mulu die Hauer eines Trolls. Solche Monstren leben in den nördlichen Bergen der Kolonie. Ich sollte die Schluchten dort absuchen.");
-	B_LogEntry(CH4_UluMulu,"Tarok potřebuje k výrobě ULU-MULU trolí tesáky. Tyto bestie žijí v horách na severu kolonie. Měl bych prohledat tamější rokliny.");
+	B_LogEntry(CH4_UluMulu,"Tarrok potřebuje k výrobě ULU-MULU trolí tesáky. Tyto bestie žijí v horách na severu Kolonie. Měl bych prohledat tamější rokliny.");
 };
 
 //---------------------------------------------------------------------
@@ -761,7 +761,7 @@ instance Info_FreemineOrc_LOOKINGULUMULU(C_INFO)
 	permanent = 1;
 //	description = "I don't have all four items yet.";
 //	description = "Ich habe noch nicht alle vier Teile beisammen.";
-	description = "Ještě nemám všechny čtyři složky!";
+	description = "Ještě nemám všechny čtyři části!";
 };                       
 
 func int Info_FreemineOrc_LOOKINGULUMULU_Condition()
@@ -783,7 +783,7 @@ func void Info_FreemineOrc_LOOKINGULUMULU_Info()
 {
 //	AI_Output(hero,self,"Info_FreemineOrc_LOOKINGULUMULU_15_01"); //I don't have all four items yet.
 //	AI_Output(hero,self,"Info_FreemineOrc_LOOKINGULUMULU_15_01"); //Ich habe noch nicht alle vier Teile beisammen.
-	AI_Output(hero,self,"Info_FreemineOrc_LOOKINGULUMULU_15_01"); //Ještě nemám všechny čtyři složky!
+	AI_Output(hero,self,"Info_FreemineOrc_LOOKINGULUMULU_15_01"); //Ještě nemám všechny čtyři čísti!
 //	AI_Output(self,hero,"Info_FreemineOrc_LOOKINGULUMULU_17_02"); //Stranger seek on. Tarrok wait here!
 //	AI_Output(self,hero,"Info_FreemineOrc_LOOKINGULUMULU_17_02"); //Fremder suchen weiter. Tarrok hier warten!
 	AI_Output(self,hero,"Info_FreemineOrc_LOOKINGULUMULU_17_02"); //Cizinec pokračovat hledat. Tarrok počkat tady!
@@ -803,7 +803,7 @@ instance Info_FreemineOrc_EVERYULUMULU(C_INFO)
 	permanent = 0;
 //	description = "I have all four items for the Ulu-Mulu!";
 //	description = "Ich habe alle Teile für das Ulu-Mulu zusammen!";
-	description = "Už mám všechny čtyři složky pro Ulu-Mulu!";
+	description = "Už mám všechny čtyři části pro Ulu-Mulu!";
 };                       
 
 func int Info_FreemineOrc_EVERYULUMULU_Condition()
@@ -825,10 +825,10 @@ func void Info_FreemineOrc_EVERYULUMULU_Info()
 	AI_Output(hero,self,"Info_FreemineOrc_EVERYULUMULU_15_01"); //Už mám všechny čtyři složky pro Ulu-Mulu!
 //	AI_Output(self,hero,"Info_FreemineOrc_EVERYULUMULU_17_02"); //Stranger strong warrior be! Give items! Tarrok make ULU-MULU!
 //	AI_Output(self,hero,"Info_FreemineOrc_EVERYULUMULU_17_02"); //Fremder seien starker Krieger! Geben Teile! Tarrok machen ULU-MULU!
-	AI_Output(self,hero,"Info_FreemineOrc_EVERYULUMULU_17_02"); //Cizinec být silný bojovník! Dát mi ty složky! Tarrok udělat Ulu-Mulu!
+	AI_Output(self,hero,"Info_FreemineOrc_EVERYULUMULU_17_02"); //Cizinec být silný bojovník! Dát mi části! Tarrok udělat Ulu-Mulu!
 //	AI_Output(self,hero,"Info_FreemineOrc_EVERYULUMULU_17_03"); //Here! Stranger wear ULU-MULU and proud! Tarrok sleep now!
 //	AI_Output(self,hero,"Info_FreemineOrc_EVERYULUMULU_17_03"); //Hier! Fremder tragen ULU-MULU mit Stolz! Tarrok jetzt schlafen!
-	AI_Output(self,hero,"Info_FreemineOrc_EVERYULUMULU_17_03"); //Tady! Cizinec nosit ULU-MULU s hrdostí! Tarrok teď spát!
+	AI_Output(self,hero,"Info_FreemineOrc_EVERYULUMULU_17_03"); //Tady! Cizinec nosit ULU-MULU s hrdost! Tarrok teď spát!
 
 	CreateInvItems(hero,ItAt_Waran_01, 3);
 	B_GiveInvItems(hero,self,ItAt_Waran_01, 4); //Notwendig für Ausschrift "4 Gegenstände übergegen", wird sofort ausgeglichen

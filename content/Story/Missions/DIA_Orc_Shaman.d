@@ -53,13 +53,13 @@ func void Info_OrcShaman_THX_Info()
 {
 //	AI_Output(self,hero,"Info_OrcShaman_THX_17_01"); //Owe thanks, stranger.
 //	AI_Output(self,hero,"Info_OrcShaman_THX_17_01"); //Dank schulden, Fremder.
-	AI_Output(self,hero,"Info_OrcShaman_THX_17_01"); //Dlužit díky, cizinče.
+	AI_Output(self,hero,"Info_OrcShaman_THX_17_01"); //Dlužit díky, cizinec.
 //	AI_Output(self,hero,"Info_OrcShaman_THX_17_02"); //Bad Orcs want kill me.
 //	AI_Output(self,hero,"Info_OrcShaman_THX_17_02"); //Böse Orks töten wollen mich.
-	AI_Output(self,hero,"Info_OrcShaman_THX_17_02"); //Zlí skřeti mě chtějí zabít.
+	AI_Output(self,hero,"Info_OrcShaman_THX_17_02"); //Zlí skřeti mě chtít zabít.
 //	AI_Output(self,hero,"Info_OrcShaman_THX_17_03"); //Old brothers today enemies.
 //	AI_Output(self,hero,"Info_OrcShaman_THX_17_03"); //Alte Brüder seien heute Feinde.
-	AI_Output(self,hero,"Info_OrcShaman_THX_17_03"); //Staří bratři být dneska nepřátelé.
+	AI_Output(self,hero,"Info_OrcShaman_THX_17_03"); //Staří bratři být dneska nepřítel.
 }; 
 
 //---------------------------------------------------------------------
@@ -96,7 +96,7 @@ func void Info_OrcShaman_WHO_Info()
 	AI_Output(self,hero,"Info_OrcShaman_WHO_17_02"); //Já se jmenovat Ur-Shak.
 //	AI_Output(self,hero,"Info_OrcShaman_WHO_17_03"); //Be son of the spirit. People call shaman.
 //	AI_Output(self,hero,"Info_OrcShaman_WHO_17_03"); //Seien Sohn von Geist. Menschen nennen Schamane.
-	AI_Output(self,hero,"Info_OrcShaman_WHO_17_03"); //Být synem ducha. Lidé tomu říkat šaman.
+	AI_Output(self,hero,"Info_OrcShaman_WHO_17_03"); //Být syn ducha. Lidé tomu říkat šaman.
 }; 
 
 //---------------------------------------------------------------------
@@ -111,7 +111,7 @@ instance Info_OrcShaman_TONGUE(C_INFO)
 	permanent = 0;
 //	description = "How d'you know our language?";
 //	description = "Woher kannst du unsere Sprache?";
-	description = "Kde ses naučil náš jazyk?";
+	description = "Kde ses naučil naši řeč?";
 };
 
 func int Info_OrcShaman_TONGUE_Condition()
@@ -127,7 +127,7 @@ func void Info_OrcShaman_TONGUE_Info()
 {
 //	AI_Output(hero,self,"Info_OrcShaman_TONGUE_15_01"); //How do you know our language?
 //	AI_Output(hero,self,"Info_OrcShaman_TONGUE_15_01"); //Woher kannst du unsere Sprache?
-	AI_Output(hero,self,"Info_OrcShaman_TONGUE_15_01"); //Jak ses naučil náš jazyk?
+	AI_Output(hero,self,"Info_OrcShaman_TONGUE_15_01"); //Kde ses naučil naši řeč?
 //	AI_Output(self,hero,"Info_OrcShaman_TONGUE_17_02"); //Ur-Shak be slave of humans in mine.
 //	AI_Output(self,hero,"Info_OrcShaman_TONGUE_17_02"); //Ur-Shak gewesen Sklave bei Menschen in Mine.
 	AI_Output(self,hero,"Info_OrcShaman_TONGUE_17_02"); //Ur-Shak být otrok lidí v dole.
@@ -201,13 +201,13 @@ func void Info_OrcShaman_WHY_Info()
 	AI_Output(hero,self,"Info_OrcShaman_WHY_15_01"); //Proč jsou tvoji bratři proti tobě?
 //	AI_Output(self,hero,"Info_OrcShaman_WHY_17_02"); //Ur-Shak in disfavor.
 //	AI_Output(self,hero,"Info_OrcShaman_WHY_17_02"); //Ur-Shak gefallen in Ungnade.
-	AI_Output(self,hero,"Info_OrcShaman_WHY_17_02"); //Ur-Shak být v nepřízni.
+	AI_Output(self,hero,"Info_OrcShaman_WHY_17_02"); //Ur-Shak být v nepřízeň.
 //	AI_Output(self,hero,"Info_OrcShaman_WHY_17_03"); //Besmirch creed in KRUSHAK.
 //	AI_Output(self,hero,"Info_OrcShaman_WHY_17_03"); //Haben beschmutzt Ehrfurcht vor KRUSHAK.
-	AI_Output(self,hero,"Info_OrcShaman_WHY_17_03"); //Ztratit velkou úctu v KRUSHAKA.
+	AI_Output(self,hero,"Info_OrcShaman_WHY_17_03"); //Ztratit velkou úctu v KRUSHAK.
 //	AI_Output(self,hero,"Info_OrcShaman_WHY_17_04"); //Believe KRUSHAK bad demon.
 //	AI_Output(self,hero,"Info_OrcShaman_WHY_17_04"); //Glauben, KRUSHAK seien böser Dämon.
-	AI_Output(self,hero,"Info_OrcShaman_WHY_17_04"); //Věřit mi, KRUSHAK být zlý démon..
+	AI_Output(self,hero,"Info_OrcShaman_WHY_17_04"); //Věřit mi, KRUSHAK být zlý démon.
 }; 
 
 //---------------------------------------------------------------------
@@ -241,13 +241,13 @@ func void Info_OrcShaman_KRUSHAK_Info()
 	AI_Output(hero,self,"Info_OrcShaman_KRUSHAK_15_01"); //Co to znamená KRUSHAK?
 //	AI_Output(self,hero,"Info_OrcShaman_KRUSHAK_17_02"); //Humans call SLEEP.
 //	AI_Output(self,hero,"Info_OrcShaman_KRUSHAK_17_02"); //Menschen sagen SCHLAFEN.
-	AI_Output(self,hero,"Info_OrcShaman_KRUSHAK_17_02"); //Lidé tomu říkat SPÁT.
+	AI_Output(self,hero,"Info_OrcShaman_KRUSHAK_17_02"); //Lidé říkat SPÁT.
 //	AI_Output(hero,self,"Info_OrcShaman_KRUSHAK_15_03"); //You mean 'Sleeper'?
 //	AI_Output(hero,self,"Info_OrcShaman_KRUSHAK_15_03"); //Du meinst "Schläfer"?
 	AI_Output(hero,self,"Info_OrcShaman_KRUSHAK_15_03"); //Myslíš 'Spáč'?
 //	AI_Output(self,hero,"Info_OrcShaman_KRUSHAK_17_04"); //Yes, humans say SLEEPER!
 //	AI_Output(self,hero,"Info_OrcShaman_KRUSHAK_17_04"); //Ja, Menschen sagen SCHLÄFER!
-	AI_Output(self,hero,"Info_OrcShaman_KRUSHAK_17_04"); //Ano, lidé tomu říkat SPÁČ!
+	AI_Output(self,hero,"Info_OrcShaman_KRUSHAK_17_04"); //Ano, lidé říkat SPÁČ!
 }; 
 
 //---------------------------------------------------------------------
@@ -281,7 +281,7 @@ func void Info_OrcShaman_SLEEPER_Info()
 	AI_Output(hero,self,"Info_OrcShaman_SLEEPER_15_01"); //Co víš o Spáčovi?
 //	AI_Output(self,hero,"Info_OrcShaman_SLEEPER_17_02"); //Be five brothers. Be many winters ago!
 //	AI_Output(self,hero,"Info_OrcShaman_SLEEPER_17_02"); //Fünf Brüder seien gewesen. Seien viiiiele Winter vorher!
-	AI_Output(self,hero,"Info_OrcShaman_SLEEPER_17_02"); //Být pět bratří. To být před mnoha zimami!
+	AI_Output(self,hero,"Info_OrcShaman_SLEEPER_17_02"); //Být pět bratrů. To být před mnoha zimami!
 //	AI_Output(self,hero,"Info_OrcShaman_SLEEPER_17_03"); //Be sons of spirit, like Ur-Shak!
 //	AI_Output(self,hero,"Info_OrcShaman_SLEEPER_17_03"); //Waren Söhne von Geist wie Ur-Shak!
 	AI_Output(self,hero,"Info_OrcShaman_SLEEPER_17_03"); //Být synové ducha, tak jako Ur-Shak!
@@ -290,16 +290,16 @@ func void Info_OrcShaman_SLEEPER_Info()
 	AI_Output(hero,self,"Info_OrcShaman_SLEEPER_15_04"); //Myslíš pět šamanů!
 //	AI_Output(self,hero,"Info_OrcShaman_SLEEPER_17_05"); //Call KRUSHAK!
 //	AI_Output(self,hero,"Info_OrcShaman_SLEEPER_17_05"); //Haben gerufen KRUSHAK!
-	AI_Output(self,hero,"Info_OrcShaman_SLEEPER_17_05"); //Vyrušovat KRUSHAK!
+	AI_Output(self,hero,"Info_OrcShaman_SLEEPER_17_05"); //Vyvolat KRUSHAK!
 //	AI_Output(self,hero,"Info_OrcShaman_SLEEPER_17_06"); //Want defeat clan of enemy!
 //	AI_Output(self,hero,"Info_OrcShaman_SLEEPER_17_06"); //Haben besiegen wollen Klan von Feind!
 	AI_Output(self,hero,"Info_OrcShaman_SLEEPER_17_06"); //Chtít porazit klan nepřátel!
 //	AI_Output(self,hero,"Info_OrcShaman_SLEEPER_17_07"); //Five brothers then build temple under earth for KRUSHAK!
 //	AI_Output(self,hero,"Info_OrcShaman_SLEEPER_17_07"); //Fünf Brüder von damals haben gebaut Tempel in Erde für KRUSHAK!
-	AI_Output(self,hero,"Info_OrcShaman_SLEEPER_17_07"); //Pět bratří potom postavit pro KRUSHAKA chrám pod zemí!
+	AI_Output(self,hero,"Info_OrcShaman_SLEEPER_17_07"); //Pět bratří potom postavit pro KRUSHAK chrám pod zemí!
 //	AI_Output(hero,self,"Info_OrcShaman_SLEEPER_15_08"); //A subterranean temple for the Sleeper? That's what Xardas must have meant when he spoke about the entrance being 'in the Orc town'!
 //	AI_Output(hero,self,"Info_OrcShaman_SLEEPER_15_08"); //Ein unterirdischer Tempel zu Ehren des Schläfers! Das muss Xardas gemeint haben mit 'unter der Ork-Stadt'!
-	AI_Output(hero,self,"Info_OrcShaman_SLEEPER_15_08"); //Podzemní chrám pro Spáče! Ten, co měl na mysli Xardas, když mluvil o vstupu v 'skřetím městě'!
+	AI_Output(hero,self,"Info_OrcShaman_SLEEPER_15_08"); //Podzemní chrám na počest Spáče! To musel mít na mysli Xardas, když říkal 'pod skřetím městem'!
 }; 
 
 //---------------------------------------------------------------------
@@ -333,7 +333,7 @@ func void Info_OrcShaman_CURSE_Info()
 	AI_Output(hero,self,"Info_OrcShaman_CURSE_15_01"); //Co se stalo v tom podzemním chrámu?
 //	AI_Output(self,hero,"Info_OrcShaman_CURSE_17_02"); //Brothers then give heart to KRUSHAK.
 //	AI_Output(self,hero,"Info_OrcShaman_CURSE_17_02"); //Brüder von damals haben gegeben Herz für KRUSHAK.
-	AI_Output(self,hero,"Info_OrcShaman_CURSE_17_02"); //Bratři potom dát srdce KRUSHAKOVI.
+	AI_Output(self,hero,"Info_OrcShaman_CURSE_17_02"); //Bratři potom dát KRUSHAK srdce.
 //	AI_Output(self,hero,"Info_OrcShaman_CURSE_17_03"); //But KRUSHAK be bad. KRUSHAK curse all who build temple.
 //	AI_Output(self,hero,"Info_OrcShaman_CURSE_17_03"); //Aber KRUSHAK gewesen böse. KRUSHAK verfluchen alle, die bauen Tempel.
 	AI_Output(self,hero,"Info_OrcShaman_CURSE_17_03"); //Ale KRUSHAK být zlý. KRUSHAK proklít všechny, co postavit chrám.
@@ -384,13 +384,13 @@ func void Info_OrcShaman_OUTSIDE_Info()
 	AI_Output(self,hero,"Info_OrcShaman_OUTSIDE_17_02"); //Uzavřít chrám. Bratři dnes uctívat KRUSHAK.
 //	AI_Output(self,hero,"Info_OrcShaman_OUTSIDE_17_03"); //KRUSHAK get sacrifice, so no become bad.
 //	AI_Output(self,hero,"Info_OrcShaman_OUTSIDE_17_03"); //KRUSHAK bekommen Opfer, damit nicht werden böse.
-	AI_Output(self,hero,"Info_OrcShaman_OUTSIDE_17_03"); //KRUSHAK být vysvěcený, ne se stát zlý.
+	AI_Output(self,hero,"Info_OrcShaman_OUTSIDE_17_03"); //KRUSHAK dsotat oběti, aby se nestát zlý.
 //	AI_Output(self,hero,"Info_OrcShaman_OUTSIDE_17_04"); //Ur-Shak think sacrifice bad thing. Have said KRUSHAK bad.
 //	AI_Output(self,hero,"Info_OrcShaman_OUTSIDE_17_04"); //Ur-Shak Opfer finden falsch. Haben gesagt KRUSHAK böse.
-	AI_Output(self,hero,"Info_OrcShaman_OUTSIDE_17_04"); //Ur-Shak si myslet, že vysvěcení být špatná věc. Muset říct, že KRUSHAK být zlý.
+	AI_Output(self,hero,"Info_OrcShaman_OUTSIDE_17_04"); //Ur-Shak si myslet, že oběti být špatná věc. Muset říct, že KRUSHAK být zlý.
 //	AI_Output(self,hero,"Info_OrcShaman_OUTSIDE_17_05"); //Brothers no want to hear. Brothers say Ur-Shak go. Brothers hit Ur-Shak.
 //	AI_Output(self,hero,"Info_OrcShaman_OUTSIDE_17_05"); //Brüder wollen nicht hören. Brüder sagen Ur-Shak gehen. Brüder schlagen Ur-Shak.
-	AI_Output(self,hero,"Info_OrcShaman_OUTSIDE_17_05"); //Bratři o tom nechtít slyšet. Bratři říkat Ur-Shak odejít. Bratři vyhnat Ur-Shaka.
+	AI_Output(self,hero,"Info_OrcShaman_OUTSIDE_17_05"); //Bratři o tom nechtít slyšet. Bratři říkat Ur-Shak odejít. Bratři bít Ur-Shak.
 }; 
 
 //---------------------------------------------------------------------
@@ -549,7 +549,7 @@ func void Info_OrcShaman_OTHERWAY_Info()
 	AI_Output(hero,self,"Info_OrcShaman_OTHERWAY_15_01"); //Dobře, dobře, budu ale muset nějak najít cestu do chrámu!
 //	AI_Output(self,hero,"Info_OrcShaman_OTHERWAY_17_02"); //Ur-Shak know way! Stranger wear ULU-MULU!
 //	AI_Output(self,hero,"Info_OrcShaman_OTHERWAY_17_02"); //Ur-Shak kennen Weg! Fremder tragen ULU-MULU!
-	AI_Output(self,hero,"Info_OrcShaman_OTHERWAY_17_02"); //Ur-Shak znát cestu! Cizinec mít ULU-MULU!
+	AI_Output(self,hero,"Info_OrcShaman_OTHERWAY_17_02"); //Ur-Shak znát cestu! Cizinec nosit ULU-MULU!
 //	AI_Output(hero,self,"Info_OrcShaman_OTHERWAY_15_03"); //ULU-MULU??? What's an Ulu-Mulu?
 //	AI_Output(hero,self,"Info_OrcShaman_OTHERWAY_15_03"); //ULU-MULU??? Was ist ein Ulu-Mulu?
 	AI_Output(hero,self,"Info_OrcShaman_OTHERWAY_15_03"); //ULU-MULU??? Co je to Ulu-Mulu?
@@ -558,7 +558,7 @@ func void Info_OrcShaman_OTHERWAY_Info()
 	AI_Output(self,hero,"Info_OrcShaman_OTHERWAY_17_04"); //To být znamení přátelství! Bratři si vážit ULU-MULU!
 //	AI_Output(self,hero,"Info_OrcShaman_OTHERWAY_17_05"); //Stranger wear ULU-MULU, then stranger no die!
 //	AI_Output(self,hero,"Info_OrcShaman_OTHERWAY_17_05"); //Fremder tragen ULU-MULU, dann Fremder nicht sterben!
-	AI_Output(self,hero,"Info_OrcShaman_OTHERWAY_17_05"); //Když cizinec mít ULU-MULU, pak cizinec nezemřít!
+	AI_Output(self,hero,"Info_OrcShaman_OTHERWAY_17_05"); //Když cizinec nosit ULU-MULU, pak cizinec nezemřít!
 };
 
 //---------------------------------------------------------------------
@@ -690,7 +690,7 @@ func void Info_OrcShaman_BYEBYE_Info()
 	AI_Output(self,hero,"Info_OrcShaman_BYEBYE_17_04"); //Ur-Shak nesmět jít domu. Ur-Shak teď žít tady! Přítel přijít, když potřebovat pomoc!
 //	AI_Output(hero,self,"Info_OrcShaman_BYEBYE_15_05"); //I may take you up on your offer!
 //	AI_Output(hero,self,"Info_OrcShaman_BYEBYE_15_05"); //Vielleicht werde ich auf dein Angebot zurückkommen!
-	AI_Output(hero,self,"Info_OrcShaman_BYEBYE_15_05"); //Snad tvojí nabídku budu moci využít!
+	AI_Output(hero,self,"Info_OrcShaman_BYEBYE_15_05"); //Možná tvou nabídku využiji!
 
 	B_Story_FriendOfUrShak();
 
@@ -740,7 +740,7 @@ func void Info_OrcShaman_FRIENDLYHELLO_Info()
 	AI_Output(self,hero,"Info_OrcShaman_FRIENDLYHELLO_17_05"); //Přítel přijít, když potřebovat pomoc!
 //	AI_Output(hero,self,"Info_OrcShaman_FRIENDLYHELLO_15_06"); //Take care!
 //	AI_Output(hero,self,"Info_OrcShaman_FRIENDLYHELLO_15_06"); //Pass auf dich auf!
-	AI_Output(hero,self,"Info_OrcShaman_FRIENDLYHELLO_15_06"); //Být opatrný!
+	AI_Output(hero,self,"Info_OrcShaman_FRIENDLYHELLO_15_06"); //Buď opatrný!
 	AI_StopProcessInfos(self);
 };
 
@@ -982,7 +982,7 @@ func void Info_OrcShaman_IDOL_Info()
 
 //		B_LogEntry(CH4_EnterTemple,"There is another way to the temple. There is a figure of the Sleeper on the sacred column of the Orc shamans which opens the door to the temple. Ur-Shak's brothers won't be delighted when they discover that I'm using their holy icon.");
 //		B_LogEntry(CH4_EnterTemple,"Es gibt noch einen weiteren Weg in den Tempel zu gelangen. Auf der heiligen Säule der Orkschamanen steht eine Schläferfigur, die das Tor zum Tempel öffnet. Allerdings werden Ur-Shak's Brüder wenig begeistert sein, wenn sie bemerken, dass ich mich ihrer heiligen Ikone bediene.");
-		B_LogEntry(CH4_EnterTemple,"Do chrámu vede další cesta. V posvátném sloupu skřetích šamanů je figurka Spáče, která otevře vrata chrámu. Ur-Shakovi bratři se nepotěší, až uvidí, že používám jejich svatou ikonu.");
+		B_LogEntry(CH4_EnterTemple,"Do chrámu vede další cesta. Na posvátném sloupu skřetích šamanů je figurka Spáče, která otevře vrata chrámu. Ur-Shakovi bratři se nepotěší, až uvidí, že používám jejich svatou ikonu.");
 	};
 }; 
 

@@ -31,19 +31,19 @@ func void GUR_1212_MadCorKalom_Talk2SC_Info()
 	AI_Output(hero,self,"GUR_1212_MadCorKalom_Talk2SC_15_04"); //Brzy mu budu blíž, než se mu bude líbit.
 //	AI_Output(self,hero,"GUR_1212_MadCorKalom_Talk2SC_10_05"); //We will not let you foil our plans.
 //	AI_Output(self,hero,"GUR_1212_MadCorKalom_Talk2SC_10_05"); //Wir werden nicht zulassen, dass du unsere Pläne durchkreuzt.
-	AI_Output(self,hero,"GUR_1212_MadCorKalom_Talk2SC_10_05"); //Nechceme, abys zmařil naše plány.
+	AI_Output(self,hero,"GUR_1212_MadCorKalom_Talk2SC_10_05"); //Nenecháme tě zmařit naše plány.
 //	AI_Output(self,hero,"GUR_1212_MadCorKalom_Talk2SC_10_06"); //The world is about to witness the awakening of the Redeemer, and nobody can stop him.
 //	AI_Output(self,hero,"GUR_1212_MadCorKalom_Talk2SC_10_06"); //Die Welt steht kurz vor dem Erwachen des Erlösers und keiner kann ihn aufhalten.
-	AI_Output(self,hero,"GUR_1212_MadCorKalom_Talk2SC_10_06"); //Svět se stane svědkem probuzení spasitele a nikdo ho nezastaví.
+	AI_Output(self,hero,"GUR_1212_MadCorKalom_Talk2SC_10_06"); //Svět se stane svědkem probuzení spasitele a nikdo ho nedokáže zastavit.
 //	AI_Output(self,hero,"GUR_1212_MadCorKalom_Talk2SC_10_07"); //All the infidels out there will pay the price.
 //	AI_Output(self,hero,"GUR_1212_MadCorKalom_Talk2SC_10_07"); //All die Ungläubigen da draußen werden ihren Preis bezahlen .
-	AI_Output(self,hero,"GUR_1212_MadCorKalom_Talk2SC_10_07"); //Všichni nevěrci zaplatí svůj dluh.
+	AI_Output(self,hero,"GUR_1212_MadCorKalom_Talk2SC_10_07"); //Všichni bezvěrci, tam venku, splatí svůj dluh.
 //	AI_Output(self,hero,"GUR_1212_MadCorKalom_Talk2SC_10_08"); //And you shall have the honor of being the first to pay.
 //	AI_Output(self,hero,"GUR_1212_MadCorKalom_Talk2SC_10_08"); //Und du hast die Ehre, der Erste zu sein, der diesen Preis bezahlen darf .
 	AI_Output(self,hero,"GUR_1212_MadCorKalom_Talk2SC_10_08"); //A tobě se dostane té cti zaplatit jako první.
 //	AI_Output(self,hero,"GUR_1212_MadCorKalom_Talk2SC_10_09"); //SSSLLLLLLEEEEEEEEEEEPPPEEEEEERRRR AAWWWAAAAAAAAAAAKKKEEEEEENN!!!!!!!!!
 //	AI_Output(self,hero,"GUR_1212_MadCorKalom_Talk2SC_10_09"); //SCHLÄÄÄÄÄÄÄÄÄÄFEEEEEEEEEEEER ERWAAAAAAAAAAAACHEEEEEEEEEEEEE !!!!!!!!!
-	AI_Output(self,hero,"GUR_1212_MadCorKalom_Talk2SC_10_09"); //SSSPÁÁÁÁÁČČČÍÍÍÍ, PRROOBUUUĎĎĎ SSEEE!!!!!!!!
+	AI_Output(self,hero,"GUR_1212_MadCorKalom_Talk2SC_10_09"); //SSSPÁÁÁÁÁČČČIIII, PRROOBUUUĎĎĎ SSEEE!!!!!!!!
 
 	AI_StopProcessInfos(self);
 

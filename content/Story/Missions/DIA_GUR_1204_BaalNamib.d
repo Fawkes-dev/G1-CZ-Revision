@@ -128,7 +128,7 @@ func void DIA_BaalNamib_FirstTalk_Info()
 	Info_ClearChoices(DIA_BaalNamib_FirstTalk);
 //	Info_AddChoice(DIA_BaalNamib_FirstTalk,"SAY NOTHING",DIA_BaalNamib_FirstTalk_Mute);
 //	Info_AddChoice(DIA_BaalNamib_FirstTalk,"NICHTS SAGEN",DIA_BaalNamib_FirstTalk_Mute);
-	Info_AddChoice(DIA_BaalNamib_FirstTalk,"NEŘÍKEJ NIC",DIA_BaalNamib_FirstTalk_Mute);
+	Info_AddChoice(DIA_BaalNamib_FirstTalk,"NIC NEŘÍKEJ",DIA_BaalNamib_FirstTalk_Mute);
 //	Info_AddChoice(DIA_BaalNamib_FirstTalk,"Yes, I wish to follow the Sleeper!",DIA_BaalNamib_FirstTalk_Sleeper);
 //	Info_AddChoice(DIA_BaalNamib_FirstTalk,"Ja, ich will den Weg des Schläfers beschreiten!",DIA_BaalNamib_FirstTalk_Sleeper);
 	Info_AddChoice(DIA_BaalNamib_FirstTalk,"Ano, chci následovat Spáče!",DIA_BaalNamib_FirstTalk_Sleeper);
@@ -147,15 +147,15 @@ func void DIA_BaalNamib_FirstTalk_Sleeper()
 {
 //	AI_Output(other,self,"DIA_BaalNamib_FirstTalk_Sleeper_15_00"); //Yes, I wish to follow the Sleeper!
 //	AI_Output(other,self,"DIA_BaalNamib_FirstTalk_Sleeper_15_00"); //Ja, ich will den Weg des Schläfers beschreiten!
-	AI_Output(other,self,"DIA_BaalNamib_FirstTalk_Sleeper_15_00"); //Ano, chci následovat Spáče!
+	AI_Output(other,self,"DIA_BaalNamib_FirstTalk_Sleeper_15_00"); //Ano, chci následovat cestu Spáče!
 //	AI_Output(self,other,"DIA_BaalNamib_FirstTalk_Sleeper_02_01"); //Go to Cor Kalom. Tell him I sent you because you are a true supporter of the faith!
 //	AI_Output(self,other,"DIA_BaalNamib_FirstTalk_Sleeper_02_01"); //Geh zu Cor Kalom. Sag ihm, ich schicke ihm einen wahren Anhänger des Glaubens!
-	AI_Output(self,other,"DIA_BaalNamib_FirstTalk_Sleeper_02_01"); //Jdi za Corem Kalomem. Řekni mu, že jsem tě vyslal, protože jsi opravdový služebník víry!
+	AI_Output(self,other,"DIA_BaalNamib_FirstTalk_Sleeper_02_01"); //Jdi za Cor Kalomem. Řekni mu, že jsem tě vyslal, protože jsi opravdový služebník víry!
 	Info_ClearChoices(DIA_BaalNamib_FirstTalk);
 
 //	B_LogEntry(CH1_JoinPsi,"Lester's acting bit has worked out. Baal Namib has spoken to me, and he's convinced that I'm now a true believer. Now I'm supposed to see the Guru Cor Kalom in his alchemy lab!");
 //	B_LogEntry(CH1_JoinPsi,"Lester's Schauspiel hat funktioniert. Baal Namib hat mir mir gesprochen und ist überzeugt, dass ich nun ein wahrer Anhänger des Glaubens bin. Ich soll nun den Guru Cor Kalom in seinem Alchemielabor aufsuchen!");
-	B_LogEntry(CH1_JoinPsi,"Lesterův scénář zapracoval. Baal Namib se mnou promluvil a je přesvědčený, že jsem opravdově věřící. Nyní můžu jít navštívit guru Cora Kaloma do jeho alchymistické dílny!");
+	B_LogEntry(CH1_JoinPsi,"Lesterova scénka fungovala. Baal Namib se mnou promluvil a je přesvědčený, že jsem skutečně věřící. Nyní můžu jít navštívit guru Cor Kaloma do jeho alchymistické dílny!");
 	B_GiveXP(XP_ImpressBaalNamib);
 };
 
@@ -171,7 +171,7 @@ instance GUR_1204_BaalNamib_ARMOR(C_INFO)
 	permanent = 1;
 //	description = "I'd like to have better armor."; 
 //	description = "Ich möchte eine bessere Rüstung haben."; 
-	description = "Rád bych lepší zbroj."; 
+	description = "Rád bych měl lepší zbroj."; 
 };
 
 func int GUR_1204_BaalNamib_ARMOR_Condition()
@@ -187,7 +187,7 @@ func void GUR_1204_BaalNamib_ARMOR_Info()
 {
 //	AI_Output(hero,self,"GUR_1204_BaalNamib_ARMOR_Info_15_01");//I'd like to have better armor.
 //	AI_Output(hero,self,"GUR_1204_BaalNamib_ARMOR_Info_15_01");//Ich möchte eine bessere Rüstung haben.
-	AI_Output(hero,self,"GUR_1204_BaalNamib_ARMOR_Info_15_01");//Rád bych lepší zbroj.
+	AI_Output(hero,self,"GUR_1204_BaalNamib_ARMOR_Info_15_01");//Rád bych měl lepší zbroj.
 
 	if (Kapitel < 3)
 	{
@@ -245,17 +245,17 @@ func void Info_BaalNamib_BROTHERHOOD_Info()
 	AI_Output(other,self,"Info_BaalNamib_BROTHERHOOD_15_01"); //Můžu pro Bratrstvo vykonat nějaké úkoly?
 //	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_02_02"); //Our master, the wise Y'Berion, has sent for a novice. Since you're a member of the community now, go to him and offer your services. 
 //	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_02_02"); //Unser Meister, der weise Y'Berion, schickt nach einem Novizen. Nun, da du ein Bruder der Gemeinschaft geworden bist, geh zu ihm und biete ihm deine Hilfe an.
-	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_02_02"); //Náš mistr, moudrý Y´Berion, nechal poslat pro novice. Protože jsi nyní členem komunity, jdi za ním a nabídni mu své služby.
+	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_02_02"); //Náš mistr, moudrý Y'Berion, nechal poslat pro novice. Protože jsi nyní členem komunity, jdi za ním a nabídni mu své služby.
 	Info_Clearchoices ( Info_BaalNamib_BROTHERHOOD);
 //	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,"Alright, I'll go to see him now.",Info_BaalNamib_BROTHERHOOD_OK);
 //	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,"In Ordnung, ich werde ihn sofort aufsuchen",Info_BaalNamib_BROTHERHOOD_OK);
 	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,"Dobrá, půjdu za ním hned.",Info_BaalNamib_BROTHERHOOD_OK);
 //	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,"Where can I find Y'Berion?",Info_BaalNamib_BROTHERHOOD_YBWO);  
 //	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,"Wo finde ich Y'Berion?",Info_BaalNamib_BROTHERHOOD_YBWO);  
-	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,"Kde najdu Y´Beriona?",Info_BaalNamib_BROTHERHOOD_YBWO);  
+	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,"Kde najdu Y'Beriona?",Info_BaalNamib_BROTHERHOOD_YBWO);  
 //	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,"Do you know what Y'Berion wants me to do?",Info_BaalNamib_BROTHERHOOD_YBWAS);
 //	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,"Weißt du, was ich für Y'berion erledigen soll?",Info_BaalNamib_BROTHERHOOD_YBWAS);
-	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,"Víš, co ode mě Y´Berion chce?",Info_BaalNamib_BROTHERHOOD_YBWAS);
+	Info_Addchoice (Info_BaalNamib_BROTHERHOOD,"Víš, co ode mě Y'Berion chce?",Info_BaalNamib_BROTHERHOOD_YBWAS);
 	var C_NPC Kalom;
 	Kalom = Hlp_GetNpc(GUR_1201_CORKALOM); 
 	Npc_ExchangeRoutine(Kalom,"kapitel2");
@@ -265,7 +265,7 @@ func void Info_BaalNamib_BROTHERHOOD_YBWO()
 {
 //	AI_Output(other,self,"Info_BaalNamib_BROTHERHOOD_YBWO_15_01"); //Where can I find Y'Berion?
 //	AI_Output(other,self,"Info_BaalNamib_BROTHERHOOD_YBWO_15_01"); //Wo finde ich Y'Berion?
-	AI_Output(other,self,"Info_BaalNamib_BROTHERHOOD_YBWO_15_01"); //Kde najdu Y´Beriona?
+	AI_Output(other,self,"Info_BaalNamib_BROTHERHOOD_YBWO_15_01"); //Kde najdu Y'Beriona?
 //	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_YBWO_02_02"); //He's inside the temple hill. As always.
 //	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_YBWO_02_02"); //Er hält sich im Inneren des Tempelbergs auf. Wie immer.
 	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_YBWO_02_02"); //Je v chrámu, jako vždy.
@@ -275,19 +275,19 @@ func void Info_BaalNamib_BROTHERHOOD_YBWAS()
 {
 //	AI_Output(other,self,"Info_BaalNamib_BROTHERHOOD_YBWAS_15_01"); //Do you know what Y'Berion wants me to do?
 //	AI_Output(other,self,"Info_BaalNamib_BROTHERHOOD_YBWAS_15_01"); //Weißt du, was ich für Y'Berion erledigen soll?
-	AI_Output(other,self,"Info_BaalNamib_BROTHERHOOD_YBWAS_15_01"); //Víš, co ode mě Y´Berion chce?
+	AI_Output(other,self,"Info_BaalNamib_BROTHERHOOD_YBWAS_15_01"); //Víš, co ode mě Y'Berion chce?
 //	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_YBWAS_02_02"); //A great invocation will be taking place. But for it to begin, we need a magical object. 
 //	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_YBWAS_02_02"); //Eine große Beschwörung wird stattfinden. Allerdings brauchen wir dafür einen magischen Gegenstand.
 	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_YBWAS_02_02"); //Bude se konat velké vzývání. Aby ale mohlo začít, potřebujeme jeden magický předmět.
 //	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_YBWAS_02_03"); //Y'Berion is looking for men brave enough to get him the artifact.
 //	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_YBWAS_02_03"); //Y'Berion sucht Männer, die mutig genug sind, ihm dieses Artefakt zu bringen.
-	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_YBWAS_02_03"); //Y´Berion hledá odvážné muže, kteří by mu ten artefakt opatřili.
+	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_YBWAS_02_03"); //Y'Berion hledá odvážné muže, kteří by mu ten artefakt opatřili.
 //	AI_Output(other,self,"Info_BaalNamib_BROTHERHOOD_YBWAS_15_04"); //Sounds easy.
 //	AI_Output(other,self,"Info_BaalNamib_BROTHERHOOD_YBWAS_15_04"); //Klingt einfach.
 	AI_Output(other,self,"Info_BaalNamib_BROTHERHOOD_YBWAS_15_04"); //To zní jako snadný úkol.
 //	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_YBWAS_02_05"); //If it were easy, we'd already have the object. Talk to Y'Berion first. He'll explain it to you.
 //	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_YBWAS_02_05"); //Wenn es einfach wäre, hätten wir den Gegenstand schon. Sprich erst mal mit Y'Berion. Er wird dir alles erklären.
-	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_YBWAS_02_05"); //Kdyby to bylo snadné, už bysme ten předmět měli. Promluv si nejdříve s Y´Berionem. Všechno ti vysvětlí.
+	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_YBWAS_02_05"); //Kdyby to bylo snadné, už bychom ten předmět měli. Promluv si nejdříve s Y'Berionem. Všechno ti vysvětlí.
 }; 
 func void Info_BaalNamib_BROTHERHOOD_OK()
 {

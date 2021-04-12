@@ -181,7 +181,7 @@ instance Gur_1208_BaalCadar_Teach(C_INFO)
 	permanent = 1;
 //	description = "I would like to learn how to increase the power of my magic."; 
 //	description = "Ich will lernen, die Kraft meiner Magie zu steigern."; 
-	description = "Chtěl bych se naučit, jak zvětšit sílu svých kouzel. "; 
+	description = "Chtěl bych se naučit, jak zvětšit sílu svých kouzel."; 
 };
 
 func int Gur_1208_BaalCadar_Teach_Condition()
@@ -196,7 +196,7 @@ func void Gur_1208_BaalCadar_Teach_Info()
 {
 //	AI_Output(other,self,"Gur_1208_BaalCadar_Teach_Info_15_01"); //I would like to learn how to increase the power of my magic.
 //	AI_Output(other,self,"Gur_1208_BaalCadar_Teach_Info_15_01"); //Ich will lernen, die Kraft meiner Magie zu steigern.
-	AI_Output(other,self,"Gur_1208_BaalCadar_Teach_Info_15_01"); //Chtěl bych se naučit, jak zvětšit sílu svého kouzla.
+	AI_Output(other,self,"Gur_1208_BaalCadar_Teach_Info_15_01"); //Chtěl bych se naučit, jak zvětšit sílu svých kouzel.
 //	AI_Output(self,other,"Gur_1208_BaalCadar_Teach_Info_02_02"); //The power of your spirit is the key.
 //	AI_Output(self,other,"Gur_1208_BaalCadar_Teach_Info_02_02"); //Die Kraft deines Geistes ist der Schlüssel dazu.
 	AI_Output(self,other,"Gur_1208_BaalCadar_Teach_Info_02_02"); //Klíčem je síla tvojí duše.
@@ -206,7 +206,7 @@ func void Gur_1208_BaalCadar_Teach_Info()
 		Log_CreateTopic(GE_TeacherPSI,LOG_NOTE);
 //		B_LogEntry(GE_TeacherPSI,"The Guru Baal Cadar can help me to increase my MANA.");
 //		B_LogEntry(GE_TeacherPSI,"Der Guru Baal Cadar kann mir helfen, meine MANA zu steigern");
-		B_LogEntry(GE_TeacherPSI,"Guru Baal Cadar mi může pomoci vylepšit MAGICKOU ENERGII.");
+		B_LogEntry(GE_TeacherPSI,"Guru Baal Cadar mi může pomoci zvýšit MAGICKOU ENERGII.");
 		log_baalcadartrain = TRUE;
 	};
 	Info_ClearChoices(Gur_1208_BaalCadar_Teach);
@@ -294,7 +294,7 @@ instance Gur_1208_BaalCadar_KREIS1(C_INFO)
 	permanent = 1;
 //	description = "I am ready to enter the First Circle."; 
 //	description = "Ich bin bereit für den ersten Kreis"; 
-	description = "Jsem připraven vstoupit do Prvního kruhu."; 
+	description = "Jsem připraven vstoupit do prvního kruhu."; 
 };
 
 func int Gur_1208_BaalCadar_KREIS1_Condition()
@@ -311,12 +311,12 @@ func void Gur_1208_BaalCadar_KREIS1_Info()
 {
 //	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS1_Info_15_01"); //I am ready to enter the First Circle.
 //	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS1_Info_15_01"); //Ich bin bereit für den ersten Kreis.
-	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS1_Info_15_01"); //Jsem připraven vstoupit do Prvního kruhu.
+	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS1_Info_15_01"); //Jsem připraven vstoupit do prvního kruhu.
 	if (B_GiveSkill(other,NPC_TALENT_MAGE , 1, LPCOST_TALENT_MAGE_1))
 	{
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_02"); //Hear my words:
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_02"); //Höre meine Worte:
-		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_02"); //Poslouchej má slova.
+		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_02"); //Slyš má slova.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_03"); //A long time ago the Sleeper appeared and sent mankind a vision.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_03"); //Der Schläfer erschien vor langer Zeit und gab den Menschen eine Vision.
 		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_03"); //Před dlouhou dobou se zjevil Spáč a seslal lidstvu vizi.
@@ -325,10 +325,10 @@ func void Gur_1208_BaalCadar_KREIS1_Info()
 		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_04"); //Mnozí lidé však odmítali jeho znamení vnímat, neboť byli příliš zaslepeni touhou po rudě.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_05"); //Only Y'Berion and a few others set off and founded the Brotherhood.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_05"); //Nur Y'Berion und eine Hand voll anderer machten sich auf und gründeten die Bruderschaft.
-		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_05"); //Jen Y´Berion  s hrstkou dalších se sebral a založil Bratrstvo.
+		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_05"); //Jen Y´Berion, s hrstkou dalších, se sebral a založil Bratrstvo.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_06"); //The moment they obeyed the Sleeper's call, the First Circle was born. The magic of the runes will be understood by anybody who follows the Sleeper.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_06"); //In dem Augenblick, als sie dem Ruf des Schläfers folgten, entstand der erste Kreis. Die Magie der Runen offenbart sich demjenigen, der dem Schläfer folgt.
-		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_06"); //V okamžiku, kdy vyslyšeli Spáčovo poselství, se zrodil První kruh. Kouzlu run porozuměl každý, kdo následoval Spáče.
+		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_06"); //V okamžiku, kdy vyslyšeli Spáčovo poselství, se zrodil první kruh. MAgie run je k dispozici každému, kdo následuje Spáče.
 		Gur_1208_BaalCadar_KREIS1.permanent = 0;
 	};
 	AI_StopProcessInfos(self);
@@ -347,7 +347,7 @@ instance Gur_1208_BaalCadar_KREIS2(C_INFO)
 	permanent = 1;
 //	description = "I am ready to enter the Second Circle."; 
 //	description = "Ich bin bereit für den zweiten Kreis"; 
-	description = "Jsem připraven vstoupit do Druhého kruhu."; 
+	description = "Jsem připraven vstoupit do druhého kruhu."; 
 };
 
 func int Gur_1208_BaalCadar_KREIS2_Condition()
@@ -363,7 +363,7 @@ func void Gur_1208_BaalCadar_KREIS2_Info()
 {
 //	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS2_Info_15_01"); //I am ready to enter the Second Circle.
 //	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS2_Info_15_01"); //Ich bin bereit für den zweiten Kreis.
-	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS2_Info_15_01"); //Jsem připraven vstoupit do Druhého kruhu.
+	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS2_Info_15_01"); //Jsem připraven vstoupit do druhého kruhu.
 	if (B_GiveSkill(other,NPC_TALENT_MAGE , 2,LPCOST_TALENT_MAGE_2))
 	{
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS2_Info_02_02"); //Then listen and understand:
@@ -374,13 +374,13 @@ func void Gur_1208_BaalCadar_KREIS2_Info()
 		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS2_Info_02_03"); //Spáč dovedl Y´Beriona a jeho věřící žáky na toto místo, kde se usadili.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS2_Info_02_04"); //They worked without respite - for days, weeks, months. The Camp grew. More and more men joined them, following the Sleeper's call.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS2_Info_02_04"); //Sie arbeiteten ohne Unterlass, Tage, Wochen Monate. Und das Lager wuchs heran. Mehr Männer kamen dazu, die dem Ruf des Schläfers gefolgt waren.
-		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS2_Info_02_04"); //Pracovali bez odpočinku - dny, týdny, měsíce. Vyrostl Nový tábor. Přidávali se k němu noví a noví lidé, kteří následovali Spáčovo poselství.
+		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS2_Info_02_04"); //Pracovali bez odpočinku, dny, týdny, měsíce. Vyrostl tento tábor. Přidávali se k němu noví a noví lidé, kteří následovali Spáčovo poselství.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS2_Info_02_05"); //Together they tried to contact the Sleeper on a spiritual level.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS2_Info_02_05"); //Und zusammen versuchten sie, durch Gebet und Meditation den Schläfer auf spiritueller Ebene zu treffen.
 		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS2_Info_02_05"); //Společně se pak pokusili o spojení se Spáčem na duchovní úrovni.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS2_Info_02_06"); //The Second Circle was born.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS2_Info_02_06"); //Das war die Geburtsstunde des zweiten Kreises.
-		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS2_Info_02_06"); //Tak se zrodil Druhý kruh.
+		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS2_Info_02_06"); //Tak se zrodil druhý kruh.
 		Gur_1208_BaalCadar_KREIS2.permanent = 0;
 	};
 	AI_StopProcessInfos(self);
@@ -398,7 +398,7 @@ instance Gur_1208_BaalCadar_KREIS3(C_INFO)
 	permanent = 1;
 //	description = "I am ready to enter the Third Circle."; 
 //	description = "Ich bin bereit für den dritten Kreis"; 
-	description = "Jsem připraven vstoupit do Třetího kruhu."; 
+	description = "Jsem připraven vstoupit do třetího kruhu."; 
 };
 
 func int Gur_1208_BaalCadar_KREIS3_Condition()
@@ -414,7 +414,7 @@ func void Gur_1208_BaalCadar_KREIS3_Info()
 {
 //	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS3_Info_15_01"); //I am ready to enter the Third Circle.
 //	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS3_Info_15_01"); //Ich bin bereit für den dritten Kreis.
-	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS3_Info_15_01"); //Jsem připraven vstoupit do Třetího kruhu.
+	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS3_Info_15_01"); //Jsem připraven vstoupit do třetího kruhu.
 	if (B_GiveSkill(other,NPC_TALENT_MAGE , 3, LPCOST_TALENT_MAGE_3))
 	{
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS3_Info_02_02"); //Mark this:
@@ -431,7 +431,7 @@ func void Gur_1208_BaalCadar_KREIS3_Info()
 		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS3_Info_02_05"); //V tu dobu se novicové vydali do táborů, aby tam zvěstovali Spáčovo učení a přesvědčovali nevěrce o víře.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS3_Info_02_06"); //Thus the Third Circle was accomplished.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS3_Info_02_06"); //Dadurch wurde der dritte Kreis vollendet.
-		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS3_Info_02_06"); //Tak byl dovršen Třetí kruh.
+		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS3_Info_02_06"); //Tak byl dovršen třetí kruh.
 	};
 	AI_StopProcessInfos(self);
 };
@@ -448,7 +448,7 @@ instance Gur_1208_BaalCadar_KREIS4(C_INFO)
 	permanent = 1;
 //	description = "I am ready to enter the Fourth Circle."; 
 //	description = "Ich bin bereit für den vierten Kreis"; 
-	description = "Jsem připraven vstoupit do Pátého kruhu."; 
+	description = "Jsem připraven vstoupit do čtvrtého kruhu."; 
 };
 
 func int Gur_1208_BaalCadar_KREIS4_Condition()
@@ -464,7 +464,7 @@ func void Gur_1208_BaalCadar_KREIS4_Info()
 {
 //	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS4_Info_15_01"); //I am ready to enter the Fourth Circle.
 //	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS4_Info_15_01"); //Ich bin bereit für den vierten Kreis.
-	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS4_Info_15_01"); //Jsem připraven vstoupit do Pátého kruhu.
+	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS4_Info_15_01"); //Jsem připraven vstoupit do čtvrtého kruhu.
 	if (B_GiveSkill(other,NPC_TALENT_MAGE , 4, LPCOST_TALENT_MAGE_4))
 	{
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_02"); //A long time has passed since the Camp was founded. Many things have changed.
@@ -472,16 +472,16 @@ func void Gur_1208_BaalCadar_KREIS4_Info()
 		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_02"); //Uběhla dlouhá doba od založení tábora. Mnoho se toho změnilo.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_03"); //The faith has grown, it has been strengthened and it has spread.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_03"); //Der Glaube ist gewachsen, hat sich gefestigt und wurde weitergetragen.
-		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_03"); //Víra zesílila, byla upevňována a šířena.
+		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_03"); //Víra zesílila, upevnila se a rozšířila se.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_04"); //We have not forgotten our objective. We have not given up on trying to invoke the Sleeper.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_04"); //Und wir haben unser Ziel nie aus den Augen verloren, haben nicht aufgegeben, den Schläfer zu rufen.
 		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_04"); //Nezapomněli jsme však na naše poslání. Nevzdávali jsme se pokusů o vzývání Spáče.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_05"); //Perseverance and stability of faith represent the Fourth Circle.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_05"); //Die Beständigkeit und Festigung des Glaubens, das ist der vierte Kreis.
-		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_05"); //Vytrvalost a síla víry představují Čtvrtý kruh.
+		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_05"); //Vytrvalost a síla víry představují čtvrtý kruh.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_06"); //Now you know everything a brother needs to know about magic. You have been a good student.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_06"); //Du weißt nun alles, was ein Bruder über Magie wissen muss. Du warst ein gelehriger Schüler.
-		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_06"); //Teď víš všechno, co bratr potřebuje o kouzlech vědět. Jsi dobrý žák.
+		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_06"); //Teď víš všechno, co bratr potřebuje o kouzlech vědět. Byl jsi dobrý žák.
 		Gur_1208_BaalCadar_KREIS4.permanent = 0;
 	};
 

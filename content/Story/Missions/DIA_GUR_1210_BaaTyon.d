@@ -108,7 +108,7 @@ func void DIA_BaalTyon_SpecialJoint()
 {
 //	AI_Output(other,self,"DIA_BaalTyon_SpecialJoint_15_00"); //Here, Master! A modest present from your student...
 //	AI_Output(other,self,"DIA_BaalTyon_SpecialJoint_15_00"); //Hier, Meister! Ein bescheidenes Geschenk von deinem Schüler ...
-	AI_Output(other,self,"DIA_BaalTyon_SpecialJoint_15_00"); //Tady, mistře! Skromný dar od tvých žáků...
+	AI_Output(other,self,"DIA_BaalTyon_SpecialJoint_15_00"); //Tady, mistře! Skromný dar od tvého žáka...
 	AI_StopProcessInfos(self);
 
 	B_GiveInvItems(hero,self,SpecialJoint,1);
@@ -121,7 +121,7 @@ func void DIA_BaalTyon_SpecialJoint()
 
 //	AI_Output(self,other,"DIA_BaalTyon_SpecialJoint_11_01"); //Mmmmmmm...
 //	AI_Output(self,other,"DIA_BaalTyon_SpecialJoint_11_01"); //Mmmmmmm ...
-	AI_Output(self,other,"DIA_BaalTyon_SpecialJoint_11_01"); //Mmmmm...
+	AI_Output(self,other,"DIA_BaalTyon_SpecialJoint_11_01"); //Mmmmmmm...
 
 	BaalTyon_Ansprechbar = TRUE;
 	Npc_SetRefuseTalk (self,5);
@@ -160,16 +160,16 @@ func void DIA_BaalTyon_Vision_Info()
 	AI_Output(self,other,"DIA_BaalTyon_Vision_11_01"); //Bylo to neuvěřitelné! Viděl jsem, jak jsme získali nového bratra, ne však takového, jací přicházeli před ním.
 //	AI_Output(self,other,"DIA_BaalTyon_Vision_11_02"); //He was doing something to us... There was a sword in his hand and he was descending a wide flight of stairs. Then the vision ended.
 //	AI_Output(self,other,"DIA_BaalTyon_Vision_11_02"); //Er macht irgendwas mit uns ... Er hat ein Schwert in der Hand und steigt eine breite Treppe herunter. Dann hört die Vision auf.
-	AI_Output(self,other,"DIA_BaalTyon_Vision_11_02"); //Něco pro nás vykonal... V ruce třímal meč, když sestupoval po širokém vznášejícím se schodišti. Pak vize skončila.
+	AI_Output(self,other,"DIA_BaalTyon_Vision_11_02"); //Něco pro nás vykonal... V ruce třímal meč a sestupoval po širokém se schodišti. Pak vize skončila.
 //	AI_Output(self,other,"DIA_BaalTyon_Vision_11_03"); //He looked very much like YOU. Who are you? What do you want?
 //	AI_Output(self,other,"DIA_BaalTyon_Vision_11_03"); //Und er sah DIR verdammt ähnlich.  Wer bist du? Was willst du hier?
 	AI_Output(self,other,"DIA_BaalTyon_Vision_11_03"); //Vypadal podobně jako TY. Kdo jsi? Co tady chceš?
 //	AI_Output(other,self,"DIA_BaalTyon_Vision_15_04"); //I'm just a modest servant of the Sleeper...
 //	AI_Output(other,self,"DIA_BaalTyon_Vision_15_04"); //Ich bin nur ein bescheidener Diener des Schläfers ...
-	AI_Output(other,self,"DIA_BaalTyon_Vision_15_04"); //Jsem skromný služebník Spáče.
+	AI_Output(other,self,"DIA_BaalTyon_Vision_15_04"); //Jsem jen skromným služebníkem Spáče.
 //	AI_Output(self,other,"DIA_BaalTyon_Vision_11_05"); //Go to Cor Kalom. He'll take care of you.
 //	AI_Output(self,other,"DIA_BaalTyon_Vision_11_05"); //Geh zu Cor Kalom. Er soll sich weiter mit dir befassen.
-	AI_Output(self,other,"DIA_BaalTyon_Vision_11_05"); //Jdi za Corem Kalomem. Postará se o tebe.
+	AI_Output(self,other,"DIA_BaalTyon_Vision_11_05"); //Jdi za Cor Kalomem. Postará se o tebe.
 
 	self.npctype = NpcType_Main;
 	self.flags = 0;

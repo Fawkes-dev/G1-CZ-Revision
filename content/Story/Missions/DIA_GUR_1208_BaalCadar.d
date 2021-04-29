@@ -217,9 +217,9 @@ func void Gur_1208_BaalCadar_Teach_Info()
 
 func void Gur_1208_BaalCadar_Teach_BACK()
 {
-
 	Info_ClearChoices(Gur_1208_BaalCadar_Teach);
 };
+
 func void Gur_1208_BaalCadar_Teach_MAN_1()
 {
 	B_BuyAttributePoints(other,ATR_MANA_MAX, LPCOST_ATTRIBUTE_MANA);
@@ -238,6 +238,7 @@ func void Gur_1208_BaalCadar_Teach_MAN_5()
 	Info_AddChoice(Gur_1208_BaalCadar_Teach,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),Gur_1208_BaalCadar_Teach_MAN_1);
 
 };
+
 /*------------------------------------------------------------------------
 							DIE KREISE DER BRUDERSCHAFT 
 ------------------------------------------------------------------------*/
@@ -260,8 +261,8 @@ func int Gur_1208_BaalCadar_FIRSTTEST_Condition()
 	{
 		return TRUE;
 	};
-
 };
+
 func void Gur_1208_BaalCadar_FIRSTTEST_Info()
 {
 //	AI_Output(other,self,"Gur_1208_BaalCadar_FIRSTTEST_Info_15_01"); //Teach me the magic of the runes.
@@ -278,7 +279,6 @@ func void Gur_1208_BaalCadar_FIRSTTEST_Info()
 //	B_LogEntry(GE_TeacherPSI,"Baal Cadar can teach me the magic CIRCLES of rune magic.");
 //	B_LogEntry(GE_TeacherPSI,"Baal Cadar kann mich die magischen KREISE der Runenmagie lehren.");
 	B_LogEntry(GE_TeacherPSI,"Baal Cadar mě může naučit magické KRUHY runové magie.");
-
 };
 
 /*------------------------------------------------------------------------
@@ -312,7 +312,7 @@ func void Gur_1208_BaalCadar_KREIS1_Info()
 //	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS1_Info_15_01"); //I am ready to enter the First Circle.
 //	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS1_Info_15_01"); //Ich bin bereit für den ersten Kreis.
 	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS1_Info_15_01"); //Jsem připraven vstoupit do prvního kruhu.
-	if (B_GiveSkill(other,NPC_TALENT_MAGE , 1, LPCOST_TALENT_MAGE_1))
+	if (B_GiveSkill(other,NPC_TALENT_MAGE, 1, LPCOST_TALENT_MAGE_1))
 	{
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_02"); //Hear my words:
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_02"); //Höre meine Worte:
@@ -328,12 +328,13 @@ func void Gur_1208_BaalCadar_KREIS1_Info()
 		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_05"); //Jen Y´Berion, s hrstkou dalších, se sebral a založil Bratrstvo.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_06"); //The moment they obeyed the Sleeper's call, the First Circle was born. The magic of the runes will be understood by anybody who follows the Sleeper.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_06"); //In dem Augenblick, als sie dem Ruf des Schläfers folgten, entstand der erste Kreis. Die Magie der Runen offenbart sich demjenigen, der dem Schläfer folgt.
-		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_06"); //V okamžiku, kdy vyslyšeli Spáčovo poselství, se zrodil první kruh. MAgie run je k dispozici každému, kdo následuje Spáče.
+		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_06"); //V okamžiku, kdy vyslyšeli Spáčovo poselství, se zrodil první kruh. Magie run je k dispozici každému, kdo následuje Spáče.
 		Gur_1208_BaalCadar_KREIS1.permanent = 0;
 	};
 	AI_StopProcessInfos(self);
 
 };
+
 /*------------------------------------------------------------------------
 							DER ZWEITE KREIS 
 ------------------------------------------------------------------------*/
@@ -385,6 +386,7 @@ func void Gur_1208_BaalCadar_KREIS2_Info()
 	};
 	AI_StopProcessInfos(self);
 };
+
 /*------------------------------------------------------------------------
 							DER DRITTE KREIS 
 ------------------------------------------------------------------------*/
@@ -408,8 +410,8 @@ func int Gur_1208_BaalCadar_KREIS3_Condition()
 	{
 		return TRUE;
 	};
-
 };
+
 func void Gur_1208_BaalCadar_KREIS3_Info()
 {
 //	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS3_Info_15_01"); //I am ready to enter the Third Circle.
@@ -425,7 +427,7 @@ func void Gur_1208_BaalCadar_KREIS3_Info()
 		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS3_Info_02_03"); //Vize se staly jasnější, ale síla Bratrstva nestačila pro navázání spojení.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS3_Info_02_04"); //One of the Gurus, an alchemist, solved the problem. He brewed a potion extracted from the secretion of a minecrawler. The brothers took it before prayers and their spiritual powers were united for the very first time.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS3_Info_02_04"); //Einer der Gurus, ein Alchemist, fand einen Weg. Mit Hilfe eines Elixiers aus dem Sekret der Minecrawler, das die Brüder vor dem Gebet einnahmen, wurde es erstmalig möglich, die geistigen Kräfte zu vereinen.
-		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS3_Info_02_04"); //Jeden z Guru, alchymista, ten problém vyřešil. Připravil lektvar extrahovaný z výměšku z čelisti důlního červa. Bratři pak spojili své modlitby a jejich duchovní síla se poprvé sjednotila.
+		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS3_Info_02_04"); //Jeden z Guru, alchymista, ten problém vyřešil. Připravil lektvar extrahovaný z výměšku z čelistí důlních červů. Bratři pak spojili své modlitby a jejich duchovní síla se poprvé sjednotila.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS3_Info_02_05"); //At the same time, the novices set out for the Camps, to preach the Sleeper's word and to convince the infidels of the truth.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS3_Info_02_05"); //Zur gleichen Zeit machten sich die Novizen auf in die Lager, die Worte des Schläfers zu predigen, um mehr Ungläubige von der Wahrheit zu überzeugen.
 		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS3_Info_02_05"); //V tu dobu se novicové vydali do táborů, aby tam zvěstovali Spáčovo učení a přesvědčovali nevěrce o víře.
@@ -435,6 +437,7 @@ func void Gur_1208_BaalCadar_KREIS3_Info()
 	};
 	AI_StopProcessInfos(self);
 };
+
 /*------------------------------------------------------------------------
 						DER VIERTE KREIS 
 ------------------------------------------------------------------------*/
@@ -458,8 +461,8 @@ func int Gur_1208_BaalCadar_KREIS4_Condition()
 	{
 		return TRUE;
 	};
-
 };
+
 func void Gur_1208_BaalCadar_KREIS4_Info()
 {
 //	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS4_Info_15_01"); //I am ready to enter the Fourth Circle.
@@ -472,7 +475,7 @@ func void Gur_1208_BaalCadar_KREIS4_Info()
 		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_02"); //Uběhla dlouhá doba od založení tábora. Mnoho se toho změnilo.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_03"); //The faith has grown, it has been strengthened and it has spread.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_03"); //Der Glaube ist gewachsen, hat sich gefestigt und wurde weitergetragen.
-		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_03"); //Víra zesílila, upevnila se a rozšířila se.
+		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_03"); //Víra zesílila, upevnila se a rozšířila.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_04"); //We have not forgotten our objective. We have not given up on trying to invoke the Sleeper.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_04"); //Und wir haben unser Ziel nie aus den Augen verloren, haben nicht aufgegeben, den Schläfer zu rufen.
 		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_04"); //Nezapomněli jsme však na naše poslání. Nevzdávali jsme se pokusů o vzývání Spáče.
@@ -486,9 +489,11 @@ func void Gur_1208_BaalCadar_KREIS4_Info()
 	};
 
 };
+
 //---------------------------------------------------------
 //					MAGISCHEN KRAM KAUFEN
 //---------------------------------------------------------
+
 instance Gur_1208_BaalCadar_SELLSTUFF(C_INFO)
 {
 	npc = Gur_1208_BaalCadar;
@@ -508,6 +513,7 @@ func int Gur_1208_BaalCadar_SELLSTUFF_Condition()
 		return TRUE;
 	};
 };
+
 func void Gur_1208_BaalCadar_SELLSTUFF_Info()
 {
 	if (log_baalcadarsell == FALSE)
@@ -521,6 +527,5 @@ func void Gur_1208_BaalCadar_SELLSTUFF_Info()
 //	AI_Output(other,self,"Gur_1208_BaalCadar_SELLSTUFF_Info_15_01"); //I want to acquire magic writings.
 //	AI_Output(other,self,"Gur_1208_BaalCadar_SELLSTUFF_Info_15_01"); //Ich möchte Schriften über Magie erwerben.
 	AI_Output(other,self,"Gur_1208_BaalCadar_SELLSTUFF_Info_15_01"); //Rád bych získal magické spisy.
-
 };  
 

@@ -189,6 +189,10 @@ func void GUR_1204_BaalNamib_ARMOR_Info()
 //	AI_Output(hero,self,"GUR_1204_BaalNamib_ARMOR_Info_15_01");//Ich möchte eine bessere Rüstung haben.
 	AI_Output(hero,self,"GUR_1204_BaalNamib_ARMOR_Info_15_01");//Rád bych měl lepší zbroj.
 
+	/*
+	#Needs_attention - toto nedava zmysel - rucho novica mozes kupit az od 3.tej kapitoly, ale ked v 3.tej kapitole si uz davno templar ...
+	Dal by som to od 1. kapitoly ... ak mas dost rudy
+	*/
 	if (Kapitel < 3)
 	{
 //		AI_Output(self,other,"GUR_1204_BaalNamib_ARMOR_Info_02_02");//The time has not yet come for you to wear the heavy armor of a novice.
@@ -235,6 +239,9 @@ instance Info_BaalNamib_BROTHERHOOD(C_INFO)
 
 func int Info_BaalNamib_BROTHERHOOD_Condition()
 {
+	//#Needs_Attention - tento dialog nieje dostupny - asi kvoli tomu, ze to presunuli na Lestera :thinking:
+	//v ceskych skriptoch od Milhausa je dialog zapnuty - ale teoreticky moze sposobit problemy - lebo meni rutinu Cor Kalomovi (po odchode z tabora ho moze vratit)
+	//nechame vypnuty, alebo zapneme a osetrime? (dialog nic extra neponuka :sad: )
 //	return (kapitel == 2) ;
 };
 
@@ -297,5 +304,5 @@ func void Info_BaalNamib_BROTHERHOOD_OK()
 //	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_OK_02_02"); //May the Sleeper protect you.
 //	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_OK_02_02"); //Möge der Schläfer dich beschützen
 	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_OK_02_02"); //Kéž tě Spáč ochrání!
-	Info_Clearchoices ( Info_BaalNamib_BROTHERHOOD);
+	Info_Clearchoices(Info_BaalNamib_BROTHERHOOD);
 }; 

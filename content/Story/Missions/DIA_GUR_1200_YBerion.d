@@ -49,6 +49,7 @@ func void DIA_YBerion_Wache_Info()
 	AI_Output(self,other,"DIA_YBerion_Wache_12_00"); //Co tady děláš? Kdo tě sem pustil? Stráže!
 	B_IntruderAlert(self,other);
 	AI_StopProcessInfos(self);
+	//#Needs_Attention: tu Y'berion oslovuje hraca stale v smycke, lebo mame permanent = 1 a improtant = 1 - chcelo by mu zmenit rutinu a zautocit na hraca
 };
 
 //############################### Kennen? ###############################
@@ -106,9 +107,9 @@ instance Info_YBerion_BringFocus(C_INFO)
 func int Info_YBerion_BringFocus_Condition()
 {
 	if (Npc_KnowsInfo(hero,DIA_YBerion_Kennen))
-	&& (Npc_GetTrueGuild(hero) != GIL_NONE )
-	&& (YBerion_BringFocus != LOG_RUNNING )
-	&& (YBerion_BringFocus != LOG_SUCCESS )
+	&& (Npc_GetTrueGuild (hero) != GIL_NONE)
+	&& (YBerion_BringFocus != LOG_RUNNING)
+	&& (YBerion_BringFocus != LOG_SUCCESS)
 	{
 		return 1;
 	};
@@ -341,7 +342,7 @@ instance GUR_1200_Yberion_EARN(C_INFO)
 
 func int GUR_1200_Yberion_EARN_Condition()
 { 
-	if ( YBerion_BringFocus == LOG_SUCCESS) && (Npc_GetTrueGuild(hero)!= GIL_NOV ) && ( C_IsChapter(2))
+	if (YBerion_BringFocus == LOG_SUCCESS) && (Npc_GetTrueGuild (hero)!= GIL_NOV) && (C_IsChapter (2))
 	{
 		return 1;
 	};

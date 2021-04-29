@@ -268,7 +268,6 @@ func void GUR_1202_CorAngar_WANNABETPL_Info()
 //		B_LogEntry(GE_TeacherPSI,"Cor Angar unterrichtet STÄRKE, GESCHICK und den ZWEIHÄNDIGEN Kampf. Diesen aber nur, wenn ich im EINHÄNDIGEN Kampf gemeistert bin. Man kann ihn normalerweise auf dem Übungsplatz der Templer auf der zweiten Stegebene finden.");
 		B_LogEntry(GE_TeacherPSI,"Cor Angar cvičí SÍLU, OBRATNOST a boj s OBOURUČNÍMI ZBRANĚMI. Bude mě učit až tehdy, když se stanu mistrem boje s JEDNORUČNÍMI ZBRANĚMI. Obvykle bývá na cvičišti v druhé úrovni můstků.");
 	};
-
 };
 
 //-------------------------------------------------------------------------
@@ -288,8 +287,8 @@ instance GUR_1202_CorAngar_ZWEIHAND1(C_INFO)
 
 func int GUR_1202_CorAngar_ZWEIHAND1_Condition()
 { 
-	if (Npc_GetTalentSkill  (hero,NPC_TALENT_2H) < 1)
-	&& (Npc_GetTalentSkill  (hero,NPC_TALENT_1H) == 2)
+	if (Npc_GetTalentSkill (hero, NPC_TALENT_2H) < 1)
+	&& (Npc_GetTalentSkill (hero, NPC_TALENT_1H) == 2)
 	&& (Npc_GetTrueGuild(hero) == GIL_TPL)
 	{
 		return TRUE;
@@ -302,7 +301,7 @@ func void GUR_1202_CorAngar_ZWEIHAND1_Info()
 //	AI_Output(other,self,"GUR_1202_CorAngar_ZWEIHAND1_Info_15_01"); //Ich möchte den Umgang mit dem Zweihänder lernen.
 	AI_Output(other,self,"GUR_1202_CorAngar_ZWEIHAND1_Info_15_01"); //Chci se naučit zacházet s obouručním mečem.
 
-	if (B_GiveSkill(other,NPC_TALENT_2H , 1, LPCOST_TALENT_2H_1))
+	if (B_GiveSkill(other,NPC_TALENT_2H, 1, LPCOST_TALENT_2H_1))
 	{
 //		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_02"); //Fighting with two-handed weapons requires certain levels of strength and dexterity.
 //		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_02"); //Der Kampf mit zweihändigen Waffen setzt nicht nur ein Mindestmaß an Stärke und Geschick voraus.
@@ -317,6 +316,7 @@ func void GUR_1202_CorAngar_ZWEIHAND1_Info()
 //		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_05"); //Konzentration ist der Schlüssel. Körper und Geist verschmelzen in Konzentration zusammen.
 		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_05"); //Klíčem úspěchu je soustředění. Soustředěná jednota těla a mysli.
 
+		//#Needs_Attention - tato metoda zmeny permanent si myslim nefunguje - TODO: otestovat
 		GUR_1202_CorAngar_ZWEIHAND1.permanent = 0;
 
 		AI_StopProcessInfos(self);
@@ -335,13 +335,13 @@ instance GUR_1202_CorAngar_ZWEIHAND2(C_INFO)
 	permanent = 1;
 //	description = B_BuildLearnString(NAME_Learn2h_2, LPCOST_TALENT_2H_2,0); 
 //	description = B_BuildLearnString(NAME_Learn2h_2, LPCOST_TALENT_2H_2,0); 
-	description = B_BuildLearnString(NAME_Learn2h_2,LPCOST_TALENT_2H_2,0); 
+	description = B_BuildLearnString(NAME_Learn2h_2, LPCOST_TALENT_2H_2, 0); 
 };
 
 func int GUR_1202_CorAngar_ZWEIHAND2_Condition()
 { 
-	if (Npc_GetTalentSkill  (hero,NPC_TALENT_2H) == 1)
-	&& (Npc_GetTrueGuild(hero) == GIL_TPL)
+	if (Npc_GetTalentSkill (hero, NPC_TALENT_2H) == 1)
+	&& (Npc_GetTrueGuild (hero) == GIL_TPL)
 	{
 		return TRUE;
 	};
@@ -353,7 +353,7 @@ func void GUR_1202_CorAngar_ZWEIHAND2_Info()
 //	AI_Output(other,self,"GUR_1202_CorAngar_ZWEIHAND2_Info_15_01"); //Ich möchte mehr über den zweihändigen Kampf lernen.
 	AI_Output(other,self,"GUR_1202_CorAngar_ZWEIHAND2_Info_15_01"); //Chci se naučit víc o boji s obouručními zbraněmi.
 
-	if (B_GiveSkill(other,NPC_TALENT_2H , 2, LPCOST_TALENT_2H_2))
+	if (B_GiveSkill(other, NPC_TALENT_2H, 2, LPCOST_TALENT_2H_2))
 	{
 //		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND2_Info_08_02"); //You're now in command of the dance with the blade. Now I'll show you how to master the fight.
 //		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND2_Info_08_02"); //Den Tanz mit der Klinge beherrscht du nun. Jetzt werde ich dir die Meisterschaft des Kampfes zeigen.
@@ -404,6 +404,7 @@ instance GUR_1202_CorAngar_SENDS(C_INFO)
 	permanent = 0;
 //	description = "What happens now?"; 
 //	description = "Wie geht es jetzt weiter?"; 
+	//#Needs_attention - Neprebasnime, povedal by som skor nieco v tom zmysle: 'A co teď?'
 	description = "Jak to dopadlo?"; 
 };
 
@@ -503,8 +504,8 @@ func int GUR_1202_CorAngar_WHERE_Condition()
 	{
 		return 1;
 	};
-
 };
+
 func void GUR_1202_CorAngar_WHERE_Info()
 {
 //	AI_Output(other,self,"GUR_1202_CorAngar_WHERE_Info_15_01"); //Where is the Orc cemetery?
@@ -536,8 +537,7 @@ instance GUR_1202_CorAngar_AFTER(C_INFO)
 
 func int GUR_1202_CorAngar_AFTER_Condition()
 {
-
-	if   ( BaalLukor_BringParchment == 4 ) 
+	if (BaalLukor_BringParchment == 4) 
 	{
 		return 1;
 	};
@@ -566,7 +566,7 @@ func void GUR_1202_CorAngar_AFTER_Info()
 	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_06"); //Baal Lukor a já jsme přežili, ale Lukor znenadání zešílel.
 //	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_07"); //He screamed that the Sleeper had ordered him to kill me, and he intended to obey this order.
 //	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_07"); //Er schrie, der Schläfer hätte ihm befohlen, mich zu töten, und das wollte er dann auch tun.
-	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_07"); //Vykřikoval, že mu Spáč nařídil, aby mě zabil, a chystal se svůj rozkaz splnit.
+	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_07"); //Vykřikoval, že mu Spáč nařídil, aby mě zabil a chystal se svůj rozkaz splnit.
 //	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_08"); //It would appear he couldn't handle the fact that he hadn't found anything.
 //	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_08"); //Offensichtlich kam er mit der großen Enttäuschung, nichts gefunden zu haben, nicht zurecht.
 	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_08"); //Vypadalo to, že se nemůže smířit s tím, že nic nenašel.
@@ -578,7 +578,7 @@ func void GUR_1202_CorAngar_AFTER_Info()
 	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_10"); //To nemůže být... nemůže být... JEN TAK!
 //	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_11"); //The most important thing is that Baal Lukor did not succeed in his madness.
 //	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_11"); //Die Hauptsache ist, dass Baal Lukor in seinem Wahn keinen Erfolg hatte.
-	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_11"); //Nejdůležitější ale je, že se to Baalu Lukorovi v jeho šílenství nepodařilo.
+	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_11"); //Nejdůležitější ale je, že se to Baal Lukorovi v jeho šílenství nepodařilo.
 //	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_12"); //Y'Berion is our only hope now.
 //	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_12"); //Y'Berion ist nun unsere einzige Hoffnung.
 	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_12"); //Y´Berion je teď naše jediná naděje.
@@ -604,8 +604,7 @@ instance Info_CorAngar_FindHerb(C_INFO)
 
 func int Info_CorAngar_FindHerb_Condition()
 {
-
-	if   (Npc_KnowsInfo(hero,GUR_1202_CorAngar_AFTER))
+	if (Npc_KnowsInfo(hero,GUR_1202_CorAngar_AFTER))
 	{
 		return 1;
 	};
@@ -750,14 +749,14 @@ func void Info_CorAngar_FindHerb_Running_Info()
 	AI_Output(other,self,"Info_CorAngar_FindHerb_Running_15_01");//Ještě jsem nenašel léčivých bylin dost.
 //	AI_Output(self,other,"Info_CorAngar_FindHerb_Running_08_02");//Maybe Fortuno, the herbs trader, has some in stock.
 //	AI_Output(self,other,"Info_CorAngar_FindHerb_Running_08_02");//Vielleicht hat auch Fortuno, der Kräuterhändler, zurzeit einige davon in seinen Regalen.
-	AI_Output(self,other,"Info_CorAngar_FindHerb_Running_08_02");//Možná má nějaké na skladě Fortuno, obchodník bylinami.
+	AI_Output(self,other,"Info_CorAngar_FindHerb_Running_08_02");//Možná má nějaké na skladě Fortuno, obchodník s bylinkami.
 //	AI_Output(self,other,"Info_CorAngar_FindHerb_Running_08_03");//Hurry. I need five of them. Y'Berion doesn't have much time left.
 //	AI_Output(self,other,"Info_CorAngar_FindHerb_Running_08_03");//Beeil dich. Ich brauche fünf Stück. Y'Berion bleibt nicht mehr viel Zeit.
 	AI_Output(self,other,"Info_CorAngar_FindHerb_Running_08_03");//Pospěš si. Potřebuji jich pět. Y´Berion ztratil příliš času.
 	AI_StopProcessInfos(self);
 
 	//-------- Fortuno die Kräuter "unterschieben" --------
-	if !Fortuno_HasYBerionHerbs
+	if (!Fortuno_HasYBerionHerbs)
 	{
 		var C_NPC fortuno;
 		fortuno = Hlp_GetNpc(Nov_1357_Fortuno);
@@ -784,7 +783,7 @@ instance Info_CorAngar_FindHerb_Success(C_INFO)
 
 func int Info_CorAngar_FindHerb_Success_Condition()
 {
-	if (Npc_HasItems(other,ItFo_Plants_Herb_03 ) >= 5 ) && ( CorAngar_FindHerb == LOG_RUNNING )
+	if (Npc_HasItems(other,ItFo_Plants_Herb_03) >= 5) && (CorAngar_FindHerb == LOG_RUNNING)
 	{
 		return TRUE;
 	}; 
@@ -849,7 +848,7 @@ func void Info_CorAngar_FindHerb_Success_Info()
 	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_04"); //Pak bychom měli mágům Vody s jejich plánem pomoci.
 //	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_05"); //They'll need the focus and the almanac. Both things are still in Cor Kalom's possession.
 //	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_05"); //Sie werden den Fokus und den Almanach benötigen. Beides befindet sich noch in Cor Kaloms Besitz.
-	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_05"); //Budou potřebovat ohnisko a almanach. Obě věci jsou stále majetkem Cora Kaloma.
+	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_05"); //Budou potřebovat ohnisko a almanach. Obě věci jsou stále majetkem Cor Kaloma.
 //	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_06"); //Where is Cor Kalom?
 //	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_06"); //Wo ist Cor Kalom?
 	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_06"); //Kde je Cor Kalom?

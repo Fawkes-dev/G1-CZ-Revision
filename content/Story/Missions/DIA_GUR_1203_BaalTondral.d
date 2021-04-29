@@ -81,7 +81,7 @@ func void DIA_BaalTondral_FanaticTeacher_Info()
 	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_01"); //Vypadáš spíše jako někdo, kdo hledá pravou víru. Necítíš ve svém těle oheň, který ti v noci nedá spát?
 //	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_02"); //I see, you doubt that what the Ore Barons' slaves try to tell you is really true and just. You know why you doubt them, too. They're lying!
 //	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_02"); //Ich sehe, dass du an dem zweifelst, was dir die Knechte der Erzbarone als wahr und gerecht verkaufen wollen. Du weißt auch warum. Weil es Lügen sind!
-	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_02"); //Vidím, že pochybuješ, zda co se ti poskoci Rudobaronů pokoušejí říci, je pravdivé a odůvodněné. Také víš, proč o tom pochybuješ. Protože lžou!
+	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_02"); //Vidím, že pochybuješ, zda to, co se ti poskoci Rudobaronů pokoušejí říci, je pravdivé a odůvodněné. Také víš, proč o tom pochybuješ. Protože lžou!
 //	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_03"); //With those lies they try to control weak spirits. But your spirit is stronger than their lies!
 //	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_03"); //Es sind Lügen, mit denen sie den Geist derer beherrschen, die schwach sind. Dein Glaube ist stärker als ihre Lügen!
 	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_03"); //Jsou to lži, kterými ovládají slabé duše. Tvoje duše je ale silnější než jejich lži!
@@ -254,6 +254,7 @@ func void DIA_BaalTondral_NewMember2_Info()
 	AI_Output(other,self,"DIA_BaalTondral_NewMember2_15_00"); //Proč tak moc potřebuješ nové členy?
 //	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_01"); //The Sleeper has spoken to our master, revealing that he has an important message for us.
 //	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_01"); //Der Schläfer hat unserem Meister offenbart, dass er eine wichtige Nachricht für uns hat.
+	//#Needs_Attention - neprebasnime, pride mi to take kostrbate
 	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_01"); //Spáč našemu mistrovi prozradil, že má pro nás důležitou zprávu.
 //	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_02"); //However, he has not gathered full strength yet. That's why he needs OUR strength to contact us.
 //	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_02"); //Aber er ist noch nicht zu seiner vollen Stärke erwacht, und so braucht er UNSERE Kraft, um mit uns in Kontakt treten zu können.
@@ -263,6 +264,7 @@ func void DIA_BaalTondral_NewMember2_Info()
 	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_03"); //Proto připravujeme velké vzývání, čím více mužů budeme mít, tím větší šanci na úspěch máme.
 //	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_04"); //If you want to know more about it, go to the large court in front of the temple hill. But don't disturb our master in his meditations!
 //	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_04"); //Wenn du mehr darüber erfahren willst, geh zum großen Platz vor dem Tempelberg. Aber störe nicht den Meister bei der Meditation!
+	//#Needs_Attention - neprebasnime, pride mi to take kostrbate 'velký dvůr před chrámovou horou'
 	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_04"); //Jestli se o tom chceš dozvědět víc, jdi na velký dvůr před chrámovou horou. Neruš ale našeho mistra při meditacích!
 };
 
@@ -312,7 +314,8 @@ func void DIA_BaalTondral_DustySuccess_Info()
 	AI_TurnToNpc(dusty,other);
 //	AI_Output(self,NULL,"DIA_BaalTondral_DustySuccess_13_04"); //You will come to my hut every day to listen to my words. Your soul can still be saved.
 //	AI_Output(self,NULL,"DIA_BaalTondral_DustySuccess_13_04"); //Von heute an wirst du dich täglich vor meiner Hütte einfinden und meinen Worten lauschen. Deine Seele ist noch zu retten.
-	AI_Output(self,NULL,"DIA_BaalTondral_DustySuccess_13_04"); //ODe dneška za mnou budeš chodit každý den do mé chýše a naslouchat mým slovům. Tvá duše může být stále zachráněna.
+	//#Needs_attention 'každý den do mé chýše' ou prasacinky :) 
+	AI_Output(self,NULL,"DIA_BaalTondral_DustySuccess_13_04"); //Ode dneška za mnou budeš chodit každý den do mé chýše a naslouchat mým slovům. Tvá duše může být stále zachráněna.
 
 	//AI_Output(dusty,other,"DIA_BaalTondral_DustySuccess_03_05"); //Heißt das, ich bin dabei - einfach so?
 	//AI_TurnToNpc(other,dusty);

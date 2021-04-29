@@ -177,7 +177,8 @@ func void DIA_BaalTyon_Vision_Info()
 	BaalTyon_Ansprechbar = FALSE;
 //	B_LogEntry(CH1_JoinPsi,"Thanks to my special gift, Baal Tyon had a vision! He wants Cor Kalom to deal with me now!");
 //	B_LogEntry(CH1_JoinPsi,"Baal Tyon hatte dank meines speziellen Geschenkes eine Vision! Er möchte, dass sich nun Cor Kalom mit mir befasst!");
-	B_LogEntry(CH1_JoinPsi,"Díky mému zvláštnímu daru měl Baal Tyon vizi! Chce, abych teď vyjednával s Corem Kalomem.");
+	//#Needs_Attention 'abych teď vyjednával s Cor Kalomem' toto asi skusit prebasnit
+	B_LogEntry(CH1_JoinPsi,"Díky mému zvláštnímu daru měl Baal Tyon vizi! Chce, abych teď vyjednával s Cor Kalomem.");
 	B_GiveXP(XP_ImpressedBaalTyon);
 
 	AI_StopProcessInfos(self);

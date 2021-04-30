@@ -9,7 +9,7 @@ instance DIA_BaalTondral_MuteExit(C_INFO)
 	condition = DIA_BaalTondral_MuteExit_Condition;
 	information = DIA_BaalTondral_MuteExit_Info;
 	permanent = 0;
-	description = "Say nothing";
+	description = "(Nic neříkat)";
 };                       
 
 func int DIA_BaalTondral_MuteExit_Condition()
@@ -78,22 +78,22 @@ func void DIA_BaalTondral_FanaticTeacher_Info()
 	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_00"); //Nevypadáš na někoho, kdo se podrobil otroctví Rudobaronů.
 //	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_01"); //You look more like a seeker - someone who's searching for the true faith. D'you not feel a fire inside your body which keeps you from sleeping at night?
 //	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_01"); //Du siehst aus wie ein Suchender. Du siehst aus wie einer, der den wahren Glauben sucht. Spürst du nicht das Feuer in dir, das dir nachts den Schlaf raubt?
-	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_01"); //Vypadáš spíše jako hledač - někdo, kdo hledá pravou víru. Necítíš ve svém těle oheň, který tě v noci udržuje v bdělosti?
+	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_01"); //Vypadáš spíše jako někdo, kdo hledá pravou víru. Necítíš ve svém těle oheň, který ti v noci nedá spát?
 //	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_02"); //I see, you doubt that what the Ore Barons' slaves try to tell you is really true and just. You know why you doubt them, too. They're lying!
 //	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_02"); //Ich sehe, dass du an dem zweifelst, was dir die Knechte der Erzbarone als wahr und gerecht verkaufen wollen. Du weißt auch warum. Weil es Lügen sind!
-	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_02"); //Aha, pochybuješ o tom, že to, co se ti Rudobaronovi otroci pokoušejí říci, je pravdivé a odůvodněné. Ty také víš, proč o tom pochybuješ. Protože lžou!
+	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_02"); //Vidím, že pochybuješ, zda to, co se ti poskoci Rudobaronů pokoušejí říci, je pravdivé a odůvodněné. Také víš, proč o tom pochybuješ. Protože lžou!
 //	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_03"); //With those lies they try to control weak spirits. But your spirit is stronger than their lies!
 //	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_03"); //Es sind Lügen, mit denen sie den Geist derer beherrschen, die schwach sind. Dein Glaube ist stärker als ihre Lügen!
-	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_03"); //S takovými lžemi se pokoušejí ovládat slabé duše. Tvoje duše je ale silnější než jejich lži!
+	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_03"); //Jsou to lži, kterými ovládají slabé duše. Tvoje duše je ale silnější než jejich lži!
 //	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_04"); //Don't you feel a longing for freedom every single day? Don't you feel it growing stronger? It guides your spirit. Let it happen!
 //	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_04"); //Fühlst du nicht jeden Tag den Wunsch nach Freiheit? Fühlst du wie er jeden Tag wächst? Er lenkt deinen Geist. Lass es geschehen!
-	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_04"); //Nepociťuješ každodenně touhu po svobodě? Necítíš ji stále silněji? Provází tvou duši. Nech ji působit!
+	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_04"); //Nepociťuješ každodenně touhu po svobodě? Cítíš, jak každým dnem roste? Vede tvou duši. Nech ji působit!
 //	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_05"); //Do you know what you're doing when you try to suppress it? You're denying your soul, denying yourself! Don't let your fears dominate your life.
 //	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_05"); //Weißt du, was du tust, wenn du ihn beherrscht? Du verleugnest deine Seele. Du verleugnest dich selbst! Hör auf, im Schatten deiner Ängste zu leben.
-	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_05"); //Víš, co se děje, když se to snažíš zapudit? Popíráš svojí duši, popíráš sebe sama! Nenech strach, aby panoval tvému životu!
+	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_05"); //Víš, co děláš, když se ji snažíš zapudit? Popíráš svojí duši, popíráš sebe sama! Nedopusť, abys žil ve strachu!
 //	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_06"); //Free yourself. You need to understand! The Sleeper WILL awaken. He will set you free and wash away all these disbelieving infidels.
 //	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_06"); //Mach dich frei. Verstehe! Der Schläfer WIRD erwachen, er wird dir die Freiheit bringen, und das ganze ungläubige Pack wegschwemmen.
-	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_06"); //Osvoboď se. Pochop! Spáč PROCITNE. Osvobodí tě a všechny ty pochybovačné nevěrce zatratí.
+	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_06"); //Osvoboď se. Pochop! Spáč PROCITNE, přinese ti svobodu a všechny bezvěrce smete.
 //	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_07"); //Like dross that is washed away by the rain, they will vanish from this world. They will moan, whine and repent, but it will be too late.
 //	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_07"); //Wie Unrat, der vom Regen weggespült wird, werden sie vom Antlitz dieser Welt verschwinden und sie werden klagen und jammern und bereuen, aber dann ist es zu spät.
 	AI_Output(self,other,"DIA_BaalTondral_FanaticTeacher_13_07"); //Jako smetí, které spláchne déšť, zmizí z tohoto světa. Budou bědovat, naříkat a kát se, ale bude už příliš pozdě.
@@ -115,7 +115,7 @@ instance DIA_BaalTondral_YouTalked(C_INFO)
 	permanent = 0;
 //	description = "Hey! You've spoken to me. Does that mean I may talk to you now?";
 //	description = "Hey! Du hast mich angesprochen. Heißt das, ich kann jetzt mit dir reden?";
-	description = "Hej! Teď si mluvil ke mně. Znamená to, že já teď smím mluvit k tobě?";
+	description = "Hej! Teď jsi mě oslovil. Znamená to, že teď s tebou smím mluvit?";
 };                       
 
 func int DIA_BaalTondral_YouTalked_Condition()
@@ -127,7 +127,7 @@ func void DIA_BaalTondral_YouTalked_Info()
 {
 //	AI_Output(other,self,"DIA_BaalTondral_YouTalked_15_00"); //Hey! You've spoken to me. Does that mean I may talk to you now?
 //	AI_Output(other,self,"DIA_BaalTondral_YouTalked_15_00"); //Hey! Du hast mich angesprochen. Heißt das, ich kann jetzt mit dir reden?
-	AI_Output(other,self,"DIA_BaalTondral_YouTalked_15_00"); //Hej! Teď si mluvil ke mně. Znamená to, že já teď mám mluvit k tobě?
+	AI_Output(other,self,"DIA_BaalTondral_YouTalked_15_00"); //Hej! Teď jsi mě oslovil. Znamená to, že teď s tebou smím mluvit?
 //	AI_Output(self,other,"DIA_BaalTondral_YouTalked_13_01"); //I see you've become familiar with our rules. That's good.
 //	AI_Output(self,other,"DIA_BaalTondral_YouTalked_13_01"); //Ich sehe, du hast dich mit unseren Regeln vertraut gemacht. Das ist gut.
 	AI_Output(self,other,"DIA_BaalTondral_YouTalked_13_01"); //Vidím, že ses již sžil s naším řádem. To je dobře.
@@ -136,7 +136,7 @@ func void DIA_BaalTondral_YouTalked_Info()
 	AI_Output(self,other,"DIA_BaalTondral_YouTalked_13_02"); //Cítím tvou velkou duchovní sílu! Brzy se budeš moci připojit k naší komunitě.
 //	AI_Output(self,other,"DIA_BaalTondral_YouTalked_13_03"); //I have spoken to you because I wanted to give you a chance to prove your loyalty.
 //	AI_Output(self,other,"DIA_BaalTondral_YouTalked_13_03"); //Ich habe dich angesprochen weil ich dir Gelegenheit geben will, uns deine Loyalität zu beweisen.
-	AI_Output(self,other,"DIA_BaalTondral_YouTalked_13_03"); //Mluvil jsem k tobě, protože jsem ti chtěl dát příležitost, abys dokázal svou oddanost.
+	AI_Output(self,other,"DIA_BaalTondral_YouTalked_13_03"); //Oslovil jsem tě, protože ti chci dát příležitost, abys dokázal svou oddanost.
 };
 
 // **************************************************
@@ -181,7 +181,7 @@ func void DIA_BaalTondral_Loyality_Info()
 	Log_SetTopicStatus(CH1_RecruitDusty,LOG_RUNNING);
 //	B_LogEntry(CH1_RecruitDusty,"Baal Tondral has sent me into the Old Camp to recruit a new man for the Brotherhood. I suppose that's a good chance to win his favor!");
 //	B_LogEntry(CH1_RecruitDusty,"Baal Tondral schickt mich ins Alte Lager um einen neuen Mann für die Bruderschaft anzuwerben. Ich schätze das ist eine gute Gelegenheit, seine Gunst zu gewinnen!");
-	B_LogEntry(CH1_RecruitDusty,"Baal Tondral mě vyslal do Starého tábora, abych naverboval pro Bratrstvo nové lidi. Doufám, že to bude dobrá příležitost, jak se mu dostat do přízně!");
+	B_LogEntry(CH1_RecruitDusty,"Baal Tondral mě vyslal do Starého tábora, abych naverboval pro Bratrstvo nové lidi. Doufám, že to bude dobrá příležitost, jak si získat jeho přízeň!");
 
 	BaalTondral_GetNewGuy = LOG_RUNNING;
 };
@@ -214,10 +214,10 @@ func void DIA_BaalTondral_NewMember_Info()
 {
 //	AI_Output(other,self,"DIA_BaalTondral_NewMember_15_00"); //Where can I recruit new members for the Brotherhood?
 //	AI_Output(other,self,"DIA_BaalTondral_NewMember_15_00"); //Wo kann ich neue Leute für die Bruderschaft anwerben?
-	AI_Output(other,self,"DIA_BaalTondral_NewMember_15_00"); //Kde mám hledat nové členy do Bratrstva?
+	AI_Output(other,self,"DIA_BaalTondral_NewMember_15_00"); //Kde mám hledat nové členy do Bratrstva? 
 //	AI_Output(self,other,"DIA_BaalTondral_NewMember_13_01"); //The Old Camp is a good place to try, since a lot of the people there are fed up with fear and lies. They just need some kind of support.
 //	AI_Output(self,other,"DIA_BaalTondral_NewMember_13_01"); //Das alte Lager ist ein guter Ort dafür. Denn viele, die dort leben, sind der Angst und der Lügen überdrüssig, sie müssen nur ein wenig unterstützt werden.
-	AI_Output(self,other,"DIA_BaalTondral_NewMember_13_01"); //Takovým dobrým místem je Starý tábor, protože lidé tam jsou již přesyceni strachem a lžemi. Potřebují nějakým způsobem pomoci.
+	AI_Output(self,other,"DIA_BaalTondral_NewMember_13_01"); //Starý tábor je dobrým místem. Lidé tam jsou již přesyceni strachem a lžemi. Potřebují nějakým způsobem pomoci.
 //	AI_Output(self,other,"DIA_BaalTondral_NewMember_13_02"); //I guess you won't be very successful in the New Camp. The men living there are barbarians.
 //	AI_Output(self,other,"DIA_BaalTondral_NewMember_13_02"); //Im Neuen Lager wirst du wahrscheinlich weniger Glück haben. Die Männer, die dort leben sind Barbaren.
 	AI_Output(self,other,"DIA_BaalTondral_NewMember_13_02"); //V Novém táboře bys nejspíš úspěšný nebyl. Muži, kteří tam žijí, jsou barbaři.
@@ -254,16 +254,18 @@ func void DIA_BaalTondral_NewMember2_Info()
 	AI_Output(other,self,"DIA_BaalTondral_NewMember2_15_00"); //Proč tak moc potřebuješ nové členy?
 //	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_01"); //The Sleeper has spoken to our master, revealing that he has an important message for us.
 //	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_01"); //Der Schläfer hat unserem Meister offenbart, dass er eine wichtige Nachricht für uns hat.
-	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_01"); //Spáč promluvil k našemu mistrovi a sdělil mu, že má pro nás důležitou zprávu.
+	//#Needs_Attention - neprebasnime, pride mi to take kostrbate
+	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_01"); //Spáč našemu mistrovi prozradil, že má pro nás důležitou zprávu.
 //	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_02"); //However, he has not gathered full strength yet. That's why he needs OUR strength to contact us.
 //	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_02"); //Aber er ist noch nicht zu seiner vollen Stärke erwacht, und so braucht er UNSERE Kraft, um mit uns in Kontakt treten zu können.
-	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_02"); //Nepodařilo se mu však nashromáždit dostatečnou sílu. Proto potřebujeme VLASTNÍ sílu, abysme se s ním dokázali spojit.
+	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_02"); //Ale ještě neprocitl do své plné síly a potřebuje NAŠÍ sílu, abychom se s ním dokázali spojit.
 //	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_03"); //Therefore we are preparing a great invocation, and the more men participate, the likelier we are to be successful.
 //	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_03"); //Deswegen bereiten wir eine große Anrufung vor und je mehr Männer daran teilnehmen, umso eher werden wir Erfolg haben.
-	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_03"); //Protože připravujeme velké vzývání, pravděpodobnost úspěchu se zvýší s počtem zúčastněných mužů.
+	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_03"); //Proto připravujeme velké vzývání, čím více mužů budeme mít, tím větší šanci na úspěch máme.
 //	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_04"); //If you want to know more about it, go to the large court in front of the temple hill. But don't disturb our master in his meditations!
 //	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_04"); //Wenn du mehr darüber erfahren willst, geh zum großen Platz vor dem Tempelberg. Aber störe nicht den Meister bei der Meditation!
-	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_04"); //Jestli se chceš o tom dozvědět víc, jdi do velkého dvora naproti chrámovému vrchu. Neruš ale našeho mistra při meditacích!
+	//#Needs_Attention - neprebasnime, pride mi to take kostrbate 'velký dvůr před chrámovou horou'
+	AI_Output(self,other,"DIA_BaalTondral_NewMember2_13_04"); //Jestli se o tom chceš dozvědět víc, jdi na velký dvůr před chrámovou horou. Neruš ale našeho mistra při meditacích!
 };
 
 // **************************************************
@@ -279,7 +281,7 @@ instance DIA_BaalTondral_DustySuccess(C_INFO)
 	permanent = 0;
 //	description = "Here's somebody who would like to make your acquaintance, Master!";
 //	description = "Ich habe hier jemanden, der dich kennen lernen möchte, Meister!";
-	description = "Je tady někdo, mistře, kdo by se chtěl s vámi seznámit.";
+	description = "Je tady někdo, mistře, kdo by se s vámi chtěl seznámit.";
 };                       
 
 func int DIA_BaalTondral_DustySuccess_Condition()
@@ -297,10 +299,10 @@ func void DIA_BaalTondral_DustySuccess_Info()
 
 //	AI_Output(other,self,"DIA_BaalTondral_DustySuccess_15_00"); //Here's somebody who would like to make your acquaintance, Master!
 //	AI_Output(other,self,"DIA_BaalTondral_DustySuccess_15_00"); //Ich habe hier jemanden, der dich kennen lernen möchte, Meister!
-	AI_Output(other,self,"DIA_BaalTondral_DustySuccess_15_00"); //Je tady někdo, mistře, kdo by se chtěl s vámi seznámit.
+	AI_Output(other,self,"DIA_BaalTondral_DustySuccess_15_00"); //Je tady někdo, mistře, kdo by se s vámi chtěl seznámit.
 //	AI_Output(self,other,"DIA_BaalTondral_DustySuccess_13_01"); //Who have you brought me? Is he worthy?
 //	AI_Output(self,other,"DIA_BaalTondral_DustySuccess_13_01"); //Wen bringst du zu mir? Ist er würdig?
-	AI_Output(self,other,"DIA_BaalTondral_DustySuccess_13_01"); //Koho jsi přivedl? Je toho hoden?
+	AI_Output(self,other,"DIA_BaalTondral_DustySuccess_13_01"); //Koho jsi přivedl? Je hoden?
 //	AI_Output(other,self,"DIA_BaalTondral_DustySuccess_15_02"); //He will certainly require your spiritual guidance, Master.
 //	AI_Output(other,self,"DIA_BaalTondral_DustySuccess_15_02"); //Er bedarf sicherlich noch eurer geistigen Führung, Meister.
 	AI_Output(other,self,"DIA_BaalTondral_DustySuccess_15_02"); //Určitě bude potřebovat vaše duchovní vedení, mistře.
@@ -312,7 +314,8 @@ func void DIA_BaalTondral_DustySuccess_Info()
 	AI_TurnToNpc(dusty,other);
 //	AI_Output(self,NULL,"DIA_BaalTondral_DustySuccess_13_04"); //You will come to my hut every day to listen to my words. Your soul can still be saved.
 //	AI_Output(self,NULL,"DIA_BaalTondral_DustySuccess_13_04"); //Von heute an wirst du dich täglich vor meiner Hütte einfinden und meinen Worten lauschen. Deine Seele ist noch zu retten.
-	AI_Output(self,NULL,"DIA_BaalTondral_DustySuccess_13_04"); //Budeš za mnou chodit každý den do mé chýše a naslouchat mým slovům. Tvá duše pak bude zachráněna.
+	//#Needs_attention 'každý den do mé chýše' ou prasacinky :) 
+	AI_Output(self,NULL,"DIA_BaalTondral_DustySuccess_13_04"); //Ode dneška za mnou budeš chodit každý den do mé chýše a naslouchat mým slovům. Tvá duše může být stále zachráněna.
 
 	//AI_Output(dusty,other,"DIA_BaalTondral_DustySuccess_03_05"); //Heißt das, ich bin dabei - einfach so?
 	//AI_TurnToNpc(other,dusty);
@@ -328,7 +331,7 @@ func void DIA_BaalTondral_DustySuccess_Info()
 	BaalTondral_GetNewGuy = LOG_SUCCESS;
 //	B_LogEntry(CH1_RecruitDusty,"Dusty is now Baal Tondral's disciple. I've accomplished my task.");
 //	B_LogEntry(CH1_RecruitDusty,"Dusty ist jetzt ein Schüler von Baal Tondral. Damit ist meine Aufgabe erledigt.");
-	B_LogEntry(CH1_RecruitDusty,"Dusty je teď učněm Baala Tondrala. Splnil jsem svůj úkol.");
+	B_LogEntry(CH1_RecruitDusty,"Dusty je teď učněm Baal Tondrala. Splnil jsem svůj úkol.");
 	Log_SetTopicStatus(CH1_RecruitDusty,LOG_SUCCESS);
 	B_GiveXP(XP_DeliveredDusty);
 };
@@ -346,7 +349,7 @@ instance DIA_BaalTondral_SendToKalom(C_INFO)
 	permanent = 0;
 //	description = "Master! I would like to join the Brotherhood.";
 //	description = "Meister! Ich will in die Bruderschaft aufgenommen werden.";
-	description = "Mistře! Chtěl bych se přidat k Bratrstvu! Potřebuji tvou přímluvu.";
+	description = "Mistře! Chtěl bych se přidat k Bratrstvu!";
 };                       
 
 func int DIA_BaalTondral_SendToKalom_Condition()
@@ -361,11 +364,11 @@ func void DIA_BaalTondral_SendToKalom_Info()
 {
 //	AI_Output(other,self,"DIA_BaalTondral_SendToKalom_15_00"); //Master! I would like to join the Brotherhood. I need you to speak in my favor.
 //	AI_Output(other,self,"DIA_BaalTondral_SendToKalom_15_00"); //Meister! Ich will in die Bruderschaft aufgenommen werden. Ich brauche eure Stimme.
-	AI_Output(other,self,"DIA_BaalTondral_SendToKalom_15_00"); //Mistře! Chtěl bych se přidat k Bratrstvu! Potřebuji tvou přímluvu.
+	AI_Output(other,self,"DIA_BaalTondral_SendToKalom_15_00"); //Mistře! Chtěl bych se přidat k Bratrstvu! Potřebuji tvůj hlas.
 	AI_TurnToNpc(self,other);
 //	AI_Output(self,other,"DIA_BaalTondral_SendToKalom_13_01"); //You have proven your worth. Go to Cor Kalom and don the robe.
 //	AI_Output(self,other,"DIA_BaalTondral_SendToKalom_13_01"); //Du hast dich als würdig erwiesen. Cor Kalom soll dir die Robe geben.
-	AI_Output(self,other,"DIA_BaalTondral_SendToKalom_13_01"); //Prokázal jsi svou způsobilost. Jdi za Corem Kalomem a oblékni roucho.
+	AI_Output(self,other,"DIA_BaalTondral_SendToKalom_13_01"); //Dokázal jsi, že jsi hoden. Cor Kalom ti předá roucho.
 
 //	B_LogEntry(CH1_JoinPsi,"Baal Tondral considers me worthy of wearing a novice's robe!");
 //	B_LogEntry(CH1_JoinPsi,"Baal Tondral hält mich für würdig, die Robe eines Novizen zu tragen!");

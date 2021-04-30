@@ -281,6 +281,10 @@ func void Info_BaalLukor_FIRSTWAIT_Info()
 //	AI_Output(self,other,"Info_BaalLukor_FIRSTWAIT_13_01"); //Hier geht es nicht weiter! Vielleicht bergen die Nischen hier Hinweise.
 	AI_Output(self,other,"Info_BaalLukor_FIRSTWAIT_13_01"); //Tudy nemůžeme pokračovat! Možná nám pomohou tyto výklenky.
 
+	/*
+	#Needs_Attention - toto sposobuje bug - kde Lukor prestane nasledovat hraca
+	 - ak hrac najprv ziska oba svitky a da ich Lukorovi, tak dole rutina sposobi, ze sa Lukor zasekne
+	*/
 	AI_StopProcessInfos(self);
 	Npc_ExchangeRoutine(self,"WaitInSideTunnelOne");
 };
@@ -367,6 +371,11 @@ func void Info_BaalLukor_SECONDWAIT_Info()
 //	AI_Output(self,other,"Info_BaalLukor_SECONDWAIT_13_01"); //Hmmm ... Dieser Stollen ist eine Sackgasse! Vielleicht findest du hier irgendwelche Hinweise, die uns weiterhelfen.
 	AI_Output(self,other,"Info_BaalLukor_SECONDWAIT_13_01"); //Hmmm... tenhle tunel je slepý! Ale možná tu najdeme nějaké znamení, které nám pomůže dál.
 
+	/*
+	#Needs_Attention - toto sposobuje bug - kde Lukor prestane nasledovat hraca
+	 - v dialogu Info_BaalLukor_SECONDSCROLL moze hrac dat Lukorovi OrkParchmentTwo (a teda plati podmienka dole, ze hrac item nema)
+	 - ak sa potom priblizi k waypointu GRYD_047 tak sa zmeni rutina na WaitInSideTunnelTwo a uz sa nepohne
+	*/
 	if (!Npc_HasItems(hero,OrkParchmentTwo)) 
 	{ 
 		AI_StopProcessInfos(self);
@@ -501,7 +510,7 @@ func void Info_BaalLukor_RUNES_Info()
 	AI_Output(other,self,"Info_BaalLukor_RUNES_15_02"); //Tak, na tomto místě nic zajímavého nevidím.
 //	AI_Output(self,other,"Info_BaalLukor_RUNES_13_03"); //Be silent and take a look at the ornamental runes in this cave.
 //	AI_Output(self,other,"Info_BaalLukor_RUNES_13_03"); //Schweig und betrachte die Runenornamente in dieser Höhle hier.
-	AI_Output(self,other,"Info_BaalLukor_RUNES_13_03"); //Buď ticho a dívej se na ty ozdobné runy v jeskyni.
+	AI_Output(self,other,"Info_BaalLukor_RUNES_13_03"); //Buď tiše a dívej se na ty ozdobné runy v jeskyni.
 //	AI_Output(self,other,"Info_BaalLukor_RUNES_13_04"); //Yeah, these should suffice to translate the two halves of the parchment.
 //	AI_Output(self,other,"Info_BaalLukor_RUNES_13_04"); //Das sollte ausreichend Material geben, um die geteilten Pergamenthälften zu übersetzen.
 	AI_Output(self,other,"Info_BaalLukor_RUNES_13_04"); //To by mělo postačit k překladu těch dvou půlek pergamenu.
@@ -523,7 +532,6 @@ func void Info_BaalLukor_RUNES_Info()
 	B_LogEntry(CH3_OrcGraveyard,"S pomocí nástěnných nápisů v jednom ze sálů se Baal Lukorovi podařilo rozluštit ten svitek. Vypadá jako teleportační kouzlo pro malé vzdálenosti."); 
 
 	Npc_ExchangeRoutine(self,"Follow"); //Björn: Patch2
-
 };
 
 //**************************************************************************
@@ -561,7 +569,6 @@ func void Info_BaalLukor_WHATNOW_Info()
 	AI_Output(self,other,"Info_BaalLukor_WHATNOW_13_02"); //Velký sál, kterým jsme před chvíli prošli, se zdál jako velmi... zvláštní... místo. Pojďme se tam vrátit!
 
 	Npc_ExchangeRoutine(self,"Follow"); //Björn: Patch2
-
 };
 
 //**************************************************************************
@@ -665,7 +672,7 @@ instance Info_BaalLukor_DOOR(C_INFO)
 func int Info_BaalLukor_DOOR_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_BaalLukor_HALLWITH)
-	&& Npc_GetDistToWP(hero,"GRYD_060")<500 )
+	&& Npc_GetDistToWP(hero,"GRYD_060")<500)
 	{
 		return TRUE;
 	};
@@ -682,9 +689,10 @@ func void Info_BaalLukor_DOOR_Info()
 	AI_Output(self,other,"Info_BaalLukor_DOOR_13_01"); //Za tou stěnou... to musí být ono!
 //	AI_Output(self,other,"Info_BaalLukor_DOOR_13_02"); //My magic powers are still very weak.
 //	AI_Output(self,other,"Info_BaalLukor_DOOR_13_02"); //Meine magische Kraft ist noch immer geschwächt.
-	AI_Output(self,other,"Info_BaalLukor_DOOR_13_02"); //Má kouzelná síla je pořád velmi slabá.
+	AI_Output(self,other,"Info_BaalLukor_DOOR_13_02"); //Moje magická síla je pořád velmi slabá.
 //	AI_Output(self,other,"Info_BaalLukor_DOOR_13_03"); //Use the Orcish teleportation spell here, in front of this wall.
 //	AI_Output(self,other,"Info_BaalLukor_DOOR_13_03"); //Benutze den orkischen Teleportzauber hier vor dieser Wand.
+	//#Need_Attention - neprebasnime, toto mi znie kostrbate
 	AI_Output(self,other,"Info_BaalLukor_DOOR_13_03"); //Použij tu ten skřetí teleportační svitek, před touto stěnou.
 
 	CreateInvItem(self,ItArScrollTeleport4); //Teleport erschaffen
@@ -709,7 +717,7 @@ func int Info_BaalLukor_TELEPORT_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_BaalLukor_DOOR)
 	&& Npc_CanSeeNpcFreeLOS(self,hero) 
-	&& Npc_GetDistToWP(hero,"GRYD_072")<550 )
+	&& Npc_GetDistToWP(hero,"GRYD_072")<550)
 	{
 		return TRUE;
 	};
@@ -795,6 +803,7 @@ func void Info_BaalLukor_ALTAR_Info()
 //	AI_Output(self,hero,"Info_BaalLukor_ALTAR_13_05"); //NEEEEEIIIIIINNNNN!!!
 	AI_Output(self,hero,"Info_BaalLukor_ALTAR_13_05"); //NEEEEE!!!
 
+	//#Needs_Attention - nezmenime poradie dialogov ? vzdy mi tato scena prisla hracovym komentarom narusena :-P
 //	AI_Output(hero,self,"Info_BaalLukor_ALTAR_15_06"); //That was it. Now he's gone completely crazy!
 //	AI_Output(hero,self,"Info_BaalLukor_ALTAR_15_06"); //Das war's. Jetzt ist er völlig übergeschnappt!
 	AI_Output(hero,self,"Info_BaalLukor_ALTAR_15_06"); //A je to. Musel se úplně pominout!
@@ -809,7 +818,7 @@ func void Info_BaalLukor_ALTAR_Info()
 	AI_Output(self,hero,"Info_BaalLukor_ALTAR_13_08"); //Teď budu muset trpět za tvoje svatokrádežné chování!
 //	AI_Output(self,hero,"Info_BaalLukor_ALTAR_13_09"); //I need to make a sacrifice for the master. A HUMAN SACRIFICE!!!
 //	AI_Output(self,hero,"Info_BaalLukor_ALTAR_13_09"); //Ich werde unserem Meister ein Opfer darbringen. Ein MENSCHENOPFER!!!
-	AI_Output(self,hero,"Info_BaalLukor_ALTAR_13_09"); //Musím velkému pánovi vzdát oběť. LIDSKOU OBĚŤ!!!
+	AI_Output(self,hero,"Info_BaalLukor_ALTAR_13_09"); //Musím našemu pánovi nabídnout oběť. LIDSKOU OBĚŤ!!!
 //	AI_Output(self,hero,"Info_BaalLukor_ALTAR_13_10"); //Then he'll be sure to enlighten me and make me his servant.
 //	AI_Output(self,hero,"Info_BaalLukor_ALTAR_13_10"); //Bestimmt wird er mich dann erleuchten und zu seiner rechten Hand machen.
 	AI_Output(self,hero,"Info_BaalLukor_ALTAR_13_10"); //Pak budu určitě osvícen a stanu se jeho služebníkem.
@@ -829,7 +838,7 @@ func void Info_BaalLukor_ALTAR_Info()
 
 //	B_LogEntry(CH3_OrcGraveyard,"Baal Lukor went mad when he understood that there is ABSOLUTELY NOTHING down here. Finally he even attacked me in his rage. Cor Angar is bound to worry when he hears that story.");
 //	B_LogEntry(CH3_OrcGraveyard,"Baal Lukor hat den Verstand verloren, als ihm klar wurde, dass es auch absolut GARNICHTS hier unten gibt. Zu guter Letzt griff er mich -völlig wahnsinnig geworden- auch noch an. Cor Angar wird sich bestimmt große Sorgen machen, wenn er hiervon erfährt.");
-	B_LogEntry(CH3_OrcGraveyard,"Baal Lukora mohla trefit mrtvice, když pochopil, že tady dole není ABSOLUTNĚ NIC. Nakonec si na mně dokonce vylil zlost. Když Cor Angar uslyšel tento příběh, pojal obavy.");
+	B_LogEntry(CH3_OrcGraveyard,"Baal Lukora mohla trefit mrtvice, když pochopil, že tady dole není ABSOLUTNĚ NIC. Nakonec na mně -zcela šílený- zaútočil. Nezbývá mi než sdělit Cor Angarovi tyhle znepokojujíci udalosti."); //#Comment trochu som prebasnil ten koniec aby bolo jasne, ze ma hrac ist za Cor Angarom
 
 	AI_StopProcessInfos(self);
 

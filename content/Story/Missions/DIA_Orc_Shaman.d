@@ -49,6 +49,7 @@ func int Info_OrcShaman_THX_Condition()
 		return TRUE;
 	};
 };
+
 func void Info_OrcShaman_THX_Info()
 {
 //	AI_Output(self,hero,"Info_OrcShaman_THX_17_01"); //Owe thanks, stranger.
@@ -83,7 +84,6 @@ func int Info_OrcShaman_WHO_Condition()
 	{
 		return TRUE;
 	};
-
 };
 
 func void Info_OrcShaman_WHO_Info()
@@ -120,7 +120,6 @@ func int Info_OrcShaman_TONGUE_Condition()
 	{
 		return TRUE;
 	};
-
 };
 
 func void Info_OrcShaman_TONGUE_Info()
@@ -157,7 +156,6 @@ func int Info_OrcShaman_MINE_Condition()
 	{
 		return TRUE;
 	};
-
 };
 
 func void Info_OrcShaman_MINE_Info()
@@ -191,7 +189,6 @@ func int Info_OrcShaman_WHY_Condition()
 	{
 		return TRUE;
 	};
-
 };
 
 func void Info_OrcShaman_WHY_Info()
@@ -231,7 +228,6 @@ func int Info_OrcShaman_KRUSHAK_Condition()
 	{
 		return TRUE;
 	};
-
 };
 
 func void Info_OrcShaman_KRUSHAK_Info()
@@ -271,7 +267,6 @@ func int Info_OrcShaman_SLEEPER_Condition()
 	{
 		return TRUE;
 	};
-
 };
 
 func void Info_OrcShaman_SLEEPER_Info()
@@ -323,7 +318,6 @@ func int Info_OrcShaman_CURSE_Condition()
 	{
 		return TRUE;
 	};
-
 };
 
 func void Info_OrcShaman_CURSE_Info()
@@ -449,12 +443,11 @@ instance Info_OrcShaman_MAP(C_INFO)
 
 func int Info_OrcShaman_MAP_Condition()
 { 
-	if Npc_KnowsInfo(hero,Info_OrcShaman_INTEMPLE)
-	&& Npc_HasItems(hero,ItWrWorldmap)
+	if (Npc_KnowsInfo(hero,Info_OrcShaman_INTEMPLE)
+	&& Npc_HasItems(hero,ItWrWorldmap))
 	{
 		return TRUE;
 	};
-
 };
 
 func void Info_OrcShaman_MAP_Info()
@@ -714,8 +707,8 @@ instance Info_OrcShaman_FRIENDLYHELLO(C_INFO)
 
 func int Info_OrcShaman_FRIENDLYHELLO_Condition()
 { 
-	if Npc_KnowsInfo(hero,Info_OrcShaman_BYEBYE)
-	&& FriendOfUrShak
+	if (Npc_KnowsInfo(hero,Info_OrcShaman_BYEBYE)
+	&& FriendOfUrShak)
 	{
 		return TRUE;
 	};
@@ -770,8 +763,8 @@ func int Info_OrcShaman_ORCCITY_Condition()
 	{
 		return TRUE;
 	};
-
 };
+
 func void Info_OrcShaman_ORCCITY_Info()
 {
 	B_FullStop(hero);
@@ -818,12 +811,12 @@ instance Info_OrcShaman_YOUHERE(C_INFO)
 
 func int Info_OrcShaman_YOUHERE_Condition()
 { 
-	if Npc_KnowsInfo(hero,Info_OrcShaman_ORCCITY)
+	if (Npc_KnowsInfo(hero,Info_OrcShaman_ORCCITY))
 	{
 		return TRUE;
 	};
-
 };
+
 func void Info_OrcShaman_YOUHERE_Info()
 {
 //	AI_Output(hero,self,"Info_OrcShaman_YOUHERE_15_01"); //What are you doing so close to the town?
@@ -863,12 +856,12 @@ instance Info_OrcShaman_SEAL(C_INFO)
 
 func int Info_OrcShaman_SEAL_Condition()
 { 
-	if Npc_KnowsInfo(hero,Info_OrcShaman_ORCCITY)
+	if (Npc_KnowsInfo(hero,Info_OrcShaman_ORCCITY))
 	{
 		return TRUE;
 	};
-
 };
+
 func void Info_OrcShaman_SEAL_Info()
 {
 //	AI_Output(hero,self,"Info_OrcShaman_SEAL_15_01"); //At our last meeting you told me that your brothers had sealed the temple!
@@ -906,8 +899,8 @@ func int Info_OrcShaman_SCROLL_Condition()
 	{
 		return TRUE;
 	};
-
 };
+
 func void Info_OrcShaman_SCROLL_Info()
 {
 //	AI_Output(hero,self,"Info_OrcShaman_SCROLL_15_01"); //Where can I find this magic?
@@ -925,7 +918,7 @@ func void Info_OrcShaman_SCROLL_Info()
 
 //	B_LogEntry(CH4_EnterTemple,"I met the shaman Ur-Shak in front of the Orc town again. He told me that I could only get into the vestibule of the underground temple with an Orc spell. The other Orc shamans keep spells like that in their caves.");
 //	B_LogEntry(CH4_EnterTemple,"Ich habe den Schamanen Ur-Shak vor der Orkstadt wiedergetroffen. Er verriet mir, dass ich nur mithilfe eines orkischen Zauberspruches in die Vorhalle des unterirdischen Tempels gelangen kann. Die anderen Ork-Schamanen bewahren solche Zauber in ihrer Höhle auf.");
-	B_LogEntry(CH4_EnterTemple,"Před skřetím městem jsem se znovu setkal se šamanem Ur-Shakem. Řekl mi, že pouze skřetím kouzlem se mohu dostat do předsálí podzemního chrámu. Ostatní skřetí šamani mají ve svých jeskyních právě taková kouzla.");
+	B_LogEntry(CH4_EnterTemple,"Před skřetím městem jsem se znovu setkal se šamanem Ur-Shakem. Řekl mi, že pouze se skřetím kouzlem se mohu dostat do předsálí podzemního chrámu. Ostatní skřetí šamani mají ve svých jeskyních právě taková kouzla.");
 }; 
 
 //---------------------------------------------------------------------
@@ -950,8 +943,8 @@ func int Info_OrcShaman_IDOL_Condition()
 	{
 		return TRUE;
 	};
-
 };
+
 func void Info_OrcShaman_IDOL_Info()
 {
 	//SN: fliegt raus, da der Hinweis jetzt sofort nach dem Hinweis mit der Scroll gegeben wird.

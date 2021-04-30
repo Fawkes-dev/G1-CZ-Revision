@@ -36,7 +36,6 @@ instance Info_FreemineOrc_EXIT(C_INFO)
 	important = 0; 
 	permanent = 1;
 	description = DIALOG_ENDE;
-
 };                       
 
 func int Info_FreemineOrc_EXIT_Condition()
@@ -497,9 +496,9 @@ instance Info_FreemineOrc_FIREWARAN2(C_INFO)
 
 func int Info_FreemineOrc_FIREWARAN2_Condition()
 {
-	if  Npc_KnowsInfo(hero,Info_FreemineOrc_FIREWARAN)
+	if (Npc_KnowsInfo(hero,Info_FreemineOrc_FIREWARAN)
 	&& !Npc_HasItems(hero,ItAt_Waran_01)
-	&& !Npc_KnowsInfo(hero,Info_FreemineOrc_EVERYULUMULU)
+	&& !Npc_KnowsInfo(hero,Info_FreemineOrc_EVERYULUMULU))
 	{
 		return TRUE;
 	};
@@ -553,7 +552,6 @@ func void Info_FreemineOrc_SHADOWBEAST_Info()
 //	AI_Output(self,hero,"Info_FreemineOrc_SHADOWBEAST_Info_17_02"); //Be horn of shadowbeast. Horn sharp as knife and hard as stone.
 //	AI_Output(self,hero,"Info_FreemineOrc_SHADOWBEAST_Info_17_02"); //Seien Horn von Schattenläufer. Horn spitz wie Dolch und hart wie Stein.
 	AI_Output(self,hero,"Info_FreemineOrc_SHADOWBEAST_Info_17_02"); //Být roh stínové obludy. Roh ostrý jako nůž a tvrdý jako kámen.
-
 };
 
 //---------------------------------------------------------------------
@@ -573,9 +571,9 @@ instance Info_FreemineOrc_SHADOWBEAST2(C_INFO)
 
 func int Info_FreemineOrc_SHADOWBEAST2_Condition()
 {
-	if  Npc_KnowsInfo(hero,Info_FreemineOrc_SHADOWBEAST)
+	if (Npc_KnowsInfo(hero,Info_FreemineOrc_SHADOWBEAST)
 	&& !Npc_HasItems(hero,ItAt_Shadow_02)
-	&& !Npc_KnowsInfo(hero,Info_FreemineOrc_EVERYULUMULU)
+	&& !Npc_KnowsInfo(hero,Info_FreemineOrc_EVERYULUMULU))
 	{
 		return TRUE;
 	};
@@ -629,7 +627,6 @@ func void Info_FreemineOrc_SWAMPSHARK_Info()
 //	AI_Output(self,hero,"Info_FreemineOrc_SWAMPSHARK_17_02"); //Be teeth of swampshark. If teeth bite, victim never escape.
 //	AI_Output(self,hero,"Info_FreemineOrc_SWAMPSHARK_17_02"); //Seien Zähne von Sumpfhai. Wenn Zähne beißen Opfer, dann nie wieder loslassen.
 	AI_Output(self,hero,"Info_FreemineOrc_SWAMPSHARK_17_02"); //Být zub močálového žraloka. Když zub zakousnout, oběť už nikdy ne utéct.
-
 };
 
 //---------------------------------------------------------------------
@@ -649,9 +646,9 @@ instance Info_FreemineOrc_SWAMPSHARK2(C_INFO)
 
 func int Info_FreemineOrc_SWAMPSHARK2_Condition()
 {
-	if  Npc_KnowsInfo(hero,Info_FreemineOrc_SWAMPSHARK)
+	if (Npc_KnowsInfo(hero,Info_FreemineOrc_SWAMPSHARK)
 	&& !Npc_HasItems(hero,ItAt_Swampshark_02)
-	&& !Npc_KnowsInfo(hero,Info_FreemineOrc_EVERYULUMULU)
+	&& !Npc_KnowsInfo(hero,Info_FreemineOrc_EVERYULUMULU))
 	{
 		return TRUE;
 	};
@@ -721,9 +718,9 @@ instance Info_FreemineOrc_TROLL2(C_INFO)
 
 func int Info_FreemineOrc_TROLL2_Condition()
 {
-	if  Npc_KnowsInfo(hero,Info_FreemineOrc_TROLL)
+	if (Npc_KnowsInfo(hero,Info_FreemineOrc_TROLL)
 	&& !Npc_HasItems(hero,ItAt_Troll_02)
-	&& !Npc_KnowsInfo(hero,Info_FreemineOrc_EVERYULUMULU)
+	&& !Npc_KnowsInfo(hero,Info_FreemineOrc_EVERYULUMULU))
 	{
 		return TRUE;
 	};
@@ -766,14 +763,15 @@ instance Info_FreemineOrc_LOOKINGULUMULU(C_INFO)
 
 func int Info_FreemineOrc_LOOKINGULUMULU_Condition()
 {
-	if !Npc_HasItems(hero,ItAt_Waran_01)
+	//#Needs_Attention - toto je nespravna podmienka - dialog je dostupny, len ak nema hrac jazyk ohnivej jasterky a ma vsetko ostatne
+	if (!Npc_HasItems(hero,ItAt_Waran_01)
 	&& Npc_HasItems(hero,ItAt_Shadow_02)
 	&& Npc_HasItems(hero,ItAt_Swampshark_02)
 	&& Npc_HasItems(hero,ItAt_Troll_02)
 	&& Npc_KnowsInfo(hero,Info_FreemineOrc_FIREWARAN2)
 	&& Npc_KnowsInfo(hero,Info_FreemineOrc_SHADOWBEAST2)
 	&& Npc_KnowsInfo(hero,Info_FreemineOrc_SWAMPSHARK2)
-	&& Npc_KnowsInfo(hero,Info_FreemineOrc_TROLL2)
+	&& Npc_KnowsInfo(hero,Info_FreemineOrc_TROLL2))
 	{
 		return TRUE;
 	};
@@ -783,7 +781,7 @@ func void Info_FreemineOrc_LOOKINGULUMULU_Info()
 {
 //	AI_Output(hero,self,"Info_FreemineOrc_LOOKINGULUMULU_15_01"); //I don't have all four items yet.
 //	AI_Output(hero,self,"Info_FreemineOrc_LOOKINGULUMULU_15_01"); //Ich habe noch nicht alle vier Teile beisammen.
-	AI_Output(hero,self,"Info_FreemineOrc_LOOKINGULUMULU_15_01"); //Ještě nemám všechny čtyři čísti!
+	AI_Output(hero,self,"Info_FreemineOrc_LOOKINGULUMULU_15_01"); //Ještě nemám všechny čtyři části!
 //	AI_Output(self,hero,"Info_FreemineOrc_LOOKINGULUMULU_17_02"); //Stranger seek on. Tarrok wait here!
 //	AI_Output(self,hero,"Info_FreemineOrc_LOOKINGULUMULU_17_02"); //Fremder suchen weiter. Tarrok hier warten!
 	AI_Output(self,hero,"Info_FreemineOrc_LOOKINGULUMULU_17_02"); //Cizinec pokračovat hledat. Tarrok počkat tady!
@@ -808,11 +806,11 @@ instance Info_FreemineOrc_EVERYULUMULU(C_INFO)
 
 func int Info_FreemineOrc_EVERYULUMULU_Condition()
 {
-	if (FreemineOrc_LookingUlumulu == LOG_RUNNING)
-	&& Npc_HasItems(hero,ItAt_Waran_01 )
-	&& Npc_HasItems(hero,ItAt_Shadow_02 )
-	&& Npc_HasItems(hero,ItAt_Swampshark_02 )
-	&& Npc_HasItems(hero,ItAt_Troll_02 )
+	if ((FreemineOrc_LookingUlumulu == LOG_RUNNING)
+	&& Npc_HasItems(hero,ItAt_Waran_01)
+	&& Npc_HasItems(hero,ItAt_Shadow_02)
+	&& Npc_HasItems(hero,ItAt_Swampshark_02)
+	&& Npc_HasItems(hero,ItAt_Troll_02))
 	{
 		return TRUE;
 	};
@@ -830,6 +828,7 @@ func void Info_FreemineOrc_EVERYULUMULU_Info()
 //	AI_Output(self,hero,"Info_FreemineOrc_EVERYULUMULU_17_03"); //Hier! Fremder tragen ULU-MULU mit Stolz! Tarrok jetzt schlafen!
 	AI_Output(self,hero,"Info_FreemineOrc_EVERYULUMULU_17_03"); //Tady! Cizinec nosit ULU-MULU s hrdost! Tarrok teď spát!
 
+	//#Needs_Attention - no fuj, tieto presuny itemov musime prepisat :)
 	CreateInvItems(hero,ItAt_Waran_01, 3);
 	B_GiveInvItems(hero,self,ItAt_Waran_01, 4); //Notwendig für Ausschrift "4 Gegenstände übergegen", wird sofort ausgeglichen
 	Npc_RemoveInvItem(hero,ItAt_Shadow_02);

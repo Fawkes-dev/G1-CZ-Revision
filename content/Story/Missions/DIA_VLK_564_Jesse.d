@@ -127,7 +127,10 @@ instance DIA_Jesse_Mission(C_INFO)
 
 func int DIA_Jesse_Mission_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Jesse_Mission))
+	//#Bugfix GitHub issue #2 Vlk_564_Jesse Jesse's dialogue DIA_Jesse_Mission is not available.
+	//Dialogue condition uses NPC_KnowsInfo with its own dialogue instance DIA_Jesse_Mission - dialogue option would never display.
+	//#if (Npc_KnowsInfo(hero,DIA_Jesse_Mission))
+	if (Npc_KnowsInfo(hero,DIA_Jesse_Warn))
 	{
 		return 1;
 	};

@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////////////////////
 //	DURCHGANGSWACHE
-//	=============== 
+//	===============
 //	NSC: Grd_237_Torwache
 //	Lager: OldCamp
 //	Durchgang: Barrikade beim Durchgang zum Orkgebiet
@@ -16,7 +16,7 @@ instance Info_Grd_237_FirstWarn(C_INFO)
 	information = Info_Grd_237_FirstWarn_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 //------------------------------------------------------------------------
 //	1. Warnung
@@ -24,8 +24,8 @@ instance Info_Grd_237_FirstWarn(C_INFO)
 func int Info_Grd_237_FirstWarn_Condition()
 {
 	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS]== AIV_GPS_BEGIN)
-	&& (self.aivar[AIV_PASSGATE] == FALSE ) 
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY ) 
+	&& (self.aivar[AIV_PASSGATE] == FALSE )
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY )
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self), self.wp)))
 	{
 		return TRUE;
@@ -47,15 +47,15 @@ func void Info_Grd_237_FirstWarn_Info()
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,Grd_237_CHECKPOINT);
 
 	Info_ClearChoices(Info_Grd_237_FirstWarn);
-//	Info_AddChoice(Info_Grd_237_FirstWarn,"I don't think I want to do that!", Info_Grd_237_FirstWarn_Info_NO); 
-//	Info_AddChoice(Info_Grd_237_FirstWarn,"Ich glaube nicht, dass ich das will!", Info_Grd_237_FirstWarn_Info_NO); 
-	Info_AddChoice(Info_Grd_237_FirstWarn,"Nemyslím, že to chci udělat!", Info_Grd_237_FirstWarn_Info_NO); 
-//	Info_AddChoice(Info_Grd_237_FirstWarn,"Sure, here's my ore!", Info_Grd_237_FirstWarn_Info_YES); 
-//	Info_AddChoice(Info_Grd_237_FirstWarn,"Na klar, hier ist mein Erz!", Info_Grd_237_FirstWarn_Info_YES); 
-	Info_AddChoice(Info_Grd_237_FirstWarn,"Jistě, tady je moje ruda!", Info_Grd_237_FirstWarn_Info_YES); 
-//	Info_AddChoice(Info_Grd_237_FirstWarn,"I think it might be best if I just turn back.", Info_Grd_237_FirstWarn_Info_RETREAT); 
-//	Info_AddChoice(Info_Grd_237_FirstWarn,"Ist wohl besser wenn ich wieder umdrehe!", Info_Grd_237_FirstWarn_Info_RETREAT); 
-	Info_AddChoice(Info_Grd_237_FirstWarn,"Myslím, že by bylo lepší, kdybych se vrátil.", Info_Grd_237_FirstWarn_Info_RETREAT); 
+//	Info_AddChoice(Info_Grd_237_FirstWarn,"I don't think I want to do that!", Info_Grd_237_FirstWarn_Info_NO);
+//	Info_AddChoice(Info_Grd_237_FirstWarn,"Ich glaube nicht, dass ich das will!", Info_Grd_237_FirstWarn_Info_NO);
+	Info_AddChoice(Info_Grd_237_FirstWarn,"Nemyslím, že to chci udělat!", Info_Grd_237_FirstWarn_Info_NO);
+//	Info_AddChoice(Info_Grd_237_FirstWarn,"Sure, here's my ore!", Info_Grd_237_FirstWarn_Info_YES);
+//	Info_AddChoice(Info_Grd_237_FirstWarn,"Na klar, hier ist mein Erz!", Info_Grd_237_FirstWarn_Info_YES);
+	Info_AddChoice(Info_Grd_237_FirstWarn,"Jistě, tady je moje ruda!", Info_Grd_237_FirstWarn_Info_YES);
+//	Info_AddChoice(Info_Grd_237_FirstWarn,"I think it might be best if I just turn back.", Info_Grd_237_FirstWarn_Info_RETREAT);
+//	Info_AddChoice(Info_Grd_237_FirstWarn,"Ist wohl besser wenn ich wieder umdrehe!", Info_Grd_237_FirstWarn_Info_RETREAT);
+	Info_AddChoice(Info_Grd_237_FirstWarn,"Myslím, že by bylo lepší, kdybych se vrátil.", Info_Grd_237_FirstWarn_Info_RETREAT);
 };
 
 func void Info_Grd_237_FirstWarn_Info_RETREAT()
@@ -72,7 +72,7 @@ func void Info_Grd_237_FirstWarn_Info_RETREAT()
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_FIRSTWARN;
 
 	AI_StopProcessInfos(self);
-}; 
+};
 
 func void Info_Grd_237_FirstWarn_Info_YES()
 {
@@ -95,7 +95,7 @@ func void Info_Grd_237_FirstWarn_Info_YES()
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_FIRSTWARN;
 
 	AI_StopProcessInfos(self);
-}; 
+};
 
 func void Info_Grd_237_FirstWarn_Info_NO()
 {
@@ -111,7 +111,7 @@ func void Info_Grd_237_FirstWarn_Info_NO()
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_FIRSTWARN;
 
 	AI_StopProcessInfos(self);
-}; 
+};
 
 //------------------------------------------------------------------------
 //	2. Warnung
@@ -124,14 +124,14 @@ instance Info_Grd_237_LastWarn(C_INFO)
 	information = Info_Grd_237_LastWarn_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int Info_Grd_237_LastWarn_Condition()
 {
 	if ((self.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_FIRSTWARN )
-	&& (self.aivar[AIV_PASSGATE] == FALSE ) 
+	&& (self.aivar[AIV_PASSGATE] == FALSE )
 	&& (Npc_GetDistToWP(hero,Grd_237_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
-	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp))) 
+	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
 		return TRUE;
 	};
@@ -144,7 +144,7 @@ func int Info_Grd_237_LastWarn_Info()
 	AI_Output(self,hero,"Info_Grd_237_LastWarn_07_01"); //Jsi hluchý? Ještě krok a je z tebe potrava pro červy!
 
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,Grd_237_CHECKPOINT);
-	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_LASTWARN; 
+	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_LASTWARN;
 
 	AI_StopProcessInfos(self);
 };
@@ -160,14 +160,14 @@ instance Info_Grd_237_Attack(C_INFO)
 	information = Info_Grd_237_Attack_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int Info_Grd_237_Attack_Condition()
 {
 	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_LASTWARN )
 	&& (self.aivar[AIV_PASSGATE] == FALSE)
 	&& (Npc_GetDistToWP(hero,Grd_237_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
-	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp))) 
+	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
 		return TRUE;
 	};
@@ -175,11 +175,10 @@ func int Info_Grd_237_Attack_Condition()
 
 func int Info_Grd_237_Attack_Info()
 {
-
 	hero.aivar[AIV_LASTDISTTOWP] = 0;
-	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_PUNISH; 
+	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_PUNISH;
 
-	B_FullStop(self); 
+	B_FullStop(self);
 	AI_StopProcessInfos(self); //dem Spieler sofort wieder die Kontrolle zurückgeben
 	B_SetAttackReason(self,AIV_AR_INTRUDER);
 	Npc_SetTarget(self,hero);

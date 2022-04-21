@@ -1,5 +1,5 @@
 // **************************************************
-//						 EXIT 
+//						 EXIT
 // **************************************************
 
 instance Org_825_Organisator_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance Org_825_Organisator_Exit(C_INFO)
 	information = Org_825_Organisator_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Org_825_Organisator_Exit_Condition()
 {
@@ -36,7 +36,7 @@ instance Org_825_Organisator_PERM(C_INFO)
 //	description = "What are you guarding?";
 //	description = "Was bewacht ihr hier?";
 	description = "Co tady střežíte?";
-};                       
+};
 
 func int Org_825_Organisator_PERM_Condition()
 {

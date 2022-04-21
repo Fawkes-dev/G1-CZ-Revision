@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Vlk_534_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Vlk_534_Exit(C_INFO)
 	information = DIA_Vlk_534_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Vlk_534_Exit_Condition()
 {
@@ -39,7 +39,7 @@ instance DIA_Vlk_534_LeaveMe(C_INFO)
 };
 
 func int DIA_Vlk_534_LeaveMe_Condition()
-{ 
+{
 	return 1;
 };
 

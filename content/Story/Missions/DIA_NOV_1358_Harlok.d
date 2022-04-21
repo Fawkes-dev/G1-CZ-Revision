@@ -1,5 +1,5 @@
 // **************************************************
-//						EXIT 
+//						EXIT
 // **************************************************
 
 instance DIA_Harlok_Exit(C_INFO)
@@ -8,10 +8,10 @@ instance DIA_Harlok_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Harlok_Exit_Condition;
 	information = DIA_Harlok_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Harlok_Exit_Condition()
 {
@@ -37,7 +37,7 @@ instance DIA_Harlok_FetchHarlok(C_INFO)
 //	description = "Ghorim sent me.";
 //	description = "Ghorim schickt mich.";
 	description = "Poslal mě Ghorim.";
-};                       
+};
 
 func int DIA_Harlok_FetchHarlok_Condition()
 {
@@ -109,7 +109,7 @@ instance DIA_Harlok_HarlokAgain(C_INFO)
 //	description = "I just wanted to remind you to take your pal's place now!";
 //	description = "Ich wollte dich nochmal dran erinnern, deinen Kumpel abzulösen!";
 	description = "Chtěl jsem ti jenom připomenout, že bys měl ihned vystřídat svého kamaráda!";
-};                       
+};
 
 func int DIA_Harlok_HarlokAgain_Condition()
 {
@@ -147,7 +147,7 @@ instance DIA_Harlok_SendHarlok(C_INFO)
 //	description = "Well, d'you feel like giving your pal a break now? ";
 //	description = "Hast du langsam Lust bekommen, deinen Freud abzulösen?";
 	description = "Dobrá, nemáš pocit, že bys měl taky nechat svého kamaráda odpočinout?";
-};                       
+};
 
 func int DIA_Harlok_SendHarlok_Condition()
 {
@@ -197,8 +197,8 @@ instance DIA_Harlok_Angry(C_INFO)
 	condition = DIA_Harlok_Angry_Condition;
 	information = DIA_Harlok_Angry_Info;
 	permanent = 1;
-	important = 1; 
-};                       
+	important = 1;
+};
 
 func int DIA_Harlok_Angry_Condition()
 {

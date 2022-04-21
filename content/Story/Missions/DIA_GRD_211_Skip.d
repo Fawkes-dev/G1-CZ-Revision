@@ -1,5 +1,5 @@
 // **************************************
-//					EXIT 
+//					EXIT
 // **************************************
 
 instance DIA_Skip_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Skip_Exit(C_INFO)
 	information = DIA_Skip_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Skip_Exit_Condition()
 {
@@ -38,13 +38,13 @@ instance DIA_Skip_First(C_INFO)
 //	description = "What do you do here?";
 //	description = "Was machst du hier?";
 	description = "Co tady děláš?";
-};                       
+};
 
 func int DIA_Skip_First_Condition()
 {
 	//#NEEDS_ATTENTION - dialog dostupny pre Magov Ohna? GIL_KDF
 	if ( !((Npc_GetTrueGuild(other)==GIL_STT) || (Npc_GetTrueGuild(other)==GIL_GRD) || (Npc_GetTrueGuild(other)==GIL_KDF)))
-	{ 
+	{
 		return 1;
 	};
 };
@@ -199,15 +199,15 @@ instance DIA_Skip_VERPATZT(C_INFO)
 //	description = "I just thought I'd come back and ask about that equipment...";
 //	description = "Ich dachte, ich frag' noch mal wegen der Ausrüstung ...";
 	description = "Říkal jsem si, že bych se ještě jednou zeptal na tu zbroj...";
-};                       
+};
 
 func int DIA_Skip_VERPATZT_Condition()
 {
-	if ( 
+	if (
 		( !((Npc_GetTrueGuild(other)==GIL_STT) || (Npc_GetTrueGuild(other)==GIL_GRD) || (Npc_GetTrueGuild(other)==GIL_KDF)))
-		&& ((Npc_KnowsInfo(hero,DIA_Skip_First)) && (Skip_TradeFree == FALSE)) 
+		&& ((Npc_KnowsInfo(hero,DIA_Skip_First)) && (Skip_TradeFree == FALSE))
 		)
-	{ 
+	{
 		return 1;
 	};
 };
@@ -223,7 +223,7 @@ func void DIA_Skip_VERPATZT_Info()
 };
 
 /*------------------------------------------------------------------------
-							Waffenhandel 
+							Waffenhandel
 ------------------------------------------------------------------------*/
 
 instance GRD_211_Skip_TRADE(C_INFO)
@@ -232,15 +232,15 @@ instance GRD_211_Skip_TRADE(C_INFO)
 	condition = GRD_211_Skip_TRADE_Condition;
 	information = GRD_211_Skip_TRADE_Info;
 	permanent = 1;
-//	description = "I could do with a few things."; 
-//	description = "Ich könnte ein paar Sachen gebrauchen"; 
-	description = "Potřeboval bych pár věcí."; 
+//	description = "I could do with a few things.";
+//	description = "Ich könnte ein paar Sachen gebrauchen";
+	description = "Potřeboval bych pár věcí.";
 	trade = 1;
 };
 
 func int GRD_211_Skip_TRADE_Condition()
 {
-	if ((Npc_GetTrueGuild(other)==GIL_STT) || (Npc_GetTrueGuild(other)==GIL_GRD) || (Npc_GetTrueGuild(other)==GIL_KDF) 
+	if ((Npc_GetTrueGuild(other)==GIL_STT) || (Npc_GetTrueGuild(other)==GIL_GRD) || (Npc_GetTrueGuild(other)==GIL_KDF)
 			|| (Skip_TradeFree == TRUE))
 	{
 		return TRUE;
@@ -255,7 +255,7 @@ func void GRD_211_Skip_TRADE_Info()
 //	AI_Output(self,other,"GRD_211_Skip_TRADE_Info_12_02"); //I could sell you a few things.
 //	AI_Output(self,other,"GRD_211_Skip_TRADE_Info_12_02"); //Ich könnte dir ein paar Sachen verkaufen.
 	AI_Output(self,other,"GRD_211_Skip_TRADE_Info_12_02"); //Mohl bych ti pár věcí prodat.
-};  
+};
 
 /*------------------------------------------------------------------------
 //							GARDIST GEWORDEN //
@@ -270,8 +270,8 @@ instance GRD_211_Skip_WELCOME(C_INFO)
 };
 
 func int GRD_211_Skip_WELCOME_Condition()
-{ 
-	if (Npc_GetTrueGuild(hero) == GIL_GRD) 
+{
+	if (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
 		return TRUE;
 	};

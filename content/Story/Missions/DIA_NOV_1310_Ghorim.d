@@ -1,5 +1,5 @@
 // **************************************************
-//						EXIT 
+//						EXIT
 // **************************************************
 
 instance DIA_Ghorim_Exit(C_INFO)
@@ -8,10 +8,10 @@ instance DIA_Ghorim_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Ghorim_Exit_Condition;
 	information = DIA_Ghorim_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Ghorim_Exit_Condition()
 {
@@ -33,7 +33,7 @@ instance DIA_Ghorim_MissingHarlok(C_INFO)
 //	description = "Hi! How's it going?";
 //	description = "Hi! Wie sieht's aus?";
 	description = "Jak to jde?";
-};                       
+};
 
 func int DIA_Ghorim_MissingHarlok_Condition()
 {
@@ -90,7 +90,7 @@ instance DIA_Ghorim_SUCCESS(C_INFO)
 //	description = "Well? Has he taken over now?";
 //	description = "Na? Endlich abgelöst worden?";
 	description = "Tak? Vystřídá mě?";
-};                       
+};
 
 func int DIA_Ghorim_SUCCESS_Condition()
 {

@@ -1,5 +1,5 @@
 // ************************************************************
-// 			  				   EXIT 
+// 			  				   EXIT
 // ************************************************************
 
 instance DIA_Rufus_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Rufus_EXIT(C_INFO)
 	information = DIA_Rufus_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Rufus_EXIT_Condition()
 {
@@ -18,7 +18,7 @@ func int DIA_Rufus_EXIT_Condition()
 };
 
 func void DIA_Rufus_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -36,7 +36,7 @@ instance Info_Rufus_Wasser(C_INFO) // E1
 //	description = "Lefty sent me. I've brought you some water.";
 //	description = "Lefty schickt mich. Ich hab' Wasser für dich.";
 	description = "Poslal mě Lefty. Přinesl jsem ti trochu vody.";
-};                       
+};
 
 func int Info_Rufus_Wasser_Condition()
 {
@@ -93,7 +93,7 @@ instance DIA_Rufus_Hello(C_INFO)
 //	description = "Hi! I'm new here. I just wanted to know what goes on around here.";
 //	description = "Hi! Ich bin neu hier. Wollte mal fragen, was hier so läuft.";
 	description = "Zdar! Jsem tady nový. Jen jsem chtěl vědět, co se tu děje.";
-};                       
+};
 
 func int DIA_Rufus_Hello_Condition()
 {
@@ -101,7 +101,7 @@ func int DIA_Rufus_Hello_Condition()
 };
 
 func void DIA_Rufus_Hello_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Rufus_Hello_15_00"); //Hi! I'm new here. I just wanted to know what goes on around here.
 //	AI_Output(other,self,"DIA_Rufus_Hello_15_00"); //Hi! Ich bin neu hier. Wollte mal fragen, was hier so läuft.
 	AI_Output(other,self,"DIA_Rufus_Hello_15_00"); //Zdar! Jsem tady nový. Jen jsem chtěl vědět, co se tu děje.
@@ -127,7 +127,7 @@ instance DIA_Rufus_Why(C_INFO)
 //	description = "If you don't like it, why are you working here?";
 //	description = "Wenn's dir nicht gefällt, warum arbeitest du dann hier? ";
 	description = "Když se ti to nelíbí, tak proč tu pracuješ?";
-};                       
+};
 
 func int DIA_Rufus_Why_Condition()
 {
@@ -138,7 +138,7 @@ func int DIA_Rufus_Why_Condition()
 };
 
 func void DIA_Rufus_Why_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Rufus_Why_15_00"); //If you don't like it, why are you working here?
 //	AI_Output(other,self,"DIA_Rufus_Why_15_00"); //Wenn's dir nicht gefällt, warum arbeitest du dann hier?
 	AI_Output(other,self,"DIA_Rufus_Why_15_00"); //Když se ti to nelíbí, tak proč tu pracuješ?
@@ -167,7 +167,7 @@ func void DIA_Rufus_Why_Info()
 //	AI_Output(self,other,"DIA_Rufus_Why_02_08"); //Das sind richtige Halsabschneider, mit denen legst du dich besser nicht an.
 	AI_Output(self,other,"DIA_Rufus_Why_02_08"); //Jsou to opravdoví hrdlořezové, uděláš nejlíp, když s nimi budeš zadobře.
 	var C_NPC Ricelord; Ricelord = Hlp_GetNpc(Bau_900_Ricelord);
-	Ricelord.aivar[AIV_FINDABLE] = TRUE; 
+	Ricelord.aivar[AIV_FINDABLE] = TRUE;
 };
 
 // ************************************************************
@@ -184,7 +184,7 @@ instance DIA_Rufus_Ricelord(C_INFO)
 //	description = "Who is the Rice Lord?";
 //	description = "Wer ist der Reislord?";
 	description = "Kdo je Rýžový Lord?";
-};                       
+};
 
 func int DIA_Rufus_Ricelord_Condition()
 {
@@ -195,7 +195,7 @@ func int DIA_Rufus_Ricelord_Condition()
 };
 
 func void DIA_Rufus_Ricelord_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Rufus_Ricelord_15_00"); //Who is the Rice Lord?
 //	AI_Output(other,self,"DIA_Rufus_Ricelord_15_00"); //Wer ist der Reislord?
 	AI_Output(other,self,"DIA_Rufus_Ricelord_15_00"); //Kdo je Rýžový Lord?
@@ -206,6 +206,6 @@ func void DIA_Rufus_Ricelord_Info()
 //	AI_Output(self,other,"DIA_Rufus_Ricelord_02_02"); //Heute steht er nur noch vor seinem Lagerhaus und streckt seine Wampe raus, der alte Fettsack!
 	AI_Output(self,other,"DIA_Rufus_Ricelord_02_02"); //Dnes už jen postává před skladištěm a cpe si břicho, to tlustý prase!
 	var C_NPC Ricelord; Ricelord = Hlp_GetNpc(Bau_900_Ricelord);
-	Ricelord.aivar[AIV_FINDABLE] = TRUE; 
+	Ricelord.aivar[AIV_FINDABLE] = TRUE;
 };
 

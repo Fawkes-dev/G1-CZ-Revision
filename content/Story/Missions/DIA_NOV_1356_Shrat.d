@@ -1,5 +1,5 @@
 // **************************************************
-//						EXIT 
+//						EXIT
 // **************************************************
 
 instance DIA_Shrat_Exit(C_INFO)
@@ -8,10 +8,10 @@ instance DIA_Shrat_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Shrat_Exit_Condition;
 	information = DIA_Shrat_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Shrat_Exit_Condition()
 {
@@ -37,7 +37,7 @@ instance DIA_Shrat_WhyHere(C_INFO)
 //	description = "What are you doing here?";
 //	description = "Was machst du denn hier?";
 	description = "Co tady děláš?";
-};                       
+};
 
 func int DIA_Shrat_WhyHere_Condition()
 {
@@ -80,7 +80,7 @@ instance DIA_Shrat_JoinPSI(C_INFO)
 //	description = "I want to join the Brotherhood - can you help me?";
 //	description = "Ich will der Bruderschaft beitreten - kannst du mir helfen?";
 	description = "Chci se přidat k Bratrstvu - můžeš mi pomoci?";
-};                       
+};
 
 func int DIA_Shrat_JoinPSI_Condition()
 {
@@ -117,7 +117,7 @@ instance DIA_Shrat_ComeWithMe(C_INFO)
 //	description = "Let's move around together! Come with me!";
 //	description = "Lass uns zusammen losziehen! Komm mit!";
 	description = "Můžeme se toulat společně! Pojď se mnou!";
-};                       
+};
 
 func int DIA_Shrat_ComeWithMe_Condition()
 {
@@ -154,7 +154,7 @@ instance DIA_Shrat_LeaveMe(C_INFO)
 //	description = "Our paths separate here - I'll go on on my own.";
 //	description = "Hier trennen sich unsere Wege - ich werde von hier aus alleine weiterziehen.";
 	description = "Naše cesty se rozcházejí - půjdu si po svých.";
-};                       
+};
 
 func int DIA_Shrat_LeaveMe_Condition()
 {

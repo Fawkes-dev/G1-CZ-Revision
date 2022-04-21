@@ -1,5 +1,5 @@
 // ************************************************************
-// 			  				   EXIT 
+// 			  				   EXIT
 // ************************************************************
 
 instance Info_ORG_829_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance Info_ORG_829_EXIT(C_INFO)
 	information = Info_ORG_829_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_ORG_829_EXIT_Condition()
 {
@@ -18,7 +18,7 @@ func int Info_ORG_829_EXIT_Condition()
 };
 
 func void Info_ORG_829_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -36,7 +36,7 @@ instance Info_ORG_829_Hello(C_INFO)
 //	description = "How are things?";
 //	description = "Wie sieht's aus?";
 	description = "Jak to jde?";
-};                       
+};
 
 func int Info_ORG_829_Hello_Condition()
 {
@@ -44,7 +44,7 @@ func int Info_ORG_829_Hello_Condition()
 };
 
 func void Info_ORG_829_Hello_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_ORG_829_Hello_15_00"); //How are things?
 //	AI_Output(other,self,"Info_ORG_829_Hello_15_00"); //Wie sieht's aus?
 	AI_Output(other,self,"Info_ORG_829_Hello_15_00"); //Jak to jde?
@@ -69,7 +69,7 @@ instance Info_ORG_829_OfferJoint(C_INFO)
 //	description = "I have swampweed - d'you want some?";
 //	description = "Ich hab' Sumpfkraut dabei - willst du was?";
 	description = "Mám drogu z bažin - chceš trochu?";
-};                       
+};
 
 func int Info_ORG_829_OfferJoint_Condition()
 {
@@ -80,7 +80,7 @@ func int Info_ORG_829_OfferJoint_Condition()
 };
 
 func void Info_ORG_829_OfferJoint_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_ORG_829_OfferJoint_15_00"); //I have swampweed - d'you want some?
 //	AI_Output(other,self,"Info_ORG_829_OfferJoint_15_00"); //Ich hab' Sumpfkraut dabei - willst du was?
 	AI_Output(other,self,"Info_ORG_829_OfferJoint_15_00"); //Mám drogu z bažin - chceš trochu?
@@ -122,7 +122,7 @@ instance Info_ORG_829_SpecialInfo(C_INFO)
 //	description = "I've just arrived - can you give me some advice?";
 //	description = "Ich bin neu hier - hast du irgendwelche Tipps für mich?";
 	description = "Právě jsem přišel - můžeš mi dát nějakou radu?";
-};                       
+};
 
 func int Info_ORG_829_SpecialInfo_Condition()
 {
@@ -133,7 +133,7 @@ func int Info_ORG_829_SpecialInfo_Condition()
 };
 
 func void Info_ORG_829_SpecialInfo_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_ORG_829_SpecialInfo_15_00"); //I've just arrived - can you give me some advice?
 //	AI_Output(other,self,"Info_ORG_829_SpecialInfo_15_00"); //Ich bin neu hier - hast du irgendwelche Tipps für mich?
 	AI_Output(other,self,"Info_ORG_829_SpecialInfo_15_00"); //Právě jsem přišel - můžeš mi dát nějakou radu?
@@ -162,7 +162,7 @@ instance Info_ORG_829_PERM(C_INFO)
 //	description = "Do you know what I should expect in the Camp?";
 //	description = "Kannst du mir sagen, was mich da drin erwartet?";
 	description = "Můžeš mi říct, co mě v táboře čeká?";
-};                       
+};
 
 func int Info_ORG_829_PERM_Condition()
 {
@@ -173,7 +173,7 @@ func int Info_ORG_829_PERM_Condition()
 };
 
 func void Info_ORG_829_PERM_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_ORG_829_PERM_15_00"); //Do you know what I should expect in the Camp?
 //	AI_Output(other,self,"Info_ORG_829_PERM_15_00"); //Kannst du mir sagen, was mich da drin erwartet?
 	AI_Output(other,self,"Info_ORG_829_PERM_15_00"); //Můžeš mi říct, co mě v táboře čeká?

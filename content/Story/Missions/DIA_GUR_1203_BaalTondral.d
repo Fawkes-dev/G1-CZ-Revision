@@ -1,5 +1,5 @@
 // **************************************************
-// 					Pre - EXIT 
+// 					Pre - EXIT
 // **************************************************
 
 instance DIA_BaalTondral_MuteExit(C_INFO)
@@ -10,12 +10,12 @@ instance DIA_BaalTondral_MuteExit(C_INFO)
 	information = DIA_BaalTondral_MuteExit_Info;
 	permanent = 0;
 	description = "(Nic neříkat)";
-};                       
+};
 
 func int DIA_BaalTondral_MuteExit_Condition()
 {
 	if (!Npc_KnowsInfo(hero,DIA_BaalTondral_YouTalked))
-	{ 
+	{
 		return 1;
 	};
 };
@@ -26,7 +26,7 @@ func void DIA_BaalTondral_MuteExit_Info()
 };
 
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_BaalTondral_Exit(C_INFO)
@@ -37,12 +37,12 @@ instance DIA_BaalTondral_Exit(C_INFO)
 	information = DIA_BaalTondral_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_BaalTondral_Exit_Condition()
 {
 	if (Npc_KnowsInfo(hero,DIA_BaalTondral_MuteExit) || Npc_KnowsInfo(hero,DIA_BaalTondral_YouTalked))
-	{ 
+	{
 		return 1;
 	};
 };
@@ -64,7 +64,7 @@ instance DIA_BaalTondral_FanaticTeacher(C_INFO)
 	information = DIA_BaalTondral_FanaticTeacher_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_BaalTondral_FanaticTeacher_Condition()
 {
@@ -116,7 +116,7 @@ instance DIA_BaalTondral_YouTalked(C_INFO)
 //	description = "Hey! You've spoken to me. Does that mean I may talk to you now?";
 //	description = "Hey! Du hast mich angesprochen. Heißt das, ich kann jetzt mit dir reden?";
 	description = "Hej! Teď jsi mě oslovil. Znamená to, že teď s tebou smím mluvit?";
-};                       
+};
 
 func int DIA_BaalTondral_YouTalked_Condition()
 {
@@ -155,7 +155,7 @@ instance DIA_BaalTondral_Loyality(C_INFO)
 //	description = "How can I prove my loyalty?";
 //	description = "Wie kann ich dir meine Loyalität beweisen?";
 	description = "Jak můžu dokázat svou oddanost?";
-};                       
+};
 
 func int DIA_BaalTondral_Loyality_Condition()
 {
@@ -200,7 +200,7 @@ instance DIA_BaalTondral_NewMember(C_INFO)
 //	description = "Where can I recruit new members for the Brotherhood?";
 //	description = "Wo kann ich neue Leute für die Bruderschaft anwerben?";
 	description = "Kde mám hledat nové členy do Bratrstva?";
-};                       
+};
 
 func int DIA_BaalTondral_NewMember_Condition()
 {
@@ -214,7 +214,7 @@ func void DIA_BaalTondral_NewMember_Info()
 {
 //	AI_Output(other,self,"DIA_BaalTondral_NewMember_15_00"); //Where can I recruit new members for the Brotherhood?
 //	AI_Output(other,self,"DIA_BaalTondral_NewMember_15_00"); //Wo kann ich neue Leute für die Bruderschaft anwerben?
-	AI_Output(other,self,"DIA_BaalTondral_NewMember_15_00"); //Kde mám hledat nové členy do Bratrstva? 
+	AI_Output(other,self,"DIA_BaalTondral_NewMember_15_00"); //Kde mám hledat nové členy do Bratrstva?
 //	AI_Output(self,other,"DIA_BaalTondral_NewMember_13_01"); //The Old Camp is a good place to try, since a lot of the people there are fed up with fear and lies. They just need some kind of support.
 //	AI_Output(self,other,"DIA_BaalTondral_NewMember_13_01"); //Das alte Lager ist ein guter Ort dafür. Denn viele, die dort leben, sind der Angst und der Lügen überdrüssig, sie müssen nur ein wenig unterstützt werden.
 	AI_Output(self,other,"DIA_BaalTondral_NewMember_13_01"); //Starý tábor je dobrým místem. Lidé tam jsou již přesyceni strachem a lžemi. Potřebují nějakým způsobem pomoci.
@@ -237,7 +237,7 @@ instance DIA_BaalTondral_NewMember2(C_INFO)
 //	description = "Why are you so desperate for new members?";
 //	description = "Wieso braucht ihr so dringend neue Leute?";
 	description = "Proč tak moc potřebujete nové členy?";
-};                       
+};
 
 func int DIA_BaalTondral_NewMember2_Condition()
 {
@@ -282,7 +282,7 @@ instance DIA_BaalTondral_DustySuccess(C_INFO)
 //	description = "Here's somebody who would like to make your acquaintance, Master!";
 //	description = "Ich habe hier jemanden, der dich kennen lernen möchte, Meister!";
 	description = "Je tady někdo, mistře, kdo by se s vámi chtěl seznámit.";
-};                       
+};
 
 func int DIA_BaalTondral_DustySuccess_Condition()
 {
@@ -309,12 +309,12 @@ func void DIA_BaalTondral_DustySuccess_Info()
 //	AI_Output(self,other,"DIA_BaalTondral_DustySuccess_13_03"); //Very well. From now on, he shall be one of my disciples.
 //	AI_Output(self,other,"DIA_BaalTondral_DustySuccess_13_03"); //Gut. Von heute an soll er zu meinen Schülern zählen.
 	AI_Output(self,other,"DIA_BaalTondral_DustySuccess_13_03"); //Velmi dobře. Ode dneška bude jedním z mých žáků.
-	//------------------------------------------------------------------ 
+	//------------------------------------------------------------------
 	AI_TurnToNpc(self,dusty);
 	AI_TurnToNpc(dusty,other);
 //	AI_Output(self,NULL,"DIA_BaalTondral_DustySuccess_13_04"); //You will come to my hut every day to listen to my words. Your soul can still be saved.
 //	AI_Output(self,NULL,"DIA_BaalTondral_DustySuccess_13_04"); //Von heute an wirst du dich täglich vor meiner Hütte einfinden und meinen Worten lauschen. Deine Seele ist noch zu retten.
-	//#Needs_attention 'každý den do mé chýše' ou prasacinky :) 
+	//#Needs_attention 'každý den do mé chýše' ou prasacinky :)
 	AI_Output(self,NULL,"DIA_BaalTondral_DustySuccess_13_04"); //Ode dneška za mnou budeš chodit každý den do mé chýše a naslouchat mým slovům. Tvá duše může být stále zachráněna.
 
 	//AI_Output(dusty,other,"DIA_BaalTondral_DustySuccess_03_05"); //Heißt das, ich bin dabei - einfach so?
@@ -350,7 +350,7 @@ instance DIA_BaalTondral_SendToKalom(C_INFO)
 //	description = "Master! I would like to join the Brotherhood.";
 //	description = "Meister! Ich will in die Bruderschaft aufgenommen werden.";
 	description = "Mistře! Chtěl bych se přidat k Bratrstvu!";
-};                       
+};
 
 func int DIA_BaalTondral_SendToKalom_Condition()
 {

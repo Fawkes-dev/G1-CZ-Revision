@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Tpl_1416_Torwache_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Tpl_1416_Torwache_Exit(C_INFO)
 	information = DIA_Tpl_1416_Torwache_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Tpl_1416_Torwache_Exit_Condition()
 {
@@ -39,7 +39,7 @@ instance DIA_Tpl_1416_Torwache_Life(C_INFO)
 };
 
 func int DIA_Tpl_1416_Torwache_Life_Condition()
-{ 
+{
 	return 1;
 };
 

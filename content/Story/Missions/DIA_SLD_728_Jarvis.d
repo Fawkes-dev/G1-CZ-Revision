@@ -1,5 +1,5 @@
 // ************************************************************
-// 			  				   EXIT 
+// 			  				   EXIT
 // ************************************************************
 
 instance DIA_Jarvis_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Jarvis_EXIT(C_INFO)
 	information = DIA_Jarvis_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Jarvis_EXIT_Condition()
 {
@@ -18,7 +18,7 @@ func int DIA_Jarvis_EXIT_Condition()
 };
 
 func void DIA_Jarvis_EXIT_Info()
-{ 
+{
 //	AI_Output(self,other,"DIA_Jarvis_EXIT_08_00"); //Watch your back!
 //	AI_Output(self,other,"DIA_Jarvis_EXIT_08_00"); //Pass auf deinen Rücken auf!
 	AI_Output(self,other,"DIA_Jarvis_EXIT_08_00"); //Hlídej si záda!
@@ -37,7 +37,7 @@ instance DIA_Jarvis_First(C_INFO)
 	information = DIA_Jarvis_First_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Jarvis_First_Condition()
 {
@@ -45,7 +45,7 @@ func int DIA_Jarvis_First_Condition()
 };
 
 func void DIA_Jarvis_First_Info()
-{ 
+{
 //	AI_Output(self,other,"DIA_Jarvis_First_08_00"); //Do you intend to go through this gate?
 //	AI_Output(self,other,"DIA_Jarvis_First_08_00"); //Hast du vor, durch dies Tor zu gehen?
 	AI_Output(self,other,"DIA_Jarvis_First_08_00"); //Máš v úmyslu projít touhle branou?
@@ -77,7 +77,7 @@ instance DIA_Jarvis_SldInfo(C_INFO)
 //	description = "What do the mercenaries do?";
 //	description = "Was machen die Söldner?";
 	description = "Co dělají žoldáci?";
-};                       
+};
 
 func int DIA_Jarvis_SldInfo_Condition()
 {
@@ -88,7 +88,7 @@ func int DIA_Jarvis_SldInfo_Condition()
 };
 
 func void DIA_Jarvis_SldInfo_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Jarvis_SldInfo_15_00"); //What do the mercenaries do?
 //	AI_Output(other,self,"DIA_Jarvis_SldInfo_15_00"); //Was machen die Söldner?
 	AI_Output(other,self,"DIA_Jarvis_SldInfo_15_00"); //Co dělají žoldáci?
@@ -117,7 +117,7 @@ instance DIA_Jarvis_Magier(C_INFO)
 //	description = "What do the mages do?";
 //	description = "Was machen die Magier?";
 	description = "Co dělají mágové?";
-};                       
+};
 
 func int DIA_Jarvis_Magier_Condition()
 {
@@ -128,7 +128,7 @@ func int DIA_Jarvis_Magier_Condition()
 };
 
 func void DIA_Jarvis_Magier_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Jarvis_Magier_15_00"); //What do the mages do?
 //	AI_Output(other,self,"DIA_Jarvis_Magier_15_00"); //Was machen die Magier?
 	AI_Output(other,self,"DIA_Jarvis_Magier_15_00"); //Co dělají mágové?
@@ -160,7 +160,7 @@ instance DIA_Jarvis_Erzhaufen(C_INFO)
 //	description = "You have a massive ore mound here?";
 //	description = "Ihr habt einen riesigen Haufen Erz hier?";
 	description = "Máte tady velkou rudnou haldu?";
-};                       
+};
 
 func int DIA_Jarvis_Erzhaufen_Condition()
 {
@@ -171,7 +171,7 @@ func int DIA_Jarvis_Erzhaufen_Condition()
 };
 
 func void DIA_Jarvis_Erzhaufen_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Jarvis_Erzhaufen_15_00"); //You have a massive ore mound here?
 //	AI_Output(other,self,"DIA_Jarvis_Erzhaufen_15_00"); //Ihr habt einen riesigen Haufen Erz hier?
 	AI_Output(other,self,"DIA_Jarvis_Erzhaufen_15_00"); //Máte tady velkou rudnou haldu?
@@ -197,7 +197,7 @@ instance DIA_Jarvis_WoHaufen(C_INFO)
 //	description = "Where's the ore mound?";
 //	description = "Wo ist der Erzhaufen?";
 	description = "Kde je rudná halda?";
-};                       
+};
 
 func int DIA_Jarvis_WoHaufen_Condition()
 {
@@ -208,7 +208,7 @@ func int DIA_Jarvis_WoHaufen_Condition()
 };
 
 func void DIA_Jarvis_WoHaufen_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Jarvis_WoHaufen_15_00"); //Where's the ore mound?
 //	AI_Output(other,self,"DIA_Jarvis_WoHaufen_15_00"); //Wo ist der Erzhaufen?
 	AI_Output(other,self,"DIA_Jarvis_WoHaufen_15_00"); //Kde je rudná halda?
@@ -237,7 +237,7 @@ instance DIA_Jarvis_Rest(C_INFO)
 //	description = "What about the rest of the people?";
 //	description = "Was ist mit dem Rest der Leute?";
 	description = "A co zbytek lidí?";
-};                       
+};
 
 func int DIA_Jarvis_Rest_Condition()
 {
@@ -248,7 +248,7 @@ func int DIA_Jarvis_Rest_Condition()
 };
 
 func void DIA_Jarvis_Rest_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Jarvis_Rest_15_00"); //What about the rest of the people?
 //	AI_Output(other,self,"DIA_Jarvis_Rest_15_00"); //Was ist mit dem Rest der Leute?
 	AI_Output(other,self,"DIA_Jarvis_Rest_15_00"); //A co zbytek lidí?
@@ -271,7 +271,7 @@ instance DIA_Jarvis_PERM(C_INFO)
 //	description = "How are things going at the moment?";
 //	description = "Wie ist die Lage zur Zeit?";
 	description = "Jaká je momentálně situace?";
-};                       
+};
 
 func int DIA_Jarvis_PERM_Condition()
 {
@@ -282,7 +282,7 @@ func int DIA_Jarvis_PERM_Condition()
 };
 
 func void DIA_Jarvis_PERM_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Jarvis_PERM_15_00"); //How are things going at the moment?
 //	AI_Output(other,self,"DIA_Jarvis_PERM_15_00"); //Wie ist die Lage zur Zeit?
 	AI_Output(other,self,"DIA_Jarvis_PERM_15_00"); //Jaká je momentálně situace?
@@ -304,8 +304,8 @@ instance Sld_728_Jarvis_AUFNAHMESOLDIER(C_INFO)
 };
 
 func int Sld_728_Jarvis_AUFNAHMESOLDIER_Condition()
-{ 
-	if (Npc_GetTrueGuild(hero) == GIL_ORG) 
+{
+	if (Npc_GetTrueGuild(hero) == GIL_ORG)
 	&& ((Npc_HasItems(hero,ItAt_Crawlerqueen) >= 1) || (CorKalom_BringMCQBalls == LOG_SUCCESS))
 	&& (Npc_GetDistToNpc(hero,self) < 1000)
 	{
@@ -314,7 +314,7 @@ func int Sld_728_Jarvis_AUFNAHMESOLDIER_Condition()
 };
 func void Sld_728_Jarvis_AUFNAHMESOLDIER_Info()
 {
-	AI_GotoNpc(hero,self); 
+	AI_GotoNpc(hero,self);
 //	AI_Output(self,other,"Sld_728_Jarvis_AUFNAHMESOLDIER_Info_08_01"); //Hey, I heard you'd been giving the crawlers in the mine a hard time.
 //	AI_Output(self,other,"Sld_728_Jarvis_AUFNAHMESOLDIER_Info_08_01"); //Hey, ich habe gehört, du hast die Crawler in der Mine ganz schön aufgemischt.
 	AI_Output(self,other,"Sld_728_Jarvis_AUFNAHMESOLDIER_Info_08_01"); //Hej, slyšel jsem, že jsi v dolech pořádně zavařil důlním červům.

@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Guy_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Guy_Exit(C_INFO)
 	information = DIA_Guy_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Guy_Exit_Condition()
 {
@@ -39,7 +39,7 @@ instance DIA_Guy_Hello(C_INFO)
 };
 
 func int DIA_Guy_Hello_Condition()
-{ 
+{
 	if (Kapitel <= 1)
 	{
 		return 1;
@@ -88,7 +88,7 @@ instance DIA_Guy_AdOC(C_INFO)
 };
 
 func int DIA_Guy_AdOC_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Guy_Hello))
 	{
 		return 1;
@@ -119,7 +119,7 @@ func void DIA_Guy_AdOC_Info()
 //	Info_AddChoice(DIA_Guy_AdOC,"And what if two people fight each other who both pay protection money?",DIA_Guy_AdOC_Protection);
 //	Info_AddChoice(DIA_Guy_AdOC,"Und was ist, wenn zwei Leute kämpfen, die beide Schutzgeld zahlen?",DIA_Guy_AdOC_Protection);
 	Info_AddChoice(DIA_Guy_AdOC,"A co když se do sebe pustí dva lidé, kteří oba platí peníze za ochranu?",DIA_Guy_AdOC_Protection);
-}; 
+};
 
 func void DIA_Guy_AdOC_BACK()
 {
@@ -181,7 +181,7 @@ instance DIA_Guy_AdNC(C_INFO)
 };
 
 func int DIA_Guy_AdNC_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Guy_Hello))
 	{
 		return 1;
@@ -206,7 +206,7 @@ func void DIA_Guy_AdNC_Info()
 //	AI_Output(self,other,"DIA_Guy_AdNC_03_04"); //The only ones powerful enough to have a say there are the water mages, but they're too busy studying the Barrier all day.
 //	AI_Output(self,other,"DIA_Guy_AdNC_03_04"); //Die einzigen, die mächtig genug wären, den Laden zu schmeißen, sind die Wassermagier, und die forschen den ganzen Tag an der Barriere herum.
 	AI_Output(self,other,"DIA_Guy_AdNC_03_04"); //Jediný, kdo tam má opravdu moc, jsou mágové Vody, ale ti celé dny jen zkoumají Bariéru.
-}; 
+};
 
 // **************************************************
 // 				Advantages ST
@@ -225,7 +225,7 @@ instance DIA_Guy_AdST(C_INFO)
 };
 
 func int DIA_Guy_AdST_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Guy_Hello))
 	{
 		return 1;
@@ -270,7 +270,7 @@ instance DIA_Guy_MyOwnHut(C_INFO)
 };
 
 func int DIA_Guy_MyOwnHut_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Guy_Hello))
 	{
 		return 1;
@@ -287,4 +287,4 @@ func void DIA_Guy_MyOwnHut_Info()
 //	AI_Output(self,other,"DIA_Guy_MyOwnHut_03_01"); //Die Hütte da oben mit dem kleinen Vordach ist frei.
 	AI_Output(self,other,"DIA_Guy_MyOwnHut_03_01"); //Támhleta chatrč s malým přístřeškem je prázdná.
 	AI_StopPointAt(self);
-}; 
+};

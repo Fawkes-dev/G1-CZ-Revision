@@ -1,5 +1,5 @@
 // ************************************************************
-// 			  				   EXIT 
+// 			  				   EXIT
 // ************************************************************
 
 instance Info_Thorus_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance Info_Thorus_EXIT(C_INFO)
 	information = Info_Thorus_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_Thorus_EXIT_Condition()
 {
@@ -18,7 +18,7 @@ func int Info_Thorus_EXIT_Condition()
 };
 
 func void Info_Thorus_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -36,10 +36,10 @@ instance Info_Thorus_EnterCastle(C_INFO) //E2
 //	description = "You don't look as though you'd let just anyone get into the castle.";
 //	description = "Du siehst nicht so aus, als wenn du jeden in die Burg lassen würdest.";
 	description = "Nevypadáš, jako bys každého pustil na hrad.";
-};                       
+};
 
 func int Info_Thorus_EnterCastle_Condition()
-{ 
+{
 	if !C_NpcBelongsToOldCamp (other)
 	&& (Diego_GomezAudience == FALSE)
 	{
@@ -47,7 +47,7 @@ func int Info_Thorus_EnterCastle_Condition()
 	};
 };
 func void Info_Thorus_EnterCastle_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_EnterCastle_15_00"); //You don't look as though you'd let just anyone get into the castle.
 //	AI_Output(other,self,"Info_EnterCastle_15_00"); //Du siehst nicht so aus, als wenn du jeden in die Burg lassen würdest.
 	AI_Output(other,self,"Info_EnterCastle_15_00"); //Nevypadáš, jako bys každého pustil na hrad.
@@ -70,7 +70,7 @@ instance Info_Thorus_WorkForGomez(C_INFO) //E2
 //	description = "I want to work for Gomez.";
 //	description = "Ich will für Gomez arbeiten.";
 	description = "Chci pro Gomeze pracovat.";
-};                       
+};
 
 func int Info_Thorus_WorkForGomez_Condition()
 {
@@ -82,7 +82,7 @@ func int Info_Thorus_WorkForGomez_Condition()
 };
 
 func void Info_Thorus_WorkForGomez_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_WorkForGomez_15_00"); //I want to work for Gomez.
 //	AI_Output(other,self,"Info_WorkForGomez_15_00"); //Ich will für Gomez arbeiten.
 	AI_Output(other,self,"Info_WorkForGomez_15_00"); //Chci pro Gomeze pracovat.
@@ -105,7 +105,7 @@ instance Info_Thorus_DiegoSentMe(C_INFO) //E3
 //	description = "Diego says YOU decide who Gomez is interested in.";
 //	description = "Diego sagt, DU entscheidest, wer Gomez interessiert.";
 	description = "Diego řekl, že TY rozhoduješ, kdo je pro Gomeze zajímavý.";
-};                       
+};
 
 func int Info_Thorus_DiegoSentMe_Condition()
 {
@@ -116,7 +116,7 @@ func int Info_Thorus_DiegoSentMe_Condition()
 };
 
 func void Info_Thorus_DiegoSentMe_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_Thorus_DiegoSentMe_15_00"); //Diego says YOU decide who Gomez is interested in.
 //	AI_Output(other,self,"Info_Thorus_DiegoSentMe_15_00"); //Diego sagt, DU entscheidest, wer Gomez interessiert.
 	AI_Output(other,self,"Info_Thorus_DiegoSentMe_15_00"); //Diego řekl, že TY rozhoduješ, kdo je pro Gomeze zajímavý.
@@ -152,7 +152,7 @@ instance Info_Thorus_TryMe(C_INFO) //E3
 //	description = "Why don't you give me the test?";
 //	description = "Warum stellst du mich nicht auf die Probe?";
 	description = "Proč mě nevyzkoušíš ty?";
-};                       
+};
 
 func int Info_Thorus_TryMe_Condition()
 {
@@ -163,7 +163,7 @@ func int Info_Thorus_TryMe_Condition()
 };
 
 func void Info_Thorus_TryMe_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_Thorus_TryMe_15_00"); //Why don't you give me the test?
 //	AI_Output(other,self,"Info_Thorus_TryMe_15_00"); //Warum stellst du mich nicht auf die Probe?
 	AI_Output(other,self,"Info_Thorus_TryMe_15_00"); //Proč mě nevyzkoušíš ty?
@@ -192,7 +192,7 @@ instance Info_Thorus_TryMeAgain(C_INFO) //E4
 //	description = "There must be something you want done.";
 //	description = "Es muss doch eine Aufgabe geben, die du erledigt haben willst.";
 	description = "Je tu určitě něco, co chceš udělat.";
-};                       
+};
 
 func int Info_Thorus_TryMeAgain_Condition()
 {
@@ -203,7 +203,7 @@ func int Info_Thorus_TryMeAgain_Condition()
 };
 
 func void Info_Thorus_TryMeAgain_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_Thorus_TryMeAgain_15_00"); //There must be something you want done.
 //	AI_Output(other,self,"Info_Thorus_TryMeAgain_15_00"); //Es muss doch eine Aufgabe geben, die du erledigt haben willst.
 	AI_Output(other,self,"Info_Thorus_TryMeAgain_15_00"); //Je tu určitě něco, co chceš udělat.
@@ -229,7 +229,7 @@ instance Info_Thorus_TryMeICanDoIt(C_INFO) //E5
 //	description = "I'm quite capable of doing anything you tell me to.";
 //	description = "Ich kann alles schaffen, was du mir aufträgst.";
 	description = "Jsem schopný udělat cokoliv, co mi přikážeš.";
-};                       
+};
 
 func int Info_Thorus_TryMeICanDoIt_Condition()
 {
@@ -240,7 +240,7 @@ func int Info_Thorus_TryMeICanDoIt_Condition()
 };
 
 func void Info_Thorus_TryMeICanDoIt_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_Thorus_TryMeICanDoIt_15_00"); //I'm quite capable of doing anything you tell me to.
 //	AI_Output(other,self,"Info_Thorus_TryMeICanDoIt_15_00"); //Ich kann alles schaffen, was du mir aufträgst.
 	AI_Output(other,self,"Info_Thorus_TryMeICanDoIt_15_00"); //Jsem schopný udělat cokoliv, co mi přikážeš.
@@ -270,7 +270,7 @@ instance Info_Thorus_MordragKo_Offer(C_INFO) //E6
 //	description = "I'm ready for your task.";
 //	description = "Ich bin bereit für deine Aufgabe.";
 	description = "Jsem připraven vykonat tvůj úkol.";
-};                       
+};
 
 func int Info_Thorus_MordragKo_Offer_Condition()
 {
@@ -333,7 +333,7 @@ func void Info_Thorus_MordragKo_Offer_Info()
 	Log_SetTopicStatus(CH1_MordragKO,LOG_RUNNING);
 
 	//#Needs_Attention toto je tu naco ? :)
-	var C_Npc Mordrag; 
+	var C_Npc Mordrag;
 	Mordrag = Hlp_GetNpc(ORG_826_Mordrag);
 };
 
@@ -415,10 +415,10 @@ instance Info_Thorus_MordragKo_Analyze(C_INFO)
 //	description = "About Mordrag...";
 //	description = "Wegen Mordrag...";
 	description = "O Mordragovi...";
-};                       
+};
 
 func int Info_Thorus_MordragKo_Analyze_Condition()
-{ 
+{
 	if ((Thorus_MordragKo == LOG_RUNNING) && (MordragKO_PlayerChoseThorus != TRUE))
 	{
 		return 1;
@@ -442,7 +442,7 @@ func void Info_Thorus_MordragKo_Analyze_Info()
 		Info_AddChoice(Info_Thorus_MordragKo_Analyze,"Mordrag už nikdy nikomu nic neukradne!",Info_Thorus_MordragKo_MordragDead);
 	}
 	else if ((MordragKO_HauAb==TRUE) || (MordragKO_StayAtNC==TRUE))
-	{ 
+	{
 //		Info_AddChoice(Info_Thorus_MordragKo_Analyze,"He's never gonna show his face around here again!",Info_Thorus_MordragKo_MordragGone);
 //		Info_AddChoice(Info_Thorus_MordragKo_Analyze,"Der Typ wird sich hier nie wieder blicken lassen!",Info_Thorus_MordragKo_MordragGone);
 		Info_AddChoice(Info_Thorus_MordragKo_Analyze,"Ten chlapík se tu už nikdy víc neukáže!",Info_Thorus_MordragKo_MordragGone);
@@ -467,7 +467,7 @@ func void Info_Thorus_MordragKo_MordragDead()
 //	AI_Output(self,other,"Info_Thorus_MordragKo_MordragDead_09_01"); //Du hast ihn geschafft? Nicht schlecht, Kleiner.
 	AI_Output(self,other,"Info_Thorus_MordragKo_MordragDead_09_01"); //Myslíš tím, žes ho porazil? To není špatné, hochu.
 	Thorus_MordragKo = LOG_SUCCESS;
-	Log_SetTopicStatus(CH1_MordragKO,LOG_SUCCESS); 
+	Log_SetTopicStatus(CH1_MordragKO,LOG_SUCCESS);
 //	B_LogEntry(CH1_MordragKO,"Thorus was impressed that I got Mordrag out of the way. A clear bonus for me.");
 //	B_LogEntry(CH1_MordragKO,"Thorus war beeindruckt, dass ich Mordrag beseitigt habe. Ein klarer Pluspunkt für mich.");
 	B_LogEntry(CH1_MordragKO,"Thorus byl potěšen, že mu Mordrag zmizel z cesty. Výhoda pro mě.");
@@ -494,7 +494,7 @@ func void Info_Thorus_MordragKo_MordragGone()
 };
 
 // ************************************************************
-// 						Mordrag verplappert 
+// 						Mordrag verplappert
 // ************************************************************
 
 instance Info_Thorus_MordragFailed(C_INFO)
@@ -505,10 +505,10 @@ instance Info_Thorus_MordragFailed(C_INFO)
 	information = Info_Thorus_MordragFailed_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int Info_Thorus_MordragFailed_Condition()
-{ 
+{
 	if (MordragKO_PlayerChoseThorus == TRUE)
 	{
 		return 1;
@@ -534,7 +534,7 @@ func void Info_Thorus_MordragFailed_Info()
 };
 
 // ************************************************************
-// 						Bribe Thorus 
+// 						Bribe Thorus
 // ************************************************************
 
 instance Info_Thorus_BribeGuard(C_INFO)
@@ -547,10 +547,10 @@ instance Info_Thorus_BribeGuard(C_INFO)
 //	description = "If I gave you a certain amount of ore, would you let me in the castle?";
 //	description = "Würdest du mich für eine entsprechende Menge Erz in die Burg lassen?";
 	description = "Kdybych ti dal určité množství rudy, pustil bys mě na hrad?";
-};                       
+};
 
 func int Info_Thorus_BribeGuard_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_Thorus_EnterCastle) && (Npc_GetTrueGuild(other)!=GIL_STT) && (Npc_GetTrueGuild(other)!=GIL_GRD))
 	{
 		return 1;
@@ -586,7 +586,7 @@ func void Info_Thorus_BribeGuard_Info()
 };
 
 // ************************************************************
-// 						Give1000Ore 
+// 						Give1000Ore
 // ************************************************************
 
 instance Info_Thorus_Give1000Ore(C_INFO)
@@ -599,7 +599,7 @@ instance Info_Thorus_Give1000Ore(C_INFO)
 //	description = "I have the 1000 nuggets of ore. Now let me go in!";
 //	description = "Ich hab' die 1000 Brocken Erz. Lass mich in die Burg!";
 	description = "Mám 1000 magických nugetů. Teď mě pusť dovnitř!";
-};                       
+};
 
 func int Info_Thorus_Give1000Ore_Condition()
 {
@@ -619,7 +619,7 @@ func void Info_Thorus_Give1000Ore_Info()
 
 	if (Npc_HasItems(other,ItMiNugget)>=1000)
 	{
-		B_GiveInvItems(other,self,ItMiNugget,1000); 
+		B_GiveInvItems(other,self,ItMiNugget,1000);
 //		AI_Output(self,other,"Info_Thorus_Give1000Ore_09_01"); //Alright, go ahead. You can go in the castle, but don't do anything stupid, okay?
 //		AI_Output(self,other,"Info_Thorus_Give1000Ore_09_01"); //Gut, wegen mir. Du kommst in die Burg, aber mach keine Dummheiten, klar!
 		AI_Output(self,other,"Info_Thorus_Give1000Ore_09_01"); //Dobrá, běž přímo rovně. Můžeš jít do hradu, ale žádné hlouposti, jasný?
@@ -650,10 +650,10 @@ instance Info_Thorus_LetterForMages(C_INFO)
 //	description = "I need to get into the castle! I have a letter here for the High Mage.";
 //	description = "Ich muss in die Burg! Ich habe einen Brief für den obersten Feuermagier.";
 	description = "Potřebuju se dostat do hradu! Nesu dopis pro nejvyššího Mága Ohně.";
-};                       
+};
 
 func int Info_Thorus_LetterForMages_Condition()
-{ 
+{
 	//#Needs_Attention tento dialog je permanentne dostupny ... aj ked hrac ma pristup na hrad - to by sme mohli zrusit podobne ako dialog hore
 	if Npc_KnowsInfo(hero,Info_Thorus_EnterCastle)
 	&& (Npc_HasItems(hero,ItWr_Fire_Letter_01) || Npc_HasItems(hero,ItWr_Fire_Letter_02))
@@ -698,10 +698,10 @@ instance Info_Thorus_ReadyForGomez(C_INFO)
 //	description = "Diego says I'm ready to see Gomez!";
 //	description = "Diego sagt, ich bin bereit für Gomez!";
 	description = "Diego říká, že můžu vidět Gomeze!";
-};                       
+};
 
 func int Info_Thorus_ReadyForGomez_Condition()
-{ 
+{
 	if (Diego_GomezAudience == TRUE)
 	{
 		return 1;
@@ -755,10 +755,10 @@ instance Info_Thorus_Krautbote(C_INFO)
 //	description = "I have a consignment of weed for Gomez from Cor Kalom.";
 //	description = "Ich habe ne Ladung Kraut von Cor Kalom für Gomez.";
 	description = "Mám tady od Cor Kaloma zásilku drogy z bažin pro Gomeze.";
-};                       
+};
 
 func int Info_Thorus_Krautbote_Condition()
-{ 
+{
 	if (Kalom_Krautbote == LOG_RUNNING)
 	{
 		return 1;
@@ -814,10 +814,10 @@ instance Info_Thorus_KdWSiegel(C_INFO)
 //	description = "I'm on an errand for the water mages. I need to get into the castle!";
 //	description = "Ich bin Bote der Wassermagier. Ich muss in die Burg!";
 	description = "Jsem posel mágů Vody. Potřebuju se dostat na hrad!";
-};                       
+};
 
 func int Info_Thorus_KdWSiegel_Condition()
-{ 
+{
 	if (((Npc_KnowsInfo(hero,Org_826_Mordrag_Courier))||(Npc_HasItems(other,KdW_Amulett)>=1))
 	&& (thorus_Amulettgezeigt == FALSE))
 	{
@@ -867,10 +867,10 @@ instance Info_Thorus_SttGeschafft(C_INFO)
 //	description = "I've done it. At last I belong to the Camp!";
 //	description = "Ich hab's geschafft. Jetzt bin ich Mitglied des Lagers!";
 	description = "Dokázal jsem to. Teď jsem členem tábora.";
-};                       
+};
 
 func int Info_Thorus_SttGeschafft_Condition()
-{ 
+{
 	if (Npc_GetTrueGuild(other) == GIL_STT)
 	{
 		return 1;
@@ -888,7 +888,7 @@ func void Info_Thorus_SttGeschafft_Info()
 //	AI_Output(self,other,"Info_Thorus_SttGeschafft_09_02"); //Only go to Gomez or Raven if you have something REALLY important to say.
 //	AI_Output(self,other,"Info_Thorus_SttGeschafft_09_02"); //Zu Gomez oder Raven solltest du nur noch gehen, wenn du was WIRKLICH Wichtiges zu sagen hast.
 	AI_Output(self,other,"Info_Thorus_SttGeschafft_09_02"); //Za Gomezem a Ravenem jdi pouze tehdy, když jim chceš říci OPRAVDU něco důležitého.
-}; 
+};
 
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
@@ -910,10 +910,10 @@ instance Info_Thorus_PERM2(C_INFO)
 //	description = "How are you doing?";
 //	description = "Wie sieht's bei dir aus?";
 	description = "Jak to jde?";
-};                       
+};
 
 func int Info_Thorus_PERM2_Condition()
-{ 
+{
 	if ((Npc_GetTrueGuild(other) == GIL_STT) && (Kapitel < 4))
 	{
 		return 1;
@@ -928,7 +928,7 @@ func void Info_Thorus_PERM2_Info()
 //	AI_Output(self,other,"Info_Thorus_PERM2_09_01"); //We're not having much trouble from the New Camp. I'm more worried about those sect loonies.
 //	AI_Output(self,other,"Info_Thorus_PERM2_09_01"); //Wir haben wenig Ärger mit den Typen aus dem Neuen Lager. Mir machen eher die Sektenspinner Sorgen.
 	AI_Output(self,other,"Info_Thorus_PERM2_09_01"); //S lidmi z Nového tábora už nemáme tolik starostí. Spíš mám obavy z těch sektářských bláznů.
-}; 
+};
 
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
@@ -947,13 +947,13 @@ instance GRD_200_Thorus_GARDIST(C_INFO)
 	information = GRD_200_Thorus_GARDIST_Info;
 	important = 0;
 	permanent = 0;
-//	description = "You have something to tell me?"; 
-//	description = "Du wolltest mir etwas mitteilen?"; 
-	description = "Chceš mi něco říci?"; 
+//	description = "You have something to tell me?";
+//	description = "Du wolltest mir etwas mitteilen?";
+	description = "Chceš mi něco říci?";
 };
 
 func int GRD_200_Thorus_GARDIST_Condition()
-{ 
+{
 	if ((CorKalom_BringMCQBalls == LOG_SUCCESS)
 	|| Npc_KnowsInfo(hero,Grd_214_Torwache_SEETHORUS)
 	|| Npc_KnowsInfo(hero,GRD_216_Torwache_SEETHORUS))
@@ -967,7 +967,7 @@ func int GRD_200_Thorus_GARDIST_Condition()
 
 func void GRD_200_Thorus_GARDIST_Info()
 {
-	var C_Npc KDFWache; 
+	var C_Npc KDFWache;
 	KDFWache = Hlp_GetNpc(GRD_245_GARDIST);
 	KDFWache.aivar[AIV_PASSGATE] = TRUE;
 //	AI_Output(other,self,"GRD_200_Thorus_GARDIST_Info_15_01"); //You have something to tell me?
@@ -1004,15 +1004,15 @@ instance GRD_200_Thorus_AUFNAHME(C_INFO)
 	condition = GRD_200_Thorus_AUFNAHME_Condition;
 	information = GRD_200_Thorus_AUFNAHME_Info;
 	permanent = 0;
-//	description = "I want to become a guard."; 
-//	description = "Ich will Gardist werden"; 
-	description = "Chci se stát strážcem."; 
+//	description = "I want to become a guard.";
+//	description = "Ich will Gardist werden";
+	description = "Chci se stát strážcem.";
 };
 
 func int GRD_200_Thorus_AUFNAHME_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,GRD_200_Thorus_GARDIST))
-	&& (hero.level >=10) 
+	&& (hero.level >=10)
 	&& (Npc_GetTrueGuild(hero) == GIL_STT)
 	{
 		return TRUE;
@@ -1057,13 +1057,13 @@ func void GRD_200_Thorus_AUFNAHME_Info()
 //	AI_Output(self,other,"GRD_200_Thorus_AUFNAHME_Info_09_11"); //Du findest Stone im inneren Ring, in der Schmiede.
 	AI_Output(self,other,"GRD_200_Thorus_AUFNAHME_Info_09_11"); //Stonea najdeš v kovárně na nádvoří.
 
-	var C_Npc KDFWache; 
+	var C_Npc KDFWache;
 	KDFWache = Hlp_GetNpc(GRD_245_GARDIST);
 	KDFWache.aivar[AIV_PASSGATE] = FALSE;
 
 	Npc_SetTrueGuild(hero,GIL_GRD);
 	hero.guild = GIL_GRD;
-};  
+};
 
 //---------------------------------------------------------------
 // GARDIST WERDEN TEIL 2
@@ -1078,9 +1078,9 @@ instance GRD_200_Thorus_NOCHWAS(C_INFO)
 };
 
 func int GRD_200_Thorus_NOCHWAS_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,GRD_200_Thorus_AUFNAHME))
-	&& (Npc_GetTrueGuild(hero) == GIL_GRD ) 
+	&& (Npc_GetTrueGuild(hero) == GIL_GRD )
 	{
 		return TRUE;
 	};
@@ -1111,13 +1111,13 @@ instance GRD_200_Thorus_WANNABEMAGE(C_INFO)
 	condition = GRD_200_Thorus_WANNABEMAGE_Condition;
 	information = GRD_200_Thorus_WANNABEMAGE_Info;
 	permanent = 0;
-//	description = "I'm interested in the path of magic."; 
-//	description = "Ich interessiere mich für den Weg der Magie!"; 
-	description = "Zajímá mě cesta magie."; 
+//	description = "I'm interested in the path of magic.";
+//	description = "Ich interessiere mich für den Weg der Magie!";
+	description = "Zajímá mě cesta magie.";
 };
 //
 func int GRD_200_Thorus_WANNABEMAGE_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,GRD_200_Thorus_GARDIST))
 	&& (!Npc_KnowsInfo(hero,GRD_200_Thorus_AUFNAHME))
 	{
@@ -1153,11 +1153,11 @@ instance GRD_200_Thorus_Teach(C_INFO)
 //	description = "Can you teach me?";
 //	description = "Kannst du mich trainieren?";
 	description = "Mohl bys mě učit?";
-};                       
+};
 
 func int GRD_200_Thorus_Teach_Condition()
 {
-	if (Npc_GetTrueGuild(hero) == GIL_GRD)  
+	if (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
 		return TRUE;
 	};
@@ -1246,13 +1246,13 @@ instance GRD_200_Thorus_ZWEIHAND1(C_INFO)
 	information = GRD_200_Thorus_ZWEIHAND1_Info;
 	important = 0;
 	permanent = 1;
-//	description = B_BuildLearnString(NAME_Learn2h_1, LPCOST_TALENT_2H_1,0); 
-//	description = B_BuildLearnString(NAME_Learn2h_1, LPCOST_TALENT_2H_1,0); 
-	description = B_BuildLearnString(NAME_Learn2h_1,LPCOST_TALENT_2H_1,0); 
+//	description = B_BuildLearnString(NAME_Learn2h_1, LPCOST_TALENT_2H_1,0);
+//	description = B_BuildLearnString(NAME_Learn2h_1, LPCOST_TALENT_2H_1,0);
+	description = B_BuildLearnString(NAME_Learn2h_1,LPCOST_TALENT_2H_1,0);
 };
 
 func int GRD_200_Thorus_ZWEIHAND1_Condition()
-{ 
+{
 	if (Npc_GetTalentSkill(hero,NPC_TALENT_1H) == 2)
 	&& (Npc_GetTalentSkill(hero,NPC_TALENT_2H) < 1)
 	&& (Npc_GetTrueGuild(hero) == GIL_GRD)
@@ -1262,7 +1262,7 @@ func int GRD_200_Thorus_ZWEIHAND1_Condition()
 
 };
 func void GRD_200_Thorus_ZWEIHAND1_Info()
-{ 
+{
 	if (log_thorusfight == FALSE)
 	{
 		Log_CreateTopic(GE_TeacherOC,LOG_NOTE);
@@ -1297,7 +1297,7 @@ func void GRD_200_Thorus_ZWEIHAND1_Info()
 		AI_Output(self,other,"GRD_200_Thorus_ZWEIHAND1_Info_09_07"); //To by mohlo pro začátek stačit. Trénuj!
 		GRD_200_Thorus_ZWEIHAND1.permanent = 0;
 	};
-};  
+};
 //-------------------------------------------------------------------------
 //							ZWEIHANDKAMPF LERNEN STUFE 2
 //-------------------------------------------------------------------------
@@ -1308,13 +1308,13 @@ instance GRD_200_Thorus_ZWEIHAND2(C_INFO)
 	information = GRD_200_Thorus_ZWEIHAND2_Info;
 	important = 0;
 	permanent = 1;
-//	description = B_BuildLearnString(NAME_Learn2h_2, LPCOST_TALENT_2H_2,0); 
-//	description = B_BuildLearnString(NAME_Learn2h_2, LPCOST_TALENT_2H_2,0); 
-	description = B_BuildLearnString(NAME_Learn2h_2,LPCOST_TALENT_2H_2,0); 
+//	description = B_BuildLearnString(NAME_Learn2h_2, LPCOST_TALENT_2H_2,0);
+//	description = B_BuildLearnString(NAME_Learn2h_2, LPCOST_TALENT_2H_2,0);
+	description = B_BuildLearnString(NAME_Learn2h_2,LPCOST_TALENT_2H_2,0);
 };
 
 func int GRD_200_Thorus_ZWEIHAND2_Condition()
-{ 
+{
 	if (Npc_GetTalentSkill(hero,NPC_TALENT_2H) == 1)
 	&& (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
@@ -1356,4 +1356,4 @@ func void GRD_200_Thorus_ZWEIHAND2_Info()
 		AI_Output(self,other,"GRD_200_Thorus_ZWEIHAND2_Info_09_09"); //Změna postoje a úderů jsou klíčem k vítězství.
 		GRD_200_Thorus_ZWEIHAND2.permanent = 0;
 	};
-};  
+};

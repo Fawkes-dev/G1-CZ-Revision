@@ -1,5 +1,5 @@
 // **************************************************
-//						 EXIT 
+//						 EXIT
 // **************************************************
 
 instance DIA_GorNaDrak_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_GorNaDrak_EXIT(C_INFO)
 	information = DIA_GorNaDrak_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_GorNaDrak_EXIT_Condition()
 {
@@ -36,7 +36,7 @@ instance DIA_GorNaDrak_Greet(C_INFO)
 //	description  = "Hi! Where are you off to?";
 //	description  = "Hi! Wohin soll's denn gehen?";
 	description  = "Zdar! Kam odcházíš?";
-};                       
+};
 
 func int DIA_GorNaDrak_Greet_Condition()
 {
@@ -70,7 +70,7 @@ instance DIA_GorNaDrak_WasSekret(C_INFO)
 //	description  = "What kind of secretion is it?";
 //	description  = "Was ist das für ein Sekret?";
 	description  = "Jaký druh výměšku to je?";
-};                       
+};
 
 func int DIA_GorNaDrak_WasSekret_Condition()
 {
@@ -104,7 +104,7 @@ instance DIA_GorNaDrak_TeachMandibles(C_INFO)
 //	description  = "Can you tell me how to get the secretion of a minecrawler?";
 //	description  = "Kannst du mir sagen, wie ich an das Sekret eines Minecrawlers herankomme?";
 	description  = "Můžeš mi říct, jak mohu získat výměšek důlních červů?";
-};                       
+};
 
 func int DIA_GorNaDrak_TeachMandibles_Condition()
 {
@@ -147,7 +147,7 @@ instance DIA_GorNaDrak_WhatFor(C_INFO)
 //	description  = "What does Cor Kalom need the secretion for?";
 //	description  = "Wofür braucht Cor Kalom das Sekret?";
 	description  = "Na co potřebuje Cor Kalom ten výměšek?";
-};                       
+};
 
 func int DIA_GorNaDrak_WhatFor_Condition()
 {
@@ -187,7 +187,7 @@ instance DIA_GorNaDrak_Permanent(C_INFO)
 //	description  = "Have you enough of the potion for the great invocation of the Sleeper?";
 //	description  = "Habt ihr schon genug Elixier für die große Anrufung des Schläfers?";
 	description  = "Máte dost lektvaru na to velké vzývání Spáče?";
-};                       
+};
 
 func int DIA_GorNaDrak_Permanent_Condition()
 {

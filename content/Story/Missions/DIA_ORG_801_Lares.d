@@ -1,5 +1,5 @@
-// ****************************** 
-//				EXIT 
+// ******************************
+//				EXIT
 // ******************************
 
 instance ORG_801_Lares_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance ORG_801_Lares_Exit(C_INFO)
 	information = ORG_801_Lares_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int ORG_801_Lares_Exit_Condition()
 {
@@ -22,7 +22,7 @@ func void ORG_801_Lares_Exit_Info()
 	AI_StopProcessInfos(self);
 };
 
-// ****************************** 
+// ******************************
 //			Wie hier rein?
 // ******************************
 	var int Lares_vorbeigemogelt;
@@ -36,7 +36,7 @@ instance ORG_801_Lares_YouHere(C_INFO)
 	information = ORG_801_Lares_YouHere_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int ORG_801_Lares_YouHere_Condition()
 {
@@ -74,7 +74,7 @@ func void ORG_801_Lares_YouHere_Info()
 	};
 };
 
-// ****************************** 
+// ******************************
 //			Wanna Join
 // ******************************
 
@@ -88,7 +88,7 @@ instance ORG_801_Lares_WannaJoin(C_INFO)
 //	description = "I want to join your gang.";
 //	description = "Ich will mich eurer Bande anschließen.";
 	description = "Chci se přidat k tvojí tlupě!";
-};                       
+};
 
 func int ORG_801_Lares_WannaJoin_Condition()
 {
@@ -109,7 +109,7 @@ func void ORG_801_Lares_WannaJoin_Info()
 	AI_Output(self,other,"ORG_801_Lares_WannaJoin_11_01"); //Cože? Proto ses tady ukázal?
 };
 
-// ****************************** 
+// ******************************
 //			Bring List
 // ******************************
 	var int Lares_BringListBack;
@@ -125,7 +125,7 @@ instance ORG_801_Lares_BringList(C_INFO)
 //	description = "I have the list of requirements for the Old Mine on me.";
 //	description = "Ich habe die Bedarfsliste der Alten Mine bei mir.";
 	description = "Mám s sebou seznam požadavků ze Starého dolu.";
-};                       
+};
 
 func int ORG_801_Lares_BringList_Condition()
 {
@@ -169,13 +169,13 @@ func void ORG_801_Lares_BringList_Info()
 		Log_CreateTopic(CH1_JoinNC,LOG_MISSION);
 		Log_SetTopicStatus(CH1_JoinNC,LOG_RUNNING);
 	};
-//	B_LogEntry(CH1_JoinNC,"Lares, the leader of the rogues, was very surprised when he saw the list of requirements. He extended it and now I'm to take it to Diego."); 
-//	B_LogEntry(CH1_JoinNC,"Lares, der Anführer der Banditen war sehr erstaunt, die Bedarfsliste zu sehen. Er hat sie erweitert und ich soll sie Diego bringen."); 
-	B_LogEntry(CH1_JoinNC,"Lares, vůdce banditů, byl velmi překvapen, když uviděl seznam požadavků. Připsal další položky a já jej teď nesu Diegovi."); 
-	B_GiveXP(XP_GiveListToLares); 
+//	B_LogEntry(CH1_JoinNC,"Lares, the leader of the rogues, was very surprised when he saw the list of requirements. He extended it and now I'm to take it to Diego.");
+//	B_LogEntry(CH1_JoinNC,"Lares, der Anführer der Banditen war sehr erstaunt, die Bedarfsliste zu sehen. Er hat sie erweitert und ich soll sie Diego bringen.");
+	B_LogEntry(CH1_JoinNC,"Lares, vůdce banditů, byl velmi překvapen, když uviděl seznam požadavků. Připsal další položky a já jej teď nesu Diegovi.");
+	B_GiveXP(XP_GiveListToLares);
 };
 
-// ****************************** 
+// ******************************
 //		List an Diego!
 // ******************************
 
@@ -189,7 +189,7 @@ instance ORG_801_Lares_BringListBack(C_INFO)
 //	description = "I've given the list to Diego.";
 //	description = "Ich habe Diego die Liste übergeben.";
 	description = "Přinesl jsem Diegovi seznam.";
-};                       
+};
 
 func int ORG_801_Lares_BringListBack_Condition()
 {
@@ -211,14 +211,14 @@ func void ORG_801_Lares_BringListBack_Info()
 	Points_NC = Points_NC + 10;
 	Lares_BringListBack = LOG_SUCCESS;
 
-//	B_LogEntry(CH1_JoinNC,"Lares has already robbed the convoy of the Old Camp. Apparently he didn't want to wait until ... or rather IN CASE I came back."); 
-//	B_LogEntry(CH1_JoinNC,"Lares hat den Konvoy des Alten Lagers bereits überfallen. Offensichtlich wollte er nicht abwarten, bis... oder vielmehr OB ich zurückkomme."); 
-	B_LogEntry(CH1_JoinNC,"Lares již přepadl konvoje Starého tábora. Zřejmě se mu nechtělo čekat, dokud... nebo spíše POKUD se vrátím. "); 
+//	B_LogEntry(CH1_JoinNC,"Lares has already robbed the convoy of the Old Camp. Apparently he didn't want to wait until ... or rather IN CASE I came back.");
+//	B_LogEntry(CH1_JoinNC,"Lares hat den Konvoy des Alten Lagers bereits überfallen. Offensichtlich wollte er nicht abwarten, bis... oder vielmehr OB ich zurückkomme.");
+	B_LogEntry(CH1_JoinNC,"Lares již přepadl konvoje Starého tábora. Zřejmě se mu nechtělo čekat, dokud... nebo spíše POKUD se vrátím. ");
 
 	B_GiveXP(XP_ReportListDeliveryToLares);
 };
 
-// ****************************** 
+// ******************************
 //		Anteil wegen BringList
 // ******************************
 
@@ -232,7 +232,7 @@ instance ORG_801_Lares_BringListAnteil(C_INFO)
 //	description = "They've already mugged the convoy? Where's my share?";
 //	description = "Sie haben den Konvoi schon überfallen? Was ist mein Anteil bei der Sache?";
 	description = "Už přepadli konvoj? Kde je můj podíl?";
-};                       
+};
 
 func int ORG_801_Lares_BringListAnteil_Condition()
 {
@@ -272,7 +272,7 @@ func void ORG_801_Lares_BringListAnteil_Info()
 	gorn.aivar[AIV_FINDABLE]==TRUE;
 };
 
-// ****************************** 
+// ******************************
 //		Mordrag schickt mich
 // ******************************
 
@@ -286,7 +286,7 @@ instance ORG_801_Lares_MordragSentMe(C_INFO)
 //	description = "Mordrag sent me. He gave me a ring for you.";
 //	description = "Mordrag schickt mich. Er hat mir einen Ring für dich gegeben.";
 	description = "Poslal mě Mordrag. Dal mi pro tebe prsten.";
-};                       
+};
 
 func int ORG_801_Lares_MordragSentMe_Condition()
 {
@@ -325,15 +325,15 @@ func void ORG_801_Lares_MordragSentMe_Info()
 		Log_CreateTopic(CH1_JoinNC,LOG_MISSION);
 		Log_SetTopicStatus(CH1_JoinNC,LOG_RUNNING);
 	};
-//	B_LogEntry(CH1_JoinNC,"Lares sent me to Mordrag. He wants me to tell him that a spy will be sent to the Sect Camp in order to find out what the Brotherhood is planning."); 
-//	B_LogEntry(CH1_JoinNC,"Lares, hat mich zu Mordrag geschickt. Ich soll ihm sagen, dass ein Spion in das Sektenlager geschickt werden soll, der herausfindet, was die Bruderschaft vorbereitet."); 
-	B_LogEntry(CH1_JoinNC,"Lares mě vyslal za Mordragem. Chce, abych mu řekl, že do Sektářského tábora bude vyslán zvěd, aby zjistil, co chystá Bratrstvo."); 
-	B_GiveXP(XP_GiveRingToLares); 
+//	B_LogEntry(CH1_JoinNC,"Lares sent me to Mordrag. He wants me to tell him that a spy will be sent to the Sect Camp in order to find out what the Brotherhood is planning.");
+//	B_LogEntry(CH1_JoinNC,"Lares, hat mich zu Mordrag geschickt. Ich soll ihm sagen, dass ein Spion in das Sektenlager geschickt werden soll, der herausfindet, was die Bruderschaft vorbereitet.");
+	B_LogEntry(CH1_JoinNC,"Lares mě vyslal za Mordragem. Chce, abych mu řekl, že do Sektářského tábora bude vyslán zvěd, aby zjistil, co chystá Bratrstvo.");
+	B_GiveXP(XP_GiveRingToLares);
 
 	Points_NC = Points_NC + 10;
 };
 
-// ****************************** 
+// ******************************
 //		Immerhin vorbeigemogelt
 // ******************************
 
@@ -347,7 +347,7 @@ instance ORG_801_Lares_Vorbeigemogelt(C_INFO)
 //	description = "I did manage to get past your guards.";
 //	description = "Ich bin immerhin an deinen Wachen vorbeigekommen.";
 	description = "Podařilo se mi dostat přes tvoje stráže.";
-};                       
+};
 
 func int ORG_801_Lares_Vorbeigemogelt_Condition()
 {
@@ -369,7 +369,7 @@ func void ORG_801_Lares_Vorbeigemogelt_Info()
 	Points_NC = Points_NC + 10;
 };
 
-// ****************************** 
+// ******************************
 //		Baal Isidro - Get Kraut
 // ******************************
 	var int Lares_Get400Ore;
@@ -385,7 +385,7 @@ instance ORG_801_Lares_GetKraut(C_INFO)
 //	description = "What else can I do?";
 //	description = "Was kann ich noch machen?";
 	description = "Co mám ještě udělat?";
-};                       
+};
 
 func int ORG_801_Lares_GetKraut_Condition()
 {
@@ -427,12 +427,12 @@ func void ORG_801_Lares_GetKraut_Info()
 		Log_CreateTopic(CH1_JoinNC,LOG_MISSION);
 		Log_SetTopicStatus(CH1_JoinNC,LOG_RUNNING);
 	};
-//	B_LogEntry(CH1_JoinNC,"I'm told to get Baal Isidro's weed and to sell it for 400 ore. Lares wants to get the profit."); 
-//	B_LogEntry(CH1_JoinNC,"Ich soll Baal Isidro sein Kraut abnehmen und für 400 Erz verhökern. Den Erlös will Lares haben."); 
-	B_LogEntry(CH1_JoinNC,"Mám převzít drogu Baala Isidra a prodat ji za 400 nugetů.Výtěžek dostane Lares."); 
+//	B_LogEntry(CH1_JoinNC,"I'm told to get Baal Isidro's weed and to sell it for 400 ore. Lares wants to get the profit.");
+//	B_LogEntry(CH1_JoinNC,"Ich soll Baal Isidro sein Kraut abnehmen und für 400 Erz verhökern. Den Erlös will Lares haben.");
+	B_LogEntry(CH1_JoinNC,"Mám převzít drogu Baala Isidra a prodat ji za 400 nugetů.Výtěžek dostane Lares.");
 };
 
-// ****************************** 
+// ******************************
 //			400 Ore
 // ******************************
 
@@ -446,7 +446,7 @@ instance ORG_801_Lares_400Ore(C_INFO)
 //	description = "I have the 400 ore.";
 //	description = "Ich hab' die 400 Erz.";
 	description = "Mám těch 400 nugetů.";
-};                       
+};
 
 func int ORG_801_Lares_400Ore_Condition()
 {
@@ -470,10 +470,10 @@ func void ORG_801_Lares_400Ore_Info()
 		Points_NC = Points_NC + 10;
 
 		B_GiveInvItems(other,self,ItMiNugget, 400);
-//		B_LogEntry(CH1_JoinNC,"Lares was clearly satisfied when I gave him the 400 ore I got by selling Baal Isidro's weed."); 
-//		B_LogEntry(CH1_JoinNC,"Lares zeigte sich sichtlich zufrieden, als ich ihm die 400 Erz aus dem Verkaufserlös von Baal Isidros Krautstengel übergab."); 
-		B_LogEntry(CH1_JoinNC,"Lares byl zjevně spokojený, když jsem mu předal těch 400 nugetů, které jsem utržil prodejem drogy Baala Isidra."); 
-		B_GiveXP(XP_BaalIsidroPayLares); 
+//		B_LogEntry(CH1_JoinNC,"Lares was clearly satisfied when I gave him the 400 ore I got by selling Baal Isidro's weed.");
+//		B_LogEntry(CH1_JoinNC,"Lares zeigte sich sichtlich zufrieden, als ich ihm die 400 Erz aus dem Verkaufserlös von Baal Isidros Krautstengel übergab.");
+		B_LogEntry(CH1_JoinNC,"Lares byl zjevně spokojený, když jsem mu předal těch 400 nugetů, které jsem utržil prodejem drogy Baala Isidra.");
+		B_GiveXP(XP_BaalIsidroPayLares);
 	}
 	else
 	{
@@ -483,7 +483,7 @@ func void ORG_801_Lares_400Ore_Info()
 	};
 };
 
-// ****************************** 
+// ******************************
 //		Reicht das jetzt???
 // ******************************
 
@@ -497,11 +497,11 @@ instance ORG_801_Lares_Reicht(C_INFO)
 //	description = "Is that enough for me to join you?";
 //	description = "Reicht das, um bei euch aufgenommen zu werden?";
 	description = "Stačí to, abych se mohl přidat?";
-};                       
+};
 
 func int ORG_801_Lares_Reicht_Condition()
 {
-	if (Npc_KnowsInfo(hero,ORG_801_Lares_WannaJoin) 
+	if (Npc_KnowsInfo(hero,ORG_801_Lares_WannaJoin)
 	&& (Npc_KnowsInfo(hero,ORG_801_Lares_MordragSentMe) || Npc_KnowsInfo(hero,ORG_801_Lares_BringList))
 	&& (Npc_GetTrueGuild(other)==GIL_NONE) && (Kapitel <2))
 
@@ -534,7 +534,7 @@ func void ORG_801_Lares_Reicht_Info()
 		Npc_RemoveInvItem(hero,ItAmArrow);
 
 		AI_EquipBestArmor(hero);
-		B_GiveXP(XP_BecomeBandit); 
+		B_GiveXP(XP_BecomeBandit);
 
 //		B_LogEntry(CH1_JoinNC,"Lares made me a member of his gang. Now the New Camp is my home!");
 //		B_LogEntry(CH1_JoinNC,"Lares hat mich in seine Bande aufgenommen. Ab jetzt ist das Neue Lager meine neue Heimat!");
@@ -582,7 +582,7 @@ func void ORG_801_Lares_Reicht_Info()
 	};
 };
 
-// ****************************** 
+// ******************************
 //			Goto Kalom
 // ******************************
 
@@ -596,7 +596,7 @@ instance ORG_801_Lares_GotoKalom(C_INFO)
 //	description = "And what am I supposed to do now?";
 //	description = "Und was soll ich jetzt machen?";
 	description = "A co se očekává, že mám udělat?";
-};                       
+};
 
 func int ORG_801_Lares_GotoKalom_Condition()
 {
@@ -622,7 +622,7 @@ func void ORG_801_Lares_GotoKalom_Info()
 	B_LogEntry(CH1_GotoPsiCamp,"Bratrstvo z tábora v bažinách plánuje něco velkého. Lares, vůdce banditů, chce vědět, co to je.");
 
 	if (Lares_InformMordrag == LOG_RUNNING)
-	{ 
+	{
 //		AI_Output(self,other,"ORG_801_Lares_GotoKalom_11_02"); //If you want to make yourself useful, go to Mordrag and help him with the sect business.
 //		AI_Output(self,other,"ORG_801_Lares_GotoKalom_11_02"); //Wenn du dich nützlich machen willst, geh zu Mordrag und unterstütz ihn bei der Sektensache.
 		AI_Output(self,other,"ORG_801_Lares_GotoKalom_11_02"); //Jestli chceš být užitečný, jdi za Mordragem a pomoz mu s tou akcí se sektáři.
@@ -666,7 +666,7 @@ func void ORG_801_Lares_GotoKalom_Info()
 	};
 };
 
-// ****************************** 
+// ******************************
 //			Wo lernen?
 // ******************************
 
@@ -677,9 +677,9 @@ instance ORG_801_Lares_WhereLearn(C_INFO)
 	condition = ORG_801_Lares_WhereLearn_Condition;
 	information = ORG_801_Lares_WhereLearn_Info;
 	permanent = 0;
-//	description = "Where can I learn something?"; 
-//	description = "Wo kann ich hier was lernen?"; 
-	description = "Kde se můžu něco naučit?"; 
+//	description = "Where can I learn something?";
+//	description = "Wo kann ich hier was lernen?";
+	description = "Kde se můžu něco naučit?";
 };
 
 func int ORG_801_Lares_WhereLearn_Condition()
@@ -700,7 +700,7 @@ func void ORG_801_Lares_WhereLearn_Info()
 //	B_LogEntry(GE_TeacherNC,"Lares kann mir beibringen, mein GESCHICK und meine STÄRKE zu verbessern.");
 	B_LogEntry(GE_TeacherNC,"Lares mě může naučit, jak zlepšit svou ZRUČNOST a SÍLU.");
 
-};  
+};
 // ******************************
 // 		STR + DEX LERNEN
 // ******************************
@@ -714,10 +714,10 @@ instance ORG_801_Lares_Teach(C_INFO)
 //	description = "I want to better myself.";
 //	description = "Ich will mich verbessern";
 	description = "Chci se zlepšit.";
-};                       
+};
 
 func int ORG_801_Lares_Teach_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,ORG_801_Lares_WhereLearn))
 	{
 		return TRUE;

@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Kyle_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Kyle_Exit(C_INFO)
 	information = DIA_Kyle_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Kyle_Exit_Condition()
 {
@@ -38,7 +38,7 @@ instance DIA_Kyle_HutRage(C_INFO)
 };
 
 func int DIA_Kyle_HutRage_Condition()
-{ 
+{
 	if ((Npc_RefuseTalk(self) == FALSE) && (Npc_GetDistToNpc(self,other)<=ZivilAnquatschDist))
 	{
 		return 1;
@@ -69,8 +69,8 @@ instance DIA_Kyle_Problem(C_INFO)
 };
 
 func int DIA_Kyle_Problem_Condition()
-{ 
-	return 1; 
+{
+	return 1;
 };
 
 func void DIA_Kyle_Problem_Info()

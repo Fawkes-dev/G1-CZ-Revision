@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Dusty_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Dusty_Exit(C_INFO)
 	information = DIA_Dusty_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Dusty_Exit_Condition()
 {
@@ -39,7 +39,7 @@ instance DIA_Dusty_Hello(C_INFO)
 };
 
 func int DIA_Dusty_Hello_Condition()
-{ 
+{
 	return 1;
 };
 
@@ -79,7 +79,7 @@ instance DIA_Dusty_WhyNotLeave(C_INFO)
 };
 
 func int DIA_Dusty_WhyNotLeave_Condition()
-{ 
+{
 	if  Npc_KnowsInfo(hero,DIA_Dusty_Hello)
 	&& !Npc_KnowsInfo(hero,DIA_Dusty_MetMelvin)
 	{
@@ -123,7 +123,7 @@ instance DIA_Dusty_MetMelvin(C_INFO)
 };
 
 func int DIA_Dusty_MetMelvin_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Melvin_Hello))
 	{
 		return 1;
@@ -172,7 +172,7 @@ instance DIA_Dusty_Offer100Ore(C_INFO)
 };
 
 func int DIA_Dusty_Offer100Ore_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Dusty_MetMelvin))
 	&& (BaalTondral_GetNewGuy == LOG_RUNNING)
 	{
@@ -214,7 +214,7 @@ instance DIA_Dusty_IWouldGo(C_INFO)
 };
 
 func int DIA_Dusty_IWouldGo_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Dusty_Offer100Ore))
 	{
 		return 1;
@@ -258,7 +258,7 @@ instance DIA_Dusty_LetsGo(C_INFO)
 };
 
 func int DIA_Dusty_LetsGo_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Dusty_IWouldGo))
 	&& (Npc_GetDistToWP(hero,"OCR_MAINGATE_INSIDE") > 1500)
 	&& (Npc_GetDistToWP(hero,"OCR_NORTHGATE_RAMP_ATOP") > 1500)

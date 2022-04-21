@@ -8,10 +8,10 @@ instance DIA_BaalOrun_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_BaalOrun_Exit_Condition;
 	information = DIA_BaalOrun_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_BaalOrun_Exit_Condition()
 {
@@ -24,7 +24,7 @@ func void DIA_BaalOrun_Exit_Info()
 };
 
 // ************************************************************
-// 					NICHT ansprechbar (Ungläubiger) 
+// 					NICHT ansprechbar (Ungläubiger)
 // ************************************************************
 	var int BaalOrun_Ansprechbar;
 	var int BaalOrun_Sakrileg;
@@ -38,7 +38,7 @@ instance DIA_BaalOrun_NoTalk(C_INFO)
 	information = DIA_BaalOrun_NoTalk_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_BaalOrun_NoTalk_Condition()
 {
@@ -49,7 +49,7 @@ func int DIA_BaalOrun_NoTalk_Condition()
 };
 
 func void DIA_BaalOrun_NoTalk_Info()
-{ 
+{
 	Info_ClearChoices(DIA_BaalOrun_NoTalk);
 	Info_Addchoice (DIA_BaalOrun_NoTalk,DIALOG_ENDE ,DIA_BaalOrun_NoTalk_ENDE);
 //	Info_Addchoice (DIA_BaalOrun_NoTalk,"Everything alright, pal?",DIA_BaalOrun_NoTalk_Imp);
@@ -109,7 +109,7 @@ instance DIA_BaalOrun_FirstTalk(C_INFO)
 	information = DIA_BaalOrun_FirstTalk_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_BaalOrun_FirstTalk_Condition()
 {
@@ -193,7 +193,7 @@ instance DIA_BaalOrun_GotWeed(C_INFO)
 	information = DIA_BaalOrun_GotWeed_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_BaalOrun_GotWeed_Condition()
 {
@@ -242,7 +242,7 @@ instance DIA_BaalOrun_WeedAtKaloms(C_INFO)
 //	description = "I took the swampweed to Cor Kalom.";
 //	description = "Ich habe Cor Kalom das Sumpfkraut gebracht.";
 	description = "Předal jsem drogu z bažin Cor Kalomovi.";
-};                       
+};
 
 func int DIA_BaalOrun_WeedAtKaloms_Condition()
 {
@@ -285,7 +285,7 @@ instance DIA_BaalOrun_Perm(C_INFO)
 //	description = "How's weed production going?";
 //	description = "Wie läuft die Krautproduktion?";
 	description = "Jak jde produkce drogy z bažin?";
-};                       
+};
 
 func int DIA_BaalOrun_Perm_Condition()
 {

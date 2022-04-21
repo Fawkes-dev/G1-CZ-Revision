@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Huno_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Huno_Exit(C_INFO)
 	information = DIA_Huno_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Huno_Exit_Condition()
 {
@@ -39,7 +39,7 @@ instance DIA_Huno_YouKnowYourJob(C_INFO)
 };
 
 func int DIA_Huno_YouKnowYourJob_Condition()
-{ 
+{
 	return TRUE;
 };
 
@@ -73,7 +73,7 @@ instance DIA_Huno_HowLong(C_INFO)
 };
 
 func int DIA_Huno_HowLong_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,DIA_Huno_YouKnowYourJob)
 	{
 		return TRUE;
@@ -129,7 +129,7 @@ instance DIA_Huno_HowsYourBusiness(C_INFO)
 };
 
 func int DIA_Huno_HowsYourBusiness_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,DIA_Huno_YouKnowYourJob)
 	{
 		return TRUE;
@@ -178,7 +178,7 @@ instance DIA_Huno_LEARNSMITH(C_INFO)
 };
 
 func int DIA_Huno_LEARNSMITH_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,DIA_Huno_YouKnowYourJob)
 	{
 		return TRUE;
@@ -237,7 +237,7 @@ instance DIA_Huno_BUYSMITH(C_INFO)
 };
 
 func int DIA_Huno_BUYSMITH_Condition()
-{ 
+{
 	if (Huno_LearnSmith == TRUE)
 	{
 		return TRUE;

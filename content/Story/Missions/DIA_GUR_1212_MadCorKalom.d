@@ -48,7 +48,7 @@ func void GUR_1212_MadCorKalom_Talk2SC_Info()
 	AI_StopProcessInfos(self);
 
 	Npc_SetAttitude(self,ATT_HOSTILE);
-	Npc_SetTempAttitude(self,ATT_HOSTILE); 
+	Npc_SetTempAttitude(self,ATT_HOSTILE);
 
 	AI_Wait(self,2);
 	Npc_SetTarget(self,hero);

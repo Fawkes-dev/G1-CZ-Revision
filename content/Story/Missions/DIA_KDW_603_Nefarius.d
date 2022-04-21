@@ -1,5 +1,5 @@
-// **************************** 
-//				EXIT 
+// ****************************
+//				EXIT
 // ****************************
 
 instance Info_Nefarius_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance Info_Nefarius_EXIT(C_INFO)
 	information = Info_Nefarius_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_Nefarius_EXIT_Condition()
 {
@@ -22,8 +22,8 @@ func void Info_Nefarius_EXIT_Info()
 	AI_StopProcessInfos(self);
 };
 
-// **************************** 
-//			Hallo 
+// ****************************
+//			Hallo
 // ****************************
 
 instance Info_Nefarius_Hallo(C_INFO)
@@ -36,7 +36,7 @@ instance Info_Nefarius_Hallo(C_INFO)
 //	description = "Who are you?";
 //	description = "Wer bist du?";
 	description = "Kdo jsi?";
-};                       
+};
 
 func int Info_Nefarius_Hallo_Condition()
 {
@@ -53,7 +53,7 @@ func void Info_Nefarius_Hallo_Info()
 	AI_Output(self,other,"Info_Nefarius_Hallo_04_01"); //Jsem Nefarius. Mág Kruhu vody.
 };
 
-// **************************** 
+// ****************************
 //			Wo Saturas
 // ****************************
 
@@ -67,7 +67,7 @@ instance Info_Nefarius_WoSaturas(C_INFO)
 //	description = "Where can I find Saturas?";
 //	description = "Wo finde ich Saturas?";
 	description = "Kde najdu Saturase?";
-};                       
+};
 
 func int Info_Nefarius_WoSaturas_Condition()
 {
@@ -84,7 +84,7 @@ func void Info_Nefarius_WoSaturas_Info()
 	AI_Output(self,other,"Info_Nefarius_WoSaturas_04_01"); //Projdi tou velkou kulatou branou. Tam ho najdeš.
 };
 
-// **************************** 
+// ****************************
 //			WannaMage
 // ****************************
 
@@ -98,7 +98,7 @@ instance Info_Nefarius_WannaMage(C_INFO)
 //	description = "I'd like to become a Magician of the Circle of Water!";
 //	description = "Ich will ein Magier vom Kreis des Wassers werden!";
 	description = "Chtěl bych se stát mágem Kruhu vody.";
-};                       
+};
 
 func int Info_Nefarius_WannaMage_Condition()
 {
@@ -130,7 +130,7 @@ func void Info_Nefarius_WannaMage_Info()
 	AI_Output(self,other,"Info_Nefarius_WannaMage_04_05"); //A jednoho dne možná dostaneš možnost vykonat něco velkého.
 };
 
-// **************************** 
+// ****************************
 //			NowReady
 // ****************************
 
@@ -144,14 +144,14 @@ instance Info_Nefarius_NowReady(C_INFO)
 //	description = "Am I ready for the Circle of Water?";
 //	description = "Bin ich bereit für den Kreis des Wassers?";
 	description = "Jsem připraven na vstup do Kruhu vody?";
-};                       
+};
 
 func int Info_Nefarius_NowReady_Condition()
 {
 	if ( !FMTaken && Npc_KnowsInfo(hero,Info_Nefarius_WannaMage) && (Npc_GetTrueGuild(hero)!=GIL_KDW))
 	{
 		return 1;
-	}; 
+	};
 };
 
 func void Info_Nefarius_NowReady_Info()
@@ -160,7 +160,7 @@ func void Info_Nefarius_NowReady_Info()
 //	AI_Output(other,self,"Info_Nefarius_NowReady_15_00"); //Bin ich bereit für den Kreis des Wassers?
 	AI_Output(other,self,"Info_Nefarius_NowReady_15_00"); //Jsem připraven na vstup do Kruhu vody?
 
-	if (Npc_GetTrueGuild(hero) != GIL_SLD) 
+	if (Npc_GetTrueGuild(hero) != GIL_SLD)
 	{
 //		AI_Output(self,other,"Info_Nefarius_NowReady_04_01"); //Become one of our mercenaries, then we'll see...
 //		AI_Output(self,other,"Info_Nefarius_NowReady_04_01"); //Werde einer unserer Söldner, dann sehen wir weiter...
@@ -183,7 +183,7 @@ func void Info_Nefarius_NowReady_Info()
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
 
-// **************************** 
+// ****************************
 //			OCNews
 // ****************************
 
@@ -195,7 +195,7 @@ instance Info_Nefarius_OCNews(C_INFO)
 	information = Info_Nefarius_OCNews_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int Info_Nefarius_OCNews_Condition()
 {
@@ -203,7 +203,7 @@ func int Info_Nefarius_OCNews_Condition()
 	&& !FindXardas
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Nefarius_OCNews_Info()

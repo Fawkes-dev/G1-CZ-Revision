@@ -1,5 +1,5 @@
 // ************************************************************
-// 			  				   EXIT 
+// 			  				   EXIT
 // ************************************************************
 
 instance DIA_ARTO_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_ARTO_EXIT(C_INFO)
 	information = DIA_ARTO_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_ARTO_EXIT_Condition()
 {
@@ -18,7 +18,7 @@ func int DIA_ARTO_EXIT_Condition()
 };
 
 func void DIA_ARTO_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -36,7 +36,7 @@ instance DIA_ARTO_Hello(C_INFO)
 //	description = "Who are you?";
 //	description = "Wer bist du?";
 	description = "Kdo jsi?";
-};                       
+};
 
 func int DIA_ARTO_Hello_Condition()
 {
@@ -44,7 +44,7 @@ func int DIA_ARTO_Hello_Condition()
 };
 
 func void DIA_ARTO_Hello_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_ARTO_Hello_15_00"); //Who are you?
 //	AI_Output(other,self,"DIA_ARTO_Hello_15_00"); //Wer bist du?
 	AI_Output(other,self,"DIA_ARTO_Hello_15_00"); //Kdo jsi?
@@ -67,7 +67,7 @@ instance DIA_ARTO_What(C_INFO)
 //	description = "What do you do round here?";
 //	description = "Was machst du so?";
 	description = "Co tady máš na práci?";
-};                       
+};
 
 func int DIA_ARTO_What_Condition()
 {
@@ -78,7 +78,7 @@ func int DIA_ARTO_What_Condition()
 };
 
 func void DIA_ARTO_What_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_ARTO_What_15_00"); //What do you do around here?
 //	AI_Output(other,self,"DIA_ARTO_What_15_00"); //Was machst du so?
 	AI_Output(other,self,"DIA_ARTO_What_15_00"); //Co tady děláš?
@@ -101,7 +101,7 @@ instance DIA_ARTO_PERM(C_INFO)
 //	description = "You don't talk much, do you?";
 //	description = "Du redest nicht viel, was?";
 	description = "Ty toho moc nenamluvíš, co?";
-};                       
+};
 
 func int DIA_ARTO_PERM_Condition()
 {
@@ -112,7 +112,7 @@ func int DIA_ARTO_PERM_Condition()
 };
 
 func void DIA_ARTO_PERM_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_ARTO_PERM_15_00"); //You don't talk much, do you?
 //	AI_Output(other,self,"DIA_ARTO_PERM_15_00"); //Du redest nicht viel, was?
 	AI_Output(other,self,"DIA_ARTO_PERM_15_00"); //Ty toho moc nenamluvíš, co?

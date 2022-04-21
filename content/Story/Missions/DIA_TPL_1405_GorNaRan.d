@@ -10,7 +10,7 @@ instance DIA_GorNaRan_Exit(C_INFO)
 	information = DIA_GorNaRan_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_GorNaRan_Exit_Condition()
 {
@@ -36,7 +36,7 @@ instance DIA_GorNaRan_Wache(C_INFO)
 //	description = "What are you doing here?";
 //	description = "Was machst du hier?";
 	description = "Co tady děláš?";
-};                       
+};
 
 func int DIA_GorNaRan_Wache_Condition()
 {
@@ -67,14 +67,14 @@ instance Info_TPL_1405_GorNaRan(C_INFO)
 	information = Info_TPL_1405_GorNaRan_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int Info_TPL_1405_GorNaRan_Condition()
 {
 	if (Kapitel == 6)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_TPL_1405_GorNaRan_Info()
@@ -96,7 +96,7 @@ instance Info_TPL_1405_GorNaRan2(C_INFO)
 //	description = "What's going on here anyway?";
 //	description = "Was ist hier eigentlich los?";
 	description = "Co se tu vlastně děje?";
-};                       
+};
 
 func int Info_TPL_1405_GorNaRan2_Condition()
 {
@@ -127,7 +127,7 @@ instance Info_TPL_1405_GorNaRan3(C_INFO)
 //	description = "Just wanted to have a look around.";
 //	description = "Wollte mich nur umsehen";
 	description = "Chtěl jsem se tu jen porozhlédnout.";
-};                       
+};
 
 func int Info_TPL_1405_GorNaRan3_Condition()
 {
@@ -137,7 +137,7 @@ func int Info_TPL_1405_GorNaRan3_Condition()
 };
 
 func void Info_TPL_1405_GorNaRan3_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_TPL_1405_GorNaRan_Info_15_04"); //Just wanted to have a look around.
 //	AI_Output(other,self,"Info_TPL_1405_GorNaRan_Info_15_04"); //Wollte mich nur umsehen.
 	AI_Output(other,self,"Info_TPL_1405_GorNaRan_Info_15_04"); //Chtěl jsem se tu jen porozhlédnout.
@@ -161,7 +161,7 @@ instance Info_TPL_1405_GorNaRan4(C_INFO)
 //	description = "You can't stop me!";
 //	description = "Du kannst mich nicht aufhalten!";
 	description = "Nemůžeš mě zastavit!";
-};                       
+};
 
 func int Info_TPL_1405_GorNaRan4_Condition()
 {
@@ -171,7 +171,7 @@ func int Info_TPL_1405_GorNaRan4_Condition()
 };
 
 func void Info_TPL_1405_GorNaRan4_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_TPL_1405_GorNaRan_Info_15_06"); //You can't stop me!
 //	AI_Output(other,self,"Info_TPL_1405_GorNaRan_Info_15_06"); //Du kannst mich nicht aufhalten!
 	AI_Output(other,self,"Info_TPL_1405_GorNaRan_Info_15_06"); //Nemůžeš mě zastavit!

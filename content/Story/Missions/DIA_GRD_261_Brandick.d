@@ -6,10 +6,10 @@ instance GRD_261_Brandick_Exit(C_INFO)
 	nr = 999;
 	condition = GRD_261_Brandick_Exit_Condition;
 	information = GRD_261_Brandick_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int GRD_261_Brandick_Exit_Condition()
 {
@@ -30,13 +30,13 @@ instance GRD_261_Brandick_ALEPH(C_INFO)
 	information = GRD_261_Brandick_ALEPH_Info;
 	important = 0;
 	permanent = 0;
-//	description = "(complain about Aleph)"; 
-//	description = "(Aleph anschwärzen)"; 
-	description = "(stěžuj si na Alepha)"; 
+//	description = "(complain about Aleph)";
+//	description = "(Aleph anschwärzen)";
+	description = "(stěžuj si na Alepha)";
 };
 
 func int GRD_261_Brandick_ALEPH_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,VLK_585_Aleph_GUARDS))
 	{
 		return 1;
@@ -56,4 +56,4 @@ func void GRD_261_Brandick_ALEPH_Info()
 	AI_Output(self,other,"GRD_261_Brandick_ALEPH_Info_06_03"); //Víš, kým opovrhuju ještě víc než línou kůží? Zrádcema! Ztrať se!
 
 	AI_StopProcessInfos(self);
-};  
+};

@@ -10,7 +10,7 @@ instance DIA_Aidan_Exit(C_INFO)
 	information = DIA_Aidan_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Aidan_Exit_Condition()
 {
@@ -39,7 +39,7 @@ instance DIA_Aidan_Hello(C_INFO)
 };
 
 func int DIA_Aidan_Hello_Condition()
-{ 
+{
 	return 1;
 };
 
@@ -78,7 +78,7 @@ instance Org_859_Aidan_Creatures(C_INFO)
 //	description = "I want to learn how to cut up animals.";
 //	description = "Ich will lernen, Tiere auszuschlachten.";
 	description = "Chci se naučit rozřezávat zvěř.";
-};                       
+};
 
 func int Org_859_Aidan_Creatures_Condition()
 {
@@ -210,7 +210,7 @@ func void Org_859_Aidan_Creatures_Fell()
 //			AI_Output(self,other,"Org_859_Aidan_Creatures_Fell_13_01"); //It's very important to skin them from the front to the back. Once you get the hang of it, it'll be easy. Furs are very valuable!
 //			AI_Output(self,other,"Org_859_Aidan_Creatures_Fell_13_01"); //Wichtig ist vor allem: Immer von vorne nach hinten. Wenn du den Bogen einmal raushast, ist es kein Problem. Felle sind sehr wertvoll!
 			AI_Output(self,other,"Org_859_Aidan_Creatures_Fell_13_01"); //Důležité je kůži stahovat zezadu dopředu. Jakmile se ti napne, už je to snadné. Kožešiny se velmi cení!
-//			AI_Output(self,other,"Org_859_Aidan_Creatures_Fell_13_02"); //The furs of wolves and shadowbeasts can be used to make clothes. When you examine the fur of a killed animal, you'll soon notice if it can be used or not. 
+//			AI_Output(self,other,"Org_859_Aidan_Creatures_Fell_13_02"); //The furs of wolves and shadowbeasts can be used to make clothes. When you examine the fur of a killed animal, you'll soon notice if it can be used or not.
 //			AI_Output(self,other,"Org_859_Aidan_Creatures_Fell_13_02"); //Das Fell von Wölfen oder Schattenläufern eignet sich zum Herstellen von Kleidung. Du wirst merken, ob ein erlegtes Tier ein brauchbares Fell hat, wenn du es untersuchst.
 			AI_Output(self,other,"Org_859_Aidan_Creatures_Fell_13_02"); //Kůže vlků a stínových příšer se můžou použít na oděv. Když prohlídneš kožešinu zabitého zvířete, hned poznáš, jestli ji půjde použít nebo ne.
 

@@ -8,7 +8,7 @@ instance Info_HighPriest1(C_INFO)
 	information = Info_HighPriest1_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int Info_HighPriest1_Condition()
 {
@@ -41,6 +41,6 @@ func void Info_HighPriest1_Info()
 	AI_StopProcessInfos(self);
 
 	Npc_SetAttitude(self,ATT_HOSTILE);
-	Npc_SetTempAttitude(self,ATT_HOSTILE); 
+	Npc_SetTempAttitude(self,ATT_HOSTILE);
 };
 

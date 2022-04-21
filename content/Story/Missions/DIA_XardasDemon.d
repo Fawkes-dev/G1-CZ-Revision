@@ -6,10 +6,10 @@ instance Info_XardasDemon_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_XardasDemon_EXIT_Condition;
 	information = Info_XardasDemon_EXIT_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_XardasDemon_EXIT_Condition()
 {
@@ -48,11 +48,11 @@ instance Info_XardasDemon_INTRO(C_INFO)
 };
 
 func int Info_XardasDemon_INTRO_Condition()
-{ 
+{
 	if (FindXardas)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_XardasDemon_INTRO_Info()
@@ -96,11 +96,11 @@ instance Info_XardasDemon_MASTERWHO(C_INFO)
 };
 
 func int Info_XardasDemon_MASTERWHO_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_XardasDemon_INTRO))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_XardasDemon_MASTERWHO_Info()
@@ -134,11 +134,11 @@ instance Info_XardasDemon_MASTERHOW(C_INFO)
 };
 
 func int Info_XardasDemon_MASTERHOW_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_XardasDemon_INTRO))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_XardasDemon_MASTERHOW_Info()
@@ -186,7 +186,7 @@ instance Info_XardasDemon_NOHEART(C_INFO)
 };
 
 func int Info_XardasDemon_NOHEART_Condition()
-{ 
+{
 	if  Npc_KnowsInfo(hero,Info_XardasDemon_MASTERHOW)
 	&& !Npc_HasItems(hero,ItAt_StoneGolem_01)
 	&& !Npc_HasItems(hero,ItAt_IceGolem_01)
@@ -194,7 +194,7 @@ func int Info_XardasDemon_NOHEART_Condition()
 	&& (FindGolemHearts < 4)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_XardasDemon_NOHEART_Info()
@@ -278,12 +278,12 @@ instance Info_XardasDemon_STONEHEART(C_INFO)
 };
 
 func int Info_XardasDemon_STONEHEART_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Info_XardasDemon_MASTERHOW)
 	&& Npc_HasItems(hero,ItAt_StoneGolem_01)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_XardasDemon_STONEHEART_Info()
@@ -314,12 +314,12 @@ instance Info_XardasDemon_ICEHEART(C_INFO)
 };
 
 func int Info_XardasDemon_ICEHEART_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Info_XardasDemon_MASTERHOW)
 	&& Npc_HasItems(hero,ItAt_IceGolem_01)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_XardasDemon_ICEHEART_Info()
@@ -349,12 +349,12 @@ instance Info_XardasDemon_FIREHEART(C_INFO)
 };
 
 func int Info_XardasDemon_FIREHEART_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Info_XardasDemon_MASTERHOW)
 	&& Npc_HasItems(hero,ItAt_FireGolem_01)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_XardasDemon_FIREHEART_Info()

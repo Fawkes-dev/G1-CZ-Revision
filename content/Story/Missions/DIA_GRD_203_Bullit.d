@@ -1,5 +1,5 @@
 //******************************************
-//					EXIT 
+//					EXIT
 //******************************************
 
 instance DIA_Bullit_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Bullit_Exit(C_INFO)
 	information = DIA_Bullit_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Bullit_Exit_Condition()
 {
@@ -23,7 +23,7 @@ func void DIA_Bullit_Exit_Info()
 };
 
 //******************************************
-//					First 
+//					First
 //******************************************
 
 instance DIA_Bullit_First(C_INFO)
@@ -34,7 +34,7 @@ instance DIA_Bullit_First(C_INFO)
 	information = DIA_Bullit_First_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Bullit_First_Condition()
 {
@@ -62,7 +62,7 @@ instance DIA_Bullit_AufsMAul(C_INFO)
 //	description = "I've come to stuff your big mouth for you.";
 //	description = "Ich bin gekommen, um dir dein großes Maul zu stopfen.";
 	description = "Přišel jsem, abych ti zacpal tu tvojí velkou hubu.";
-};                       
+};
 
 func int DIA_Bullit_AufsMAul_Condition()
 {
@@ -83,7 +83,7 @@ func void DIA_Bullit_AufsMAul_Info()
 
 	AI_StopProcessInfos(self);
 
-	Npc_SetTarget(self,other); 
+	Npc_SetTarget(self,other);
 	AI_StartState(self,ZS_Attack, 1, "");
 };
 
@@ -96,12 +96,12 @@ instance DIA_GRD_203_Bullit_Wait4SC(C_INFO)
 	npc = GRD_203_Bullit;
 	condition = DIA_GRD_203_Bullit_Wait4SC_Condition;
 	information = DIA_GRD_203_Bullit_Wait4SC_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
 };
 
 func int DIA_GRD_203_Bullit_Wait4SC_Condition()
-{ 
+{
 	if(Npc_KnowsInfo(hero,Info_Xardas_LOADSWORD02 ))
 	{
 		return 1;
@@ -123,11 +123,11 @@ func void DIA_GRD_203_Bullit_Wait4SC_Info()
 	AI_StopProcessInfos(self);
 
 	self.guild = GIL_GRD;
-	Npc_SetTrueGuild(self,GIL_GRD); 
+	Npc_SetTrueGuild(self,GIL_GRD);
 
 	Npc_SetAttitude(self,ATT_HOSTILE);
 	Npc_SetTempAttitude(self,ATT_HOSTILE);
 
-	Npc_SetTarget(self,other); 
+	Npc_SetTarget(self,other);
 	AI_StartState(self,ZS_Attack, 1, "");
-}; 
+};

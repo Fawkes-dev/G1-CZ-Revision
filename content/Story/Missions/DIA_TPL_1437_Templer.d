@@ -6,10 +6,10 @@ instance Tpl_1437_Templer_Exit(C_INFO)
 	nr = 999;
 	condition = Tpl_1437_Templer_Exit_Condition;
 	information = Tpl_1437_Templer_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Tpl_1437_Templer_Exit_Condition()
 {
@@ -29,9 +29,9 @@ instance Tpl_1437_Templer_NERV(C_INFO)
 	information = Tpl_1437_Templer_NERV_Info;
 	important = 0;
 	permanent = 1;
-//	description = "What's up?"; 
-//	description = "Was liegt an?"; 
-	description = "Co se děje?"; 
+//	description = "What's up?";
+//	description = "Was liegt an?";
+	description = "Co se děje?";
 };
 
 func int Tpl_1437_Templer_NERV_Condition()
@@ -48,7 +48,7 @@ func void Tpl_1437_Templer_NERV_Info()
 //	AI_Output(self,other,"Tpl_1437_Templer_NERV_Info_13_02"); //Hör mal, musst du eigentlich jeden anquatschen, der hier rumläuft?
 	AI_Output(self,other,"Tpl_1437_Templer_NERV_Info_13_02"); //Poslouchej, opravdu tady musíš každého otravovat?
 	AI_StopProcessInfos(self);
-};  
+};
 // ERNEUTES ANSPRECHEN ------------------------------------
 instance Tpl_1437_Templer_LEAVE(C_INFO)
 {
@@ -57,13 +57,13 @@ instance Tpl_1437_Templer_LEAVE(C_INFO)
 	information = Tpl_1437_Templer_LEAVE_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Everything alright?"; 
-//	description = "Alles klar bei dir?"; 
-	description = "Všechno v pořádku?"; 
+//	description = "Everything alright?";
+//	description = "Alles klar bei dir?";
+	description = "Všechno v pořádku?";
 };
 
 func int Tpl_1437_Templer_LEAVE_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Tpl_1437_Templer_NERV)
 	{
 		return TRUE;
@@ -88,13 +88,13 @@ instance Tpl_1437_Templer_LEAVENOW(C_INFO)
 	information = Tpl_1437_Templer_LEAVENOW_Info;
 	important = 0;
 	permanent = 0;
-//	description = "No, I just don't understand you!"; 
-//	description = "Nein, ich verstehe dich einfach nicht!"; 
-	description = "Ne, nerozumím ti!"; 
+//	description = "No, I just don't understand you!";
+//	description = "Nein, ich verstehe dich einfach nicht!";
+	description = "Ne, nerozumím ti!";
 };
 
 func int Tpl_1437_Templer_LEAVENOW_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Tpl_1437_Templer_LEAVE)
 	{
 		return TRUE;

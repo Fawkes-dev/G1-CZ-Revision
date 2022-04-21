@@ -6,7 +6,7 @@ var int MordragKO_StayAtNC;
 // **************************************************
 
 // **************************************************
-//						 EXIT 
+//						 EXIT
 // **************************************************
 
 instance Org_826_Mordrag_Exit(C_INFO)
@@ -17,7 +17,7 @@ instance Org_826_Mordrag_Exit(C_INFO)
 	information = Org_826_Mordrag_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Org_826_Mordrag_Exit_Condition()
 {
@@ -41,7 +41,7 @@ instance Org_826_Mordrag_Greet(C_INFO)
 	information = Org_826_Mordrag_Greet_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int Org_826_Mordrag_Greet_Condition()
 {
@@ -75,7 +75,7 @@ instance Org_826_Mordrag_Trade(C_INFO)
 //	description = "Zeig mir deine Ware.";
 	description = "Ukaž mi svoje zboží.";
 	trade = 1;
-};                       
+};
 
 func int Org_826_Mordrag_Trade_Condition()
 {
@@ -114,11 +114,11 @@ instance Org_826_Mordrag_Courier(C_INFO)
 //	description = "Are you really the magicians' courier?";
 //	description = "Stimmt es, dass du Kurier für die Magier bist?";
 	description = "Jsi doopravdy kurýr mágů?";
-};                       
+};
 
 func int Org_826_Mordrag_Courier_Condition()
 {
-	if Thorus_MordragMageMessenger 
+	if Thorus_MordragMageMessenger
 	{
 		return 1;
 	};
@@ -154,11 +154,11 @@ instance Org_826_Mordrag_Problem(C_INFO)
 //	description = "You have a problem.";
 //	description = "Du hast ein Problem.";
 	description = "Máš problém.";
-};                       
+};
 
 func int Org_826_Mordrag_Problem_Condition()
 {
-	if Thorus_MordragKo == LOG_RUNNING 
+	if Thorus_MordragKo == LOG_RUNNING
 	{
 		return 1;
 	};
@@ -203,7 +203,7 @@ instance Org_826_Mordrag_NCInfo(C_INFO)
 //	description = "Tell me more about the New Camp.";
 //	description = "Erzähl mir was über das Neue Lager.";
 	description = "Pověz mi víc o Novém táboře.";
-};                       
+};
 
 func int Org_826_Mordrag_NCInfo_Condition()
 {
@@ -249,7 +249,7 @@ instance Org_826_Mordrag_JoinNewcamp(C_INFO)
 //	description = "And if I want to join the New Camp...";//könntest du mir dabei helfen... ZU LANG
 //	description = "Und wenn ich mich dem Neuen Lager anschließen will, ...";//könntest du mir dabei helfen... ZU LANG
 	description = "A kdybych se chtěl přidat k Novému táboru... mohl bys mi pomoci?";//könntest du mir dabei helfen... ZU LANG
-};                       
+};
 
 func int Org_826_Mordrag_JoinNewcamp_Condition()
 {
@@ -282,7 +282,7 @@ instance Org_826_Mordrag_GotoNewcamp(C_INFO)
 //	description = "Let's go to the New Camp!";
 //	description = "Lass uns zum Neuen Lager gehen!";
 	description = "Tak pojďme do Nového tábora!";
-};                       
+};
 
 func int Org_826_Mordrag_GotoNewcamp_Condition()
 {
@@ -333,11 +333,11 @@ instance Org_826_Mordrag_AtNewcamp(C_INFO)
 	information = Org_826_Mordrag_AtNewcamp_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int Org_826_Mordrag_AtNewcamp_Condition()
 {
-	if (Npc_KnowsInfo(hero,Org_826_Mordrag_GotoNewcamp) && Hlp_StrCmp(Npc_GetNearestWP(self),"OW_PATH_07_21")) 
+	if (Npc_KnowsInfo(hero,Org_826_Mordrag_GotoNewcamp) && Hlp_StrCmp(Npc_GetNearestWP(self),"OW_PATH_07_21"))
 	{
 		self.flags = 0;
 		return 1;
@@ -347,7 +347,7 @@ func int Org_826_Mordrag_AtNewcamp_Condition()
 func void Org_826_Mordrag_AtNewcamp_Info()
 {
 	if (Mordrag_GotoNC_Day > (Wld_GetDay()-2))
-	{ 
+	{
 //		AI_Output(self,other,"Org_826_Mordrag_AtNewcamp_11_00"); //Well, here we are.
 //		AI_Output(self,other,"Org_826_Mordrag_AtNewcamp_11_00"); //So, hier sind wir.
 		AI_Output(self,other,"Org_826_Mordrag_AtNewcamp_11_00"); //Tak, a jsme tady.
@@ -377,7 +377,7 @@ func void Org_826_Mordrag_AtNewcamp_Info()
 	CreateInvItems(self,MordragsRing,1);
 	B_GiveInvItems(self,other,MordragsRing,1);
 
-	B_GiveXP(XP_ArrivedWithMordrag); 
+	B_GiveXP(XP_ArrivedWithMordrag);
 //	B_LogEntry(CH1_JoinNC,"Now we're in front of the gate of the New Camp. Mordrag gave me a ring I am supposed to give Lares, the leader of the rogues, if I really want to join the New Camp. Mordrag wants to stay in the bar at the lake for a while.");
 //	B_LogEntry(CH1_JoinNC,"Wir stehen nun vor dem Tor des Neuen Lagers. Für den Fall, dass ich wirklich in das Neue Lager aufgenommen werden will, gab mir Mordrag einen Ring, den ich dem Anführer der Banditen mit Namen Lares bringen soll. Mordrag will erst mal hier bleiben und ist ab jetzt in der Kneipe auf dem See zu finden.");
 	B_LogEntry(CH1_JoinNC,"Stojíme u přední brány Nového tábora a Mordrag mi dal prsten, který mám ukázat vůdci banditů Laresovi, pokud se chci přidat k Novému táboru. Mordrag se chce na chvilku zastavit v baru na jezeře.");
@@ -406,7 +406,7 @@ instance Org_826_Mordrag_Fight(C_INFO)
 //	description = "The camp ain't big enough for the both of us!";
 //	description = "In diesem Lager ist nicht genug Platz für uns beide!";
 	description = "Tenhle tábor není pro nás dva dost velký!";
-};                       
+};
 
 func int Org_826_Mordrag_Fight_Condition()
 {
@@ -495,7 +495,7 @@ instance Org_826_Mordrag_HauAb(C_INFO)
 	information = Org_826_Mordrag_HauAb_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int Org_826_Mordrag_HauAb_Condition()
 {
@@ -539,7 +539,7 @@ instance Org_826_Mordrag_GotoKalom(C_INFO)
 //	description = "Lares has a message for you.";
 //	description = "Lares hat eine Nachricht für dich.";
 	description = "Lares má pro tebe zprávu.";
-};                       
+};
 
 func int Org_826_Mordrag_GotoKalom_Condition()
 {
@@ -586,7 +586,7 @@ instance Org_826_Mordrag_GotoKalomNOW(C_INFO)
 //	description = "Lares told me to help you with this sect business.";
 //	description = "Lares sagt, ich soll dich bei der Sektensache unterstützen.";
 	description = "Lares mi řekl, abych ti pomohl s tou sektářskou záležitostí.";
-};                       
+};
 
 func int Org_826_Mordrag_GotoKalomNOW_Condition()
 {
@@ -621,7 +621,7 @@ func void Org_826_Mordrag_GotoKalomNOW_Info()
 //	B_LogEntry(CH1_GotoPsiCamp,"Mordrag has passed the buck of spying on the swamp camp quite cleverly to me. The Gurus seem to be preparing a big invocation, but I should get more details.");
 //	B_LogEntry(CH1_GotoPsiCamp,"Mordrag hat die Spitzelaufgabe im Sumpflager geschickt auf mich abgewälzt. Die Gurus scheinen eine große Beschwörung vorzubereiten, aber was da dran ist, sollte ich besser genauer in Erfahrung bringen.");
 	B_LogEntry(CH1_GotoPsiCamp,"Mordrag provedl svůj výzvědný úkol v táboře v bažinách docela chytře. Guru se zřejmě připravují k velkému vzývání, já bych chtěl ale znát další podrobnosti.");
-	B_GiveXP(XP_AssistMordrag); 
+	B_GiveXP(XP_AssistMordrag);
 
 	Lares_InformMordrag = LOG_SUCCESS;
 	Mordrag_GotoKalom = LOG_RUNNING;
@@ -675,7 +675,7 @@ instance Org_826_Mordrag_RUNNING(C_INFO)
 //	description = "About that sect business...";
 //	description = "Wegen der Sektensache...";
 	description = "O té sektářské záležitosti...";
-};                       
+};
 
 func int Org_826_Mordrag_RUNNING_Condition()
 {
@@ -738,7 +738,7 @@ func void Org_826_Mordrag_RUNNING_Info()
 		AI_Output(self,other,"Org_826_Mordrag_RUNNING_11_03"); //Tak v tom pokračuj...
 	};
 
-/* 
+/*
 	//SN: Werde nicht gebraucht, da sie nicht zur Kapitel 2-6-Story passen!!!
 		AI_Output(other,self,"Org_826_Mordrag_RUNNING_15_08"); //Ich hab' die Eier bei mir.
 

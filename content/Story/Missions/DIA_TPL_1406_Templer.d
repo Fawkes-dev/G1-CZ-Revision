@@ -1,5 +1,5 @@
 // **************************************************
-//						EXIT 
+//						EXIT
 // **************************************************
 
 instance DIA_KalomsGuard_Exit(C_INFO)
@@ -8,10 +8,10 @@ instance DIA_KalomsGuard_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_KalomsGuard_Exit_Condition;
 	information = DIA_KalomsGuard_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_KalomsGuard_Exit_Condition()
 {
@@ -37,7 +37,7 @@ instance DIA_KalomsGuard_PERM(C_INFO)
 //	description = "I'm sure you won't mind my going in there...?";
 //	description = "Du hast doch nichts dagegen, wenn ich da reingehe?";
 	description = "Jistě nemáš nic proti tomu, abych šel dál?";
-};                       
+};
 
 func int DIA_KalomsGuard_PERM_Condition()
 {

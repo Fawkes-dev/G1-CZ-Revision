@@ -1,5 +1,5 @@
 // **************************************************
-//						 EXIT 
+//						 EXIT
 // **************************************************
 
 instance DIA_BaalParvez_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_BaalParvez_EXIT(C_INFO)
 	information = DIA_BaalParvez_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_BaalParvez_EXIT_Condition()
 {
@@ -34,7 +34,7 @@ instance DIA_BaalParvez_Greet(C_INFO)
 	information = DIA_BaalParvez_Greet_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_BaalParvez_Greet_Condition()
 {
@@ -68,7 +68,7 @@ instance DIA_BaalParvez_RightWay(C_INFO)
 //	description = "And which is the right path?";
 //	description = "Und was ist der rechte Weg?";
 	description = "A jaká je ta správná cesta?";
-};                       
+};
 
 func int DIA_BaalParvez_RightWay_Condition()
 {
@@ -114,7 +114,7 @@ instance DIA_BaalParvez_MyAdvantage(C_INFO)
 //	description = "What would be the benefit of joining you?";
 //	description = "Was hätte ich davon, mich euch anzuschließen?";
 	description = "Co z toho budu mít, když se k vám přidám?";
-};                       
+};
 
 func int DIA_BaalParvez_MyAdvantage_Condition()
 {
@@ -160,7 +160,7 @@ instance DIA_BaalParvez_Sleeper(C_INFO)
 //	description = "Who's the Sleeper?";
 //	description = "Wer ist der Schläfer?";
 	description = "Kdo je ten Spáč?";
-};                       
+};
 
 func int DIA_BaalParvez_Sleeper_Condition()
 {
@@ -206,7 +206,7 @@ instance DIA_BaalParvez_SleeperSaid(C_INFO)
 //	description = "What did the Sleeper tell you?";
 //	description = "Was hat euch der Schläfer gesagt?";
 	description = "Co vám Spáč říká?";
-};                       
+};
 
 func int DIA_BaalParvez_SleeperSaid_Condition()
 {
@@ -249,7 +249,7 @@ instance DIA_BaalParvez_PSIMagic(C_INFO)
 //	description = "Tell me about the magic of the Sleeper.";
 //	description = "Erzähl mir von der Magie des Schläfers.";
 	description = "Povídej mi o Spáčově magii.";
-};                       
+};
 
 func int DIA_BaalParvez_PSIMagic_Condition()
 {
@@ -288,7 +288,7 @@ instance DIA_BaalParvez_GotoPSI(C_INFO)
 //	description = "Take me to your camp. I want to have a look at it!";
 //	description = "Bring mich zu eurem Lager. Das will ich mir ansehen!";
 	description = "Vezmi mě do vašeho tábora. Chci si ho prohlédnout.";
-};                       
+};
 
 func int DIA_BaalParvez_GotoPSI_Condition()
 {
@@ -345,11 +345,11 @@ instance DIA_BaalParvez_AtPSI(C_INFO)
 	information = DIA_BaalParvez_AtPSI_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_BaalParvez_AtPSI_Condition()
 {
-	if (Hlp_StrCmp(Npc_GetNearestWP(self),"PATH_OC_PSI_18")) 
+	if (Hlp_StrCmp(Npc_GetNearestWP(self),"PATH_OC_PSI_18"))
 	{
 		return 1;
 	};
@@ -358,7 +358,7 @@ func int DIA_BaalParvez_AtPSI_Condition()
 func void DIA_BaalParvez_AtPSI_Info()
 {
 	if (BaalParvez_GotoPSI_Day > (Wld_GetDay()-2))
-	{ 
+	{
 //		AI_Output(self,other,"DIA_BaalParvez_AtPSI_10_00"); //Here we are. Down there lies the camp of the Brotherhood.
 //		AI_Output(self,other,"DIA_BaalParvez_AtPSI_10_00"); //Wir sind angekommen. Dort unten liegt das Lager der Bruderschaft.
 		AI_Output(self,other,"DIA_BaalParvez_AtPSI_10_00"); //Tak tady jsme... Dole leží tábor Bratrstva.

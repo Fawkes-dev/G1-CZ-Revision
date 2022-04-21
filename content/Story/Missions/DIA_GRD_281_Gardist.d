@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Grd_281_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Grd_281_Exit(C_INFO)
 	information = DIA_Grd_281_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Grd_281_Exit_Condition()
 {
@@ -34,15 +34,15 @@ instance DIA_Grd_281_GuardGate(C_INFO)
 	information = DIA_Grd_281_GuardGate_Info;
 	//#Needs_Attention - zbytocny permanentny dialog - zrusil by som to
 	permanent = 1;
-//	description = "How's it going?"; 
-//	description = "Wie steht's?"; 
-	description = "Jak to jde?"; 
+//	description = "How's it going?";
+//	description = "Wie steht's?";
+	description = "Jak to jde?";
 };
 
 func int DIA_Grd_281_GuardGate_Condition()
-{ 
+{
 	if (!C_NpcBelongsToNewcamp (other))
-	{ 
+	{
 		return 1;
 	};
 };

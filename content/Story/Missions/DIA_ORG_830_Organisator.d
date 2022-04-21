@@ -1,5 +1,5 @@
 // ************************************************************
-// 			  				   EXIT 
+// 			  				   EXIT
 // ************************************************************
 
 instance Info_ORG_830_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance Info_ORG_830_EXIT(C_INFO)
 	information = Info_ORG_830_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_ORG_830_EXIT_Condition()
 {
@@ -18,7 +18,7 @@ func int Info_ORG_830_EXIT_Condition()
 };
 
 func void Info_ORG_830_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -36,7 +36,7 @@ instance Info_ORG_830_Hello(C_INFO)
 //	description = "Hi! I'm new here.";
 //	description = "Hi! Ich bin neu hier.";
 	description = "Zdar! Jsem tady nový.";
-};                       
+};
 
 func int Info_ORG_830_Hello_Condition()
 {
@@ -44,7 +44,7 @@ func int Info_ORG_830_Hello_Condition()
 };
 
 func void Info_ORG_830_Hello_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_ORG_830_Hello_15_00"); //Hi! I'm new here.
 //	AI_Output(other,self,"Info_ORG_830_Hello_15_00"); //Hi! Ich bin neu hier.
 	AI_Output(other,self,"Info_ORG_830_Hello_15_00"); //Zdar! Jsem tady nový!
@@ -67,7 +67,7 @@ instance Info_ORG_830_What(C_INFO)
 //	description = "What are you doing?";
 //	description = "Was machst du hier?";
 	description = "Co děláš?";
-};                       
+};
 
 func int Info_ORG_830_What_Condition()
 {
@@ -78,7 +78,7 @@ func int Info_ORG_830_What_Condition()
 };
 
 func void Info_ORG_830_What_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_ORG_830_What_15_00"); //What are you doing?
 //	AI_Output(other,self,"Info_ORG_830_What_15_00"); //Was machst du hier?
 	AI_Output(other,self,"Info_ORG_830_What_15_00"); //Co tady děláš?
@@ -104,7 +104,7 @@ instance Info_ORG_830_Aufhalten(C_INFO)
 //	description = "Aren't you going to try and stop me? Ask me what or something?";
 //	description = "Willst du mich nicht aufhalten? Mich fragen, was ich hier will oder so?";
 	description = "Nechceš se mě pokusit zastavit? Zeptat se mě, co tu chci nebo tak?";
-};                       
+};
 
 func int Info_ORG_830_Aufhalten_Condition()
 {
@@ -115,7 +115,7 @@ func int Info_ORG_830_Aufhalten_Condition()
 };
 
 func void Info_ORG_830_Aufhalten_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_ORG_830_Aufhalten_15_00"); //Aren't you going to try and stop me? Ask me what or something?
 //	AI_Output(other,self,"Info_ORG_830_Aufhalten_15_00"); //Willst du mich nicht aufhalten? Mich fragen, was ich hier will oder so?
 	AI_Output(other,self,"Info_ORG_830_Aufhalten_15_00"); //Nechceš se mě pokusit zastavit? Zeptat se mě, co tu chci nebo tak?
@@ -138,7 +138,7 @@ instance Info_ORG_830_Perm(C_INFO)
 //	description = "What's it like inside?";
 //	description = "Wie sieht's drinnen aus?";
 	description = "Jaké je to uvnitř?";
-};                       
+};
 
 func int Info_ORG_830_Perm_Condition()
 {
@@ -149,7 +149,7 @@ func int Info_ORG_830_Perm_Condition()
 };
 
 func void Info_ORG_830_Perm_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_ORG_830_Perm_15_00"); //What's it like inside?
 //	AI_Output(other,self,"Info_ORG_830_Perm_15_00"); //Wie sieht's drinnen aus?
 	AI_Output(other,self,"Info_ORG_830_Perm_15_00"); //Jaké je to uvnitř?

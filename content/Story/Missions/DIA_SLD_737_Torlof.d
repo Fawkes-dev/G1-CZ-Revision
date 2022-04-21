@@ -10,7 +10,7 @@ instance DIA_Torlof_EXIT(C_INFO)
 	information = DIA_Torlof_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Torlof_EXIT_Condition()
 {
@@ -36,7 +36,7 @@ instance DIA_Torlof_Hallo(C_INFO)
 //	description = "Who are you?";
 //	description = "Wer bist du?";
 	description = "Kdo jsi?";
-};                       
+};
 
 func int DIA_Torlof_Hallo_Condition()
 {
@@ -76,7 +76,7 @@ instance DIA_Torlof_Mitmachen(C_INFO)
 //	description = "I'd like to join you.";
 //	description = "Ich will bei euch mitmachen.";
 	description = "Rád bych se k vám přidal.";
-};                       
+};
 
 func int DIA_Torlof_Mitmachen_Condition()
 {
@@ -126,7 +126,7 @@ instance DIA_Torlof_PERM(C_INFO)
 	information = DIA_Torlof_PERM_Info;
 	permanent = 1;
 	description = "Was kannst du mir über dieses Lager sagen?";
-};                       
+};
 
 func int DIA_Torlof_PERM_Condition()
 {

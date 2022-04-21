@@ -1,5 +1,5 @@
 // **************************************************
-//						EXIT 
+//						EXIT
 // **************************************************
 
 instance DIA_Nyras_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Nyras_Exit(C_INFO)
 	information = DIA_Nyras_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Nyras_Exit_Condition()
 {
@@ -139,7 +139,7 @@ func void DIA_Nyras_Ort_Holy()
 };
 
 // ***************************************************
-//						
+//
 // ***************************************************
 
 ///////////////////////////////////////////////////////////////////////////
@@ -181,13 +181,13 @@ instance Nov_1303_Nyras_LEAVE(C_INFO)
 	information = Nov_1303_Nyras_LEAVE_Info;
 	important = 0;
 	permanent = 0;
-//	description = "I'm searching for the focus."; 
-//	description = "Ich bin auf der Suche nach dem Fokus"; 
-	description = "Hledám ohnisko."; 
+//	description = "I'm searching for the focus.";
+//	description = "Ich bin auf der Suche nach dem Fokus";
+	description = "Hledám ohnisko.";
 };
 
 func int Nov_1303_Nyras_LEAVE_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Nov_1303_Nyras_GREET))
 	{
 		return 1;
@@ -224,5 +224,5 @@ func void Nov_1303_Nyras_LEAVE_Info()
 	Npc_SetPermAttitude(self,ATT_HOSTILE);
 	AI_StopProcessInfos(self);
 
-};  
+};
 

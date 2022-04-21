@@ -1,5 +1,5 @@
 //******************************************
-//					EXIT 
+//					EXIT
 //******************************************
 
 instance DIA_Cutter_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Cutter_Exit(C_INFO)
 	information = DIA_Cutter_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Cutter_Exit_Condition()
 {
@@ -23,7 +23,7 @@ func void DIA_Cutter_Exit_Info()
 };
 
 //******************************************
-//					Hallo 
+//					Hallo
 //******************************************
 
 instance DIA_Cutter_Hello(C_INFO)
@@ -36,10 +36,10 @@ instance DIA_Cutter_Hello(C_INFO)
 //	description = "This castle's pretty roomy.";
 //	description = "Ihr habt ganz schön viel Platz hier in der Burg.";
 	description = "Máte tady na hradě dost místa.";
-};                       
+};
 
 func int DIA_Cutter_Hello_Condition()
-{ 
+{
 	if (!C_NpcBelongsToOldcamp (other))
 	{
 		return 1;
@@ -59,7 +59,7 @@ func void DIA_Cutter_Hello_Info()
 };
 
 //******************************************
-//					Burg 
+//					Burg
 //******************************************
 
 instance DIA_Cutter_Burg(C_INFO)
@@ -72,7 +72,7 @@ instance DIA_Cutter_Burg(C_INFO)
 //	description = "What can you tell me about the castle?";
 //	description = "Was kannst du mir über die Burg sagen?";
 	description = "Co mi můžeš říci o hradu?";
-};                       
+};
 
 func int DIA_Cutter_Burg_Condition()
 {
@@ -105,7 +105,7 @@ func void DIA_Cutter_Burg_Info()
 };
 
 //******************************************
-//					PERM 
+//					PERM
 //******************************************
 
 instance DIA_Cutter_PERM(C_INFO)
@@ -118,7 +118,7 @@ instance DIA_Cutter_PERM(C_INFO)
 //	description = "What's life like as a guard?";
 //	description = "Wie ist das Leben als Gardist?";
 	description = "Jaké to je být strážcem?";
-};                       
+};
 
 func int DIA_Cutter_PERM_Condition()
 {
@@ -155,8 +155,8 @@ instance GRD_208_Cutter_WELCOME(C_INFO)
 };
 
 func int GRD_208_Cutter_WELCOME_Condition()
-{ 
-	if (Npc_GetTrueGuild(hero) == GIL_GRD) 
+{
+	if (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
 		return TRUE;
 	};

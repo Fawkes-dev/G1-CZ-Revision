@@ -10,7 +10,7 @@ instance DIA_Jeremiah_EXIT(C_INFO)
 	information = DIA_Jeremiah_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Jeremiah_EXIT_Condition()
 {
@@ -36,7 +36,7 @@ instance DIA_Jeremiah_Hallo(C_INFO)
 //	description = "What are you doing?";
 //	description = "Was machst du hier?";
 	description = "Co tady děláš?";
-};                       
+};
 
 func int DIA_Jeremiah_Hallo_Condition()
 {
@@ -75,7 +75,7 @@ instance DIA_Jeremiah_PERM(C_INFO)
 //	description = "How's the distillery going?";
 //	description = "Wie läuft das Schnapsbrennergeschäft?";
 	description = "Jak to chodí v palírně?";
-};                       
+};
 
 func int DIA_Jeremiah_PERM_Condition()
 {
@@ -111,7 +111,7 @@ instance DIA_Jeremiah_Horatio(C_INFO)
 //	description = "What can you tell me about the Rice Lord?";
 //	description = "Was kannst du mir über den Reislord sagen?";
 	description = "Co mi můžeš říci o Rýžovém Lordovi?";
-};                       
+};
 
 func int DIA_Jeremiah_Horatio_Condition()
 {

@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Jesse_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Jesse_Exit(C_INFO)
 	information = DIA_Jesse_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Jesse_Exit_Condition()
 {
@@ -39,7 +39,7 @@ instance DIA_Jesse_Hallo(C_INFO)
 };
 
 func int DIA_Jesse_Hallo_Condition()
-{ 
+{
 	if (!Npc_KnowsInfo(hero,DIA_Herek_Bully))
 	{
 		return 1;
@@ -74,7 +74,7 @@ instance DIA_Jesse_Warn(C_INFO)
 };
 
 func int DIA_Jesse_Warn_Condition()
-{ 
+{
 	if ((Npc_KnowsInfo(hero,DIA_Herek_Bully)) && (Herek_ProtectionBully==TRUE))
 	{
 		return 1;
@@ -231,7 +231,7 @@ instance DIA_Jesse_MisSuccess(C_INFO)
 };
 
 func int DIA_Jesse_MisSuccess_Condition()
-{ 
+{
 	if (Jesse_PayForMe == LOG_SUCCESS)
 	{
 		return 1;
@@ -275,6 +275,6 @@ func void DIA_Jesse_MisSuccess_Ok()
 };
 
 //a) <Herek tot>
-//b) Herek wird versuchen, 
+//b) Herek wird versuchen,
 
 /* */

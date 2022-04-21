@@ -14,7 +14,7 @@ instance Info_Diego_Gamestart(C_INFO)
 	important = 1;
 //	//description = "(Startsatz: zum Goldmaster wieder zu Important-Info machen !!!)";
 	//description = " [important - no description required]";
-};                       
+};
 
 func int Info_Diego_Gamestart_Condition()
 {
@@ -43,7 +43,7 @@ func void Info_Diego_Gamestart_Info()
 };
 
 // ************************************************************
-// EXIT 
+// EXIT
 // ************************************************************
 
 instance Info_Diego_EXIT_Gamestart(C_INFO)
@@ -54,7 +54,7 @@ instance Info_Diego_EXIT_Gamestart(C_INFO)
 	information = Info_Diego_EXIT_Gamestart_Info;
 	permanent = 0;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_Diego_EXIT_Gamestart_Condition()
 {
@@ -67,7 +67,7 @@ func void Info_Diego_EXIT_Gamestart_Info()
 //	AI_Output(hero,self,"Info_Diego_EXIT_Gamestart_15_00"); //Danke für die Hilfe.
 	AI_Output(hero,self,"Info_Diego_EXIT_Gamestart_15_00"); //Díky za tvou pomoc.
 
-	if (!Npc_KnowsInfo(hero,Info_Diego_Kolonie)) 
+	if (!Npc_KnowsInfo(hero,Info_Diego_Kolonie))
 	{
 //		AI_Output(self,hero,"Info_Diego_EXIT_Gamestart_11_01"); //It's your decision. It's been nice knowing you.
 //		AI_Output(self,hero,"Info_Diego_EXIT_Gamestart_11_01"); //Wie du willst. War nett, dich gekannt zu haben.
@@ -99,18 +99,18 @@ instance Info_Diego_EXIT_Later(C_INFO)
 	information = Info_Diego_EXIT_Later_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_Diego_EXIT_Later_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Diego_EXIT_Gamestart)) 
+	if (Npc_KnowsInfo(hero,Info_Diego_EXIT_Gamestart))
 	{
 		return 1;
 	};
 };
 
 func void Info_Diego_EXIT_Later_Info()
-{ 
+{
 	if (self.aivar[AIV_PARTYMEMBER])
 	{
 //		AI_Output(self,hero,"Info_Diego_EXIT_11_01"); //Let's go on.
@@ -128,7 +128,7 @@ func void Info_Diego_EXIT_Later_Info()
 };
 
 // *************************************************************
-//  BRIEF 
+//  BRIEF
 // *************************************************************
 
 instance Info_Diego_Brief(C_INFO) // E1
@@ -141,7 +141,7 @@ instance Info_Diego_Brief(C_INFO) // E1
 //	description = "I have a letter for the High Magician of the Circle of Fire.";
 //	description = "Ich habe einen Brief für den obersten Feuermagier.";
 	description = "Mám dopis pro Velkého mága Kruhu ohně.";
-};                       
+};
 
 func int Info_Diego_Brief_Condition()
 {
@@ -172,7 +172,7 @@ func void Info_Diego_Brief_Info()
 //	AI_Output(self,hero,"Info_Diego_Brief_11_05"); //Wenn ich du wäre, würde ich die Schnauze halten, bis ich einen der Magier treffe. Obwohl das in deiner Lage nicht allzu wahrscheinlich ist.
 	AI_Output(self,hero,"Info_Diego_Brief_11_05"); //Být tebou, byl bych zticha, dokud bych nepotkal některého z mágů. I když to se ti hned tak nepodaří.
 //	AI_Output(hero,self,"Info_Diego_Brief_15_06"); //Why not?
-//	AI_Output(hero,self,"Info_Diego_Brief_15_06"); //Wieso nicht? 
+//	AI_Output(hero,self,"Info_Diego_Brief_15_06"); //Wieso nicht?
 	AI_Output(hero,self,"Info_Diego_Brief_15_06"); //Proč ne?
 //	AI_Output(self,hero,"Info_Diego_Brief_11_07"); //The mages are in the castle in the Old Camp. Only Gomez' people are allowed to enter the castle.
 //	AI_Output(self,hero,"Info_Diego_Brief_11_07"); //Die Magier sind in der Burg im Alten Lager. Nur Gomez' Leuten ist es erlaubt, die Burg zu betreten.
@@ -193,7 +193,7 @@ instance Info_Diego_WarumGeholfen(C_INFO) // E1
 //	description = "Why did you help me?";
 //	description = "Warum hast du mir geholfen?";
 	description = "Proč jsi mi pomohl?";
-};                       
+};
 
 func int Info_Diego_WarumGeholfen_Condition()
 {
@@ -221,7 +221,7 @@ func void Info_Diego_WarumGeholfen_Info()
 //	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_04"); //Yes. After this little incident with Bullit and his guys, you should be aware now that you need protection.
 //	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_04"); //Ja. Deine Begegnung mit Bullit und seinen Jungs hat dir hoffentlich gezeigt, dass du Schutz brauchst.
 	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_04"); //Ano. Po tom malém incidentu s Bullitem a jeho chlapy by ti mělo být jasné, že potřebuješ ochranu.
-//	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_05"); //Everyone who arrives here has a choice. There are three camps in the colony, and you'll have to join one of them. 
+//	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_05"); //Everyone who arrives here has a choice. There are three camps in the colony, and you'll have to join one of them.
 //	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_05"); //Jeder, der hier ankommt, wird vor eine Wahl gestellt. Es gibt drei Lager in der Kolonie, und einem davon wirst du dich anschließen müssen.
 	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_05"); //Každý, kdo sem přijde, má možnost volby. V kolonii jsou tři tábory a ty se budeš muset k jednomu z nich přidat.
 //	AI_Output(self,hero,"Info_Diego_WarumGeholfen_11_06"); //I'm here to show the new ones that the Old Camp is the best place for them.
@@ -241,7 +241,7 @@ instance Info_Diego_Bullit(C_INFO) // E2
 //	description = "Where's Bullit now?";
 //	description = "Wo ist dieser Bullit jetzt?";
 	description = "Kde je teď Bullit?";
-};                       
+};
 
 func int Info_Diego_Bullit_Condition()
 {
@@ -278,7 +278,7 @@ instance Info_Diego_Kolonie(C_INFO)
 //	description = "Okay, what do I need to know about this place?";
 //	description = "Okay, was muss ich über diesen Ort wissen?";
 	description = "Dobrá, co bych měl vědět o tomhle místě?";
-};                       
+};
 
 func int Info_Diego_Kolonie_Condition()
 {
@@ -291,9 +291,9 @@ func int Info_Diego_Kolonie_Condition()
 func void Info_Diego_Kolonie_Info()
 {
 //	AI_Output(hero,self,"Info_Diego_Kolonie_15_00"); //Okay, what do I need to know about this place?
-//	AI_Output(hero,self,"Info_Diego_Kolonie_15_00"); //Okay, was muss ich über diesen Ort wissen?                                                                                                                                                                     
+//	AI_Output(hero,self,"Info_Diego_Kolonie_15_00"); //Okay, was muss ich über diesen Ort wissen?
 	AI_Output(hero,self,"Info_Diego_Kolonie_15_00"); //Dobrá, co bych měl vědět vědět o tomhle místě?
-//	AI_Output(self,hero,"Info_Diego_Kolonie_11_01"); //We call it the colony. You'll know already that we produce ore for the King. 
+//	AI_Output(self,hero,"Info_Diego_Kolonie_11_01"); //We call it the colony. You'll know already that we produce ore for the King.
 //	AI_Output(self,hero,"Info_Diego_Kolonie_11_01"); //Wir nennen es die Kolonie. Du wirst sicher schon gehört haben, dass wir hier Erz für den König fördern.
 	AI_Output(self,hero,"Info_Diego_Kolonie_11_01"); //Říkáme mu Kolonie. Určitě už jsi slyšel, že tu těžíme rudu pro krále.
 //	AI_Output(self,hero,"Info_Diego_Kolonie_11_02"); //Well, at least we do - in the Old Camp.
@@ -316,11 +316,11 @@ instance Info_Diego_Barriere(C_INFO) // E2
 //	description = "Tell me more about the Barrier.";
 //	description = "Erzähl mir was über die Barriere.";
 	description = "Řekni mi něco o Bariéře.";
-};                       
+};
 
 func int Info_Diego_Barriere_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Diego_Kolonie) && (Diego_After_Gamestart==TRUE)) 
+	if (Npc_KnowsInfo(hero,Info_Diego_Kolonie) && (Diego_After_Gamestart==TRUE))
 	{
 		return 1;
 	};
@@ -344,7 +344,7 @@ func void Info_Diego_Barriere_Info()
 //	AI_Output(hero,self,"Info_Diego_Barriere_15_04"); //Wenn es einen Weg hier raus gibt, werde ich ihn finden.
 	AI_Output(hero,self,"Info_Diego_Barriere_15_04"); //Jestli existuje nějaká cesta ven, najdu ji.
 //	AI_Output(self,hero,"Info_Diego_Barriere_11_05"); //You're already in a rush to get out of here? But you've only just arrived!
-//	AI_Output(self,hero,"Info_Diego_Barriere_11_05"); //Hast du's SO eilig, hier wieder rauszukommen? Du bist ja gerade mal da!                                                                                                                             
+//	AI_Output(self,hero,"Info_Diego_Barriere_11_05"); //Hast du's SO eilig, hier wieder rauszukommen? Du bist ja gerade mal da!
 	AI_Output(self,hero,"Info_Diego_Barriere_11_05"); //Jsi opravdu rozhodnutý jít odtud pryč? Ale právě jsi přišel!
 };
 
@@ -360,11 +360,11 @@ instance Info_Diego_OtherCamps(C_INFO) // E2
 //	description = "What about the two other camps?";
 //	description = "Was ist mit den beiden anderen Lagern?";
 	description = "A co ty dva ostatní tábory?";
-};                       
+};
 
 func int Info_Diego_OtherCamps_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Diego_Kolonie) && (Diego_After_Gamestart==TRUE)) 
+	if (Npc_KnowsInfo(hero,Info_Diego_Kolonie) && (Diego_After_Gamestart==TRUE))
 	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
 	{
 		return 1;
@@ -380,7 +380,7 @@ func void Info_Diego_OtherCamps_Info()
 //	AI_Output(self,hero,"Info_Diego_OtherCamps_11_01"); //Die beiden anderen Lager haben sich abgespalten, um ihren schwachsinnigen Ausbruchsplänen nachzugehen.
 	AI_Output(self,hero,"Info_Diego_OtherCamps_11_01"); //Ostatní dva tábory se oddělily, aby mohly následovat své šílené plány na únik.
 //	AI_Output(self,hero,"Info_Diego_OtherCamps_11_02"); //There's the New Camp in the west of the colony, where the mages think they can just detonate the Barrier as soon as they've scraped enough ore together.
-//	AI_Output(self,hero,"Info_Diego_OtherCamps_11_02"); //Es gibt das neue Lager im Westen der Kolonie. Die Magier dort meinen, wenn sie genug Erz zusammengekratzt haben, können sie die Barriere einfach sprengen.  
+//	AI_Output(self,hero,"Info_Diego_OtherCamps_11_02"); //Es gibt das neue Lager im Westen der Kolonie. Die Magier dort meinen, wenn sie genug Erz zusammengekratzt haben, können sie die Barriere einfach sprengen.
 	AI_Output(self,hero,"Info_Diego_OtherCamps_11_02"); //Nový tábor je na západě kolonie a jeho mágové si myslí, že můžou prolomit Bariéru, jakmile se jim podaří nashromáždit dostatečné množství magické rudy.
 //	AI_Output(self,hero,"Info_Diego_OtherCamps_11_03"); //And then there's the sect loonies in the east. Their camp is in the middle of the swamp, and they're praying to their idol to set them free.
 //	AI_Output(self,hero,"Info_Diego_OtherCamps_11_03"); //Dann gibt's im Osten die Sektenspinner. Sie haben ihr Lager im Sumpf und beten zu ihrem Götzen, er möge ihnen die Freiheit schenken.
@@ -405,11 +405,11 @@ instance Info_Diego_OldCamp(C_INFO) // E2
 //	description = "Tell me something about the Old Camp.";
 //	description = "Erzähl mir was über das alte Lager.";
 	description = "Řekni mi něco o Starém táboře.";
-};                       
+};
 
 func int Info_Diego_OldCamp_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Diego_Kolonie) && (Diego_After_Gamestart==TRUE)) 
+	if (Npc_KnowsInfo(hero,Info_Diego_Kolonie) && (Diego_After_Gamestart==TRUE))
 	{
 		return 1;
 	};
@@ -431,7 +431,7 @@ func void Info_Diego_OldCamp_Info()
 	AI_Output(self,hero,"Info_Diego_OldCamp_11_03"); //Posílá nám víno, chleba, maso, zbraně... prostě všechno.
 
 	if (Npc_GetTrueGuild(hero) == GIL_NONE)
-	{ 
+	{
 //	AI_Output(self,hero,"Info_Diego_OldCamp_11_04"); //You can also get some of it. All you have to do is join Gomez' people.
 //	AI_Output(self,hero,"Info_Diego_OldCamp_11_04"); //Du kannst auch deinen Teil davon bekommen. Alles, was du tun mußt, ist dich Gomez' Leuten anzuschließen.
 	AI_Output(self,hero,"Info_Diego_OldCamp_11_04"); //Také z toho můžeš něco dostat. Jediné, co musíš udělat je přidat ke Gomezovi.
@@ -452,7 +452,7 @@ instance Info_Diego_WhosGomez(C_INFO) // E2/E3
 //	description = "Who's Gomez?";
 //	description = "Wer ist Gomez?";
 	description = "Kdo je Gomez?";
-};                       
+};
 
 func int Info_Diego_WhosGomez_Condition()
 {
@@ -470,7 +470,7 @@ func void Info_Diego_WhosGomez_Info()
 //	AI_Output(self,hero,"Info_Diego_WhosGomez_11_01"); //Gomez is the most powerful Ore Baron. He's the boss of the Old Camp - the most powerful man in the colony.
 //	AI_Output(self,hero,"Info_Diego_WhosGomez_11_01"); //Gomez ist der oberste Erzbaron. Der Boss des Alten Lagers. Der mächtigste Mann in der Kolonie.
 	AI_Output(self,hero,"Info_Diego_WhosGomez_11_01"); //Gomez je nejmocnější Rudobaron. Je to šéf Starého tábora - nejmocnější muž v Kolonii.
-}; 
+};
 
 // ************************************************************
 // JOIN OC
@@ -486,7 +486,7 @@ instance Info_Diego_JoinOldcamp(C_INFO) // E2/E3
 //	description = "Let's assume I want to join his people, what do I need to do?";
 //	description = "Wie kann ich mich Gomez' Leuten anschliessen?";
 	description = "Předpokládejme, že bych se chtěl přidat k jeho lidem, co pro to musím udělat?";
-};                       
+};
 
 func int Info_Diego_JoinOldcamp_Condition()
 {
@@ -514,7 +514,7 @@ func void Info_Diego_JoinOldcamp_Info()
 //	B_LogEntry(CH1_JoinOC,"To be allowed to join Gomez' people in the Old Camp, I need to see Thorus.");
 //	B_LogEntry(CH1_JoinOC,"Um bei Gomez Leuten im Alten Lager aufgenommen zu werden, soll ich mich bei Thorus melden.");
 	B_LogEntry(CH1_JoinOC,"Měl bych se hlásit u Thoruse, abych se mohl přidat ke Gomezovým lidem ve Starém táboře.");
-}; 
+};
 
 // ************************************************************
 // Weg zum Alten Lager
@@ -530,7 +530,7 @@ instance Info_Diego_WayToOldcamp(C_INFO) // E2/E3
 //	description = "How do I get to the Old Camp?";
 //	description = "Wie komme ich zum alten Lager?";
 	description = "Jak se dostanu do Starého tábora?";
-};                       
+};
 
 func int Info_Diego_WayToOldcamp_Condition()
 {
@@ -567,7 +567,7 @@ instance Info_Diego_WoWaffe(C_INFO) // E2/E3
 //	description = "Where do I get a weapon?";
 //	description = "Wo kriege ich eine Waffe her?";
 	description = "Kde bych mohl sehnat nějakou zbraň?";
-};                       
+};
 
 func int Info_Diego_WoWaffe_Condition()
 {
@@ -585,7 +585,7 @@ func void Info_Diego_WoWaffe_Info()
 //	AI_Output(self,hero,"Info_Diego_WoWaffe_11_01"); //When you get to the Old Mine, have a look around. I'm sure you'll find something useful.
 //	AI_Output(self,hero,"Info_Diego_WoWaffe_11_01"); //Wenn du an der verlassenen Mine vorbeikommst, sieh dich mal ein bißchen um. Du findest bestimmt was Brauchbares.
 	AI_Output(self,hero,"Info_Diego_WoWaffe_11_01"); //Až dorazíš k opuštěnému dolu, porozhlédni se kolem. Určitě najdeš něco užitečného.
-//	AI_Output(self,hero,"Info_Diego_WoWaffe_11_02"); //The mine is easy to find, it's just a few meters along the canyon. 
+//	AI_Output(self,hero,"Info_Diego_WoWaffe_11_02"); //The mine is easy to find, it's just a few meters along the canyon.
 //	AI_Output(self,hero,"Info_Diego_WoWaffe_11_02"); //Die Mine ist leicht zu finden, nur ein paar Meter die Schlucht entlang.
 	AI_Output(self,hero,"Info_Diego_WoWaffe_11_02"); //Ten důl najdeš snadno, je to jenom pár metrů od kaňonu.
 };
@@ -604,7 +604,7 @@ instance Info_Diego_ThorusSays(C_INFO) // E2/E3
 //	description = "I've talked to Thorus.";
 //	description = "Ich habe mit Thorus geredet.";
 	description = "Mluvil jsem s Thorusem.";
-};                       
+};
 
 func int Info_Diego_ThorusSays_Condition()
 {
@@ -650,7 +650,7 @@ instance Info_Diego_Rules(C_INFO) // E2/E3
 //	description = "What do I have to know to be accepted in the Old Camp?";
 //	description = "Was muss ich wissen, um im Alten Lager aufgenommen zu werden?";
 	description = "Co musím znát, abych byl přijat do Starého tábora?";
-};                       
+};
 
 func int Info_Diego_Rules_Condition()
 {
@@ -697,7 +697,7 @@ instance Info_Diego_Celebs(C_INFO) // E2/E3
 //	description = "Where do I find the important people?";
 //	description = "Wo finde ich die wichtigen Leute?";
 	description = "Kde najdu ty důležité lidi?";
-};                       
+};
 
 func int Info_Diego_Celebs_Condition()
 {
@@ -737,7 +737,7 @@ instance Info_Diego_Teachers(C_INFO) // E2/E3
 //	description = "Who can teach me?";
 //	description = "Bei wem kann ich was lernen?";
 	description = "Kdo mě může učit?";
-};                       
+};
 
 func int Info_Diego_Teachers_Condition()
 {
@@ -753,7 +753,7 @@ func void Info_Diego_Teachers_Info()
 //	AI_Output(hero,self,"Info_Diego_Teachers_15_00"); //Bei wem kann ich was lernen?
 	AI_Output(hero,self,"Info_Diego_Teachers_15_00"); //Kdo mě může učit?
 //	AI_Output(self,hero,"Info_Diego_Teachers_11_01"); //Start with Fingers. He's the most skillful among us.
-//	AI_Output(self,hero,"Info_Diego_Teachers_11_01"); //Für den Anfang solltest du dich an Fingers halten. Er ist der Geschickteste von uns. 
+//	AI_Output(self,hero,"Info_Diego_Teachers_11_01"); //Für den Anfang solltest du dich an Fingers halten. Er ist der Geschickteste von uns.
 	AI_Output(self,hero,"Info_Diego_Teachers_11_01"); //Začni s Fingersem. Ten je z nás nejzručnější.
 //	AI_Output(self,hero,"Info_Diego_Teachers_11_02"); //If you keep your eyes peeled, you'll find other people who can teach you.
 //	AI_Output(self,hero,"Info_Diego_Teachers_11_02"); //Wenn du die Augen aufhältst, wirst du noch andere Leute finden, die dir etwas beibringen können.
@@ -794,7 +794,7 @@ instance Info_Diego_Teach(C_INFO)
 //	description = "Can you teach me something?";
 //	description = "Kannst du mir was beibringen?";
 	description = "Můžeš mě něco naučit?";
-};                       
+};
 
 func int Info_Diego_Teach_Condition()
 {
@@ -805,9 +805,9 @@ func int Info_Diego_Teach_Condition()
 };
 
 func void Info_Diego_Teach_Info()
-{ 
+{
 	if (log_diegotrain == FALSE)
-	{ 
+	{
 		Log_CreateTopic(GE_TeacherOC,LOG_NOTE);
 //		B_LogEntry(GE_TeacherOC,"Diego can help me to become STRONGER and more DEXTEROUS.");
 //		B_LogEntry(GE_TeacherOC,"Diego kann mir helfen STÄRKER und GESCHICKTER zu werden.");
@@ -825,11 +825,11 @@ func void Info_Diego_Teach_Info()
 	Diego_Merke_DEX = hero.attribute[ATR_DEXTERITY];
 
 	Info_ClearChoices(Info_Diego_Teach);
-//	Info_AddChoice(Info_Diego_Teach,"DIALOG_BACK									",Info_Diego_Teach_BACK);
+//	Info_AddChoice(Info_Diego_Teach,"DIALOG_BACK ",Info_Diego_Teach_BACK);
 	Info_AddChoice(Info_Diego_Teach,DIALOG_BACK ,Info_Diego_Teach_BACK);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)			",Info_Diego_Teach_STR_5);
+//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0) ",Info_Diego_Teach_STR_5);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_5);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)			",Info_Diego_Teach_STR_1);
+//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0) ",Info_Diego_Teach_STR_1);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_1);
 //	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)",Info_Diego_Teach_DEX_5);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_5);
@@ -862,11 +862,11 @@ func void Info_Diego_Teach_STR_1()
 {
 	B_BuyAttributePoints(hero,ATR_STRENGTH, LPCOST_ATTRIBUTE_STRENGTH);
 	Info_ClearChoices(Info_Diego_Teach);
-//	Info_AddChoice(Info_Diego_Teach,"DIALOG_BACK									",Info_Diego_Teach_BACK);
+//	Info_AddChoice(Info_Diego_Teach,"DIALOG_BACK ",Info_Diego_Teach_BACK);
 	Info_AddChoice(Info_Diego_Teach,DIALOG_BACK ,Info_Diego_Teach_BACK);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)			",Info_Diego_Teach_STR_5);
+//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0) ",Info_Diego_Teach_STR_5);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_5 ,5*LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_5);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)			",Info_Diego_Teach_STR_1);
+//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0) ",Info_Diego_Teach_STR_1);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_1);
 //	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)",Info_Diego_Teach_DEX_5);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_5);
@@ -878,11 +878,11 @@ func void Info_Diego_Teach_STR_5()
 {
 	B_BuyAttributePoints(hero,ATR_STRENGTH, 5*LPCOST_ATTRIBUTE_STRENGTH);
 	Info_ClearChoices(Info_Diego_Teach);
-//	Info_AddChoice(Info_Diego_Teach,"DIALOG_BACK									",Info_Diego_Teach_BACK);
+//	Info_AddChoice(Info_Diego_Teach,"DIALOG_BACK ",Info_Diego_Teach_BACK);
 	Info_AddChoice(Info_Diego_Teach,DIALOG_BACK ,Info_Diego_Teach_BACK);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)			",Info_Diego_Teach_STR_5);
+//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0) ",Info_Diego_Teach_STR_5);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_5);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)			",Info_Diego_Teach_STR_1);
+//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0) ",Info_Diego_Teach_STR_1);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_1);
 //	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)",Info_Diego_Teach_DEX_5);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_5);
@@ -894,11 +894,11 @@ func void Info_Diego_Teach_DEX_1()
 {
 	B_BuyAttributePoints(hero,ATR_DEXTERITY, LPCOST_ATTRIBUTE_DEXTERITY);
 	Info_ClearChoices(Info_Diego_Teach);
-//	Info_AddChoice(Info_Diego_Teach,"DIALOG_BACK									",Info_Diego_Teach_BACK);
+//	Info_AddChoice(Info_Diego_Teach,"DIALOG_BACK ",Info_Diego_Teach_BACK);
 	Info_AddChoice(Info_Diego_Teach,DIALOG_BACK ,Info_Diego_Teach_BACK);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)			",Info_Diego_Teach_STR_5);
+//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0) ",Info_Diego_Teach_STR_5);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_5);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)			",Info_Diego_Teach_STR_1);
+//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0) ",Info_Diego_Teach_STR_1);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_1);
 //	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)",Info_Diego_Teach_DEX_5);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_5);
@@ -910,11 +910,11 @@ func void Info_Diego_Teach_DEX_5()
 {
 	B_BuyAttributePoints(hero,ATR_DEXTERITY, 5*LPCOST_ATTRIBUTE_DEXTERITY);
 	Info_ClearChoices(Info_Diego_Teach);
-//	Info_AddChoice(Info_Diego_Teach,"DIALOG_BACK									",Info_Diego_Teach_BACK);
+//	Info_AddChoice(Info_Diego_Teach,"DIALOG_BACK ",Info_Diego_Teach_BACK);
 	Info_AddChoice(Info_Diego_Teach,DIALOG_BACK ,Info_Diego_Teach_BACK);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0)			",Info_Diego_Teach_STR_5);
+//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0) ",Info_Diego_Teach_STR_5);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_5);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0)			",Info_Diego_Teach_STR_1);
+//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0) ",Info_Diego_Teach_STR_1);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_1);
 //	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)",Info_Diego_Teach_DEX_5);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_5);
@@ -940,7 +940,7 @@ instance Info_Diego_BringList_Offer(C_INFO)
 //	description = "What's the test of faith?";
 //	description = "Was ist die Prüfung des Vertrauens?";
 	description = "Co je to test oddanosti?";
-};                       
+};
 
 func int Info_Diego_BringList_Offer_Condition()
 {
@@ -982,7 +982,7 @@ func void Info_Diego_BringList_Offer_Info()
 //	B_LogEntry(CH1_BringList,"Diego hat mich zur Alten Mine geschickt. Dort soll ich von einem Mann namens Ian eine Liste bekommen. Die Liste darf auf keinen Fall dem Neuen Lager in die Finger fallen.");
 	B_LogEntry(CH1_BringList,"Diego mě poslal do Starého dolu. Mám získat od chlapíka jménem Ian seznam. Tento seznam se nesmí dostat do rukou nikomu z Nového tábora.");
 
-	VAR C_NPC Ian; Ian = Hlp_GetNpc(STT_301_IAN); 
+	VAR C_NPC Ian; Ian = Hlp_GetNpc(STT_301_IAN);
 	CreateInvItem(STT_301_IAN, TheList);
 };
 
@@ -998,7 +998,7 @@ instance Info_Diego_IanPassword(C_INFO)
 //	description = "If the list is so important, why should Ian give it to me?";
 //	description = "Wenn die Liste so vichtig ist, wieso sollte Ian sie mir geben?";
 	description = "Když je ten seznam tak důležitý, tak proč by ho měl Ian dávat právě MNĚ?";
-};                       
+};
 
 func int Info_Diego_IanPassword_Condition()
 {
@@ -1014,7 +1014,7 @@ func void Info_Diego_IanPassword_Info()
 //	AI_Output(hero,self,"Info_Diego_IanPassword_Info_15_01"); //Wenn die Liste so wichtig ist, wieso sollte Ian sie dann ausgerechnet MIR geben?
 	AI_Output(hero,self,"Info_Diego_IanPassword_Info_15_01"); //Když je ten seznam tak důležitý, tak proč by ho měl Ian dávat právě MNĚ?
 //	AI_Output(self,hero,"Info_Diego_IanPassword_Info_11_02"); //Because you're going to tell him Diego sent you.
-//	AI_Output(self,hero,"Info_Diego_IanPassword_Info_11_02"); //Weil du ihm sagst, Diego schickt dich. 
+//	AI_Output(self,hero,"Info_Diego_IanPassword_Info_11_02"); //Weil du ihm sagst, Diego schickt dich.
 	AI_Output(self,hero,"Info_Diego_IanPassword_Info_11_02"); //Protože mu řekneš, že tě poslal Diego.
 //	AI_Output(hero,self,"Info_Diego_IanPassword_Info_15_03"); //I'll tell him.
 //	AI_Output(hero,self,"Info_Diego_IanPassword_Info_15_03"); //Werd's ihm ausrichten.
@@ -1037,7 +1037,7 @@ instance Info_Diego_MapToOldMine(C_INFO)
 //	description = "Where can I find the Old Mine?";
 //	description = "Wo finde ich die Alte Mine?";
 	description = "Kde najdu Starý důl?";
-};                       
+};
 
 func int Info_Diego_MapToOldMine_Condition()
 {
@@ -1076,7 +1076,7 @@ instance Info_Diego_BringList_Success(C_INFO)
 //	description = "I have the list from Ian.";
 //	description = "Ich hab' die Liste von Ian.";
 	description = "Mám seznam od Iana.";
-};                       
+};
 
 func int Info_Diego_BringList_Success_Condition()
 {
@@ -1126,7 +1126,7 @@ func void Info_Diego_BringList_Success_Info()
 	var int Diego_GomezAudience;
 // ************************************************************
 
-instance Info_Diego_JoinAnalyze(C_INFO) 
+instance Info_Diego_JoinAnalyze(C_INFO)
 {
 	npc = PC_Thief;
 	nr = 800;
@@ -1136,7 +1136,7 @@ instance Info_Diego_JoinAnalyze(C_INFO)
 //	description = "What about my esteem within the Camp?";
 //	description = "Wie steht's mit meinem Ansehen im Lager?";
 	description = "A co má vážnost v táboře?";
-};                       
+};
 
 func int Info_Diego_JoinAnalyze_Condition()
 {
@@ -1149,7 +1149,7 @@ func int Info_Diego_JoinAnalyze_Condition()
 };
 
 func void Info_Diego_JoinAnalyze_Info()
-{ 
+{
 //	AI_Output(hero,self,"Info_Diego_JoinAnalyze_15_00"); //What about my esteem within the Camp?
 //	AI_Output(hero,self,"Info_Diego_JoinAnalyze_15_00"); //Wie steht's mit meinem Ansehen im Lager?
 	AI_Output(hero,self,"Info_Diego_JoinAnalyze_15_00"); //A co má vážnost v táboře?
@@ -1165,7 +1165,7 @@ func void Info_Diego_JoinAnalyze_Info()
 	if (Scatty_ChargeKirgo == LOG_SUCCESS)
 	{
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Scatty_11_01"); //Scatty told me you defeated Kirgo.
-//		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Scatty_11_01"); //Scatty hat mir gesagt, du hast Kirgo besiegt. 
+//		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Scatty_11_01"); //Scatty hat mir gesagt, du hast Kirgo besiegt.
 		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Scatty_11_01"); //Scatty mi řekl, že jsi porazil Kirga.
 		Points_OC = Points_OC + 2;
 	}
@@ -1192,7 +1192,7 @@ func void Info_Diego_JoinAnalyze_Info()
 	}
 	else if (Scatty_ChargeKharim == LOG_SUCCESS)
 	{
-//		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Scatty_11_05"); //But he was greatly impressed that you defeated Kharim - he wouldn't stop talking about you at all. 
+//		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Scatty_11_05"); //But he was greatly impressed that you defeated Kharim - he wouldn't stop talking about you at all.
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Scatty_11_05"); //Aber dass du gegen Kharim gewonnen hast, hat ihn total von den Socken gehauen - er hat gar nicht mehr aufgehört, von dir zu reden.
 		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Scatty_11_05"); //Udělalo na něj ale velký dojem to, že jsi porazil Kharima - nepřestával o tobě vůbec mluvit.
 		Points_OC = Points_OC + 5;
@@ -1226,14 +1226,14 @@ func void Info_Diego_JoinAnalyze_Info()
 
 	};
 	// -----------------------------------------------------------
-	if (Sly_LostNek == LOG_SUCCESS) 
+	if (Sly_LostNek == LOG_SUCCESS)
 	{
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Sly_11_01"); //Sly told me that you've found Nek. He seemed to be really content.
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Sly_11_01"); //Sly hat mir erzählt, du hast Nek gefunden. Er wirkte sehr zufrieden.
 		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Sly_11_01"); //Sly mi řekl, že jsi našel Neka. Myslím, že byl opravdu spokojený.
 		Points_OC = Points_OC + 4;
 	}
-	else if (Sly_LostNek == LOG_RUNNING) 
+	else if (Sly_LostNek == LOG_RUNNING)
 	{
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Sly_11_02"); //I think Sly's wrong about Nek. He was a real pain, that's true, but I don't think he went to the New Camp.
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Sly_11_02"); //Ich denke, bei der Sache mit Nek liegt Sly falsch. Er hat zwar immer viel gemeckert, aber ins Neue Lager ist er sicher nicht gegangen.
@@ -1257,7 +1257,7 @@ func void Info_Diego_JoinAnalyze_Info()
 	if (Dexter_GetKalomsRecipe == LOG_RUNNING)
 	{
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Dexter_11_01"); //I really need to talk to Dexter. He's using you for his own business.
-//		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Dexter_11_01"); //Mit Dexter muss ich noch ein ernstes Wörtchen reden. Er benutzt dich für seine eigenen Geschäfte. 
+//		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Dexter_11_01"); //Mit Dexter muss ich noch ein ernstes Wörtchen reden. Er benutzt dich für seine eigenen Geschäfte.
 		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Dexter_11_01"); //Musím si promluvit s Dexterem. Využívá tě ve svůj vlastní prospěch.
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Dexter_11_02"); //But there aren't any rules for the test. If you manage THAT you'll be making a big step.
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Dexter_11_02"); //Aber es gibt keine Regeln für die Probe. Wenn du DAS schaffst, bist du einen großen Schritt weiter.
@@ -1290,7 +1290,7 @@ func void Info_Diego_JoinAnalyze_Info()
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Thorus_11_03"); //Thorus's head nearly burst because he was raging mad - how dare you screw up the job LIKE THIS?
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Thorus_11_03"); //Thorus ist fast der Kopf geplatzt, so hat er geschrien - was hast du dir dabei gedacht, gerade diese Sache SO zu vermasseln?
 		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Thorus_11_03"); //Thorusovi nejspíš praskne hlava vzteky - jak ses mohl opovážit pokazit TAKOVÝ úkol?
-		Points_OC = Points_OC - 5; 
+		Points_OC = Points_OC - 5;
 	}
 	// ----WEITER-------------------------------------------------------
 	if (Fisk_GetNewHehler == LOG_SUCCESS)
@@ -1384,7 +1384,7 @@ func void Info_Diego_JoinAnalyze_Info()
 
 	//--- EXTRA Bedingung ------
 
-	Diego: Diego_BringList = LOG_SUCCESS; 
+	Diego: Diego_BringList = LOG_SUCCESS;
 */
 
 instance Info_Diego_WhatToSayToGomez(C_INFO)
@@ -1397,7 +1397,7 @@ instance Info_Diego_WhatToSayToGomez(C_INFO)
 //	description = "What do I have to do when I meet Gomez?";
 //	description = "Was soll ich machen, wenn ich bei Gomez bin?";
 	description = "Co musím udělat, až se setkám s Gomezem?";
-};                       
+};
 
 func int Info_Diego_WhatToSayToGomez_Condition()
 {
@@ -1437,11 +1437,11 @@ instance PC_Thief_ARMOR(C_INFO)
 	information = PC_Thief_ARMOR_Info;
 	important = 0;
 	permanent = 1;
-	description = B_BuildBuyArmorString(NAME_DiegoHeavyShadows,VALUE_STT_ARMOR_H); 
+	description = B_BuildBuyArmorString(NAME_DiegoHeavyShadows,VALUE_STT_ARMOR_H);
 };
 
 func int PC_Thief_ARMOR_Condition()
-{ 
+{
 	if (Npc_GetTrueGuild(hero) == GIL_STT)
 	&& (!Npc_HasItems(hero,STT_ARMOR_H))
 	{
@@ -1451,7 +1451,6 @@ func int PC_Thief_ARMOR_Condition()
 };
 func void PC_Thief_ARMOR_Info()
 {
-
 	if (Npc_HasItems(hero,ItMinugget) >= VALUE_STT_ARMOR_H)
 	{
 //		AI_Output(hero,self,"PC_Thief_ARMOR_Info_15_01"); //Can I have an armor like yours?
@@ -1475,7 +1474,7 @@ func void PC_Thief_ARMOR_Info()
 //		AI_Output(self,hero,"PC_Thief_ARMOR_Info_11_03"); //Besorge dir das Erz, dann bekommst du die Rüstung.
 		AI_Output(self,hero,"PC_Thief_ARMOR_Info_11_03"); //Obstarej si rudu, pak dostaneš výzbroj.
 	};
-};  
+};
 
 //#####################################################################
 //##
@@ -1498,7 +1497,7 @@ instance PC_Thief_MEETAGAIN(C_INFO)
 };
 
 func int PC_Thief_MEETAGAIN_Condition()
-{ 
+{
 	if (Kapitel == 3)
 	&& (Npc_GetDistToWP(self,"OW_PATH_190") < 700 )
 	{
@@ -1515,7 +1514,7 @@ func void PC_Thief_MEETAGAIN_Info()
 //	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_01"); //Das ein oder andere Mal hab' ich das auch gedacht.
 	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_01"); //Občas mám taky ten pocit.
 //	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_02"); //A lot of things have happened since we last met. I hear you've contributed a great deal to the final invocation.
-//	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_02"); //Seit unserem ersten Treffen ist einiges passiert. Ich hörte, du warst nicht ganz unbeteiligt daran, dass die große Beschwörung stattfinden konnte. 
+//	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_02"); //Seit unserem ersten Treffen ist einiges passiert. Ich hörte, du warst nicht ganz unbeteiligt daran, dass die große Beschwörung stattfinden konnte.
 	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_02"); //Od našeho posledního setkání se stalo hodně věcí. Slyšel jsem, že ses hodně podílel na hlavním vzývání.
 //	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_03"); //Obviously you're quite well informed.
 //	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_03"); //Du kriegst ja anscheinend eine ganze Menge mit.
@@ -1539,7 +1538,7 @@ func void PC_Thief_MEETAGAIN_Info()
 //	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_09"); //Nein? Was ist dann dein Problem?
 	AI_Output(hero,self,"PC_Thief_MEETAGAIN_Info_15_09"); //Ne? A v čem je tedy problém?
 //	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_10"); //It's three tons of a problem.
-//	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_10"); //Ein drei Tonnen schweres Problem. 
+//	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_10"); //Ein drei Tonnen schweres Problem.
 	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_10"); //Je tu jeden třítunový problémů.
 //	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_11"); //Let's go. You'll understand in a moment.
 //	AI_Output(self,hero,"PC_Thief_MEETAGAIN_Info_11_11"); //Lass uns gehen. Du wirst es gleich verstehen.
@@ -1573,7 +1572,7 @@ instance PC_Thief_SHOWFOCUS(C_INFO)
 };
 
 func int PC_Thief_SHOWFOCUS_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,PC_Thief_MEETAGAIN))
 	&& (Npc_GetDistToWP(self,"LOCATION_12_01") < 1000)
 	{
@@ -1581,7 +1580,7 @@ func int PC_Thief_SHOWFOCUS_Condition()
 	};
 };
 func void PC_Thief_SHOWFOCUS_Info()
-{ 
+{
 	AI_GotoNpc(self,hero);
 	//AI_PointAt (self,);
 	//AI_StopPointAt (self);
@@ -1593,7 +1592,7 @@ func void PC_Thief_SHOWFOCUS_Info()
 //	AI_Output(hero,self,"PC_Thief_SHOWFOCUS_Info_15_02"); //Alles klar. Doch zunächst sollten wir dieses Ungetüm da drüben loswerden.
 	AI_Output(hero,self,"PC_Thief_SHOWFOCUS_Info_15_02"); //Dobře. Nejdřív se ale musíme zbavit těch příšer, které se tam kolem potulují.
 //	AI_Output(self,hero,"PC_Thief_SHOWFOCUS_Info_11_03"); //Try to find a weak point or another possibility to defeat the troll.
-//	AI_Output(self,hero,"PC_Thief_SHOWFOCUS_Info_11_03"); //Versuche, eine Schwachstelle oder irgendeine Möglichkeit zu finden, wie wir den Troll kleinkriegen können. 
+//	AI_Output(self,hero,"PC_Thief_SHOWFOCUS_Info_11_03"); //Versuche, eine Schwachstelle oder irgendeine Möglichkeit zu finden, wie wir den Troll kleinkriegen können.
 	AI_Output(self,hero,"PC_Thief_SHOWFOCUS_Info_11_03"); //Zkus najít slabinu toho trola. Nebo nějaký jiný způsob, jak ho porazit.
 //	AI_Output(self,hero,"PC_Thief_SHOWFOCUS_Info_11_04"); //I'll attract his attention.
 //	AI_Output(self,hero,"PC_Thief_SHOWFOCUS_Info_11_04"); //Ich lenke seine Aufmerksamkeit auf mich.
@@ -1622,7 +1621,7 @@ instance PC_Thief_AFTERTROLL(C_INFO)
 };
 
 func int PC_Thief_AFTERTROLL_Condition()
-{ 
+{
 	var int trollFound;
 	Npc_PerceiveAll(self);
 	trollFound = Wld_DetectNpc(self,Troll, NOFUNC, -1);
@@ -1638,7 +1637,7 @@ func void PC_Thief_AFTERTROLL_Info()
 {
 	AI_GotoNpc(self,hero);
 //	AI_Output(self,hero,"PC_Thief_AFTERTROLL_Info_11_01"); //That was fantastic. You're really good. And now, go get the focus.
-//	AI_Output(self,hero,"PC_Thief_AFTERTROLL_Info_11_01"); //Das war fantastisch. Mann, du hast ja einiges drauf. So, jetzt hol dir den Fokus. 
+//	AI_Output(self,hero,"PC_Thief_AFTERTROLL_Info_11_01"); //Das war fantastisch. Mann, du hast ja einiges drauf. So, jetzt hol dir den Fokus.
 	AI_Output(self,hero,"PC_Thief_AFTERTROLL_Info_11_01"); //To bylo fantastické. Chlape, jsi opravdu dobrý. A teď si pojď vzít to ohnisko.
 //	AI_Output(self,hero,"PC_Thief_AFTERTROLL_Info_11_02"); //I'll make sure that there won't be any other awkward surprises.
 //	AI_Output(self,hero,"PC_Thief_AFTERTROLL_Info_11_02"); //Ich passe auf, dass keine weiteren unangenehmen Überraschungen auf uns zu kommen.
@@ -1664,9 +1663,9 @@ instance PC_Thief_WHEEL(C_INFO)
 };
 
 func int PC_Thief_WHEEL_Condition()
-{ 
-	if (Npc_KnowsInfo(hero,PC_Thief_AFTERTROLL)) 
-	&& (Troll_Wheel == 1) 
+{
+	if (Npc_KnowsInfo(hero,PC_Thief_AFTERTROLL))
+	&& (Troll_Wheel == 1)
 	{
 		return TRUE;
 	};
@@ -1699,7 +1698,7 @@ instance PC_Thief_FIXWHEEL(C_INFO)
 };
 
 func int PC_Thief_FIXWHEEL_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,PC_Thief_WHEEL))
 	{
 		return TRUE;
@@ -1734,7 +1733,7 @@ instance PC_Thief_WAITATFOCUS(C_INFO)
 };
 
 func int PC_Thief_WAITATFOCUS_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,PC_Thief_FIXWHEEL)
 	&& (Npc_GetDistToWP(hero,"LOCATION_12_03") < 1000)
 	{
@@ -1766,7 +1765,7 @@ instance PC_Thief_GOTIT(C_INFO)
 };
 
 func int PC_Thief_GOTIT_Condition()
-{ 
+{
 	if (Npc_HasItems(hero,Focus_2))
 	{
 		return TRUE;
@@ -1799,8 +1798,8 @@ func void PC_Thief_GOTIT_Info()
 
  	self.aivar[AIV_PARTYMEMBER] = FALSE;
 
-	Npc_ExchangeRoutine(self,"start"); 
-};  
+	Npc_ExchangeRoutine(self,"start");
+};
 
 //#####################################################################
 //##
@@ -1827,7 +1826,7 @@ func int Info_Diego_OCWARN_Condition()
 	if (Kapitel == 4)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Diego_OCWARN_Info()
@@ -1889,7 +1888,7 @@ func int Info_Diego_OCMINE_Condition()
 	if (Npc_KnowsInfo(hero,Info_Diego_OCWARN))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Diego_OCMINE_Info()
@@ -1928,7 +1927,7 @@ func int Info_Diego_OCKDF_Condition()
 	if (Npc_KnowsInfo(hero,Info_Diego_OCWARN) && !Npc_KnowsInfo(hero,Info_Diego_OCFM))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Diego_OCKDF_Info()
@@ -1961,7 +1960,7 @@ func int Info_Diego_OCFM_Condition()
 	if (Npc_KnowsInfo(hero,Info_Diego_OCWARN) && !Npc_KnowsInfo(hero,Info_Diego_OCKDF))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Diego_OCFM_Info()
@@ -1994,7 +1993,7 @@ func int Info_Diego_OCSTORY_Condition()
 	if (Npc_KnowsInfo(hero,Info_Diego_OCFM) || Npc_KnowsInfo(hero,Info_Diego_OCKDF))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Diego_OCSTORY_Info()
@@ -2050,7 +2049,7 @@ func int Info_Diego_OCWARNNC_Condition()
 	if (Npc_KnowsInfo(hero,Info_Diego_OCSTORY))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Diego_OCWARNNC_Info()
@@ -2089,7 +2088,7 @@ func int Info_Diego_OCGUARDS_Condition()
 	if (Npc_KnowsInfo(hero,Info_Diego_OCSTORY))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Diego_OCGUARDS_Info()
@@ -2125,7 +2124,7 @@ func int Info_Diego_OCMURDER_Condition()
 	if (Npc_KnowsInfo(hero,Info_Diego_OCSTORY))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Diego_OCMURDER_Info()
@@ -2167,7 +2166,7 @@ func int Info_Diego_OCRETREAT_Condition()
 	if (Npc_KnowsInfo(hero,Info_Diego_OCMURDER))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Diego_OCRETREAT_Info()
@@ -2203,7 +2202,7 @@ func int Info_Diego_OCFAVOR_Condition()
 	if (Npc_KnowsInfo(hero,Info_Diego_OCRETREAT))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Diego_OCFAVOR_Info()
@@ -2226,9 +2225,9 @@ func void Info_Diego_OCFAVOR_Info()
 
 	Log_CreateTopic(CH4_4Friends,LOG_MISSION);
 	Log_SetTopicStatus(CH4_4Friends,LOG_RUNNING);
-//	B_LogEntry(CH4_4Friends, "All Fire Mages are dead an the situation is getting out of control. Diego wanted me to tell Lester and Gorn about a meeting with him and Milten in a secret place. They don't seem to be doing this the first time!"); 
-//	B_LogEntry(CH4_4Friends, "Alle Feuermagier sind tot und die Situation spitzt sich zu. Diego hat mich beauftragt Lester und Gorn davon zu unterrichten, daß er sich mit Ihnen und Milten an einem geheimen Ort treffen will. Das scheinen sie nicht zum ersten gemacht zu haben."); 
-	B_LogEntry(CH4_4Friends, "Všichni mágové Ohně jsou mrtví a situace se vymkla z rukou. Diego chtěl, abych se s Lesterem a Gornem domluvil na nějakém bezpečném místě setkání s ním a Miltenem. Zdá se, že to nedělají poprvé!"); 
+//	B_LogEntry(CH4_4Friends, "All Fire Mages are dead an the situation is getting out of control. Diego wanted me to tell Lester and Gorn about a meeting with him and Milten in a secret place. They don't seem to be doing this the first time!");
+//	B_LogEntry(CH4_4Friends, "Alle Feuermagier sind tot und die Situation spitzt sich zu. Diego hat mich beauftragt Lester und Gorn davon zu unterrichten, daß er sich mit Ihnen und Milten an einem geheimen Ort treffen will. Das scheinen sie nicht zum ersten gemacht zu haben.");
+	B_LogEntry(CH4_4Friends, "Všichni mágové Ohně jsou mrtví a situace se vymkla z rukou. Diego chtěl, abych se s Lesterem a Gornem domluvil na nějakém bezpečném místě setkání s ním a Miltenem. Zdá se, že to nedělají poprvé!");
 };
 
 /*
@@ -2256,8 +2255,8 @@ func void Info_Diego_Gamestart_Choice_Dex()
 func void Info_Diego_Gamestart_Choice_Str()
 {
 	AI_Output(hero,self,"Info_Diego_Gamestart_Choice_Str_15_00"); //Eine Herausforderung konnte ich noch nie abschlagen. Auch nicht von des Königs Gardisten. dummerweise hat der König viele Gardisten.
-//	AI_Output(hero,self,"Info_Diego_Gamestart_Choice_Str_15_01"); //Zu viele.	
-	AI_Output(hero,self,"Info_Diego_Gamestart_Choice_Str_15_01"); //Zu viele. 
+//	AI_Output(hero,self,"Info_Diego_Gamestart_Choice_Str_15_01"); //Zu viele.
+	AI_Output(hero,self,"Info_Diego_Gamestart_Choice_Str_15_01"); //Zu viele.
 	PrintScreen("Stärke +3", -1,-1,"FONT_OLD_20_WHITE.TGA",3);
 	hero.attribute[ATR_STRENGTH] = hero.attribute[ATR_STRENGTH]+3;
 	Info_ClearChoices(Info_Diego_Gamestart);
@@ -2265,7 +2264,7 @@ func void Info_Diego_Gamestart_Choice_Str()
 
 func void Info_Diego_Gamestart_Choice_Man()
 {
-	AI_Output(hero,self,"Info_Diego_Gamestart_Choice_Man_15_00"); //Ich saß in der Kneipe und habe meine Meinung über König, Krieg und Steuern gesagt. 
+	AI_Output(hero,self,"Info_Diego_Gamestart_Choice_Man_15_00"); //Ich saß in der Kneipe und habe meine Meinung über König, Krieg und Steuern gesagt.
 	AI_Output(hero,self,"Info_Diego_Gamestart_Choice_Man_15_01"); //Ich hab' mich nur zu spät daran erinnert, dass der, der die Wahrheit spricht, ein schnelles Pferd braucht.
 	PrintScreen("Mana +3", -1,-1,"FONT_OLD_20_WHITE.TGA",3);
 	hero.attribute[ATR_MANA] = hero.attribute[ATR_MANA]+3;
@@ -2276,10 +2275,10 @@ func void Info_Diego_Gamestart_Choice_Man()
 func void Info_Diego_Gamestart_Choice_All()
 {
 	AI_Output(hero,self,"Info_Diego_Gamestart_Choice_All_15_00"); //Ich bin unschuldig!
-	AI_Output(self,hero,"Info_Diego_Gamestart_Choice_All_11_01"); //Du solltest eins wissen: Hier drin ist niemand unschuldig. 
-	AI_Output(self,hero,"Info_Diego_Gamestart_Choice_All_11_02"); //Hier findest du Männer die so ziemlich jedes mögliche Verbrechen begangen haben. Und einen unschuldigen nehmen die nur zu gerne auseinander. 
-	AI_Output(self,hero,"Info_Diego_Gamestart_Choice_All_11_03"); //Ich gebe dir nen Tipp, und der ist ganz umsonst. 
-	AI_Output(self,hero,"Info_Diego_Gamestart_Choice_All_11_04"); //Wenn dich jemand fragt, warum du hier bist, sag ihm, du hast einen Typen gekillt, der dich gefragt hat, warum du hier bist. 
+	AI_Output(self,hero,"Info_Diego_Gamestart_Choice_All_11_01"); //Du solltest eins wissen: Hier drin ist niemand unschuldig.
+	AI_Output(self,hero,"Info_Diego_Gamestart_Choice_All_11_02"); //Hier findest du Männer die so ziemlich jedes mögliche Verbrechen begangen haben. Und einen unschuldigen nehmen die nur zu gerne auseinander.
+	AI_Output(self,hero,"Info_Diego_Gamestart_Choice_All_11_03"); //Ich gebe dir nen Tipp, und der ist ganz umsonst.
+	AI_Output(self,hero,"Info_Diego_Gamestart_Choice_All_11_04"); //Wenn dich jemand fragt, warum du hier bist, sag ihm, du hast einen Typen gekillt, der dich gefragt hat, warum du hier bist.
 	PrintScreen("Stärke, Geschick und Mana +1", -1,-1,"FONT_OLD_20_WHITE.TGA",3);
 	hero.attribute[ATR_DEXTERITY] = hero.attribute[ATR_DEXTERITY]+1;
 	hero.attribute[ATR_STRENGTH] = hero.attribute[ATR_STRENGTH] +1;

@@ -5,7 +5,7 @@ var int Mud_NerveRealized;
 // **************************************************
 
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Mud_Exit(C_INFO)
@@ -16,7 +16,7 @@ instance DIA_Mud_Exit(C_INFO)
 	information = DIA_Mud_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Mud_Exit_Condition()
 {
@@ -43,7 +43,7 @@ instance DIA_Mud_FirstEXIT(C_INFO)
 	information = DIA_Mud_FirstEXIT_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_FirstEXIT_Condition()
 {
@@ -110,11 +110,10 @@ instance DIA_Mud_ShutUp(C_INFO)
 //	description = "Could you PLEASE keep quiet for a minute?";
 //	description = "Kannst du mal BITTE einen Moment die Klappe halten?";
 	description = "Mohl bys být, PROSÍM, chvilku zticha?";
-};                       
+};
 
 func int DIA_Mud_ShutUp_Condition()
 {
-
 	if (Mud_NerveRealized == TRUE)
 	{
 		return 1;
@@ -146,7 +145,7 @@ instance DIA_Mud_GetLost(C_INFO)
 //	description = "Get lost!";
 //	description = "Verpiss dich!";
 	description = "Ztrať se!";
-};                       
+};
 
 func int DIA_Mud_GetLost_Condition()
 {
@@ -175,7 +174,7 @@ instance DIA_Mud_Defeated(C_INFO)
 	information = DIA_Mud_Defeated_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Defeated_Condition()
 {
@@ -202,7 +201,7 @@ func void DIA_Mud_Defeated_Info()
 };
 
 // **************************************************
-// 						 Nerve 0 
+// 						 Nerve 0
 // **************************************************
 
 instance DIA_Mud_Nerve_0(C_INFO)
@@ -213,7 +212,7 @@ instance DIA_Mud_Nerve_0(C_INFO)
 	information = DIA_Mud_Nerve_0_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Nerve_0_Condition()
 {
@@ -231,7 +230,7 @@ func void DIA_Mud_Nerve_0_Info()
 };
 
 // **************************************************
-// 						 Nerve 1 
+// 						 Nerve 1
 // **************************************************
 
 instance DIA_Mud_Nerve_1(C_INFO)
@@ -242,7 +241,7 @@ instance DIA_Mud_Nerve_1(C_INFO)
 	information = DIA_Mud_Nerve_1_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Nerve_1_Condition()
 {
@@ -261,7 +260,7 @@ func void DIA_Mud_Nerve_1_Info()
 };
 
 // **************************************************
-// 						 Nerve 2 
+// 						 Nerve 2
 // **************************************************
 
 instance DIA_Mud_Nerve_2(C_INFO)
@@ -272,7 +271,7 @@ instance DIA_Mud_Nerve_2(C_INFO)
 	information = DIA_Mud_Nerve_2_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Nerve_2_Condition()
 {
@@ -303,7 +302,7 @@ instance DIA_Mud_Nerve_3(C_INFO)
 	information = DIA_Mud_Nerve_3_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Nerve_3_Condition()
 {
@@ -334,7 +333,7 @@ instance DIA_Mud_Nerve_4(C_INFO)
 	information = DIA_Mud_Nerve_4_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Nerve_4_Condition()
 {
@@ -364,7 +363,7 @@ instance DIA_Mud_Nerve_5(C_INFO)
 	information = DIA_Mud_Nerve_5_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Nerve_5_Condition()
 {
@@ -393,7 +392,7 @@ instance DIA_Mud_Nerve_6(C_INFO)
 	information = DIA_Mud_Nerve_6_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Nerve_6_Condition()
 {
@@ -422,7 +421,7 @@ instance DIA_Mud_Nerve_7(C_INFO)
 	information = DIA_Mud_Nerve_7_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Nerve_7_Condition()
 {
@@ -451,7 +450,7 @@ instance DIA_Mud_Nerve_8(C_INFO)
 	information = DIA_Mud_Nerve_8_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Nerve_8_Condition()
 {
@@ -480,7 +479,7 @@ instance DIA_Mud_Nerve_9(C_INFO)
 	information = DIA_Mud_Nerve_9_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Nerve_9_Condition()
 {
@@ -509,7 +508,7 @@ instance DIA_Mud_Nerve_10(C_INFO)
 	information = DIA_Mud_Nerve_10_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Nerve_10_Condition()
 {
@@ -538,7 +537,7 @@ instance DIA_Mud_Nerve_11(C_INFO)
 	information = DIA_Mud_Nerve_11_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Nerve_11_Condition()
 {
@@ -568,7 +567,7 @@ instance DIA_Mud_Nerve_12(C_INFO)
 	information = DIA_Mud_Nerve_12_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Nerve_12_Condition()
 {
@@ -597,7 +596,7 @@ instance DIA_Mud_Nerve_13(C_INFO)
 	information = DIA_Mud_Nerve_13_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Nerve_13_Condition()
 {
@@ -626,7 +625,7 @@ instance DIA_Mud_Nerve_14(C_INFO)
 	information = DIA_Mud_Nerve_14_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Nerve_14_Condition()
 {
@@ -659,7 +658,7 @@ instance DIA_Mud_Nerve_15(C_INFO)
 	information = DIA_Mud_Nerve_15_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Nerve_15_Condition()
 {
@@ -688,7 +687,7 @@ instance DIA_Mud_Nerve_16(C_INFO)
 	information = DIA_Mud_Nerve_16_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Nerve_16_Condition()
 {
@@ -717,7 +716,7 @@ instance DIA_Mud_Nerve_17(C_INFO)
 	information = DIA_Mud_Nerve_17_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Nerve_17_Condition()
 {
@@ -746,7 +745,7 @@ instance DIA_Mud_Nerve_18(C_INFO)
 	information = DIA_Mud_Nerve_18_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Nerve_18_Condition()
 {
@@ -775,7 +774,7 @@ instance DIA_Mud_Nerve_19(C_INFO)
 	information = DIA_Mud_Nerve_19_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Mud_Nerve_19_Condition()
 {

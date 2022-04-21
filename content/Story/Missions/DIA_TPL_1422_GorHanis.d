@@ -1,5 +1,5 @@
 // **************************************************
-//						 EXIT 
+//						 EXIT
 // **************************************************
 
 instance Info_GorHanis_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance Info_GorHanis_Exit(C_INFO)
 	information = Info_GorHanis_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_GorHanis_Exit_Condition()
 {
@@ -36,7 +36,7 @@ instance Info_GorHanis_What(C_INFO)
 //	description = "What are you doing here?";
 //	description = "Was machst du hier?";
 	description = "Co tady děláš?";
-};                       
+};
 
 func int Info_GorHanis_What_Condition()
 {
@@ -67,7 +67,7 @@ instance Info_GorHanis_Arena(C_INFO)
 //	description = "You fight in the arena?";
 //	description = "Du kämpfst in der Arena?";
 	description = "Bojuješ v aréně?";
-};                       
+};
 
 func int Info_GorHanis_Arena_Condition()
 {
@@ -104,7 +104,7 @@ instance Info_GorHanis_Sleeper(C_INFO)
 //	description = "What is the Sleeper?";
 //	description = "Was ist der Schläfer?";
 	description = "Co je to Spáč?";
-};                       
+};
 
 func int Info_GorHanis_Sleeper_Condition()
 {
@@ -147,7 +147,7 @@ instance Info_GorHanis_Summoning(C_INFO)
 //	description = "What kind of invocation is it you're planning?";
 //	description = "Was ist das für eine große Anrufung, die ihr plant?";
 	description = "Jaký druh vzývání připravujete?";
-};                       
+};
 
 func int Info_GorHanis_Summoning_Condition()
 {
@@ -184,7 +184,7 @@ instance Info_GorHanis_WayToST(C_INFO)
 //	description = "Could you describe the way to your camp?";
 //	description = "Kannst du mir den Weg zu eurem Lager beschreiben?";
 	description = "Můžeš mi popsat cestu do vašeho tábora?";
-};                       
+};
 
 func int Info_GorHanis_WayToST_Condition()
 {
@@ -218,7 +218,7 @@ instance Info_GorHanis_Charge(C_INFO)
 //	description = "I challenge you to a duel in the arena!";
 //	description = "Ich fordere dich zum Duell in der Arena!";
 	description = "Vyzývám tě na souboj v aréně!";
-};                       
+};
 
 func int Info_GorHanis_Charge_Condition()
 {
@@ -258,7 +258,7 @@ instance Info_GorHanis_ChargeGood(C_INFO)
 //	description = "Am I now strong enough to fight against you?";
 //	description = "Bin ich jetzt gut genug, um gegen dich zu kämpfen?";
 	description = "Jsem už dost silný, abych se s tebou mohl utkat?";
-};                       
+};
 
 func int Info_GorHanis_ChargeGood_Condition()
 {
@@ -280,7 +280,7 @@ func void Info_GorHanis_ChargeGood_Info()
 
 /*
 
-// infos 
+// infos
 instance Info_TPL_1422_GorHanis(C_INFO)
 {
 	npc = TPL_1422_GorHanis;
@@ -294,7 +294,7 @@ func int Info_TPL_1422_GorHanis_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_PC_Mage_LoadSword3 )) {
 		return 1;
-	}; 
+	};
 };
 
 func void Info_TPL_1422_GorHanis_Info()
@@ -309,14 +309,14 @@ instance Info_TPL_1422_GorHanis1(C_INFO)
 	information = Info_TPL_1422_GorHanis1_Info;
 	important = 0;
 	permanent = 0;
-	description = "Ich will helfen den Schläfer zu erwecken."; 
+	description = "Ich will helfen den Schläfer zu erwecken.";
 };
 
 func int Info_TPL_1422_GorHanis1_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_TPL_1422_GorHanis )) {
 		return 1;
-	}; 
+	};
 };
 
 func void Info_TPL_1422_GorHanis1_Info()
@@ -332,21 +332,21 @@ instance Info_TPL_1422_GorHanis2(C_INFO)
 	information = Info_TPL_1422_GorHanis2_Info;
 	important = 0;
 	permanent = 0;
-	description = "Das geht dich nichts an!"; 
+	description = "Das geht dich nichts an!";
 };
 
 func int Info_TPL_1422_GorHanis2_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_TPL_1422_GorHanis )) {
 		return 1;
-	}; 
+	};
 };
 
 func void Info_TPL_1422_GorHanis2_Info()
 {
 	AI_Output(other,self,"Info_TPL_1422_GorHanis2_15_01"); //Das geht dich nichts an!
 //	AI_Output(self,other,"Info_TPL_1422_GorHanis2_08_02"); //Soso, dann lasse ich dich lieber passieren, bevor du mir weh tust (lacht). Am Hohenpriester kommst Du eh nicht vorbei und ich muss mein Schwert nicht mit deinem Blut beschmutzen.
-	AI_Output(self,other,"Info_TPL_1422_GorHanis2_08_02"); //Soso, dann lasse ich dich lieber passieren, bevor du mir weh tust (lacht). Am Hohenpriester kommst Du eh nicht vorbei und ich muss mein Schwert nicht mit deinem Blut beschmutzen. 
+	AI_Output(self,other,"Info_TPL_1422_GorHanis2_08_02"); //Soso, dann lasse ich dich lieber passieren, bevor du mir weh tust (lacht). Am Hohenpriester kommst Du eh nicht vorbei und ich muss mein Schwert nicht mit deinem Blut beschmutzen.
 };
 
 instance Info_TPL_1422_GorHanis3(C_INFO)
@@ -356,14 +356,14 @@ instance Info_TPL_1422_GorHanis3(C_INFO)
 	information = Info_TPL_1422_GorHanis3_Info;
 	important = 0;
 	permanent = 0;
-	description = "Wie seit ihr an dem Priester vorbei gekommen?"; 
+	description = "Wie seit ihr an dem Priester vorbei gekommen?";
 };
 
 func int Info_TPL_1422_GorHanis3_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_TPL_1422_GorHanis2 )) || (Npc_KnowsInfo(hero,Info_TPL_1422_GorHanis1 )) {
 		return 1;
-	}; 
+	};
 };
 
 func void Info_TPL_1422_GorHanis3_Info()

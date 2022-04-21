@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Grim_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Grim_Exit(C_INFO)
 	information = DIA_Grim_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Grim_Exit_Condition()
 {
@@ -37,7 +37,7 @@ instance DIA_Grim_Falle(C_INFO)
 };
 
 func int DIA_Grim_Falle_Condition()
-{ 
+{
 	if (Grim_ProtectionBully == TRUE)
 	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
 	{
@@ -94,7 +94,7 @@ func void DIA_Grim_Falle_HowShare()
 //	AI_Output(other,self,"DIA_Grim_Falle_HowShare_15_00"); //What will happen when we have the amulet?
 //	AI_Output(other,self,"DIA_Grim_Falle_HowShare_15_00"); //Was passiert, wenn wir das Amulett haben?
 	AI_Output(other,self,"DIA_Grim_Falle_HowShare_15_00"); //Co se stane, až budeme mít ten amulet?
-//	AI_Output(self,other,"DIA_Grim_Falle_HowShare_06_01"); //That's an easy one! I'll return it and get the reward. I'l tell them you helped me. Then you'll be in Gomez' good books for sure... 
+//	AI_Output(self,other,"DIA_Grim_Falle_HowShare_06_01"); //That's an easy one! I'll return it and get the reward. I'l tell them you helped me. Then you'll be in Gomez' good books for sure...
 //	AI_Output(self,other,"DIA_Grim_Falle_HowShare_06_01"); //Ganz einfach! Ich geb's zurück und kassier die Belohnung - dabei sag' ich, dass du mir geholfen hast. Damit hast du bei Gomez 'nen Stein in Brett.
 	AI_Output(self,other,"DIA_Grim_Falle_HowShare_06_01"); //To je prosté! Vrátím ho a dostanu odměnu. Řeknu jim, že jsi mi pomohl. Pak si u Gomeze určitě uděláš oko.
 
@@ -148,7 +148,7 @@ instance DIA_Grim_ReadyToGo(C_INFO)
 };
 
 func int DIA_Grim_ReadyToGo_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Grim_Falle))
 	{
 		return 1;
@@ -167,7 +167,7 @@ func void DIA_Grim_ReadyToGo_Info()
 	AI_StopProcessInfos(self);
 
 	Npc_ExchangeRoutine(self,"GUIDE");
-}; 
+};
 
 // **************************************************
 //				OC DRAUSSEN ANGEKOMMEN
@@ -181,11 +181,11 @@ instance DIA_Grim_AtOCdraussen(C_INFO)
 	information = DIA_Grim_AtOCdraussen_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Grim_AtOCdraussen_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Grim_ReadyToGo)) && (Npc_GetDistToWp (hero,"OC_ROUND_22_CF_2_MOVEMENT") < 500 ) 
+	if (Npc_KnowsInfo(hero,DIA_Grim_ReadyToGo)) && (Npc_GetDistToWp (hero,"OC_ROUND_22_CF_2_MOVEMENT") < 500 )
 	{
 		return 1;
 	};
@@ -246,7 +246,7 @@ instance DIA_Grim_NACHFalle(C_INFO)
 };
 
 func int DIA_Grim_NACHFalle_Condition()
-{ 
+{
 	if ((Npc_KnowsInfo(hero,DIA_Grim_AtOCdraussen)) && (Npc_GetDistToNpc(self,other)<ZivilAnquatschDist))
 	{
 		return 1;
@@ -318,7 +318,7 @@ func void DIA_Grim_NACHFalle_Frieden()
 // **************************************************
 // 				Hallo
 // **************************************************
-	var int FirstOver; 
+	var int FirstOver;
 // **************************************************
 
 instance DIA_Grim_Hallo(C_INFO)
@@ -334,7 +334,7 @@ instance DIA_Grim_Hallo(C_INFO)
 };
 
 func int DIA_Grim_Hallo_Condition()
-{ 
+{
 	if (Grim_ProtectionBully==TRUE)
 	{
 		FirstOver = TRUE;
@@ -373,7 +373,7 @@ instance DIA_Grim_Leben(C_INFO)
 };
 
 func int DIA_Grim_Leben_Condition()
-{ 
+{
 	return 1;
 };
 
@@ -404,7 +404,7 @@ instance DIA_Grim_Aufnahme(C_INFO)
 };
 
 func int DIA_Grim_Aufnahme_Condition()
-{ 
+{
 	return 1;
 };
 
@@ -446,7 +446,7 @@ instance DIA_Grim_HowFarAreYou(C_INFO)
 };
 
 func int DIA_Grim_HowFarAreYou_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Grim_Aufnahme) && Npc_KnowsInfo(hero,Info_Diego_Rules))
 	{
 		return 1;
@@ -488,7 +488,7 @@ instance DIA_Grim_YourPDV(C_INFO)
 };
 
 func int DIA_Grim_YourPDV_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Grim_Aufnahme))
 	{
 		return 1;
@@ -524,7 +524,7 @@ instance DIA_Grim_INEXTREMO(C_INFO)
 	information = DIA_Grim_INEXTREMO_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Grim_INEXTREMO_Condition()
 {
@@ -573,12 +573,12 @@ instance DIA_Grim_INEXTREMOAWAY(C_INFO)
 //	description = "Where are In Extremo?";
 //	description = "Wo sind InExtremo?";
 	description = "Kde jsou In Extremo?";
-};                       
+};
 
 func int DIA_Grim_INEXTREMOAWAY_Condition()
 {
 	if Npc_KnowsInfo(hero,DIA_Grim_INEXTREMO)
-	&& (Kapitel == 3) 
+	&& (Kapitel == 3)
 	{
 		return TRUE;
 	};

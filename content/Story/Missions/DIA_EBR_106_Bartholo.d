@@ -1,5 +1,5 @@
 // **************************************
-//					EXIT 
+//					EXIT
 // **************************************
 
 instance DIA_Bartholo_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Bartholo_Exit(C_INFO)
 	information = DIA_Bartholo_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Bartholo_Exit_Condition()
 {
@@ -36,10 +36,10 @@ instance Info_Bartholo_HAllo(C_INFO)
 //	description = "Who are you?";
 //	description = "Wer bist du?";
 	description = "Kdo jsi?";
-};                       
+};
 
 func int Info_Bartholo_HAllo_Condition()
-{ 
+{
 	return 1;
 };
 
@@ -80,10 +80,10 @@ instance Info_Bartholo_PERM(C_INFO)
 //	description = "Ich will mit dir handeln.";
 	description = "Chtěl bych s tebou obchodovat.";
 	trade = 1;
-};                       
+};
 
 func int Info_Bartholo_PERM_Condition()
-{ 
+{
 //SN: Problematisch, da Bartholo auch einen wichtigen Schlüssel hat!
 //	if (Npc_KnowsInfo(hero,Info_Bartholo_Hallo))
 //	{
@@ -115,10 +115,10 @@ instance Info_Bartholo_Krautbote(C_INFO)
 //	description = "I have some weed here for Gomez. Cor Kalom sent it.";
 //	description = "Ich habe ne Ladung Kraut von Cor Kalom für Gomez.";
 	description = "Mám pro Gomeze dodávku drogy z bažin od Cor Kaloma.";
-};                       
+};
 
 func int Info_Bartholo_Krautbote_Condition()
-{ 
+{
 	if (Kalom_Krautbote == LOG_RUNNING)
 	{
 		return 1;
@@ -183,7 +183,7 @@ instance DIA_EBR_106_Bartholo_Wait4SC(C_INFO)
 };
 
 func int DIA_EBR_106_Bartholo_Wait4SC_Condition()
-{ 
+{
 	if ExploreSunkenTower
 	{
 		return TRUE;
@@ -212,5 +212,5 @@ func void DIA_EBR_106_Bartholo_Wait4SC_Info()
 	AI_StopProcessInfos(self);
 
 	self.guild = GIL_EBR;
-	Npc_SetTrueGuild(self,GIL_EBR); 
+	Npc_SetTrueGuild(self,GIL_EBR);
 };

@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------
-							Sitzender Ork 
+							Sitzender Ork
 ------------------------------------------------------------------------*/
 
 instance Grd_277_Gardist_SITTINGORK(C_INFO)
@@ -9,13 +9,13 @@ instance Grd_277_Gardist_SITTINGORK(C_INFO)
 	information = Grd_277_Gardist_SITTINGORK_Info;
 	important = 0;
 	permanent = 0;
-//	description = "What's with that Orc?"; 
-//	description = "Was ist mit dem Ork da?"; 
-	description = "Co je s tím skřetem?"; 
+//	description = "What's with that Orc?";
+//	description = "Was ist mit dem Ork da?";
+	description = "Co je s tím skřetem?";
 };
 
 func int Grd_277_Gardist_SITTINGORK_Condition()
-{ 
+{
 	if (Ian_gearwheel != LOG_SUCCESS)
 	{
 		return TRUE;
@@ -35,9 +35,9 @@ func void Grd_277_Gardist_SITTINGORK_Info()
 //	AI_Output(self,other,"Grd_277_Gardist_SITTINGORK_Info_06_03"); //As soon as the masher is repaired, it's back to work for him. He's not here to laze around all the time!
 //	AI_Output(self,other,"Grd_277_Gardist_SITTINGORK_Info_06_03"); //Wenn der Stampfer repariert ist, wird er wieder arbeiten. Schließlich ist er nicht zum Faulenzen hier!
 	AI_Output(self,other,"Grd_277_Gardist_SITTINGORK_Info_06_03"); //Jakmile bude drtička opravená, bude zase pracovat! Ostatně, není tu od toho, aby se povaloval!
-};  
+};
 /*------------------------------------------------------------------------
-							WORKINGORK 
+							WORKINGORK
 ------------------------------------------------------------------------*/
 
 instance Grd_277_Gardist_WORKINGORK(C_INFO)
@@ -47,13 +47,13 @@ instance Grd_277_Gardist_WORKINGORK(C_INFO)
 	information = Grd_277_Gardist_WORKINGORK_Info;
 	important = 0;
 	permanent = 0;
-//	description = "I see the masher has already been repaired."; 
-//	description = "Ich sehe, der Stampfer ist schon repariert."; 
-	description = "Vidím, že drtička je už opravená."; 
+//	description = "I see the masher has already been repaired.";
+//	description = "Ich sehe, der Stampfer ist schon repariert.";
+	description = "Vidím, že drtička je už opravená.";
 };
 
 func int Grd_277_Gardist_WORKINGORK_Condition()
-{ 
+{
 	if (Ian_gearwheel == LOG_SUCCESS)
 	{
 		return TRUE;
@@ -68,4 +68,4 @@ func void Grd_277_Gardist_WORKINGORK_Info()
 //	AI_Output(self,other,"Grd_277_Gardist_WORKINGORK_Info_06_02"); //Yeah, we're fast when it comes to making people work.
 //	AI_Output(self,other,"Grd_277_Gardist_WORKINGORK_Info_06_02"); //Ja, wenn es darum geht, die Leute zum Arbeiten zu bringen, sind wir ziemlich schnell.
 	AI_Output(self,other,"Grd_277_Gardist_WORKINGORK_Info_06_02"); //Ano, když mají lidi pracovat, tak jsme rychlí.
-};  
+};

@@ -1,5 +1,5 @@
 // **************************************************
-//						EXIT 
+//						EXIT
 // **************************************************
 
 instance DIA_Viran_Exit(C_INFO)
@@ -8,10 +8,10 @@ instance DIA_Viran_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Viran_Exit_Condition;
 	information = DIA_Viran_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Viran_Exit_Condition()
 {
@@ -37,7 +37,7 @@ instance DIA_Viran_What(C_INFO)
 //	description = "What are you doing here?";
 //	description = "Was macht ihr hier?";
 	description = "Co tady děláš?";
-};                       
+};
 
 func int DIA_Viran_What_Condition()
 {
@@ -80,7 +80,7 @@ instance DIA_Viran_FetchWeed(C_INFO)
 //	description = "Baal Orun sent me. I'm to take the whole harvest to Kalom.";
 //	description = "Baal Orun schickt mich. Ich soll die gesamte Ernte zu Kalom bringen.";
 	description = "Poslal mě Baal Orun. Mám předat celou sklizeň Kalomovi.";
-};                       
+};
 
 func int DIA_Viran_FetchWeed_Condition()
 {
@@ -148,7 +148,7 @@ instance DIA_Viran_Bloodflies(C_INFO)
 //	description = "And what do you want me to do?";
 //	description = "Und was soll ich machen?";
 	description = "A co mám udělat?";
-};                       
+};
 
 func int DIA_Viran_Bloodflies_Condition()
 {
@@ -192,7 +192,7 @@ instance DIA_Viran_Running(C_INFO)
 //	description = "I don't see any more bloodflies anywhere.";
 //	description = "Ich seh weit und breit keine Blutfliegen mehr.";
 	description = "Už tu žádné krvavé mouchy nevidím.";
-};                       
+};
 
 func int DIA_Viran_Running_Condition()
 {
@@ -272,7 +272,7 @@ instance DIA_Viran_Perm(C_INFO)
 //	description = "How's the picking going?";
 //	description = "Wie steht's mit der Sammelei?";
 	description = "Jak jde sklízení?";
-};                       
+};
 
 func int DIA_Viran_Perm_Condition()
 {
@@ -309,7 +309,7 @@ instance DIA_Viran_RipOff(C_INFO)
 //	description = "I'm to take all the weeds to Cor Kalom again.";
 //	description = "Ich soll nochmal alles Kraut zu Cor Kalom bringen.";
 	description = "Jsem tu, abych pro Cora Kaloma znovu převzal celou sklizeň.";
-};                       
+};
 
 func int DIA_Viran_RipOff_Condition()
 {

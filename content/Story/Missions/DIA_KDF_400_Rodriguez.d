@@ -1,5 +1,5 @@
 //***********************************************
-//					EXIT 
+//					EXIT
 //***********************************************
 
 instance DIA_Rodriguez_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Rodriguez_Exit(C_INFO)
 	information = DIA_Rodriguez_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Rodriguez_Exit_Condition()
 {
@@ -36,7 +36,7 @@ instance DIA_Rodriguez_Hello(C_INFO)
 //	description = "I'm looking for the High Magician of the Circle of Fire!";
 //	description = "Ich suche den obersten Magier des Feuers!";
 	description = "Hledám Nejvyššího mága Ohnivého kruhu.";
-};                       
+};
 
 func int DIA_Rodriguez_Hello_Condition()
 {

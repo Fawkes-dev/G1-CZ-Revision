@@ -3,7 +3,7 @@
 //*****************************************
 
 // ************************************************************
-//							Hello 
+//							Hello
 // ************************************************************
 
 instance DIA_Stone_Hello(C_INFO)
@@ -19,9 +19,9 @@ instance DIA_Stone_Hello(C_INFO)
 };
 
 func int DIA_Stone_Hello_Condition()
-{ 
+{
 	if (Kapitel < 4)
-	{ 
+	{
 		return TRUE;
 	};
 };
@@ -37,7 +37,7 @@ func void DIA_Stone_Hello_Info()
 };
 
 // ************************************************************
-//							Kaufen 
+//							Kaufen
 // ************************************************************
 
 instance DIA_Stone_NotSelling(C_INFO)
@@ -53,7 +53,7 @@ instance DIA_Stone_NotSelling(C_INFO)
 };
 
 func int DIA_Stone_NotSelling_Condition()
-{ 
+{
 	if (Npc_GetTrueGuild(hero) != GIL_GRD)
 	&& (Kapitel < 4)
 	{
@@ -88,14 +88,14 @@ instance GRD_219_Stone_GETSTUFF(C_INFO)
 	information = GRD_219_Stone_GETSTUFF_Info;
 	important = 0;
 	permanent = 0;
-//	description = "I need armor."; 
-//	description = "Ich brauche eine Rüstung."; 
-	description = "Potřebuji zbroj."; 
+//	description = "I need armor.";
+//	description = "Ich brauche eine Rüstung.";
+	description = "Potřebuji zbroj.";
 };
 
 func int GRD_219_Stone_GETSTUFF_Condition()
-{ 
-	if (Npc_GetTrueGuild(hero) == GIL_GRD) 
+{
+	if (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
 		return TRUE;
 	};
@@ -128,7 +128,7 @@ func void GRD_219_Stone_GETSTUFF_Info()
 	B_LogEntry(GE_BecomeGuard,"U kováře Stonea jsem si vyzvedl svojí výbavu strážce. Mohu si u něj koupit lepší brnění, to bylo ovšem dost drahé.");
 
 	AI_StopProcessInfos(self);
-};  
+};
 
 //-----------------------------------------------------
 // BESSERE RÜSTUNG
@@ -140,13 +140,13 @@ instance GRD_219_Stone_BETTERARMOR(C_INFO)
 	information = GRD_219_Stone_BETTERARMOR_Info;
 	important = 0;
 	permanent = 1;
-//	description = "I need better armor."; 
-//	description = "Ich brauche eine bessere Rüstung."; 
-	description = "Potřebuju lepší zbroj."; 
+//	description = "I need better armor.";
+//	description = "Ich brauche eine bessere Rüstung.";
+	description = "Potřebuju lepší zbroj.";
 };
 
 func int GRD_219_Stone_BETTERARMOR_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,GRD_219_Stone_GETSTUFF))
 	&& (Kapitel < 4)
 	{
@@ -164,10 +164,10 @@ func void GRD_219_Stone_BETTERARMOR_Info()
 	AI_Output(self,other,"GRD_219_Stone_BETTERARMOR_Info_06_02"); //Až přijde ten správný čas a až budeš mít dost rudy...
 
 	Info_ClearChoices(GRD_219_Stone_BETTERARMOR);
-	Info_AddChoice(GRD_219_Stone_BETTERARMOR, DIALOG_BACK, GRD_219_Stone_BETTERARMOR_BACK); 
-	Info_AddChoice(GRD_219_Stone_BETTERARMOR, B_BuildBuyArmorString(NAME_StoneHeavyGuards,VALUE_GRD_ARMOR_H),GRD_219_Stone_BETTERARMOR_H); 
-	Info_AddChoice(GRD_219_Stone_BETTERARMOR, B_BuildBuyArmorString(NAME_StoneGuards,VALUE_GRD_ARMOR_M), GRD_219_Stone_BETTERARMOR_M); 
-};  
+	Info_AddChoice(GRD_219_Stone_BETTERARMOR, DIALOG_BACK, GRD_219_Stone_BETTERARMOR_BACK);
+	Info_AddChoice(GRD_219_Stone_BETTERARMOR, B_BuildBuyArmorString(NAME_StoneHeavyGuards,VALUE_GRD_ARMOR_H),GRD_219_Stone_BETTERARMOR_H);
+	Info_AddChoice(GRD_219_Stone_BETTERARMOR, B_BuildBuyArmorString(NAME_StoneGuards,VALUE_GRD_ARMOR_M), GRD_219_Stone_BETTERARMOR_M);
+};
 
 func void GRD_219_Stone_BETTERARMOR_M()
 {
@@ -233,10 +233,10 @@ instance DIA_GRD_219_Stone_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_GRD_219_Stone_Exit_Condition;
 	information = DIA_GRD_219_Stone_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_GRD_219_Stone_Exit_Condition()
 {
@@ -254,9 +254,9 @@ func void DIA_GRD_219_Stone_Exit_Info()
 		TA_BeginOverlay (Stone);
 			TA_Min (Stone, 00, 00, 00, 05, ZS_Position,"OCC_MERCS_HALLWAY_BACK");
 			TA_Min (Stone, 00, 05, 00, 10, ZS_Position,"OCC_MERCS_ENTRANCE");
-			TA_Min (Stone, 00, 10, 00, 15, ZS_Position,"OCC_SHADOWS_CORNER"); 
+			TA_Min (Stone, 00, 10, 00, 15, ZS_Position,"OCC_SHADOWS_CORNER");
 			TA_Min (Stone, 00, 15, 00, 20, ZS_Position,"OCC_STABLE_ENTRANCE");
-			TA_Min (Stone, 00, 20, 72, 00, ZS_Position,"OCC_STABLE_LEFT_FRONT"); 
+			TA_Min (Stone, 00, 20, 72, 00, ZS_Position,"OCC_STABLE_LEFT_FRONT");
 		TA_EndOverlay (Stone);
 
 //		AI_Output(self,other,"Info_EXIT_06_02"); //I'll see you.
@@ -271,7 +271,7 @@ func void DIA_GRD_219_Stone_Exit_Info()
 		AI_Output(self,other,"Info_EXIT_06_03"); //Ještě se uvidíme.
 
 		AI_StopProcessInfos(self);
-	}; 
+	};
 };
 
 //#####################################################################
@@ -299,7 +299,7 @@ func int DIA_GRD_219_Stone_Condition()
 	if (Kapitel >= 5)
 	{
  		return 1;
- 	}; 
+ 	};
 };
 
 func void DIA_GRD_219_Stone_Info()
@@ -326,10 +326,10 @@ instance DIA_GRD_219_Stone1(C_INFO)
 
 func int DIA_GRD_219_Stone1_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone)) 
-	{ 
+	if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone))
+	{
 		return 1;
-	}; 
+	};
 };
 
 func void DIA_GRD_219_Stone1_Info()
@@ -385,7 +385,7 @@ func int DIA_GRD_219_Stone3_Condition()
 	if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone1)) && (Hlp_StrCmp(Npc_GetNearestWP (self), "OCC_STABLE_LEFT_FRONT"))
 	{
 			return 1;
-	}; 
+	};
 };
 
 func void DIA_GRD_219_Stone3_Info()
@@ -420,9 +420,9 @@ instance DIA_GRD_219_Stone2(C_INFO)
 func int DIA_GRD_219_Stone2_Condition()
 {
 	if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone3))
-	{ 
+	{
 		return 1;
-	}; 
+	};
 };
 
 func void DIA_GRD_219_Stone2_Info()
@@ -458,7 +458,7 @@ func int DIA_GRD_219_Stone4_Condition()
 {
 	 if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone3)) && (Npc_HasItems(hero,ORE_ARMOR_M)) && (KnowStone == 0)  {
 		return 1;
-	 }; 
+	 };
 };
 
 func void DIA_GRD_219_Stone4_Info()
@@ -474,18 +474,18 @@ func void DIA_GRD_219_Stone4_Info()
 	B_GiveInvItems(hero,self,ORE_ARMOR_M,1);
 	Npc_RemoveInvItem(self,ORE_ARMOR_M);
 
-	B_StartUseMob(self,"BSFIRE"); 
+	B_StartUseMob(self,"BSFIRE");
 	AI_Wait(self,1);
-	B_StopUseMob(self,"BSFIRE"); 
+	B_StopUseMob(self,"BSFIRE");
 	AI_Wait(self,1);
-	B_StartUseMob(self,"BSANVIL"); 
+	B_StartUseMob(self,"BSANVIL");
 	AI_Wait(self,1);
-	B_StopUseMob(self,"BSANVIL"); 
+	B_StopUseMob(self,"BSANVIL");
 	AI_Wait(self,1);
 	AI_GotoNpc(self,hero);
 
 	CreateInvItem(self,ORE_ARMOR_H);
-	B_GiveInvItems(self,hero,ORE_ARMOR_H,1); 
+	B_GiveInvItems(self,hero,ORE_ARMOR_H,1);
 
 //	AI_Output(self,other,"DIA_GRD_219_Stone4_06_03"); //Here is the reinforced armor. We're quits now.
 //	AI_Output(self,other,"DIA_GRD_219_Stone4_06_03"); //Hier ist die verstärkte Rüstung, damit habe ich meine Schuld beglichen.
@@ -511,7 +511,7 @@ func int DIA_GRD_219_Stone5_Condition()
 {
 	 if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone3)) && (KnowStone == 0) {
 		return 1;
-	 }; 
+	 };
 };
 
 func void DIA_GRD_219_Stone5_Info()
@@ -523,13 +523,13 @@ func void DIA_GRD_219_Stone5_Info()
 //	AI_Output(self,other,"DIA_GRD_219_Stone5_06_02"); //Das ist nicht so schwer, warte kurz.
 	AI_Output(self,other,"DIA_GRD_219_Stone5_06_02"); //To není tak těžké, počkej chvilku.
 
-	B_StartUseMob(self,"BSFIRE"); 
+	B_StartUseMob(self,"BSFIRE");
 	AI_Wait(self,1);
-	B_StopUseMob(self,"BSFIRE"); 
+	B_StopUseMob(self,"BSFIRE");
 	AI_Wait(self,1);
-	B_StartUseMob(self,"BSANVIL"); 
+	B_StartUseMob(self,"BSANVIL");
 	AI_Wait(self,1);
-	B_StopUseMob(self,"BSANVIL"); 
+	B_StopUseMob(self,"BSANVIL");
 	AI_Wait(self,1);
 	AI_GotoNpc(self,hero);
 
@@ -537,8 +537,8 @@ func void DIA_GRD_219_Stone5_Info()
 //	AI_Output(self,other,"DIA_GRD_219_Stone5_06_03"); //Dieser Ring verleiht dir Lebenskraft, damit müsste meine Schuld mehr als beglichen sein.
 	AI_Output(self,other,"DIA_GRD_219_Stone5_06_03"); //Tenhle prsten ti dodá zvláštní životní energii. Tohle by mělo být víc než dost pro naše vyrovnání.
 
-	CreateInvItem(self,Ring_des_Lebens2); 
-	B_GiveInvItems(self,other,Ring_des_Lebens2,1); 
+	CreateInvItem(self,Ring_des_Lebens2);
+	B_GiveInvItems(self,other,Ring_des_Lebens2,1);
 
 	KnowStone = 1;
 };
@@ -560,7 +560,7 @@ func int DIA_GRD_219_Stone6_Condition()
 {
 	 if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone3)) && (KnowStone == 0){
 		return 1;
-	 }; 
+	 };
 };
 
 func void DIA_GRD_219_Stone6_Info()
@@ -568,17 +568,17 @@ func void DIA_GRD_219_Stone6_Info()
 //	AI_Output(other,self,"DIA_GRD_219_Stone6_15_01"); //I want you to forge me a protection ring.
 //	AI_Output(other,self,"DIA_GRD_219_Stone6_15_01"); //Ich will einen Schutzring geschmiedet haben.
 	AI_Output(other,self,"DIA_GRD_219_Stone6_15_01"); //Chci, abys mi vykoval ochranný prsten.
-//	AI_Output(self,other,"DIA_GRD_219_Stone6_06_02"); //A protection ring? Okay, I'll start right away. Just wait a while. 
+//	AI_Output(self,other,"DIA_GRD_219_Stone6_06_02"); //A protection ring? Okay, I'll start right away. Just wait a while.
 //	AI_Output(self,other,"DIA_GRD_219_Stone6_06_02"); //Einen Schutzring, dann gehe ich an die Arbeit. Warte solange.
 	AI_Output(self,other,"DIA_GRD_219_Stone6_06_02"); //Ochranný prsten? Dobře, hned s tím začnu. Počkej chvilku.
 
-	B_StartUseMob(self,"BSFIRE"); 
+	B_StartUseMob(self,"BSFIRE");
 	AI_Wait(self,1);
-	B_StopUseMob(self,"BSFIRE"); 
+	B_StopUseMob(self,"BSFIRE");
 	AI_Wait(self,1);
-	B_StartUseMob(self,"BSANVIL"); 
+	B_StartUseMob(self,"BSANVIL");
 	AI_Wait(self,1);
-	B_StopUseMob(self,"BSANVIL"); 
+	B_StopUseMob(self,"BSANVIL");
 	AI_Wait(self,1);
 	AI_GotoNpc(self,hero);
 
@@ -608,7 +608,7 @@ func int DIA_GRD_219_Stone7_Condition()
 {
 	 if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone3)) && (KnowStone == 0) {
 		return 1;
-	 }; 
+	 };
 };
 
 func void DIA_GRD_219_Stone7_Info()
@@ -620,13 +620,13 @@ func void DIA_GRD_219_Stone7_Info()
 //	AI_Output(self,other,"DIA_GRD_219_Stone7_06_02"); //... Einen Gegenstand, der magische Energie vermehrt ... ein Amulett, ich schmiede dir ein Amulett. Das dauert nicht lange.
 	AI_Output(self,other,"DIA_GRD_219_Stone7_06_02"); //...Něco, co by zvýšilo magickou moc... Amulet! To je ono! Udělám ti amulet. Nebude to dlouho trvat.
 
-	B_StartUseMob(self,"BSFIRE"); 
+	B_StartUseMob(self,"BSFIRE");
 	AI_Wait(self,1);
-	B_StopUseMob(self,"BSFIRE"); 
+	B_StopUseMob(self,"BSFIRE");
 	AI_Wait(self,1);
-	B_StartUseMob(self,"BSANVIL"); 
+	B_StartUseMob(self,"BSANVIL");
 	AI_Wait(self,1);
-	B_StopUseMob(self,"BSANVIL"); 
+	B_StopUseMob(self,"BSANVIL");
 	AI_Wait(self,1);
 	AI_GotoNpc(self,hero);
 
@@ -635,7 +635,7 @@ func void DIA_GRD_219_Stone7_Info()
 	AI_Output(self,other,"DIA_GRD_219_Stone7_06_03"); //Tak, amulet je hotový a musím říci, že se mi povedl. Teď jsme vyrovnáni.
 
 	CreateInvItem(self,Amulett_der_Magie);
-	B_GiveInvItems(self,other,Amulett_der_Magie,1); 
+	B_GiveInvItems(self,other,Amulett_der_Magie,1);
 
 	KnowStone = 1;
 };

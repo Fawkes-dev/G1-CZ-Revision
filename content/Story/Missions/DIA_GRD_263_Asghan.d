@@ -6,10 +6,10 @@ instance Grd_263_Asghan_Exit(C_INFO)
 	nr = 999;
 	condition = Grd_263_Asghan_Exit_Condition;
 	information = Grd_263_Asghan_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Grd_263_Asghan_Exit_Condition()
 {
@@ -29,14 +29,14 @@ instance Grd_263_Asghan_NEST(C_INFO)
 	information = Grd_263_Asghan_NEST_Info;
 	important = 0;
 	permanent = 0;
-//	description = "There must be a nest of minecrawlers here somewhere."; 
-//	description = "Es muss hier irgendwo ein Nest der Minecrawler geben"; 
-	description = "Tady někde musí být hnízdo důlních červů."; 
+//	description = "There must be a nest of minecrawlers here somewhere.";
+//	description = "Es muss hier irgendwo ein Nest der Minecrawler geben";
+	description = "Tady někde musí být hnízdo důlních červů.";
 };
 
 func int Grd_263_Asghan_NEST_Condition()
-{ 
-	if (CorKalom_BringMCQBalls == LOG_RUNNING) 
+{
+	if (CorKalom_BringMCQBalls == LOG_RUNNING)
 	{
 		return 1;
 	};
@@ -69,7 +69,7 @@ func void Grd_263_Asghan_NEST_Info()
 	B_LogEntry(CH2_MCEggs,"Asghan, velitel důlní stráže, nechce otevřít bránu. Nejprve chce Ianovo svolení.");
 };
 /*------------------------------------------------------------------------
-							ERLAUBNIS VON IAN GEHOLT 
+							ERLAUBNIS VON IAN GEHOLT
 ------------------------------------------------------------------------*/
 
 instance Grd_263_Asghan_OPEN(C_INFO)
@@ -79,9 +79,9 @@ instance Grd_263_Asghan_OPEN(C_INFO)
 	information = Grd_263_Asghan_OPEN_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Hey Asghan, you may open the gate now!"; 
-//	description = "Hey Asghan, du kannst das Tor öffnen"; 
-	description = "Hej, Asghane, máš otevřít ty vrata!"; 
+//	description = "Hey Asghan, you may open the gate now!";
+//	description = "Hey Asghan, du kannst das Tor öffnen";
+	description = "Hej, Asghane, máš otevřít ty vrata!";
 };
 
 func int Grd_263_Asghan_OPEN_Condition()
@@ -119,7 +119,7 @@ func void Grd_263_Asghan_OPEN_Info()
 	B_LogEntry(CH2_MCEggs,"Třebaže mi Ian dal povolení, Asghan nechce otevřít bránu, dokud nepřivedu nějaké templáře jako posilu před bránu.");
 
 	AI_StopProcessInfos(self);
-};  
+};
 
 // ***************** Infos *****************************
 instance Grd_263_Asghan_OPEN_NOW(C_INFO)
@@ -129,13 +129,13 @@ instance Grd_263_Asghan_OPEN_NOW(C_INFO)
 	information = Grd_263_Asghan_OPEN_NOW_Info;
 	important = 0;
 	permanent = 0;
-//	description = "All preparations have been made. The gate can now be opened!"; 
-//	description = "Alle Vorbereitungen sind getroffen. Das Tor kann geöffnet werden!"; 
-	description = "Všechny přípravy jsou hotovy. Vrata se teď můžou otevřít!"; 
+//	description = "All preparations have been made. The gate can now be opened!";
+//	description = "Alle Vorbereitungen sind getroffen. Das Tor kann geöffnet werden!";
+	description = "Všechny přípravy jsou hotovy. Vrata se teď můžou otevřít!";
 };
 
 func int Grd_263_Asghan_OPEN_NOW_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Tpl_1400_GorNaBar_SUGGEST)) && (Npc_KnowsInfo(hero,Tpl_1401_GorNaKosh_SUGGEST))
 	|| (Npc_KnowsInfo(hero,Tpl_1401_GorNaKosh_SUGGEST)) && (Npc_KnowsInfo(hero,Tpl_1433_GorNaVid_HEALTH_SUC))
 	|| (Npc_KnowsInfo(hero,Tpl_1433_GorNaVid_HEALTH_SUC)) && (Npc_KnowsInfo(hero,Tpl_1400_GorNaBar_SUGGEST))
@@ -162,7 +162,7 @@ func void Grd_263_Asghan_OPEN_NOW_Info()
 	B_LogEntry(CH2_MCEggs,"Podařilo se mi před Asghanovu bránu přivést dostatečný počet templářů. Co nás čeká v temnotě za branou?");
 
 	AI_StopProcessInfos(self);
-};    
+};
 
 // ***************** Nest gefunden *****************************
 instance Grd_263_Asghan_LAIRFOUND(C_INFO)
@@ -172,14 +172,14 @@ instance Grd_263_Asghan_LAIRFOUND(C_INFO)
 	information = Grd_263_Asghan_LAIRFOUND_Info;
 	important = 0;
 	permanent = 0;
-//	description = "The minecrawlers shouldn't be a threat anymore!"; 
-//	description = "Die Bedrohung durch die Minecrawler dürfte beendet sein!"; 
-	description = "Důlní červi by už nikdy neměli být hrozbou!"; 
+//	description = "The minecrawlers shouldn't be a threat anymore!";
+//	description = "Die Bedrohung durch die Minecrawler dürfte beendet sein!";
+	description = "Důlní červi by už nikdy neměli být hrozbou!";
 };
 
 func int Grd_263_Asghan_LAIRFOUND_Condition()
-{ 
-	if (Npc_HasItems(hero,ItAt_Crawlerqueen)>=3)   
+{
+	if (Npc_HasItems(hero,ItAt_Crawlerqueen)>=3)
 	&& (Npc_GetTrueGuild(hero) == GIL_STT)
 	{
 		return TRUE;
@@ -196,10 +196,10 @@ func void Grd_263_Asghan_LAIRFOUND_Info()
 	AI_Output(self,other,"Grd_263_Asghan_LAIRFOUND_Info_06_02"); //To je dobrá zpráva. Pošlu k Thorusovi posla!
 
 	AI_StopProcessInfos(self);
-};    
+};
 
 /*------------------------------------------------------------------------
-						MCQ Hatz läuft noch nicht 
+						MCQ Hatz läuft noch nicht
 ------------------------------------------------------------------------*/
 
 instance Grd_263_Asghan_SMALLTALK(C_INFO)
@@ -209,13 +209,13 @@ instance Grd_263_Asghan_SMALLTALK(C_INFO)
 	information = Grd_263_Asghan_SMALLTALK_Info;
 	important = 0;
 	permanent = 0;
-//	description = "How are you doing?"; 
-//	description = "Wie siehts aus?"; 
-	description = "Jak to jde?"; 
+//	description = "How are you doing?";
+//	description = "Wie siehts aus?";
+	description = "Jak to jde?";
 };
 
 func int Grd_263_Asghan_SMALLTALK_Condition()
-{ 
+{
 	if (CorKalom_BringMCQBalls != LOG_RUNNING)
 	{
 		return TRUE;
@@ -236,4 +236,4 @@ func void Grd_263_Asghan_SMALLTALK_Info()
 //	AI_Output(self,other,"Grd_263_Asghan_SMALLTALK_Info_06_04"); //Minecrawlers. Big, bad minecrawlers. Lots and lots and lots of them.
 //	AI_Output(self,other,"Grd_263_Asghan_SMALLTALK_Info_06_04"); //Minecrawler. Große böse Minecrawler. Und zwar sehr...sehr...sehr viele.
 	AI_Output(self,other,"Grd_263_Asghan_SMALLTALK_Info_06_04"); //Důlní červi. Velcí, zlí důlní červi. Hromady, hromady a hromady červů.
-};  
+};

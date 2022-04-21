@@ -6,10 +6,10 @@ instance VLK_586_Grimes_Exit(C_INFO)
 	nr = 999;
 	condition = VLK_586_Grimes_Exit_Condition;
 	information = VLK_586_Grimes_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int VLK_586_Grimes_Exit_Condition()
 {
@@ -37,14 +37,14 @@ instance VLK_586_Grimes_STORY(C_INFO)
 	information = VLK_586_Grimes_STORY_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Have you been here long?"; 
-//	description = "Bist du schon lange hier?"; 
-	description = "Jsi tady už dlouho?"; 
+//	description = "Have you been here long?";
+//	description = "Bist du schon lange hier?";
+	description = "Jsi tady už dlouho?";
 };
 
 func int VLK_586_Grimes_STORY_Condition()
-{ 
-	if (Npc_KnowsInfo(hero,VLK_586_Grimes_FIRST))  
+{
+	if (Npc_KnowsInfo(hero,VLK_586_Grimes_FIRST))
 	{
 		return 1;
 	};
@@ -77,14 +77,14 @@ instance VLK_586_Grimes_KNOW(C_INFO)
 	information = VLK_586_Grimes_KNOW_Info;
 	important = 0;
 	permanent = 0;
-//	description = "You must have heard about many escape plans as well."; 
-//	description = "Du hast doch bestimmt auch eine Menge Ausbruchspläne mitgekriegt."; 
-	description = "Určitě jsi také slyšel o spoustě plánů na útěk."; 
+//	description = "You must have heard about many escape plans as well.";
+//	description = "Du hast doch bestimmt auch eine Menge Ausbruchspläne mitgekriegt.";
+	description = "Určitě jsi také slyšel o spoustě plánů na útěk.";
 };
 
 func int VLK_586_Grimes_KNOW_Condition()
-{ 
-	if (Npc_KnowsInfo(hero,VLK_586_Grimes_STORY))  
+{
+	if (Npc_KnowsInfo(hero,VLK_586_Grimes_STORY))
 	{
 		return 1;
 	};
@@ -136,4 +136,4 @@ func void VLK_586_Grimes_FIRST_Info()
 //	AI_Output(self,other,"VLK_586_Grimes_FIRST_Info_04_02"); //A new face. Have you ever dug ore, boy?
 //	AI_Output(self,other,"VLK_586_Grimes_FIRST_Info_04_02"); //Ein neues Gesicht. Na, schon mal Erz geschürft, Jungchen?
 	AI_Output(self,other,"VLK_586_Grimes_FIRST_Info_04_02"); //Nová tvář. Už si někdy kopal rudu, hochu?
-};  
+};

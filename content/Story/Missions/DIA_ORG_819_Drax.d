@@ -1,5 +1,5 @@
 // **************************************************
-//						 EXIT 
+//						 EXIT
 // **************************************************
 
 instance Org_819_Drax_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance Org_819_Drax_Exit(C_INFO)
 	information = Org_819_Drax_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Org_819_Drax_Exit_Condition()
 {
@@ -36,7 +36,7 @@ instance Org_819_Drax_HuntHere(C_INFO)
 //	description = "You're hunting, aren't you?";
 //	description = "Ihr jagt hier - richtig?";
 	description = "Ty tady lovíš, že jo?";
-};                       
+};
 
 func int Org_819_Drax_HuntHere_Condition()
 {
@@ -82,7 +82,7 @@ instance Org_819_Drax_Scavenger(C_INFO)
 //	description = "Here you are, take a beer and tell me about hunting.";
 //	description = "Hier, nimm ein Bier und erzähl mir was über's Jagen.";
 	description = "Tady je, vezmi si pivo a vyprávěj mi o lovu.";
-};                       
+};
 
 func int Org_819_Drax_Scavenger_Condition()
 {
@@ -132,7 +132,7 @@ func void Org_819_Drax_Scavenger_Info()
 //		AI_Output(self,other,"Org_819_Drax_Scavenger_KEIN_BIER_06_02"); //I can give you some information about animals, but it'll cost you!
 //		AI_Output(self,other,"Org_819_Drax_Scavenger_KEIN_BIER_06_02"); //Ich kann dir einiges über Tiere beibringen, aber das kostet dich was!
 		AI_Output(self,other,"Org_819_Drax_Scavenger_KEIN_BIER_06_02"); //Můžu ti dát pár informací o zvěři, ale bude tě to něco stát!
-	}; 
+	};
 	drax_Lehrer_frei = TRUE;
 
 	Log_CreateTopic(GE_TeacherOW,LOG_NOTE);
@@ -155,7 +155,7 @@ instance Org_819_Drax_Creatures(C_INFO)
 //	description = "What else can you tell me about hunting?";
 //	description = "Was kannst du mir noch über die Jagd beibringen?";
 	description = "Co mi ještě můžeš říci o lovu?";
-};                       
+};
 
 func int Org_819_Drax_Creatures_Condition()
 {
@@ -316,7 +316,7 @@ func void Org_819_Drax_Creatures_Fell()
 //			AI_Output(self,other,"Org_819_Drax_Creatures_Fell_06_01"); //It's very important to skin them from the back to the front. Once you get the hang of it, it'll be easy. Furs are very valuable!
 //			AI_Output(self,other,"Org_819_Drax_Creatures_Fell_06_01"); //Wichtig ist vor allem: Immer von vorne nach hinten. Wenn du den Bogen einmal raushast, ist es kein Problem. Felle sind sehr wertvoll!
 			AI_Output(self,other,"Org_819_Drax_Creatures_Fell_06_01"); //Důležité je kůži stahovat zezadu dopředu. Jakmile se ti napne, už je to snadné. Kožešiny se velmi cení!
-//			AI_Output(self,other,"Org_819_Drax_Creatures_Fell_06_02"); //The furs of wolves and shadowbeasts can be used to make clothes. When you examine the fur of a killed animal, you'll soon notice if it can be used or not. 
+//			AI_Output(self,other,"Org_819_Drax_Creatures_Fell_06_02"); //The furs of wolves and shadowbeasts can be used to make clothes. When you examine the fur of a killed animal, you'll soon notice if it can be used or not.
 //			AI_Output(self,other,"Org_819_Drax_Creatures_Fell_06_02"); //Das Fell von Wölfen oder Schattenläufern eignet sich zum Herstellen von Kleidung. Du wirst merken, ob ein erlegtes Tier ein brauchbares Fell hat, wenn du es untersuchst.
 			AI_Output(self,other,"Org_819_Drax_Creatures_Fell_06_02"); //Kůže vlků a stínových příšer se můžou použít na oděv. Když prohlídneš kožešinu zabitého zvířete, hned poznáš, jestli ji půjde použít, nebo ne.
 

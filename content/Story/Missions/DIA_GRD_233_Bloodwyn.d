@@ -13,7 +13,7 @@ instance Info_Bloodwyn_EXIT_Schutzgeld(C_INFO)
 	information = Info_Bloodwyn_EXIT_Schutzgeld_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_Bloodwyn_EXIT_Schutzgeld_Condition()
 {
@@ -21,7 +21,7 @@ func int Info_Bloodwyn_EXIT_Schutzgeld_Condition()
 };
 
 func void Info_Bloodwyn_EXIT_Schutzgeld_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_Bloodwyn_EXIT_Schutzgeld_15_00"); //See ya.
 //	AI_Output(other,self,"Info_Bloodwyn_EXIT_Schutzgeld_15_00"); //Wir sehen uns.
 	AI_Output(other,self,"Info_Bloodwyn_EXIT_Schutzgeld_15_00"); //Ještě se uvidíme.
@@ -52,10 +52,10 @@ instance Info_Bloodwyn_Hello(C_INFO)
 	information = Info_Bloodwyn_Hello_Info;
 	permanent = 0;
 	important   = 1;
-};                       
+};
 
 func int Info_Bloodwyn_Hello_Condition()
-{ 
+{
 	if (Kapitel <= 2)
 	//#NEEDS_ATTENTION Bloodwyn ma tento dialog aj ked hrac patri k nejakej guilde - asi by sme mali zamedzit kontrolou guildy:
 	//if ((Kapitel <= 2) && (Npc_GetTrueGuild(other) == GIL_NONE))
@@ -64,7 +64,7 @@ func int Info_Bloodwyn_Hello_Condition()
 	};
 };
 func void Info_Bloodwyn_Hello_Info()
-{ 
+{
 //	AI_Output(self,other,"Info_Bloodwyn_Hello_08_00"); //Hey, you!
 //	AI_Output(self,other,"Info_Bloodwyn_Hello_08_00"); //Hey du!
 	AI_Output(self,other,"Info_Bloodwyn_Hello_08_00"); //Hej, ty!
@@ -228,22 +228,22 @@ instance Info_Bloodwyn_PayDay(C_INFO)
 	nr = 3;
 	condition = Info_Bloodwyn_PayDay_Condition;
 	information = Info_Bloodwyn_PayDay_Info;
-	permanent = 1; 
+	permanent = 1;
 	important   = 1; //*** NUR, WENN SC AUCH 10 ERZ HAT! ***
-};                       
+};
 
 func int Info_Bloodwyn_PayDay_Condition()
 {
 	if ((Kapitel <= 2) && (Bloodwyn_PayDay <= Wld_GetDay()-1) && (Npc_HasItems(other,itminugget)>=10))
 	//#NEEDS_ATTENTION ak hrac zaplatil ako GIL_NONE, tak od neho Bloodwyn bude stale pytat rudu, mali by sme obmedzit na GIL_NONE
 	//if ((Kapitel <= 2) && (Bloodwyn_PayDay <= Wld_GetDay()-1) && (Npc_HasItems(other,itminugget)>=10) && (Npc_GetTrueGuild(other) == GIL_NONE))
-	{ 
+	{
 		return 1;
 	};
 };
 
 func void Info_Bloodwyn_PayDay_Info()
-{ 
+{
 	if (Bloodwyn_ProtectionPaid == TRUE)
 	{
 //		AI_Output(self,other,"Info_Bloodwyn_PayDay_08_00"); //Ah, good to see you, my friend!
@@ -332,20 +332,20 @@ instance Info_Bloodwyn_Doch(C_INFO)
 //	description = "I've changed my mind. I'm going to pay you the 10 ore after all.";
 //	description = "Ich hab's mir überlegt - ich würde DOCH gern die 10 Erz bezahlen.";
 	description = "Rozmyslel jsem se. Přece jen ti těch 10 nugetů dám.";
-};                       
+};
 
 func int Info_Bloodwyn_Doch_Condition()
 {
 	if (Bloodwyn_ProtectionPaid == FALSE)
 	//#NEEDS_ATTENTION, zase by som obmedzil na GIL_NONE
 	//if ((Bloodwyn_ProtectionPaid == FALSE) && (Npc_GetTrueGuild(other) == GIL_NONE))
-	{ 
+	{
 		return 1;
 	};
 };
 
 func void Info_Bloodwyn_Doch_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_Bloodwyn_Doch_15_00"); //I've changed my mind. I'm going to pay you the 10 ore after all.
 //	AI_Output(other,self,"Info_Bloodwyn_Doch_15_00"); //Ich hab's mir überlegt - ich würde DOCH gern die 10 Erz bezahlen.
 	AI_Output(other,self,"Info_Bloodwyn_Doch_15_00"); //Rozmyslel jsem se. Přece jen ti těch 10 nugetů dám.
@@ -382,18 +382,18 @@ instance Info_Bloodwyn_PayForJesse(C_INFO)
 //	description = "Jesse sent me to pay his 10 ore for him.";
 //	description = "Jesse schickt mich - ich will seine 10 Erz für ihn zahlen.";
 	description = "Jesse mě poslal, abych za něj zaplatil 10 nugetů.";
-};                       
+};
 
 func int Info_Bloodwyn_PayForJesse_Condition()
 {
 	if (Jesse_PayForMe == LOG_RUNNING)
-	{ 
+	{
 		return 1;
 	};
 };
 
 func void Info_Bloodwyn_PayForJesse_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_Bloodwyn_PayForJesse_15_00"); //Jesse sent me to pay his 10 ore for him.
 //	AI_Output(other,self,"Info_Bloodwyn_PayForJesse_15_00"); //Jesse schickt mich - ich will seine 10 Erz für ihn zahlen.
 	AI_Output(other,self,"Info_Bloodwyn_PayForJesse_15_00"); //Jesse mě poslal, abych za něj zaplatil 10 nugetů.
@@ -439,8 +439,8 @@ instance GRD_233_Bloodwyn_WELCOME(C_INFO)
 };
 
 func int GRD_233_Bloodwyn_WELCOME_Condition()
-{ 
-	if (Npc_GetTrueGuild(hero) == GIL_GRD) 
+{
+	if (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
 		return TRUE;
 	};
@@ -474,11 +474,11 @@ instance Info_Bloodwyn_DIE(C_INFO)
 };
 
 func int Info_Bloodwyn_DIE_Condition()
-{ 
+{
 	if (Kapitel == 4)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Bloodwyn_DIE_Info()
@@ -506,7 +506,7 @@ func void Info_Bloodwyn_DIE_Info()
 //			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_03"); //It's the Shadow that betrayed us!
 //			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_03"); //Das ist der Schatten, der uns verraten hat!
 			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_03"); //To je ten Stín co nás zradil!
-		}; 
+		};
 
 //		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_04"); //Hold on. What are you talking about, Bloodwyn?
 //		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_04"); //Moment. Was redest du da, Bloodwyn?
@@ -596,8 +596,8 @@ func void Info_Bloodwyn_DIE_Info()
 	B_ExchangeRoutine(GRD_217_Torwache, "FMTaken2"); // reguläre Wache am Hinteren Tor
 
 	B_SetPermAttitude (GRD_233_Bloodwyn, ATT_HOSTILE);
-	B_SetPermAttitude (GRD_232_Gardist, ATT_HOSTILE); 
-	B_SetPermAttitude (GRD_229_Gardist, ATT_HOSTILE); 
+	B_SetPermAttitude (GRD_232_Gardist, ATT_HOSTILE);
+	B_SetPermAttitude (GRD_229_Gardist, ATT_HOSTILE);
 	B_SetPermAttitude (GRD_216_Torwache, ATT_HOSTILE);
 	B_SetPermAttitude (GRD_217_Torwache, ATT_HOSTILE);
 

@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Dexter_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Dexter_Exit(C_INFO)
 	information = DIA_Dexter_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Dexter_Exit_Condition()
 {
@@ -34,7 +34,7 @@ instance DIA_Dexter_First(C_INFO)
 	information = DIA_Dexter_First_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Dexter_First_Condition()
 {
@@ -65,7 +65,7 @@ instance DIA_Dexter_Kraut(C_INFO)
 //	description = "What is swampweed?";
 //	description = "Was ist Sumpfkraut?";
 	description = "Co je to droga z bažiny?";
-};                       
+};
 
 func int DIA_Dexter_Kraut_Condition()
 {
@@ -99,7 +99,7 @@ instance DIA_Dexter_Trade(C_INFO)
 //	description = "Zeig mir deine Ware.";
 	description = "Ukaž mi svoje zboží.";
 	Trade = 1;
-};                       
+};
 
 func int DIA_Dexter_Trade_Condition()
 {
@@ -142,10 +142,10 @@ instance DIA_Dexter_JoinOC(C_INFO)
 //	description = "I want to join the Camp - I want to become a Shadow.";
 //	description = "Ich will mich dem Lager anschließen - ich will Schatten werden.";
 	description = "Chci se přidat k táboru - chci se stát Stínem.";
-};                       
+};
 
 func int DIA_Dexter_JoinOC_Condition()
-{ 
+{
 	if (Npc_GetTrueGuild(hero) == GIL_NONE)
 	{
 		return 1;
@@ -218,7 +218,7 @@ func void DIA_Dexter_JoinOC_Ok()
 	Info_ClearChoices(DIA_Dexter_JoinOC);
 };
 
-func void DIA_Dexter_JoinOC_HowMuch() 
+func void DIA_Dexter_JoinOC_HowMuch()
 {
 //	AI_Output(other,self,"DIA_Dexter_JoinOC_HowMuch_15_00"); //Sounds like a difficult business - how much is in it for me?
 //	AI_Output(other,self,"DIA_Dexter_JoinOC_HowMuch_15_00"); //Hört sich nach 'ner schwierigen Sache an - wie viel ist für mich drin?
@@ -322,7 +322,7 @@ instance DIA_Dexter_WhereST(C_INFO)
 //	description = "Where is the Sect Camp?";
 //	description = "Wo ist das Sektenlager?";
 	description = "Kde je Sektovní tábor?";
-};                       
+};
 
 func int DIA_Dexter_WhereST_Condition()
 {
@@ -378,7 +378,7 @@ instance DIA_Dexter_KalomsRecipeSuccess(C_INFO)
 //	description = "I have the recipe you wanted!";
 //	description = "Ich hab' das Rezept, das du wolltest!";
 	description = "Mám ten recept, co jsi chtěl!";
-};                       
+};
 
 func int DIA_Dexter_KalomsRecipeSuccess_Condition()
 {

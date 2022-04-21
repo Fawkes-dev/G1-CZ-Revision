@@ -1,5 +1,5 @@
 // **************************************
-//					EXIT 
+//					EXIT
 // **************************************
 
 instance DIA_Raven_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Raven_Exit(C_INFO)
 	information = DIA_Raven_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Raven_Exit_Condition()
 {
@@ -34,7 +34,7 @@ instance DIA_Raven_FirstIn(C_INFO)
 	information = DIA_Raven_FirstIn_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Raven_FirstIn_Condition()
 {
@@ -66,7 +66,7 @@ instance DIA_Raven_Who(C_INFO)
 //	description = "Who are you?";
 //	description = "Wer bist du?";
 	description = "Kdo jsi?";
-};                       
+};
 
 func int DIA_Raven_Who_Condition()
 {
@@ -98,12 +98,12 @@ instance DIA_Raven_Krautbote(C_INFO)
 //	description = "Ich habe eine Ladung Kraut für Gomez von Cor Kalom.";
 	//#NEEDS_ATTENTION dodávku alebo donášku?
 	description = "Mám pro Gomeze dodávku drogy z bažin od Cor Kaloma.";
-};                       
+};
 
 func int DIA_Raven_Krautbote_Condition()
 {
 	if (KALOM_KRAUTBOTE == LOG_RUNNING)
-	{ 
+	{
 		return 1;
 	};
 };
@@ -142,7 +142,7 @@ instance DIA_Raven_Aufnahme(C_INFO)
 //	description = "I want to see Gomez. Thorus says I'm to be taken on as a Shadow.";
 //	description = "Ich will zu Gomez. Thorus sagt, ich soll als Schatten aufgenommen werden.";
 	description = "Chci ke Gomezovi. Thorus říká, že bych měl být přijat ke Stínům.";
-};                       
+};
 
 func int DIA_Raven_Aufnahme_Condition()
 {
@@ -181,11 +181,11 @@ instance DIA_Raven_There(C_INFO)
 	information = DIA_Raven_There_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Raven_There_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Raven_Aufnahme) && Hlp_StrCmp(Npc_GetNearestWP(self),"OCC_BARONS_GREATHALL_CENTER_MOVEMENT")) 
+	if (Npc_KnowsInfo(hero,DIA_Raven_Aufnahme) && Hlp_StrCmp(Npc_GetNearestWP(self),"OCC_BARONS_GREATHALL_CENTER_MOVEMENT"))
 	{
 		return 1;
 	};
@@ -215,7 +215,7 @@ instance DIA_Raven_PERM(C_INFO)
 //	description = "How's the ore trade going?";
 //	description = "Wie steht der Erzhandel?";
 	description = "Jak jde obchod s rudou?";
-};                       
+};
 
 func int DIA_Raven_PERM_Condition()
 {
@@ -249,7 +249,7 @@ instance DIA_Raven_BinDabei(C_INFO)
 //	description = "Gomez says I'm in.";
 //	description = "Gomez sagt, ich bin dabei.";
 	description = "Gomez říká, že jsem v pořádku.";
-};                       
+};
 
 func int DIA_Raven_BinDabei_Condition()
 {
@@ -277,7 +277,7 @@ func void DIA_Raven_BinDabei_Info()
 //	AI_Output(self,other,"DIA_Raven_BinDabei_10_02"); //Wenn deine Verbindungen wirklich so gut sind, wie du sagst, solltest du keine Probleme damit haben.
 	AI_Output(self,other,"DIA_Raven_BinDabei_10_02"); //Pokud jsou tvé kontakty tak dobré, jak říkáš, neměl bys s tím mít žádný problém.
 
-	AI_EquipBestArmor(hero); 
+	AI_EquipBestArmor(hero);
 };
 
 // *********************************************

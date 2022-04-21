@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Cavalorn_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Cavalorn_Exit(C_INFO)
 	information = DIA_Cavalorn_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Cavalorn_Exit_Condition()
 {
@@ -33,14 +33,14 @@ instance DIA_cavalorn_Hunter(C_INFO)
 	condition = DIA_cavalorn_Hunter_Condition;
 	information = DIA_cavalorn_Hunter_Info;
 	permanent = 0;
-//	description = "What are you doing out here?"; 
-//	description = "Was machst du hier draußen?"; 
-	description = "Co tady venku děláš?"; 
+//	description = "What are you doing out here?";
+//	description = "Was machst du hier draußen?";
+	description = "Co tady venku děláš?";
 };
 
 func int DIA_cavalorn_Hunter_Condition()
-{ 
-	return 1; 
+{
+	return 1;
 };
 
 func void DIA_cavalorn_Hunter_Info()
@@ -65,16 +65,16 @@ instance DIA_cavalorn_Lehrer(C_INFO)
 	condition = DIA_cavalorn_Lehrer_Condition;
 	information = DIA_cavalorn_Lehrer_Info;
 	permanent = 1;
-//	description = "Can you teach me something about hunting?"; 
-//	description = "Kannst du mir was über die Jagd beibringen?"; 
-	description = "Můžeš mě naučit něco o lovu?"; 
+//	description = "Can you teach me something about hunting?";
+//	description = "Kannst du mir was über die Jagd beibringen?";
+	description = "Můžeš mě naučit něco o lovu?";
 };
 
 func int DIA_cavalorn_Lehrer_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_cavalorn_Hunter))
 	{
-		return 1; 
+		return 1;
 	};
 };
 
@@ -122,7 +122,7 @@ func void DIA_cavalorn_Lehrer_BACK()
 func void DIA_Cavalorn_Lehrer_Bow()
 {
 	if (B_GiveSkill(other,NPC_TALENT_BOW, 1, LPCOST_TALENT_BOW_1))
-	{ 
+	{
 //		AI_Output(other,self,"DIA_cavalorn_Lehrer_Bow_15_00"); //Can you teach me how to use my bow better?
 //		AI_Output(other,self,"DIA_cavalorn_Lehrer_Bow_15_00"); //Kannst du mir beibringen, besser mit dem Bogen umzugehen?
 		AI_Output(other,self,"DIA_cavalorn_Lehrer_Bow_15_00"); //Můžeš mě naučit, jak se zlepšit v zacházení s lukem?
@@ -144,7 +144,7 @@ func void DIA_Cavalorn_Lehrer_Bow()
 func void DIA_Cavalorn_Lehrer_Schleichen()
 {
 	if (B_GiveSkill(other,NPC_TALENT_SNEAK, 1, LPCOST_TALENT_SNEAK))
-	{ 
+	{
 //		AI_Output(other,self,"DIA_cavalorn_Lehrer_Schleichen_15_00"); //I wanna learn how to sneak around.
 //		AI_Output(other,self,"DIA_cavalorn_Lehrer_Schleichen_15_00"); //Ich will lernen, mich lautlos zu bewegen.
 		AI_Output(other,self,"DIA_cavalorn_Lehrer_Schleichen_15_00"); //Chci se naučit plížit.
@@ -165,7 +165,7 @@ func void DIA_Cavalorn_Lehrer_Schleichen()
 func void DIA_Cavalorn_Lehrer_Bow_2()
 {
 	if (B_GiveSkill(other,NPC_TALENT_BOW, 2, LPCOST_TALENT_BOW_2))
-	{ 
+	{
 //			AI_Output(self,other,"DIA_Cavalorn_Lehrer_Bow_2_Info_12_02"); //You're a good hunter already. Now acquire the remaining knowledge.
 //			AI_Output(self,other,"DIA_Cavalorn_Lehrer_Bow_2_Info_12_02"); //Du bist jetzt schon ein guter Jäger. Erfahre nun das letzte Wissen.
 			AI_Output(self,other,"DIA_Cavalorn_Lehrer_Bow_2_Info_12_02"); //Už jsi dobrý lovec. Teď si osvojíš zbývající vědomosti.
@@ -181,7 +181,7 @@ func void DIA_Cavalorn_Lehrer_Bow_2()
 	};
 };
 /*------------------------------------------------------------------------
-						BOGEN KAUFEN 
+						BOGEN KAUFEN
 ------------------------------------------------------------------------*/
 
 instance STT_336_cavalorn_SELLBOW(C_INFO)
@@ -191,9 +191,9 @@ instance STT_336_cavalorn_SELLBOW(C_INFO)
 	information = STT_336_cavalorn_SELLBOW_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Where will I get a bow?"; 
-//	description = "Woher bekomme ich einen Bogen?"; 
-	description = "Kde dostanu luk?"; 
+//	description = "Where will I get a bow?";
+//	description = "Woher bekomme ich einen Bogen?";
+	description = "Kde dostanu luk?";
 };
 
 func int STT_336_cavalorn_SELLBOW_Condition()
@@ -216,10 +216,10 @@ func void STT_336_cavalorn_SELLBOW_Info()
 //	B_LogEntry(GE_TraderOC,"Cavalorn trades in BOWS and ARROWS. I'll find him on the path to the New Camp, in the canyon to the west of the Old Camp.");
 //	B_LogEntry(GE_TraderOC,"Cavalorn handelt mit BÖGEN und PFEILEN. Er hält sich in der Schlucht westlich des Alten Lagers auf dem Weg ins Neue Lager auf.");
 	B_LogEntry(GE_TraderOC,"Cavalorn obchoduje s LUKY a ŠÍPY. Najdu ho na cestě k Novému táboru, v kaňonu na západ od Starého tábora.");
-};  
+};
 
 /*------------------------------------------------------------------------
-						TRADE 
+						TRADE
 ------------------------------------------------------------------------*/
 
 instance STT_336_cavalorn_TRADE(C_INFO)
@@ -229,14 +229,14 @@ instance STT_336_cavalorn_TRADE(C_INFO)
 	information = STT_336_cavalorn_TRADE_Info;
 	important = 0;
 	permanent = 1;
-//	description = "Show me your goods."; 
-//	description = "Zeig mir deine Ware"; 
-	description = "Ukaž mi svoje zboží."; 
+//	description = "Show me your goods.";
+//	description = "Zeig mir deine Ware";
+	description = "Ukaž mi svoje zboží.";
 	trade = 1;
 };
 
 func int STT_336_cavalorn_TRADE_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,STT_336_cavalorn_SELLBOW))
 	{
 		return TRUE;
@@ -249,5 +249,5 @@ func void STT_336_cavalorn_TRADE_Info()
 //	AI_Output(other,self,"STT_336_cavalorn_TRADE_Info_15_01"); //Zeig mir deine Ware.
 	AI_Output(other,self,"STT_336_cavalorn_TRADE_Info_15_01"); //Ukaž mi svoje zboží.
 
-};  
+};
 

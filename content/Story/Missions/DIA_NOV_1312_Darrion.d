@@ -1,5 +1,5 @@
 // **************************************************
-//						EXIT 
+//						EXIT
 // **************************************************
 
 instance DIA_Darrion_Exit(C_INFO)
@@ -8,10 +8,10 @@ instance DIA_Darrion_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Darrion_Exit_Condition;
 	information = DIA_Darrion_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Darrion_Exit_Condition()
 {
@@ -37,7 +37,7 @@ instance DIA_Darrion_Hello(C_INFO)
 //	description = "Hi - I'm new here and I'd like to get to know the Camp.";
 //	description = "Hi - ich bin neu hier und will das Lager kennenlernen.";
 	description = "Zdar - jsem tady nový a chtěl bych se něco dovědět o táboře.";
-};                       
+};
 
 func int DIA_Darrion_Hello_Condition()
 {
@@ -77,7 +77,7 @@ instance DIA_Darrion_Trade(C_INFO)
 //	description = "Ich will mit dir handeln!";
 	description = "Chtěl bych s tebou obchodovat!";
 	trade = 1;
-};                       
+};
 
 func int DIA_Darrion_Trade_Condition()
 {

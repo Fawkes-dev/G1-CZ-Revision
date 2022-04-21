@@ -1,5 +1,5 @@
 // ************************************************************
-// 			  				   EXIT 
+// 			  				   EXIT
 // ************************************************************
 
 instance DIA_Homer_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Homer_EXIT(C_INFO)
 	information = DIA_Homer_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Homer_EXIT_Condition()
 {
@@ -18,7 +18,7 @@ func int DIA_Homer_EXIT_Condition()
 };
 
 func void DIA_Homer_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -36,7 +36,7 @@ instance DIA_Homer_Hello(C_INFO)
 //	description = "Are you looking for something?";
 //	description = "Hältst du nach irgendwas Ausschau?";
 	description = "Hledáš něco?";
-};                       
+};
 
 func int DIA_Homer_Hello_Condition()
 {
@@ -44,7 +44,7 @@ func int DIA_Homer_Hello_Condition()
 };
 
 func void DIA_Homer_Hello_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Homer_Hello_15_00"); //Are you looking for something?
 //	AI_Output(other,self,"DIA_Homer_Hello_15_00"); //Hältst du nach irgendwas Ausschau?
 	AI_Output(other,self,"DIA_Homer_Hello_15_00"); //Hledáš něco?
@@ -74,7 +74,7 @@ instance DIA_Homer_BuiltDam(C_INFO)
 //	description = "Did YOU build the dam?";
 //	description = "Hast DU den Damm gebaut?";
 	description = "TY jsi tu hráz stavěl?";
-};                       
+};
 
 func int DIA_Homer_BuiltDam_Condition()
 {
@@ -85,7 +85,7 @@ func int DIA_Homer_BuiltDam_Condition()
 };
 
 func void DIA_Homer_BuiltDam_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Homer_BuiltDam_15_00"); //Did YOU build the dam?
 //	AI_Output(other,self,"DIA_Homer_BuiltDam_15_00"); //Hast DU den Damm gebaut?
 	AI_Output(other,self,"DIA_Homer_BuiltDam_15_00"); //TY jsi tu hráz stavěl?
@@ -113,7 +113,7 @@ instance DIA_Homer_WannaHelp(C_INFO)
 //	description = "Is there anything I can do to help?";
 //	description = "Kann ich dir helfen?";
 	description = "Mohu ti s něčím pomoci?";
-};                       
+};
 
 func int DIA_Homer_WannaHelp_Condition()
 {
@@ -124,7 +124,7 @@ func int DIA_Homer_WannaHelp_Condition()
 };
 
 func void DIA_Homer_WannaHelp_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Homer_WannaHelp_15_00"); //Is there anything I can do to help?
 //	AI_Output(other,self,"DIA_Homer_WannaHelp_15_00"); //Kann ich dir helfen?
 	AI_Output(other,self,"DIA_Homer_WannaHelp_15_00"); //Mohu ti s něčím pomoci?
@@ -156,7 +156,7 @@ instance DIA_Homer_Running(C_INFO)
 //	description = "Where can I find the beast?";
 //	description = "Wo finde ich das Biest?";
 	description = "Kde tu bestii najdu?";
-};                       
+};
 
 func int DIA_Homer_Running_Condition()
 {
@@ -167,7 +167,7 @@ func int DIA_Homer_Running_Condition()
 };
 
 func void DIA_Homer_Running_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Homer_Running_15_00"); //Where can I find the beast?
 //	AI_Output(other,self,"DIA_Homer_Running_15_00"); //Wo finde ich das Biest?
 	AI_Output(other,self,"DIA_Homer_Running_15_00"); //Kde tu bestii najdu?
@@ -196,7 +196,7 @@ instance DIA_Homer_Success(C_INFO)
 //	description = "I've killed the beast!";
 //	description = "Ich hab' das Biest erledigt!";
 	description = "Postaral jsem se o tu bestii!";
-};                       
+};
 
 func int DIA_Homer_Success_Condition()
 {
@@ -212,7 +212,7 @@ func int DIA_Homer_Success_Condition()
 };
 
 func void DIA_Homer_Success_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Homer_Success_15_00"); //I've killed the beast!
 //	AI_Output(other,self,"DIA_Homer_Success_15_00"); //Ich hab' das Biest erledigt!
 	AI_Output(other,self,"DIA_Homer_Success_15_00"); //Postaral jsem se o tu bestii!
@@ -248,7 +248,7 @@ instance DIA_Homer_PERM(C_INFO)
 //	description = "Everything okay with the dam?";
 //	description = "Alles klar beim Damm?";
 	description = "Je s hrází všechno v pořádku?";
-};                       
+};
 
 func int DIA_Homer_PERM_Condition()
 {
@@ -259,7 +259,7 @@ func int DIA_Homer_PERM_Condition()
 };
 
 func void DIA_Homer_PERM_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Homer_PERM_15_00"); //Everything okay with the dam?
 //	AI_Output(other,self,"DIA_Homer_PERM_15_00"); //Alles klar beim Damm?
 	AI_Output(other,self,"DIA_Homer_PERM_15_00"); //Je s hrází všechno v pořádku?

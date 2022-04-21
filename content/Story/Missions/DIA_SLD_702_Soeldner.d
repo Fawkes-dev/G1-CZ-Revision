@@ -10,7 +10,7 @@ instance DIA_Sld_702_EXIT(C_INFO)
 	information = DIA_Sld_702_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Sld_702_EXIT_Condition()
 {
@@ -34,7 +34,7 @@ instance DIA_Sld_702_First(C_INFO)
 	information = DIA_Sld_702_First_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Sld_702_First_Condition()
 {
@@ -71,7 +71,7 @@ instance DIA_Sld_702_PERM(C_INFO)
 //	description = "What do I need to do to make you let me see Lee?";
 //	description = "Was muss ich machen, damit du mich zu Lee läßt?";
 	description = "Co musím udělat, abys mě k Leeovi pustil?";
-};                       
+};
 
 func int DIA_Sld_702_PERM_Condition()
 {

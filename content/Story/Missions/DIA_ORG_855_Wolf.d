@@ -8,10 +8,10 @@ instance DIA_ORG_855_Wolf_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_ORG_855_Wolf_Exit_Condition;
 	information = DIA_ORG_855_Wolf_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_ORG_855_Wolf_Exit_Condition()
 {
@@ -37,7 +37,7 @@ instance DIA_Wolf_Hello(C_INFO)
 //	description = "Who are you?";
 //	description = "Wer bist du?";
 	description = "Kdo jsi?";
-};                       
+};
 
 func int DIA_Wolf_Hello_Condition()
 {
@@ -70,7 +70,7 @@ instance DIA_Wolf_GreetORG(C_INFO)
 	information = DIA_Wolf_GreetORG_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Wolf_GreetORG_Condition()
 {
@@ -98,12 +98,12 @@ instance Org_855_Wolf_TRADE(C_INFO)
 	condition = Org_855_Wolf_TRADE_Condition;
 	information = Org_855_Wolf_TRADE_Info;
 	permanent = 1;
-	description = DIALOG_TRADE; 
+	description = DIALOG_TRADE;
 	trade = 1;
 };
 
 func int Org_855_Wolf_TRADE_Condition()
-{ 
+{
 	return 1;
 };
 
@@ -129,13 +129,13 @@ instance Org_855_Wolf_WhereHunter(C_INFO)
 	condition = Org_855_Wolf_WhereHunter_Condition;
 	information = Org_855_Wolf_WhereHunter_Info;
 	permanent = 1;
-//	description = "How do I get furs and skins?"; 
-//	description = "Wie komme ich an Felle und Häute?"; 
-	description = "Jak stáhnu kožešiny a kůže?"; 
+//	description = "How do I get furs and skins?";
+//	description = "Wie komme ich an Felle und Häute?";
+	description = "Jak stáhnu kožešiny a kůže?";
 };
 
 func int Org_855_Wolf_WhereHunter_Condition()
-{ 
+{
 	return 1;
 };
 
@@ -166,11 +166,11 @@ instance DIA_Wolf_SellArmor(C_INFO)
 //	description = "I'm looking for better armor.";
 //	description = "Ich suche eine bessere Rüstung.";
 	description = "Sháním lepší zbroj.";
-};                       
+};
 
 func int DIA_Wolf_SellArmor_Condition()
 {
-	if ((Npc_KnowsInfo(hero,DIA_Wolf_Hello)) 
+	if ((Npc_KnowsInfo(hero,DIA_Wolf_Hello))
 	&& (!Npc_KnowsInfo(hero,Info_Wolf_ARMORFINISHED)))
 	{
 		return 1;
@@ -219,7 +219,7 @@ func void DIA_Wolf_SellArmor_M()
 //		AI_Output(self,other,"DIA_Wolf_SellArmor_M_09_02"); //Ohne Erz gibt es auch keine Rüstung.
 		AI_Output(self,other,"DIA_Wolf_SellArmor_M_09_02"); //Žádná ruda, žádná zbroj.
 	}
-	else 
+	else
 	{
 //		AI_Output(self,other,"DIA_Wolf_SellArmor_M_09_03"); //It's good armor. Still not as good as what I wear, but it protects you well enough.
 //		AI_Output(self,other,"DIA_Wolf_SellArmor_M_09_03"); //Eine gute Rüstung.Noch nicht so gut, wie das, was ich trage, aber sie bietet ausreichend Schutz.
@@ -241,13 +241,13 @@ func void DIA_Wolf_SellArmor_H()
 //	AI_Output(other,self,"DIA_Wolf_SellArmor_H_15_01"); //Kannst du mir eine schwere Rüstung verkaufen?
 	AI_Output(other,self,"DIA_Wolf_SellArmor_H_15_01"); //Můžeš mi prodat těžkou zbroj?
 
-	if (Npc_HasItems(hero,ItMinugget) < VALUE_ORG_ARMOR_H) 
+	if (Npc_HasItems(hero,ItMinugget) < VALUE_ORG_ARMOR_H)
 	{
 //		AI_Output(self,other,"DIA_Wolf_SellArmor_H_09_02"); //No ore, no armor.
 //		AI_Output(self,other,"DIA_Wolf_SellArmor_H_09_02"); //Ohne Erz gibt es auch keine Rüstung.
 		AI_Output(self,other,"DIA_Wolf_SellArmor_H_09_02"); //Žádná ruda, žádná zbroj.
 	}
-	else 
+	else
 	{
 //		AI_Output(self,other,"DIA_Wolf_SellArmor_H_09_03"); //This armor will protect you from any dangers! I wear it myself,and I've survived so far. Not least thanks to the armor.
 //		AI_Output(self,other,"DIA_Wolf_SellArmor_H_09_03"); //Diese Rüstung wird dich vor allen Gefahren schützen! Ich trage sie auch und habe bisher überlebt. Nicht zuletzt dank der Rüstung.
@@ -264,7 +264,7 @@ func void DIA_Wolf_SellArmor_H()
 };
 
 /*------------------------------------------------------------------------
-							BOGENSCHIESSEN DAS ANGEBOT 
+							BOGENSCHIESSEN DAS ANGEBOT
 ------------------------------------------------------------------------*/
 
 instance ORG_855_Wolf_TRAINOFFER(C_INFO)
@@ -275,13 +275,13 @@ instance ORG_855_Wolf_TRAINOFFER(C_INFO)
 	information = ORG_855_Wolf_TRAINOFFER_Info;
 	important = 0;
 	permanent = 0;
-//	description = "I'd like to learn how to handle a bow."; 
-//	description = "Ich möchte den richtigen Umgang mit dem Bogen lernen"; 
-	description = "Rád bych se naučil zacházet s lukem."; 
+//	description = "I'd like to learn how to handle a bow.";
+//	description = "Ich möchte den richtigen Umgang mit dem Bogen lernen";
+	description = "Rád bych se naučil zacházet s lukem.";
 };
 
 func int ORG_855_Wolf_TRAINOFFER_Condition()
-{ 
+{
 	if( Npc_GetTalentSkill (hero,NPC_TALENT_BOW) != 2)
 	{
 		return TRUE;
@@ -308,9 +308,9 @@ func void ORG_855_Wolf_TRAINOFFER_Info()
 //	B_LogEntry(GE_TeacherNC,"Wolf der Bandit kann mir den Umgang mit dem BOGEN beibringen.");
 	B_LogEntry(GE_TeacherNC,"Bandita Wolf mě může naučit používat LUK.");
 
-};  
+};
 /*------------------------------------------------------------------------
-						BOGENSCHIESSEN DIE ERSTE LEHRSTUNDE 
+						BOGENSCHIESSEN DIE ERSTE LEHRSTUNDE
 ------------------------------------------------------------------------*/
 
 instance ORG_855_Wolf_TRAIN(C_INFO)
@@ -321,11 +321,11 @@ instance ORG_855_Wolf_TRAIN(C_INFO)
 	information = ORG_855_Wolf_TRAIN_Info;
 	important = 0;
 	permanent = 0;
-	description = B_BuildLearnString(NAME_LearnBow_1,LPCOST_TALENT_BOW_1,50); 
+	description = B_BuildLearnString(NAME_LearnBow_1,LPCOST_TALENT_BOW_1,50);
 };
 
 func int ORG_855_Wolf_TRAIN_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,ORG_855_Wolf_TRAINOFFER))
 	&& (Npc_GetTalentSkill (hero,NPC_TALENT_BOW) == 0)
 	{
@@ -338,7 +338,7 @@ func void ORG_855_Wolf_TRAIN_Info()
 //	AI_Output(other,self,"ORG_855_Wolf_TRAIN_Info_15_01"); //Teach me how to use a bow.
 //	AI_Output(other,self,"ORG_855_Wolf_TRAIN_Info_15_01"); //Bring mir den Umgang mit dem Bogen bei.
 	AI_Output(other,self,"ORG_855_Wolf_TRAIN_Info_15_01"); //Nauč mě zacházet s lukem.
-	if (Npc_HasItems(hero,ItMiNugget) >= 50) 
+	if (Npc_HasItems(hero,ItMiNugget) >= 50)
 	{
 		if B_GiveSkill(hero,NPC_TALENT_BOW,1,LPCOST_TALENT_BOW_1)
 		{
@@ -351,9 +351,9 @@ func void ORG_855_Wolf_TRAIN_Info()
 			B_GiveInvItems(hero,self,ItMiNugget,50);
 		};
 	};
-};  
+};
 /*------------------------------------------------------------------------
-						BOGENSCHIESSEN DIE ZWEITE LEHRSTUNDE 
+						BOGENSCHIESSEN DIE ZWEITE LEHRSTUNDE
 ------------------------------------------------------------------------*/
 
 instance ORG_855_Wolf_TRAINAGAIN(C_INFO)
@@ -364,13 +364,13 @@ instance ORG_855_Wolf_TRAINAGAIN(C_INFO)
 	information = ORG_855_Wolf_TRAINAGAIN_Info;
 	important = 0;
 	permanent = 0;
-//	description = B_BuildLearnString(NAME_LearnBow_2, LPCOST_TALENT_BOW_2,50); 
-//	description = B_BuildLearnString(NAME_LearnBow_2, LPCOST_TALENT_BOW_2,50); 
-	description = B_BuildLearnString(NAME_LearnBow_2,LPCOST_TALENT_BOW_2,50); 
+//	description = B_BuildLearnString(NAME_LearnBow_2, LPCOST_TALENT_BOW_2,50);
+//	description = B_BuildLearnString(NAME_LearnBow_2, LPCOST_TALENT_BOW_2,50);
+	description = B_BuildLearnString(NAME_LearnBow_2,LPCOST_TALENT_BOW_2,50);
 };
 
 func int ORG_855_Wolf_TRAINAGAIN_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,ORG_855_Wolf_TRAINOFFER))
 	&& (Npc_GetTalentSkill (hero,NPC_TALENT_BOW) == 1)
 	{
@@ -383,7 +383,7 @@ func void ORG_855_Wolf_TRAINAGAIN_Info()
 //	AI_Output(other,self,"ORG_855_Wolf_TRAINAGAIN_Info_15_01"); //I want to improve my skill with the bow.
 //	AI_Output(other,self,"ORG_855_Wolf_TRAINAGAIN_Info_15_01"); //Ich will mein Talent mit dem Bogen verbessern.
 	AI_Output(other,self,"ORG_855_Wolf_TRAINAGAIN_Info_15_01"); //Chci se zlepšit v umění lukostřelby.
-	if (Npc_HasItems(hero,ItMiNugget) >= 50) 
+	if (Npc_HasItems(hero,ItMiNugget) >= 50)
 	{
 		if B_GiveSkill(hero,NPC_TALENT_BOW,2,LPCOST_TALENT_BOW_2)
 		{
@@ -403,7 +403,7 @@ func void ORG_855_Wolf_TRAINAGAIN_Info()
 			B_GiveInvItems(hero,self,ItMiNugget,50);
 		};
 	};
-}; 
+};
 //---------------------------------------------------------------
 //	 					 DEX
 //---------------------------------------------------------------
@@ -417,11 +417,11 @@ instance ORG_855_Wolf_Teach(C_INFO)
 //	description = "Can you teach me something?";
 //	description = "Kannst du mir was beibringen?";
 	description = "Můžeš mě něco naučit?";
-};                       
+};
 
 func int ORG_855_Wolf_Teach_Condition()
 {
-	if (Npc_GetTrueGuild(hero) == GIL_GRD)  
+	if (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
 		return TRUE;
 	};
@@ -453,7 +453,6 @@ func void ORG_855_Wolf_Teach_Info()
 
 func void ORG_855_Wolf_Teach_BACK()
 {
-
 	Info_ClearChoices(ORG_855_Wolf_Teach);
 };
 func void ORG_855_Wolf_Teach_DEX_1()
@@ -490,12 +489,12 @@ instance Info_Wolf_GOOD(C_INFO)
 	npc = Org_855_Wolf;
 	condition = Info_Wolf_GOOD_Condition;
 	information = Info_Wolf_GOOD_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "Gorn said you wanted to talk to me urgently?";
 //	description = "Gorn sagt, du wolltest dringend mit mir sprechen?";
 	description = "Gorn říkal, že mi potřebuješ něco naléhavého sdělit?";
-};                       
+};
 
 func int Info_Wolf_GOOD_Condition()
 {
@@ -532,12 +531,12 @@ instance Info_Wolf_SPEAK(C_INFO)
 	npc = Org_855_Wolf;
 	condition = Info_Wolf_SPEAK_Condition;
 	information = Info_Wolf_SPEAK_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "What's up?";
 //	description = "Worum geht es?";
 	description = "Co se děje?";
-};                       
+};
 
 func int Info_Wolf_SPEAK_Condition()
 {
@@ -583,12 +582,12 @@ instance Info_Wolf_SKIN(C_INFO)
 	npc = Org_855_Wolf;
 	condition = Info_Wolf_SKIN_Condition;
 	information = Info_Wolf_SKIN_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "How can I remove the plates from those beasts?";
 //	description = "Wie bekomme ich diese Platten von den Biestern ab?";
 	description = "Jak dostanu krunýř z těch bestií?";
-};                       
+};
 
 func int Info_Wolf_SKIN_Condition()
 {
@@ -620,9 +619,9 @@ func void Info_Wolf_SKIN_Info()
 
 	Log_CreateTopic(CH4_MCPlateArmor,LOG_MISSION);
 	Log_SetTopicStatus(CH4_MCPlateArmor,LOG_RUNNING);
-//	B_LogEntry(CH4_MCPlateArmor,"The rogue Wolf from the New Camp offered to make an armor from the armor plates of the minecrawlers. He showed me how to remove armor plates from dead crawlers."); 
-//	B_LogEntry(CH4_MCPlateArmor,"Der Bandit Wolf aus dem neuen Lager bot mir an, aus den Panzerplatten von Minecrawlern eine Rüstung anzufertigen. Er zeigte mir, wie man die Panzerplatten von toten Crawlern entfernt."); 
-	B_LogEntry(CH4_MCPlateArmor,"Bandita Wolf z Nového tábora mi nabídl, že mi zhotoví brnění z ochranných krunýřů důlních červů. Ukázal mi, jak se z mrtvého důlního červa odřezávají."); 
+//	B_LogEntry(CH4_MCPlateArmor,"The rogue Wolf from the New Camp offered to make an armor from the armor plates of the minecrawlers. He showed me how to remove armor plates from dead crawlers.");
+//	B_LogEntry(CH4_MCPlateArmor,"Der Bandit Wolf aus dem neuen Lager bot mir an, aus den Panzerplatten von Minecrawlern eine Rüstung anzufertigen. Er zeigte mir, wie man die Panzerplatten von toten Crawlern entfernt.");
+	B_LogEntry(CH4_MCPlateArmor,"Bandita Wolf z Nového tábora mi nabídl, že mi zhotoví brnění z ochranných krunýřů důlních červů. Ukázal mi, jak se z mrtvého důlního červa odřezávají.");
 
 	Log_CreateTopic(GE_AnimalTrophies,LOG_NOTE);
 //	B_LogEntry(GE_AnimalTrophies,"Knowledge on the removal of plates - minecrawler - warriors");
@@ -640,12 +639,12 @@ instance Info_Wolf_PROFIT(C_INFO)
 	npc = Org_855_Wolf;
 	condition = Info_Wolf_PROFIT_Condition;
 	information = Info_Wolf_PROFIT_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "And you're telling me without wanting anything for yourself?";
 //	description = "Und diese Information gibst du mir völlig uneigennützig?";
 	description = "A říkáš mi to jen tak, aniž bys za to něco chtěl?";
-};                       
+};
 
 func int Info_Wolf_PROFIT_Condition()
 {
@@ -673,12 +672,12 @@ instance Info_Wolf_MCPLATESFEW(C_INFO)
 	npc = Org_855_Wolf;
 	condition = Info_Wolf_MCPLATESFEW_Condition;
 	information = Info_Wolf_MCPLATESFEW_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "I've gathered some of those minecrawler armor plates!";
 //	description = "Ich habe einige der Minecrawler-Panzerplatten eingesammelt!";
 	description = "Nasbíral jsem nějaké ty krunýře  důlních červů!";
-};                       
+};
 
 func int Info_Wolf_MCPLATESFEW_Condition()
 {
@@ -711,12 +710,12 @@ instance Info_Wolf_MCPLATESENOUGH(C_INFO)
 	npc = Org_855_Wolf;
 	condition = Info_Wolf_MCPLATESENOUGH_Condition;
 	information = Info_Wolf_MCPLATESENOUGH_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "I've gathered lots of minecrawlers' armor plates!";
 //	description = "Ich habe jede Menge dieser Minecrawler-Panzerplatten eingesammelt!";
 	description = "Už jsem nasbíral dost krunýřů důlních červů!";
-};                       
+};
 
 func int Info_Wolf_MCPLATESENOUGH_Condition()
 {
@@ -764,12 +763,12 @@ instance Info_Wolf_ARMORINWORK(C_INFO)
 	npc = Org_855_Wolf;
 	condition = Info_Wolf_ARMORINWORK_Condition;
 	information = Info_Wolf_ARMORINWORK_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 //	description = "How far have you got with the armor?";
 //	description = "Wie weit bist du mit der Rüstung?";
 	description = "Jak jsi daleko s tou zbrojí?";
-};                       
+};
 
 func int Info_Wolf_ARMORINWORK_Condition()
 {
@@ -802,12 +801,12 @@ instance Info_Wolf_ARMORFINISHED(C_INFO)
 	npc = Org_855_Wolf;
 	condition = Info_Wolf_ARMORFINISHED_Condition;
 	information = Info_Wolf_ARMORFINISHED_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "How far have you got with the armor?";
 //	description = "Wie weit bist du mit der Rüstung? ";
 	description = "Jak jsi daleko s tou zbrojí?";
-};                       
+};
 
 func int Info_Wolf_ARMORFINISHED_Condition()
 {
@@ -851,7 +850,7 @@ func void Info_Wolf_ARMORFINISHED_Info()
 };
 
 /*------------------------------------------------------------------------
-						BOGEN KAUFEN 
+						BOGEN KAUFEN
 ------------------------------------------------------------------------*/
 
 instance Org_855_Wolf_SELLBOW(C_INFO)
@@ -861,9 +860,9 @@ instance Org_855_Wolf_SELLBOW(C_INFO)
 	information = Org_855_Wolf_SELLBOW_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Where can I get a bow here?"; 
-//	description = "Wo kann ich denn hier einen Bogen bekommen?"; 
-	description = "Kde tady dostanu luk?"; 
+//	description = "Where can I get a bow here?";
+//	description = "Wo kann ich denn hier einen Bogen bekommen?";
+	description = "Kde tady dostanu luk?";
 };
 
 func int Org_855_Wolf_SELLBOW_Condition()
@@ -883,5 +882,5 @@ func void Org_855_Wolf_SELLBOW_Info()
 //	B_LogEntry(GE_TraderNC,"Wolf, der Bandit, handelt mit BÖGEN.");
 	B_LogEntry(GE_TraderNC,"Bandita Wolf obchoduje s LUKY.");
 
-};  
+};
 

@@ -6,10 +6,10 @@ instance VLK_583_Glen_Exit(C_INFO)
 	nr = 999;
 	condition = VLK_583_Glen_Exit_Condition;
 	information = VLK_583_Glen_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int VLK_583_Glen_Exit_Condition()
 {
@@ -30,9 +30,9 @@ instance VLK_583_Glen_INFO(C_INFO)
 	information = VLK_583_Glen_INFO_Info;
 	important = 0;
 	permanent = 1;
-//	description = "What should I keep in mind when I'm in the mine?"; 
-//	description = "Worauf sollte ich in der Mine achten?"; 
-	description = "Na co bych měl pamatovat, až budu v dole?"; 
+//	description = "What should I keep in mind when I'm in the mine?";
+//	description = "Worauf sollte ich in der Mine achten?";
+	description = "Na co bych měl pamatovat, až budu v dole?";
 };
 
 func int VLK_583_Glen_INFO_Condition()
@@ -57,7 +57,7 @@ func void VLK_583_Glen_INFO_Info()
 //	AI_Output(self,other,"VLK_583_Glen_INFO_Info_02_05"); //They're merciless and fast. If you enjoy being alive, you shouldn't be down here. You better go before something happens to you.
 //	AI_Output(self,other,"VLK_583_Glen_INFO_Info_02_05"); //Gnadenlos und schnell. Wenn du am Leben hängst, solltest du dich nicht hier unten aufhalten. Geh lieber, bevor dir noch was passiert.
 	AI_Output(self,other,"VLK_583_Glen_INFO_Info_02_05"); //Jsou nemilosrdní a rychlí. Jestli chceš zůstat naživu, neměl bys chodit dolů. Měl bys odejít, než se ti něco stane.
-};  
+};
 // ***************** Infos *****************************
 
 instance VLK_583_Glen_LOCKPICK(C_INFO)
@@ -65,12 +65,12 @@ instance VLK_583_Glen_LOCKPICK(C_INFO)
 	npc = VLK_583_Glen;
 	condition = VLK_583_Glen_LOCKPICK_Condition;
 	information = VLK_583_Glen_LOCKPICK_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "I heard I could buy lockpicks here?";
 //	description = "Bei dir gibts Dietriche?";
 	description = "Slyšel jsem, že bych tu dostal paklíče?";
-};                       
+};
 
 func int VLK_583_Glen_LOCKPICK_Condition()
 {
@@ -97,16 +97,16 @@ instance VLK_583_Glen_BUY(C_INFO)
 	npc = VLK_583_Glen;
 	condition = VLK_583_Glen_BUY_Condition;
 	information = VLK_583_Glen_BUY_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 //	description = "(buy lockpicks)";
 //	description = "(Dietriche kaufen)";
 	description = "Chci koupit paklíče."; // #COMMENT Zvyšuje immersion:tm:
 	trade = 1;
-};                       
+};
 
 func int VLK_583_Glen_BUY_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,VLK_583_Glen_LOCKPICK))
 	{
 		return 1;

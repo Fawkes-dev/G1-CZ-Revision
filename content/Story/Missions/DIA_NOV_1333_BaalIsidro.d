@@ -1,5 +1,5 @@
 // ************************************************************
-// 			  				   EXIT 
+// 			  				   EXIT
 // ************************************************************
 
 instance DIA_BaalIsidro_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_BaalIsidro_EXIT(C_INFO)
 	information = DIA_BaalIsidro_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_BaalIsidro_EXIT_Condition()
 {
@@ -18,7 +18,7 @@ func int DIA_BaalIsidro_EXIT_Condition()
 };
 
 func void DIA_BaalIsidro_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -26,7 +26,7 @@ func void DIA_BaalIsidro_EXIT_Info()
 // 							Hallo
 // ************************************************************
 
-instance DIA_BaalIsidro_Hello(C_INFO) 
+instance DIA_BaalIsidro_Hello(C_INFO)
 {
 	npc = Nov_1333_BaalIsidro;
 	nr = 1;
@@ -36,7 +36,7 @@ instance DIA_BaalIsidro_Hello(C_INFO)
 //	description = "You don't look very happy.";
 //	description = "Du siehst nicht sehr glücklich aus.";
 	description = "Nevypadáš příliš spokojeně.";
-};                       
+};
 
 func int DIA_BaalIsidro_Hello_Condition()
 {
@@ -44,7 +44,7 @@ func int DIA_BaalIsidro_Hello_Condition()
 };
 
 func void DIA_BaalIsidro_Hello_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_BaalIsidro_Hello_15_00"); //You don't look very happy.
 //	AI_Output(other,self,"DIA_BaalIsidro_Hello_15_00"); //Du siehst nicht sehr glücklich aus.
 	AI_Output(other,self,"DIA_BaalIsidro_Hello_15_00"); //Nevypadáš moc šťastně.
@@ -66,7 +66,7 @@ func void DIA_BaalIsidro_Hello_Info()
 // 					 	TRADE
 // ************************************************************
 
-instance DIA_BaalIsidro_TRADE(C_INFO) 
+instance DIA_BaalIsidro_TRADE(C_INFO)
 {
 	npc = Nov_1333_BaalIsidro;
 	nr = 800;
@@ -77,7 +77,7 @@ instance DIA_BaalIsidro_TRADE(C_INFO)
 //	description = "Zeig mir, was du hast.";
 	description = "Ukaž, co máš.";
 	trade = 1;
-};                       
+};
 
 func int DIA_BaalIsidro_TRADE_Condition()
 {
@@ -88,7 +88,7 @@ func int DIA_BaalIsidro_TRADE_Condition()
 };
 
 func void DIA_BaalIsidro_TRADE_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_BaalIsidro_TRADE_15_00"); //Show me what you have.
 //	AI_Output(other,self,"DIA_BaalIsidro_TRADE_15_00"); //Zeig mir, was du hast.
 	AI_Output(other,self,"DIA_BaalIsidro_TRADE_15_00"); //Ukaž, co máš.
@@ -101,7 +101,7 @@ func void DIA_BaalIsidro_TRADE_Info()
 // 					 Ich verkaufe für dich
 // ************************************************************
 
-instance DIA_BaalIsidro_GimmeKraut(C_INFO) 
+instance DIA_BaalIsidro_GimmeKraut(C_INFO)
 {
 	npc = Nov_1333_BaalIsidro;
 	nr = 1;
@@ -111,7 +111,7 @@ instance DIA_BaalIsidro_GimmeKraut(C_INFO)
 //	description = "I could sell the weed for you - for a consideration, of course.";
 //	description = "Ich könnte das Kraut für dich verkaufen - gegen Beteiligung versteht sich.";
 	description = "Mohl bych ti prodat drogu - samozřejmě po dohodě.";
-};                       
+};
 
 func int DIA_BaalIsidro_GimmeKraut_Condition()
 {
@@ -122,7 +122,7 @@ func int DIA_BaalIsidro_GimmeKraut_Condition()
 };
 
 func void DIA_BaalIsidro_GimmeKraut_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_BaalIsidro_GimmeKraut_15_00"); //I could sell the weed for you - for a consideration, of course.
 //	AI_Output(other,self,"DIA_BaalIsidro_GimmeKraut_15_00"); //Ich könnte das Kraut für dich verkaufen - gegen Beteiligung versteht sich.
 	AI_Output(other,self,"DIA_BaalIsidro_GimmeKraut_15_00"); //Mohl bych ti prodat drogu - samozřejmě po dohodě.
@@ -132,16 +132,16 @@ func void DIA_BaalIsidro_GimmeKraut_Info()
 
 	Log_CreateTopic(CH1_DealerJob,LOG_MISSION);
 	Log_SetTopicStatus(CH1_DealerJob,LOG_RUNNING);
-//	B_LogEntry(CH1_DealerJob,"The novice Baal Isidro hangs around at the bar at the lake and gets plastered. He should sell his share of weed stalks, but he doesn't manage to. Perhaps I could convince him to let me do it, but how should I do that?"); 
-//	B_LogEntry(CH1_DealerJob,"Der Novize Baal Isidro hängt den ganzen Tag in der Kneipe auf dem See des Neuen Lagers herum und betrinkt sich sinnlos. Er muss seine Ladung Krautstengel verkaufen, kann sich aber nicht aufraffen. Vielleicht könnte ich ihn irgendwie dazu überreden, mir den Job zu geben, nur wie?"); 
-	B_LogEntry(CH1_DealerJob,"Novic Baal Isidro se celý den motá v baru na jezeře a popíjí. Měl by prodávat svůj díl drogy, ale nedbá na to. Snad bych ho mohl přesvědčit, aby mě to nechal udělat. Jak ale na to?"); 
+//	B_LogEntry(CH1_DealerJob,"The novice Baal Isidro hangs around at the bar at the lake and gets plastered. He should sell his share of weed stalks, but he doesn't manage to. Perhaps I could convince him to let me do it, but how should I do that?");
+//	B_LogEntry(CH1_DealerJob,"Der Novize Baal Isidro hängt den ganzen Tag in der Kneipe auf dem See des Neuen Lagers herum und betrinkt sich sinnlos. Er muss seine Ladung Krautstengel verkaufen, kann sich aber nicht aufraffen. Vielleicht könnte ich ihn irgendwie dazu überreden, mir den Job zu geben, nur wie?");
+	B_LogEntry(CH1_DealerJob,"Novic Baal Isidro se celý den motá v baru na jezeře a popíjí. Měl by prodávat svůj díl drogy, ale nedbá na to. Snad bych ho mohl přesvědčit, aby mě to nechal udělat. Jak ale na to?");
 };
 
 // ************************************************************
 // 					Baal Kagan hat gepetzt
 // ************************************************************
 
-instance DIA_BaalIsidro_Problem(C_INFO) 
+instance DIA_BaalIsidro_Problem(C_INFO)
 {
 	npc = Nov_1333_BaalIsidro;
 	nr = 1;
@@ -151,7 +151,7 @@ instance DIA_BaalIsidro_Problem(C_INFO)
 //	description = "You have a problem. Baal Kagan will make sure you'll be replaced.";
 //	description = "Du hast ein Problem. Baal Kagan will dafür sorgen, dass du ersetzt wirst.";
 	description = "Něco ti povím - máš problém. Baal Kagan se postará, abys byl vyměněn.";
-};                       
+};
 
 func int DIA_BaalIsidro_Problem_Condition()
 {
@@ -162,7 +162,7 @@ func int DIA_BaalIsidro_Problem_Condition()
 };
 
 func void DIA_BaalIsidro_Problem_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_BaalIsidro_Problem_15_00"); //I'll tell you something - you have a problem. Baal Kagan will make sure you'll be replaced.
 //	AI_Output(other,self,"DIA_BaalIsidro_Problem_15_00"); //Ich sag dir was - du hast ein Problem. Baal Kagan will dafür sorgen, dass du ersetzt wirst.
 	AI_Output(other,self,"DIA_BaalIsidro_Problem_15_00"); //Něco ti povím - máš problém. Baal Kagan zajistí, že tě vymění.
@@ -181,7 +181,7 @@ func void DIA_BaalIsidro_Problem_Info()
 //		B_LogEntry(CH1_DealerJob,"Baal Kagan's plans to have the alcoholic Baal Isidro replaced finished him off. I think he'll accept my offer now!");
 //		B_LogEntry(CH1_DealerJob,"Die Pläne Baal Kagans den trunksüchtigen Baal Isidro zu ersetzen, haben ihm den Rest gegeben. Ich glaube jetzt ist er reif für mein Angebot!");
 		B_LogEntry(CH1_DealerJob,"Baal Kagan se chystá opilce Baala Isidra nahradit někým jiným. Myslím, že teď už moji nabídku přijme!");
-	}; 
+	};
 };
 
 // ************************************************************
@@ -190,7 +190,7 @@ func void DIA_BaalIsidro_Problem_Info()
 	var int BaalIsidro_GotDrink;
 // ************************************************************
 
-instance DIA_BaalIsidro_Drink(C_INFO) 
+instance DIA_BaalIsidro_Drink(C_INFO)
 {
 	npc = Nov_1333_BaalIsidro;
 	nr = 1;
@@ -200,7 +200,7 @@ instance DIA_BaalIsidro_Drink(C_INFO)
 //	description = "Here you go - have another drink on me.";
 //	description = "Hier - trink noch einen auf meine Rechnung.";
 	description = "Tady - dej si na mě ještě jednu.";
-};                       
+};
 
 func int DIA_BaalIsidro_Drink_Condition()
 {
@@ -211,7 +211,7 @@ func int DIA_BaalIsidro_Drink_Condition()
 };
 
 func void DIA_BaalIsidro_Drink_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_BaalIsidro_Drink_15_00"); //Here you go - have another drink on me.
 //	AI_Output(other,self,"DIA_BaalIsidro_Drink_15_00"); //Hier - trink noch einen auf meine Rechnung.
 	AI_Output(other,self,"DIA_BaalIsidro_Drink_15_00"); //Tady - dej si na mě ještě jednu.
@@ -230,7 +230,7 @@ func void DIA_BaalIsidro_Drink_Info()
 				AI_StandUp(self);
 				AI_TurnToNpc(self,hero);
 			};
-			AI_UseItem(self,ItFoBooze); 
+			AI_UseItem(self,ItFoBooze);
 		}
 		else if (Npc_HasItems(other,ItFoBeer))
 		{
@@ -240,7 +240,7 @@ func void DIA_BaalIsidro_Drink_Info()
 				AI_StandUp(self);
 				AI_TurnToNpc(self,hero);
 			};
-			AI_UseItem(self,ItFoBeer); 
+			AI_UseItem(self,ItFoBeer);
 		}
 		else if (Npc_HasItems(other,ItFoWine))
 		{
@@ -250,7 +250,7 @@ func void DIA_BaalIsidro_Drink_Info()
 				AI_StandUp(self);
 				AI_TurnToNpc(self,hero);
 			};
-			AI_UseItem(self,ItFoWine); 
+			AI_UseItem(self,ItFoWine);
 		};
 
 		BaalIsidro_GotDrink = TRUE;
@@ -282,7 +282,7 @@ func void DIA_BaalIsidro_Drink_Info()
 	var int BaalIsidro_DealerJob;
 // ************************************************************
 
-instance DIA_BaalIsidro_ThinkAgain(C_INFO) 
+instance DIA_BaalIsidro_ThinkAgain(C_INFO)
 {
 	npc = Nov_1333_BaalIsidro;
 	nr = 1;
@@ -292,7 +292,7 @@ instance DIA_BaalIsidro_ThinkAgain(C_INFO)
 //	description = "Think about it - give me the weed and we'll share the profit.";
 //	description = "Überleg's dir - Gib mir das Kraut und wir teilen den Gewinn.";
 	description = "Přemýšlej o tom - dej mi drogu a o zisk se rozdělíme.";
-};                       
+};
 
 func int DIA_BaalIsidro_ThinkAgain_Condition()
 {
@@ -303,7 +303,7 @@ func int DIA_BaalIsidro_ThinkAgain_Condition()
 };
 
 func void DIA_BaalIsidro_ThinkAgain_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_BaalIsidro_ThinkAgain_15_00"); //Think about it - give me the weed and we'll share the profit.
 //	AI_Output(other,self,"DIA_BaalIsidro_ThinkAgain_15_00"); //Überleg's dir - Gib mir das Kraut und wir teilen den Gewinn.
 	AI_Output(other,self,"DIA_BaalIsidro_ThinkAgain_15_00"); //Přemýšlej o tom - dej mi drogu a o zisk se rozdělíme.
@@ -330,9 +330,9 @@ func void DIA_BaalIsidro_ThinkAgain_Info()
 		AI_Output(self,other,"DIA_BaalIsidro_ThinkAgain_03_06"); //Cítím se teď mnohem líp, když jsem se zbavil toho zboží.
 
 		BaalIsidro_DealerJob = LOG_RUNNING;
-//		B_LogEntry(CH1_DealerJob,"Baal Isidro gave me loads of weed stalks. If I sell them he'll give me half of the profit, which would be 200 ore."); 
-//		B_LogEntry(CH1_DealerJob,"Baal Isidro hat mir einen Haufen Krautstengel gegeben, die ich verhökern soll. Er will die Hälfte der Einnahmen also 200 Erz davon abhaben."); 
-		B_LogEntry(CH1_DealerJob,"Baal Isidro mi předal dávku lodyh drogy. Pokud všechnu drogu prodám, dá mi polovinu zisku, což činí 200 nugetů."); 
+//		B_LogEntry(CH1_DealerJob,"Baal Isidro gave me loads of weed stalks. If I sell them he'll give me half of the profit, which would be 200 ore.");
+//		B_LogEntry(CH1_DealerJob,"Baal Isidro hat mir einen Haufen Krautstengel gegeben, die ich verhökern soll. Er will die Hälfte der Einnahmen also 200 Erz davon abhaben.");
+		B_LogEntry(CH1_DealerJob,"Baal Isidro mi předal dávku lodyh drogy. Pokud všechnu drogu prodám, dá mi polovinu zisku, což činí 200 nugetů.");
 
 		//Itemübergabe
 		CreateInvItems(self,itmijoint_1, 40);
@@ -357,7 +357,7 @@ func void DIA_BaalIsidro_ThinkAgain_Info()
 // 					RUNNING / SUCCESS
 // ************************************************************
 
-instance DIA_BaalIsidro_RUNNING(C_INFO) 
+instance DIA_BaalIsidro_RUNNING(C_INFO)
 {
 	npc = Nov_1333_BaalIsidro;
 	nr = 1;
@@ -367,7 +367,7 @@ instance DIA_BaalIsidro_RUNNING(C_INFO)
 //	description = "I've sold the weed. Here's your 200 ore.";
 //	description = "Ich hab' das Kraut verkauft. Hier sind deine 200 Erz.";
 	description = "Prodal jsem tu drogu. Tady je tvých 200 nugetů.";
-};                       
+};
 
 func int DIA_BaalIsidro_RUNNING_Condition()
 {
@@ -378,7 +378,7 @@ func int DIA_BaalIsidro_RUNNING_Condition()
 };
 
 func void DIA_BaalIsidro_RUNNING_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_BaalIsidro_RUNNING_15_00"); //I've sold the weed.
 //	AI_Output(other,self,"DIA_BaalIsidro_RUNNING_15_00"); //Ich hab' das Kraut verkauft.
 	AI_Output(other,self,"DIA_BaalIsidro_RUNNING_15_00"); //Prodal jsem tu drogu.
@@ -402,9 +402,9 @@ func void DIA_BaalIsidro_RUNNING_Info()
 		BaalIsidro_DealerJob = LOG_SUCCESS;
 
 		Log_SetTopicStatus(CH1_DealerJob,LOG_SUCCESS);
-//		B_LogEntry(CH1_DealerJob,"Baal Isidro was relieved to get his 200 ore."); 
-//		B_LogEntry(CH1_DealerJob,"Baal Isidro war erleichtert seine 200 Erz zu bekommen."); 
-		B_LogEntry(CH1_DealerJob,"Baal Isidro se nemusel namáhat, aby dostal svých 200 nugetů."); 
+//		B_LogEntry(CH1_DealerJob,"Baal Isidro was relieved to get his 200 ore.");
+//		B_LogEntry(CH1_DealerJob,"Baal Isidro war erleichtert seine 200 Erz zu bekommen.");
+		B_LogEntry(CH1_DealerJob,"Baal Isidro se nemusel namáhat, aby dostal svých 200 nugetů.");
 		B_GiveXP(XP_BaalIsidroPayShare);
 	}
 	else

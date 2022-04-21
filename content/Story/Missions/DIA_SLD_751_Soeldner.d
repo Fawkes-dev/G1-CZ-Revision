@@ -110,7 +110,7 @@ func int DIA_SLD_751_Soeldner_UMSEHEN_CONDITION()
 };
 
 func void DIA_SLD_751_Soeldner_UMSEHEN_INFO()
-{  
+{
 //	AI_Output(other,self,"DIA_SLD_751_Soeldner_UMSEHEN_INFO_15_01"); //I just want to have a look around here.
 //	AI_Output(other,self,"DIA_SLD_751_Soeldner_UMSEHEN_INFO_15_01"); //Ich will mich hier nur mal umsehen.
 	AI_Output(other,self,"DIA_SLD_751_Soeldner_UMSEHEN_INFO_15_01"); //Chci se tu jen porozhlédnout.

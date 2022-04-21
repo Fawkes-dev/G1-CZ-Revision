@@ -1,5 +1,5 @@
 // **************************************
-//					EXIT 
+//					EXIT
 // **************************************
 
 instance DIA_GRD_245_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_GRD_245_Exit(C_INFO)
 	information = DIA_GRD_245_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_GRD_245_Exit_Condition()
 {
@@ -36,7 +36,7 @@ instance DIA_GRD_245_Hello(C_INFO)
 //	description = "What's in this house?";
 //	description = "Was ist in diesem Haus?";
 	description = "Co je v tom domě?";
-};                       
+};
 
 func int DIA_GRD_245_Hello_Condition()
 {

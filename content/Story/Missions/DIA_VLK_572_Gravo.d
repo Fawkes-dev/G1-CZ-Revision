@@ -109,8 +109,6 @@ func void DIA_Gravo_HelpHow_Info()
 
 //	B_LogEntry(GE_TraderOC,"The digger Gravo is selling a special kind of service. If I get in trouble with important people in the Camp, I can pay him to settle it.");
 //	B_LogEntry(GE_TraderOC,"Der Buddler Gravo verkauft eine Dienstleistung besonderer Art. Wenn ich es mir bei wichtigen Leuten im Alten Lager verscherzt habe, kann ich ihn bezahlen, um den Streit beizulegen.");
-	//#Bugfix Log_CreateTopic added
-	Log_CreateTopic (GE_TraderOC,LOG_NOTE);
 	B_LogEntry(GE_TraderOC,"Kopáč Gravo poskytuje zvláštní služby. Pokud se v táboře dostanu do konfliktu s důležitými lidmi, můžu mu zaplatit za to, že vše urovná.");
 };
 

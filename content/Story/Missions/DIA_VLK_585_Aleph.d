@@ -386,8 +386,6 @@ instance VLK_585_Aleph_DIRTY(C_INFO)
 func int VLK_585_Aleph_DIRTY_Condition()
 {
 	if (Npc_KnowsInfo(hero,GRD_271_ULBERT_DRUNK)) && (Npc_KnowsInfo(hero,GRD_261_Brandick_ALEPH))
-	//#Bugfix this dialog should not be available if player already got key from Aleph in dialog VLK_585_Aleph_SCHUPPEN
-	&& (!Npc_KnowsInfo (hero, VLK_585_Aleph_SCHUPPEN))
 	{
 		return 1;
 	};

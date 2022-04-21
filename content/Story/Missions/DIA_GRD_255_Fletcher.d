@@ -195,13 +195,8 @@ func void DIA_Fletcher_WoNek_Info()
 //	AI_Output(self,other,"DIA_Fletcher_WoNek_06_03"); //Vor allem nicht jetzt, denn sie wissen, dass ich diese Drecksarbeit hier verabscheue, und insgeheim lachen sie sich über mich tot!
 	AI_Output(self,other,"DIA_Fletcher_WoNek_06_03"); //Obzvlášť ne teď, když vědí, jak já tuhle špinavou práci nenávidím. Vsadím se, že se mi vysmívají za zádama.
 
-	//BugFix: tento dialog znovu otvoril quest o Nekovi, pridana podmienka, checkujuca ci je quest uzatvoreny
-	//Log_CreateTopic(CH1_LostNek,LOG_MISSION);
-	//Log_SetTopicStatus(CH1_LostNek,LOG_RUNNING);
-	if (Sly_LostNek != LOG_SUCCESS) {
-		Log_CreateTopic(CH1_LostNek,LOG_MISSION);
-		Log_SetTopicStatus(CH1_LostNek,LOG_RUNNING);
-	};
+	Log_CreateTopic(CH1_LostNek,LOG_MISSION);
+	Log_SetTopicStatus(CH1_LostNek,LOG_RUNNING);
 //	B_LogEntry(CH1_LostNek,"Maybe the diggers in the arena district know where Nek disappeared to.");
 //	B_LogEntry(CH1_LostNek,"Die Buddler im Arenaviertel wissen vielleicht, wohin Nek verschwunden ist.");
 	B_LogEntry(CH1_LostNek,"Možná budou kopáči kolem arény vědět, kam zmizel Nek.");

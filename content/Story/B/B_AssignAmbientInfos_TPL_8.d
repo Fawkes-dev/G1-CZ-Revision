@@ -36,7 +36,9 @@ instance Info_Tpl_8_EinerVonEuchWerden(C_INFO) // E1
 	condition = Info_Tpl_8_EinerVonEuchWerden_Condition;
 	information = Info_Tpl_8_EinerVonEuchWerden_Info;
 	permanent = 1;
-	description = "Do you need another good man?";
+//	description = "Do you need another good man?";
+//	description = "Könnt ihr noch einen guten Mann brauchen?";
+	description = "Potřebujete spolehlivého muže?";
 };
 
 func int Info_Tpl_8_EinerVonEuchWerden_Condition()
@@ -51,9 +53,15 @@ func int Info_Tpl_8_EinerVonEuchWerden_Condition()
 
 func void Info_Tpl_8_EinerVonEuchWerden_Info()
 {
-	AI_Output(other,self,"Info_Tpl_8_EinerVonEuchWerden_15_00"); //Do you need another good man?
-	AI_Output(self,other,"Info_Tpl_8_EinerVonEuchWerden_08_01"); //We're always looking for good men. But you will have to work hard to improve yourself. Only advanced novices may become templars.
-	AI_Output(self,other,"Info_Tpl_8_EinerVonEuchWerden_08_02"); //It is the greatest honor for any follower of the Brotherhood of the Sleeper.
+//	AI_Output(other,self,"Info_Tpl_8_EinerVonEuchWerden_15_00"); //Do you need another good man?
+//	AI_Output(other,self,"Info_Tpl_8_EinerVonEuchWerden_15_00"); //Könnt ihr noch einen guten Mann brauchen?
+	AI_Output(other,self,"Info_Tpl_8_EinerVonEuchWerden_15_00"); //Potřebujete spolehlivého muže?
+//	AI_Output(self,other,"Info_Tpl_8_EinerVonEuchWerden_08_01"); //We're always looking for good men. But you will have to work hard to improve yourself. Only advanced novices may become templars.
+//	AI_Output(self,other,"Info_Tpl_8_EinerVonEuchWerden_08_01"); //Gute Leute suchen wir immer. Aber du wirst hart an dir arbeiten müssen. Erst ein fortgeschrittener Novize kann zum Templer befördert werden.
+	AI_Output(self,other,"Info_Tpl_8_EinerVonEuchWerden_08_01"); //Pořád hledáme spolehlivé muže. Musíš ale tvrdě pracovat, aby ses zdokonalil. Jen zkušení novicové se mohou stát templáři.
+//	AI_Output(self,other,"Info_Tpl_8_EinerVonEuchWerden_08_02"); //It is the greatest honor for any follower of the Brotherhood of the Sleeper.
+//	AI_Output(self,other,"Info_Tpl_8_EinerVonEuchWerden_08_02"); //Es ist die höchste Ehre für einen Anhänger der Bruderschaft des Schläfers.
+	AI_Output(self,other,"Info_Tpl_8_EinerVonEuchWerden_08_02"); //To je ta největší pocta pro všechny následovníky Spáčova Bratrstva.
 };
 
 // *************************************************************************
@@ -66,7 +74,9 @@ instance Info_Tpl_8_WichtigePersonen(C_INFO)
 	condition = Info_Tpl_8_WichtigePersonen_Condition;
 	information = Info_Tpl_8_WichtigePersonen_Info;
 	permanent = 1;
-	description = "Who calls the shots around here?";
+//	description = "Who calls the shots around here?";
+//	description = "Wer hat hier das Sagen?";
+	description = "Kdo to tady vede?";
 };
 
 func int Info_Tpl_8_WichtigePersonen_Condition()
@@ -76,10 +86,18 @@ func int Info_Tpl_8_WichtigePersonen_Condition()
 
 func void Info_Tpl_8_WichtigePersonen_Info()
 {
-	AI_Output(other,self,"Info_Tpl_8_WichtigePersonen_15_00"); //Who calls the shots around here?
-	AI_Output(self,other,"Info_Tpl_8_WichtigePersonen_08_01"); //We do what the Gurus command. It is our duty to serve them.
-	AI_Output(other,self,"Info_Tpl_8_WichtigePersonen_15_02"); //Who are these Gurus?
-	AI_Output(self,other,"Info_Tpl_8_WichtigePersonen_08_03"); //Y'Berion the Enlightened One is the head Guru. Below him are Cor Kalom and Cor Angar and a few others.
+//	AI_Output(other,self,"Info_Tpl_8_WichtigePersonen_15_00"); //Who calls the shots around here?
+//	AI_Output(other,self,"Info_Tpl_8_WichtigePersonen_15_00"); //Wer hat hier das Sagen?
+	AI_Output(other,self,"Info_Tpl_8_WichtigePersonen_15_00"); //Kdo tady má velení?
+//	AI_Output(self,other,"Info_Tpl_8_WichtigePersonen_08_01"); //We do what the Gurus command. It is our duty to serve them.
+//	AI_Output(self,other,"Info_Tpl_8_WichtigePersonen_08_01"); //Wir tun alles, was uns die Gurus sagen. Es ist unsere Pflicht, ihnen zu dienen.
+	AI_Output(self,other,"Info_Tpl_8_WichtigePersonen_08_01"); //Děláme to, co řeknou Guru. Sloužit jim je naše povinnost.
+//	AI_Output(other,self,"Info_Tpl_8_WichtigePersonen_15_02"); //Who are these Gurus?
+//	AI_Output(other,self,"Info_Tpl_8_WichtigePersonen_15_02"); //Wer sind eure Gurus?
+	AI_Output(other,self,"Info_Tpl_8_WichtigePersonen_15_02"); //Kdo jsou ti Guru?
+//	AI_Output(self,other,"Info_Tpl_8_WichtigePersonen_08_03"); //Y'Berion the Enlightened One is the head Guru. Below him are Cor Kalom and Cor Angar and a few others.
+//	AI_Output(self,other,"Info_Tpl_8_WichtigePersonen_08_03"); //Y'Berion der Erleuchtete ist der Oberste Guru. Unter ihm folgen Cor Kalom und Cor Angar und noch einige weitere.
+	AI_Output(self,other,"Info_Tpl_8_WichtigePersonen_08_03"); //Y´Berion Osvícený je hlavou Guru. Pod ním jsou Cor Kalom a další.
 	var C_NPC YBerion; YBerion = Hlp_GetNpc(Gur_1200_Yberion);
 	var C_NPC CorKalom; CorKalom= Hlp_GetNpc(Gur_1201_CorKalom);
 	var C_NPC CorAngar; CorAngar= Hlp_GetNpc(Gur_1202_CorAngar);
@@ -98,7 +116,9 @@ instance Info_Tpl_8_DasLager(C_INFO)
 	condition = Info_Tpl_8_DasLager_Condition;
 	information = Info_Tpl_8_DasLager_Info;
 	permanent = 1;
-	description = "What can you tell me about this camp?";
+//	description = "What can you tell me about this camp?";
+//	description = "Was kannst du mir über dieses Lager erzählen?";
+	description = "Co mi můžeš říci o táboře?";
 };
 
 func int Info_Tpl_8_DasLager_Condition()
@@ -111,9 +131,15 @@ func int Info_Tpl_8_DasLager_Condition()
 
 func void Info_Tpl_8_DasLager_Info()
 {
-	AI_Output(other,self,"Info_Tpl_8_DasLager_15_00"); //What can you tell me about this camp?
-	AI_Output(self,other,"Info_Tpl_8_DasLager_08_01"); //As a newcomer you may walk practically wherever you choose. But infidels cannot be allowed to enter the Sleeper's temple.
-	AI_Output(self,other,"Info_Tpl_8_DasLager_08_02"); //So only go where you are permitted to go. And do not disturb our masters in their meditation.
+//	AI_Output(other,self,"Info_Tpl_8_DasLager_15_00"); //What can you tell me about this camp?
+//	AI_Output(other,self,"Info_Tpl_8_DasLager_15_00"); //Was kannst du mir über dieses Lager erzählen?
+	AI_Output(other,self,"Info_Tpl_8_DasLager_15_00"); //Co mi můžeš říci o táboru?
+//	AI_Output(self,other,"Info_Tpl_8_DasLager_08_01"); //As a newcomer you may walk practically wherever you choose. But infidels cannot be allowed to enter the Sleeper's temple.
+//	AI_Output(self,other,"Info_Tpl_8_DasLager_08_01"); //Als Neuling darfst du dich fast überall aufhalten. Aber es ist Ungläubigen untersagt, den Tempel des Schläfers zu betreten.
+	AI_Output(self,other,"Info_Tpl_8_DasLager_08_01"); //Jako nový příchozí můžeš jít v podstatě kam chceš. Nevěrcům však není povolen vstup do Spáčova chrámu.
+//	AI_Output(self,other,"Info_Tpl_8_DasLager_08_02"); //So only go where you are permitted to go. And do not disturb our masters in their meditation.
+//	AI_Output(self,other,"Info_Tpl_8_DasLager_08_02"); //Also halt dich nur da auf, wo es dir gestattet ist. Und störe nicht unsere Meister bei der Meditation.
+	AI_Output(self,other,"Info_Tpl_8_DasLager_08_02"); //Takže choď jen tam, kam smíš. A také nevyrušuj naše pány při meditacích.
 };
 
 // *************************************************************************
@@ -126,7 +152,9 @@ instance Info_Tpl_8_DieLage(C_INFO) // E1
 	condition = Info_Tpl_8_DieLage_Condition;
 	information = Info_Tpl_8_DieLage_Info;
 	permanent = 1;
-	description = "How are you doing?";
+//	description = "How are you doing?";
+//	description = "Wie sieht's aus?";
+	description = "Jak to jde?";
 };
 
 func int Info_Tpl_8_DieLage_Condition()
@@ -139,8 +167,12 @@ func int Info_Tpl_8_DieLage_Condition()
 
 func void Info_Tpl_8_DieLage_Info()
 {
-	AI_Output(other,self,"Info_Tpl_8_DieLage_15_00"); //How are you doing?
-	AI_Output(self,other,"Info_Tpl_8_DieLage_08_01"); //I am warning you. Do not be disrespectful. You are talking to one of the chosen guards of the prophets.
+//	AI_Output(other,self,"Info_Tpl_8_DieLage_15_00"); //How are you doing?
+//	AI_Output(other,self,"Info_Tpl_8_DieLage_15_00"); //Wie sieht's aus?
+	AI_Output(other,self,"Info_Tpl_8_DieLage_15_00"); //Jak se máš?
+//	AI_Output(self,other,"Info_Tpl_8_DieLage_08_01"); //I am warning you. Do not be disrespectful. You are talking to one of the chosen guards of the prophets.
+//	AI_Output(self,other,"Info_Tpl_8_DieLage_08_01"); //Ich warne dich. Sei nicht respektlos. Du redest mit einem Auserwählten Beschützer der Propheten.
+	AI_Output(self,other,"Info_Tpl_8_DieLage_08_01"); //Varuji tě. Nebuď nezdvořilý. Mluvíš s jedním z vyvolených prorokových strážců.
 };
 
 // *************************************************************************

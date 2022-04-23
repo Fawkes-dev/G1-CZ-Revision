@@ -827,13 +827,13 @@ func void Info_Diego_Teach_Info()
 	Info_ClearChoices(Info_Diego_Teach);
 //	Info_AddChoice(Info_Diego_Teach,"DIALOG_BACK ",Info_Diego_Teach_BACK);
 	Info_AddChoice(Info_Diego_Teach,DIALOG_BACK ,Info_Diego_Teach_BACK);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0) ",Info_Diego_Teach_STR_5);
+//	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_5);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_5);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0) ",Info_Diego_Teach_STR_1);
+//	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_1);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_1);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)",Info_Diego_Teach_DEX_5);
+//	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_5);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_5);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)",Info_Diego_Teach_DEX_1);
+//	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_1);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_1);
 
 };
@@ -864,13 +864,13 @@ func void Info_Diego_Teach_STR_1()
 	Info_ClearChoices(Info_Diego_Teach);
 //	Info_AddChoice(Info_Diego_Teach,"DIALOG_BACK ",Info_Diego_Teach_BACK);
 	Info_AddChoice(Info_Diego_Teach,DIALOG_BACK ,Info_Diego_Teach_BACK);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0) ",Info_Diego_Teach_STR_5);
+//	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_5);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_5 ,5*LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_5);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0) ",Info_Diego_Teach_STR_1);
+//	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_1);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_1);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)",Info_Diego_Teach_DEX_5);
+//	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_5);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_5);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)",Info_Diego_Teach_DEX_1);
+//	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_1);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_1);
 };
 
@@ -880,13 +880,13 @@ func void Info_Diego_Teach_STR_5()
 	Info_ClearChoices(Info_Diego_Teach);
 //	Info_AddChoice(Info_Diego_Teach,"DIALOG_BACK ",Info_Diego_Teach_BACK);
 	Info_AddChoice(Info_Diego_Teach,DIALOG_BACK ,Info_Diego_Teach_BACK);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0) ",Info_Diego_Teach_STR_5);
+//	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_5);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_5);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0) ",Info_Diego_Teach_STR_1);
+//	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_1);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_1);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)",Info_Diego_Teach_DEX_5);
+//	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_5);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_5);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)",Info_Diego_Teach_DEX_1);
+//	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_1);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_1);
 };
 
@@ -896,13 +896,13 @@ func void Info_Diego_Teach_DEX_1()
 	Info_ClearChoices(Info_Diego_Teach);
 //	Info_AddChoice(Info_Diego_Teach,"DIALOG_BACK ",Info_Diego_Teach_BACK);
 	Info_AddChoice(Info_Diego_Teach,DIALOG_BACK ,Info_Diego_Teach_BACK);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0) ",Info_Diego_Teach_STR_5);
+//	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_5);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_5);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0) ",Info_Diego_Teach_STR_1);
+//	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_1);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_1);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)",Info_Diego_Teach_DEX_5);
+//	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_5);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_5);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)",Info_Diego_Teach_DEX_1);
+//	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_1);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_1);
 };
 
@@ -912,13 +912,13 @@ func void Info_Diego_Teach_DEX_5()
 	Info_ClearChoices(Info_Diego_Teach);
 //	Info_AddChoice(Info_Diego_Teach,"DIALOG_BACK ",Info_Diego_Teach_BACK);
 	Info_AddChoice(Info_Diego_Teach,DIALOG_BACK ,Info_Diego_Teach_BACK);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0) ",Info_Diego_Teach_STR_5);
+//	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_5);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_5,5*LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_5);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0) ",Info_Diego_Teach_STR_1);
+//	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_1);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnStrength_1,LPCOST_ATTRIBUTE_STRENGTH,0),Info_Diego_Teach_STR_1);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0)",Info_Diego_Teach_DEX_5);
+//	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_5);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5*LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_5);
-//	Info_AddChoice(Info_Diego_Teach,"B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0)",Info_Diego_Teach_DEX_1);
+//	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_1);
 	Info_AddChoice(Info_Diego_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),Info_Diego_Teach_DEX_1);
 };
 

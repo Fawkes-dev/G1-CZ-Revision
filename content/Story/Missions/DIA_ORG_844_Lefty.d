@@ -1,5 +1,5 @@
 // **************************************
-//					EXIT 
+//					EXIT
 // **************************************
 
 instance DIA_Lefty_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Lefty_Exit(C_INFO)
 	information = DIA_Lefty_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Lefty_Exit_Condition()
 {
@@ -36,7 +36,7 @@ instance DIA_Lefty_FirstAtNight(C_INFO)
 //	description = "What are you doing here?";
 //	description = "Was machst du hier?";
 	description = "Co tady děláš?";
-};                       
+};
 
 func int DIA_Lefty_FirstAtNight_Condition()
 {
@@ -76,7 +76,7 @@ instance DIA_Lefty_First(C_INFO)
 	information = DIA_Lefty_First_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Lefty_First_Condition()
 {
@@ -119,7 +119,7 @@ func void DIA_Lefty_First_Yes()
 //	AI_Output(other,self,"DIA_Lefty_First_Yes_15_00"); //Sure, I'll be glad to help.
 //	AI_Output(other,self,"DIA_Lefty_First_Yes_15_00"); //Klar, ich helfe gern.
 	AI_Output(other,self,"DIA_Lefty_First_Yes_15_00"); //Jistě, rád pomůžu.
-//	AI_Output(self,other,"DIA_Lefty_First_Yes_07_01"); //Great! Go to the Rice Lord. He'll give you the water and tell you everything you need to know. 
+//	AI_Output(self,other,"DIA_Lefty_First_Yes_07_01"); //Great! Go to the Rice Lord. He'll give you the water and tell you everything you need to know.
 //	AI_Output(self,other,"DIA_Lefty_First_Yes_07_01"); //Gut! Geh zum Reislord. Er gibt dir das Wasser und erzählt dir alles andere.
 	AI_Output(self,other,"DIA_Lefty_First_Yes_07_01"); //Výborně! Jdi za Rýžovým Lordem. Dá ti vodu a řekne všechno, co je potřeba udělat.
 	Lefty_WorkDay = B_SetDayTolerance();
@@ -176,13 +176,13 @@ instance DIA_Lefty_WorkDay(C_INFO)
 	information = DIA_Lefty_WorkDay_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_Lefty_WorkDay_Condition()
 {
 	if (Wld_IsTime(08,00,19,00) || (Lefty_Mission == LOG_SUCCESS)) // wenn Wasser verteilt, dann auch abends am Lagerfeuer!
 	&& (self.aivar[AIV_WASDEFEATEDBYSC]==FALSE)
-	&& ((Lefty_WorkDay <= Wld_GetDay()-1) || (Lefty_Mission == LOG_SUCCESS)) // wenn Wasser verteilt, dann auch noch am selben Tag! 
+	&& ((Lefty_WorkDay <= Wld_GetDay()-1) || (Lefty_Mission == LOG_SUCCESS)) // wenn Wasser verteilt, dann auch noch am selben Tag!
 	{
 		return 1;
 	};
@@ -267,7 +267,7 @@ instance DIA_Lefty_NeverAgain(C_INFO)
 //	description = "From now on you can carry the water yourself.";
 //	description = "Du kannst dein Wasser ab jetzt selbst bringen.";
 	description = "Od teďka si můžeš tu vodu nosit sám.";
-};                       
+};
 
 func int DIA_Lefty_NeverAgain_Condition()
 {
@@ -292,7 +292,7 @@ func void DIA_Lefty_NeverAgain_Info()
 	AI_StopProcessInfos(self);
 	Npc_SetTarget(self,other);
 	AI_StartState(self,ZS_ATTACK, 1, "");
-}; 
+};
 
 // **************************************
 //				PERM
@@ -309,11 +309,11 @@ instance DIA_Lefty_PERM(C_INFO)
 //	description = "How are you, my friend?";
 //	description = "Na, mein Freund?";
 	description = "Jak se máš, příteli?";
-};                       
+};
 
 func int DIA_Lefty_PERM_Condition()
 {
-	if (self.aivar[AIV_WASDEFEATEDBYSC]==TRUE) 
+	if (self.aivar[AIV_WASDEFEATEDBYSC]==TRUE)
 	{
 		return 1;
 	};
@@ -349,7 +349,7 @@ func void DIA_Lefty_PERM_Info()
 //	Info_AddChoice(DIA_Lefty_PERM,"Ich hatte nen schlechten Tag und suche einen Ausgleich... Halt mal still.",DIA_Lefty_PERM_AufsMaul);
 	Info_AddChoice(DIA_Lefty_PERM,"Měl jsem vážně zlej den. Radím ti, abys mě neprovokoval a zůstal raději zticha.",DIA_Lefty_PERM_AufsMaul);
 
-}; 
+};
 
 func void DIA_Lefty_PERM_AufsMaul()
 {

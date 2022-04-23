@@ -8,7 +8,7 @@ instance KDF_401_Damarok_WELCOME(C_INFO)
 };
 
 func int KDF_401_Damarok_WELCOME_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,KDF_402_Corristo_ROBE))
 	&& (Npc_KnowsInfo(hero,KDF_403_Drago_RUNE))
 	&& (Npc_KnowsInfo(hero,KDF_405_Torrez_BOOK))
@@ -19,7 +19,6 @@ func int KDF_401_Damarok_WELCOME_Condition()
 };
 func void KDF_401_Damarok_WELCOME_Info()
 {
-
 	AI_GotoNpc(self,hero);
 //	AI_Output(self,other,"KDF_401_Damarok_WELCOME_Info_14_01"); //May the Fire always protect you!
 //	AI_Output(self,other,"KDF_401_Damarok_WELCOME_Info_14_01"); //Möge das Feuer dich allzeit beschützen!
@@ -37,10 +36,10 @@ instance KDF_401_Damarok_Exit(C_INFO)
 	nr = 999;
 	condition = KDF_401_Damarok_Exit_Condition;
 	information = KDF_401_Damarok_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int KDF_401_Damarok_Exit_Condition()
 {
@@ -62,7 +61,7 @@ instance KDF_401_Damarok_HEAL(C_INFO)
 };
 
 func int KDF_401_Damarok_HEAL_Condition()
-{ 
+{
 	if (Npc_GetTrueGuild(hero) == GIL_KDF)
 	&& (Npc_IsInRoutine  (self,Rtn_START_401))
 	{
@@ -86,13 +85,13 @@ instance KDF_401_Damarok_HEALINFO(C_INFO)
 	information = KDF_401_Damarok_HEALINFO_Info;
 	important = 0;
 	permanent = 1;
-//	description = "I'm injured. Can you heal me?"; 
-//	description = "Ich bin verletzt. Kannst du mich heilen?"; 
-	description = "Jsem zraněn. Dokážeš mě vyhojit?"; 
+//	description = "I'm injured. Can you heal me?";
+//	description = "Ich bin verletzt. Kannst du mich heilen?";
+	description = "Jsem zraněn. Dokážeš mě vyhojit?";
 };
 
 func int KDF_401_Damarok_HEALINFO_Condition()
-{ 
+{
 	if (hero.attribute[ATR_HITPOINTS] < (hero.attribute[ATR_HITPOINTS_MAX]))
 	&& (Npc_GetTrueGuild(hero) == GIL_KDF)
 	{
@@ -108,6 +107,6 @@ func void KDF_401_Damarok_HEALINFO_Info()
 //	AI_Output(self,other,"KDF_401_Damarok_HEALINFO_Info_14_02"); //The body heals, the spirit grows clear.
 //	AI_Output(self,other,"KDF_401_Damarok_HEALINFO_Info_14_02"); //Der Körper gesundet, der Geist wird klar.
 	AI_Output(self,other,"KDF_401_Damarok_HEALINFO_Info_14_02"); //Tělo se hojí, duše vyjasňuje.
-	Snd_Play("MFX_Heal_Cast"); 
+	Snd_Play("MFX_Heal_Cast");
 	hero.attribute [ATR_HITPOINTS] = hero.attribute [ATR_HITPOINTS_MAX];
-};  
+};

@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_STT_331_Fingers_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_STT_331_Fingers_Exit(C_INFO)
 	information = DIA_STT_331_Fingers_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_STT_331_Fingers_Exit_Condition()
 {
@@ -35,13 +35,13 @@ instance DIA_Fingers_BecomeShadow(C_INFO)
 	condition = DIA_Fingers_BecomeShadow_Condition;
 	information = DIA_Fingers_BecomeShadow_Info;
 	permanent = 1;
-//	description = "I want to become a Shadow!"; 
-//	description = "Ich will Schatten werden!"; 
-	description = "Chci se stát Stínem!"; 
+//	description = "I want to become a Shadow!";
+//	description = "Ich will Schatten werden!";
+	description = "Chci se stát Stínem!";
 };
 
 func int DIA_Fingers_BecomeShadow_Condition()
-{ 
+{
 	if ((Fingers_CanTeach == FALSE))
 	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
 	{
@@ -131,16 +131,16 @@ instance DIA_Fingers_Lehrer(C_INFO)
 	condition = DIA_Fingers_Lehrer_Condition;
 	information = DIA_Fingers_Lehrer_Info;
 	permanent = 1;
-//	description = "What can you teach me?"; 
-//	description = "Was kannst du mir beibringen?"; 
-	description = "Co mě můžeš naučit?"; 
+//	description = "What can you teach me?";
+//	description = "Was kannst du mir beibringen?";
+	description = "Co mě můžeš naučit?";
 };
 
 func int DIA_Fingers_Lehrer_Condition()
-{ 
+{
 	if (Fingers_CanTeach == TRUE)
 	{
-		return 1; 
+		return 1;
 	};
 };
 
@@ -208,7 +208,7 @@ func void DIA_Fingers_Lehrer_Lockpick2()
 	{
 //		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick2_05_01"); //Only when you've gained some experience can you tell when a lockpick is going to break. It makes a different sound!
 //		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick2_05_01"); //Nur wer schon einige Übung hat, merkt genau, wann ihm ein Dietrich abbricht und wann nicht. Du erkennst es am Geräusch!
-		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick2_05_01"); //Až když získáš nějaké zkušenosti odhadneš, kdy se paklíč zlomí. Poznáš to podle zvuku! 
+		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick2_05_01"); //Až když získáš nějaké zkušenosti odhadneš, kdy se paklíč zlomí. Poznáš to podle zvuku!
 //		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick2_05_02"); //I think you have it. Learn to listen for the gentle clicking of the lock and you won't lose so many lockpicks in future.
 //		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick2_05_02"); //Ich denke, du bist jetzt so weit - lerne, auf das leise Klicken des Schlosses zu achten, und du wirst nur noch selten das Pech haben, einen Dietrich zu verlieren.
 		AI_Output(self,other,"DIA_Fingers_Lehrer_Lockpick2_05_02"); //Myslím, že to máš. Nauč se dávat pozor na jemné cvaknutí v zámku, pak už nebudeš přicházet o tolik paklíčů.
@@ -256,7 +256,7 @@ func void DIA_Fingers_Lehrer_Pickpocket2()
 	AI_Output(other,self,"DIA_Fingers_Lehrer_Pickpocket2_15_00"); //Chci se stát kapsářským odborníkem!
 
 	if (B_GiveSkill(other,NPC_TALENT_PICKPOCKET, 2, LPCOST_TALENT_PICKPOCKET_2))
-	{ 
+	{
 //		AI_Output(self,other,"DIA_Fingers_Lehrer_Pickpocket2_05_01"); //I think you've progressed far enough to be taught the final tricks of the trade.
 //		AI_Output(self,other,"DIA_Fingers_Lehrer_Pickpocket2_05_01"); //Ich denke, du bist gut genug, um in die letzten Geheimnisse eingeweiht zu werden.
 		AI_Output(self,other,"DIA_Fingers_Lehrer_Pickpocket2_05_01"); //Myslím, že jsi dostatečně dobrý na to, abych tě zasvětil do posledních tajemtví řemesla.
@@ -285,13 +285,13 @@ instance DIA_Fingers_WhereCavalorn(C_INFO)
 	condition = DIA_Fingers_WhereCavalorn_Condition;
 	information = DIA_Fingers_WhereCavalorn_Info;
 	permanent = 1;
-//	description = "Where can I find Cavalorn?"; 
-//	description = "Wo finde ich Cavalorn?"; 
-	description = "Kde najdu Cavalorna?"; 
+//	description = "Where can I find Cavalorn?";
+//	description = "Wo finde ich Cavalorn?";
+	description = "Kde najdu Cavalorna?";
 };
 
 func int DIA_Fingers_WhereCavalorn_Condition()
-{ 
+{
 	if (Fingers_Wherecavalorn == TRUE)
 	{
 		return 1;
@@ -328,13 +328,13 @@ instance DIA_Fingers_Learnt(C_INFO)
 	condition = DIA_Fingers_Learnt_Condition;
 	information = DIA_Fingers_Learnt_Info;
 	permanent = 1;
-//	description = "You wouldn't speak up for me in front of Diego, would you?"; 
-//	description = "Du würdest nicht zufällig bei Diego ein gutes Wort für mich einlegen?"; 
-	description = "Nepřimluvil by ses za mě u Diega?"; 
+//	description = "You wouldn't speak up for me in front of Diego, would you?";
+//	description = "Du würdest nicht zufällig bei Diego ein gutes Wort für mich einlegen?";
+	description = "Nepřimluvil by ses za mě u Diega?";
 };
 
 func int DIA_Fingers_Learnt_Condition()
-{ 
+{
 	if ((Fingers_Learnt != LOG_SUCCESS))
 	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
 	{

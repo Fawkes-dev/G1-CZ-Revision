@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Scatty_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Scatty_Exit(C_INFO)
 	information = DIA_Scatty_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Scatty_Exit_Condition()
 {
@@ -23,7 +23,7 @@ func void DIA_Scatty_Exit_Info()
 };
 
 // **************************************************
-// 					 Was machst du hier 
+// 					 Was machst du hier
 // **************************************************
 
 instance DIA_Scatty_WhatDoYouDo(C_INFO)
@@ -36,7 +36,7 @@ instance DIA_Scatty_WhatDoYouDo(C_INFO)
 //	description = "What's your job here?";
 //	description = "Was machst du hier?";
 	description = "Co je tvá práce?";
-};                       
+};
 
 func int DIA_Scatty_WhatDoYouDo_Condition()
 {
@@ -71,7 +71,7 @@ instance DIA_Scatty_JoinOC(C_INFO)
 //	description = "I want to join the Camp. Can you help me?";
 //	description = "Ich will mich dem Lager anschließen. Kannst du mir dabei helfen?";
 	description = "Chci se přidat k táboru. Můžeš mi s tím pomoci?";
-};                       
+};
 
 func int DIA_Scatty_JoinOC_Condition()
 {
@@ -126,11 +126,11 @@ instance DIA_Scatty_KirgoSuccess(C_INFO)
 //	description = "I fought Kirgo!";
 //	description = "Ich habe gegen Kirgo gekämpft!";
 	description = "Bojoval jsem s Kirgem!";
-};                       
+};
 
 func int DIA_Scatty_KirgoSuccess_Condition()
 {
-	var C_NPC Kirgo; Kirgo = Hlp_GetNpc(Grd_251_Kirgo); 
+	var C_NPC Kirgo; Kirgo = Hlp_GetNpc(Grd_251_Kirgo);
 
 	if ((Scatty_ChargeKirgo == LOG_RUNNING) && (Kirgo_Charged == TRUE) && ((Kirgo.aivar[AIV_WASDEFEATEDBYSC] == TRUE) || (Kirgo.aivar[AIV_HASDEFEATEDSC] == TRUE)))
 	{
@@ -140,7 +140,7 @@ func int DIA_Scatty_KirgoSuccess_Condition()
 
 func void DIA_Scatty_KirgoSuccess_Info()
 {
-	var C_NPC Kirgo; Kirgo = Hlp_GetNpc(Grd_251_Kirgo); 
+	var C_NPC Kirgo; Kirgo = Hlp_GetNpc(Grd_251_Kirgo);
 
 //	AI_Output(other,self,"DIA_Scatty_KirgoSuccess_15_00"); //I fought Kirgo!
 //	AI_Output(other,self,"DIA_Scatty_KirgoSuccess_15_00"); //Ich habe gegen Kirgo gekämpft!
@@ -187,11 +187,11 @@ instance DIA_Scatty_KHARIMSuccess(C_INFO)
 //	description = "I challenged Kharim!";
 //	description = "Ich bin gegen Kharim angetreten!";
 	description = "Vyzval jsem Kharima!";
-};                       
+};
 
 func int DIA_Scatty_KHARIMSuccess_Condition()
 {
-	var C_NPC KHARIM; KHARIM = Hlp_GetNpc(Sld_729_Kharim); 
+	var C_NPC KHARIM; KHARIM = Hlp_GetNpc(Sld_729_Kharim);
 
 	if ((Scatty_ChargeKHARIM == LOG_RUNNING) && (Kharim_Charged == TRUE) && ((KHARIM.aivar[AIV_WASDEFEATEDBYSC] == TRUE) || (KHARIM.aivar[AIV_HASDEFEATEDSC] == TRUE)))
 	{
@@ -201,7 +201,7 @@ func int DIA_Scatty_KHARIMSuccess_Condition()
 
 func void DIA_Scatty_KHARIMSuccess_Info()
 {
-	var C_NPC KHARIM; KHARIM = Hlp_GetNpc(Sld_729_Kharim); 
+	var C_NPC KHARIM; KHARIM = Hlp_GetNpc(Sld_729_Kharim);
 
 //	AI_Output(other,self,"DIA_Scatty_KHARIMSuccess_15_00"); //I challenged Kharim!
 //	AI_Output(other,self,"DIA_Scatty_KHARIMSuccess_15_00"); //Ich bin gegen Kharim angetreten!
@@ -259,7 +259,7 @@ instance DIA_Scatty_OtherCamps(C_INFO)
 //	description = "Wieso lasst ihr die Leute aus den anderen Lagern hier kämpfen?";
 	//#NEEDS_ATTENTION - neprebasnime?
 	description = "Proč necháváš lidi z jiných táborů, aby se tady bili?";
-};                       
+};
 
 func int DIA_Scatty_OtherCamps_Condition()
 {
@@ -300,7 +300,7 @@ instance DIA_Scatty_WannaBet(C_INFO)
 //	description = "I want to place a bet.";
 //	description = "Ich will wetten!";
 	description = "Chci uzavřít sázku.";
-};                       
+};
 
 func int DIA_Scatty_WannaBet_Condition()
 {
@@ -338,7 +338,7 @@ instance DIA_Scatty_WannaFight(C_INFO)
 //	description = "I want to fight in the arena!";
 //	description = "Ich will in der Arena kämpfen!";
 	description = "Chci bojovat v aréně!";
-};                       
+};
 
 func int DIA_Scatty_WannaFight_Condition()
 {
@@ -377,7 +377,7 @@ instance DIA_Scatty_TRAIN(C_INFO)
 //	description = "Do you train fighters at all?";
 //	description = "Trainierst du auch Kämpfer?";
 	description = "Cvičíš vůbec bojovníky?";
-};                       
+};
 
 func int DIA_Scatty_TRAIN_Condition()
 {
@@ -406,11 +406,11 @@ func void DIA_Scatty_TRAIN_Info()
 
 	Info_ClearChoices(DIA_Scatty_TRAIN);
 	Info_AddChoice(DIA_Scatty_TRAIN,DIALOG_BACK ,DIA_Scatty_TRAIN_BACK);
-	if (Npc_GetTalentSkill(hero,NPC_TALENT_1H) == 1) 
+	if (Npc_GetTalentSkill(hero,NPC_TALENT_1H) == 1)
 	{
 		Info_AddChoice(DIA_Scatty_TRAIN,B_BuildLearnString(NAME_Learn1h_2, LPCOST_TALENT_1H_2,150),DIA_Scatty_TRAIN_2h);
 	};
-	if (Npc_GetTalentSkill(hero,NPC_TALENT_1H) == 0) 
+	if (Npc_GetTalentSkill(hero,NPC_TALENT_1H) == 0)
 	{
 		Info_AddChoice(DIA_Scatty_TRAIN,B_BuildLearnString(NAME_Learn1h_1, LPCOST_TALENT_1H_1,50),DIA_Scatty_TRAIN_1h);
 	};

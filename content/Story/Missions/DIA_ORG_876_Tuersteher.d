@@ -1,5 +1,5 @@
 // ************************************************************
-// 			  				   EXIT 
+// 			  				   EXIT
 // ************************************************************
 
 instance DIA_Org_876_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Org_876_EXIT(C_INFO)
 	information = DIA_Org_876_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Org_876_EXIT_Condition()
 {
@@ -18,7 +18,7 @@ func int DIA_Org_876_EXIT_Condition()
 };
 
 func void DIA_Org_876_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -36,19 +36,19 @@ instance DIA_Org_876_AmSfb(C_INFO)
 //	description = "I'm a scraper! And I'm thirsty!";
 //	description = "Ich bin Schürfer! Und ich habe Durst!";
 	description = "Jsem rudař! A mám žízeň!";
-};                       
+};
 
 func int DIA_Org_876_AmSfb_Condition()
 {
 	if (self.aivar[AIV_PASSGATE] == FALSE)
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY) 
-	{ 
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY)
+	{
 		return TRUE;
 	};
 };
 
 func void DIA_Org_876_AmSfb_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Org_876_AmSfb_15_00"); //I'm a scraper! And I'm thirsty!
 //	AI_Output(other,self,"DIA_Org_876_AmSfb_15_00"); //Ich bin Schürfer! Und ich habe Durst!
 	AI_Output(other,self,"DIA_Org_876_AmSfb_15_00"); //Jsem rudař! A mám žízeň!
@@ -61,7 +61,7 @@ func void DIA_Org_876_AmSfb_Info()
 //		AI_Output(self,other,"DIA_Org_876_AmSfb_06_01"); //You look like one of those filthy rats. Come on in!
 //		AI_Output(self,other,"DIA_Org_876_AmSfb_06_01"); //Du siehst auch aus wie einer von den Dreckfressern.  Immer rein mit dir.
 		AI_Output(self,other,"DIA_Org_876_AmSfb_06_01"); //Vypadáš jako jedna z těch špinavejch krys. Pojď dál!
-		self.aivar[AIV_PASSGATE] = TRUE; 
+		self.aivar[AIV_PASSGATE] = TRUE;
 
 		AI_StopProcessInfos(self);
 	}
@@ -87,19 +87,19 @@ instance DIA_Org_876_Bribe(C_INFO)
 //	description = "How about some ore as an admission fee?";
 //	description = "Was hältst du von etwas Erz als Eintrittsgeld?";
 	description = "Co takhle nějakou rudu jako vstupné?";
-};                       
+};
 
 func int DIA_Org_876_Bribe_Condition()
 {
 	if (self.aivar[AIV_PASSGATE] == FALSE)
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY) 
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY)
 	{
 		return 1;
 	};
 };
 
 func void DIA_Org_876_Bribe_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Org_876_Bribe_15_00"); //How about some ore as an admission fee?
 //	AI_Output(other,self,"DIA_Org_876_Bribe_15_00"); //Was hältst du von etwas Erz als Eintrittsgeld?
 	AI_Output(other,self,"DIA_Org_876_Bribe_15_00"); //Co takhle nějakou rudu jako vstupné?
@@ -171,7 +171,7 @@ func void DIA_Org_876_Bribe_100Erz()
 //		AI_Output(self,other,"DIA_Org_876_Bribe_100Erz_06_01"); //Truly spoken - you can get in.
 //		AI_Output(self,other,"DIA_Org_876_Bribe_100Erz_06_01"); //Ein wahres Wort - du kannst reingehen.
 		AI_Output(self,other,"DIA_Org_876_Bribe_100Erz_06_01"); //Dobře řečeno - můžeš dál.
-		self.aivar[AIV_PASSGATE] = TRUE; 
+		self.aivar[AIV_PASSGATE] = TRUE;
 		B_GiveInvItems(other,self,ItMiNugget, 100);
 	}
 	else
@@ -198,19 +198,19 @@ instance DIA_Org_876_PERM(C_INFO)
 //	description = "How's the schnapps business going?";
 //	description = "Wie läuft das Schnapsgeschäft?";
 	description = "Jak jde obchod s pálenkou?";
-};                       
+};
 
 func int DIA_Org_876_PERM_Condition()
 {
 	if (self.aivar[AIV_PASSGATE] == TRUE)
-	|| (Npc_GetAttitude(self,hero) == ATT_FRIENDLY) 
+	|| (Npc_GetAttitude(self,hero) == ATT_FRIENDLY)
 	{
 		return 1;
 	};
 };
 
 func void DIA_Org_876_PERM_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Org_876_PERM_15_00"); //How's the schnapps business going?
 //	AI_Output(other,self,"DIA_Org_876_PERM_15_00"); //Wie läuft das Schnapsgeschäft?
 	AI_Output(other,self,"DIA_Org_876_PERM_15_00"); //Jak jde obchod s pálenkou?
@@ -231,7 +231,7 @@ instance DIA_Org_876_ScSld(C_INFO)
 	information = DIA_Org_876_ScSld_Info;
 	permanent = 0;
 	important   = 1;
-};                       
+};
 
 func int DIA_Org_876_ScSld_Condition()
 {
@@ -242,7 +242,7 @@ func int DIA_Org_876_ScSld_Condition()
 };
 
 func void DIA_Org_876_ScSld_Info()
-{ 
+{
 //	AI_Output(self,other,"DIA_Org_876_ScSld_06_00"); //Stop! You know the rules. Scrapers and rogues only!
 //	AI_Output(self,other,"DIA_Org_876_ScSld_06_00"); //Halt! Du kennst die Regeln. Nur Schürfer und Banditen!
 	AI_Output(self,other,"DIA_Org_876_ScSld_06_00"); //Stůj! Znáš pravidla. Jen pro bandity a rudaře!
@@ -267,7 +267,7 @@ instance DIA_Org_876_ScSekte(C_INFO)
 	information = DIA_Org_876_ScSekte_Info;
 	permanent = 0;
 	important   = 1;
-};                       
+};
 
 func int DIA_Org_876_ScSekte_Condition()
 {
@@ -278,7 +278,7 @@ func int DIA_Org_876_ScSekte_Condition()
 };
 
 func void DIA_Org_876_ScSekte_Info()
-{ 
+{
 //	AI_Output(self,other,"DIA_Org_876_ScSekte_06_00"); //We usually let only our boys in but there's nothing to be said against the Brotherhood.
 //	AI_Output(self,other,"DIA_Org_876_ScSekte_06_00"); //Eigentlich lassen wir ja nur unsere Jungs hier rein, aber gegen die Bruderschaft kann man wirklich nichts einwenden.
 	AI_Output(self,other,"DIA_Org_876_ScSekte_06_00"); //Obvykle pouštím dovnitř jenom naše hochy, ale proti Bratrstvu nemůžu říci nic.
@@ -303,7 +303,7 @@ instance DIA_Org_876_GibKraut(C_INFO)
 //	description = "I have some stalks on me - here, take one.";
 //	description = "Ich habe ein paar Krautstengel bei mir - hier, nimm einen.";
 	description = "Mám s sebou pár lodyh - tady, vezmi si jednu.";
-};                       
+};
 
 func int DIA_Org_876_GibKraut_Condition()
 {
@@ -314,7 +314,7 @@ func int DIA_Org_876_GibKraut_Condition()
 };
 
 func void DIA_Org_876_GibKraut_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Org_876_GibKraut_15_00"); //I have some stalks on me - here, take one.
 //	AI_Output(other,self,"DIA_Org_876_GibKraut_15_00"); //Ich habe ein paar Krautstengel bei mir - hier, nimm einen.
 	AI_Output(other,self,"DIA_Org_876_GibKraut_15_00"); //Mám s sebou pár lodyh - tady, vezmi si jednu.
@@ -348,9 +348,9 @@ func void DIA_Org_876_GibKraut_Info()
 
 //////////////////////////////////////////////////////////////////////////
 //	DURCHGANGSWACHE
-//	=============== 
+//	===============
 //	NSC: Org_876_Tuersteher
-//	Lager: NewCamp 
+//	Lager: NewCamp
 //	Durchgang: Kneipe (rechte Wache)
 //	Uhrzeit: 24h
 //
@@ -376,13 +376,13 @@ instance Info_Org_876_FirstWarn(C_INFO)
 	information = Info_Org_876_FirstWarn_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int Info_Org_876_FirstWarn_Condition()
 {
 	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS]== AIV_GPS_BEGIN)
-	&& (self.aivar[AIV_PASSGATE] == FALSE ) 
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY ) 
+	&& (self.aivar[AIV_PASSGATE] == FALSE )
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY )
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self), self.wp)))
 	{
 		return TRUE;
@@ -404,7 +404,7 @@ func void Info_Org_876_FirstWarn_Info()
 	AI_Output(self,hero,"Info_Org_876_FirstWarn_Info_06_02"); //Zapomeň na to! Silas chce v baru vidět jenom rudaře a bandity.
 
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,Org_876_CHECKPOINT);
-	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_FIRSTWARN; 
+	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_FIRSTWARN;
 };
 
 //------------------------------------------------------------------------
@@ -418,15 +418,15 @@ instance Info_Org_876_LastWarn(C_INFO)
 	information = Info_Org_876_LastWarn_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int Info_Org_876_LastWarn_Condition()
 {
 	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_FIRSTWARN )
 	&& (self.aivar[AIV_PASSGATE] == FALSE )
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY ) 
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY )
 	&& (Npc_GetDistToWP(hero,Org_876_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
-	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp))) 
+	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
 		return TRUE;
 	};
@@ -439,7 +439,7 @@ func int Info_Org_876_LastWarn_Info()
 	AI_Output(self,hero,"Info_Org_876_LastWarn_06_00"); //Jsi hluchej, nebo co, příteli?
 
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,Org_876_CHECKPOINT);
-	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_LASTWARN; 
+	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_LASTWARN;
 
 	AI_StopProcessInfos(self);
 };
@@ -455,15 +455,15 @@ instance Info_Org_876_Attack(C_INFO)
 	information = Info_Org_876_Attack_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int Info_Org_876_Attack_Condition()
 {
 	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_LASTWARN )
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY ) 
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY )
 	&& (self.aivar[AIV_PASSGATE] == FALSE)
 	&& (Npc_GetDistToWP(hero,Org_876_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
-	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp))) 
+	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
 		return TRUE;
 	};
@@ -471,11 +471,10 @@ func int Info_Org_876_Attack_Condition()
 
 func int Info_Org_876_Attack_Info()
 {
-
 	hero.aivar[AIV_LASTDISTTOWP] = 0;
-	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_PUNISH; 
+	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_PUNISH;
 
-	B_FullStop(self); 
+	B_FullStop(self);
 	AI_StopProcessInfos(self); // dem Spieler sofort wieder die Kontrolle zurückgeben
 	B_IntruderAlert(self,other);
 	B_SetAttackReason(self,AIV_AR_INTRUDER);

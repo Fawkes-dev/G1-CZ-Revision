@@ -10,7 +10,7 @@ instance Info_GRD_276_Exit(C_INFO)
 	information = Info_GRD_276_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_GRD_276_Exit_Condition()
 {
@@ -36,10 +36,10 @@ instance Info_GRD_276_Tips(C_INFO)
 //	description = "Hi! I'm new here.";
 //	description = "Hi! Ich bin neu hier.";
 	description = "Zdar! Jsem tady nový.";
-};                       
+};
 
 func int Info_GRD_276_Tips_Condition()
-{ 
+{
 	if (Kapitel <= 2)
 	{
 		return 1;
@@ -70,7 +70,7 @@ instance Info_GRD_276_Bla(C_INFO)
 //	description = "Is that the Old Camp over there?";
 //	description = "Ist das da hinten das Alte Lager?";
 	description = "Je támhleto Starý tábor?";
-};                       
+};
 
 func int Info_GRD_276_Bla_Condition()
 {

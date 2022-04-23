@@ -110,7 +110,7 @@ func int DIA_SLD_761_Soeldner_UMSEHEN_CONDITION()
 };
 
 func void DIA_SLD_761_Soeldner_UMSEHEN_INFO()
-{  
+{
 //	AI_Output(other,self,"DIA_SLD_761_Soeldner_UMSEHEN_INFO_15_01"); //I just wanted to have a look around the Camp.
 //	AI_Output(other,self,"DIA_SLD_761_Soeldner_UMSEHEN_INFO_15_01"); //Ich wollte mir nur mal das Camp ansehen.
 	AI_Output(other,self,"DIA_SLD_761_Soeldner_UMSEHEN_INFO_15_01"); //Jen jsem se chtěl porozhlédnout po táboře.
@@ -164,7 +164,7 @@ instance DIA_SLD_761_Soeldner_Bribe(C_INFO)
 };
 
 func int DIA_SLD_761_Soeldner_Bribe_CONDITION()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_SLD_761_Soeldner_INMINE))
 	{
 		return 1;
@@ -172,7 +172,7 @@ func int DIA_SLD_761_Soeldner_Bribe_CONDITION()
 };
 
 func void DIA_SLD_761_Soeldner_Bribe_INFO()
-{  
+{
 //	AI_Output(other,self,"DIA_SLD_761_Soeldner_Bribe_INFO_15_01");//Is there nothing we can do about it?
 //	AI_Output(other,self,"DIA_SLD_761_Soeldner_Bribe_INFO_15_01");//Kann man da gar nichts machen?
 	AI_Output(other,self,"DIA_SLD_761_Soeldner_Bribe_INFO_15_01");//Nemohlo by se s tím něco udělat?
@@ -188,6 +188,6 @@ func void DIA_SLD_761_Soeldner_Bribe_INFO()
 //	AI_Output(other,self,"DIA_SLD_761_Soeldner_Bribe_INFO_15_05");//I guess I'd best be going.
 //	AI_Output(other,self,"DIA_SLD_761_Soeldner_Bribe_INFO_15_05");//Ich glaub', ich geh' dann besser.
 	AI_Output(other,self,"DIA_SLD_761_Soeldner_Bribe_INFO_15_05");//Já myslím, že bys měl raději jít pryč.
-	AI_StopProcessInfos(self); 
+	AI_StopProcessInfos(self);
 };
 

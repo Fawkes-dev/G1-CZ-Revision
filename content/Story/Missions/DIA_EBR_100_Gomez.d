@@ -1,5 +1,5 @@
 // **************************************
-//					EXIT 
+//					EXIT
 // **************************************
 
 instance DIA_Gomez_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Gomez_Exit(C_INFO)
 	information = DIA_Gomez_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Gomez_Exit_Condition()
 {
@@ -36,7 +36,7 @@ instance DIA_Gomez_Fault(C_INFO)
 //	description = "I came to offer my services.";
 //	description = "Ich bin gekommen, um dir meine Dienste anzubieten.";
 	description = "Přišel jsem nabídnout své služby.";
-};                       
+};
 
 func int DIA_Gomez_Fault_Condition()
 {
@@ -77,7 +77,7 @@ instance DIA_Gomez_Hello(C_INFO)
 //	description = "I have come to offer my services.";
 //	description = "Ich bin gekommen, um dir meine Dienste anzubieten.";
 	description = "Přišel jsem nabídnout své služby.";
-};                       
+};
 
 func int DIA_Gomez_Hello_Condition()
 {
@@ -96,7 +96,7 @@ func void DIA_Gomez_Hello_Info()
 //	AI_Output(self,other,"DIA_Gomez_Hello_11_01"); //Warum denkst du, dass wir an deinen Diensten interessiert sind?
 	AI_Output(self,other,"DIA_Gomez_Hello_11_01"); //Proč si myslíš, že bychom měli mít o tvoje služby zájem?
 
-	Info_ClearChoices(DIA_Gomez_Hello); 
+	Info_ClearChoices(DIA_Gomez_Hello);
 //	Info_AddChoice(DIA_Gomez_Hello,"I hope I'm not going to have to chop your head off to prove myself.",DIA_Gomez_Hello_KopfAb);
 //	Info_AddChoice(DIA_Gomez_Hello,"Ich hoffe ich muss dir nicht erst den Kopf abhacken, um mich zu beweisen.",DIA_Gomez_Hello_KopfAb);
 	Info_AddChoice(DIA_Gomez_Hello,"Doufám, že ti nebudu muset useknout hlavu, abych ti ukázal, že to dokážu.",DIA_Gomez_Hello_KopfAb);
@@ -265,7 +265,7 @@ func void DIA_Gomez_Hello_Kontakte_ThatsAll()
 //	AI_Output(other,self,"DIA_Gomez_Hello_Kontakte_ThatsAll_15_00"); //Those were the important ones.
 //	AI_Output(other,self,"DIA_Gomez_Hello_Kontakte_ThatsAll_15_00"); //Das waren alle wichtigen.
 	AI_Output(other,self,"DIA_Gomez_Hello_Kontakte_ThatsAll_15_00"); //To byli všichni důležití.
-	if (gomez_kontakte >= 4) 
+	if (gomez_kontakte >= 4)
 	{
 //		AI_Output(self,other,"DIA_Gomez_Hello_Kontakte_ThatsAll_11_01"); //Not bad - for a beginner...
 //		AI_Output(self,other,"DIA_Gomez_Hello_Kontakte_ThatsAll_11_01"); //Beachtlich - für einen Neuling wie dich ...
@@ -298,7 +298,7 @@ instance DIA_Gomez_Dabei(C_INFO)
 //	description = "Does that mean I'm in?";
 //	description = "Heißt das, ich bin dabei?";
 	description = "Znamená to, že jsem přijat?";
-};                       
+};
 
 func int DIA_Gomez_Dabei_Condition()
 {
@@ -359,7 +359,7 @@ instance DIA_Gomez_NurSo(C_INFO)
 //	description = "I just thought I'd report in.";
 //	description = "Ich wollte mal einen Zwischenbericht abgeben.";
 	description = "Chci ti podat hlášení.";
-};                       
+};
 
 func int DIA_Gomez_NurSo_Condition()
 {
@@ -399,7 +399,7 @@ instance DIA_EBR_100_Gomez_Wait4SC(C_INFO)
 };
 
 func int DIA_EBR_100_Gomez_Wait4SC_Condition()
-{ 
+{
 	if ExploreSunkenTower
 	{
 		return TRUE;
@@ -426,5 +426,5 @@ func void DIA_EBR_100_Gomez_Wait4SC_Info()
 	AI_StopProcessInfos(self);
 
 	self.guild = GIL_EBR;
-	Npc_SetTrueGuild(self,GIL_EBR); 
+	Npc_SetTrueGuild(self,GIL_EBR);
 };

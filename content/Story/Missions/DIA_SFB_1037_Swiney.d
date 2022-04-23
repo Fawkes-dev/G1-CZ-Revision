@@ -1,5 +1,5 @@
 // ************************************************************
-// 			  				   EXIT 
+// 			  				   EXIT
 // ************************************************************
 
 instance Info_Swiney_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance Info_Swiney_EXIT(C_INFO)
 	information = Info_Swiney_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_Swiney_EXIT_Condition()
 {
@@ -18,7 +18,7 @@ func int Info_Swiney_EXIT_Condition()
 };
 
 func void Info_Swiney_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -36,7 +36,7 @@ instance Info_Swiney_Hello(C_INFO)
 //	description = "Who are you?";
 //	description = "Wer bist du?";
 	description = "Kdo jsi?";
-};                       
+};
 
 func int Info_Swiney_Hello_Condition()
 {
@@ -44,7 +44,7 @@ func int Info_Swiney_Hello_Condition()
 };
 
 func void Info_Swiney_Hello_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_Swiney_Hello_15_00"); //Who are you?
 //	AI_Output(other,self,"Info_Swiney_Hello_15_00"); //Wer bist du?
 	AI_Output(other,self,"Info_Swiney_Hello_15_00"); //Kdo jsi?
@@ -70,7 +70,7 @@ instance Info_Swiney_Schuerfer(C_INFO)
 //	description = "I'd like to join you as a scraper!";
 //	description = "Ich will bei euch als Schürfer mitmachen!";
 	description = "Chtěl bych se k vám přidat jako rudař!";
-};                       
+};
 
 func int Info_Swiney_Schuerfer_Condition()
 {
@@ -81,7 +81,7 @@ func int Info_Swiney_Schuerfer_Condition()
 };
 
 func void Info_Swiney_Schuerfer_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_Swiney_Schuerfer_15_00"); //I'd like to join you as a scraper!
 //	AI_Output(other,self,"Info_Swiney_Schuerfer_15_00"); //Ich will bei euch als Schürfer mitmachen!
 	AI_Output(other,self,"Info_Swiney_Schuerfer_15_00"); //Chtěl bych se k vám přidat jako rudař!
@@ -162,18 +162,18 @@ instance Info_Swiney_PERM(C_INFO)
 //	description = "How much ore have you collected so far?";
 //	description = "Wieviel Erz habt ihr schon gesammelt?";
 	description = "Kolik rudy jste už nahromadili?";
-};                       
+};
 
 func int Info_Swiney_PERM_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Swiney_Schuerfer)) 
+	if (Npc_KnowsInfo(hero,Info_Swiney_Schuerfer))
 	{
 		return 1;
 	};
 };
 
 func void Info_Swiney_PERM_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_Swiney_PERM_15_00"); //How much ore have you collected so far?
 //	AI_Output(other,self,"Info_Swiney_PERM_15_00"); //Wie viel Erz habt ihr schon gesammelt?
 	AI_Output(other,self,"Info_Swiney_PERM_15_00"); //Kolik rudy jste už nahromadili?

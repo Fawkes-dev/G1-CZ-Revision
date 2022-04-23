@@ -1,5 +1,5 @@
 // ************************************************************
-// 			  				   EXIT 
+// 			  				   EXIT
 // ************************************************************
 	var int Pock_ForgetAll;
 // ************************************************************
@@ -12,7 +12,7 @@ instance DIA_Pock_EXIT(C_INFO)
 	information = DIA_Pock_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Pock_EXIT_Condition()
 {
@@ -20,7 +20,7 @@ func int DIA_Pock_EXIT_Condition()
 };
 
 func void DIA_Pock_EXIT_Info()
-{ 
+{
 	Pock_ForgetAll = TRUE;
 	AI_StopProcessInfos(self);
 };
@@ -39,7 +39,7 @@ instance Info_Pock_Wasser(C_INFO) // E1
 //	description = "Lefty sent me. I've brought you some water.";
 //	description = "Lefty schickt mich. Ich hab' Wasser für dich.";
 	description = "Lefty mě poslal. Mám pro tebe trochu vody.";
-};                       
+};
 
 func int Info_Pock_Wasser_Condition()
 {
@@ -96,7 +96,7 @@ instance DIA_Pock_Hello(C_INFO)
 //	description = "Hi! I'm new here.";
 //	description = "Hi! Ich bin neu hier.";
 	description = "Zdar! Jsem tady nový.";
-};                       
+};
 
 func int DIA_Pock_Hello_Condition()
 {
@@ -107,7 +107,7 @@ func int DIA_Pock_Hello_Condition()
 };
 
 func void DIA_Pock_Hello_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Pock_Hello_15_00"); //Hi! I'm new here.
 //	AI_Output(other,self,"DIA_Pock_Hello_15_00"); //Hi! Ich bin neu hier.
 	AI_Output(other,self,"DIA_Pock_Hello_15_00"); //Zdar! Jsem tady nový.
@@ -136,7 +136,7 @@ instance DIA_Pock_KnowMuch(C_INFO)
 //	description = "In that case you must know a lot about this place?";
 //	description = "Dann weißt du bestimmt ne Menge über all das hier?";
 	description = "To toho musíš o tomhle místě hodně vědět.";
-};                       
+};
 
 func int DIA_Pock_KnowMuch_Condition()
 {
@@ -147,7 +147,7 @@ func int DIA_Pock_KnowMuch_Condition()
 };
 
 func void DIA_Pock_KnowMuch_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Pock_KnowMuch_15_00"); //In that case you must know a lot about this place?
 //	AI_Output(other,self,"DIA_Pock_KnowMuch_15_00"); //Dann weißt du bestimmt ne Menge über all das hier?
 	AI_Output(other,self,"DIA_Pock_KnowMuch_15_00"); //To toho musíš o tomhle místě hodně vědět.
@@ -173,7 +173,7 @@ instance DIA_Pock_WhyJail(C_INFO)
 //	description = "Why are you here?";
 //	description = "Weshalb bist du hier?";
 	description = "Proč jsi tady?";
-};                       
+};
 
 func int DIA_Pock_WhyJail_Condition()
 {
@@ -184,7 +184,7 @@ func int DIA_Pock_WhyJail_Condition()
 };
 
 func void DIA_Pock_WhyJail_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Pock_WhyJail_15_00"); //Why are you here?
 //	AI_Output(other,self,"DIA_Pock_WhyJail_15_00"); //Weshalb bist du hier?
 	AI_Output(other,self,"DIA_Pock_WhyJail_15_00"); //Proč jsi tady?
@@ -213,7 +213,7 @@ instance DIA_Pock_ForgotAll(C_INFO)
 //	description = "Everything okay with you?";
 //	description = "Alles klar bei dir?";
 	description = "Jinak jsi v pořádku?";
-};                       
+};
 
 func int DIA_Pock_ForgotAll_Condition()
 {
@@ -224,7 +224,7 @@ func int DIA_Pock_ForgotAll_Condition()
 };
 
 func void DIA_Pock_ForgotAll_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Pock_ForgotAll_15_00"); //Everything okay with you?
 //	AI_Output(other,self,"DIA_Pock_ForgotAll_15_00"); //Alles klar bei dir?
 	AI_Output(other,self,"DIA_Pock_ForgotAll_15_00"); //Jinak jsi v pořádku?

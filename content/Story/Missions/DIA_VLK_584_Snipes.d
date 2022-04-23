@@ -6,10 +6,10 @@ instance VLK_584_Snipes_Exit(C_INFO)
 	nr = 999;
 	condition = VLK_584_Snipes_Exit_Condition;
 	information = VLK_584_Snipes_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int VLK_584_Snipes_Exit_Condition()
 {
@@ -36,9 +36,9 @@ instance VLK_584_Snipes_DEAL(C_INFO)
 	information = VLK_584_Snipes_DEAL_Info;
 	important = 0;
 	permanent = 0;
-//	description = "How's things?"; 
-//	description = "Wie siehts aus?"; 
-	description = "Jak to jde?"; 
+//	description = "How's things?";
+//	description = "Wie siehts aus?";
+	description = "Jak to jde?";
 };
 
 func int VLK_584_Snipes_DEAL_Condition()
@@ -65,7 +65,7 @@ func void VLK_584_Snipes_DEAL_Info()
 //	B_LogEntry(CH2_SnipesDeal,"Der Buddler Snipes hat mir 10 Erz angeboten, wenn ich es schaffe, den Gardisten Aaron von seiner Truhe wegzulocken!");
 	B_LogEntry(CH2_SnipesDeal,"Kopáč Snipes mi nabídl 10 magických nugetů za to, že odlákám strážce Aarona od jeho truhlice!");
 };
-// ***************** Infos *****************************  
+// ***************** Infos *****************************
 instance VLK_584_Snipes_DEAL_RUN(C_INFO)
 {
 	npc = VLK_584_Snipes;
@@ -73,9 +73,9 @@ instance VLK_584_Snipes_DEAL_RUN(C_INFO)
 	information = VLK_584_Snipes_DEAL_RUN_Info;
 	important = 0;
 	permanent = 0;
-//	description = "You owe me 10 ore!"; 
-//	description = "Du schuldest mir 10 Erz"; 
-	description = "Dlužíš mi 10 nugetů!"; 
+//	description = "You owe me 10 ore!";
+//	description = "Du schuldest mir 10 Erz";
+	description = "Dlužíš mi 10 nugetů!";
 };
 
 func int VLK_584_Snipes_DEAL_RUN_Condition()
@@ -103,10 +103,10 @@ func void VLK_584_Snipes_DEAL_RUN_Info()
 
 	B_GiveXP(XP_LureAaronAway);
 
-//	B_LogEntry(CH2_SnipesDeal,"For another 30 ore nuggets, Snipes offered me the key to Aaron's chest."); 
-//	B_LogEntry(CH2_SnipesDeal,"Snipes hat mir für weitere 30 Erz den Schlüssel zu Aarons Truhe angeboten."); 
-	B_LogEntry(CH2_SnipesDeal,"Snipes mi za dalších 30 nugetů nabídl klíč od Aaronovy truhlice."); 
-};  
+//	B_LogEntry(CH2_SnipesDeal,"For another 30 ore nuggets, Snipes offered me the key to Aaron's chest.");
+//	B_LogEntry(CH2_SnipesDeal,"Snipes hat mir für weitere 30 Erz den Schlüssel zu Aarons Truhe angeboten.");
+	B_LogEntry(CH2_SnipesDeal,"Snipes mi za dalších 30 nugetů nabídl klíč od Aaronovy truhlice.");
+};
 // ***************** Infos *****************************
 instance VLK_584_Snipes_DEAL_2(C_INFO)
 {
@@ -115,9 +115,9 @@ instance VLK_584_Snipes_DEAL_2(C_INFO)
 	information = VLK_584_Snipes_DEAL_2_Info;
 	important = 0;
 	permanent = 1;
-//	description = "(buy key)"; 
-//	description = "(Schlüssel kaufen)"; 
-	description = "Dej mi ten klíč. (30 rudy)"; //#COMMENT Zvyšuje Immersion:tm: 
+//	description = "(buy key)";
+//	description = "(Schlüssel kaufen)";
+	description = "Dej mi ten klíč. (30 rudy)"; //#COMMENT Zvyšuje Immersion:tm:
 };
 
 func int VLK_584_Snipes_DEAL_2_Condition()
@@ -131,8 +131,7 @@ func int VLK_584_Snipes_DEAL_2_Condition()
 
 func void VLK_584_Snipes_DEAL_2_Info()
 {
-
-	if (Npc_HasItems(hero,ItMinugget)  >= 30 ) 
+	if (Npc_HasItems(hero,ItMinugget)  >= 30 )
 	{
 //		AI_Output(other,self,"VLK_584_Snipes_DEAL_2_Info_15_01");//Give me the key.
 //		AI_Output(other,self,"VLK_584_Snipes_DEAL_2_Info_15_01");//Gib mir den Schlüssel.
@@ -151,9 +150,9 @@ func void VLK_584_Snipes_DEAL_2_Info()
 		B_GiveInvItems(self,hero,ItKe_OM_02,1);
 		VLK_584_Snipes_DEAL_2.permanent = 0;
 
-//		B_LogEntry(CH2_SnipesDeal,"I bought the key to the chest from Snipes! I wonder what Aaron is going to do when I tell him about it?"); 
-//		B_LogEntry(CH2_SnipesDeal,"Ich habe Snipes den Truhenschlüssel abgekauft! Wie Aaron wohl darauf reagieren wird, wenn ich ihm davon erzähle?"); 
-		B_LogEntry(CH2_SnipesDeal,"Koupil jsem od Snipese klíč od té truhlice! Jak na to asi bude Aaron reagovat, až mu o tom povím?"); 
+//		B_LogEntry(CH2_SnipesDeal,"I bought the key to the chest from Snipes! I wonder what Aaron is going to do when I tell him about it?");
+//		B_LogEntry(CH2_SnipesDeal,"Ich habe Snipes den Truhenschlüssel abgekauft! Wie Aaron wohl darauf reagieren wird, wenn ich ihm davon erzähle?");
+		B_LogEntry(CH2_SnipesDeal,"Koupil jsem od Snipese klíč od té truhlice! Jak na to asi bude Aaron reagovat, až mu o tom povím?");
 	}
 	else
 	{
@@ -161,4 +160,4 @@ func void VLK_584_Snipes_DEAL_2_Info()
 //		AI_Output(self,other,"VLK_584_Snipes_DEAL_2_Info_07_05"); //Ich sagte 30 Erz! Gib mir das Erz und ich gebe dir den Schlüssel!
 		AI_Output(self,other,"VLK_584_Snipes_DEAL_2_Info_07_05"); //Řekl jsem 30 nugetů! Dej mi rudu a já ti dám klíč!
 	};
-};  
+};

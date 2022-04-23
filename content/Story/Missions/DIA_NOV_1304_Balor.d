@@ -1,5 +1,5 @@
 // **************************************************
-//						EXIT 
+//						EXIT
 // **************************************************
 
 instance DIA_Balor_Exit(C_INFO)
@@ -8,10 +8,10 @@ instance DIA_Balor_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Viran_Exit_Condition;
 	information = DIA_Viran_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Balor_Exit_Condition()
 {
@@ -39,7 +39,7 @@ instance DIA_Balor_FetchWeed(C_INFO)
 //	description = "Baal Orun sent me. I'm to collect all the swampweed.";
 //	description = "Baal Orun schickt mich. Ich soll hier alles Sumpfkraut abholen.";
 	description = "Poslal mě Baal Orun. Mám převzít celou sklizeň drogy z bažin.";
-};                       
+};
 
 func int DIA_Balor_FetchWeed_Condition()
 {
@@ -74,12 +74,12 @@ func void DIA_Balor_FetchWeed_Info()
 	if !Npc_KnowsInfo(hero,DIA_Viran_What)
 	&& !Npc_KnowsInfo(hero,DIA_Viran_FetchWeed)
 	{
-//		 B_LogEntry(CH1_DeliverWeed,"According to Balor, there's a second group of gatherers who are working on the other side of the swamp. Since I wasn't allowed to ask Baal Orun any questions, I have to search the swamp for the second group, whether I like it or not."); 
-//		 B_LogEntry(CH1_DeliverWeed,"Laut Balor scheint es noch eine zweite Sammlergruppe zu geben, die auf der anderen Seite des Sumpfes arbeiten. Da ich Baal Orun keine Fragen stellen durfte, muss ich jetzt wohl oder übel diesen verdammten Sumpf nach der anderen Gruppe absuchen."); 
-		 B_LogEntry(CH1_DeliverWeed,"Podle Balora pracuje druhá skupina sběračů na druhé straně bažin. Protože nesmím klást Baalu Orunovi žádné otázky, musím prohledat bažiny, zda tam druhá skupina sběračů doopravdy je."); 
+//		 B_LogEntry(CH1_DeliverWeed,"According to Balor, there's a second group of gatherers who are working on the other side of the swamp. Since I wasn't allowed to ask Baal Orun any questions, I have to search the swamp for the second group, whether I like it or not.");
+//		 B_LogEntry(CH1_DeliverWeed,"Laut Balor scheint es noch eine zweite Sammlergruppe zu geben, die auf der anderen Seite des Sumpfes arbeiten. Da ich Baal Orun keine Fragen stellen durfte, muss ich jetzt wohl oder übel diesen verdammten Sumpf nach der anderen Gruppe absuchen.");
+		 B_LogEntry(CH1_DeliverWeed,"Podle Balora pracuje druhá skupina sběračů na druhé straně bažin. Protože nesmím klást Baalu Orunovi žádné otázky, musím prohledat bažiny, zda tam druhá skupina sběračů doopravdy je.");
 	};
 
-	Balor_BotenDay = Wld_GetDay(); 
+	Balor_BotenDay = Wld_GetDay();
 };
 
 // **************************************************
@@ -98,7 +98,7 @@ instance DIA_Balor_SellUnder(C_INFO)
 //	description = "Who could I sell the weeds to anyway?";
 //	description = "Wem sollte ich das Kraut denn schon verhökern?";
 	description = "Komu jinému bych mohl tu drogu prodat?";
-};                       
+};
 
 func int DIA_Balor_SellUnder_Condition()
 {
@@ -178,7 +178,7 @@ instance DIA_Balor_TellDealer(C_INFO)
 //	description = "Okay - who's the buyer in the New Camp?";
 //	description = "Okay - wer ist der Abnehmer im Neuen Lager?";
 	description = "Dobře - kdo je ten překupník z Nového tábora?";
-};                       
+};
 
 func int DIA_Balor_TellDealer_Condition()
 {
@@ -274,7 +274,7 @@ instance DIA_Balor_RipOff(C_INFO)
 //	description = "I'm to pick up the next delivery for Cor Kalom.";
 //	description = "Ich soll nochmal alles Kraut zu Cor Kalom bringen.";
 	description = "Mám tady vyzvednout další dodávku pro Cora Kaloma.";
-};                       
+};
 
 func int DIA_Balor_RipOff_Condition()
 {
@@ -325,7 +325,7 @@ instance DIA_Balor_Perm(C_INFO)
 //	description = "Just keep picking hard!";
 //	description = "Immer tüchtig weitersammeln!";
 	description = "Dávej na to pořád pozor!";
-};                       
+};
 
 func int DIA_Balor_Perm_Condition()
 {

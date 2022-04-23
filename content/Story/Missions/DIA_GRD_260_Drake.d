@@ -233,7 +233,7 @@ func void Grd_260_Drake_Ian_Info()
 //	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_05");//If you get into trouble with him, you'll be in trouble with us all. Understood?
 //	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_05");//Legst du dich mit ihm an, legst du dich mit uns allen an. Verstanden?
 	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_05");//Pokud s ním budeš mít těžkosti, budeš je mít s náma se všema! Rozumíš?
-};  
+};
 
 /*------------------------------------------------------------------------
 //						GARDEAUFNAHME //
@@ -248,8 +248,8 @@ instance Grd_260_Drake_GARDEAUFNAHME(C_INFO)
 };
 
 func int Grd_260_Drake_GARDEAUFNAHME_Condition()
-{ 
-	if (Npc_HasItems(hero,ItAt_Crawlerqueen) >= 1) 
+{
+	if (Npc_HasItems(hero,ItAt_Crawlerqueen) >= 1)
 	&& (Npc_GetTrueGuild(hero) == GIL_STT)
 	&& (!Npc_KnowsInfo(hero,Grd_264_Gardist_GARDEAUFNAHME))
 	{

@@ -4,10 +4,10 @@ instance KDF_402_Corristo_Exit(C_INFO)
 	nr = 999;
 	condition = KDF_402_Corristo_Exit_Condition;
 	information = KDF_402_Corristo_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int KDF_402_Corristo_Exit_Condition()
 {
@@ -28,8 +28,8 @@ instance Info_Corristo_Intruder(C_INFO)
 	condition = Info_Corristo_Intruder_Condition;
 	information = Info_Corristo_Intruder_Info;
 	permanent = 1;
-	important = 1; 
-};                       
+	important = 1;
+};
 
 func int Info_Corristo_Intruder_Condition()
 {
@@ -59,13 +59,13 @@ instance KDF_402_Corristo_EXPLAINMAGE(C_INFO)
 	information = KDF_402_Corristo_EXPLAINMAGE_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Tell me - what is it like to be a magician."; 
-//	description = "Erzähl mir, wie ist es, ein Magier zu sein."; 
-	description = "Řekni mi - jaké to je být mágem."; 
+//	description = "Tell me - what is it like to be a magician.";
+//	description = "Erzähl mir, wie ist es, ein Magier zu sein.";
+	description = "Řekni mi - jaké to je být mágem.";
 };
 
 func int KDF_402_Corristo_EXPLAINMAGE_Condition()
-{ 
+{
 	if (!Npc_KnowsInfo(hero,KDF_402_Corristo_WANNBEKDF))
 	&& (Npc_GetTrueGuild(hero) == GIL_STT)
 	{
@@ -87,7 +87,7 @@ func void KDF_402_Corristo_EXPLAINMAGE_Info()
 //	AI_Output(self,other,"KDF_402_Corristo_EXPLAINMAGE_Info_14_04"); //It is a gift which is a constant burden to us. A task which determines our lives.
 //	AI_Output(self,other,"KDF_402_Corristo_EXPLAINMAGE_Info_14_04"); //Ein Geschenk, das zugleich eine Bürde ist. Ein Amt, das unser Leben bestimmt.
 	AI_Output(self,other,"KDF_402_Corristo_EXPLAINMAGE_Info_14_04"); //Je to dar, který je naším trvalým břemenem. Úkolem, který určuje naše životy.
-};  
+};
 //--------------------------------------------------------------------------
 // 							MAGIERAUFNAHME
 //--------------------------------------------------------------------------
@@ -104,7 +104,7 @@ instance KDF_402_Corristo_WANNBEKDF(C_INFO)
 };
 
 func int KDF_402_Corristo_WANNBEKDF_Condition()
-{ 
+{
 	if ((CorKalom_BringMCQBalls == LOG_SUCCESS) || Npc_KnowsInfo(hero,GRD_200_Thorus_WANNABEMAGE))
 	&& (Npc_GetTrueGuild(hero) == GIL_STT)
 	{
@@ -148,8 +148,8 @@ func void KDF_402_Corristo_WANNBEKDF_Info()
 	};
 };
 //--------------------------------------------------------------------------
-// 							DIE PROBE 
-//-------------------------------------------------------------------------- 
+// 							DIE PROBE
+//--------------------------------------------------------------------------
 instance KDF_402_Corristo_KDFTEST(C_INFO)
 {
 	npc = KDF_402_Corristo;
@@ -157,13 +157,13 @@ instance KDF_402_Corristo_KDFTEST(C_INFO)
 	information = KDF_402_Corristo_KDFTEST_Info;
 	important = 0;
 	permanent = 0;
-//	description = "I'm up for it. Just test me."; 
-//	description = "Ich bin bereit. Stell mich auf die Probe"; 
-	description = "Jsem připraven. Vyzkoušej mě."; 
+//	description = "I'm up for it. Just test me.";
+//	description = "Ich bin bereit. Stell mich auf die Probe";
+	description = "Jsem připraven. Vyzkoušej mě.";
 };
 
 func int KDF_402_Corristo_KDFTEST_Condition()
-{ 
+{
 	if (Corristo_KDFAufnahme == 1)
 	{
 		return TRUE;
@@ -179,14 +179,14 @@ func void KDF_402_Corristo_KDFTEST_Info()
 //	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_Info_14_02"); //Gut. Du hast der Bruderschaft im Sumpf einen Dienst erwiesen, richtig?
 	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_Info_14_02"); //Dobře. Sloužil jsi Bratrstvu u bažin, že ano?
 	Info_ClearChoices(KDF_402_Corristo_KDFTEST);
-//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Yes",KDF_402_Corristo_KDFTEST_JA); 
-//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Ja",KDF_402_Corristo_KDFTEST_JA); 
-	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Ano.",KDF_402_Corristo_KDFTEST_JA); 
-//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"No",KDF_402_Corristo_KDFTEST_NO); 
-//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Nein",KDF_402_Corristo_KDFTEST_NO); 
-	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Ne",KDF_402_Corristo_KDFTEST_NO); 
+//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Yes",KDF_402_Corristo_KDFTEST_JA);
+//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Ja",KDF_402_Corristo_KDFTEST_JA);
+	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Ano.",KDF_402_Corristo_KDFTEST_JA);
+//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"No",KDF_402_Corristo_KDFTEST_NO);
+//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Nein",KDF_402_Corristo_KDFTEST_NO);
+	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Ne",KDF_402_Corristo_KDFTEST_NO);
 
-};  
+};
 func void KDF_402_Corristo_KDFTEST_JA()
 {
 //	AI_Output(other,self,"KDF_402_Corristo_KDFTEST_JA_Info_15_01"); //Yes.
@@ -198,15 +198,15 @@ func void KDF_402_Corristo_KDFTEST_JA()
 	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_JA_Info_14_03"); //Jak se jmenuje náš bůh?
 	Corristo_KDFAufnahme = 2;
 	Info_ClearChoices(KDF_402_Corristo_KDFTEST);
-//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Adanos",KDF_402_Corristo_KDFTEST_ADANOS); 
-//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Adanos",KDF_402_Corristo_KDFTEST_ADANOS); 
-	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Adanos.",KDF_402_Corristo_KDFTEST_ADANOS); 
+//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Adanos",KDF_402_Corristo_KDFTEST_ADANOS);
+//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Adanos",KDF_402_Corristo_KDFTEST_ADANOS);
+	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Adanos.",KDF_402_Corristo_KDFTEST_ADANOS);
 //	Info_Addchoice (KDF_402_Corristo_KDFTEST,"The Sleeper",KDF_402_Corristo_KDFTEST_SLEEPER);
 //	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Der Schläfer",KDF_402_Corristo_KDFTEST_SLEEPER);
 	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Spáč.",KDF_402_Corristo_KDFTEST_SLEEPER);
-//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Innos",KDF_402_Corristo_KDFTEST_INNOS); 
-//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Innos",KDF_402_Corristo_KDFTEST_INNOS); 
-	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Innos.",KDF_402_Corristo_KDFTEST_INNOS); 
+//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Innos",KDF_402_Corristo_KDFTEST_INNOS);
+//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Innos",KDF_402_Corristo_KDFTEST_INNOS);
+	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Innos.",KDF_402_Corristo_KDFTEST_INNOS);
 //	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Gomez",KDF_402_Corristo_KDFTEST_GOMEZ);
 //	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Gomez",KDF_402_Corristo_KDFTEST_GOMEZ);
 	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Gomez.",KDF_402_Corristo_KDFTEST_GOMEZ);
@@ -258,15 +258,15 @@ func void KDF_402_Corristo_KDFTEST_INNOS()
 	AI_Output(self,other,"KDF_402_Corristo_KDFTEST_INNOS_Info_14_03"); //Jaká je nejvyšší ctnost?
 	Corristo_KDFAufnahme = 3;
 	Info_ClearChoices(KDF_402_Corristo_KDFTEST);
-//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"A warrior's honor.",KDF_402_Corristo_KDFTEST_FIGHT); 
-//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Die Ehre des Kämpfers",KDF_402_Corristo_KDFTEST_FIGHT); 
-	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Čest bojovníka.",KDF_402_Corristo_KDFTEST_FIGHT); 
+//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"A warrior's honor.",KDF_402_Corristo_KDFTEST_FIGHT);
+//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Die Ehre des Kämpfers",KDF_402_Corristo_KDFTEST_FIGHT);
+	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Čest bojovníka.",KDF_402_Corristo_KDFTEST_FIGHT);
 //	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Humility in the face of magic.",KDF_402_Corristo_KDFTEST_DEMUT);
 //	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Die Demut vor der Magie",KDF_402_Corristo_KDFTEST_DEMUT);
 	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Pokora před tváří magie.",KDF_402_Corristo_KDFTEST_DEMUT);
-//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"The discipline of a man.",KDF_402_Corristo_KDFTEST_DISZIPLIN); 
-//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Die Disziplin des Mannes",KDF_402_Corristo_KDFTEST_DISZIPLIN); 
-	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Ukázněnost muže.",KDF_402_Corristo_KDFTEST_DISZIPLIN); 
+//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"The discipline of a man.",KDF_402_Corristo_KDFTEST_DISZIPLIN);
+//	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Die Disziplin des Mannes",KDF_402_Corristo_KDFTEST_DISZIPLIN);
+	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Ukázněnost muže.",KDF_402_Corristo_KDFTEST_DISZIPLIN);
 //	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Awe of the gods.",KDF_402_Corristo_KDFTEST_EHRFURCHT);
 //	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Die Ehrfurcht vor den Göttern",KDF_402_Corristo_KDFTEST_EHRFURCHT);
 	Info_Addchoice (KDF_402_Corristo_KDFTEST,"Bohabojnost.",KDF_402_Corristo_KDFTEST_EHRFURCHT);
@@ -361,7 +361,7 @@ instance KDF_402_Corristo_AUFNAHME(C_INFO)
 };
 
 func int KDF_402_Corristo_AUFNAHME_Condition()
-{ 
+{
 	if ( Npc_GetDistToWp (hero,"OCC_CHAPEL_UPSTAIRS") < 500)
 	&& (Corristo_KDFAufnahme == 4)
 	{
@@ -370,11 +370,10 @@ func int KDF_402_Corristo_AUFNAHME_Condition()
 };
 func void KDF_402_Corristo_AUFNAHME_Info()
 {
-
 	Corristo_KDFAufnahme = 5;
 	B_Story_Feueraufnahme();
-	AI_UnequipWeapons(hero); 
-	AI_SetWalkmode(hero,NPC_WALK); 
+	AI_UnequipWeapons(hero);
+	AI_SetWalkmode(hero,NPC_WALK);
 	AI_GotoNpc(hero,self);
 //	AI_Output(self,other,"KDF_402_Corristo_AUFNAHME_Info_14_01"); //We are gathered here today to ordain a servant of Fire.
 //	AI_Output(self,other,"KDF_402_Corristo_AUFNAHME_Info_14_01"); //Wir sind heute zusammengekommen, um einen Diener des Feuers zu weihen.
@@ -419,7 +418,7 @@ instance KDF_402_Corristo_ROBE(C_INFO)
 };
 
 func int KDF_402_Corristo_ROBE_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,KDF_402_Corristo_AUFNAHME))
 	{
 		return TRUE;
@@ -427,7 +426,7 @@ func int KDF_402_Corristo_ROBE_Condition()
 };
 func void KDF_402_Corristo_ROBE_Info()
 {
-	Snd_Play("MFX_Heal_Cast"); 
+	Snd_Play("MFX_Heal_Cast");
 
 	CreateInvItem(hero,KDF_ARMOR_L);
 
@@ -453,9 +452,9 @@ func void KDF_402_Corristo_ROBE_Info()
 //	B_LogEntry(GE_BecomeFiremage,"Ich habe die Probe bestanden und den Schwur des Feuers abgelegt. Fortan trage ich die rote Robe des Feuerkreises!");
 	B_LogEntry(GE_BecomeFiremage,"Složil jsem zkoušku a pronesl přísahu Ohně. Nyní smím nosit roucho Kruhu ohně! ");
 	Log_CreateTopic(GE_TeacherOC,LOG_NOTE);
-//	B_LogEntry(GE_TeacherOC,"Corristo can teach me the magic CIRCLES and increase my MANA. He's in the house of the Magicians of Fire."); 
-//	B_LogEntry(GE_TeacherOC,"Corristo kann mich die magischen KREISE lehren und meine MANA steigern. Er hält sich den ganzen Tag im Haus der Feuermagier auf."); 
-	B_LogEntry(GE_TeacherOC,"Corristo mě může naučit magické KRUHY a zvýšit moji magickou energii. Obývá dům mágů Ohně."); 
+//	B_LogEntry(GE_TeacherOC,"Corristo can teach me the magic CIRCLES and increase my MANA. He's in the house of the Magicians of Fire.");
+//	B_LogEntry(GE_TeacherOC,"Corristo kann mich die magischen KREISE lehren und meine MANA steigern. Er hält sich den ganzen Tag im Haus der Feuermagier auf.");
+	B_LogEntry(GE_TeacherOC,"Corristo mě může naučit magické KRUHY a zvýšit moji magickou energii. Obývá dům mágů Ohně.");
 };
 //--------------------------------------------------------------------------
 // 							MANA KAUFEN
@@ -469,14 +468,14 @@ instance KDF_402_Corristo_MANA(C_INFO)
 	information = KDF_402_Corristo_MANA_Info;
 	important = 0;
 	permanent = 1;
-//	description = "I need more magic power."; 
-//	description = "Ich benötige mehr magische Kraft"; 
-	description = "Potřebuji více magické moci."; 
+//	description = "I need more magic power.";
+//	description = "Ich benötige mehr magische Kraft";
+	description = "Potřebuji více magické moci.";
 };
 
 func int KDF_402_Corristo_MANA_Condition()
-{ 
-	if (Npc_GetTrueGuild(hero) == GIL_KDF) 
+{
+	if (Npc_GetTrueGuild(hero) == GIL_KDF)
 	{
 		return TRUE;
 	};
@@ -495,7 +494,7 @@ func void KDF_402_Corristo_MANA_Info()
 	Info_AddChoice(KDF_402_Corristo_MANA,DIALOG_BACK ,KDF_402_Corristo_MANA_BACK);
 	Info_AddChoice(KDF_402_Corristo_MANA,B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0),KDF_402_Corristo_MANA_MAN_5);
 	Info_AddChoice(KDF_402_Corristo_MANA,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),KDF_402_Corristo_MANA_MAN_1);
-};  
+};
 func void KDF_402_Corristo_MANA_BACK()
 {
 	Info_ClearChoices(KDF_402_Corristo_MANA);
@@ -532,14 +531,14 @@ instance KDF_402_Corristo_EXPLAINCIRCLES(C_INFO)
 	information = KDF_402_Corristo_EXPLAINCIRCLES_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Please explain the meaning of the magic Circles."; 
-//	description = "Erkläre mir das Wesen der magischen Kreise."; 
-	description = "Vysvětli mi význam kouzelných Kruhů."; 
+//	description = "Please explain the meaning of the magic Circles.";
+//	description = "Erkläre mir das Wesen der magischen Kreise.";
+	description = "Vysvětli mi význam kouzelných Kruhů.";
 };
 
 func int KDF_402_Corristo_EXPLAINCIRCLES_Condition()
-{ 
-	if (Npc_GetTrueGuild(hero) == GIL_KDF) 
+{
+	if (Npc_GetTrueGuild(hero) == GIL_KDF)
 	{
 		return TRUE;
 	};
@@ -570,7 +569,7 @@ func void KDF_402_Corristo_EXPLAINCIRCLES_Info()
 //	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_08"); //To understand their might, you need to recognize your own.
 //	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_08"); //Ihre Macht zu verstehen, bedeutet deine eigene Macht zu erkennen.
 	AI_Output(self,other,"KDF_402_Corristo_EXPLAINCIRCLES_Info_14_08"); //Abys porozuměl jejich moci, musíš poznat sám sebe.
-};  
+};
 //--------------------------------------------------------------------------
 // 							DER ERSTE KREIS
 //--------------------------------------------------------------------------
@@ -581,13 +580,13 @@ instance KDF_402_Corristo_KREIS1(C_INFO)
 	information = KDF_402_Corristo_KREIS1_Info;
 	important = 0;
 	permanent = 1;
-//	description = B_BuildLearnString(NAME_LearnMage_1, LPCOST_TALENT_MAGE_1,0); 
-//	description = B_BuildLearnString(NAME_LearnMage_1, LPCOST_TALENT_MAGE_1,0); 
-	description = B_BuildLearnString(NAME_LearnMage_1,LPCOST_TALENT_MAGE_1,0); 
+//	description = B_BuildLearnString(NAME_LearnMage_1, LPCOST_TALENT_MAGE_1,0);
+//	description = B_BuildLearnString(NAME_LearnMage_1, LPCOST_TALENT_MAGE_1,0);
+	description = B_BuildLearnString(NAME_LearnMage_1,LPCOST_TALENT_MAGE_1,0);
 };
 
 func int KDF_402_Corristo_KREIS1_Condition()
-{ 
+{
 	if (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE) == 0)
 	&& (Npc_KnowsInfo(hero,KDF_402_Corristo_EXPLAINCIRCLES))
 	&& (Npc_GetTrueGuild(hero) == GIL_KDF)
@@ -630,7 +629,7 @@ func void KDF_402_Corristo_KREIS1_Info()
 		AI_Output(self,other,"KDF_402_Corristo_KREIS1_Info_14_09"); //Využij moc run k poznání sebe sama.
 		KDF_402_Corristo_KREIS1.permanent = 0;
 	};
-};  
+};
 //---------------------------------------------------------------------
 //						DER ZWEITE KREIS
 //---------------------------------------------------------------------
@@ -641,13 +640,13 @@ instance KDF_402_Corristo_KREIS2(C_INFO)
 	information = KDF_402_Corristo_KREIS2_Info;
 	important = 0;
 	permanent = 1;
-//	description = B_BuildLearnString(NAME_LearnMage_2, LPCOST_TALENT_MAGE_2,0); 
-//	description = B_BuildLearnString(NAME_LearnMage_2, LPCOST_TALENT_MAGE_2,0); 
-	description = B_BuildLearnString(NAME_LearnMage_2,LPCOST_TALENT_MAGE_2,0); 
+//	description = B_BuildLearnString(NAME_LearnMage_2, LPCOST_TALENT_MAGE_2,0);
+//	description = B_BuildLearnString(NAME_LearnMage_2, LPCOST_TALENT_MAGE_2,0);
+	description = B_BuildLearnString(NAME_LearnMage_2,LPCOST_TALENT_MAGE_2,0);
 };
 
 func int KDF_402_Corristo_KREIS2_Condition()
-{ 
+{
 	if (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE) == 1)
 	&& (Npc_GetTrueGuild(hero) == GIL_KDF)
 
@@ -688,7 +687,7 @@ func void KDF_402_Corristo_KREIS2_Info()
 		KDF_402_Corristo_KREIS2.permanent = 0;
 	};
 
-};  
+};
 //---------------------------------------------------------------------
 //						DER DRITTE KREIS
 //---------------------------------------------------------------------
@@ -699,13 +698,13 @@ instance KDF_402_Corristo_KREIS3(C_INFO)
 	information = KDF_402_Corristo_KREIS3_Info;
 	important = 0;
 	permanent = 1;
-//	description = B_BuildLearnString(NAME_LearnMage_3, LPCOST_TALENT_MAGE_3,0); 
-//	description = B_BuildLearnString(NAME_LearnMage_3, LPCOST_TALENT_MAGE_3,0); 
-	description = B_BuildLearnString(NAME_LearnMage_3,LPCOST_TALENT_MAGE_3,0); 
+//	description = B_BuildLearnString(NAME_LearnMage_3, LPCOST_TALENT_MAGE_3,0);
+//	description = B_BuildLearnString(NAME_LearnMage_3, LPCOST_TALENT_MAGE_3,0);
+	description = B_BuildLearnString(NAME_LearnMage_3,LPCOST_TALENT_MAGE_3,0);
 };
 
 func int KDF_402_Corristo_KREIS3_Condition()
-{ 
+{
 	if (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE ) == 2)
 	&& (Npc_GetTrueGuild(hero) == GIL_KDF)
 
@@ -742,7 +741,7 @@ func void KDF_402_Corristo_KREIS3_Info()
 		KDF_402_Corristo_KREIS3.permanent = 0;
 	};
 
-};  
+};
 //---------------------------------------------------------------------
 //						DER VIERTE KREIS
 //---------------------------------------------------------------------
@@ -753,13 +752,13 @@ instance KDF_402_Corristo_KREIS4(C_INFO)
 	information = KDF_402_Corristo_KREIS4_Info;
 	important = 0;
 	permanent = 1;
-//	description = B_BuildLearnString(NAME_LearnMage_4, LPCOST_TALENT_MAGE_4,0); 
-//	description = B_BuildLearnString(NAME_LearnMage_4, LPCOST_TALENT_MAGE_4,0); 
-	description = B_BuildLearnString(NAME_LearnMage_4,LPCOST_TALENT_MAGE_4,0); 
+//	description = B_BuildLearnString(NAME_LearnMage_4, LPCOST_TALENT_MAGE_4,0);
+//	description = B_BuildLearnString(NAME_LearnMage_4, LPCOST_TALENT_MAGE_4,0);
+	description = B_BuildLearnString(NAME_LearnMage_4,LPCOST_TALENT_MAGE_4,0);
 };
 
 func int KDF_402_Corristo_KREIS4_Condition()
-{ 
+{
 	if (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE ) == 3)
 	&& (Npc_GetTrueGuild(hero) == GIL_KDF)
 	{
@@ -794,9 +793,9 @@ func void KDF_402_Corristo_KREIS4_Info()
 		AI_Output(self,other,"KDF_402_Corristo_KREIS4_Info_14_07"); //Jakmile porozumíš magii, objevíš tajemství moci.
 		KDF_402_Corristo_KREIS4.permanent = 0;
 	};
-};  
+};
 /*------------------------------------------------------------------------
-							SCHWERE ROBE 
+							SCHWERE ROBE
 ------------------------------------------------------------------------*/
 
 instance KDF_402_Corristo_HEAVYARMOR(C_INFO)
@@ -806,11 +805,11 @@ instance KDF_402_Corristo_HEAVYARMOR(C_INFO)
 	information = KDF_402_Corristo_HEAVYARMOR_Info;
 	important = 0;
 	permanent = 1;
-	description = B_BuildBuyArmorString(NAME_CorristoHighRobe,VALUE_KDF_ARMOR_H); 
+	description = B_BuildBuyArmorString(NAME_CorristoHighRobe,VALUE_KDF_ARMOR_H);
 };
 
 func int KDF_402_Corristo_HEAVYARMOR_Condition()
-{ 
+{
 	if (Npc_GetTrueGuild(hero) == GIL_KDF)
 	{
 		return TRUE;
@@ -822,21 +821,21 @@ func void KDF_402_Corristo_HEAVYARMOR_Info()
 //	AI_Output(other,self,"KDF_402_Corristo_HEAVYARMOR_Info_15_01"); //Master, I'd like to wear the high robe of Fire.
 //	AI_Output(other,self,"KDF_402_Corristo_HEAVYARMOR_Info_15_01"); //Meister, ich möchte die hohe Robe des Feuers tragen.
 	AI_Output(other,self,"KDF_402_Corristo_HEAVYARMOR_Info_15_01"); //Mistře, chtěl bych nosit vznešené roucho Ohně.
-	if (Kapitel < 3) 
+	if (Kapitel < 3)
 	{
 //		AI_Output(self,other,"KDF_402_Corristo_WANNBEKDF_Info_14_04"); //You are not ready yet. Come back when you've learned more.
 //		AI_Output(self,other,"KDF_402_Corristo_WANNBEKDF_Info_14_04"); //Du bist noch nicht so weit. Komm erst wieder zu mir, wenn du mehr gelernt hast.
 		AI_Output(self,other,"KDF_402_Corristo_WANNBEKDF_Info_14_04"); //Ještě nemáš dostatečné vědomosti. Vrať se, až budeš znát víc.
 		//AI_Output(other,self,"KDF_402_Corristo_HEAVYARMOR_Info_15_02"); //Es ist noch nicht deine Zeit, die hohe Robe zu tragen. //***FALSCHE STIMME***
 	}
-	else if (Npc_HasItems(hero,ItMinugget)< VALUE_KDF_ARMOR_H) 
-	{ 
+	else if (Npc_HasItems(hero,ItMinugget)< VALUE_KDF_ARMOR_H)
+	{
 //		AI_Output(self,other,"KDF_402_Corristo_HEAVYARMOR_Info_14_03"); //You don't own enough ore.
 //		AI_Output(self,other,"KDF_402_Corristo_HEAVYARMOR_Info_14_03"); //Du besitzt nicht genügend Erz.
 		AI_Output(self,other,"KDF_402_Corristo_HEAVYARMOR_Info_14_03"); //Nemáš dost rudy.
-	} 
+	}
 	else
-	{ 
+	{
 //		AI_Output(self,other,"KDF_402_Corristo_HEAVYARMOR_Info_14_04"); //The time has come. You are worthy of wearing the high robe of Fire.
 //		AI_Output(self,other,"KDF_402_Corristo_HEAVYARMOR_Info_14_04"); //Die Zeit ist gekommen. Du bist würdig, die hohe Robe des Feuers zu tragen.
 		AI_Output(self,other,"KDF_402_Corristo_HEAVYARMOR_Info_14_04"); //Nadešel čas. Jsi hoden nosit vznešené roucho Ohně.
@@ -852,4 +851,4 @@ func void KDF_402_Corristo_HEAVYARMOR_Info()
 		KDF_402_Corristo_HEAVYARMOR.permanent = 0;
 	};
 
-};  
+};

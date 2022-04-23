@@ -1,5 +1,5 @@
 // **************************************************
-//						 EXIT 
+//						 EXIT
 // **************************************************
 
 instance DIA_Fortuno_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Fortuno_EXIT(C_INFO)
 	information = DIA_Fortuno_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Fortuno_EXIT_Condition()
 {
@@ -34,7 +34,7 @@ instance DIA_Fortuno_Greet(C_INFO)
 	information = DIA_Fortuno_Greet_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Fortuno_Greet_Condition()
 {
@@ -67,7 +67,7 @@ instance DIA_Fortuno_GetGeschenk(C_INFO)
 //	description = "What have you got for me?";
 //	description = "Was hast du für mich?";
 	description = "Co pro mě máš?";
-};                       
+};
 
 func int DIA_Fortuno_GetGeschenk_Condition()
 {
@@ -113,7 +113,7 @@ instance DIA_Fortuno_DailyRation(C_INFO)
 //	description = "I've come to collect my daily ration.";
 //	description = "Ich will mir meine tägliche Ration abholen.";
 	description = "Přišel jsem si vyzvednout svůj denní příděl.";
-};                       
+};
 
 func int DIA_Fortuno_DailyRation_Condition()
 {
@@ -160,7 +160,7 @@ instance DIA_Fortuno_BuyJoints(C_INFO)
 //	description = "Ich will handeln.";
 	description = "Chci obchodovat.";
 	Trade = 1;
-};                       
+};
 
 func int DIA_Fortuno_BuyJoints_Condition()
 {

@@ -11,15 +11,15 @@ instance Info_Xardas_OT(C_INFO)
 	condition = Info_Xardas_OT_Condition;
 	information = Info_Xardas_OT_Info;
 	important = 1;
-	permanent = 0; 
+	permanent = 0;
 };
 
 func int Info_Xardas_OT_Condition()
-{ 
+{
 	if (Npc_GetDistToWP(self,"TPL_331") < 1000)
-	{ 
+	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Xardas_OT_Info()
@@ -67,7 +67,7 @@ func void Info_Xardas_OT_Info()
 //	AI_Output(self,other,"Info_Xardas_OT_14_14"); //Ich ... muss ...
 	AI_Output(self,other,"Info_Xardas_OT_14_14"); //Já... musím...
 
-	Npc_ExchangeRoutine(self,"DRAINED"); 
+	Npc_ExchangeRoutine(self,"DRAINED");
 
 	Log_CreateTopic(CH6_Sleeper,LOG_MISSION);
 	Log_SetTopicStatus(CH6_Sleeper,LOG_RUNNING);
@@ -76,4 +76,4 @@ func void Info_Xardas_OT_Info()
 	B_LogEntry(CH6_Sleeper,"Nadešel čas. Musím být v těsné blízkosti místa Spáčova odpočinku. Znenadání se objevil Xardas a dal mi pokyny k boji. V relikviáři je pět srdcí nemrtvých skřetích šamanů, která musím proklát pěti čepelemi, které mám při sobě. To je jediný způsob, jak porazit Spáče. Vypadá to prostě...");
 
 	AI_StopProcessInfos(self);
-}; 
+};

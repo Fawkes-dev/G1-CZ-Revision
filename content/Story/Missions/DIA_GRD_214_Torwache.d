@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Grd_214_Torwache_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Grd_214_Torwache_Exit(C_INFO)
 	information = DIA_Grd_214_Torwache_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Grd_214_Torwache_Exit_Condition()
 {
@@ -33,14 +33,14 @@ instance DIA_Grd_214_Torwache_job(C_INFO)
 	condition = DIA_Grd_214_Torwache_job_Condition;
 	information = DIA_Grd_214_Torwache_job_Info;
 	permanent = 1;
-//	description = "What do you do all day?"; 
-//	description = "Was machst du hier?"; 
-	description = "Co tady děláš?"; 
+//	description = "What do you do all day?";
+//	description = "Was machst du hier?";
+	description = "Co tady děláš?";
 };
 
 func int DIA_Grd_214_Torwache_job_Condition()
-{ 
-	return 1; 
+{
+	return 1;
 };
 
 func void DIA_Grd_214_Torwache_job_Info()
@@ -69,7 +69,7 @@ instance Grd_214_Torwache_SEETHORUS(C_INFO)
 };
 
 func int Grd_214_Torwache_SEETHORUS_Condition()
-{ 
+{
 	if (!Npc_KnowsInfo(hero,GRD_216_TORWACHE_SEETHORUS))
 	&& ((CorKalom_BringMCQBalls == LOG_SUCCESS) || (Npc_HasItems(hero,ItAt_Crawlerqueen) >= 3))
 	&& (!Npc_KnowsInfo(hero,GRD_200_Thorus_GARDIST))
@@ -104,7 +104,7 @@ instance Grd_214_Torwache_NODUSTY(C_INFO)
 };
 
 func int Grd_214_Torwache_NODUSTY_Condition()
-{ 
+{
 	var C_NPC Dusty; Dusty = Hlp_GetNpc(Vlk_524_Dusty);
 	if (Dusty.aivar[AIV_PARTYMEMBER] == TRUE)
 	&& (Npc_GetDistToNpc(hero,dusty)<2000)

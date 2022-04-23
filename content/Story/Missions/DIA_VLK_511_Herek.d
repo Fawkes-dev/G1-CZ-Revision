@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Herek_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Herek_Exit(C_INFO)
 	information = DIA_Herek_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Herek_Exit_Condition()
 {
@@ -37,7 +37,7 @@ instance DIA_Herek_Bully(C_INFO)
 };
 
 func int DIA_Herek_Bully_Condition()
-{ 
+{
 	if ((Npc_GetDistToNpc(self,other)<=ZivilAnquatschDist) && (Herek_ProtectionBully==TRUE))
 	{
 		return 1;
@@ -87,7 +87,7 @@ instance DIA_Herek_Motz(C_INFO)
 };
 
 func int DIA_Herek_Motz_Condition()
-{ 
+{
 	if (Herek_ProtectionBully==FALSE)
 	{
 		return 1;
@@ -134,7 +134,7 @@ instance DIA_Herek_Anlegen(C_INFO)
 };
 
 func int DIA_Herek_Anlegen_Condition()
-{ 
+{
 	if ((Npc_KnowsInfo(hero,DIA_Herek_Motz)) || (Npc_KnowsInfo(hero,DIA_Herek_Bully)))
 	{
 		return 1;

@@ -7,10 +7,10 @@ instance Info_Xardas_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Xardas_EXIT_Condition;
 	information = Info_Xardas_EXIT_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_Xardas_EXIT_Condition()
 {
@@ -52,7 +52,7 @@ instance Info_Xardas_DISTURB(C_INFO)
 };
 
 func int Info_Xardas_DISTURB_Condition()
-{ 
+{
 	if /*(FindGolemHearts == 4)
 	&& */!UrShak_SpokeOfUluMulu
 	{
@@ -75,7 +75,7 @@ func void Info_Xardas_DISTURB_Info()
 //	AI_Output(self,hero,"Info_Xardas_DISTURB_14_04"); //All that matters is that you are the first person in years to have solved my Golem's riddles.
 //	AI_Output(self,hero,"Info_Xardas_DISTURB_14_04"); //Wichtig ist nur, dass du der Erste seit vielen Jahren bist, der meine Golemrätsel gelöst hat.
 	AI_Output(self,hero,"Info_Xardas_DISTURB_14_04"); //Důležité je jen to, že jsi za ta léta první člověk, který vyřešil hádanku mých Golemů.
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info OTHERS
@@ -93,7 +93,7 @@ instance Info_Xardas_OTHERS(C_INFO)
 };
 
 func int Info_Xardas_OTHERS_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Info_Xardas_DISTURB)
 	{
 		return TRUE;
@@ -111,7 +111,7 @@ func void Info_Xardas_OTHERS_Info()
 //	AI_Output(hero,self,"Info_Xardas_OTHERS_15_03"); //You enjoy being on your own, don't you?
 //	AI_Output(hero,self,"Info_Xardas_OTHERS_15_03"); //Du bist wohl gerne ungestört, was?
 	AI_Output(hero,self,"Info_Xardas_OTHERS_15_03"); //Ty jsi nerad vyrušován, viď?
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info SATURAS
@@ -129,7 +129,7 @@ instance Info_Xardas_SATURAS(C_INFO)
 };
 
 func int Info_Xardas_SATURAS_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Info_Xardas_DISTURB)
 	{
 		return TRUE;
@@ -153,7 +153,7 @@ func void Info_Xardas_SATURAS_Info()
 //	AI_Output(self,hero,"Info_Xardas_SATURAS_14_05"); //NO!
 //	AI_Output(self,hero,"Info_Xardas_SATURAS_14_05"); //NEIN!
 	AI_Output(self,hero,"Info_Xardas_SATURAS_14_05"); //NE!
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info KDW
@@ -171,7 +171,7 @@ instance Info_Xardas_KDW(C_INFO)
 };
 
 func int Info_Xardas_KDW_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Info_Xardas_DISTURB)
 	{
 		return TRUE;
@@ -192,7 +192,7 @@ func void Info_Xardas_KDW_Info()
 //	AI_Output(self,hero,"Info_Xardas_KDW_14_04"); //Corristo and the other magicians elected their own hangman when they helped Gomez to usurp the power.
 //	AI_Output(self,hero,"Info_Xardas_KDW_14_04"); //Corristo und die anderen Magier haben sich ihren Henker selbst gewählt, als sie Gomez damals halfen, die Macht an sich zu reißen.
 	AI_Output(self,hero,"Info_Xardas_KDW_14_04"); //Corristo a další mágové si sami zvolili šibenici, když pomáhali Gomezovi získat moc.
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info SLEEPER
@@ -210,7 +210,7 @@ instance Info_Xardas_SLEEPER(C_INFO)
 };
 
 func int Info_Xardas_SLEEPER_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Info_Xardas_DISTURB)
 	{
 		return TRUE;
@@ -228,10 +228,10 @@ func void Info_Xardas_SLEEPER_Info()
 //	AI_Output(hero,self,"Info_Xardas_SLEEPER_15_03"); //Now the Magicians of Water believe that everybody in the colony is in great danger.
 //	AI_Output(hero,self,"Info_Xardas_SLEEPER_15_03"); //Die Wassermagier glauben nun, dass wir alle in der Kolonie in großer Gefahr seien.
 	AI_Output(hero,self,"Info_Xardas_SLEEPER_15_03"); //Teď si mágové Vody myslí, že jsme všichni v Kolonii ve velkém nebezpečí.
-//	AI_Output(self,hero,"Info_Xardas_SLEEPER_14_04"); //There is a greater danger than anyone within the Barrier could possibly imagine. 
+//	AI_Output(self,hero,"Info_Xardas_SLEEPER_14_04"); //There is a greater danger than anyone within the Barrier could possibly imagine.
 //	AI_Output(self,hero,"Info_Xardas_SLEEPER_14_04"); //Die Gefahr ist größer als irgendjemand innerhalb der Barriere erahnen kann.
 	AI_Output(self,hero,"Info_Xardas_SLEEPER_14_04"); //To nebezpečí je větší, než si kdokoliv uvnitř Bariéry dokáže představit.
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info DANGER
@@ -249,7 +249,7 @@ instance Info_Xardas_DANGER(C_INFO)
 };
 
 func int Info_Xardas_DANGER_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Info_Xardas_SLEEPER)
 	&& Npc_KnowsInfo(hero,Info_Xardas_SATURAS)
 	{
@@ -291,7 +291,7 @@ instance Info_Xardas_BARRIER(C_INFO)
 };
 
 func int Info_Xardas_BARRIER_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Info_Xardas_DANGER)
 	{
 		return TRUE;
@@ -299,7 +299,7 @@ func int Info_Xardas_BARRIER_Condition()
 };
 func void Info_Xardas_BARRIER_Info()
 {
-//	AI_Output(hero,self,"Info_Xardas_BARRIER_15_01"); //Did you find out why that happened? 
+//	AI_Output(hero,self,"Info_Xardas_BARRIER_15_01"); //Did you find out why that happened?
 //	AI_Output(hero,self,"Info_Xardas_BARRIER_15_01"); //Hast du es herausgefunden?
 	AI_Output(hero,self,"Info_Xardas_BARRIER_15_01"); //Ty jsi to zjistil?
 //	AI_Output(self,hero,"Info_Xardas_BARRIER_14_02"); //Well, one thing is certain: The answer lies deep beneath the Orc town.
@@ -320,7 +320,7 @@ func void Info_Xardas_BARRIER_Info()
 //	AI_Output(self,hero,"Info_Xardas_BARRIER_14_07"); //The Orcs gave him that name much later. But I won't tell you why they did it, or why they are now terrified by this supernatural creature!
 //	AI_Output(self,hero,"Info_Xardas_BARRIER_14_07"); //Diesen Namen gaben ihm die Orks erst viel später. Doch warum sie das taten und warum sie heute vor diesem Überwesen in Furcht erzittern, werde ich dir nicht erzählen!
 	AI_Output(self,hero,"Info_Xardas_BARRIER_14_07"); //Skřeti mu tohle jméno dali až mnohem později. Neřeknu ti ale, proč mu ho dali, ani proč se teď té nadpřirozené bytosti děsí!
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info EVENT
@@ -338,7 +338,7 @@ instance Info_Xardas_EVENT(C_INFO)
 };
 
 func int Info_Xardas_EVENT_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Info_Xardas_BARRIER)
 	{
 		return TRUE;
@@ -358,7 +358,7 @@ func void Info_Xardas_EVENT_Info()
 //	AI_Output(self,hero,"Info_Xardas_EVENT_14_04"); //Listen carefully: The Orcs have exiled one of their shamen from the town.
 //	AI_Output(self,hero,"Info_Xardas_EVENT_14_04"); //Hör gut zu: Die Orks haben einen ihrer Schamanen aus ihrer Stadt verbannt.
 	AI_Output(self,hero,"Info_Xardas_EVENT_14_04"); //Pozorně poslouchej. Skřeti vyhostili ze svého města jednoho šamana.
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info EVENTWHY
@@ -376,7 +376,7 @@ instance Info_Xardas_EVENTWHY(C_INFO)
 };
 
 func int Info_Xardas_EVENTWHY_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Info_Xardas_EVENT)
 	{
 		return TRUE;
@@ -389,8 +389,8 @@ func void Info_Xardas_EVENTWHY_Info()
 	AI_Output(hero,self,"Info_Xardas_EVENTWHY_15_01"); //Proč ho vyhostili?
 //	AI_Output(self,hero,"Info_Xardas_EVENTWHY_14_02"); //The dying Orc warrior was no longer able to answer that question when he was interrogated by one of my demons.
 //	AI_Output(self,hero,"Info_Xardas_EVENTWHY_14_02"); //Das konnte der sterbende Ork-Krieger, der von einem meiner Dämonen befragt wurde, nicht mehr von sich geben.
-	AI_Output(self,hero,"Info_Xardas_EVENTWHY_14_02"); //Na tuto otázku už nebyl umírající skřetí bojovník schopen odpovědět, když ho vyslýchal jeden z mých démonů. 
-}; 
+	AI_Output(self,hero,"Info_Xardas_EVENTWHY_14_02"); //Na tuto otázku už nebyl umírající skřetí bojovník schopen odpovědět, když ho vyslýchal jeden z mých démonů.
+};
 
 //---------------------------------------------------------------------
 //	Info EVENTHOW
@@ -408,7 +408,7 @@ instance Info_Xardas_EVENTHOW(C_INFO)
 };
 
 func int Info_Xardas_EVENTHOW_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Info_Xardas_EVENT)
 	{
 		return TRUE;
@@ -433,14 +433,14 @@ func void Info_Xardas_EVENTHOW_Info()
 	AI_Output(hero,self,"Info_Xardas_EVENTHOW_15_05"); //Ano, chci, ale...
 //	AI_Output(self,hero,"Info_Xardas_EVENTHOW_14_06"); //Then never question my words again!
 //	AI_Output(self,hero,"Info_Xardas_EVENTHOW_14_06"); //Dann stelle meine Worte nie wieder in Frage!
-	AI_Output(self,hero,"Info_Xardas_EVENTHOW_14_06"); //Pak tedy už nikdy nezpochybňuj co ti říkám! 
+	AI_Output(self,hero,"Info_Xardas_EVENTHOW_14_06"); //Pak tedy už nikdy nezpochybňuj co ti říkám!
 //	AI_Output(self,hero,"Info_Xardas_EVENTHOW_14_07"); //Find the shaman. He's not on good terms with his brothers in the Orc town, so he may listen to you before turning you into a living torch!
 //	AI_Output(self,hero,"Info_Xardas_EVENTHOW_14_07"); //Suche den Schamanen. Er ist nicht gut auf seine Brüder in der Orkstadt zu sprechen, also wird er dir vielleicht zuhören, bevor er dich zu einer lebenden Fackel macht!
 	AI_Output(self,hero,"Info_Xardas_EVENTHOW_14_07"); //Najdi toho šamana. Nepohodl se se svými bratry ve skřetím městě, takže tě možná vyslechne... Předtím, než z tebe udělá živou pochodeň!
 //	AI_Output(hero,self,"Info_Xardas_EVENTHOW_15_08"); //Very comforting!
 //	AI_Output(hero,self,"Info_Xardas_EVENTHOW_15_08"); //Sehr beruhigend!
 	AI_Output(hero,self,"Info_Xardas_EVENTHOW_15_08"); //Pěkná představa!
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info EVENTWHERE
@@ -458,7 +458,7 @@ instance Info_Xardas_EVENTWHERE(C_INFO)
 };
 
 func int Info_Xardas_EVENTWHERE_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Info_Xardas_EVENT)
 	{
 		return TRUE;
@@ -478,7 +478,7 @@ func void Info_Xardas_EVENTWHERE_Info()
 //	AI_Output(self,hero,"Info_Xardas_EVENTWHERE_14_04"); //They call it the old citadel but there's hardly anything left of it other than the foundation walls. It's been a ruin for many decades.
 //	AI_Output(self,hero,"Info_Xardas_EVENTWHERE_14_04"); //Es wird zwar noch Altes Kastell genannt, aber genau genommen stehen da nur noch die Grundmauern. Es ist schon seit vielen Jahrzehnten eine Ruine.
 	AI_Output(self,hero,"Info_Xardas_EVENTWHERE_14_04"); //Říkají jí stará citadela, ale zůstali po ní jen základové zdi. Je to zřícenina už mnoho desetiletí.
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info ACCEPT
@@ -496,7 +496,7 @@ instance Info_Xardas_ACCEPT(C_INFO)
 };
 
 func int Info_Xardas_ACCEPT_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Info_Xardas_EVENTWHY)
 	&& Npc_KnowsInfo(hero,Info_Xardas_EVENTHOW)
 	&& Npc_KnowsInfo(hero,Info_Xardas_EVENTWHERE)
@@ -520,9 +520,9 @@ func void Info_Xardas_ACCEPT_Info()
 	B_Story_FindOrcShaman();
 
 	AI_StopProcessInfos(self);
-}; 
+};
 /*------------------------------------------------------------------------
-						SCROLLS UND RUNEN VERKAUFEN 
+						SCROLLS UND RUNEN VERKAUFEN
 ------------------------------------------------------------------------*/
 
 instance Kdf_404_Xardas_SELLMAGICSTUFF(C_INFO)
@@ -533,14 +533,14 @@ instance Kdf_404_Xardas_SELLMAGICSTUFF(C_INFO)
 	important = 0;
 	permanent = 1;
 	trade = 1;
-//	description = "I'm seeking magic knowledge"; 
-//	description = "Ich suche magisches Wissen"; 
-	description = "Hledám magické vědění."; 
+//	description = "I'm seeking magic knowledge";
+//	description = "Ich suche magisches Wissen";
+	description = "Hledám magické vědění.";
 
 };
 
 func int Kdf_404_Xardas_SELLMAGICSTUFF_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_Xardas_ACCEPT))
 	{
 		return TRUE;
@@ -570,7 +570,7 @@ instance Info_Xardas_RETURN(C_INFO)
 };
 
 func int Info_Xardas_RETURN_Condition()
-{ 
+{
 	if UrShak_SpokeOfUluMulu
 	&& !EnteredTemple
 	{
@@ -623,7 +623,7 @@ func void Info_Xardas_RETURN_Info()
 	AI_Output(self,hero,"Info_Xardas_RETURN_14_14"); //PAK TEDY BĚŽ. Už se promrhalo spoustu času! Jdi do podzemního chrámu a najdi tam odpověď!
 
 	B_Story_ReturnedFromUrShak();
-}; 
+};
 
 //#####################################################################
 //##
@@ -643,17 +643,17 @@ instance Info_Xardas_FOUNDTEMPLE(C_INFO)
 	information = Info_Xardas_FOUNDTEMPLE_Info;
 	important = 0;
 	permanent = 0;
-//	description = "I have found a way into the underground temple!"; 
-//	description = "Ich habe einen Weg in den unterirdischen Tempel gefunden!"; 
-	description = "Našel jsem cestu do podzemního chrámu!"; 
+//	description = "I have found a way into the underground temple!";
+//	description = "Ich habe einen Weg in den unterirdischen Tempel gefunden!";
+	description = "Našel jsem cestu do podzemního chrámu!";
 };
 
 func int Info_Xardas_FOUNDTEMPLE_Condition()
-{ 
+{
 	if (EnteredTemple)
-	{ 
+	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Xardas_FOUNDTEMPLE_Info()
@@ -682,17 +682,17 @@ instance Info_Xardas_PROPHECY(C_INFO)
 	information = Info_Xardas_PROPHECY_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Prophecies? What prophecies?"; 
-//	description = "Prophezeiungen? Welche Prophezeiungen?"; 
-	description = "Proroctví? Jaké proroctví?"; 
+//	description = "Prophecies? What prophecies?";
+//	description = "Prophezeiungen? Welche Prophezeiungen?";
+	description = "Proroctví? Jaké proroctví?";
 };
 
 func int Info_Xardas_PROPHECY_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_Xardas_FOUNDTEMPLE))
-	{ 
+	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Xardas_PROPHECY_Info()
@@ -727,17 +727,17 @@ instance Info_Xardas_LOADSWORD(C_INFO)
 	information = Info_Xardas_LOADSWORD_Info;
 	important = 0;
 	permanent = 0;
-//	description = "I've found this strange sword."; 
-//	description = "Ich habe dieses seltsame Schwert hier gefunden."; 
-	description = "Našel jsem zvláštní meč."; 
+//	description = "I've found this strange sword.";
+//	description = "Ich habe dieses seltsame Schwert hier gefunden.";
+	description = "Našel jsem zvláštní meč.";
 };
 
 func int Info_Xardas_LOADSWORD_Condition()
-{ 
+{
 	if (Npc_HasItems(hero,Mythrilklinge ))
-	{ 
+	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Xardas_LOADSWORD_Info()
@@ -765,11 +765,11 @@ func void Info_Xardas_LOADSWORD_Info()
 //	AI_Output(self,other,"Info_Xardas_LOADSWORD_14_05"); //The weapon was forged from an unknown material. And there's nothing written about who created it!
 //	AI_Output(self,other,"Info_Xardas_LOADSWORD_14_05"); //Die Waffe ist aus einem völlig unbekannten Material geschmiedet. Auch über den Erschaffer steht nichts geschrieben!
 	AI_Output(self,other,"Info_Xardas_LOADSWORD_14_05"); //Ta zbraň byla ukována z neznámého materiálu. Neexistují ani záznamy o tom, kdo ji vykoval!
-//	AI_Output(self,other,"Info_Xardas_LOADSWORD_14_06"); //This blade was said to possess unbelievable powers, but I don't notice any magical aura! 
+//	AI_Output(self,other,"Info_Xardas_LOADSWORD_14_06"); //This blade was said to possess unbelievable powers, but I don't notice any magical aura!
 //	AI_Output(self,other,"Info_Xardas_LOADSWORD_14_06"); //Angeblich soll diese Klinge unglaubliche Kräfte besessen haben, aber ich kann keinerlei magische Aura feststellen!
 	AI_Output(self,other,"Info_Xardas_LOADSWORD_14_06"); //Čepel má být údajně obdařena neuvěřitelnou mocí, ale necítím žádnou magickou auru!
 
-	Npc_RemoveInvItem(hero,Mythrilklinge); 
+	Npc_RemoveInvItem(hero,Mythrilklinge);
 	CreateInvItem(hero,Mythrilklinge01);
 };
 
@@ -783,17 +783,17 @@ instance Info_Xardas_LOADSWORD01(C_INFO)
 	information = Info_Xardas_LOADSWORD01_Info;
 	important = 0;
 	permanent = 0;
-//	description = "URIZIEL possessed unbelievable powers?"; 
-//	description = "URIZIEL besaß unglaubliche Kräfte?"; 
-	description = "URIZIEL je obdařen neuvěřitelnou mocí?"; 
+//	description = "URIZIEL possessed unbelievable powers?";
+//	description = "URIZIEL besaß unglaubliche Kräfte?";
+	description = "URIZIEL je obdařen neuvěřitelnou mocí?";
 };
 
 func int Info_Xardas_LOADSWORD01_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_Xardas_LOADSWORD ))
-	{ 
+	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Xardas_LOADSWORD01_Info()
@@ -827,17 +827,17 @@ instance Info_Xardas_LOADSWORD02(C_INFO)
 	information = Info_Xardas_LOADSWORD02_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Is it possible to restore the former powers of the weapon?"; 
-//	description = "Kann man die damaligen Kräfte der Waffe wiederherstellen?"; 
-	description = "Je možné obnovit bývalou moc této zbraně?"; 
+//	description = "Is it possible to restore the former powers of the weapon?";
+//	description = "Kann man die damaligen Kräfte der Waffe wiederherstellen?";
+	description = "Je možné obnovit bývalou moc této zbraně?";
 };
 
 func int Info_Xardas_LOADSWORD02_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_Xardas_LOADSWORD01 ))
-	{ 
+	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Xardas_LOADSWORD02_Info()
@@ -874,17 +874,17 @@ instance Info_Xardas_BETTERARMOR(C_INFO)
 	information = Info_Xardas_BETTERARMOR_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Meanwhile, I'll be hunting around for a better armor!"; 
-//	description = "Ich werde mich in der Zwischenzeit nach einer besseren Rüstung umsehen!"; 
-	description = "Já se zatím podívám po nějaké lepší zbroji!"; 
+//	description = "Meanwhile, I'll be hunting around for a better armor!";
+//	description = "Ich werde mich in der Zwischenzeit nach einer besseren Rüstung umsehen!";
+	description = "Já se zatím podívám po nějaké lepší zbroji!";
 };
 
 func int Info_Xardas_BETTERARMOR_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_Xardas_LOADSWORD02))
-	{ 
+	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Xardas_BETTERARMOR_Info()
@@ -901,7 +901,7 @@ func void Info_Xardas_BETTERARMOR_Info()
 //		AI_Output(other,self,"Info_Xardas_BETTERARMOR_15_02"); //Die paar zusammengeflickten Minecrawler-Platten haben im unterirdischen Tempel einfach zu viel Hiebe durchgelassen!
 		AI_Output(other,self,"Info_Xardas_BETTERARMOR_15_02"); //Těchhle pár sešitých plátů důlních červů bylo v podzemním chrámu mnohokrát proraženo!
 	}
-	else if (armorinstance == KDW_ARMOR_H) || (armorinstance == KDW_ARMOR_L) 
+	else if (armorinstance == KDW_ARMOR_H) || (armorinstance == KDW_ARMOR_L)
 	{
 //		AI_Output(other,self,"Info_Xardas_BETTERARMOR_15_03"); //These blue rags didn't protect me well enough in the underground temple!
 //		AI_Output(other,self,"Info_Xardas_BETTERARMOR_15_03"); //Die paar blauen Stofflaken hier haben mich im unterirdischen Tempel nicht ausreichend geschützt!
@@ -952,12 +952,12 @@ instance Info_Xardas_OREARMOR(C_INFO)
 };
 
 func int Info_Xardas_OREARMOR_Condition()
-{ 
+{
 	if Npc_HasItems(hero,ORE_ARMOR_M)
 	|| Npc_HasItems(hero,ORE_ARMOR_H)
-	{ 
+	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Xardas_OREARMOR_Info()
@@ -989,7 +989,7 @@ func void Info_Xardas_OREARMOR_Info()
 };
 
 //---------------------------------------------------------------------
-//	Info FORMULA 
+//	Info FORMULA
 //---------------------------------------------------------------------
 instance Info_Xardas_FORMULA(C_INFO)
 {
@@ -1004,13 +1004,13 @@ instance Info_Xardas_FORMULA(C_INFO)
 };
 
 func int Info_Xardas_FORMULA_Condition()
-{ 
+{
 	if Npc_HasItems(hero,ORE_ARMOR_M)
 	|| Npc_HasItems(hero,ORE_ARMOR_H)
 	|| Npc_HasItems(hero,ItArRuneTeleport1)
-	{ 
+	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Xardas_FORMULA_Info()
@@ -1038,7 +1038,7 @@ func void Info_Xardas_FORMULA_Info()
 };
 
 //---------------------------------------------------------------------
-//	Info ALTRUNE 
+//	Info ALTRUNE
 //---------------------------------------------------------------------
 instance Info_Xardas_ALTRUNE(C_INFO)
 {
@@ -1053,12 +1053,12 @@ instance Info_Xardas_ALTRUNE(C_INFO)
 };
 
 func int Info_Xardas_ALTRUNE_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Info_Xardas_FORMULA)
 	&& ((Npc_GetTrueGuild(hero) == GIL_KDW) || (Npc_GetTrueGuild(hero) == GIL_DMB))
-	{ 
+	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Xardas_ALTRUNE_Info()
@@ -1084,17 +1084,17 @@ instance Info_Xardas_SWORDLOADED(C_INFO)
 	information = Info_Xardas_SWORDLOADED_Info;
 	important = 0;
 	permanent = 0;
-//	description = "I've reactivated URIZIEL!"; 
-//	description = "Ich habe URIZIEL aufgeladen!"; 
-	description = "Obnovil jsem sílu URIZIELU!"; 
+//	description = "I've reactivated URIZIEL!";
+//	description = "Ich habe URIZIEL aufgeladen!";
+	description = "Obnovil jsem sílu URIZIELU!";
 };
 
 func int Info_Xardas_SWORDLOADED_Condition()
-{ 
+{
 	if  Npc_HasItems(hero,Mythrilklinge02)
-	{ 
-		return TRUE; 
-	}; 
+	{
+		return TRUE;
+	};
 };
 
 func void Info_Xardas_SWORDLOADED_Info()
@@ -1120,18 +1120,18 @@ instance Info_Xardas_MAKERUNE(C_INFO)
 	information = Info_Xardas_MAKERUNE_Info;
 	important = 0;
 	permanent = 0;
-//	description = "You said there might be a way to wield URIZIEL though I'm a magician!"; 
-//	description = "Du erwähntest einen Weg, wie ich URIZIEL auch als Magier führen könnte!"; 
-	description = "Zmínil jsi, že existuje způsob, jak URIZIEL ovládat, i když jsem mág?"; 
+//	description = "You said there might be a way to wield URIZIEL though I'm a magician!";
+//	description = "Du erwähntest einen Weg, wie ich URIZIEL auch als Magier führen könnte!";
+	description = "Zmínil jsi, že existuje způsob, jak URIZIEL ovládat, i když jsem mág?";
 };
 
 func int Info_Xardas_MAKERUNE_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Info_Xardas_ALTRUNE)
 	&& Npc_KnowsInfo(hero,Info_Xardas_SWORDLOADED)
-	{ 
-		return TRUE; 
-	}; 
+	{
+		return TRUE;
+	};
 };
 
 func void Info_Xardas_MAKERUNE_Info()
@@ -1169,18 +1169,18 @@ instance Info_Xardas_MAKERUNEDOIT(C_INFO)
 	information = Info_Xardas_MAKERUNEDOIT_Info;
 	important = 0;
 	permanent = 1;
-//	description = "Remove the jewel from URIZIEL!"; 
-//	description = "Entferne den Stein aus URIZIEL!"; 
-	description = "Odstraň z URIZIELU ten drahokam!"; 
+//	description = "Remove the jewel from URIZIEL!";
+//	description = "Entferne den Stein aus URIZIEL!";
+	description = "Odstraň z URIZIELU ten drahokam!";
 };
 
 func int Info_Xardas_MAKERUNEDOIT_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Info_Xardas_MAKERUNE)
 	&& Npc_HasItems(hero,Mythrilklinge02)
-	{ 
-		return TRUE; 
-	}; 
+	{
+		return TRUE;
+	};
 };
 
 func void Info_Xardas_MAKERUNEDOIT_Info()
@@ -1218,7 +1218,7 @@ func void Info_Xardas_MAKERUNE_YES()
 	AI_Output(self,other,"Info_Xardas_MAKERUNEDOIT_14_05"); //Jak si přeješ. Tady, vezmi si prázdný meč a runu!
 
 	Npc_RemoveInvItem(hero,Mythrilklinge02);
-	CreateInvItems(self,UrizielRune, 2); 
+	CreateInvItems(self,UrizielRune, 2);
 	B_GiveInvItems(self,hero,UrizielRune, 2);// Wegen Ausgabe "2 Items übergeben", wird direkt angeglichen
 	Npc_RemoveInvItem(hero,UrizielRune);
 	CreateInvItem(hero,Mythrilklinge03);
@@ -1226,7 +1226,7 @@ func void Info_Xardas_MAKERUNE_YES()
 //	B_LogEntry(CH5_Uriziel,"Xardas entfernte den magischen Edelstein aus dem Schwert URIZIEL. Die Macht dieser Klinge schlummert nun in einer Zauberrune von unvergleichlicher Kraft.");
 	B_LogEntry(CH5_Uriziel,"Xardas odstranil z URIZIELU kouzelný drahokam. Síla této čepele spočívá v kouzelné runě nesrovnatelné moci.");
 	Log_SetTopicStatus(CH5_Uriziel,LOG_SUCCESS);
-}; 
+};
 
 func void Info_Xardas_MAKERUNE_NO()
 {
@@ -1237,7 +1237,7 @@ func void Info_Xardas_MAKERUNE_NO()
 //	AI_Output(self,other,"Info_Xardas_MAKERUNEDOIT_14_07"); //As you wish. The blade shall keep its magic powers!
 //	AI_Output(self,other,"Info_Xardas_MAKERUNEDOIT_14_07"); //So sei es. Die Klinge behält ihre magischen Kräfte!
 	AI_Output(self,other,"Info_Xardas_MAKERUNEDOIT_14_07"); //Budiž. Ostří si zachová magickou moc!
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info LOADSWORD9 --> SC kann DMB werden
@@ -1249,18 +1249,18 @@ instance Info_Xardas_LOADSWORD09(C_INFO)
 	information = Info_Xardas_LOADSWORD09_Info;
 	important = 0;
 	permanent = 1;
-//	description = B_BuildLearnString(NAME_LearnMage_6, LPCOST_TALENT_MAGE_6,0); 
-//	description = B_BuildLearnString(NAME_LearnMage_6, LPCOST_TALENT_MAGE_6,0); 
-	description = B_BuildLearnString(NAME_LearnMage_6,LPCOST_TALENT_MAGE_6,0); 
+//	description = B_BuildLearnString(NAME_LearnMage_6, LPCOST_TALENT_MAGE_6,0);
+//	description = B_BuildLearnString(NAME_LearnMage_6, LPCOST_TALENT_MAGE_6,0);
+	description = B_BuildLearnString(NAME_LearnMage_6,LPCOST_TALENT_MAGE_6,0);
 };
 
 func int Info_Xardas_LOADSWORD09_Condition()
-{ 
+{
 	if (EnteredTemple)
 	&& (Npc_GetTrueGuild(hero) == GIL_KDW)
-	{ 
+	{
 		return TRUE;
-	}; 
+	};
 };
 func void Info_Xardas_LOADSWORD09_Info()
 {
@@ -1268,7 +1268,7 @@ func void Info_Xardas_LOADSWORD09_Info()
 //	AI_Output(other,self,"Info_Xardas_LOADSWORD09_15_01"); //Kannst du mich unterrichten?
 	AI_Output(other,self,"Info_Xardas_LOADSWORD09_15_01"); //Můžeš mě učit?
 
-	if ( Npc_GetTalentSkill ( hero,NPC_TALENT_MAGE ) == 5) 
+	if ( Npc_GetTalentSkill ( hero,NPC_TALENT_MAGE ) == 5)
 	{
 
 		if (B_GiveSkill(other,NPC_TALENT_MAGE, 6, LPCOST_TALENT_MAGE_6))
@@ -1297,13 +1297,13 @@ func void Info_Xardas_LOADSWORD09_Info()
 			B_GiveInvItems(self,hero,ItAmArrow,1);
 			Npc_RemoveInvItem(hero,ItAmArrow);
 
-			hero.guild = GIL_DMB; 
-			Npc_SetTrueGuild(hero,GIL_DMB); 
+			hero.guild = GIL_DMB;
+			Npc_SetTrueGuild(hero,GIL_DMB);
 			Info_Xardas_LOADSWORD09.permanent = 0;
 			AI_StopProcessInfos(self);
 		};
 	}
-	else 
+	else
 	{
 //		AI_Output(self,other,"Info_Xardas_LOADSWORD09_14_07"); //Not yet. You have the skill, but you're not experienced enough. Let Saturas train you first, I shall instruct you afterwards.
 //		AI_Output(self,other,"Info_Xardas_LOADSWORD09_14_07"); //Noch nicht, du hast das Talent, aber es fehlt dir an Erfahrung. Lerne erst bei Saturas, dann werde ich dich unterweisen.

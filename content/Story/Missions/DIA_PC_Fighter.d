@@ -8,10 +8,10 @@ instance Info_Gorn_EXIT(C_INFO)
 	nr   = 999;
 	condition = Info_Gorn_EXIT_Condition;
 	information = Info_Gorn_EXIT_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_Gorn_EXIT_Condition()
 {
@@ -391,9 +391,9 @@ instance Info_Gorn_NCWAIT(C_INFO)
 	nr = 1;
 	condition = Info_Gorn_NCWAIT_Condition;
 	information = Info_Gorn_NCWAIT_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
-};                       
+};
 
 func int Info_Gorn_NCWAIT_Condition()
 {
@@ -427,12 +427,12 @@ instance Info_Gorn_MAGES(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_MAGES_Condition;
 	information = Info_Gorn_MAGES_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "I have an important message for the Magicians of Water!";
 //	description = "Ich habe eine wichtige Botschaft für die Wassermagier!";
 	description = "Mám důležitou zprávu pro mágy Vody!";
-};                       
+};
 
 func int Info_Gorn_MAGES_Condition()
 {
@@ -469,12 +469,12 @@ instance Info_Gorn_CRONOS(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_CRONOS_Condition;
 	information = Info_Gorn_CRONOS_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "Where can I find this 'keeper of the ore'?";
 //	description = "Wo finde ich diesen 'Hüter des Erzes'?";
 	description = "Kde najdu toho 'strážce rudy'?";
-};                       
+};
 
 func int Info_Gorn_CRONOS_Condition()
 {
@@ -503,9 +503,9 @@ func void Info_Gorn_CRONOS_Info()
 	Cronos = Hlp_GetNpc(KdW_604_Cronos);
 	Cronos.aivar[AIV_FINDABLE] = TRUE;
 
-//	B_LogEntry(CH3_EscapePlanNC,"Gorn recommended me to go straight to the High Magician of Water, who's called Saturas. Cronos, the keeper of the ore, can get me an audience. Cronos is to be found in the center of the Camp, at the grid above the ore mound."); 
-//	B_LogEntry(CH3_EscapePlanNC,"Gorn empfahl mir, direkt mit dem obersten Wassermagier mit Namen Saturas zu sprechen. Cronos, der Hüter des Erzes, kann eine Audienz erwirken. Cronos hält sich im Zentrum des Neuen Lagers, am Gitter über dem Erzhaufen auf."); 
-	B_LogEntry(CH3_EscapePlanNC,"Gorn mi poradil, abych šel přímo za nejvyšším mágem Vody, Saturasem. Cronos, strážce rudy, mi může zařídit audienci u Saturase. Cronos se zdržuje ve středu Nového tábora u mříže nad rudnou haldou."); 
+//	B_LogEntry(CH3_EscapePlanNC,"Gorn recommended me to go straight to the High Magician of Water, who's called Saturas. Cronos, the keeper of the ore, can get me an audience. Cronos is to be found in the center of the Camp, at the grid above the ore mound.");
+//	B_LogEntry(CH3_EscapePlanNC,"Gorn empfahl mir, direkt mit dem obersten Wassermagier mit Namen Saturas zu sprechen. Cronos, der Hüter des Erzes, kann eine Audienz erwirken. Cronos hält sich im Zentrum des Neuen Lagers, am Gitter über dem Erzhaufen auf.");
+	B_LogEntry(CH3_EscapePlanNC,"Gorn mi poradil, abych šel přímo za nejvyšším mágem Vody, Saturasem. Cronos, strážce rudy, mi může zařídit audienci u Saturase. Cronos se zdržuje ve středu Nového tábora u mříže nad rudnou haldou.");
 
 	Npc_ExchangeRoutine(self,"start");
 };
@@ -519,9 +519,9 @@ instance Info_Gorn_RUINWAIT(C_INFO)
 	nr = 2;
 	condition = Info_Gorn_RUINWAIT_Condition;
 	information = Info_Gorn_RUINWAIT_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
-};                       
+};
 
 func int Info_Gorn_RUINWAIT_Condition()
 {
@@ -552,12 +552,12 @@ instance Info_Gorn_RUINWHAT(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_RUINWHAT_Condition;
 	information = Info_Gorn_RUINWHAT_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "What are you doing here?";
 //	description = "Was führt dich denn hier her?";
 	description = "Kde se tu bereš?";
-};                       
+};
 
 func int Info_Gorn_RUINWHAT_Condition()
 {
@@ -592,7 +592,7 @@ func void Info_Gorn_RUINWHAT_Info()
 	AI_Output(self,other,"Info_Gorn_RUINWHAT_09_07"); //Zajisté tu budou poklady ze starých časů.
 
 	if (!Npc_KnowsInfo(hero,Info_Gorn_RUINFOCUS))
-	{ 
+	{
 //		AI_Output(self,other,"Info_Gorn_RUINWHAT_09_08"); //What brings you here?
 //		AI_Output(self,other,"Info_Gorn_RUINWHAT_09_08"); //Was führt dich hierher?
 		AI_Output(self,other,"Info_Gorn_RUINWHAT_09_08"); //Co tě sem přivádí?
@@ -607,12 +607,12 @@ instance Info_Gorn_RUINFOCUS(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_RUINFOCUS_Condition;
 	information = Info_Gorn_RUINFOCUS_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "I'm looking for a magic focus.";
 //	description = "Ich suche einen magischen Fokus";
 	description = "Hledám magické ohnisko.";
-};                       
+};
 
 func int Info_Gorn_RUINFOCUS_Condition()
 {
@@ -643,12 +643,12 @@ instance Info_Gorn_RUINJOIN(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_RUINJOIN_Condition;
 	information = Info_Gorn_RUINJOIN_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "We could go on together.";
 //	description = "Wir könnten unseren Weg gemeinsam fortsetzen.";
 	description = "Mohli bychom pokračovat společně.";
-};                       
+};
 
 func int Info_Gorn_RUINJOIN_Condition()
 {
@@ -704,9 +704,9 @@ instance Info_Gorn_RUINABYSS(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_RUINABYSS_Condition;
 	information = Info_Gorn_RUINABYSS_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
-};                       
+};
 
 func int Info_Gorn_RUINABYSS_Condition()
 {
@@ -743,9 +743,9 @@ instance Info_Gorn_RUINLEAVE(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_RUINLEAVE_Condition;
 	information = Info_Gorn_RUINLEAVE_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
-};                       
+};
 
 func int Info_Gorn_RUINLEAVE_Condition()
 {
@@ -784,9 +784,9 @@ instance Info_Gorn_RUINWALL(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_RUINWALL_Condition;
 	information = Info_Gorn_RUINWALL_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
-};                       
+};
 
 func int Info_Gorn_RUINWALL_Condition()
 {
@@ -824,12 +824,12 @@ instance Info_Gorn_RUINWALLWHAT(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_RUINWALLWHAT_Condition;
 	information = Info_Gorn_RUINWALLWHAT_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 //	description = "What happens now?";
 //	description = "Wie geht es nun weiter?";
 	description = "A co teď?";
-};                       
+};
 
 func int Info_Gorn_RUINWALLWHAT_Condition()
 {
@@ -858,14 +858,14 @@ instance Info_Gorn_RUINLEDGE(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_RUINLEDGE_Condition;
 	information = Info_Gorn_RUINLEDGE_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
-};                       
+};
 
 func int Info_Gorn_RUINLEDGE_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Gorn_RUINJOIN) 
-	&& !Npc_KnowsInfo(hero,Info_Gorn_RUINSUCCESS) 
+	if (Npc_KnowsInfo(hero,Info_Gorn_RUINJOIN)
+	&& !Npc_KnowsInfo(hero,Info_Gorn_RUINSUCCESS)
 	&& (Npc_GetDistToWP(hero,"OW_MONSTER_NAVIGATE_02")<1000))
 	{
 		return 1;
@@ -894,14 +894,14 @@ instance Info_Gorn_RUINPLATFORM(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_RUINPLATFORM_Condition;
 	information = Info_Gorn_RUINPLATFORM_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
-};                       
+};
 
 func int Info_Gorn_RUINPLATFORM_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Gorn_RUINJOIN) 
-	&& !Npc_KnowsInfo(hero,Info_Gorn_RUINSUCCESS) 
+	if (Npc_KnowsInfo(hero,Info_Gorn_RUINJOIN)
+	&& !Npc_KnowsInfo(hero,Info_Gorn_RUINSUCCESS)
 	&& (Npc_GetDistToWP(hero,"OW_PATH_176_TEMPELFOCUS4")<300))
 	{
 		return 1;
@@ -930,9 +930,9 @@ instance Info_Gorn_RUINGATE(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_RUINGATE_Condition;
 	information = Info_Gorn_RUINGATE_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
-};                       
+};
 
 func int Info_Gorn_RUINGATE_Condition()
 {
@@ -974,9 +974,9 @@ instance Info_Gorn_RUINLEAVEINSIDE(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_RUINLEAVEINSIDE_Condition;
 	information = Info_Gorn_RUINLEAVEINSIDE_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
-};                       
+};
 
 func int Info_Gorn_RUINLEAVEINSIDE_Condition()
 {
@@ -1015,13 +1015,13 @@ instance Info_Gorn_RUINSUCCESS(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_RUINSUCCESS_Condition;
 	information = Info_Gorn_RUINSUCCESS_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
-};                       
+};
 
 func int Info_Gorn_RUINSUCCESS_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Gorn_RUINJOIN) 
+	if (Npc_KnowsInfo(hero,Info_Gorn_RUINJOIN)
 	&& Npc_HasItems(hero,Focus_4))
 	{
 		return TRUE;
@@ -1060,13 +1060,13 @@ instance Info_Gorn_RUINTROLL(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_RUINTROLL_Condition;
 	information = Info_Gorn_RUINTROLL_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
-};                       
+};
 
 func int Info_Gorn_RUINTROLL_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Gorn_RUINSUCCESS) 
+	if (Npc_KnowsInfo(hero,Info_Gorn_RUINSUCCESS)
 	&& (Npc_GetDistToWP(hero,"OW_PATH_SNAPPER04_SPAWN01")<1000))
 	{
 		return TRUE;
@@ -1105,16 +1105,16 @@ instance Info_Gorn_RUINVICTORY(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_RUINVICTORY_Condition;
 	information = Info_Gorn_RUINVICTORY_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
-};                       
+};
 
 func int Info_Gorn_RUINVICTORY_Condition()
 {
 	var C_NPC yTroll;
 	yTroll = Hlp_GetNpc(YoungTroll);
 
-	if Npc_KnowsInfo(hero,Info_Gorn_RUINTROLL) 
+	if Npc_KnowsInfo(hero,Info_Gorn_RUINTROLL)
 	&& Npc_IsDead(yTroll)
 	{
 		return TRUE;
@@ -1172,12 +1172,12 @@ instance Info_Gorn_DIEGOMILTEN(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_DIEGOMILTEN_Condition;
 	information = Info_Gorn_DIEGOMILTEN_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "I met Diego and Milten in front of the Old Camp!";
 //	description = "Ich habe Diego und Milten vor dem Alten Lager getroffen!";
 	description = "Potkal jsem před Starým táborem Diega a Miltena!";
-};                       
+};
 
 func int Info_Gorn_DIEGOMILTEN_Condition()
 {
@@ -1211,11 +1211,11 @@ func void Info_Gorn_DIEGOMILTEN_Info()
 	{
 		warned_gorn_or_lester = TRUE;
 	}
-	else 
+	else
 	{
-//		B_LogEntry(CH4_4Friends, "I informed Lester and Gorn about the meeting with their friends. Now, this isn't my affair any longer. They'll know what do do next..."); 
-//		B_LogEntry(CH4_4Friends, "Ich habe Lester und Gorn nun darüber informiert sich mit den anderen beiden Freunden zu treffen. Ab jetzt ist dies nicht mehr meine Angelegenheit. Sie werden schon wissen, was zu tun ist."); 
-		B_LogEntry(CH4_4Friends, "Řekl jsem Lesterovi a Gornovi o setkání s jejich přáteli. Teď už to není moje věc. Dál si poradí sami..."); 
+//		B_LogEntry(CH4_4Friends, "I informed Lester and Gorn about the meeting with their friends. Now, this isn't my affair any longer. They'll know what do do next...");
+//		B_LogEntry(CH4_4Friends, "Ich habe Lester und Gorn nun darüber informiert sich mit den anderen beiden Freunden zu treffen. Ab jetzt ist dies nicht mehr meine Angelegenheit. Sie werden schon wissen, was zu tun ist.");
+		B_LogEntry(CH4_4Friends, "Řekl jsem Lesterovi a Gornovi o setkání s jejich přáteli. Teď už to není moje věc. Dál si poradí sami...");
 		Log_SetTopicStatus(CH4_4Friends,LOG_SUCCESS);
 	};
 
@@ -1229,12 +1229,12 @@ instance Info_Gorn_FREEMINE(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_FREEMINE_Condition;
 	information = Info_Gorn_FREEMINE_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "What did you see in the Free Mine?";
 //	description = "Was hast du in der Freien Mine gesehen?";
 	description = "Co jsi viděl ve Svobodném dole?";
-};                       
+};
 
 func int Info_Gorn_FREEMINE_Condition()
 {
@@ -1279,12 +1279,12 @@ instance Info_Gorn_GUARDNC(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_GUARDNC_Condition;
 	information = Info_Gorn_GUARDNC_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "What have you got planned now?";
 //	description = "Was hast du jetzt vor?";
 	description = "Co máš teď v plánu?";
-};                       
+};
 
 func int Info_Gorn_GUARDNC_Condition()
 {
@@ -1328,12 +1328,12 @@ instance Info_Gorn_GUARDNCRUNNING(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_GUARDNCRUNNING_Condition;
 	information = Info_Gorn_GUARDNCRUNNING_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 //	description = "How's it going?";
 //	description = "Wie ist die Lage?";
 	description = "Jak to jde?";
-};                       
+};
 
 func int Info_Gorn_GUARDNCRUNNING_Condition()
 {
@@ -1365,9 +1365,9 @@ instance Info_Gorn_POST(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_POST_Condition;
 	information = Info_Gorn_POST_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
-};                       
+};
 
 func int Info_Gorn_POST_Condition()
 {
@@ -1397,12 +1397,12 @@ instance Info_Gorn_TAKEBACK(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_TAKEBACK_Condition;
 	information = Info_Gorn_TAKEBACK_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "You're planning to retake it with just four men?";
 //	description = "Eine Rückeroberung mit vier Mann? Wo sind all die anderen Söldner?";
 	description = "Plánuješ jeho převzetí jenom se čtyřmi muži? Kde jsou ostatní žoldáci?";
-};                       
+};
 
 func int Info_Gorn_TAKEBACK_Condition()
 {
@@ -1470,12 +1470,12 @@ instance Info_Gorn_SECOND(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_SECOND_Condition;
 	information = Info_Gorn_SECOND_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "The first step? What will be the second?";
 //	description = "Der erste Schritt? Was wird denn der zweite sein?";
 	description = "První fáze? Co bude druhá?";
-};                       
+};
 
 func int Info_Gorn_SECOND_Condition()
 {
@@ -1509,12 +1509,12 @@ instance Info_Gorn_WHYME(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_WHYME_Condition;
 	information = Info_Gorn_WHYME_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "Why me, of all people?";
 //	description = "Warum gerade ich?";
 	description = "Proč právě já?";
-};                       
+};
 
 func int Info_Gorn_WHYME_Condition()
 {
@@ -1548,12 +1548,12 @@ instance Info_Gorn_KICKBUTT(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_KICKBUTT_Condition;
 	information = Info_Gorn_KICKBUTT_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "Okay, let's go and teach the unwelcome guests in the mine a lesson!";
 //	description = "Lass uns den ungebetenen Gästen in der Mine kräftig in den Hintern treten!";
 	description = "Dobrá, tak pojďme dát našim nevítaným hostům do dolu pořádnou lekci!";
-};                       
+};
 
 func int Info_Gorn_KICKBUTT_Condition()
 {
@@ -1587,12 +1587,12 @@ instance Info_Gorn_MYWAY(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_MYWAY_Condition;
 	information = Info_Gorn_MYWAY_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "Why not. I need to get into the mine anyway!";
 //	description = "Warum nicht. Ich muss ohnehin in die Mine!";
 	description = "Proč ne. Potřebuju se stejně dostat do dolu!";
-};                       
+};
 
 func int Info_Gorn_MYWAY_Condition()
 {
@@ -1626,9 +1626,9 @@ instance Info_Gorn_WOLF(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_WOLF_Condition;
 	information = Info_Gorn_WOLF_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
-};                       
+};
 
 func int Info_Gorn_WOLF_Condition()
 {
@@ -1651,16 +1651,15 @@ func void Info_Gorn_WOLF_Info()
 	AI_Output(self,hero,"Info_Gorn_WOLF_09_02"); //Bandita Wolf chce s tebou nutně mluvit, ještě než odejdeš do dolu.
 
 	Info_ClearChoices(Info_Gorn_WOLF);
-	
+
 //	Info_AddChoice(Info_Gorn_WOLF, "He can wait, we have more important things to do.", Info_Gorn_WOLF_FM);
 //	Info_AddChoice(Info_Gorn_WOLF, "Er kann warten, wir haben jetzt wichtigeres zu tun!", Info_Gorn_WOLF_FM);
 	Info_AddChoice(Info_Gorn_WOLF, "Může počkat, máme na práci důležitější věci.",Info_Gorn_WOLF_FM);
-	
+
 //	Info_AddChoice(Info_Gorn_WOLF, "Then I'd better go there now.", Info_Gorn_WOLF_WOLF);
 //	Info_AddChoice(Info_Gorn_WOLF, "Dann werde ihn besser noch vorher aufsuchen!", Info_Gorn_WOLF_WOLF);
 	Info_AddChoice(Info_Gorn_WOLF, "Pak tam raději půjdu hned.",Info_Gorn_WOLF_WOLF);
-	
-		
+
 //	B_LogEntry(CH4_UluMulu,"Wolf, the rogue, wants to speak to me again before we make our way to the mine. I'm to look in on him.");
 //	B_LogEntry(CH4_UluMulu,"Wolf der Bandit will mich unbedingt nochmal sprechen, bevor wir zur Mine aufbrechen. Ich sollte bei ihm vorbeischauen.");
 	B_LogEntry(CH4_UluMulu,"Bandita Wolf se mnou chce mluvit ještě předtím, než se vydáme na cestu do dolu. Půjdu ho navštívit.");
@@ -1701,9 +1700,9 @@ instance Info_Gorn_LEAVEFORPOST(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_LEAVEFORPOST_Condition;
 	information = Info_Gorn_LEAVEFORPOST_Info;
-	important = 1; 
+	important = 1;
 	permanent = 1;
-};                       
+};
 
 func int Info_Gorn_LEAVEFORPOST_Condition()
 {
@@ -1749,12 +1748,12 @@ instance Info_Gorn_REJOINFORFM(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_REJOINFORFM_Condition;
 	information = Info_Gorn_REJOINFORFM_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 //	description = "Let's set out for the mine!";
 //	description = "Es kann losgehen! Auf zur Mine!";
 	description = "Pojďme k dolu!";
-};                       
+};
 
 func int Info_Gorn_REJOINFORFM_Condition()
 {
@@ -1792,9 +1791,9 @@ instance Info_Gorn_RAZOR(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_RAZOR_Condition;
 	information = Info_Gorn_RAZOR_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
-};                       
+};
 
 func int Info_Gorn_RAZOR_Condition()
 {
@@ -1830,9 +1829,9 @@ instance Info_Gorn_FMCENTRANCE(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_FMCENTRANCE_Condition;
 	information = Info_Gorn_FMCENTRANCE_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
-};                       
+};
 
 func int Info_Gorn_FMCENTRANCE_Condition()
 {
@@ -1869,9 +1868,9 @@ instance Info_Gorn_FMGATE(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_FMGATE_Condition;
 	information = Info_Gorn_FMGATE_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
-};                       
+};
 
 func int Info_Gorn_FMGATE_Condition()
 {
@@ -1909,9 +1908,9 @@ instance Info_Gorn_AFTERFM(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_AFTERFM_Condition;
 	information = Info_Gorn_AFTERFM_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
-};                       
+};
 
 func int Info_Gorn_AFTERFM_Condition()
 {
@@ -1953,12 +1952,12 @@ instance Info_Gorn_FMWATCH(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_FMWATCH_Condition;
 	information = Info_Gorn_FMWATCH_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 //	description = "How's the situation?";
 //	description = "Wie ist die Lage?";
 	description = "Jaká je situace?";
-};                       
+};
 
 func int Info_Gorn_FMWATCH_Condition()
 {
@@ -1992,9 +1991,9 @@ instance Info_Gorn_FOUNDULUMULU(C_INFO)
 	npc = PC_Fighter;
 	condition = Info_Gorn_FOUNDULUMULU_Condition;
 	information = Info_Gorn_FOUNDULUMULU_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
-};                       
+};
 
 func int Info_Gorn_FOUNDULUMULU_Condition()
 {

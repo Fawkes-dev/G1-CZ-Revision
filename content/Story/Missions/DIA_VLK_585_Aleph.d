@@ -6,10 +6,10 @@ instance VLK_585_Aleph_Exit(C_INFO)
 	nr = 999;
 	condition = VLK_585_Aleph_Exit_Condition;
 	information = VLK_585_Aleph_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int VLK_585_Aleph_Exit_Condition()
 {
@@ -62,14 +62,14 @@ instance VLK_585_Aleph_GUARDS(C_INFO)
 	information = VLK_585_Aleph_GUARDS_Info;
 	important = 0;
 	permanent = 0;
-//	description = "What do you mean?"; 
-//	description = "Wie meinst du das?"; 
-	description = "Jak to myslíš?"; 
+//	description = "What do you mean?";
+//	description = "Wie meinst du das?";
+	description = "Jak to myslíš?";
 };
 
 func int VLK_585_Aleph_GUARDS_Condition()
-{ 
-	if Npc_KnowsInfo(hero,VLK_585_Aleph_CLEVER) 
+{
+	if Npc_KnowsInfo(hero,VLK_585_Aleph_CLEVER)
 	{
 		return 1;
 	};
@@ -95,7 +95,7 @@ func void VLK_585_Aleph_GUARDS_Info()
 
 	Npc_ExchangeRoutine(self,"BUSY");
 
-	var C_Npc Brandick; 
+	var C_Npc Brandick;
 	Brandick = Hlp_GetNpc(GRD_261_Brandick);
 	Npc_ExchangeRoutine(Brandick,"WATCH");
 	AI_ContinueRoutine(Brandick); // TEST!!!
@@ -116,7 +116,7 @@ instance VLK_585_Aleph_INFO(C_INFO)
 
 func int VLK_585_Aleph_INFO_Condition()
 {
-	if (Npc_HasItems(hero,ItMinugget)) >= 10 && (Npc_KnowsInfo(hero,VLK_585_Aleph_GUARDS)) 
+	if (Npc_HasItems(hero,ItMinugget)) >= 10 && (Npc_KnowsInfo(hero,VLK_585_Aleph_GUARDS))
 	{
 		return 1;
 	};
@@ -150,7 +150,7 @@ instance VLK_585_Aleph_ANGRY(C_INFO)
 	information = VLK_585_Aleph_ANGRY_Info;
 	important = 1;
 	permanent = 0;
-}; 
+};
 
 func int VLK_585_Aleph_ANGRY_Condition()
 {
@@ -162,7 +162,6 @@ func int VLK_585_Aleph_ANGRY_Condition()
 
 func void VLK_585_Aleph_ANGRY_Info()
 {
-
 //	AI_Output(self,other,"VLK_585_Aleph_ANGRY_Info_05_01"); //You ran me down with Brandick? Get lost!
 //	AI_Output(self,other,"VLK_585_Aleph_ANGRY_Info_05_01"); //Du hast mich bei Brandick angeschwärzt? Mach, dass du wegkommst!
 	AI_Output(self,other,"VLK_585_Aleph_ANGRY_Info_05_01"); //Tys mě prozradil Brandickovi? Ztrať se!
@@ -222,7 +221,6 @@ func int VLK_585_Aleph_GLEN_Condition()
 
 func void VLK_585_Aleph_GLEN_Info()
 {
-
 //	AI_Output(other,self,"VLK_585_Aleph_GLEN_Info_15_01"); //I expect good information for my ore!
 //	AI_Output(other,self,"VLK_585_Aleph_GLEN_Info_15_01"); //Für mein Erz erwarte ich auch eine gute Information!
 	AI_Output(other,self,"VLK_585_Aleph_GLEN_Info_15_01"); //Za tuhle rudu očekávám dobré informace!
@@ -230,7 +228,7 @@ func void VLK_585_Aleph_GLEN_Info()
 //	AI_Output(self,other,"VLK_585_Aleph_GLEN_Info_05_02"); //Hier gibt's eine Menge verschlossener Truhen. Glen, der Buddler, der ganz oben steht, kann dir ein paar Dietriche besorgen.
 	AI_Output(self,other,"VLK_585_Aleph_GLEN_Info_05_02"); //Je tu hromada zamčených truhel. Glen, kopáč, který těží úplně nahoře, ti může obstarat pár paklíčů.
 
-	B_GiveInvItems(hero,self,ItMinugget,10); 
+	B_GiveInvItems(hero,self,ItMinugget,10);
 };
 //***************** LAGERSCHUPPENSCHLÜSSEL*****************************
 func void B_Aleph_StorageShedKey()
@@ -261,7 +259,6 @@ func int VLK_585_Aleph_SCHUPPEN_Condition()
 
 func void VLK_585_Aleph_SCHUPPEN_Info()
 {
-
 //	AI_Output(other,self,"VLK_585_Aleph_SCHUPPEN_Info_15_01"); //Do you know anything about the key for the chests in the storage shed??
 //	AI_Output(other,self,"VLK_585_Aleph_SCHUPPEN_Info_15_01"); //Weißt du was über den Schlüssel für die Truhen im Lagerschuppen?
 	AI_Output(other,self,"VLK_585_Aleph_SCHUPPEN_Info_15_01"); //Víš něco o klíči od těch truhel ve skladu?
@@ -291,9 +288,8 @@ func void VLK_585_Aleph_SCHUPPEN_Info()
 
 func void VLK_585_Aleph_SCHUPPEN_50()
 {
-
 	if (Npc_HasItems(hero,ItMiNugget) >= 50)
-	{ 
+	{
 //		AI_Output(other,self,"VLK_585_Aleph_SCHUPPEN_50_15_01"); //50 ore should be more than enough for you!
 //		AI_Output(other,self,"VLK_585_Aleph_SCHUPPEN_50_15_01"); //50 Erz sind mehr als genug für dich!
 		AI_Output(other,self,"VLK_585_Aleph_SCHUPPEN_50_15_01"); //50 nugetů by ti mělo víc než stačit!
@@ -309,9 +305,9 @@ func void VLK_585_Aleph_SCHUPPEN_50()
 		Npc_RemoveInvItem(self,Staerkering);
 		CreateInvItem(hero,Staerkering);
 
-		B_GiveInvItems(hero,self,ItMinugget,50);  
+		B_GiveInvItems(hero,self,ItMinugget,50);
 
-		Npc_SetPermAttitude(self,ATT_FRIENDLY); 
+		Npc_SetPermAttitude(self,ATT_FRIENDLY);
 		Info_ClearChoices(VLK_585_Aleph_SCHUPPEN);
 		//#Needs_Attention toto zahravanie sa s permanent property ... to sposobuje problemy pri Save/Loade dialog moze zmiznut
 		//Najlepsie by bolo zmenit dialog na permanent a pridat premennu, ktora vyrusi dialog ak hrac ziskal kluc
@@ -330,12 +326,11 @@ func void VLK_585_Aleph_SCHUPPEN_50()
 
 func void VLK_585_Aleph_SCHUPPEN_30()
 {
-
 	if (Npc_HasItems(hero,ItMiNugget) >= 30)
-	{ 
+	{
 		CreateInvItem(self,ItKe_OM_03);
 		B_GiveInvItems(self,other,ItKe_OM_03,1);
-		B_GiveInvItems(hero,self,ItMinugget,30);  
+		B_GiveInvItems(hero,self,ItMinugget,30);
 		Info_ClearChoices(VLK_585_Aleph_SCHUPPEN);
 //		AI_Output(other,self,"VLK_585_Aleph_SCHUPPEN_30_15_01"); //30 ore should be enough.
 //		AI_Output(other,self,"VLK_585_Aleph_SCHUPPEN_30_15_01"); //30 Erz sollten reichen.
@@ -352,8 +347,8 @@ func void VLK_585_Aleph_SCHUPPEN_30()
 //		AI_Output(self,other,"VLK_585_Aleph_SCHUPPEN_30_05_03"); //So viel Erz hast du nicht!
 		AI_Output(self,other,"VLK_585_Aleph_SCHUPPEN_30_05_03"); //Tolik rudy nemáš!
 		VLK_585_Aleph_SCHUPPEN.permanent = 1;
-	}; 
-}; 
+	};
+};
 func void VLK_585_Aleph_SCHUPPEN_15()
 {
 //	AI_Output(other,self,"VLK_585_Aleph_SCHUPPEN_15_15_01"); //Is 15 ore alright with you?
@@ -363,7 +358,7 @@ func void VLK_585_Aleph_SCHUPPEN_15()
 //	AI_Output(self,other,"VLK_585_Aleph_SCHUPPEN_15_05_02"); //15 Erz? Ich weiß nichts von einem Schlüssel!
 	AI_Output(self,other,"VLK_585_Aleph_SCHUPPEN_15_05_02"); //15 nugetů? Já o žádném klíči nic nevím!
 	VLK_585_Aleph_SCHUPPEN.permanent = 0;
-}; 
+};
 func void VLK_585_Aleph_SCHUPPEN_Back()
 {
 	Info_ClearChoices(VLK_585_Aleph_SCHUPPEN);
@@ -378,16 +373,14 @@ instance VLK_585_Aleph_DIRTY(C_INFO)
 	information = VLK_585_Aleph_DIRTY_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Do you know anything about the key for the chests in the storage shed??"; 
-//	description = "Weißt du was über den Schlüssel für die Truhen im Lagerschuppen?"; 
-	description = "Víš něco o klíči od těch truhel ve skladu?"; 
+//	description = "Do you know anything about the key for the chests in the storage shed??";
+//	description = "Weißt du was über den Schlüssel für die Truhen im Lagerschuppen?";
+	description = "Víš něco o klíči od těch truhel ve skladu?";
 };
 
 func int VLK_585_Aleph_DIRTY_Condition()
 {
 	if (Npc_KnowsInfo(hero,GRD_271_ULBERT_DRUNK)) && (Npc_KnowsInfo(hero,GRD_261_Brandick_ALEPH))
-	//#Bugfix this dialog should not be available if player already got key from Aleph in dialog VLK_585_Aleph_SCHUPPEN
-	&& (!Npc_KnowsInfo (hero, VLK_585_Aleph_SCHUPPEN))
 	{
 		return 1;
 	};
@@ -416,11 +409,11 @@ func void VLK_585_Aleph_DIRTY_Info()
 //	Info_AddChoice(VLK_585_Aleph_DIRTY,"(Don't pay)",VLK_585_Aleph_DIRTY_NO);
 //	Info_AddChoice(VLK_585_Aleph_DIRTY,"(Nicht zahlen)",VLK_585_Aleph_DIRTY_NO);
 	Info_AddChoice(VLK_585_Aleph_DIRTY,"Nemůžu vyhodit 100 nugetů!",VLK_585_Aleph_DIRTY_NO);
-};  
+};
 func void VLK_585_Aleph_DIRTY_100()
 {
 	if Npc_HasItems(hero,ItMinugget)>=100
-	{ 
+	{
 //		AI_Output(other,self,"VLK_585_Aleph_DIRTY_100_Info_15_01"); //Alright, you crook. Here are 100 ore.
 //		AI_Output(other,self,"VLK_585_Aleph_DIRTY_100_Info_15_01"); //Na gut, du Halsabschneider. Hier sind deine 100 Erz.
 		AI_Output(other,self,"VLK_585_Aleph_DIRTY_100_Info_15_01"); //Dobrá, ty vyděrači. Tady je 100 nugetů.
@@ -431,7 +424,7 @@ func void VLK_585_Aleph_DIRTY_100()
 		CreateInvItem(self,ItKe_OM_03);
 		B_GiveInvItems(self,other,ItKe_OM_03,1);
 		Info_ClearChoices(VLK_585_Aleph_DIRTY);
-		VLK_585_Aleph_DIRTY.permanent = 0; 
+		VLK_585_Aleph_DIRTY.permanent = 0;
 		B_Aleph_StorageShedKey();
 	}
 	else
@@ -450,5 +443,5 @@ func void VLK_585_Aleph_DIRTY_NO()
 //	AI_Output(self,other,"VLK_585_Aleph_DIRTY_NO_Info_05_02"); //Hey, it's you who constantly starts talking to me!
 //	AI_Output(self,other,"VLK_585_Aleph_DIRTY_NO_Info_05_02"); //Hey, immerhin bist du derjenige, der mich die ganze Zeit anquatscht!
 	AI_Output(self,other,"VLK_585_Aleph_DIRTY_NO_Info_05_02"); //Hej, ty mě v jednom kuse přemlouváš!
-	VLK_585_Aleph_DIRTY.permanent = 0; 
+	VLK_585_Aleph_DIRTY.permanent = 0;
 };

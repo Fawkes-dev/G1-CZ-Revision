@@ -1,5 +1,5 @@
 // ************************************************************
-// 			  				   EXIT 
+// 			  				   EXIT
 // ************************************************************
 
 instance DIA_Senyan_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Senyan_EXIT(C_INFO)
 	information = DIA_Senyan_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Senyan_EXIT_Condition()
 {
@@ -18,7 +18,7 @@ func int DIA_Senyan_EXIT_Condition()
 };
 
 func void DIA_Senyan_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -36,7 +36,7 @@ instance DIA_Senyan_Hello(C_INFO)
 //	description = "You're from the Free Mine, right?";
 //	description = "Du kommst aus der Freien Mine, richtig?";
 	description = "Ty jsi ze Svobodného dolu, že?";
-};                       
+};
 
 func int DIA_Senyan_Hello_Condition()
 {
@@ -44,7 +44,7 @@ func int DIA_Senyan_Hello_Condition()
 };
 
 func void DIA_Senyan_Hello_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Senyan_Hello_15_00"); //You're from the Free Mine, right?
 //	AI_Output(other,self,"DIA_Senyan_Hello_15_00"); //Du kommst aus der Freien Mine, richtig?
 	AI_Output(other,self,"DIA_Senyan_Hello_15_00"); //Ty jsi ze Svobodného dolu, že?
@@ -68,7 +68,7 @@ instance DIA_Senyan_JustTalk(C_INFO)
 //	description = "I just want to talk to you.";
 //	description = "Ich will nur mit dir reden.";
 	description = "Chci s tebou jen mluvit.";
-};                       
+};
 
 func int DIA_Senyan_JustTalk_Condition()
 {
@@ -79,7 +79,7 @@ func int DIA_Senyan_JustTalk_Condition()
 };
 
 func void DIA_Senyan_JustTalk_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Senyan_JustTalk_15_00"); //I just want to talk to you.
 //	AI_Output(other,self,"DIA_Senyan_JustTalk_15_00"); //Ich will nur mit dir reden.
 	AI_Output(other,self,"DIA_Senyan_JustTalk_15_00"); //Chci s tebou jen mluvit.

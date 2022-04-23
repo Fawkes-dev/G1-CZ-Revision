@@ -1,5 +1,5 @@
 // **************************************************
-//						 EXIT 
+//						 EXIT
 // **************************************************
 
 instance DIA_BaalTaran_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_BaalTaran_EXIT(C_INFO)
 	information = DIA_BaalTaran_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_BaalTaran_EXIT_Condition()
 {
@@ -36,7 +36,7 @@ instance DIA_BaalTaran_Greet(C_INFO)
 //	description = "I'm new here. Who are you?";
 //	description = "Ich bin neu hier. Wer bist du?";
 	description = "Jsem tady nový. Kdo jsi?";
-};                       
+};
 
 func int DIA_BaalTaran_Greet_Condition()
 {
@@ -67,7 +67,7 @@ instance DIA_BaalTaran_Bruderschaft(C_INFO)
 //	description = "What is the Brotherhood of the Sleeper?";
 //	description = "Was ist die Bruderschaft des Schläfers?";
 	description = "Co to je Spáčovo Bratrstvo?";
-};                       
+};
 
 func int DIA_BaalTaran_Bruderschaft_Condition()
 {
@@ -104,7 +104,7 @@ instance DIA_BaalTaran_Sleeper(C_INFO)
 //	description = "Who is the Sleeper?";
 //	description = "Wer ist der Schläfer?";
 	description = "Kdo je ten Spáč?";
-};                       
+};
 
 func int DIA_BaalTaran_Sleeper_Condition()
 {
@@ -144,7 +144,7 @@ instance DIA_BaalTaran_Lehre(C_INFO)
 //	description = "Tell me about the Sleeper's teachings.";
 //	description = "Erzähl mir von der Lehre des Schläfers.";
 	description = "Povídej mi o Spáčově učení.";
-};                       
+};
 
 func int DIA_BaalTaran_Lehre_Condition()
 {
@@ -190,7 +190,7 @@ instance DIA_BaalTaran_Freiheit(C_INFO)
 //	description = "What will the way to freedom look like?";
 //	description = "Wie soll der Weg in die Freiheit aussehen?";
 	description = "Jak vypadá cesta ke svobodě?";
-};                       
+};
 
 func int DIA_BaalTaran_Freiheit_Condition()
 {
@@ -227,7 +227,7 @@ instance DIA_BaalTaran_Beweis(C_INFO)
 //	description = "How does your god prove his might?";
 //	description = "Wie beweist euch euer Gott seine Macht?";
 	description = "Jak váš bůh dokázal svou moc?";
-};                       
+};
 
 func int DIA_BaalTaran_Beweis_Condition()
 {
@@ -267,7 +267,7 @@ instance DIA_BaalTaran_WayToST(C_INFO)
 //	description = "How do I get to the Brotherhood's camp?";
 //	description = "Wie komme ich zum Lager der Bruderschaft?";
 	description = "Jak se dostanu do tábora Bratrstva?";
-};                       
+};
 
 func int DIA_BaalTaran_WayToST_Condition()
 {
@@ -313,7 +313,7 @@ instance DIA_BaalTaran_IntoCastle(C_INFO)
 //	description = "I need to get into the castle. Can you help me?";
 //	description = "Ich muss in die Burg. Kannst du mir dabei helfen?";
 	description = "Potřebuji se dostat do hradu. Můžeš mi pomoci?";
-};                       
+};
 
 func int DIA_BaalTaran_IntoCastle_Condition()
 {

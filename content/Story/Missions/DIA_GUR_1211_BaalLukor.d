@@ -1,5 +1,5 @@
 // ************************************************************
-// 							EXIT 
+// 							EXIT
 // ************************************************************
 instance Info_BaalLukor_EXIT(C_INFO)
 {
@@ -9,7 +9,7 @@ instance Info_BaalLukor_EXIT(C_INFO)
 	information = Info_BaalLukor_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_BaalLukor_EXIT_Condition()
 {
@@ -17,7 +17,7 @@ func int Info_BaalLukor_EXIT_Condition()
 };
 
 func void Info_BaalLukor_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -376,8 +376,8 @@ func void Info_BaalLukor_SECONDWAIT_Info()
 	 - v dialogu Info_BaalLukor_SECONDSCROLL moze hrac dat Lukorovi OrkParchmentTwo (a teda plati podmienka dole, ze hrac item nema)
 	 - ak sa potom priblizi k waypointu GRYD_047 tak sa zmeni rutina na WaitInSideTunnelTwo a uz sa nepohne
 	*/
-	if (!Npc_HasItems(hero,OrkParchmentTwo)) 
-	{ 
+	if (!Npc_HasItems(hero,OrkParchmentTwo))
+	{
 		AI_StopProcessInfos(self);
 		Npc_ExchangeRoutine(self,"WaitInSideTunnelTwo");
 	};
@@ -515,7 +515,7 @@ func void Info_BaalLukor_RUNES_Info()
 //	AI_Output(self,other,"Info_BaalLukor_RUNES_13_04"); //Das sollte ausreichend Material geben, um die geteilten Pergamenthälften zu übersetzen.
 	AI_Output(self,other,"Info_BaalLukor_RUNES_13_04"); //To by mělo postačit k překladu těch dvou půlek pergamenu.
 	B_UseFakeScroll();
-	//AI_Output(self,other,"Info_BaalLukor_RUNES_13_05"); //...(murmel)...(murmel)...(murmel)... 
+	//AI_Output(self,other,"Info_BaalLukor_RUNES_13_05"); //...(murmel)...(murmel)...(murmel)...
 //	AI_Output(self,other,"Info_BaalLukor_RUNES_13_06"); //I have it! It's a teleportation spell. It seems that it can only unfold its powers in a certain place.
 //	AI_Output(self,other,"Info_BaalLukor_RUNES_13_06"); //Das ist es! Es handelt sich um einen Teleportzauber. Er scheint aber nur an einem gewissen Ort seine Kraft entfalten zu können.
 	AI_Output(self,other,"Info_BaalLukor_RUNES_13_06"); //Mám to! Je to teleportační svitek. Zdá se, že jeho sílu jde využít pouze na určitém místě!
@@ -527,9 +527,9 @@ func void Info_BaalLukor_RUNES_Info()
 	Npc_RemoveInvItems(self,OrkParchmentTwo,1); //Pergament 2 entfernen
 	//Hier Teleport-Übergabe entfernt --> erst wenn vor wand!
 
-//	B_LogEntry(CH3_OrcGraveyard,"With the aid of wall inscriptions in one of the halls, Baal Lukor was able to translate the scroll. Seems it's a teleportation spell for a very short distance."); 
-//	B_LogEntry(CH3_OrcGraveyard,"Mit Hilfe orkischer Wandinschriften in einer der Hallen konnte Baal Lukor die Spruchrolle übersetzen. Es handelt sich um einen Teleportationszauber, der wohl nur über sehr kurze Distanz wirkt."); 
-	B_LogEntry(CH3_OrcGraveyard,"S pomocí nástěnných nápisů v jednom ze sálů se Baal Lukorovi podařilo rozluštit ten svitek. Vypadá jako teleportační kouzlo pro malé vzdálenosti."); 
+//	B_LogEntry(CH3_OrcGraveyard,"With the aid of wall inscriptions in one of the halls, Baal Lukor was able to translate the scroll. Seems it's a teleportation spell for a very short distance.");
+//	B_LogEntry(CH3_OrcGraveyard,"Mit Hilfe orkischer Wandinschriften in einer der Hallen konnte Baal Lukor die Spruchrolle übersetzen. Es handelt sich um einen Teleportationszauber, der wohl nur über sehr kurze Distanz wirkt.");
+	B_LogEntry(CH3_OrcGraveyard,"S pomocí nástěnných nápisů v jednom ze sálů se Baal Lukorovi podařilo rozluštit ten svitek. Vypadá jako teleportační kouzlo pro malé vzdálenosti.");
 
 	Npc_ExchangeRoutine(self,"Follow"); //Björn: Patch2
 };
@@ -716,7 +716,7 @@ instance Info_BaalLukor_TELEPORT(C_INFO)
 func int Info_BaalLukor_TELEPORT_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_BaalLukor_DOOR)
-	&& Npc_CanSeeNpcFreeLOS(self,hero) 
+	&& Npc_CanSeeNpcFreeLOS(self,hero)
 	&& Npc_GetDistToWP(hero,"GRYD_072")<550)
 	{
 		return TRUE;

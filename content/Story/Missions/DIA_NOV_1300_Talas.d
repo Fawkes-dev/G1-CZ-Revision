@@ -6,10 +6,10 @@ instance Nov_1300_Talas_Exit(C_INFO)
 	nr = 999;
 	condition = Nov_1300_Talas_Exit_Condition;
 	information = Nov_1300_Talas_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Nov_1300_Talas_Exit_Condition()
 {
@@ -29,9 +29,9 @@ instance Nov_1300_Talas_UR(C_INFO)
 	information = Nov_1300_Talas_UR_Info;
 	important = 0;
 	permanent = 0;
-//	description = "You're Talas, the one who was mugged."; 
-//	description = "Du bist Talas, der überfallen wurde"; 
-	description = "Ty jsi Talas, ten co ho přepadli."; 
+//	description = "You're Talas, the one who was mugged.";
+//	description = "Du bist Talas, der überfallen wurde";
+	description = "Ty jsi Talas, ten co ho přepadli.";
 };
 
 func int Nov_1300_Talas_UR_Condition()
@@ -51,7 +51,7 @@ func void Nov_1300_Talas_UR_Info()
 //	AI_Output(self,other,"Nov_1300_Talas_UR_Info_02_02"); //Leave me alone, I don't want to talk about it!
 //	AI_Output(self,other,"Nov_1300_Talas_UR_Info_02_02"); //Lass mich in Ruhe, ich will nicht darüber reden!
 	AI_Output(self,other,"Nov_1300_Talas_UR_Info_02_02"); //Nech mě na pokoji, nechci o tom mluvit!
-};  
+};
 // ***************************** INFOS ****************************************//
 
 instance Nov_1300_Talas_HELP(C_INFO)
@@ -61,9 +61,9 @@ instance Nov_1300_Talas_HELP(C_INFO)
 	information = Nov_1300_Talas_HELP_Info;
 	important = 0;
 	permanent = 0;
-//	description = "I can help you to bring the almanac back."; 
-//	description = "Ich kann dir helfen, den Almanach zurückbringen."; 
-	description = "Pomůžu ti přinést zpátky ten almanach."; 
+//	description = "I can help you to bring the almanac back.";
+//	description = "Ich kann dir helfen, den Almanach zurückbringen.";
+	description = "Pomůžu ti přinést zpátky ten almanach.";
 };
 
 func int Nov_1300_Talas_HELP_Condition()
@@ -97,7 +97,7 @@ func void Nov_1300_Talas_HELP_Info()
 //	Info_AddChoice(Nov_1300_Talas_HELP,"Gib mir 50 Erz und ich bin dabei",Nov_1300_Talas_HELP_MORE);
 	Info_AddChoice(Nov_1300_Talas_HELP,"Dej mi 50 nugetů a já budu přitom.",Nov_1300_Talas_HELP_MORE);
 
-};  
+};
 
 func void Nov_1300_Talas_HELP_OK()
 {
@@ -142,9 +142,9 @@ instance Nov_1300_Talas_READY(C_INFO)
 	information = Nov_1300_Talas_READY_Info;
 	important = 0;
 	permanent = 0;
-//	description = "I'm ready, we can leave now."; 
-//	description = "Ich bin bereit, wir können losgehen"; 
-	description = "Jsem připraven, můžeme vyrazit."; 
+//	description = "I'm ready, we can leave now.";
+//	description = "Ich bin bereit, wir können losgehen";
+	description = "Jsem připraven, můžeme vyrazit.";
 };
 
 func int Nov_1300_Talas_READY_Condition()
@@ -165,15 +165,15 @@ func void Nov_1300_Talas_READY_Info()
 //	AI_Output(self,other,"Nov_1300_Talas_READY_Info_02_02"); //In Ordnung. Folge mir.
 	AI_Output(self,other,"Nov_1300_Talas_READY_Info_02_02"); //Dobře. Pojď za mnou.
 
-//	B_LogEntry(CH2_Book,"I offered Talas to get the almanac back for him. He wants to lead me to the place where the book is."); 
-//	B_LogEntry(CH2_Book,"Ich habe Talas angeboten, für ihn den Almanach wiederzubeschaffen. Er will mich zum Aufenthaltsort des Buches führen."); 
-	B_LogEntry(CH2_Book,"Nabídl jsem Talasovi, že pro něj získám zpět rukopis. Chce mě dovést na místo, kde kniha je."); 
+//	B_LogEntry(CH2_Book,"I offered Talas to get the almanac back for him. He wants to lead me to the place where the book is.");
+//	B_LogEntry(CH2_Book,"Ich habe Talas angeboten, für ihn den Almanach wiederzubeschaffen. Er will mich zum Aufenthaltsort des Buches führen.");
+	B_LogEntry(CH2_Book,"Nabídl jsem Talasovi, že pro něj získám zpět rukopis. Chce mě dovést na místo, kde kniha je.");
 
 	self.aivar[AIV_PARTYMEMBER] = TRUE;
 	Npc_ExchangeRoutine(self,"GOBBOCAVE");
 	AI_StopProcessInfos(self);
 
-};  
+};
 
 // ***************************** AN DER BRÜCKE ****************************************//
 instance Nov_1300_Talas_BRIDGE(C_INFO)
@@ -294,9 +294,9 @@ instance Nov_1300_Talas_OGY(C_INFO)
 	information = Nov_1300_Talas_OGY_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Cor Angar sent me."; 
-//	description = "Cor Angar schickt mich."; 
-	description = "Poslal mě Cor Angar."; 
+//	description = "Cor Angar sent me.";
+//	description = "Cor Angar schickt mich.";
+	description = "Poslal mě Cor Angar.";
 };
 
 func int Nov_1300_Talas_OGY_Condition()
@@ -322,7 +322,7 @@ func void Nov_1300_Talas_OGY_Info()
 	self.aivar[AIV_PARTYMEMBER] = TRUE;
 	AI_StopProcessInfos(self);
 	Npc_ExchangeRoutine(self,"OGY");
-};  
+};
 
 // ***************************** am OGY ****************************************//
 instance Nov_1300_Talas_BACKAGAIN(C_INFO)

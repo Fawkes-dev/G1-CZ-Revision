@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_STT_315_Sly_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_STT_315_Sly_Exit(C_INFO)
 	information = DIA_STT_315_Sly_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_STT_315_Sly_Exit_Condition()
 {
@@ -23,7 +23,7 @@ func void DIA_STT_315_Sly_Exit_Info()
 };
 
 // **************************************************
-// 					Erste Begrüssung 
+// 					Erste Begrüssung
 // **************************************************
 
 instance DIA_STT_315_Sly(C_INFO)
@@ -57,7 +57,7 @@ func void DIA_STT_315_Sly_Info()
 };
 
 // **************************************************
-// 					Erste Begrüssung 
+// 					Erste Begrüssung
 // **************************************************
 	var int Sly_LostNek;
 // **************************************************
@@ -75,8 +75,8 @@ instance DIA_STT_315_LostNek(C_INFO)
 };
 
 func int DIA_STT_315_LostNek_Condition()
-{ 
-	return 1; 
+{
+	return 1;
 };
 
 func void DIA_STT_315_LostNek_Info()
@@ -120,7 +120,7 @@ func void DIA_STT_315_LostNek_Why()
 	AI_Output(self,other,"DIA_STT_315_LostNek_Why_10_01"); //Jestli se chceš přidat do tábora, budeš potřebovat lidi, kteří se za tebe přimluví.
 //	AI_Output(self,other,"DIA_STT_315_LostNek_Why_10_02"); //If I speak up for you with Diego, that'd be a great help for you.
 //	AI_Output(self,other,"DIA_STT_315_LostNek_Why_10_02"); //Ein gutes Wort von mir über dich bei Diego kann da schon einiges helfen.
-	AI_Output(self,other,"DIA_STT_315_LostNek_Why_10_02"); //Když se za tebe u Diega přimluvím, velice ti to pomůže. 
+	AI_Output(self,other,"DIA_STT_315_LostNek_Why_10_02"); //Když se za tebe u Diega přimluvím, velice ti to pomůže.
 };
 
 func void DIA_STT_315_LostNek_DoIt()
@@ -176,7 +176,7 @@ instance DIA_STT_315_LostNekSuccess(C_INFO)
 };
 
 func int DIA_STT_315_LostNekSuccess_Condition()
-{ 
+{
 	if ((Sly_LostNek == LOG_RUNNING) && (Npc_HasItems(other,Neks_Amulett) > 0))
 	{
 		return 1;
@@ -228,7 +228,7 @@ func void DIA_STT_315_LostNekSuccess_Proof()
 //	B_LogEntry(CH1_LostNek,"Ich habe Sly das Amulett von Nek gegeben. Er war überrascht von meiner Ehrlichkeit.");
 	B_LogEntry(CH1_LostNek,"Dal jsem Slyovi Nekův amulet. Byl překvapen mojí poctivostí.");
 
-	B_GiveXP(XP_Slysearchfornek); 
+	B_GiveXP(XP_Slysearchfornek);
 	if (Npc_GetTrueGuild(hero) == GIL_NONE)
 	{
 		Log_CreateTopic(CH1_JoinOC,LOG_MISSION);
@@ -238,7 +238,7 @@ func void DIA_STT_315_LostNekSuccess_Proof()
 		B_LogEntry(CH1_JoinOC,"Dal jsem Slyovi Nekův amulet. Promluví si z Diegem a přimluví se za mě.");
 	}
 	else
-	{ 
+	{
 		Log_CreateTopic(CH1_JoinOC,LOG_MISSION);
 		Log_SetTopicStatus(CH1_JoinOC,LOG_FAILED);
 //		B_LogEntry(CH1_JoinOC,"I've given Sly Nek's amulet. Not that it's going to do me any good - the Old Camp won't let me join any more anyway.");

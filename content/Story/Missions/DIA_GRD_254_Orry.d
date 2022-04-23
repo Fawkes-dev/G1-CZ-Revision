@@ -1,5 +1,5 @@
 // **************************************************
-// 						 PRE EXIT 
+// 						 PRE EXIT
 // **************************************************
 
 instance DIA_Orry_PreExit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Orry_PreExit(C_INFO)
 	information = DIA_Orry_PreExit_Info;
 	permanent = 0;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Orry_PreExit_Condition()
 {
@@ -26,7 +26,7 @@ func void DIA_Orry_PreExit_Info()
 };
 
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Orry_Exit(C_INFO)
@@ -37,7 +37,7 @@ instance DIA_Orry_Exit(C_INFO)
 	information = DIA_Orry_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Orry_Exit_Condition()
 {
@@ -63,13 +63,13 @@ instance DIA_Orry_GuardGate(C_INFO)
 	condition = DIA_Orry_GuardGate_Condition;
 	information = DIA_Orry_GuardGate_Info;
 	permanent = 0;
-//	description = "What are you doing here?"; 
-//	description = "Was machst du hier?"; 
-	description = "Co tady děláte?"; 
+//	description = "What are you doing here?";
+//	description = "Was machst du hier?";
+	description = "Co tady děláte?";
 };
 
 func int DIA_Orry_GuardGate_Condition()
-{ 
+{
 	if (Kapitel <= 1)
 	{
 		return 1;
@@ -144,13 +144,13 @@ instance DIA_Orry_NewCamp(C_INFO)
 	condition = DIA_Orry_NewCamp_Condition;
 	information = DIA_Orry_NewCamp_Info;
 	permanent = 0;
-//	description = "Why do I have to watch out for the guys from the New Camp?"; 
-//	description = "Warum sollte ich mich vor dem Neuen Lager in Acht nehmen?"; 
-	description = "Proč se mám mít na pozoru před chlapy z Nového tábora?"; 
+//	description = "Why do I have to watch out for the guys from the New Camp?";
+//	description = "Warum sollte ich mich vor dem Neuen Lager in Acht nehmen?";
+	description = "Proč se mám mít na pozoru před chlapy z Nového tábora?";
 };
 
 func int DIA_Orry_NewCamp_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Orry_GuardGate))
 	{
 		return 1;
@@ -181,13 +181,13 @@ instance DIA_Orry_OldCamp(C_INFO)
 	condition = DIA_Orry_OldCamp_Condition;
 	information = DIA_Orry_OldCamp_Info;
 	permanent = 0;
-//	description = "And the Old Camp?"; 
-//	description = "Und das Alte Lager?"; 
-	description = "A Starý tábor?"; 
+//	description = "And the Old Camp?";
+//	description = "Und das Alte Lager?";
+	description = "A Starý tábor?";
 };
 
 func int DIA_Orry_OldCamp_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Orry_GuardGate))
 	{
 		return 1;
@@ -218,13 +218,13 @@ instance DIA_Orry_Shore(C_INFO)
 	condition = DIA_Orry_Shore_Condition;
 	information = DIA_Orry_Shore_Info;
 	permanent = 0;
-//	description = "When I was washed ashore, one of the guys punched me in the face."; 
-//	description = "Als ich ans Ufer gespült wurde. hat mich einer von den Typen geschlagen."; 
-	description = "Když jsem se dostal na břeh, jeden z těch chlapů mě praštil do tváře."; 
+//	description = "When I was washed ashore, one of the guys punched me in the face.";
+//	description = "Als ich ans Ufer gespült wurde. hat mich einer von den Typen geschlagen.";
+	description = "Když jsem se dostal na břeh, jeden z těch chlapů mě praštil do tváře.";
 };
 
 func int DIA_Orry_Shore_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Orry_GuardGate))
 	{
 		return 1;
@@ -258,13 +258,13 @@ instance DIA_Orry_Woman(C_INFO)
 	condition = DIA_Orry_Woman_Condition;
 	information = DIA_Orry_Woman_Info;
 	permanent = 0;
-//	description = "I saw a woman being sent down with the goods."; 
-//	description = "Sie haben eine Frau zusammen mit den Waren reingeschickt."; 
-	description = "Viděl jsem, jak dolů se zbožím poslali i nějakou ženu."; 
+//	description = "I saw a woman being sent down with the goods.";
+//	description = "Sie haben eine Frau zusammen mit den Waren reingeschickt.";
+	description = "Viděl jsem, jak dolů se zbožím poslali i nějakou ženu.";
 };
 
 func int DIA_Orry_Woman_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Orry_GuardGate))
 	{
 		return 1;
@@ -301,13 +301,13 @@ instance DIA_Orry_Waffe(C_INFO)
 	condition = DIA_Orry_Waffe_Condition;
 	information = DIA_Orry_Waffe_Info;
 	permanent = 0;
-//	description = "I'm looking for a weapon..."; 
-//	description = "Ich suche eine Waffe..."; 
-	description = "Hledám nějakou zbraň..."; 
+//	description = "I'm looking for a weapon...";
+//	description = "Ich suche eine Waffe...";
+	description = "Hledám nějakou zbraň...";
 };
 
 func int DIA_Orry_Waffe_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Orry_GuardGate))
 	{
 		return 1;

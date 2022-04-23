@@ -8,10 +8,10 @@ instance DIA_BaalTyon_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_BaalTyon_Exit_Condition;
 	information = DIA_BaalTyon_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_BaalTyon_Exit_Condition()
 {
@@ -24,7 +24,7 @@ func void DIA_BaalTyon_Exit_Info()
 };
 
 // ************************************************************
-// 					NICHT ansprechbar (Ungläubiger) 
+// 					NICHT ansprechbar (Ungläubiger)
 // ************************************************************
 	var int BaalTyon_Ansprechbar;
 	var int BaalTyon_Sakrileg;
@@ -38,7 +38,7 @@ instance DIA_BaalTyon_NoTalk(C_INFO)
 	information = DIA_BaalTyon_NoTalk_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_BaalTyon_NoTalk_Condition()
 {
@@ -49,7 +49,7 @@ func int DIA_BaalTyon_NoTalk_Condition()
 };
 
 func void DIA_BaalTyon_NoTalk_Info()
-{ 
+{
 	Info_ClearChoices(DIA_BaalTyon_NoTalk);
 	Info_Addchoice (DIA_BaalTyon_NoTalk,DIALOG_ENDE ,DIA_BaalTyon_NoTalk_ENDE);
 	if (Npc_HasItems(other,SpecialJoint)>=1)
@@ -139,8 +139,8 @@ instance DIA_BaalTyon_Vision(C_INFO)
 	condition = DIA_BaalTyon_Vision_Condition;
 	information = DIA_BaalTyon_Vision_Info;
 	permanent = 0;
-	important = 1; 
-};                       
+	important = 1;
+};
 
 func int DIA_BaalTyon_Vision_Condition()
 {

@@ -9,7 +9,7 @@ instance DIA_Milten_EXIT(C_INFO)
 	information = DIA_Milten_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Milten_EXIT_Condition()
 {
@@ -45,7 +45,7 @@ instance DIA_Milten_First(C_INFO)
 	information = DIA_Milten_First_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Milten_First_Condition()
 {
@@ -77,7 +77,7 @@ instance DIA_Milten_Hello(C_INFO)
 //	description = "I'm looking for the High Magician of the Circle of Fire.";
 //	description = "Ich suche den obersten Magier des Feuers.";
 	description = "Hledám Velkého mága Kruhu ohně.";
-};                       
+};
 
 func int DIA_Milten_Hello_Condition()
 {
@@ -109,12 +109,12 @@ instance DIA_Milten_GotoCorristo(C_INFO)
 	information = DIA_Milten_GotoCorristo_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Milten_GotoCorristo_Condition()
 {
 	if ((CorKalom_BringMCQBalls == LOG_SUCCESS) || Npc_KnowsInfo(hero,GRD_200_Thorus_WANNABEMAGE))
-	&& (Npc_GetTrueGuild(hero) == GIL_STT) 
+	&& (Npc_GetTrueGuild(hero) == GIL_STT)
 	{
 		return 1;
 	};
@@ -146,11 +146,11 @@ func void DIA_Milten_GotoCorristo_Info()
 		AI_Output(other,self,"DIA_Milten_Letter_Give_15_00"); //Tady je,
 		B_GiveXP(XP_XardasLetter);
 		if Npc_HasItems(other,ItWr_Fire_Letter_01)
-		{ 
+		{
 			B_GiveInvItems(other,self,ItWr_Fire_Letter_01,1);
 		}
-		else if Npc_HasItems(other,ItWr_Fire_Letter_02) 
-		{ 
+		else if Npc_HasItems(other,ItWr_Fire_Letter_02)
+		{
 			B_GiveInvItems(other,self,ItWr_Fire_Letter_02,1);
 		};
 //		AI_Output(other,self,"GUR_1200_Yberion_EARN_Info_15_01"); //What about some kind of reward?
@@ -186,7 +186,7 @@ instance DIA_Milten_Letter(C_INFO)
 //	description = "I have a letter for the High Magician of the Circle of Fire.";
 //	description = "Ich habe einen Brief für den obersten Feuermagier.";
 	description = "Mám dopis pro Velkého mága Kruhu ohně.";
-};                       
+};
 
 func int DIA_Milten_Letter_Condition()
 {
@@ -252,11 +252,11 @@ func void DIA_Milten_Letter_Give()
 	AI_GotoWP (self,"OCC_CHAPEL_ENTRANCE");
 
 	if Npc_HasItems(other,ItWr_Fire_Letter_01)
-	{ 
+	{
 		B_GiveInvItems(other,self,ItWr_Fire_Letter_01,1);
 	}
-	else if Npc_HasItems(other,ItWr_Fire_Letter_02) 
-	{ 
+	else if Npc_HasItems(other,ItWr_Fire_Letter_02)
+	{
 		B_GiveInvItems(other,self,ItWr_Fire_Letter_02,1);
 	};
 	milten_HasLetter = TRUE;
@@ -319,7 +319,7 @@ instance DIA_Milten_ComesBack(C_INFO)
 	information = DIA_Milten_ComesBack_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Milten_ComesBack_Condition()
 {
@@ -362,7 +362,7 @@ instance DIA_Milten_WoTorrez(C_INFO)
 //	description = "Where can I find Torrez?";
 //	description = "Wo finde ich Torrez?";
 	description = "Kde najdu Torreze?";
-};                       
+};
 
 func int DIA_Milten_WoTorrez_Condition()
 {
@@ -399,7 +399,7 @@ instance DIA_Milten_NochEinBrief(C_INFO)
 //	description = "I have a letter from the Magicians of Water.";
 //	description = "Ich habe da noch einen Brief von den Wassermagiern.";
 	description = "Mám dopis od mágů Kruhu vody.";
-};                       
+};
 
 func int DIA_Milten_NochEinBrief_Condition()
 {
@@ -439,7 +439,7 @@ instance DIA_Milten_PERM(C_INFO)
 //	description = "Tell me something about the Magicians of Fire.";
 //	description = "Erzähl mir was über die Feuermagier.";
 	description = "Řekni mi něco o mázích Ohně.";
-};                       
+};
 
 func int DIA_Milten_PERM_Condition()
 {
@@ -482,7 +482,7 @@ instance DIA_Milten_WannaMage(C_INFO)
 //	description = "I want to become a magician's apprentice, too. Just like you.";
 //	description = "Ich will ein Lehrling der Magier werden - so wie du.";
 	description = "Chci se taky stát kouzelnickým učněm - jako ty.";
-};                       
+};
 
 func int DIA_Milten_WannaMage_Condition()
 {
@@ -533,7 +533,7 @@ func int Info_Milten_SHWAIT_Condition()
 	if (Npc_GetDistToWP(hero,"OW_PATH_274")<1000)
 	{
 		return 1;
-	}; 
+	};
 };
 
 func void Info_Milten_SHWAIT_Info()
@@ -574,7 +574,7 @@ func int Info_Milten_SHGORN_Condition()
 	if (Npc_KnowsInfo(hero,Info_Milten_SHWAIT) && Npc_KnowsInfo(hero,Info_Gorn_RUINSUCCESS))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_SHGORN_Info()
@@ -613,7 +613,7 @@ func int Info_Milten_SHLESTER_Condition()
 	if (Npc_KnowsInfo(hero,Info_Milten_SHWAIT) && Npc_KnowsInfo(hero,PC_Psionic_FINISH))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_SHLESTER_Info()
@@ -652,7 +652,7 @@ func int Info_Milten_SHYOU_Condition()
 	if (Npc_KnowsInfo(hero,Info_Milten_SHWAIT))
 	{
 		return 1;
-	}; 
+	};
 };
 
 func void Info_Milten_SHYOU_Info()
@@ -695,7 +695,7 @@ func int Info_Milten_SHME_Condition()
 	&& !Npc_KnowsInfo(hero,Info_Milten_SHACCEPT)
 	{
 		return 1;
-	}; 
+	};
 };
 
 func void Info_Milten_SHME_Info()
@@ -728,7 +728,7 @@ func int Info_Milten_SHPROBLEM_Condition()
 	if (Npc_KnowsInfo(hero,Info_Milten_SHYOU))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_SHPROBLEM_Info()
@@ -770,7 +770,7 @@ func int Info_Milten_SHFOCUS_Condition()
 	if (Npc_KnowsInfo(hero,Info_Milten_SHPROBLEM))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_SHFOCUS_Info()
@@ -779,7 +779,7 @@ func void Info_Milten_SHFOCUS_Info()
 //	AI_Output(hero,self,"Info_Milten_SHFOCUS_15_01"); //Ist dieses Artefakt einer der fünf Fokussteine?
 	AI_Output(hero,self,"Info_Milten_SHFOCUS_15_01"); //Není ten artefakt jeden z pěti ohniskových kamenů?
 //	AI_Output(self,hero,"Info_Milten_SHFOCUS_02_02"); //Exactly! So you already know the story of the five focus stones?
-//	AI_Output(self,hero,"Info_Milten_SHFOCUS_02_02"); //Genau! Dann kennst du die Geschichte der fünf Fokussteine wohl schon. 
+//	AI_Output(self,hero,"Info_Milten_SHFOCUS_02_02"); //Genau! Dann kennst du die Geschichte der fünf Fokussteine wohl schon.
 	AI_Output(self,hero,"Info_Milten_SHFOCUS_02_02"); //Přesně tak! Takže ty už znáš příběh pěti ohniskových kamenů.
 //	AI_Output(hero,self,"Info_Milten_SHFOCUS_15_03"); //Don't tell me you're after the focus as well!
 //	AI_Output(hero,self,"Info_Milten_SHFOCUS_15_03"); //Jetzt sag bloß, du bist auch hinter diesem Fokus her?
@@ -809,7 +809,7 @@ func int Info_Milten_SHSEAL_Condition()
 	if (Npc_KnowsInfo(hero,Info_Milten_SHPROBLEM))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_SHSEAL_Info()
@@ -857,7 +857,7 @@ func int Info_Milten_SHTALISMAN_Condition()
 	if (Npc_KnowsInfo(hero,Info_Milten_SHFOCUS))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_SHTALISMAN_Info()
@@ -894,7 +894,7 @@ func int Info_Milten_SHOFFER_Condition()
 	&& Npc_KnowsInfo(hero,Info_Milten_SHTALISMAN))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_SHOFFER_Info()
@@ -945,7 +945,7 @@ func int Info_Milten_SHOFFER2_Condition()
 	if (Npc_KnowsInfo(hero,Info_Milten_SHOFFER))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_SHOFFER2_Info()
@@ -993,7 +993,7 @@ func int Info_Milten_SHACCEPT_Condition()
 	if (Npc_KnowsInfo(hero,Info_Milten_SHOFFER2))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_SHACCEPT_Info()
@@ -1049,14 +1049,14 @@ func int Info_Milten_SHARRIVED_Condition()
 	if (Npc_KnowsInfo(hero,Info_Milten_SHACCEPT) && (Npc_GetDistToWP(hero,"OW_PATH_3_STONES")<500))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_SHARRIVED_Info()
 {
 	AI_GotoNpc(self,hero);
 
-//	AI_Output(self,hero,"Info_Milten_SHARRIVED_02_01"); //Here we are. The tunnel here leads directly to the tomb. 
+//	AI_Output(self,hero,"Info_Milten_SHARRIVED_02_01"); //Here we are. The tunnel here leads directly to the tomb.
 //	AI_Output(self,hero,"Info_Milten_SHARRIVED_02_01"); //Hier sind wir. Der Stollen hier führt direkt in die Gruft.
 	AI_Output(self,hero,"Info_Milten_SHARRIVED_02_01"); //Tak, jsme tady. Tenhle tunel vede přímo do hrobky.
 //	AI_Output(hero,self,"Info_Milten_SHARRIVED_15_02"); //Then let's go and visit the guard!
@@ -1091,7 +1091,7 @@ func int Info_Milten_SHHEAL_Condition()
 	&& (Npc_HasItems(hero,ItFo_Potion_Health_02) == 0))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_SHHEAL_Info()
@@ -1112,7 +1112,7 @@ func void Info_Milten_SHHEAL_Info()
 //		AI_Output(self,hero,"Info_Milten_SHHEAL_02_03"); //I don't have any healing potion left.
 //		AI_Output(self,hero,"Info_Milten_SHHEAL_02_03"); //Ich habe keinen Heiltrank mehr.
 		AI_Output(self,hero,"Info_Milten_SHHEAL_02_03"); //Už mi žádný léčivý lektvar nezbyl.
-	}; 
+	};
 
 	AI_StopProcessInfos(self);
 };
@@ -1142,7 +1142,7 @@ func int Info_Milten_SHRUNNING_Condition()
 	&& (keeperFound && !Npc_IsDead(other)) // Wächter noch nicht besiegt...
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_SHRUNNING_Info()
@@ -1177,11 +1177,11 @@ func int Info_Milten_SHSCROLL_Condition()
 	keeperFound = Wld_DetectNpc(self,ZombieTheKeeper, NOFUNC, -1);
 	if ((keeperFound && !Npc_IsDead(other)) // Wächter noch nicht besiegt...
 	&& Npc_KnowsInfo(hero,Info_Milten_SHACCEPT)
-	&& (Npc_HasItems(hero,ItArScrollDestroyUndead)==0) 
+	&& (Npc_HasItems(hero,ItArScrollDestroyUndead)==0)
 	&& (Npc_HasItems(hero,ItArRuneDestroyUndead)==0))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_SHSCROLL_Info()
@@ -1223,11 +1223,11 @@ instance Info_Milten_SHNEWSCROLL(C_INFO)
 func int Info_Milten_SHNEWSCROLL_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Milten_SHSCROLL)
-	&& !Npc_KnowsInfo(hero,Info_Milten_SHSUCCESS) 
+	&& !Npc_KnowsInfo(hero,Info_Milten_SHSUCCESS)
 	&& ((Npc_HasItems(hero,ItArScrollDestroyUndead)>0) || (Npc_HasItems(hero,ItArRuneDestroyUndead)>0)))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_SHNEWSCROLL_Info()
@@ -1262,12 +1262,12 @@ instance Info_Milten_SHLEAVE(C_INFO)
 func int Info_Milten_SHLEAVE_Condition()
 {
 	if  Npc_KnowsInfo(hero,Info_Milten_SHACCEPT)
-	&& !Npc_KnowsInfo(hero,Info_Milten_SHSUCCESS) 
+	&& !Npc_KnowsInfo(hero,Info_Milten_SHSUCCESS)
 	&& (Npc_GetDistToWP(hero,"OW_PATH_3_STONES")>10000)
   	&& (self.aivar[AIV_PARTYMEMBER] == TRUE)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_SHLEAVE_Info()
@@ -1309,7 +1309,7 @@ func int Info_Milten_SHCONTINUE_Condition()
 	&& (Npc_GetDistToWP(hero,"OW_PATH_3_STONES")<9000)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_SHCONTINUE_Info()
@@ -1345,7 +1345,7 @@ func int Info_Milten_SHSUCCESS_Condition()
 	if (Npc_KnowsInfo(hero,Info_Milten_SHACCEPT) && Npc_HasItems(hero,ItMi_OrcTalisman))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_SHSUCCESS_Info()
@@ -1402,7 +1402,7 @@ func int Info_Milten_OCWARN_Condition()
 	if (Kapitel == 4)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_OCWARN_Info()
@@ -1443,7 +1443,7 @@ func void Info_Milten_OCWARN_Info()
 //		AI_Output(hero,self,"Info_Milten_OCWARN_15_08"); //Am besten du erzählst ganz von vorne und der Reihe nach.
 		AI_Output(hero,self,"Info_Milten_OCWARN_15_08"); //Raději mi ten příběh řekni celý od začátku, jedno po druhém.
 //		AI_Output(self,hero,"Info_Milten_OCWARN_02_09"); //Okay. Keep cool, Milten, keep cool...
-//		AI_Output(self,hero,"Info_Milten_OCWARN_02_09"); //Ok. Ganz ruhig, Milten, ganz ruhig ... 
+//		AI_Output(self,hero,"Info_Milten_OCWARN_02_09"); //Ok. Ganz ruhig, Milten, ganz ruhig ...
 		AI_Output(self,hero,"Info_Milten_OCWARN_02_09"); //Dobře. Uklidni se, Miltene, klid.
 //		AI_Output(self,hero,"Info_Milten_OCWARN_02_10"); //It all started with the Old Mine caving in...
 //		AI_Output(self,hero,"Info_Milten_OCWARN_02_10"); //Es fing alles damit an, dass die Alte Mine einstürzte.
@@ -1480,7 +1480,7 @@ func int Info_Milten_OCMINE_Condition()
 	if (Npc_KnowsInfo(hero,Info_Milten_OCWARN) && !Npc_KnowsInfo(hero,Info_Diego_OCRETREAT))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_OCMINE_Info()
@@ -1519,7 +1519,7 @@ func int Info_Milten_OCKDW_Condition()
 	if (Npc_KnowsInfo(hero,Info_Milten_OCWARN) && !Npc_KnowsInfo(hero,Info_Diego_OCRETREAT))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_OCKDW_Info()
@@ -1558,7 +1558,7 @@ func int Info_Milten_OCWHY_Condition()
 	if (Npc_KnowsInfo(hero,Info_Milten_OCKDW))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_OCWHY_Info()
@@ -1594,7 +1594,7 @@ func int Info_Milten_OCYOU_Condition()
 	if (Npc_KnowsInfo(hero,Info_Milten_OCKDW))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_OCYOU_Info()
@@ -1607,7 +1607,7 @@ func void Info_Milten_OCYOU_Info()
 	AI_Output(self,hero,"Info_Milten_OCYOU_02_02"); //Ne. Diego a já jsme se dohodli, že budeme hlídat obě brány a varovat naše nic netušící přátele z jiných táborů.
 
 	if (!Npc_KnowsInfo(hero,Info_Diego_OCSTORY))
-	{ 
+	{
 //		AI_Output(self,hero,"Info_Milten_OCYOU_02_03"); //Please talk to Diego!
 //		AI_Output(self,hero,"Info_Milten_OCYOU_02_03"); //Bitte sprich noch mit Diego!
 		AI_Output(self,hero,"Info_Milten_OCYOU_02_03"); //Řekni to, prosím, Diegovi!
@@ -1641,7 +1641,7 @@ func int Info_Milten_OCDIEGO_Condition()
 	&& !Npc_KnowsInfo(hero,Info_Diego_OCSTORY)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_OCDIEGO_Info()
@@ -1687,7 +1687,7 @@ func int Info_Milten_LOADSWORD_Condition()
 	if (LoadSword)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_LOADSWORD_Info()
@@ -1715,9 +1715,9 @@ instance Info_Milten_LOADSWORD1(C_INFO)
 	information = Info_Milten_LOADSWORD1_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Milten, I need your help!"; 
-//	description = "Milten, ich brauche deine Hilfe!"; 
-	description = "Miltene, potřebuju tvoji pomoc!"; 
+//	description = "Milten, I need your help!";
+//	description = "Milten, ich brauche deine Hilfe!";
+	description = "Miltene, potřebuju tvoji pomoc!";
 };
 
 func int Info_Milten_LOADSWORD1_Condition()
@@ -1725,7 +1725,7 @@ func int Info_Milten_LOADSWORD1_Condition()
 	if Npc_KnowsInfo(hero,Info_Milten_LOADSWORD)
 	{
 		return 1;
-	}; 
+	};
 };
 
 func void Info_Milten_LOADSWORD1_Info()
@@ -1765,7 +1765,7 @@ func int Info_Milten_LSAWAY_Condition()
 	&& (Npc_GetDistToWP(hero,"NC_KDW04_IN") < 500)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_LSAWAY_Info()
@@ -1823,9 +1823,9 @@ instance Info_Milten_LOADSWORD4(C_INFO)
 	information = Info_Milten_LOADSWORD4_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Xardas gave me this magic spell!"; 
-//	description = "Xardas gab mir diese magische Formel!"; 
-	description = "Xardas mi dal kouzelné zaříkávadlo!"; 
+//	description = "Xardas gave me this magic spell!";
+//	description = "Xardas gab mir diese magische Formel!";
+	description = "Xardas mi dal kouzelné zaříkávadlo!";
 };
 
 func int Info_Milten_LOADSWORD4_Condition()
@@ -1833,7 +1833,7 @@ func int Info_Milten_LOADSWORD4_Condition()
 	if Npc_KnowsInfo(hero,Info_Milten_LSAWAY)
 	{
 		return 1;
-	}; 
+	};
 };
 
 func void Info_Milten_LOADSWORD4_Info()
@@ -1863,9 +1863,9 @@ instance Info_Milten_LSRISK(C_INFO)
 	information = Info_Milten_LSRISK_Info;
 	important = 0;
 	permanent = 0;
-//	description = "We'll have to take that risk!"; 
-//	description = "Das Risiko müssen wir eingehen!"; 
-	description = "Musíme to risknout!"; 
+//	description = "We'll have to take that risk!";
+//	description = "Das Risiko müssen wir eingehen!";
+	description = "Musíme to risknout!";
 };
 
 func int Info_Milten_LSRISK_Condition()
@@ -1873,7 +1873,7 @@ func int Info_Milten_LSRISK_Condition()
 	if Npc_KnowsInfo(hero,Info_Milten_LOADSWORD4)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_LSRISK_Info()
@@ -1932,7 +1932,7 @@ func int Info_Milten_LSOREHEAP_Condition()
 	&& (Npc_GetDistToWP(hero,"NC_PATH41") < 500)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_LSOREHEAP_Info()
@@ -1954,9 +1954,9 @@ instance Info_Milten_LSNOW(C_INFO)
 	information = Info_Milten_LSNOW_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Here, take the spell!"; 
-//	description = "Hier, nimm die Zauberformel!"; 
-	description = "Tady, vezmi si to zaříkávadlo!"; 
+//	description = "Here, take the spell!";
+//	description = "Hier, nimm die Zauberformel!";
+	description = "Tady, vezmi si to zaříkávadlo!";
 };
 
 func int Info_Milten_LSNOW_Condition()
@@ -1967,7 +1967,7 @@ func int Info_Milten_LSNOW_Condition()
 	&& (Npc_GetDistToWP(hero,"NC_PATH41") < 1000)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_LSNOW_Info()
@@ -1985,8 +1985,8 @@ func void Info_Milten_LSNOW_Info()
 //	AI_Output(hero,self,"Info_Milten_LSNOW_15_04"); //Dann kann es ja losgehen!
 	AI_Output(hero,self,"Info_Milten_LSNOW_15_04"); //Nuže, do toho!
 
-	B_GiveInvItems(hero,self,Scroll4Milten,1); 
-	B_GiveInvItems(hero,self,Mythrilklinge01,1); 
+	B_GiveInvItems(hero,self,Scroll4Milten,1);
+	B_GiveInvItems(hero,self,Mythrilklinge01,1);
 
 	StartChaptersSix = TRUE;
 
@@ -2011,7 +2011,7 @@ func int Info_Milten_CHAPTERSIX_Condition()
 	&& StartChaptersSix
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_CHAPTERSIX_Info()
@@ -2037,7 +2037,7 @@ func int Info_Milten_LSDONE_Condition()
 	if (Kapitel == 6)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Milten_LSDONE_Info()

@@ -30,10 +30,10 @@ instance DIA_ORG_833_Buster_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_ORG_833_Buster_Exit_Condition;
 	information = DIA_ORG_833_Buster_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_ORG_833_Buster_Exit_Condition()
 {
@@ -42,7 +42,6 @@ func int DIA_ORG_833_Buster_Exit_Condition()
 
 func void DIA_ORG_833_Buster_Exit_Info()
 {
-
 	AI_StopProcessInfos(self);
 };
 
@@ -54,13 +53,13 @@ instance DIA_ORG_833_Buster3(C_INFO)
 	information = DIA_ORG_833_Buster3_Info;
 	important = 0;
 	permanent = 1;
-//	description = "How can you help me?"; 
-//	description = "Wie kannst du mir helfen?"; 
-	description = "Jak mi můžeš pomoci?"; 
+//	description = "How can you help me?";
+//	description = "Wie kannst du mir helfen?";
+	description = "Jak mi můžeš pomoci?";
 };
 
 func int DIA_ORG_833_Buster3_Condition()
-{ 
+{
 	return Npc_KnowsInfo(hero,DIA_ORG_833_Buster);
 };
 
@@ -96,8 +95,8 @@ func void DIA_ORG_833_Buster_Train1()
 //		AI_Output(self,other,"DIA_ORG_833_Buster3_02_04"); //Acrobatics can also be very useful during a battle. You'll be able to change the distance between you and your foe very quickly. Good luck!
 //		AI_Output(self,other,"DIA_ORG_833_Buster3_02_04"); //Auch im Kampf ist Akrobatik sehr hilfreich. Du kannst deinen Abstand zum Gegner sehr schnell verändern. Viel Glück!
 		AI_Output(self,other,"DIA_ORG_833_Buster3_02_04"); //Akrobacie může být také velmi užitečná v boji. Můžeš velmi rychle měnit vzdálenost mezi tebou a tvým nepřítelem. Hodně štěstí!
-	}; 
-};  
+	};
+};
 
 // **************** Back ************************
 func void DIA_ORG_833_Buster_Back()

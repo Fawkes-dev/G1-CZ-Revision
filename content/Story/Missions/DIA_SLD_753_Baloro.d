@@ -37,12 +37,12 @@ instance DIA_SLD_753_Baloro_Wasmeinstdu(C_INFO)
 	npc = SLD_753_Baloro;
 	condition = DIA_SLD_753_Baloro_Wasmeinstdu_Condition;
 	information = DIA_SLD_753_Baloro_Wasmeinstdu_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "Hi!";
 //	description = "Hi!";
 	description = "Zdar!";
-};                       
+};
 
 func int DIA_SLD_753_Baloro_Wasmeinstdu_Condition()
 {
@@ -73,12 +73,12 @@ instance DIA_SLD_753_Baloro_Worumgehts(C_INFO)
 	npc = SLD_753_Baloro;
 	condition = DIA_SLD_753_Baloro_Worumgehts_Condition;
 	information = DIA_SLD_753_Baloro_Worumgehts_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "What did you have in mind?";
 //	description = "Woran hast du dabei gedacht?";
 	description = "Co jsi měl na mysli?";
-};                       
+};
 
 func int DIA_SLD_753_Baloro_Worumgehts_Condition()
 {
@@ -165,30 +165,30 @@ func void DIA_SLD_753_Baloro_Worumgehts_jaklar()
 
 	Log_CreateTopic(Baloros_Waffe,LOG_MISSION);
 	Log_SetTopicStatus(Baloros_Waffe,LOG_RUNNING);
-//	B_LogEntry(Baloros_Waffe, "Baloro promised to trade me a superb weapon, if I'd bring him 5 Apples, 2 bottles of rice schnapps, 5 bottles of beer, 3 lofs of bread, 2 pieces of cheese and 2 bunches of grapes."); 
-//	B_LogEntry(Baloros_Waffe, "Baloro hat versprochen, mir eine verdammt gute Waffe zu geben, wenn ich ihm ein paar Sachen besorge. Er will 5 Äpfel, 2 Flaschen Reisschnaps, 5 Flaschen Bier, 3 Laibe Brot, 2 Käsestücke und 2 Weintraubenreben."); 
-	B_LogEntry(Baloros_Waffe, "Baloro mi slíbil zatraceně dobrou zbraň, pokud mu přinesu 5 jablek, 2 láhve rýžové pálenky, 5 lahví piva, 3 bochníky chleba, 2 kousky sýra a 2 trsy hroznů."); 
+//	B_LogEntry(Baloros_Waffe, "Baloro promised to trade me a superb weapon, if I'd bring him 5 Apples, 2 bottles of rice schnapps, 5 bottles of beer, 3 lofs of bread, 2 pieces of cheese and 2 bunches of grapes.");
+//	B_LogEntry(Baloros_Waffe, "Baloro hat versprochen, mir eine verdammt gute Waffe zu geben, wenn ich ihm ein paar Sachen besorge. Er will 5 Äpfel, 2 Flaschen Reisschnaps, 5 Flaschen Bier, 3 Laibe Brot, 2 Käsestücke und 2 Weintraubenreben.");
+	B_LogEntry(Baloros_Waffe, "Baloro mi slíbil zatraceně dobrou zbraň, pokud mu přinesu 5 jablek, 2 láhve rýžové pálenky, 5 lahví piva, 3 bochníky chleba, 2 kousky sýra a 2 trsy hroznů.");
 
 	AI_StopProcessInfos(self);
 };
 
-// ********************** Ich hab´s noch nicht dabei ***************** 
+// ********************** Ich hab´s noch nicht dabei *****************
 
 instance DIA_SLD_753_Baloro_habsnichtdabei(C_INFO)
 {
 	npc = SLD_753_Baloro;
 	condition = DIA_SLD_753_Baloro_habsnichtdabei_Condition;
 	information = DIA_SLD_753_Baloro_habsnichtdabei_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 //	description = "I couldn't get your stuff yet!";
 //	description = "Ich konnte deinen Kram noch nicht besorgen!";
 	description = "Nemohl jsem sehnat, co jsi chtěl!";
-};                       
+};
 
 func int DIA_SLD_753_Baloro_habsnichtdabei_Condition()
 {
-	if (SLD_753_Baloro_SC_besorgt_den_Kram == LOG_RUNNING)   
+	if (SLD_753_Baloro_SC_besorgt_den_Kram == LOG_RUNNING)
 	{
 		return 1;
 	};
@@ -210,33 +210,33 @@ func void DIA_SLD_753_Baloro_habsnichtdabei_Info()
 //	AI_Output(other,self,"DIA_SLD_753_Baloro_habsnichtdabei_Info_15_02"); //Ach ja! Sicher! Ich beeil mich!
 	AI_Output(other,self,"DIA_SLD_753_Baloro_habsnichtdabei_Info_15_02"); //Jistě! Určitě! Pospíším si!
 
-	AI_StopProcessInfos(self); 
+	AI_StopProcessInfos(self);
 };
 
-// ********************** Ich hab´s  dabei ***************** 
+// ********************** Ich hab´s  dabei *****************
 
 instance DIA_SLD_753_Baloro_habsdabei(C_INFO)
 {
 	npc = SLD_753_Baloro;
 	condition = DIA_SLD_753_Baloro_habsdabei_Condition;
 	information = DIA_SLD_753_Baloro_habsdabei_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "I have all the stuff on me!";
 //	description = "Ich hab' den ganzen Kram dabei!";
 	description = "Mám pro tebe všechno, co jsi chtěl!";
-};                       
+};
 
 func int DIA_SLD_753_Baloro_habsdabei_Condition()
 {
-	if ((SLD_753_Baloro_SC_besorgt_den_Kram == LOG_RUNNING)      
-		&& (Npc_KnowsInfo(hero,DIA_SLD_753_Baloro_Worumgehts)) 
-		&& (SLD_753_Baloro_SC_choice == 0) 
-		&& (Npc_HasItems(other,ItFoApple)>=5)  
-		&& (Npc_HasItems(other,ItFoBooze)>=2) 
-		&& (Npc_HasItems(other,ItFoBeer)>=5) 
-		&& (Npc_HasItems(other,ItFoLoaf)>=3) 
-		&& (Npc_HasItems(other,ItFoCheese)>=2) 
+	if ((SLD_753_Baloro_SC_besorgt_den_Kram == LOG_RUNNING)
+		&& (Npc_KnowsInfo(hero,DIA_SLD_753_Baloro_Worumgehts))
+		&& (SLD_753_Baloro_SC_choice == 0)
+		&& (Npc_HasItems(other,ItFoApple)>=5)
+		&& (Npc_HasItems(other,ItFoBooze)>=2)
+		&& (Npc_HasItems(other,ItFoBeer)>=5)
+		&& (Npc_HasItems(other,ItFoLoaf)>=3)
+		&& (Npc_HasItems(other,ItFoCheese)>=2)
 		&& (Npc_HasItems(other,ItFo_wineberrys_01)>=2))
 	{
 		return 1;
@@ -297,36 +297,36 @@ func void DIA_SLD_753_Baloro_habsdabei_Info()
 
 	SLD_753_Baloro_SC_besorgt_den_Kram = LOG_SUCCESS ;
 	B_GiveXP(300);
-//	B_LogEntry(Baloros_Waffe, "I should have known better than trusting this jerk! Nevermind, now I've learned my lesson!"); 
-//	B_LogEntry(Baloros_Waffe, "Hätte ich mir gleich denken können, daß der Typ mich nur verarschen will. Egal! Jetzt bin um eine Erfahrung reicher!"); 
-	B_LogEntry(Baloros_Waffe, "Měl jsem hned tušit, že si ten chlap ze mě chce vystřelit. Nevadí! Zase o zkušenost více!"); 
+//	B_LogEntry(Baloros_Waffe, "I should have known better than trusting this jerk! Nevermind, now I've learned my lesson!");
+//	B_LogEntry(Baloros_Waffe, "Hätte ich mir gleich denken können, daß der Typ mich nur verarschen will. Egal! Jetzt bin um eine Erfahrung reicher!");
+	B_LogEntry(Baloros_Waffe, "Měl jsem hned tušit, že si ten chlap ze mě chce vystřelit. Nevadí! Zase o zkušenost více!");
 
 	Log_SetTopicStatus(Baloros_Waffe,LOG_SUCCESS);
 
-	AI_StopProcessInfos(self); 
+	AI_StopProcessInfos(self);
 };
 
-// ********************** EXIT\ Spieler will Rechenschaft ***************** 
+// ********************** EXIT\ Spieler will Rechenschaft *****************
 
 instance DIA_SLD_753_Baloro_letztes_Wort(C_INFO)
 {
 	npc = SLD_753_Baloro;
 	condition = DIA_SLD_753_Baloro_letztes_Wort_Condition;
 	information = DIA_SLD_753_Baloro_letztes_Wort_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "Hey man! You can't do that to me!";
 //	description = "Hey, Mann! Das kannst du mit mir nicht machen!";
 	description = "Hej, člověče! Tohle mi nemůžeš udělat!";
 
-};                       
+};
 
 func int DIA_SLD_753_Baloro_letztes_Wort_Condition()
 	{
 		if (SLD_753_Baloro_SC_besorgt_den_Kram == LOG_SUCCESS)
 		{
 		return 1;
-		}; 
+		};
 	};
 
 func void DIA_SLD_753_Baloro_letztes_Wort_Info()
@@ -341,24 +341,24 @@ func void DIA_SLD_753_Baloro_letztes_Wort_Info()
 
 			SLD_753_Baloro_SC_wills_wissen = 1 ;
 
-			AI_StopProcessInfos(self); 
+			AI_StopProcessInfos(self);
 
 		};
 
-// ********************** EXIT\ Spieler will´s wissen ***************** 
+// ********************** EXIT\ Spieler will´s wissen *****************
 
 instance DIA_SLD_753_Baloro_SC_wills_wissen(C_INFO)
 {
 	npc = SLD_753_Baloro;
 	condition = DIA_SLD_753_Baloro_SC_wills_wissen_Condition;
 	information = DIA_SLD_753_Baloro_SC_wills_wissen_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "I'm afraid I'm going to have to whack you one!";
 //	description = "Ich glaube, ich muss dir jetzt leider die Fresse polieren!";
 	description = "Myslím, že ti budu muset zmalovat obličej!";
 
-};                       
+};
 
 func int DIA_SLD_753_Baloro_SC_wills_wissen_Condition()
 	{
@@ -366,13 +366,13 @@ func int DIA_SLD_753_Baloro_SC_wills_wissen_Condition()
 		{
 
 		return 1;
-		}; 
+		};
 	};
 
 func void DIA_SLD_753_Baloro_Attack()
 {
-//	B_FullStop(self); 
-	AI_StopProcessInfos(self); 
+//	B_FullStop(self);
+	AI_StopProcessInfos(self);
 	Npc_SetTarget(self,hero);
 	AI_StartState(self,ZS_Attack, 1, "");
 };
@@ -396,7 +396,7 @@ func void DIA_SLD_753_Baloro_SC_wills_wissen_Info()
 
 };
 
-// ********************** EXIT ***************** 
+// ********************** EXIT *****************
 
 instance DIA_SLD_753_Baloro_Exit(C_INFO)
 {
@@ -404,13 +404,13 @@ instance DIA_SLD_753_Baloro_Exit(C_INFO)
 	nr =999;
 	condition = DIA_SLD_753_Baloro_Exit_Condition;
 	information = DIA_SLD_753_Baloro_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 //	description = "I need to go on.";
 //	description = "Ich muss weiter!";
 	description = "Musím jít dál. (KONEC)";
 
-};                       
+};
 
 func int DIA_SLD_753_Baloro_Exit_Condition()
 	{
@@ -421,9 +421,8 @@ func int DIA_SLD_753_Baloro_Exit_Condition()
 	};
 
 func void DIA_SLD_753_Baloro_Exit_Info()
-{ 
-
-				if ((Npc_KnowsInfo(hero,DIA_SLD_753_Baloro_Wasmeinstdu)) && (SLD_753_Baloro_SC_choice == 0))  
+{
+				if ((Npc_KnowsInfo(hero,DIA_SLD_753_Baloro_Wasmeinstdu)) && (SLD_753_Baloro_SC_choice == 0))
 					{
 //						AI_Output(other,self,"DIA_SLD_753_Baloro_Exit_Info_15_01"); //No, no! Just leave it! I'm not interested!
 //						AI_Output(other,self,"DIA_SLD_753_Baloro_Exit_Info_15_01"); //Nee, nee! Lass mal! Kein Interesse!
@@ -447,27 +446,27 @@ func void DIA_SLD_753_Baloro_Exit_Info()
 	AI_StopProcessInfos(self);
 };
 
-// ********************** EXIT\ wie war das mit deinem Angebot ***************** 
+// ********************** EXIT\ wie war das mit deinem Angebot *****************
 
 instance DIA_SLD_753_Baloro_Angebotdochannehmen(C_INFO)
 {
 	npc = SLD_753_Baloro;
 	condition = DIA_SLD_753_Baloro_Angebotdochannehmen_Condition;
 	information = DIA_SLD_753_Baloro_Angebotdochannehmen_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "I've thought about it. I'd like to get back to your offer now.";
 //	description = "Ich hab's mir überlegt. Ich möchte dein Angebot doch annehmen.";
 	description = "Přemýšlel jsem o tom! Chtěl bych tvoji nabídku přijmout.";
 
-};                       
+};
 
 func int DIA_SLD_753_Baloro_Angebotdochannehmen_Condition()
 	{
 		if (SLD_753_Baloro_SC_choice == 1)
 		{
 		return 1;
-		}; 
+		};
 	};
 
 func void DIA_SLD_753_Baloro_Angebotdochannehmen_Info()
@@ -480,7 +479,7 @@ func void DIA_SLD_753_Baloro_Angebotdochannehmen_Info()
 //			AI_Output(self,other,"DIA_SLD_753_Baloro_Angebotdochannehmen_Info_08_01"); //Dafür ist es jetzt zu spät! Du hattest deine Chance!
 			AI_Output(self,other,"DIA_SLD_753_Baloro_Angebotdochannehmen_Info_08_01"); //To už je pozdě! Svoji šanci si propásl!
 
-			AI_StopProcessInfos(self); 
+			AI_StopProcessInfos(self);
 
 		};
 

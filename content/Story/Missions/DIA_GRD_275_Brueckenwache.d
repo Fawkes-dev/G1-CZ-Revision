@@ -10,7 +10,7 @@ instance Info_GRD_275_PreExit(C_INFO)
 	information = Info_GRD_275_PreExit_Info;
 	permanent = 0;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_GRD_275_PreExit_Condition()
 {
@@ -38,7 +38,7 @@ instance Info_GRD_275_Exit(C_INFO)
 	information = Info_GRD_275_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_GRD_275_Exit_Condition()
 {
@@ -68,7 +68,7 @@ instance Info_GRD_275_WasMachtIhrHier(C_INFO)
 //	description = "What are you doing here?";
 //	description = "Was macht ihr hier?";
 	description = "Co tady děláte?";
-};                       
+};
 
 func int Info_GRD_275_WasMachtIhrHier_Condition()
 {
@@ -103,7 +103,7 @@ instance Info_GRD_275_Tips(C_INFO)
 //	description = "Have you got any advice for me?";
 //	description = "Hast du irgendwelche Tipps für mich?";
 	description = "Neměl bys pro mě nějakou radu?";
-};                       
+};
 
 func int Info_GRD_275_Tips_Condition()
 {

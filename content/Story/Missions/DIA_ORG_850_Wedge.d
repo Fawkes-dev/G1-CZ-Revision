@@ -8,10 +8,10 @@ instance DIA_Wedge_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Wedge_Exit_Condition;
 	information = DIA_Wedge_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Wedge_Exit_Condition()
 {
@@ -38,7 +38,7 @@ instance DIA_Wedge_Psst(C_INFO)
 };
 
 func int DIA_Wedge_Psst_Condition()
-{ 
+{
 	if ((Npc_GetDistToNpc(hero,self) < 900) && (Wld_IsTime(08,00,23,30)))
 	{
 		return TRUE;
@@ -69,13 +69,13 @@ instance DIA_Wedge_Hello(C_INFO)
 	information = DIA_Wedge_Hello_Info;
 	important = 0;
 	permanent = 0;
-//	description = "What do you want?"; 
-//	description = "Was willst du von mir?"; 
-	description = "Co chceš?"; 
+//	description = "What do you want?";
+//	description = "Was willst du von mir?";
+	description = "Co chceš?";
 };
 
 func int DIA_Wedge_Hello_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Wedge_Psst))
 	{
 		return TRUE;
@@ -96,7 +96,7 @@ func void DIA_Wedge_Hello_Info()
 //	AI_Output(self,other,"DIA_Wedge_Hello_05_03"); //Besides, you have to watch who you talk to. Butch, for example - that's the guy over there, next to the campfire... Be aware of him!
 //	AI_Output(self,other,"DIA_Wedge_Hello_05_03"); //Außerdem musst du hier aufpassen, mit wem du redest. Butch zum Beispiel - der Typ da drüben am Lagerfeuer, vor dem musst du dich in Acht nehmen.
 	AI_Output(self,other,"DIA_Wedge_Hello_05_03"); //Mimo jiné musíš dávat pozor na to, s kým mluvíš. Tak například Butch - to je ten chlapík támhle, vedle táborového ohně... Dávej si na něj pozor!
-};  
+};
 
 // ****************************************
 // 				Was ist mit Butch
@@ -109,13 +109,13 @@ instance DIA_Wedge_WarnsOfButch(C_INFO)
 	information = DIA_Wedge_WarnsOfButch_Info;
 	important = 0;
 	permanent = 0;
-//	description = "What's the matter with Butch?"; 
-//	description = "Was ist mit Butch?"; 
-	description = "Co je s Butchem?"; 
+//	description = "What's the matter with Butch?";
+//	description = "Was ist mit Butch?";
+	description = "Co je s Butchem?";
 };
 
 func int DIA_Wedge_WarnsOfButch_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Wedge_Hello))
 	{
 		return TRUE;
@@ -131,7 +131,7 @@ func void DIA_Wedge_WarnsOfButch_Info()
 //	AI_Output(self,other,"DIA_Wedge_WarnsOfButch_05_01"); //Er hat die fiese Angewohnheit, Neuen zur Begrüßung das Fell über die Ohren zu ziehen. Also geh' ihm am besten aus dem Weg.
 	AI_Output(self,other,"DIA_Wedge_WarnsOfButch_05_01"); //Má ve zvyku mlátit nováčky. Raději se mu vyhýbej.
 	//AI_Output(self,other,"DIA_Wedge_WarnsOfButch_05_02"); //Also, geh ihm am besten aus dem Weg.//***Doppelt***
-};  
+};
 
 // ****************************************
 // 					Lehrer
@@ -144,16 +144,16 @@ instance DIA_Wedge_Lehrer(C_INFO)
 	condition = DIA_Wedge_Lehrer_Condition;
 	information = DIA_Wedge_Lehrer_Info;
 	permanent = 1;
-//	description = "What can you teach me?"; 
-//	description = "Was kannst du mir beibringen?"; 
-	description = "Co mě můžeš naučit?"; 
+//	description = "What can you teach me?";
+//	description = "Was kannst du mir beibringen?";
+	description = "Co mě můžeš naučit?";
 };
 
 func int DIA_Wedge_Lehrer_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Wedge_Hello))
-	{ 
-		return TRUE; 
+	{
+		return TRUE;
 	};
 };
 
@@ -176,23 +176,23 @@ func void DIA_Wedge_Lehrer_Info()
 
 	Info_ClearChoices(DIA_Wedge_Lehrer);
 	Info_AddChoice(DIA_Wedge_Lehrer,DIALOG_BACK ,DIA_Wedge_Lehrer_BACK);
-	if (Npc_GetTalentSkill(hero,NPC_TALENT_PICKPOCKET) == 1) 
+	if (Npc_GetTalentSkill(hero,NPC_TALENT_PICKPOCKET) == 1)
 	{
 		Info_AddChoice(DIA_Wedge_Lehrer,B_BuildLearnString(NAME_LearnPickpocket_2,LPCOST_TALENT_PICKPOCKET_2,0),DIA_Wedge_Lehrer_Pickpocket2);
 	};
-	if (Npc_GetTalentSkill(hero,NPC_TALENT_PICKPOCKET) == 0) 
+	if (Npc_GetTalentSkill(hero,NPC_TALENT_PICKPOCKET) == 0)
 	{
 		Info_AddChoice(DIA_Wedge_Lehrer,B_BuildLearnString(NAME_LearnPickpocket_1,LPCOST_TALENT_PICKPOCKET_1,0),DIA_Wedge_Lehrer_Pickpocket);
 	};
-	if (Npc_GetTalentSkill(hero,NPC_TALENT_PICKLOCK) == 1) 
+	if (Npc_GetTalentSkill(hero,NPC_TALENT_PICKLOCK) == 1)
 	{
 		Info_AddChoice(DIA_Wedge_Lehrer,B_BuildLearnString(NAME_LearnPicklock_2, LPCOST_TALENT_PICKLOCK_2,0),DIA_Wedge_Lehrer_Lockpick2);
 	};
-	if (Npc_GetTalentSkill(hero,NPC_TALENT_PICKLOCK) == 0) 
+	if (Npc_GetTalentSkill(hero,NPC_TALENT_PICKLOCK) == 0)
 	{
 		Info_AddChoice(DIA_Wedge_Lehrer,B_BuildLearnString(NAME_LearnPicklock_1, LPCOST_TALENT_PICKLOCK_1,0),DIA_Wedge_Lehrer_Lockpick);
 	};
-	if (Npc_GetTalentSkill(hero,NPC_TALENT_SNEAK) == 0) 
+	if (Npc_GetTalentSkill(hero,NPC_TALENT_SNEAK) == 0)
 	{
 		Info_AddChoice(DIA_Wedge_Lehrer,B_BuildLearnString(NAME_LearnSneak, LPCOST_TALENT_SNEAK,0),DIA_Wedge_Lehrer_Schleichen);
 	};
@@ -292,7 +292,7 @@ func void DIA_Wedge_Lehrer_Pickpocket2()
 	AI_Output(other,self,"DIA_Wedge_Lehrer_Pickpocket2_15_00"); //Chci se stát kapsářským odborníkem!
 
 	if (B_GiveSkill(other,NPC_TALENT_PICKPOCKET, 2, LPCOST_TALENT_PICKPOCKET_2))
-	{ 
+	{
 //		AI_Output(self,other,"DIA_Wedge_Lehrer_Pickpocket2_05_01"); //I think you've progressed far enough to be taught the final tricks of the trade.
 //		AI_Output(self,other,"DIA_Wedge_Lehrer_Pickpocket2_05_01"); //Ich denke, du bist gut genug, um in die letzten Geheimnisse eingeweiht zu werden.
 		AI_Output(self,other,"DIA_Wedge_Lehrer_Pickpocket2_05_01"); //Myslím, že jsi pokročil tak daleko, že tě můžu naučit poslední triky tohohle řemesla.

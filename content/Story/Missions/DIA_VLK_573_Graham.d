@@ -1,5 +1,5 @@
 // ************************************************************
-// 			  				   EXIT 
+// 			  				   EXIT
 // ************************************************************
 
 instance DIA_Graham_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Graham_EXIT(C_INFO)
 	information = Info_Graham_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_Graham_EXIT_Condition()
 {
@@ -18,7 +18,7 @@ func int Info_Graham_EXIT_Condition()
 };
 
 func void Info_Graham_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -36,7 +36,7 @@ instance DIA_Graham_Hello(C_INFO)
 //	description = "Hi! I'm new here.";
 //	description = "Hi! Ich bin neu hier.";
 	description = "Zdar! Jsem tady nový.";
-};                       
+};
 
 func int DIA_Graham_Hello_Condition()
 {
@@ -44,7 +44,7 @@ func int DIA_Graham_Hello_Condition()
 };
 
 func void DIA_Graham_Hello_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Graham_Hello_15_00"); //Hi! I'm new here.
 //	AI_Output(other,self,"DIA_Graham_Hello_15_00"); //Hi! Ich bin neu hier.
 	AI_Output(other,self,"DIA_Graham_Hello_15_00"); //Zdar! Jsem tady nový.
@@ -75,7 +75,7 @@ instance DIA_Graham_SellMap(C_INFO)
 //	description = "Diego sent me. He asks you to give me a map to the Old Mine.";
 //	description = "Diego schickt mich. Er sagt, du sollst mir ne Karte geben.";
 	description = "Poslal mě Diego. Říká, že mi máš dát mapu cesty do Starého dolu.";
-};                       
+};
 
 func int DIA_Graham_SellMap_Condition()
 {
@@ -86,7 +86,7 @@ func int DIA_Graham_SellMap_Condition()
 };
 
 func void DIA_Graham_SellMap_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Graham_SellMap_15_00"); //Diego sent me. He asks you to give me a map with the route to the Old Mine.
 //	AI_Output(other,self,"DIA_Graham_SellMap_15_00"); //Diego schickt mich. Er sagt, du sollst mir 'ne Karte geben, auf der der Weg zur Alten Mine verzeichnet ist.
 	AI_Output(other,self,"DIA_Graham_SellMap_15_00"); //Poslal mě Diego. Říká, že mi máš dát mapu cesty do Starého dolu.
@@ -178,7 +178,7 @@ instance DIA_Graham_BuyMaps(C_INFO)
 //	description = "Ich würde gerne eine Karte kaufen.";
 	description = "Chtěl bych koupit mapu.";
 	Trade = 1;
-};                       
+};
 
 func int DIA_Graham_BuyMaps_Condition()
 {
@@ -189,7 +189,7 @@ func int DIA_Graham_BuyMaps_Condition()
 };
 
 func void DIA_Graham_BuyMaps_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Graham_BuyMaps_15_00"); //I'd like to buy a map.
 //	AI_Output(other,self,"DIA_Graham_BuyMaps_15_00"); //Ich würde gerne eine Karte kaufen.
 	AI_Output(other,self,"DIA_Graham_BuyMaps_15_00"); //Chtěl bych koupit mapu.

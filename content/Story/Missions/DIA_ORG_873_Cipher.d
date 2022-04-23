@@ -8,10 +8,10 @@ instance Org_873_Cipher_Exit(C_INFO)
 	nr = 999;
 	condition = Org_873_Cipher_Exit_Condition;
 	information = Org_873_Cipher_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Org_873_Cipher_Exit_Condition()
 {
@@ -37,7 +37,7 @@ instance Org_873_Cipher_Hello(C_INFO)
 //	description = "How's things?";
 //	description = "Wie sieht's aus?";
 	description = "Jak to jde?";
-};                       
+};
 
 func int Org_873_Cipher_Hello_Condition()
 {
@@ -80,7 +80,7 @@ instance Org_873_Cipher_Fisk(C_INFO)
 //	description = "Fisk from the Old Camp is looking for a trade partner.";
 //	description = "Fisk aus dem Alten sucht nach einem Handelspartner.";
 	description = "Fisk ze Starého tábora hledá obchodního partnera.";
-};                       
+};
 
 func int Org_873_Cipher_Fisk_Condition()
 {
@@ -119,7 +119,7 @@ instance Org_873_Cipher_FromBalor(C_INFO)
 //	description = "What have you got to offer?";
 //	description = "Was hast du anzubieten?";
 	description = "Co můžeš nabídnout?";
-};                       
+};
 
 func int Org_873_Cipher_FromBalor_Condition()
 {
@@ -173,7 +173,7 @@ instance Org_873_Cipher_TRADE(C_INFO)
 //	description = "Lass uns handeln.";
 	description = "Uzavřeme obchod.";
 	trade = 1;
-};                       
+};
 
 func int Org_873_Cipher_TRADE_Condition()
 {

@@ -1,5 +1,5 @@
 // ************************************************************
-// 			  				   EXIT 
+// 			  				   EXIT
 // ************************************************************
 
 instance DIA_SCAR_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_SCAR_EXIT(C_INFO)
 	information = DIA_SCAR_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_SCAR_EXIT_Condition()
 {
@@ -18,7 +18,7 @@ func int DIA_SCAR_EXIT_Condition()
 };
 
 func void DIA_SCAR_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -36,7 +36,7 @@ instance DIA_SCAR_Hello(C_INFO)
 //	description = "Who are you?";
 //	description = "Wer bist du?";
 	description = "Kdo jsi?";
-};                       
+};
 
 func int DIA_SCAR_Hello_Condition()
 {
@@ -44,7 +44,7 @@ func int DIA_SCAR_Hello_Condition()
 };
 
 func void DIA_SCAR_Hello_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_SCAR_Hello_15_00"); //Who are you?
 //	AI_Output(other,self,"DIA_SCAR_Hello_15_00"); //Wer bist du?
 	AI_Output(other,self,"DIA_SCAR_Hello_15_00"); //Kdo jsi?
@@ -67,7 +67,7 @@ instance DIA_SCAR_What(C_INFO)
 //	description = "What's your job?";
 //	description = "Was ist deine Aufgabe hier?";
 	description = "Co tu máš na práci?";
-};                       
+};
 
 func int DIA_SCAR_What_Condition()
 {
@@ -78,7 +78,7 @@ func int DIA_SCAR_What_Condition()
 };
 
 func void DIA_SCAR_What_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_SCAR_What_15_00"); //What's your job?
 //	AI_Output(other,self,"DIA_SCAR_What_15_00"); //Was ist deine Aufgabe hier?
 	AI_Output(other,self,"DIA_SCAR_What_15_00"); //Co tu máš na práci?
@@ -104,7 +104,7 @@ instance DIA_SCAR_Frau(C_INFO)
 //	description = "When they threw me in here, I saw a woman being brought down...";
 //	description = "Als sie mich reingeworfen haben, habe ich eine Frau gesehen.";
 	description = "Když mě sem uvrhli, viděl jsem jednu ženu, jak ji posílají dolů se zbožím.";
-};                       
+};
 
 func int DIA_SCAR_Frau_Condition()
 {
@@ -115,7 +115,7 @@ func int DIA_SCAR_Frau_Condition()
 };
 
 func void DIA_SCAR_Frau_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_SCAR_Frau_15_00"); //When they threw me in here, I saw a woman being brought down with the goods.
 //	AI_Output(other,self,"DIA_SCAR_Frau_15_00"); //Als sie mich reingeworfen haben, habe ich gesehen, wie eine Frau zusammen mit den Waren heruntergefahren wurde.
 	AI_Output(other,self,"DIA_SCAR_Frau_15_00"); //Když mě sem uvrhli, viděl jsem jednu ženu, jak ji posílají dolů se zbožím.
@@ -150,7 +150,7 @@ instance DIA_SCAR_PERM(C_INFO)
 //	description = "Is there anything you can tell me about Gomez?";
 //	description = "Kannst du mir etwas über Gomez erzählen?";
 	description = "Můžeš mi něco říci o Gomezovi?";
-};                       
+};
 
 func int DIA_SCAR_PERM_Condition()
 {
@@ -161,7 +161,7 @@ func int DIA_SCAR_PERM_Condition()
 };
 
 func void DIA_SCAR_PERM_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_SCAR_PERM_15_00"); //Is there anything you can tell me about Gomez?
 //	AI_Output(other,self,"DIA_SCAR_PERM_15_00"); //Kannst du mir etwas über Gomez erzählen?
 	AI_Output(other,self,"DIA_SCAR_PERM_15_00"); //Můžeš mi něco říci o Gomezovi?

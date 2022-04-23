@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Grd_215_Torwache_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Grd_215_Torwache_Exit(C_INFO)
 	information = DIA_Grd_215_Torwache_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Grd_215_Torwache_Exit_Condition()
 {
@@ -37,7 +37,7 @@ instance DIA_Grd_215_Torwache_First(C_INFO)
 };
 
 func int DIA_Grd_215_Torwache_First_Condition()
-{ 
+{
 	if (!Npc_KnowsInfo(hero,DIA_Grd_216_First))  //Wenn der SC nicht durchs Hintertor rein ist.
 	&& (Kapitel < 2)
 	{
@@ -84,7 +84,7 @@ func void DIA_Grd_215_Torwache_First_Trouble()
 
 	AI_StopProcessInfos(self);
 	Npc_SetTarget(self,other);
-	AI_StartState(self,ZS_Attack, 1, ""); 
+	AI_StartState(self,ZS_Attack, 1, "");
 };
 
 func void DIA_Grd_215_Torwache_First_JustLooking()
@@ -168,7 +168,7 @@ instance DIA_Grd_215_Torwache_PERM(C_INFO)
 //	description = "Any news?";
 //	description = "Irgendwas Neues passiert?";
 	description = "Stalo se něco nového?";
-};                       
+};
 
 func int DIA_Grd_215_Torwache_PERM_Condition()
 {

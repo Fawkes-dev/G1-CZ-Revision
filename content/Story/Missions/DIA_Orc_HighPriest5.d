@@ -6,7 +6,7 @@ instance Info_HighPriest5(C_INFO)
 	condition = Info_HighPriest5_Condition;
 	information = Info_HighPriest5_Info;
 	important = 1;
-};                       
+};
 
 func int Info_HighPriest5_Condition()
 {
@@ -32,7 +32,7 @@ func void Info_HighPriest5_Info()
 		self.npctype = NpcType_Main;
 
 		Npc_SetAttitude(self,ATT_HOSTILE);
-		Npc_SetTempAttitude(self,ATT_HOSTILE); 
+		Npc_SetTempAttitude(self,ATT_HOSTILE);
 	}
 	else
 	{
@@ -60,7 +60,7 @@ instance Info_HighPriest5FAILED(C_INFO)
 	condition = Info_HighPriest5FAILED_Condition;
 	information = Info_HighPriest5FAILED_Info;
 	important = 1;
-};                       
+};
 
 func int Info_HighPriest5FAILED_Condition()
 {
@@ -85,11 +85,11 @@ func void Info_HighPriest5FAILED_Info()
 //	AI_Output(other,self,"Info_HighPriest5FAILED_15_03"); //Nichts wie weg hier!
 	AI_Output(other,self,"Info_HighPriest5FAILED_15_03"); //Raději odtud co nejrychleji vypadnu!
 	AI_RemoveWeapon (other);
-	AI_TurnAway(other,self); 
+	AI_TurnAway(other,self);
 
 	self.npctype = NpcType_Main;
 	Npc_SetAttitude(self,ATT_HOSTILE);
-	Npc_SetTempAttitude(self,ATT_HOSTILE); 
+	Npc_SetTempAttitude(self,ATT_HOSTILE);
 
 //	B_LogEntry(CH4_EnterTemple,"Grash-Varrag-Arushat apparently doesn't belong to the undead Orc shamans. He is more powerful by far and my weapons don't harm him at all. I need a more powerful weapon!");
 //	B_LogEntry(CH4_EnterTemple,"Grash-Varrag-Arushat schient kein untoter Orkschamane wie die anderen zu sein. Es ist weitaus mächtiger und meine Waffen richteten nicht den geringsten Schaden an. Ich brauche eine Waffe, die mächtiger als alles andere ist!");

@@ -6,10 +6,10 @@ instance STT_301_IAN_Exit(C_INFO)
 	nr = 999;
 	condition = STT_301_IAN_Exit_Condition;
 	information = STT_301_IAN_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int STT_301_IAN_Exit_Condition()
 {
@@ -36,15 +36,15 @@ instance STT_301_IAN_HI(C_INFO)
 	information = STT_301_IAN_HI_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Are you Ian, the boss of the mine?"; 
-//	description = "Bist du Ian, der Chef der Mine?"; 
-	description = "Ty jsi Ian, šéf tohoto dolu?"; 
+//	description = "Are you Ian, the boss of the mine?";
+//	description = "Bist du Ian, der Chef der Mine?";
+	description = "Ty jsi Ian, šéf tohoto dolu?";
 };
 
 func int STT_301_IAN_HI_Condition()
-{ 
+{
 	if ( ! Npc_KnowsInfo(hero,STT_301_IAN_NEST))
-	{ 
+	{
 		return TRUE;
 	};
 };
@@ -56,7 +56,7 @@ func void STT_301_IAN_HI_Info()
 //	AI_Output(self,other,"STT_301_IAN_HI_Info_13_02"); //Yes, I'm Ian. And this is my mine. So don't touch or break anything.
 //	AI_Output(self,other,"STT_301_IAN_HI_Info_13_02"); //Ja, ich bin Ian. Und das hier ist meine Mine. Also fass nichts an und mach nichts kaputt.
 	AI_Output(self,other,"STT_301_IAN_HI_Info_13_02"); //Ano, jsem Ian. A tohle je můj důl. Tak se ničeho nedotýkej a nic nerozbij.
-}; 
+};
 // ***************** Infos *****************************
 instance STT_301_IAN_GOMEZ(C_INFO)
 {
@@ -65,13 +65,13 @@ instance STT_301_IAN_GOMEZ(C_INFO)
 	information = STT_301_IAN_GOMEZ_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Isn't that Gomez' mine?"; 
-//	description = "Ist das nicht Gomez' Mine?"; 
-	description = "Není to Gomezův důl?"; 
+//	description = "Isn't that Gomez' mine?";
+//	description = "Ist das nicht Gomez' Mine?";
+	description = "Není to Gomezův důl?";
 };
 
 func int STT_301_IAN_GOMEZ_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,STT_301_IAN_HI)
 	{
 		return TRUE;
@@ -86,7 +86,7 @@ func void STT_301_IAN_GOMEZ_Info()
 //	AI_Output(self,other,"STT_301_IAN_GOMEZ_Info_13_02"); //Yes, of course this is the mine of the Old Camp. But in here there's only one boss - and that's me.
 //	AI_Output(self,other,"STT_301_IAN_GOMEZ_Info_13_02"); //Ja, natürlich ist das die Mine des Alten Lagers. Aber hier drin gibt's nur einen Chef - und das bin ich.
 	AI_Output(self,other,"STT_301_IAN_GOMEZ_Info_13_02"); //Ano, jistě, že je to důl Starého tábora. Ale je tady jediný šéf - a to jsem já.
-}; 
+};
 // ***************** Infos *****************************
 instance STT_301_IAN_ORE(C_INFO)
 {
@@ -95,9 +95,9 @@ instance STT_301_IAN_ORE(C_INFO)
 	information = STT_301_IAN_ORE_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Can you tell me something about the ore production here? "; 
-//	description = "Kannst du mir ein paar Takte zur Erzförderung erzählen?"; 
-	description = "Můžeš mi něco říci o zdejší produkci rudy?"; 
+//	description = "Can you tell me something about the ore production here? ";
+//	description = "Kannst du mir ein paar Takte zur Erzförderung erzählen?";
+	description = "Můžeš mi něco říci o zdejší produkci rudy?";
 };
 
 func int STT_301_IAN_ORE_Condition()
@@ -120,8 +120,8 @@ func void STT_301_IAN_ORE_Info()
 //	AI_Output(self,other,"STT_301_IAN_ORE_Info_13_03"); //Mit dem Erz, das wir dem König liefern, können hunderte von Klingen hergestellt werden.
 	AI_Output(self,other,"STT_301_IAN_ORE_Info_13_03"); //Z rudy, kterou dodáváme králi, se můžou ukovat stovky ostří.
 
-}; 
-// ***************** Infos *****************************   
+};
+// ***************** Infos *****************************
 instance STT_301_IAN_MORE(C_INFO)
 {
 	npc = STT_301_IAN;
@@ -129,9 +129,9 @@ instance STT_301_IAN_MORE(C_INFO)
 	information = STT_301_IAN_MORE_Info;
 	important = 0;
 	permanent = 0;
-//	description = "I've heard that the ore has magical qualities. Tell me about it."; 
-//	description = "Ich habe gehört, das Erz ist magisch. Erzähl mir davon."; 
-	description = "Slyšel jsem, že ta ruda má kouzelnou moc. Řekni mi o tom něco."; 
+//	description = "I've heard that the ore has magical qualities. Tell me about it.";
+//	description = "Ich habe gehört, das Erz ist magisch. Erzähl mir davon.";
+	description = "Slyšel jsem, že ta ruda má kouzelnou moc. Řekni mi o tom něco.";
 };
 
 func int STT_301_IAN_MORE_Condition()
@@ -151,8 +151,8 @@ func void STT_301_IAN_MORE_Info()
 //	AI_Output(self,other,"STT_301_IAN_MORE_Info_13_03"); //Eine Armee, die mit solchen Waffen ausgestattet ist, hat einen entscheidenden Vorteil in jeder Schlacht.
 	AI_Output(self,other,"STT_301_IAN_MORE_Info_13_03"); //Armáda vybavená takovými zbraněmi má rozhodující převahu v boji.
 
-};   
-// ***************** Infos *****************************  
+};
+// ***************** Infos *****************************
 instance STT_301_IAN_MAGIC(C_INFO)
 {
 	npc = STT_301_IAN;
@@ -160,9 +160,9 @@ instance STT_301_IAN_MAGIC(C_INFO)
 	information = STT_301_IAN_MAGIC_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Tell me more about the ore."; 
-//	description = "Erzähl mir mehr vom Erz"; 
-	description = "Řekni mi víc o té rudě."; 
+//	description = "Tell me more about the ore.";
+//	description = "Erzähl mir mehr vom Erz";
+	description = "Řekni mi víc o té rudě.";
 };
 
 func int STT_301_IAN_MAGIC_Condition()
@@ -182,8 +182,8 @@ func void STT_301_IAN_MAGIC_Info()
 //	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_03"); //Aber selbst ohne die magische Wirkung sind Waffen aus diesem Erz extrem widerstandsfähig und richten mehr Schaden an als gewöhnliche Waffen.
 	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_03"); //Ale zbraně vyrobené z této rudy jsou i bez magických vlastností výjimečně odolné a působí daleko větší škody než zbraně obyčejné.
 
-};   
-// ***************** Infos *****************************   
+};
+// ***************** Infos *****************************
 instance STT_301_IAN_MINE(C_INFO)
 {
 	npc = STT_301_IAN;
@@ -191,14 +191,14 @@ instance STT_301_IAN_MINE(C_INFO)
 	information = STT_301_IAN_MINE_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Tell me about the mine."; 
-//	description = "Erzähl mir von der Mine."; 
-	description = "Řekni mi něco o dole."; 
+//	description = "Tell me about the mine.";
+//	description = "Erzähl mir von der Mine.";
+	description = "Řekni mi něco o dole.";
 };
 
 func int STT_301_IAN_MINE_Condition()
-{ 
-	if (Kapitel < 3) 
+{
+	if (Kapitel < 3)
 	&& (Npc_KnowsInfo(hero,STT_301_IAN_HI))
 	{
 		return TRUE;
@@ -227,7 +227,7 @@ func void STT_301_IAN_MINE_Info()
 	AI_Output(other,self,"STT_301_IAN_MINE_Info_15_06"); //Jen se tu rozhlížím.
 };
 /*------------------------------------------------------------------------
-					BRING LIST 
+					BRING LIST
 ------------------------------------------------------------------------*/
 
 instance STT_301_IAN_WANTLIST(C_INFO)
@@ -237,15 +237,15 @@ instance STT_301_IAN_WANTLIST(C_INFO)
 	information = STT_301_IAN_WANTLIST_Info;
 	important = 0;
 	permanent = 0;
-//	description = "I'm here to collect the list for the Camp."; 
-//	description = "Ich wollte die Liste fürs Lager abholen."; 
-	description = "Mám tady opatřit seznam věcí pro tábor."; 
+//	description = "I'm here to collect the list for the Camp.";
+//	description = "Ich wollte die Liste fürs Lager abholen.";
+	description = "Mám tady opatřit seznam věcí pro tábor.";
 };
 
 func int STT_301_IAN_WANTLIST_Condition()
 {
 	if (Diego_BringList == LOG_RUNNING)
-	&& (!Npc_KnowsInfo(hero,Info_Diego_IanPassword)) 
+	&& (!Npc_KnowsInfo(hero,Info_Diego_IanPassword))
 	{
 		return TRUE;
 	};
@@ -260,9 +260,9 @@ func void STT_301_IAN_WANTLIST_Info()
 //	AI_Output(self,other,"STT_301_IAN_WANTLIST_Info_13_02"); //Da könnte ja jeder kommen. Verpiss dich.
 	AI_Output(self,other,"STT_301_IAN_WANTLIST_Info_13_02"); //To by mohl říci každý. Ztrať se.
 
-};  
+};
 /*------------------------------------------------------------------------
-							LISTE ABHOLEN 
+							LISTE ABHOLEN
 ------------------------------------------------------------------------*/
 
 instance STT_301_IAN_GETLIST(C_INFO)
@@ -272,13 +272,13 @@ instance STT_301_IAN_GETLIST(C_INFO)
 	information = STT_301_IAN_GETLIST_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Diego sent me. I'm to collect the list."; 
-//	description = "Diego schickt mich. Ich soll die Liste abholen."; 
-	description = "Poslal mě Diego. Mám tady opatřit seznam."; 
+//	description = "Diego sent me. I'm to collect the list.";
+//	description = "Diego schickt mich. Ich soll die Liste abholen.";
+	description = "Poslal mě Diego. Mám tady opatřit seznam.";
 };
 
 func int STT_301_IAN_GETLIST_Condition()
-{ 
+{
 	if (Diego_BringList == LOG_RUNNING)
 	&& (Npc_KnowsInfo(hero,Info_Diego_IanPassword))
 	{
@@ -298,22 +298,22 @@ func void STT_301_IAN_GETLIST_Info()
 //	B_LogEntry(CH1_BringList,"Ian hat mir die Liste ohne Probleme übergeben.");
 	B_LogEntry(CH1_BringList,"Ian mi bez problémů vydal seznam.");
 	B_GiveInvItems(self,hero,TheList,1);
-};  
+};
 // **************************************************************************
-// 							MISSION BRING MCQ EIER RUNNING , 
+// 							MISSION BRING MCQ EIER RUNNING ,
 //							oder: Ohne Zahnrad keine Eier
-// **************************************************************************  
+// **************************************************************************
 instance STT_301_IAN_NEST(C_INFO)
 {
 	npc = STT_301_IAN;
 	condition = STT_301_IAN_NEST_Condition;
 	information = STT_301_IAN_NEST_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "There must be a nest of minecrawlers somewhere here.";
 //	description = "Es muss hier irgendwo ein Nest der Minecrawler geben.";
 	description = "Musí tu někde být hnízdo důlních červů.";
-};                       
+};
 
 func int STT_301_IAN_NEST_Condition()
 {
@@ -350,18 +350,18 @@ func void STT_301_IAN_NEST_Info()
 
 	Ian_gearwheel = LOG_RUNNING;
 };
-// ******************************MISSION RUNNING********************************************  
+// ******************************MISSION RUNNING********************************************
 instance STT_301_IAN_GEAR_RUN(C_INFO)
 {
 	npc = STT_301_IAN;
 	condition = STT_301_IAN_GEAR_RUN_Condition;
 	information = STT_301_IAN_GEAR_RUN_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "A gearwheel? Where am I supposed to get that?";
 //	description = "Ein Zahnrad? Wo soll ich das herkriegen?";
 	description = "Ozubené kolo? Kde si myslíš, že ho vezmu?";
-};                       
+};
 
 func int STT_301_IAN_GEAR_RUN_Condition()
 {
@@ -386,18 +386,18 @@ func void STT_301_IAN_GEAR_RUN_Info()
 	AI_Output(self,other,"STT_301_IAN_GEAR_RUN_Info_13_03"); //Ale v postranní šachtě je stará porouchaná drtička. Možná budeš mít štěstí tam.
 };
 
-// ******************************MISSION SUCCESS********************************************  
+// ******************************MISSION SUCCESS********************************************
 instance STT_301_IAN_GEAR_SUC(C_INFO)
 {
 	npc = STT_301_IAN;
 	condition = STT_301_IAN_GEAR_SUC_Condition;
 	information = STT_301_IAN_GEAR_SUC_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "I have the gearwheel.";
 //	description = "Ich habe das Zahnrad.";
 	description = "Mám to ozubené kolo.";
-};                       
+};
 
 func int STT_301_IAN_GEAR_SUC_Condition()
 {
@@ -415,7 +415,7 @@ func void STT_301_IAN_GEAR_SUC_Info()
 	Ian_gearwheel = LOG_SUCCESS;
 	B_GiveXP(XP_BringGearWheel);
 
-	var C_Npc Sklave; 
+	var C_Npc Sklave;
 	Sklave = Hlp_GetNpc(ORC_2001_SKLAVE);
 	Npc_ExchangeRoutine(Sklave,"Stomper");
 
@@ -437,18 +437,18 @@ func void STT_301_IAN_GEAR_SUC_Info()
 	B_LogEntry(CH2_MCEggs,"Přinesl jsem Ianovi ozubené kolo z vyřazené drtičky rudy. Ian řekl, že mám Asghanovi říci VŠECHNO BUDE DOBRÉ. Potom mi otevře vrata do neosvětlených šachet.");
 };
 
-// ******************************GOTO ASGHAN********************************************  
+// ******************************GOTO ASGHAN********************************************
 instance STT_301_IAN_GOTOASGHAN(C_INFO)
 {
 	npc = STT_301_IAN;
 	condition = STT_301_IAN_GOTOASGHAN_Condition;
 	information = STT_301_IAN_GOTOASGHAN_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "I'm still looking for the crawlers' nest.";
 //	description = "Ich suche immer noch das Nest der Crawler.";
 	description = "Pořád hledám červí hnízdo.";
-};                       
+};
 
 func int STT_301_IAN_GOTOASGHAN_Condition()
 {
@@ -478,12 +478,12 @@ instance STT_301_IAN_AFTERALL(C_INFO)
 	npc = STT_301_IAN;
 	condition = STT_301_IAN_AFTERALL_Condition;
 	information = STT_301_IAN_AFTERALL_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "I've found the nest!";
 //	description = "Ich habe das Nest gefunden!";
 	description = "Našel jsem hnízdo!";
-};                       
+};
 
 func int STT_301_IAN_AFTERALL_Condition()
 {
@@ -516,12 +516,12 @@ instance STT_301_IAN_NOTENOUGH(C_INFO)
 	npc = STT_301_IAN;
 	condition = STT_301_IAN_NOTENOUGH_Condition;
 	information = STT_301_IAN_NOTENOUGH_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "I've found the nest! And the eggs of the minecrawler queen!";
 //	description = "Ich habe das Nest gefunden! Und Eier von der Minecrawler-Königin!";
 	description = "Našel jsem hnízdo! A vajíčka královny důlních červů!";
-};                       
+};
 
 func int STT_301_IAN_NOTENOUGH_Condition()
 {

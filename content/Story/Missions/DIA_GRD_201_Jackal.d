@@ -1,5 +1,5 @@
 // ************************************************************
-// 			  				   EXIT 
+// 			  				   EXIT
 // ************************************************************
 
 instance Info_Jackal_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance Info_Jackal_EXIT(C_INFO)
 	information = Info_Jackal_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_Jackal_EXIT_Condition()
 {
@@ -18,7 +18,7 @@ func int Info_Jackal_EXIT_Condition()
 };
 
 func void Info_Jackal_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -37,17 +37,17 @@ instance Info_Jackal_Hello(C_INFO)
 	information = Info_Jackal_Hello_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int Info_Jackal_Hello_Condition()
-{ 
+{
 	if (Kapitel <= 2)
 	{
 		return 1;
 	};
 };
 func void Info_Jackal_Hello_Info()
-{ 
+{
 //	AI_Output(self,other,"Info_Jackal_Hello_07_00"); //Ah! A new face.
 //	AI_Output(self,other,"Info_Jackal_Hello_07_00"); //Ah! Ein neues Gesicht.
 	AI_Output(self,other,"Info_Jackal_Hello_07_00"); //Á! Nová tvář.
@@ -169,7 +169,7 @@ instance Info_Jackal_Schutz(C_INFO)
 //	description = "I've been thinking about that protection money - here's your 10 ore.";
 //	description = "Ich hab' noch mal über das Schutzgeld nachgedacht - hier sind deine 10 Erz.";
 	description = "Přemýšlel jsem o těch penězích za ochranu - tady je tvých 10 nugetů.";
-};                       
+};
 
 func int Info_Jackal_Schutz_Condition()
 {
@@ -182,7 +182,7 @@ func int Info_Jackal_Schutz_Condition()
 };
 
 func void Info_Jackal_Schutz_Info()
-{ 
+{
 	if (Npc_HasItems(other,itminugget)>=10)
 	{
 //		AI_Output(other,self,"Info_Jackal_Schutz_15_00"); //I've been thinking about that protection money - here's your 10 ore.
@@ -217,7 +217,7 @@ instance Info_Jackal_PermPaid(C_INFO)
 //	description = "Well, how's it going?";
 //	description = "Na, wie sieht's aus?";
 	description = "Jak to jde?";
-};                       
+};
 
 func int Info_Jackal_PermPaid_Condition()
 {
@@ -228,7 +228,7 @@ func int Info_Jackal_PermPaid_Condition()
 };
 
 func void Info_Jackal_PermPaid_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_Jackal_PermPaid_15_00"); //Well, how's it going?
 //	AI_Output(other,self,"Info_Jackal_PermPaid_15_00"); //Na, wie sieht's aus?
 	AI_Output(other,self,"Info_Jackal_PermPaid_15_00"); //Tak jak to jde?
@@ -250,9 +250,8 @@ instance GRD_201_Jackal_WELCOME(C_INFO)
 };
 
 func int GRD_201_Jackal_WELCOME_Condition()
-{ 
-
-	if (Npc_GetTrueGuild(hero) == GIL_GRD) 
+{
+	if (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
 		return TRUE;
 	};
@@ -282,7 +281,7 @@ instance Info_Jackal_PAYDAY(C_INFO)
 	information = Info_Jackal_PAYDAY_Info;
 	permanent = 0;
 	important   = 1;
-};                       
+};
 
 func int Info_Jackal_PAYDAY_Condition()
 {
@@ -293,7 +292,7 @@ func int Info_Jackal_PAYDAY_Condition()
 };
 
 func void Info_Jackal_PAYDAY_Info()
-{ 
+{
 	if C_NpcBelongsToNewCamp(hero)
 	{
 		if (oldHeroGuild == GIL_GRD)

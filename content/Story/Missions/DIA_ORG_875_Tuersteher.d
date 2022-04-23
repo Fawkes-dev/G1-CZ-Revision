@@ -1,5 +1,5 @@
 // ************************************************************
-// 			  				   EXIT 
+// 			  				   EXIT
 // ************************************************************
 
 instance DIA_Org_875_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Org_875_EXIT(C_INFO)
 	information = DIA_Org_875_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Org_875_EXIT_Condition()
 {
@@ -18,7 +18,7 @@ func int DIA_Org_875_EXIT_Condition()
 };
 
 func void DIA_Org_875_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -36,7 +36,7 @@ instance DIA_Org_875_PERM(C_INFO)
 //	description = "You only let in rogues and scrapers?";
 //	description = "Ihr lasst hier nur Banditen und Schürfer rein?";
 	description = "Pouštíte dovnitř jenom bandity a rudaře?";
-};                       
+};
 
 func int DIA_Org_875_PERM_Condition()
 {
@@ -44,7 +44,7 @@ func int DIA_Org_875_PERM_Condition()
 };
 
 func void DIA_Org_875_PERM_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Org_875_PERM_15_00"); //You only let in rogues and scrapers?
 //	AI_Output(other,self,"DIA_Org_875_PERM_15_00"); //Ihr lasst hier nur Banditen und Schürfer rein?
 	AI_Output(other,self,"DIA_Org_875_PERM_15_00"); //Pouštíte dovnitř jenom bandity a rudaře?

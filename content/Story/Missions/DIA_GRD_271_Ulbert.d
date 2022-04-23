@@ -6,10 +6,10 @@ instance GRD_271_ULBERT_Exit(C_INFO)
 	nr = 999;
 	condition = GRD_271_ULBERT_Exit_Condition;
 	information = GRD_271_ULBERT_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int GRD_271_ULBERT_Exit_Condition()
 {
@@ -28,9 +28,9 @@ instance GRD_271_ULBERT_KEY(C_INFO)
 	information = GRD_271_ULBERT_KEY_Info;
 	important = 0;
 	permanent = 0;
-//	description = "What's in the storeroom?"; 
-//	description = "Was ist in dem Lagerschuppen?"; 
-	description = "Co je v tom skladišti?"; 
+//	description = "What's in the storeroom?";
+//	description = "Was ist in dem Lagerschuppen?";
+	description = "Co je v tom skladišti?";
 };
 
 func int GRD_271_ULBERT_KEY_Condition()
@@ -46,7 +46,7 @@ func void GRD_271_ULBERT_KEY_Info()
 //	AI_Output(self,other,"GRD_271_ULBERT_KEY_Info_07_02"); //That's none of your business.
 //	AI_Output(self,other,"GRD_271_ULBERT_KEY_Info_07_02"); //Das geht dich nichts an.
 	AI_Output(self,other,"GRD_271_ULBERT_KEY_Info_07_02"); //Do toho ti nic není.
-};  
+};
 // ***************** Infos *****************************
 
 instance GRD_271_ULBERT_TRICK(C_INFO)
@@ -56,15 +56,15 @@ instance GRD_271_ULBERT_TRICK(C_INFO)
 	information = GRD_271_ULBERT_TRICK_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Standing around for so long must make you thirsty."; 
-//	description = "So lange herumstehen macht bestimmt durstig"; 
-	description = "Když tady jsi tak dlouho, musíš mít z toho žízeň."; 
+//	description = "Standing around for so long must make you thirsty.";
+//	description = "So lange herumstehen macht bestimmt durstig";
+	description = "Když tady jsi tak dlouho, musíš mít z toho žízeň.";
 };
 
 func int GRD_271_ULBERT_TRICK_Condition()
 {
 	if (Npc_KnowsInfo(hero,GRD_271_ULBERT_KEY))
-	{ 
+	{
 		return 1;
 	};
 };
@@ -80,10 +80,10 @@ func void GRD_271_ULBERT_TRICK_Info()
 
 	Log_CreateTopic(CH2_StorageShed,LOG_MISSION);
 	Log_SetTopicStatus(CH2_StorageShed,LOG_RUNNING);
-//	B_LogEntry(CH2_StorageShed,"The guard Ulbert is protecting the store shed in the Old Mine. I should get him something to drink!"); 
-//	B_LogEntry(CH2_StorageShed,"Der Gardist Ulbert hält Wache vor dem Lagerschuppen der Alten Mine. Ich sollte ihm was zu trinken besorgen!"); 
-	B_LogEntry(CH2_StorageShed,"Strážce Ulbert hlídá skladiště ve Starém dole. Měl bych mu obstarat něco k pití!"); 
-};  
+//	B_LogEntry(CH2_StorageShed,"The guard Ulbert is protecting the store shed in the Old Mine. I should get him something to drink!");
+//	B_LogEntry(CH2_StorageShed,"Der Gardist Ulbert hält Wache vor dem Lagerschuppen der Alten Mine. Ich sollte ihm was zu trinken besorgen!");
+	B_LogEntry(CH2_StorageShed,"Strážce Ulbert hlídá skladiště ve Starém dole. Měl bych mu obstarat něco k pití!");
+};
 
 // ***************** Infos *****************************
 
@@ -94,13 +94,13 @@ instance GRD_271_ULBERT_DRINK(C_INFO)
 	information = GRD_271_ULBERT_DRINK_Info;
 	important = 0;
 	permanent = 0;
-//	description = "(give a drink)"; 
-//	description = "(Einen ausgeben)"; 
-	description = "(podej nápoj)"; 
+//	description = "(give a drink)";
+//	description = "(Einen ausgeben)";
+	description = "(podej nápoj)";
 };
 
 func int GRD_271_ULBERT_DRINK_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,GRD_271_ULBERT_TRICK)) && (Npc_HasItems(hero,ItFobeer )|| Npc_HasItems(hero,ItFoWine )|| Npc_HasItems(hero,ItFoBooze))
 	{
 		return 1;
@@ -146,7 +146,7 @@ func void GRD_271_ULBERT_DRINK_Info()
 		};
 		AI_UseItem(self,ItFoBooze);
 	};
-};  
+};
 // ***************** Infos *****************************
 instance GRD_271_ULBERT_DRUNK(C_INFO)
 {
@@ -155,9 +155,9 @@ instance GRD_271_ULBERT_DRUNK(C_INFO)
 	information = GRD_271_ULBERT_DRUNK_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Is there anything special in the storeroom NOW?"; 
-//	description = "Gibt es denn JETZT in dem Schuppen etwas besonderes?"; 
-	description = "Je TEĎ v tom skladišti něco zajímavého?"; 
+//	description = "Is there anything special in the storeroom NOW?";
+//	description = "Gibt es denn JETZT in dem Schuppen etwas besonderes?";
+	description = "Je TEĎ v tom skladišti něco zajímavého?";
 };
 
 func int GRD_271_ULBERT_DRUNK_Condition()
@@ -196,9 +196,9 @@ instance GRD_271_ULBERT_LOCK(C_INFO)
 	information = GRD_271_ULBERT_LOCK_Info;
 	important = 0;
 	permanent = 0;
-//	description = "(lure Ulbert away)"; 
-//	description = "(Ulbert weglocken)"; 
-	description = "(odlákej Ulberta)"; 
+//	description = "(lure Ulbert away)";
+//	description = "(Ulbert weglocken)";
+	description = "(odlákej Ulberta)";
 };
 
 func int GRD_271_ULBERT_LOCK_Condition()
@@ -263,4 +263,4 @@ func void GRD_271_ULBERT_ANGRY_Info()
 
 	Npc_ExchangeRoutine(self,"start");
 	AI_StopProcessInfos(self);
-}; 
+};

@@ -16,7 +16,7 @@ instance DIA_GUR_1202_CorAngar_Exit(C_INFO)
 	information = DIA_GUR_1202_CorAngar_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_GUR_1202_CorAngar_Exit_Condition()
 {
@@ -28,8 +28,8 @@ func void DIA_GUR_1202_CorAngar_Exit_Info()
 	AI_StopProcessInfos(self);
 };
 
-// ************************ 
-//		Später Trainer 
+// ************************
+//		Später Trainer
 // ************************
 
 instance DIA_CorAngar_LaterTrainer(C_INFO)
@@ -42,7 +42,7 @@ instance DIA_CorAngar_LaterTrainer(C_INFO)
 //	description = "Will you train me?";
 //	description = "Kannst du mich trainieren?";
 	description = "Budeš mě cvičit?";
-};                       
+};
 
 func int DIA_CorAngar_LaterTrainer_Condition()
 {
@@ -65,7 +65,7 @@ func void DIA_CorAngar_LaterTrainer_Info()
 	AI_Output(self,other,"GUR_1202_CorAngar_LaterTrainer_08_03"); //Svůj čas věnuji jen příslušníkům Svatého templářského kruhu.
 };
 
-// ************************ 
+// ************************
 //		Wie Templer
 // ************************
 
@@ -79,7 +79,7 @@ instance DIA_CorAngar_WieTempler(C_INFO)
 //	description = "How can I become a templar?";
 //	description = "Wie werde ich in den Kreis der Templer aufgenommen?";
 	description = "Jak se můžu stát templářem?";
-};                       
+};
 
 func int DIA_CorAngar_WieTempler_Condition()
 {
@@ -122,11 +122,11 @@ instance GUR_1202_CorAngar_Teach(C_INFO)
 //	description = "Can you train my strength and dexterity?";
 //	description = "Kannst du meine Stärke und mein Geschick trainieren?";
 	description = "Můžeš cvičit mojí sílu a obratnost?";
-};                       
+};
 
 func int GUR_1202_CorAngar_Teach_Condition()
 {
-	if (C_NpcBelongsToPsiCamp(hero))  
+	if (C_NpcBelongsToPsiCamp(hero))
 	{
 		return TRUE;
 	};
@@ -208,13 +208,13 @@ instance GUR_1202_CorAngar_WANNABETPL(C_INFO)
 	information = GUR_1202_CorAngar_WANNABETPL_Info;
 	important = 0;
 	permanent = 1;
-//	description = "I want to become a templar!"; 
-//	description = "Ich möchte Templer werden"; 
-	description = "Chci se stát templářem!"; 
+//	description = "I want to become a templar!";
+//	description = "Ich möchte Templer werden";
+	description = "Chci se stát templářem!";
 };
 
 func int GUR_1202_CorAngar_WANNABETPL_Condition()
-{ 
+{
 	if (CorKalom_BringMCQBalls == LOG_SUCCESS)
 	&& (Npc_GetTrueGuild(hero) == GIL_NOV)
 	{
@@ -229,7 +229,7 @@ func void GUR_1202_CorAngar_WANNABETPL_Info()
 	AI_Output(other,self,"GUR_1202_CorAngar_WANNABETPL_Info_15_01"); //Chci se stát templářem!
 
 	if (hero.level < 10)
-	{ 
+	{
 //		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_02"); //You are not yet ready. You can join us as soon as you've gathered more experience.
 //		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_02"); //Du bist noch nicht bereit. Wenn du erfahrener geworden bist, werde ich dich aufnehmen.
 		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_02"); //Nejsi ještě připraven. Můžeš se k nám připojit, jakmile získáš víc zkušeností.
@@ -280,15 +280,15 @@ instance GUR_1202_CorAngar_ZWEIHAND1(C_INFO)
 	information = GUR_1202_CorAngar_ZWEIHAND1_Info;
 	important = 0;
 	permanent = 1;
-//	description = B_BuildLearnString(NAME_Learn2h_1, LPCOST_TALENT_2H_1,0); 
-//	description = B_BuildLearnString(NAME_Learn2h_1, LPCOST_TALENT_2H_1,0); 
-	description = B_BuildLearnString(NAME_Learn2h_1,LPCOST_TALENT_2H_1,0); 
+//	description = B_BuildLearnString(NAME_Learn2h_1, LPCOST_TALENT_2H_1,0);
+//	description = B_BuildLearnString(NAME_Learn2h_1, LPCOST_TALENT_2H_1,0);
+	description = B_BuildLearnString(NAME_Learn2h_1,LPCOST_TALENT_2H_1,0);
 };
 
 func int GUR_1202_CorAngar_ZWEIHAND1_Condition()
-{ 
-	if (Npc_GetTalentSkill (hero, NPC_TALENT_2H) < 1)
-	&& (Npc_GetTalentSkill (hero, NPC_TALENT_1H) == 2)
+{
+	if (Npc_GetTalentSkill (hero,NPC_TALENT_2H) < 1)
+	&& (Npc_GetTalentSkill (hero,NPC_TALENT_1H) == 2)
 	&& (Npc_GetTrueGuild(hero) == GIL_TPL)
 	{
 		return TRUE;
@@ -322,7 +322,7 @@ func void GUR_1202_CorAngar_ZWEIHAND1_Info()
 		AI_StopProcessInfos(self);
 		B_PracticeCombat ("PSI_PATH_6_7");
 	};
-};  
+};
 //-------------------------------------------------------------------------
 //							ZWEIHANDKAMPF LERNEN STUFE 2
 //-------------------------------------------------------------------------
@@ -333,15 +333,15 @@ instance GUR_1202_CorAngar_ZWEIHAND2(C_INFO)
 	information = GUR_1202_CorAngar_ZWEIHAND2_Info;
 	important = 0;
 	permanent = 1;
-//	description = B_BuildLearnString(NAME_Learn2h_2, LPCOST_TALENT_2H_2,0); 
-//	description = B_BuildLearnString(NAME_Learn2h_2, LPCOST_TALENT_2H_2,0); 
-	description = B_BuildLearnString(NAME_Learn2h_2, LPCOST_TALENT_2H_2, 0); 
+//	description = B_BuildLearnString(NAME_Learn2h_2, LPCOST_TALENT_2H_2,0);
+//	description = B_BuildLearnString(NAME_Learn2h_2, LPCOST_TALENT_2H_2,0);
+	description = B_BuildLearnString(NAME_Learn2h_2, LPCOST_TALENT_2H_2, 0);
 };
 
 func int GUR_1202_CorAngar_ZWEIHAND2_Condition()
-{ 
-	if (Npc_GetTalentSkill (hero, NPC_TALENT_2H) == 1)
-	&& (Npc_GetTrueGuild (hero) == GIL_TPL)
+{
+	if (Npc_GetTalentSkill (hero,NPC_TALENT_2H) == 1)
+	&& (Npc_GetTrueGuild(hero) == GIL_TPL)
 	{
 		return TRUE;
 	};
@@ -353,7 +353,7 @@ func void GUR_1202_CorAngar_ZWEIHAND2_Info()
 //	AI_Output(other,self,"GUR_1202_CorAngar_ZWEIHAND2_Info_15_01"); //Ich möchte mehr über den zweihändigen Kampf lernen.
 	AI_Output(other,self,"GUR_1202_CorAngar_ZWEIHAND2_Info_15_01"); //Chci se naučit víc o boji s obouručními zbraněmi.
 
-	if (B_GiveSkill(other, NPC_TALENT_2H, 2, LPCOST_TALENT_2H_2))
+	if (B_GiveSkill(other,NPC_TALENT_2H, 2, LPCOST_TALENT_2H_2))
 	{
 //		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND2_Info_08_02"); //You're now in command of the dance with the blade. Now I'll show you how to master the fight.
 //		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND2_Info_08_02"); //Den Tanz mit der Klinge beherrscht du nun. Jetzt werde ich dir die Meisterschaft des Kampfes zeigen.
@@ -382,7 +382,7 @@ func void GUR_1202_CorAngar_ZWEIHAND2_Info()
 		AI_StopProcessInfos(self);
 		B_PracticeCombat ("PSI_PATH_6_7");
 	};
-};  
+};
 
 //#####################################################################
 //##
@@ -402,14 +402,14 @@ instance GUR_1202_CorAngar_SENDS(C_INFO)
 	information = GUR_1202_CorAngar_SENDS_Info;
 	important = 0;
 	permanent = 0;
-//	description = "What happens now?"; 
-//	description = "Wie geht es jetzt weiter?"; 
+//	description = "What happens now?";
+//	description = "Wie geht es jetzt weiter?";
 	//#Needs_attention - Neprebasnime, povedal by som skor nieco v tom zmysle: 'A co teď?'
-	description = "Jak to dopadlo?"; 
+	description = "Jak to dopadlo?";
 };
 
 func int GUR_1202_CorAngar_SENDS_Condition()
-{ 
+{
 	if (Kapitel == 3)
 	&& (CorAngar_GotoOGY == FALSE)
 	{
@@ -457,7 +457,7 @@ func void GUR_1202_CorAngar_SENDS_Info()
 //	Info_AddChoice(GUR_1202_CorAngar_SENDS,"I'll get on my way right now!", GUR_1202_CorAngar_SENDS_KNOW);
 //	Info_AddChoice(GUR_1202_CorAngar_SENDS,"Ich mache mich sofort auf den Weg!", GUR_1202_CorAngar_SENDS_KNOW);
 	Info_AddChoice(GUR_1202_CorAngar_SENDS,"Ihned se vydám na cestu!", GUR_1202_CorAngar_SENDS_KNOW);
-};  
+};
 func void GUR_1202_CorAngar_SENDS_EARN()
 {
 //	AI_Output(other,self,"GUR_1202_CorAngar_SENDS_EARN_Info_15_01"); //What will I get in exchange?
@@ -493,13 +493,13 @@ instance GUR_1202_CorAngar_WHERE(C_INFO)
 	information = GUR_1202_CorAngar_WHERE_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Where is the Orc cemetery?"; 
-//	description = "Wo ist der Ork Friedhof?"; 
-	description = "Kde je Skřetí hřbitov?"; 
+//	description = "Where is the Orc cemetery?";
+//	description = "Wo ist der Ork Friedhof?";
+	description = "Kde je Skřetí hřbitov?";
 };
 
 func int GUR_1202_CorAngar_WHERE_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,GUR_1202_CorAngar_SENDS))
 	{
 		return 1;
@@ -518,7 +518,7 @@ func void GUR_1202_CorAngar_WHERE_Info()
 //	B_LogEntry(CH3_OrcGraveyard,"The novice Talas will show me the way to the Orc cemetery. He's waiting for me at the temple forecourt.");
 //	B_LogEntry(CH3_OrcGraveyard,"Der Novize Talas wird mir den Weg zum Ork-Friedhof zeigen. Er wartet auf dem Tempelvorplatz auf mich.");
 	B_LogEntry(CH3_OrcGraveyard,"Novic Talas mi ukáže cestu k Skřetímu hřbitovu. Počká na mě na nádvoří chrámu.");
-};  
+};
 
 // **************************************************************************
 // 				nach dem Ork-Friedhof
@@ -530,14 +530,14 @@ instance GUR_1202_CorAngar_AFTER(C_INFO)
 	information = GUR_1202_CorAngar_AFTER_Info;
 	important = 0;
 	permanent = 0;
-//	description = "I've been to the Orc cemetery."; 
-//	description = "Ich war im Ork Friedhof"; 
-	description = "Byl jsem na Skřetím hřbitově."; 
+//	description = "I've been to the Orc cemetery.";
+//	description = "Ich war im Ork Friedhof";
+	description = "Byl jsem na Skřetím hřbitově.";
 };
 
 func int GUR_1202_CorAngar_AFTER_Condition()
 {
-	if (BaalLukor_BringParchment == 4) 
+	if (BaalLukor_BringParchment == 4)
 	{
 		return 1;
 	};
@@ -545,7 +545,6 @@ func int GUR_1202_CorAngar_AFTER_Condition()
 
 func void GUR_1202_CorAngar_AFTER_Info()
 {
-
 //	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_01"); //I've been to the Orc cemetery. There was NOTHING THERE. No Sleeper, no sign, no nothing.
 //	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_01"); //Ich war im Ork-Friedhof. Dort gibt es NICHTS. Keinen Schläfer, kein Zeichen, gar nichts.
 	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_01"); //Byl jsem na Skřetím hřbitově. Není TAM NIC. Žádný Spáč, žádné znamení, prostě nic.
@@ -585,7 +584,7 @@ func void GUR_1202_CorAngar_AFTER_Info()
 
 	B_GiveXP(XP_ReportToCorAngar);
 	B_Story_BackFromOrcGraveyard();
-};  
+};
 
 // **************************************************************************
 // 				MISSION: Find Herb
@@ -645,11 +644,11 @@ instance Info_CorAngar_FindHerb_WHERE(C_INFO)
 	condition = Info_CorAngar_FindHerb_WHERE_Condition;
 	information = Info_CorAngar_FindHerb_WHERE_Info;
 	permanent = 0;
-	important = 0; 
+	important = 0;
 //	description = "Where can I find these plants?";
 //	description = "Wo findet man solche Pflanzen ?";
 	description = "Kde najdu ty byliny?";
-};                       
+};
 
 func int Info_CorAngar_FindHerb_WHERE_Condition()
 {
@@ -685,11 +684,11 @@ instance Info_CorAngar_FindHerb_LOOK(C_INFO)
 	condition = Info_CorAngar_FindHerb_LOOK_Condition;
 	information = Info_CorAngar_FindHerb_LOOK_Info;
 	permanent = 0;
-	important = 0; 
+	important = 0;
 //	description = "How will I recognize these herbs?";
 //	description = "Wie kann ich diese Kräuter erkennen?";
 	description = "Jak ty byliny poznám?";
-};                       
+};
 
 func int Info_CorAngar_FindHerb_LOOK_Condition()
 {
@@ -725,11 +724,11 @@ instance Info_CorAngar_FindHerb_Running(C_INFO)
 	condition = Info_CorAngar_FindHerb_Running_Condition;
 	information = Info_CorAngar_FindHerb_Running_Info;
 	permanent = 1;
-	important = 0; 
+	important = 0;
 //	description = "I haven't found enough healing herbs yet.";
 //	description = "Ich habe noch nicht genug Heilkräuter gefunden";
 	description = "Ještě jsem nenašel dost léčivých bylin.";
-};                       
+};
 
 func int Info_CorAngar_FindHerb_Running_Condition()
 {
@@ -760,7 +759,7 @@ func void Info_CorAngar_FindHerb_Running_Info()
 	{
 		var C_NPC fortuno;
 		fortuno = Hlp_GetNpc(Nov_1357_Fortuno);
-		CreateInvItems(fortuno, ItFo_Plants_Herb_03, 5); 
+		CreateInvItems(fortuno, ItFo_Plants_Herb_03, 5);
 
 		Fortuno_HasYBerionHerbs = TRUE;
 //		B_LogEntry(CH3_FindHerbs,"Fortuno, the herb trader of the Brotherhood, might have such medical herbs.");
@@ -779,18 +778,18 @@ instance Info_CorAngar_FindHerb_Success(C_INFO)
 //	description = "I have the healing herbs for Y'Berion.";
 //	description = "Ich habe die Heilkräuter für Y'Berion.";
 	description = "Mám léčivé byliny pro Y´Beriona.";
-};                       
+};
 
 func int Info_CorAngar_FindHerb_Success_Condition()
 {
 	if (Npc_HasItems(other,ItFo_Plants_Herb_03) >= 5) && (CorAngar_FindHerb == LOG_RUNNING)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_CorAngar_FindHerb_Success_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_CorAngar_FindHerb_Success_15_01"); //I have the healing herbs for Y'Berion.
 //	AI_Output(other,self,"Info_CorAngar_FindHerb_Success_15_01"); //Ich habe die Heilkräuter für Y'Berion.
 	AI_Output(other,self,"Info_CorAngar_FindHerb_Success_15_01"); //Mám léčivé byliny pro Y´Beriona.
@@ -862,7 +861,7 @@ func void Info_CorAngar_FindHerb_Success_Info()
 //	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_09"); //Ich schätze, er ließ Buch und Fokus in seinem Labor zurück. Hier ist der Schlüssel für seine Truhe.
 	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_09"); //Myslím, že to ohnisko i almanach nechal ve své laboratoři. Tady je klíč k té truhle.
 
-	CreateInvItem(self,ITKE_PSI_KALOM_01); 
+	CreateInvItem(self,ITKE_PSI_KALOM_01);
 	B_GiveInvItems(self,other,ITKE_PSI_KALOM_01,1);
 };
 
@@ -874,18 +873,18 @@ instance Info_CorAngar_TELEPORT(C_INFO)
 	information = Info_CorAngar_TELEPORT_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int Info_CorAngar_TELEPORT_Condition()
 {
 	if Npc_KnowsInfo(hero,Info_CorAngar_FindHerb_Success)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_CorAngar_TELEPORT_Info()
-{ 
+{
 	AI_GotoNpc(self,hero);
 //	AI_Output(self,hero,"Info_CorAngar_TELEPORT_08_01"); //One moment!
 //	AI_Output(self,hero,"Info_CorAngar_TELEPORT_08_01"); //Einen Moment noch!

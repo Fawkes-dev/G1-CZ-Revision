@@ -1,5 +1,5 @@
 // **************************************************
-// EXIT 
+// EXIT
 // **************************************************
 instance PC_Psionic_Exit(C_INFO)
 {
@@ -7,11 +7,11 @@ instance PC_Psionic_Exit(C_INFO)
 	nr = 999;
 	condition = PC_Psionic_Exit_Condition;
 	information = PC_Psionic_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
-//	description = 	DIALOG_ENDE;
+//	description = DIALOG_ENDE;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int PC_Psionic_Exit_Condition()
 {
@@ -47,7 +47,7 @@ instance DIA_Lester_Sakrileg(C_INFO)
 	information = DIA_Lester_Sakrileg_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Lester_Sakrileg_Condition()
 {
@@ -78,7 +78,7 @@ instance DIA_Lester_Hallo(C_INFO)
 //	description = "Who are you?";
 //	description = "Wer bist du?";
 	description = "Kdo jsi?";
-};                       
+};
 
 func int DIA_Lester_Hallo_Condition()
 {
@@ -118,7 +118,7 @@ instance DIA_Lester_WannaTalkToMaster(C_INFO) //E2
 //	description = "But I want to talk to your master.";
 //	description = "Ich will aber mit deinem Meister reden.";
 	description = "Já ale chci mluvit s tvým mistrem.";
-};                       
+};
 
 func int DIA_Lester_WannaTalkToMaster_Condition()
 {
@@ -154,7 +154,7 @@ instance DIA_Lester_CampInfo(C_INFO) //E2
 //	description = "Tell me something about the Camp.";
 //	description = "Erzähl mir was über das Lager.";
 	description = "Řekni mi něco o táboře.";
-};                       
+};
 
 func int DIA_Lester_CampInfo_Condition()
 {
@@ -174,8 +174,8 @@ func void DIA_Lester_CampInfo_Info()
 //	AI_Output(self,other,"DIA_Lester_CampInfo_05_01"); //Was willst du wissen?
 	AI_Output(self,other,"DIA_Lester_CampInfo_05_01"); //Co chceš vědět?
 	Info_Clearchoices (DIA_Lester_CampInfo);
-//	Info_Addchoice (DIA_Lester_CampInfo,"DIALOG_BACK",DIA_Lester_CampInfo_BACK); 
-	Info_Addchoice (DIA_Lester_CampInfo,DIALOG_BACK,DIA_Lester_CampInfo_BACK); 
+//	Info_Addchoice (DIA_Lester_CampInfo,"DIALOG_BACK",DIA_Lester_CampInfo_BACK);
+	Info_Addchoice (DIA_Lester_CampInfo,DIALOG_BACK,DIA_Lester_CampInfo_BACK);
 //	Info_Addchoice (DIA_Lester_CampInfo,"Tell me about the guilds.",DIA_Lester_CampInfo_GIL);
 //	Info_Addchoice (DIA_Lester_CampInfo,"Erzähl mir was über die Gilden.",DIA_Lester_CampInfo_GIL);
 	Info_Addchoice (DIA_Lester_CampInfo,"Řekni mi o společenství.",DIA_Lester_CampInfo_GIL);
@@ -260,7 +260,7 @@ instance DIA_Lester_WannaJoin(C_INFO) //E2
 //	description = "I want to become a member of the Brotherhood!";
 //	description = "Ich will mich der Bruderschaft anschließen!";
 	description = "Chci se stát členem Bratrstva!";
-};                       
+};
 
 func int DIA_Lester_WannaJoin_Condition()
 {
@@ -301,7 +301,7 @@ instance DIA_Lester_HowProofWorthy(C_INFO) //E2
 //	description = "How's that supposed to work if none of the Gurus will talk to me?";
 //	description = "Wie soll das funktionieren, wenn keiner der Gurus mit mir redet?";
 	description = "A jak to funguje, když na mě ani jeden z Guru nepromluví?";
-};                       
+};
 
 func int DIA_Lester_HowProofWorthy_Condition()
 {
@@ -351,7 +351,7 @@ instance DIA_Lester_WeitWeg(C_INFO) //E2
 //	description = "How can I get your master to talk to me?";
 //	description = "Wie bringe ich deinen Meister dazu, mit mir zu reden?";
 	description = "Jak přiměju tvého mistra, aby se mnou promluvil?";
-};                       
+};
 
 func int DIA_Lester_WeitWeg_Condition()
 {
@@ -413,7 +413,7 @@ instance DIA_Lester_ShowHallo(C_INFO) //E2
 	information = DIA_Lester_ShowHallo_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Lester_ShowHallo_Condition()
 {
@@ -448,7 +448,7 @@ instance DIA_Lester_Show(C_INFO) //E2
 //	description = "I have renounced the old gods.";
 //	description = "Ich habe den alten Göttern abgeschworen.";
 	description = "Zřekl jsem se starých bohů.";
-};                       
+};
 
 func int DIA_Lester_Show_Condition()
 {
@@ -524,21 +524,21 @@ func void DIA_Lester_GuideOffer_Info()
 // FÜHRUNG DURCHS PSI-CAMP
 // **************************************************
 
-// -----------UNTERWEGS--------------------  
+// -----------UNTERWEGS--------------------
 instance PC_Psionic_SOON(C_INFO)
 {
 	npc = PC_Psionic;
 	condition = PC_Psionic_SOON_Condition;
 	information = PC_Psionic_SOON_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 //	description = "Are we nearly there yet?";
 //	description = "Sind wir gleich da?";
 	description = "Už tam budeme?";
-};                       
+};
 
 func int PC_Psionic_SOON_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Lester_GuideOffer))
 	&& (Kapitel < 3)
 	&& (LesterGuide >= 1)
@@ -562,15 +562,15 @@ instance PC_Psionic_CHANGE(C_INFO)
 	npc = PC_Psionic;
 	condition = PC_Psionic_CHANGE_Condition;
 	information = PC_Psionic_CHANGE_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 //	description = "I've changed my mind.";
 //	description = "Ich habe es mir anders überlegt";
 	description = "Rozmyslel jsem se.";
-};                       
+};
 
 func int PC_Psionic_CHANGE_Condition()
-{ 
+{
 	if  Npc_KnowsInfo(hero,DIA_Lester_GuideOffer)
 	&& (Kapitel < 3)
 	&& (LesterGuide >= 1)
@@ -601,13 +601,13 @@ instance PC_Psionic_GUIDEFIRST(C_INFO)
 	information = PC_Psionic_GUIDEFIRST_Info;
 	important = 0;
 	permanent = 1;
-//	description = "Show me the way..."; 
-//	description = "Zeig mir den Weg..."; 
-	description = "Ukaž mi cestu..."; 
+//	description = "Show me the way...";
+//	description = "Zeig mir den Weg...";
+	description = "Ukaž mi cestu...";
 };
 
 func int PC_Psionic_GUIDEFIRST_Condition()
-{ 
+{
 	if  Npc_KnowsInfo(hero,DIA_LESTER_GuideOffer)
 	&& (Kapitel < 3)
 	&& (LesterGuide == 0)
@@ -642,7 +642,7 @@ func void PC_Psionic_GUIDEFIRST_Info()
 //	Info_Addchoice (PC_Psionic_GUIDEFIRST,"zum Alchemielabor",PC_Psionic_GUIDEFIRST_HERB);
 	Info_Addchoice (PC_Psionic_GUIDEFIRST,"do alchymistické dílny.",PC_Psionic_GUIDEFIRST_HERB);
 
-};  
+};
 
 func void PC_Psionic_GUIDEFIRST_MAINGATE()
 {
@@ -713,9 +713,9 @@ func void PC_Psionic_GUIDEFIRST_BACK()
 // ***************************** Am Platz der Lehrer ****************************************//
 instance PC_Psionic_TRAIN(C_INFO)
 {
-	npc = PC_Psionic;                       
-	condition = PC_Psionic_TRAIN_Condition; 
-	information = PC_Psionic_TRAIN_Info;      
+	npc = PC_Psionic;
+	condition = PC_Psionic_TRAIN_Condition;
+	information = PC_Psionic_TRAIN_Info;
 	important = 1;
 	permanent = 1;
 
@@ -746,14 +746,14 @@ func void PC_Psionic_TRAIN_Info()
 	AI_StopProcessInfos(self);
 	TA_BeginOverlay (self);
 	TA_Stay     (00,00,00,55,"PSI_PATH_9_4");
-	TA_EndOverlay (self); 
-};  
+	TA_EndOverlay (self);
+};
 // ***************************** Am Tempelplatz ****************************************//
 instance PC_Psionic_TEMPEL(C_INFO)
 {
-	npc = PC_Psionic;                       
-	condition = PC_Psionic_TEMPEL_Condition; 
-	information = PC_Psionic_TEMPEL_Info;      
+	npc = PC_Psionic;
+	condition = PC_Psionic_TEMPEL_Condition;
+	information = PC_Psionic_TEMPEL_Info;
 	important = 1;
 	permanent = 0;
 
@@ -779,16 +779,16 @@ func void PC_Psionic_TEMPEL_Info()
 	Npc_ExchangeRoutine(self,"START");
 	AI_StopProcessInfos(self);
 	TA_BeginOverlay (self);
-	TA_Stay(00,00,01,00,"PSI_TEMPLE_NOVIZE_PR");  
+	TA_Stay(00,00,01,00,"PSI_TEMPLE_NOVIZE_PR");
 	TA_EndOverlay (self);
 
-};  
+};
 // ***************************** An der Schmiede ****************************************//
 instance PC_Psionic_SMITH(C_INFO)
 {
-	npc = PC_Psionic;                       
-	condition = PC_Psionic_SMITH_Condition; 
-	information = PC_Psionic_SMITH_Info;      
+	npc = PC_Psionic;
+	condition = PC_Psionic_SMITH_Condition;
+	information = PC_Psionic_SMITH_Info;
 	important = 1;
 	permanent = 0;
 
@@ -813,16 +813,16 @@ func void PC_Psionic_SMITH_Info()
 	Npc_ExchangeRoutine(self,"START");
 	AI_StopProcessInfos(self);
 	TA_BeginOverlay (self);
-	TA_Stay(00,00,01,00,"PSI_SMITH_IN");  
+	TA_Stay(00,00,01,00,"PSI_SMITH_IN");
 	TA_EndOverlay (self);
 
-};   
-// ***************************** Beim Krauthändler ****************************************// 
+};
+// ***************************** Beim Krauthändler ****************************************//
 instance PC_Psionic_HERB(C_INFO)
 {
-	npc = PC_Psionic;                       
-	condition = PC_Psionic_HERB_Condition; 
-	information = PC_Psionic_HERB_Info;      
+	npc = PC_Psionic;
+	condition = PC_Psionic_HERB_Condition;
+	information = PC_Psionic_HERB_Info;
 	important = 1;
 	permanent = 0;
 
@@ -851,9 +851,9 @@ func void PC_Psionic_HERB_Info()
 	AI_StopProcessInfos(self);
 
 	TA_BeginOverlay (self);
-	TA_Stay(00,00,01,00,"PSI_32_HUT_EX");  
+	TA_Stay(00,00,01,00,"PSI_32_HUT_EX");
 	TA_EndOverlay (self);
-};    
+};
 
 //#####################################################################
 //##
@@ -866,7 +866,7 @@ func void PC_Psionic_HERB_Info()
 //---------------------------------------------------------------------
 // Info SEND
 //---------------------------------------------------------------------
-instance PC_Psionic_SEND(C_INFO)// PC muss im ersten Kapitel schon mal mit Lester geredet haben 
+instance PC_Psionic_SEND(C_INFO)// PC muss im ersten Kapitel schon mal mit Lester geredet haben
 {
 	npc = PC_Psionic;
 	condition = PC_Psionic_SEND_Condition;
@@ -915,7 +915,7 @@ func void PC_Psionic_SEND_Info()
 	AI_Output(self,other,"PC_Psionic_SEND_Info_05_06"); //Potřebují magický předmět, ohnisko.
 
 	B_Kapitelwechsel (2);
-};  
+};
 
 //---------------------------------------------------------------------
 // Info BROTHERHOOD_TODO
@@ -927,13 +927,13 @@ instance PC_Psionic_BROTHERHOOD_TODO(C_INFO)
 	information = PC_Psionic_BROTHERHOOD_TODO_Info;
 	important = 0;
 	permanent = 0;
-//	description = "What's that got to do with me?"; 
-//	description = "Was kann ich dabei tun?"; 
-	description = "A co já s tím mám dělat?"; 
+//	description = "What's that got to do with me?";
+//	description = "Was kann ich dabei tun?";
+	description = "A co já s tím mám dělat?";
 };
 
 func int PC_Psionic_BROTHERHOOD_TODO_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,PC_Psionic_SEND)
 	{
 		return TRUE;
@@ -966,14 +966,14 @@ func void PC_Psionic_BROTHERHOOD_TODO_Info()
 	YBerion.aivar[AIV_FINDABLE] = TRUE;
 };
 
-//--------------------------------------- 
+//---------------------------------------
 
 //#####################################################################
 //##
 //##
 //## KAPITEL 3
 //##
-//## 
+//##
 //#####################################################################
 
 // Suche Nach Dem Fokus In Der Bergfestung
@@ -991,8 +991,8 @@ instance PC_Psionic_FOLLOWME(C_INFO)
 };
 
 func int PC_Psionic_FOLLOWME_Condition()
-{ 
-	if ( Npc_GetDistToWp (hero,"LOCATION_19_01") < 400 ) 
+{
+	if ( Npc_GetDistToWp (hero,"LOCATION_19_01") < 400 )
 	&& (Npc_GetDistToNpc(hero,PC_PSIONIC) <400)
 	{
 		return TRUE;
@@ -1035,13 +1035,13 @@ instance PC_Psionic_GOLEM(C_INFO)
 	information = PC_Psionic_GOLEM_Info;
 	important = 0;
 	permanent = 0;
-//	description = "How did you manage to get past that living mountain?"; 
-//	description = "Wie bist du eigentlich an dem wandelnden Steinhaufen vorbeigekommen?"; 
-	description = "Jak se ti podařilo dostat se přes tu chodící hromadu kamení?"; 
+//	description = "How did you manage to get past that living mountain?";
+//	description = "Wie bist du eigentlich an dem wandelnden Steinhaufen vorbeigekommen?";
+	description = "Jak se ti podařilo dostat se přes tu chodící hromadu kamení?";
 };
 
 func int PC_Psionic_GOLEM_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,PC_Psionic_FOLLOWME))
 	&& (!Npc_KnowsInfo(hero,PC_Psionic_FINISH ))
 	{
@@ -1057,7 +1057,7 @@ func void PC_Psionic_GOLEM_Info()
 //	AI_Output(self,other,"PC_Psionic_NORMAL_Info_05_02"); //I've learned a lot from the Gurus. Their magic can be really helpful.
 //	AI_Output(self,other,"PC_Psionic_NORMAL_Info_05_02"); //Ich habe einiges von den Gurus gelernt. Vor allem ihre Magie erweist sich immer wieder als sehr hilfreich.
 	AI_Output(self,other,"PC_Psionic_NORMAL_Info_05_02"); //Hodně jsem se toho naučil od Guru. Jejich kouzla mohou být opravdu užitečná.
-};  
+};
 
 //------------GESCHICHTE WARUM LESTER ZUR BERGFESTUNG GEHT--------------------
 instance PC_Psionic_STORY(C_INFO)
@@ -1067,14 +1067,14 @@ instance PC_Psionic_STORY(C_INFO)
 	information = PC_Psionic_STORY_Info;
 	important = 0;
 	permanent = 0;
-//	description = "This document you're looking for... what is it?"; 
-//	description = "Was ist das für eine Urkunde, die du suchst?"; 
-	description = "Co je to za dokument, který hledáš?"; 
+//	description = "This document you're looking for... what is it?";
+//	description = "Was ist das für eine Urkunde, die du suchst?";
+	description = "Co je to za dokument, který hledáš?";
 };
 
 func int PC_Psionic_STORY_Condition()
-{ 
-	if Npc_KnowsInfo(hero,PC_Psionic_FOLLOWME)  
+{
+	if Npc_KnowsInfo(hero,PC_Psionic_FOLLOWME)
 
 	{
 		return TRUE;
@@ -1098,7 +1098,7 @@ func void PC_Psionic_STORY_Info()
 //	AI_Output(self,other,"PC_Psionic_STORY_Info_05_05"); //That's right. But if the water mages manage to destroy the Barrier, the document might become quite valuable again.
 //	AI_Output(self,other,"PC_Psionic_STORY_Info_05_05"); //Das stimmt. Aber wenn die Wassermagier es doch schaffen, die Barriere zu zerstören, dann könnte die Urkunde wieder einiges wert sein.
 	AI_Output(self,other,"PC_Psionic_STORY_Info_05_05"); //To je pravda. Pokud se ale mágům Vody podaří zničit Bariéru, dokument znovu nabude značné hodnoty.
-};  
+};
 
 // ***************************** INFOS ****************************************//
 instance PC_Psionic_COMEWITHME(C_INFO)
@@ -1108,13 +1108,13 @@ instance PC_Psionic_COMEWITHME(C_INFO)
 	information = PC_Psionic_COMEWITHME_Info;
 	important = 0;
 	permanent = 0;
-//	description = "We could have a look around the fort together!"; 
-//	description = "Wir könnten die Festung gemeinsam erkunden!"; 
-	description = "Mohli bychom se podívat na tu pevnost společně."; 
+//	description = "We could have a look around the fort together!";
+//	description = "Wir könnten die Festung gemeinsam erkunden!";
+	description = "Mohli bychom se podívat na tu pevnost společně.";
 };
 
 func int PC_Psionic_COMEWITHME_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,PC_Psionic_STORY)
 	&& Npc_KnowsInfo(hero,PC_Psionic_GOLEM)
 	{
@@ -1140,7 +1140,7 @@ func void PC_Psionic_COMEWITHME_Info()
   	self.aivar[AIV_PARTYMEMBER] = TRUE;
 	Npc_ExchangeRoutine(self,"FORTRESSFOLLOW");
 	AI_StopProcessInfos(self);
-};  
+};
 
 //--------------------SPIELER KOMMT MIT LESTER ZUM FOKUSPLATZ-------------------
 instance PC_Psionic_FOKUSPLACE(C_INFO)
@@ -1153,8 +1153,8 @@ instance PC_Psionic_FOKUSPLACE(C_INFO)
 };
 
 func int PC_Psionic_FOKUSPLACE_Condition()
-{ 
-	if ( Npc_GetDistToWp (hero,"LOCATION_19_03_PATH_RUIN7") < 400 ) 
+{
+	if ( Npc_GetDistToWp (hero,"LOCATION_19_03_PATH_RUIN7") < 400 )
 	{
 		return TRUE;
 	};
@@ -1171,9 +1171,9 @@ func void PC_Psionic_FOKUSPLACE_Info()
 	AI_Output(other,self,"PC_Psionic_FOKUSPLACE_Info_15_02"); //Ano, vypadá to jako ohniskový podstavec, hmm... Není snadné se tam dostat...
 	AI_StopProcessInfos(self);
 
-//	B_LogEntry(CH3_Fortress,"The focus I'm looking for is on a pedestal. It's too high to climb to, though. I need to find another way of getting to the artifact."); 
-//	B_LogEntry(CH3_Fortress,"Der Fokus den ich suche befindet sich auf einem Podest. Es ist zu hoch um zu klettern. Ich muss einen anderen Weg finden, an das Artefakt heranzukommen."); 
-	B_LogEntry(CH3_Fortress,"Ohnisko, které hledám, stojí na podstavci. Je však příliš vysoko, než abych pro něj mohl vylézt. Musím najít nějaký způsob, jak tento artefakt získat."); 
+//	B_LogEntry(CH3_Fortress,"The focus I'm looking for is on a pedestal. It's too high to climb to, though. I need to find another way of getting to the artifact.");
+//	B_LogEntry(CH3_Fortress,"Der Fokus den ich suche befindet sich auf einem Podest. Es ist zu hoch um zu klettern. Ich muss einen anderen Weg finden, an das Artefakt heranzukommen.");
+	B_LogEntry(CH3_Fortress,"Ohnisko, které hledám, stojí na podstavci. Je však příliš vysoko, než abych pro něj mohl vylézt. Musím najít nějaký způsob, jak tento artefakt získat.");
 
 	Wld_InsertNpc (Harpie,"LOCATION_19_03_ENTRANCE_HARPYE");
 	Wld_InsertNpc (Harpie,"LOCATION_19_03_ENTRANCE_HARPYE2");
@@ -1191,7 +1191,7 @@ instance PC_Psionic_COMEBACK(C_INFO)
 };
 
 func int PC_Psionic_COMEBACK_Condition()
-{ 
+{
 	if ( Npc_GetDistToWp (hero,"PATH_TO_PLATEAU04_BRIDGE2" ) < 600 )
 	&& (Npc_KnowsInfo(hero,PC_Psionic_FOLLOWME))
 	&& (!Npc_HasItems(hero,Focus_3))
@@ -1219,13 +1219,13 @@ instance PC_Psionic_IAMHURT(C_INFO)
 	information = PC_Psionic_IAMHURT_Info;
 	important = 0;
 	permanent = 0;
-//	description = "I'm injured. Can you help me?"; 
-//	description = "Ich bin verletzt, kannst du mir helfen?"; 
-	description = "Jsem zraněný, můžeš mi pomoci?"; 
+//	description = "I'm injured. Can you help me?";
+//	description = "Ich bin verletzt, kannst du mir helfen?";
+	description = "Jsem zraněný, můžeš mi pomoci?";
 };
 
 func int PC_Psionic_IAMHURT_Condition()
-{ 
+{
 	if (hero.attribute[ATR_HITPOINTS] < (hero.attribute[ATR_HITPOINTS_MAX]/2))
 	&& (Npc_KnowsInfo(hero,PC_Psionic_FOLLOWME))
 	{
@@ -1244,7 +1244,7 @@ func void PC_Psionic_IAMHURT_Info()
 
 	CreateInvItem(self,ItFo_Potion_Health_02);
 	B_GiveInvItems(self,hero,ItFo_Potion_Health_02,1);
-};  
+};
 
 //------------- SPIELER HAT DIE URKUNDE FÜR LESTER GEFUNDEN-----------------------
 instance PC_Psionic_URKUNDE(C_INFO)
@@ -1254,15 +1254,15 @@ instance PC_Psionic_URKUNDE(C_INFO)
 	information = PC_Psionic_URKUNDE_Info;
 	important = 0;
 	permanent = 0;
-//	description = "I've found the document."; 
-//	description = "Ich habe die Urkunde gefunden"; 
-	description = "Našel jsem ten dokument."; 
+//	description = "I've found the document.";
+//	description = "Ich habe die Urkunde gefunden";
+	description = "Našel jsem ten dokument.";
 };
 
 func int PC_Psionic_URKUNDE_Condition()
-{ 
+{
 	if((Npc_HasItems(hero,ItWr_Urkunde_01 ))
-	&&(Npc_KnowsInfo(hero,PC_Psionic_STORY)))  
+	&&(Npc_KnowsInfo(hero,PC_Psionic_STORY)))
 	{
 		return TRUE;
 	};
@@ -1300,13 +1300,13 @@ instance PC_Psionic_TIP(C_INFO)
 	information = PC_Psionic_TIP_Info;
 	important = 0;
 	permanent = 0;
-//	description = "How can I reach the focus?"; 
-//	description = "Wie soll ich den Fokus erreichen?"; 
-	description = "Jak se dostanu k tomu ohnisku?"; 
+//	description = "How can I reach the focus?";
+//	description = "Wie soll ich den Fokus erreichen?";
+	description = "Jak se dostanu k tomu ohnisku?";
 };
 
 func int PC_Psionic_TIP_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,PC_Psionic_URKUNDE))
 	&& ( ! Npc_HasItems(hero,Focus_3))
 	{
@@ -1323,7 +1323,7 @@ func void PC_Psionic_TIP_Info()
 //	AI_Output(self,other,"PC_Psionic_TIP_Info_05_02"); //Meister Y'Berion sagte immer: Der Schüler versucht die Dinge mit Händen und Füßen zu bewegen, der Meister bewegt die Dinge mit der Kraft seiner Gedanken.
 	AI_Output(self,other,"PC_Psionic_TIP_Info_05_02"); //Mistr Y´Berion obvykle říká: žák zkouší věcmi pohybovat pomocí rukou a nohou, mistr jimi pohybuje silou svých myšlenek.
 // AI_Output(self,other,"PC_Psionic_TIP_Info_05_03"); //Hier ist ein guter Ort, um die Kraft des Geistes zu nutzen!
-};  
+};
 
 // ---ALLES IN DER BERGFESTUNG ERLEDIGT ABER LESTER DIE URKUNDE NICHT GEGEBEN
 instance PC_Psionic_LEAVE(C_INFO)
@@ -1336,9 +1336,9 @@ instance PC_Psionic_LEAVE(C_INFO)
 };
 
 func int PC_Psionic_LEAVE_Condition()
-{ 
+{
 	if ( ! Npc_HasItems(hero,Focus_3))
-	&& ( ! Npc_HasItems(self,ItWr_Urkunde_01)) 
+	&& ( ! Npc_HasItems(self,ItWr_Urkunde_01))
 	&& ( Npc_GetDistToWp (hero,"PATH_TO_PLATEAU04_BRIDGE2") < 900 )
 	{
 		return TRUE;
@@ -1368,8 +1368,8 @@ instance PC_Psionic_BALKON(C_INFO)
 };
 
 func int PC_Psionic_BALKON_Condition()
-{ 
-	if ( ! Npc_HasItems(self,ItWr_Urkunde_01)) 
+{
+	if ( ! Npc_HasItems(self,ItWr_Urkunde_01))
 	&& ( Npc_GetDistToWp (hero,"LOCATION_19_03_PEMTAGRAM2") < 1000 )
 
 	{
@@ -1398,7 +1398,7 @@ instance PC_Psionic_FINISH(C_INFO)
 };
 
 func int PC_Psionic_FINISH_Condition()
-{ 
+{
 	if Npc_HasItems(hero,Focus_3)
 	&& Npc_KnowsInfo(hero,PC_Psionic_URKUNDE)
 	{
@@ -1421,8 +1421,8 @@ func void PC_Psionic_FINISH_Info()
  	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	Npc_ExchangeRoutine(self,"BOOK");
 	AI_StopProcessInfos(self);
-}; 
-/*---------------------------------BALKON DER BERGFESTUNG 
+};
+/*---------------------------------BALKON DER BERGFESTUNG
 ------------------------------------------------------------------------*/
 
 instance PC_Psionic_CHESTCLOSED(C_INFO)
@@ -1432,17 +1432,17 @@ instance PC_Psionic_CHESTCLOSED(C_INFO)
 	information = PC_Psionic_CHESTCLOSED_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Have you found anything?"; 
-//	description = "Hast du schon was gefunden?"; 
-	description = "Už jsi něco našel?"; 
+//	description = "Have you found anything?";
+//	description = "Hast du schon was gefunden?";
+	description = "Už jsi něco našel?";
 };
 
 func int PC_Psionic_CHESTCLOSED_Condition()
-{ 
+{
 	if ( ! Npc_HasItems(hero,Focus_3))
-	&& ( ! Npc_HasItems(self,ItWr_Urkunde_01)) 
+	&& ( ! Npc_HasItems(self,ItWr_Urkunde_01))
 	&& ( Npc_GetDistToWp(hero,"LOCATION_19_03_SECOND_ETAGE_BALCON") < 500)
-	{ 
+	{
 		return TRUE;
 	};
 
@@ -1465,9 +1465,9 @@ func void PC_Psionic_CHESTCLOSED_Info()
 //	AI_Output(self,other,"PC_Psionic_CHESTCLOSED_Info_05_05"); //Hast du schon in der Bibliothek nachgesehen?
 	AI_Output(self,other,"PC_Psionic_CHESTCLOSED_Info_05_05"); //Už jsi hledal v knihovně?
 	AI_StopProcessInfos(self);
-};  
+};
 /*------------------------------------------------------------------------
-							COME WITH ME AGAIN 
+							COME WITH ME AGAIN
 ------------------------------------------------------------------------*/
 
 instance PC_Psionic_COMEAGAIN(C_INFO)
@@ -1477,13 +1477,13 @@ instance PC_Psionic_COMEAGAIN(C_INFO)
 	information = PC_Psionic_COMEAGAIN_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Let's sound out the fort together."; 
-//	description = "Lass uns zusammen die Festung erkunden"; 
-	description = "Prozkoumáme pevnost společně."; 
+//	description = "Let's sound out the fort together.";
+//	description = "Lass uns zusammen die Festung erkunden";
+	description = "Prozkoumáme pevnost společně.";
 };
 
 func int PC_Psionic_COMEAGAIN_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,PC_Psionic_LEAVE))
 	&& ( ! Npc_HasItems(hero,Focus_3))
 	{
@@ -1504,7 +1504,7 @@ func void PC_Psionic_COMEAGAIN_Info()
 	Npc_ExchangeRoutine(self,"FORTRESSFOLLOW");
 
 	AI_StopProcessInfos(self);
-};  
+};
 
 //---------------------------------------------------------------------
 // Info DIEGOMILTEN      ******Björn****** Patch2
@@ -1514,12 +1514,12 @@ instance Info_Lester_DIEGOMILTEN(C_INFO)
 	npc = PC_Psionic;
 	condition = Info_Lester_DIEGOMILTEN_Condition;
 	information = Info_Lester_DIEGOMILTEN_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "I met Diego and Milten in front of the Old Camp!";
 //	description = "Ich habe Diego und Milten vor dem Alten Lager getroffen!";
 	description = "Potkal jsem před Starým táborem Diega a Miltena!";
-};                       
+};
 
 func int Info_Lester_DIEGOMILTEN_Condition()
 {
@@ -1531,7 +1531,6 @@ func int Info_Lester_DIEGOMILTEN_Condition()
 
 func void Info_Lester_DIEGOMILTEN_Info()
 {
-
 //	AI_Output(hero,self,"Info_SFB_1_DieLage_15_00"); //How are you doing?
 //	AI_Output(hero,self,"Info_SFB_1_DieLage_15_00"); //Wie sieht's aus?
 	AI_Output(hero,self,"Info_SFB_1_DieLage_15_00"); //Jak se máš?
@@ -1595,9 +1594,9 @@ func void Info_Lester_DIEGOMILTEN_Info()
 	}
 	else
 	{
-//		B_LogEntry(CH4_4Friends, "I informed Lester and Gorn about the meeting with their friends. Now, this isn't my affair any longer. They'll know what do do next..."); 
-//		B_LogEntry(CH4_4Friends, "Ich habe Lester und Gorn nun darüber informiert sich mit den anderen beiden Freunden zu treffen. Ab jetzt ist dies nicht mehr meine Angelegenheit. Sie werden schon wissen, was zu tun ist."); 
-		B_LogEntry(CH4_4Friends, "Informoval jsem Gorna a Lestera o setkání s jejich přáteli. Teď už to není moje věc. Oni už vědí, co dělat..."); 
+//		B_LogEntry(CH4_4Friends, "I informed Lester and Gorn about the meeting with their friends. Now, this isn't my affair any longer. They'll know what do do next...");
+//		B_LogEntry(CH4_4Friends, "Ich habe Lester und Gorn nun darüber informiert sich mit den anderen beiden Freunden zu treffen. Ab jetzt ist dies nicht mehr meine Angelegenheit. Sie werden schon wissen, was zu tun ist.");
+		B_LogEntry(CH4_4Friends, "Informoval jsem Gorna a Lestera o setkání s jejich přáteli. Teď už to není moje věc. Oni už vědí, co dělat...");
 		Log_SetTopicStatus(CH4_4Friends,LOG_SUCCESS);
 	};
 

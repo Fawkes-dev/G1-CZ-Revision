@@ -1,5 +1,5 @@
 // **************************************************
-//						 EXIT 
+//						 EXIT
 // **************************************************
 
 instance DIA_Gravo_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Gravo_Exit(C_INFO)
 	information = DIA_Gravo_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Gravo_Exit_Condition()
 {
@@ -36,7 +36,7 @@ instance DIA_Gravo_Hallo(C_INFO)
 //	description = "How are you doing?";
 //	description = "Wie steht's denn so?";
 	description = "Jak to vypadá?";
-};                       
+};
 
 func int DIA_Gravo_Hallo_Condition()
 {
@@ -76,7 +76,7 @@ instance DIA_Gravo_HelpHow(C_INFO)
 //	description = "If I was in trouble, YOU could help me? How?";
 //	description = "Wenn ich hier Ärger habe, kannst DU mir also helfen? Wie?";
 	description = "Když se dostanu do problémů, tak mi TY můžeš pomoci? Jak?";
-};                       
+};
 
 func int DIA_Gravo_HelpHow_Condition()
 {
@@ -109,8 +109,6 @@ func void DIA_Gravo_HelpHow_Info()
 
 //	B_LogEntry(GE_TraderOC,"The digger Gravo is selling a special kind of service. If I get in trouble with important people in the Camp, I can pay him to settle it.");
 //	B_LogEntry(GE_TraderOC,"Der Buddler Gravo verkauft eine Dienstleistung besonderer Art. Wenn ich es mir bei wichtigen Leuten im Alten Lager verscherzt habe, kann ich ihn bezahlen, um den Streit beizulegen.");
-	//#Bugfix Log_CreateTopic added
-	Log_CreateTopic (GE_TraderOC,LOG_NOTE);
 	B_LogEntry(GE_TraderOC,"Kopáč Gravo poskytuje zvláštní služby. Pokud se v táboře dostanu do konfliktu s důležitými lidmi, můžu mu zaplatit za to, že vše urovná.");
 };
 
@@ -201,7 +199,7 @@ instance DIA_Gravo_HelpAngryNow(C_INFO)
 //	description = "Can you help me - I think I'm in trouble.";
 //	description = "Kannst du mir helfen - ich glaub, ich hab' Ärger.";
 	description = "Můžeš mi pomoci - myslím, že mám problém.";
-};                       
+};
 
 func int DIA_Gravo_HelpAngryNow_Condition()
 {
@@ -286,7 +284,7 @@ instance DIA_Gravo_Influence(C_INFO)
 //	description = "Could you tell me who belongs to the influential people here?";
 //	description = "Kannst du mir sagen, wer hier zu den einflussreichen Leuten gehört?";
 	description = "Můžeš mi říci, kdo tu patří k vlivným lidem?";
-};                       
+};
 
 func int DIA_Gravo_Influence_Condition()
 {

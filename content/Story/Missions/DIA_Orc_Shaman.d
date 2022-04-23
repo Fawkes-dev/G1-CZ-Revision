@@ -7,10 +7,10 @@ instance Info_OrcShaman_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_OrcShaman_EXIT_Condition;
 	information = Info_OrcShaman_EXIT_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_OrcShaman_EXIT_Condition()
 {
@@ -43,7 +43,7 @@ instance Info_OrcShaman_THX(C_INFO)
 };
 
 func int Info_OrcShaman_THX_Condition()
-{ 
+{
 	if (Kapitel == 4)
 	{
 		return TRUE;
@@ -61,7 +61,7 @@ func void Info_OrcShaman_THX_Info()
 //	AI_Output(self,hero,"Info_OrcShaman_THX_17_03"); //Old brothers today enemies.
 //	AI_Output(self,hero,"Info_OrcShaman_THX_17_03"); //Alte Brüder seien heute Feinde.
 	AI_Output(self,hero,"Info_OrcShaman_THX_17_03"); //Staří bratři být dneska nepřítel.
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info WHO
@@ -79,7 +79,7 @@ instance Info_OrcShaman_WHO(C_INFO)
 };
 
 func int Info_OrcShaman_WHO_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_THX))
 	{
 		return TRUE;
@@ -97,7 +97,7 @@ func void Info_OrcShaman_WHO_Info()
 //	AI_Output(self,hero,"Info_OrcShaman_WHO_17_03"); //Be son of the spirit. People call shaman.
 //	AI_Output(self,hero,"Info_OrcShaman_WHO_17_03"); //Seien Sohn von Geist. Menschen nennen Schamane.
 	AI_Output(self,hero,"Info_OrcShaman_WHO_17_03"); //Být syn ducha. Lidé tomu říkat šaman.
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info TONGUE
@@ -115,7 +115,7 @@ instance Info_OrcShaman_TONGUE(C_INFO)
 };
 
 func int Info_OrcShaman_TONGUE_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_THX))
 	{
 		return TRUE;
@@ -133,7 +133,7 @@ func void Info_OrcShaman_TONGUE_Info()
 //	AI_Output(self,hero,"Info_OrcShaman_TONGUE_17_03"); //Run away. Happen many winters ago.
 //	AI_Output(self,hero,"Info_OrcShaman_TONGUE_17_03"); //Seien gelaufen weg. Seien viiiele Winter her.
 	AI_Output(self,hero,"Info_OrcShaman_TONGUE_17_03"); //Utéct pryč. To být už před mnoha zimami.
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info MINE
@@ -151,7 +151,7 @@ instance Info_OrcShaman_MINE(C_INFO)
 };
 
 func int Info_OrcShaman_MINE_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_TONGUE))
 	{
 		return TRUE;
@@ -166,7 +166,7 @@ func void Info_OrcShaman_MINE_Info()
 //	AI_Output(self,hero,"Info_OrcShaman_MINE_17_02"); //Mine be under village in Hollow.
 //	AI_Output(self,hero,"Info_OrcShaman_MINE_17_02"); //Mine gewesen mit Dorf in Kessel darüber.
 	AI_Output(self,hero,"Info_OrcShaman_MINE_17_02"); //Důl být pod vesnicí v Kotlině.
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info WHY
@@ -184,7 +184,7 @@ instance Info_OrcShaman_WHY(C_INFO)
 };
 
 func int Info_OrcShaman_WHY_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_THX))
 	{
 		return TRUE;
@@ -205,7 +205,7 @@ func void Info_OrcShaman_WHY_Info()
 //	AI_Output(self,hero,"Info_OrcShaman_WHY_17_04"); //Believe KRUSHAK bad demon.
 //	AI_Output(self,hero,"Info_OrcShaman_WHY_17_04"); //Glauben, KRUSHAK seien böser Dämon.
 	AI_Output(self,hero,"Info_OrcShaman_WHY_17_04"); //Věřit mi, KRUSHAK být zlý démon.
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info KRUSHAK
@@ -223,7 +223,7 @@ instance Info_OrcShaman_KRUSHAK(C_INFO)
 };
 
 func int Info_OrcShaman_KRUSHAK_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_WHY))
 	{
 		return TRUE;
@@ -244,7 +244,7 @@ func void Info_OrcShaman_KRUSHAK_Info()
 //	AI_Output(self,hero,"Info_OrcShaman_KRUSHAK_17_04"); //Yes, humans say SLEEPER!
 //	AI_Output(self,hero,"Info_OrcShaman_KRUSHAK_17_04"); //Ja, Menschen sagen SCHLÄFER!
 	AI_Output(self,hero,"Info_OrcShaman_KRUSHAK_17_04"); //Ano, lidé říkat SPÁČ!
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info SLEEPER
@@ -262,7 +262,7 @@ instance Info_OrcShaman_SLEEPER(C_INFO)
 };
 
 func int Info_OrcShaman_SLEEPER_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_KRUSHAK))
 	{
 		return TRUE;
@@ -295,7 +295,7 @@ func void Info_OrcShaman_SLEEPER_Info()
 //	AI_Output(hero,self,"Info_OrcShaman_SLEEPER_15_08"); //A subterranean temple for the Sleeper? That's what Xardas must have meant when he spoke about the entrance being 'in the Orc town'!
 //	AI_Output(hero,self,"Info_OrcShaman_SLEEPER_15_08"); //Ein unterirdischer Tempel zu Ehren des Schläfers! Das muss Xardas gemeint haben mit 'unter der Ork-Stadt'!
 	AI_Output(hero,self,"Info_OrcShaman_SLEEPER_15_08"); //Podzemní chrám na počest Spáče! To musel mít na mysli Xardas, když říkal 'pod skřetím městem'!
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info CURSE
@@ -313,7 +313,7 @@ instance Info_OrcShaman_CURSE(C_INFO)
 };
 
 func int Info_OrcShaman_CURSE_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_SLEEPER))
 	{
 		return TRUE;
@@ -343,7 +343,7 @@ func void Info_OrcShaman_CURSE_Info()
 //	AI_Output(self,hero,"Info_OrcShaman_CURSE_17_07"); //KRUSHAK curse all. Workers too. Be all dead and live, both at same time.
 //	AI_Output(self,hero,"Info_OrcShaman_CURSE_17_07"); //KRUSHAK verfluchen alle. Auch die gewesen Arbeiter. Seien allen tot und lebendig.
 	AI_Output(self,hero,"Info_OrcShaman_CURSE_17_07"); //KRUSHAK proklít všechny. I dělníky. Být všichni mrtví i žít. Obojí najednou.
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info OUTSIDE
@@ -361,7 +361,7 @@ instance Info_OrcShaman_OUTSIDE(C_INFO)
 };
 
 func int Info_OrcShaman_OUTSIDE_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_CURSE))
 	{
 		return TRUE;
@@ -385,7 +385,7 @@ func void Info_OrcShaman_OUTSIDE_Info()
 //	AI_Output(self,hero,"Info_OrcShaman_OUTSIDE_17_05"); //Brothers no want to hear. Brothers say Ur-Shak go. Brothers hit Ur-Shak.
 //	AI_Output(self,hero,"Info_OrcShaman_OUTSIDE_17_05"); //Brüder wollen nicht hören. Brüder sagen Ur-Shak gehen. Brüder schlagen Ur-Shak.
 	AI_Output(self,hero,"Info_OrcShaman_OUTSIDE_17_05"); //Bratři o tom nechtít slyšet. Bratři říkat Ur-Shak odejít. Bratři bít Ur-Shak.
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info INTEMPLE
@@ -403,7 +403,7 @@ instance Info_OrcShaman_INTEMPLE(C_INFO)
 };
 
 func int Info_OrcShaman_INTEMPLE_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_OUTSIDE))
 	{
 		return TRUE;
@@ -442,7 +442,7 @@ instance Info_OrcShaman_MAP(C_INFO)
 };
 
 func int Info_OrcShaman_MAP_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_INTEMPLE)
 	&& Npc_HasItems(hero,ItWrWorldmap))
 	{
@@ -471,7 +471,7 @@ func void Info_OrcShaman_MAP_Info()
 	Npc_RemoveInvItem(self,ItWrWorldmap);
 	CreateInvItem(self,ItWrWorldmap_Orc);
 	B_GiveInvItems(self,hero,ItWrWorldmap_Orc,1);
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info FIGHT
@@ -489,7 +489,7 @@ instance Info_OrcShaman_FIGHT(C_INFO)
 };
 
 func int Info_OrcShaman_FIGHT_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_INTEMPLE))
 	{
 		return TRUE;
@@ -510,7 +510,7 @@ func void Info_OrcShaman_FIGHT_Info()
 //	AI_Output(self,hero,"Info_OrcShaman_FIGHT_17_04"); //Other sons of spirit home. Stranger make fire, then stranger die!
 //	AI_Output(self,hero,"Info_OrcShaman_FIGHT_17_04"); //Andere Söhne von Geist in Heimat. Machen Fremder Feuer, dann Fremder sterben!
 	AI_Output(self,hero,"Info_OrcShaman_FIGHT_17_04"); //Další synové ducha být doma. Když cizinec udělat oheň, potom cizinec zemřít!
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info OTHERWAY
@@ -528,7 +528,7 @@ instance Info_OrcShaman_OTHERWAY(C_INFO)
 };
 
 func int Info_OrcShaman_OTHERWAY_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_FIGHT))
 	{
 		return TRUE;
@@ -570,7 +570,7 @@ instance Info_OrcShaman_ULUMULU(C_INFO)
 };
 
 func int Info_OrcShaman_ULUMULU_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_OTHERWAY))
 	{
 		return TRUE;
@@ -607,7 +607,7 @@ func void Info_OrcShaman_ULUMULU_Info()
 //	Info_AddChoice(Info_OrcShaman_ULUMULU,"Were you held captive in the Old Mine?", Info_OrcShaman_ULUMULU_AM);
 //	Info_AddChoice(Info_OrcShaman_ULUMULU,"Warst du in der Alten Mine gefangen?", Info_OrcShaman_ULUMULU_AM);
 	Info_AddChoice(Info_OrcShaman_ULUMULU,"Drželi tě zavřeného v Starém dole?", Info_OrcShaman_ULUMULU_AM);
-}; 
+};
 
 func void Info_OrcShaman_ULUMULU_VM()
 {
@@ -660,7 +660,7 @@ instance Info_OrcShaman_BYEBYE(C_INFO)
 };
 
 func int Info_OrcShaman_BYEBYE_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_ULUMULU))
 	{
 		return TRUE;
@@ -706,7 +706,7 @@ instance Info_OrcShaman_FRIENDLYHELLO(C_INFO)
 };
 
 func int Info_OrcShaman_FRIENDLYHELLO_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_BYEBYE)
 	&& FriendOfUrShak)
 	{
@@ -758,7 +758,7 @@ instance Info_OrcShaman_ORCCITY(C_INFO)
 };
 
 func int Info_OrcShaman_ORCCITY_Condition()
-{ 
+{
 	if (Npc_GetDistToWP(hero,"SPAWN_OW_WARAN_ORC_01")<1000)
 	{
 		return TRUE;
@@ -784,7 +784,7 @@ func void Info_OrcShaman_ORCCITY_Info()
 		AI_Output(self,hero,"Info_OrcShaman_ORCCITY_17_03"); //Přítel nezapomenout držet ULU-MULU v ruce, až přecházet most!
 	}
 	else
-	{ 
+	{
 //		AI_Output(self,hero,"Info_OrcShaman_ORCCITY_17_04"); //Friend have no ULU-MULU! No good!
 //		AI_Output(self,hero,"Info_OrcShaman_ORCCITY_17_04"); //Freund haben kein ULU-MULU! Nicht gut!
 		AI_Output(self,hero,"Info_OrcShaman_ORCCITY_17_04"); //Přítel nemít ULU-MULU! To nebýt dobře!
@@ -792,7 +792,7 @@ func void Info_OrcShaman_ORCCITY_Info()
 //		AI_Output(self,hero,"Info_OrcShaman_ORCCITY_17_05"); //Freund nicht gehen über Brücke, sonst sterben!
 		AI_Output(self,hero,"Info_OrcShaman_ORCCITY_17_05"); //Přítel nepřecházet most, jinak zemřít!
 	};
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info YOUHERE
@@ -810,7 +810,7 @@ instance Info_OrcShaman_YOUHERE(C_INFO)
 };
 
 func int Info_OrcShaman_YOUHERE_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_ORCCITY))
 	{
 		return TRUE;
@@ -837,7 +837,7 @@ func void Info_OrcShaman_YOUHERE_Info()
 //	AI_Output(hero,self,"Info_OrcShaman_YOUHERE_15_06"); //Considering all I've heard of the arch demon so far, I'd prefer him to be asleep!
 //	AI_Output(hero,self,"Info_OrcShaman_YOUHERE_15_06"); //Bei allem, was ich bisher über diesen Erzdämon gehört habe, ist er mir schlafend bedeutend lieber!
 	AI_Output(hero,self,"Info_OrcShaman_YOUHERE_15_06"); //Vzhledem k tomu, co jsem o tom arcidémonovi slyšel, raději bych, aby spal!
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info SEAL
@@ -855,7 +855,7 @@ instance Info_OrcShaman_SEAL(C_INFO)
 };
 
 func int Info_OrcShaman_SEAL_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_ORCCITY))
 	{
 		return TRUE;
@@ -876,7 +876,7 @@ func void Info_OrcShaman_SEAL_Info()
 //	AI_Output(self,hero,"Info_OrcShaman_SEAL_17_04"); //Friend use magic from brothers who be sons of spirit like Ur-Shak!
 //	AI_Output(self,hero,"Info_OrcShaman_SEAL_17_04"); //Freund müssen benutzen Zauber von Brüder, die seien Söhne von Geist wie Ur-Shak!
 	AI_Output(self,hero,"Info_OrcShaman_SEAL_17_04"); //Přítel použít kouzla od bratří, kteří být synové ducha, tak jako Ur-Shak!
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info SCROLL
@@ -894,7 +894,7 @@ instance Info_OrcShaman_SCROLL(C_INFO)
 };
 
 func int Info_OrcShaman_SCROLL_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Info_OrcShaman_SEAL)
 	{
 		return TRUE;
@@ -919,7 +919,7 @@ func void Info_OrcShaman_SCROLL_Info()
 //	B_LogEntry(CH4_EnterTemple,"I met the shaman Ur-Shak in front of the Orc town again. He told me that I could only get into the vestibule of the underground temple with an Orc spell. The other Orc shamans keep spells like that in their caves.");
 //	B_LogEntry(CH4_EnterTemple,"Ich habe den Schamanen Ur-Shak vor der Orkstadt wiedergetroffen. Er verriet mir, dass ich nur mithilfe eines orkischen Zauberspruches in die Vorhalle des unterirdischen Tempels gelangen kann. Die anderen Ork-Schamanen bewahren solche Zauber in ihrer Höhle auf.");
 	B_LogEntry(CH4_EnterTemple,"Před skřetím městem jsem se znovu setkal se šamanem Ur-Shakem. Řekl mi, že pouze se skřetím kouzlem se mohu dostat do předsálí podzemního chrámu. Ostatní skřetí šamani mají ve svých jeskyních právě taková kouzla.");
-}; 
+};
 
 //---------------------------------------------------------------------
 //	Info IDOL
@@ -937,7 +937,7 @@ instance Info_OrcShaman_IDOL(C_INFO)
 };
 
 func int Info_OrcShaman_IDOL_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,Info_OrcShaman_SCROLL)
 	&& !OrcCity_Sanctum_OuterGateOpen
 	{
@@ -951,7 +951,7 @@ func void Info_OrcShaman_IDOL_Info()
 	//AI_Output(hero,self,"Info_OrcShaman_IDOL_15_01"); //Ich habe den Teleportzauber verbraucht und das Gitter zur Tempelvorhalle lässt sich nicht öffnen!
 	//AI_Output(hero,self,"Info_OrcShaman_IDOL_15_02"); //Wie komme ich jetzt wieder in den Tempel?
 
-	if Npc_HasItems(hero,ItMi_Stuff_Idol_Sleeper_01) 
+	if Npc_HasItems(hero,ItMi_Stuff_Idol_Sleeper_01)
 	{
 //		AI_Output(self,hero,"Info_OrcShaman_IDOL_17_03"); //Friend have found figure on column!
 //		AI_Output(self,hero,"Info_OrcShaman_IDOL_17_03"); //Freund haben gefunden Figur auf Säule!
@@ -977,5 +977,5 @@ func void Info_OrcShaman_IDOL_Info()
 //		B_LogEntry(CH4_EnterTemple,"Es gibt noch einen weiteren Weg in den Tempel zu gelangen. Auf der heiligen Säule der Orkschamanen steht eine Schläferfigur, die das Tor zum Tempel öffnet. Allerdings werden Ur-Shak's Brüder wenig begeistert sein, wenn sie bemerken, dass ich mich ihrer heiligen Ikone bediene.");
 		B_LogEntry(CH4_EnterTemple,"Do chrámu vede další cesta. Na posvátném sloupu skřetích šamanů je figurka Spáče, která otevře vrata chrámu. Ur-Shakovi bratři se nepotěší, až uvidí, že používám jejich svatou ikonu.");
 	};
-}; 
+};
 

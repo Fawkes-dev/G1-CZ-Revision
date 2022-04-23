@@ -1,4 +1,4 @@
-// infos 
+// infos
 instance Info_TPL_1455_GorBoba(C_INFO)
 {
 	npc = TPL_1455_GorBoba;
@@ -27,16 +27,16 @@ instance Info_TPL_1455_GorBoba1(C_INFO)
 	information = Info_TPL_1455_GorBoba1_Info;
 	important = 0;
 	permanent = 0;
-//	description = "And YOU are gonna stop me?"; 
-//	description = "Willst DU mich aufhalten?"; 
-	description = "A TY mě chceš zastavit?"; 
+//	description = "And YOU are gonna stop me?";
+//	description = "Willst DU mich aufhalten?";
+	description = "A TY mě chceš zastavit?";
 };
 
 func int Info_TPL_1455_GorBoba1_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_TPL_1455_GorBoba )) {
 		return 1;
-	}; 
+	};
 };
 
 func void Info_TPL_1455_GorBoba1_Info()
@@ -60,12 +60,12 @@ func void Info_TPL_1455_GorBoba1_Info()
 	AI_StopProcessInfos(self);
 
 //	Log_CreateTopic        ( "Orktempel",LOG_NOTE);
-//	B_LogEntry            ( "Orktempel","GorBoba wanted to stop me. He told me that Kalom and his supporters had been given powers by the high priest to make them invincible by human weapons."); 
+//	B_LogEntry            ( "Orktempel","GorBoba wanted to stop me. He told me that Kalom and his supporters had been given powers by the high priest to make them invincible by human weapons.");
 
 	//#GE_OrkTempel
 	Log_CreateTopic(GE_OrkTempel,LOG_NOTE);
-	B_LogEntry(GE_OrkTempel,"GorBoba mě chěl zastavit. Řekl mi, že nejvyšší kněz poskytl Kalomovi a jeho přívržencům dar nesmrtelnosti, nemohou být zraněni normálními zbraněmi."); 
+	B_LogEntry(GE_OrkTempel,"GorBoba mě chěl zastavit. Řekl mi, že nejvyšší kněz poskytl Kalomovi a jeho přívržencům dar nesmrtelnosti, nemohou být zraněni normálními zbraněmi.");
 
 	Npc_SetAttitude(self,ATT_HOSTILE);
-	Npc_SetTempAttitude(self,ATT_HOSTILE); 
+	Npc_SetTempAttitude(self,ATT_HOSTILE);
 };

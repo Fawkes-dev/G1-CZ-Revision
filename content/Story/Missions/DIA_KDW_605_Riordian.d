@@ -6,10 +6,10 @@ instance Info_Riordian_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Riordian_EXIT_Condition;
 	information = Info_Riordian_EXIT_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_Riordian_EXIT_Condition()
 {
@@ -51,11 +51,11 @@ instance Info_Riordian_NEWS(C_INFO)
 };
 
 func int Info_Riordian_NEWS_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_Saturas_OFFER))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Riordian_NEWS_Info()
@@ -73,7 +73,7 @@ func void Info_Riordian_NEWS_Info()
 //	AI_Output(self,other,"Info_Riordian_NEWS_14_04"); //Nun geh und bring uns die Fokussteine. Diese Artefakte sind unsere einzige Hoffnung.
 	AI_Output(self,other,"Info_Riordian_NEWS_14_04"); //Teď jdi a přines nám ohniskové kameny. Ty jsou naší jedinou nadějí.
 
-	CreateInvItems(self,ItFo_Potion_Health_01, 20); 
+	CreateInvItems(self,ItFo_Potion_Health_01, 20);
 	B_GiveInvItems(self,hero,ItFo_Potion_Health_01, 20); //Notwendig für die Ausschrift "20 Items übergeben", wird sofort ausgeglichen
 	Npc_RemoveInvItems(hero,ItFo_Potion_Health_01, 15);
 
@@ -103,11 +103,11 @@ instance Info_Riordian_REWARD(C_INFO)
 };
 
 func int Info_Riordian_REWARD_Condition()
-{ 
+{
 	if (Saturas_BringFoci == 5)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Riordian_REWARD_Info()
@@ -170,12 +170,12 @@ instance Info_Riordian_MESSAGE(C_INFO)
 };
 
 func int Info_Riordian_MESSAGE_Condition()
-{ 
+{
 	if UrShak_SpokeOfUluMulu
 	&& !EnteredFreeMine
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Riordian_MESSAGE_Info()
@@ -201,11 +201,11 @@ instance Info_Riordian_MESSAGEWHY(C_INFO)
 };
 
 func int Info_Riordian_MESSAGEWHY_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_Riordian_MESSAGE))
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Riordian_MESSAGEWHY_Info()
@@ -242,7 +242,7 @@ instance KDW_605_Riordian_WELCOME(C_INFO)
 };
 
 func int KDW_605_Riordian_WELCOME_Condition()
-{ 
+{
 	if (Npc_GetTrueGuild(hero) == GIL_KDW )
 
 	{
@@ -266,7 +266,7 @@ instance KDW_605_Riordian_HEAL(C_INFO)
 };
 
 func int KDW_605_Riordian_HEAL_Condition()
-{ 
+{
 	if (Npc_GetTrueGuild(hero) == GIL_KDW)
 	&& (Npc_KnowsInfo(hero,KDW_605_Riordian_WELCOME))
 	{
@@ -289,13 +289,13 @@ instance KDW_605_Riordian_HEALINFO(C_INFO)
 	information = KDW_605_Riordian_HEALINFO_Info;
 	important = 0;
 	permanent = 1;
-//	description = "I'm injured. Can you heal me?"; 
-//	description = "Ich bin verletzt. Kannst du mich heilen?"; 
-	description = "Jsem zraněn. Dokážeš mě vyhojit?"; 
+//	description = "I'm injured. Can you heal me?";
+//	description = "Ich bin verletzt. Kannst du mich heilen?";
+	description = "Jsem zraněn. Dokážeš mě vyhojit?";
 };
 
 func int KDW_605_Riordian_HEALINFO_Condition()
-{ 
+{
 	if (hero.attribute[ATR_HITPOINTS] < (hero.attribute[ATR_HITPOINTS_MAX]))
 	&& (Npc_GetTrueGuild(hero) == GIL_KDW)
 	{
@@ -314,9 +314,9 @@ func void KDW_605_Riordian_HEALINFO_Info()
 
 	hero.attribute [ATR_HITPOINTS] = hero.attribute [ATR_HITPOINTS_MAX];
 	Snd_Play("MFX_Heal_Cast");
-};  
+};
 /*------------------------------------------------------------------------
-							GREET 
+							GREET
 ------------------------------------------------------------------------*/
 
 instance KDW_605_Riordian_GREET(C_INFO)
@@ -326,9 +326,9 @@ instance KDW_605_Riordian_GREET(C_INFO)
 	information = KDW_605_Riordian_GREET_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Greetings, Magician!"; 
-//	description = "Ich grüße dich Magier"; 
-	description = "Buď pozdraven, mágu."; 
+//	description = "Greetings, Magician!";
+//	description = "Ich grüße dich Magier";
+	description = "Buď pozdraven, mágu.";
 };
 
 func int KDW_605_Riordian_GREET_Condition()
@@ -349,9 +349,9 @@ func void KDW_605_Riordian_GREET_Info()
 //	B_LogEntry(GE_TraderNC,"Riordian der Wassermagier handelt mit TRÄNKEN. Er ist im Alchemielabor auf der obersten Ebene zu finden.");
 	B_LogEntry(GE_TraderNC,"Riordian, mág Vody, obchoduje s LEKTVARY. Bývá v alchymistické dílně v horní rovině.");
 
-};  
+};
 /*------------------------------------------------------------------------
-							TRADE 
+							TRADE
 ------------------------------------------------------------------------*/
 
 instance KDW_605_Riordian_TRADE(C_INFO)
@@ -361,14 +361,14 @@ instance KDW_605_Riordian_TRADE(C_INFO)
 	information = KDW_605_Riordian_TRADE_Info;
 	important = 0;
 	permanent = 1;
-//	description = "Show me your goods."; 
-//	description = "Zeig mir deine Ware"; 
-	description = "Ukaž mi svoje zboží."; 
+//	description = "Show me your goods.";
+//	description = "Zeig mir deine Ware";
+	description = "Ukaž mi svoje zboží.";
 	trade = 1;
 };
 
 func int KDW_605_Riordian_TRADE_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,KDW_605_Riordian_GREET))
 	{
 		return TRUE;
@@ -381,4 +381,4 @@ func void KDW_605_Riordian_TRADE_Info()
 //	AI_Output(other,self,"KDW_605_Riordian_TRADE_Info_15_01"); //Zeig mir deine Ware.
 	AI_Output(other,self,"KDW_605_Riordian_TRADE_Info_15_01"); //Ukaž mi svoje zboží.
 
-};  
+};

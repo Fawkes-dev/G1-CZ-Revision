@@ -7,7 +7,7 @@ instance Info_HighPriest3(C_INFO)
 	condition = Info_HighPriest3_Condition;
 	information = Info_HighPriest3_Info;
 	important = 1;
-};                       
+};
 
 func int Info_HighPriest3_Condition()
 {

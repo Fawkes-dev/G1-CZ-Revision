@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Joru_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Joru_Exit(C_INFO)
 	information = DIA_Joru_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Joru_Exit_Condition()
 {
@@ -36,7 +36,7 @@ instance DIA_Joru_Greet(C_INFO)
 //	description = "What are you doing here?";
 //	description = "Was machst du hier?";
 	description = "Co tady děláš?";
-};                       
+};
 
 func int DIA_Joru_Greet_Condition()
 {
@@ -79,7 +79,7 @@ instance DIA_Joru_Tester(C_INFO)
 //	description = "What's your task here?";
 //	description = "Was ist deine Aufgabe hier?";
 	description = "Jaké je teď tvoje poslání?";
-};                       
+};
 
 func int DIA_Joru_Tester_Condition()
 {
@@ -119,7 +119,7 @@ instance DIA_Joru_SleeperContact(C_INFO)
 //	description = "Have you ever been in contact with the Sleeper?";
 //	description = "Hattest du schon Kontakt zum Schläfer?";
 	description = "Už jsi byl někdy ve spojení se Spáčem?";
-};                       
+};
 
 func int DIA_Joru_SleeperContact_Condition()
 {
@@ -164,7 +164,7 @@ instance DIA_Joru_JoinPsi(C_INFO)
 //	description = "I'd like to join your camp - can you help me?";
 //	description = "Ich will mich eurem Lager anschließen - kannst du mir dabei helfen?";
 	description = "Rád bych se přidal k vašemu táboru - pomůžeš mi?";
-};                       
+};
 
 func int DIA_Joru_JoinPsi_Condition()
 {
@@ -207,7 +207,7 @@ func void DIA_Joru_JoinPsi_Ja()
 //	AI_Output(other,self,"DIA_Joru_JoinPsi_Ja_15_01"); //I'll think about it.
 //	AI_Output(other,self,"DIA_Joru_JoinPsi_Ja_15_01"); //Ich denke drüber nach.
 	AI_Output(other,self,"DIA_Joru_JoinPsi_Ja_15_01"); //Rozmyslím si to.
-	Joru_BringJoints = LOG_RUNNING; 
+	Joru_BringJoints = LOG_RUNNING;
 
 	Info_ClearChoices(DIA_Joru_JoinPsi);
 };
@@ -220,7 +220,7 @@ func void DIA_Joru_JoinPsi_Nein()
 //	AI_Output(other,self,"DIA_Joru_JoinPsi_Nein_15_01"); //I'll think about it.
 //	AI_Output(other,self,"DIA_Joru_JoinPsi_Nein_15_01"); //Ich denk drüber nach.
 	AI_Output(other,self,"DIA_Joru_JoinPsi_Nein_15_01"); //Rozmyslím si to.
-	Joru_BringJoints = LOG_RUNNING; 
+	Joru_BringJoints = LOG_RUNNING;
 
 	Log_CreateTopic(CH1_JoinPsi,LOG_MISSION);
 	Log_SetTopicStatus(CH1_JoinPsi,LOG_RUNNING);
@@ -245,7 +245,7 @@ instance DIA_Joru_JointsRunning(C_INFO)
 //	description = "I have swampweed on me. You can have it.";
 //	description = "Ich habe Sumpfkraut bei mir. Du kannst es haben.";
 	description = "Mám svoji drogu z bažin. Můžeš ji mít.";
-};                       
+};
 
 func int DIA_Joru_JointsRunning_Condition()
 {
@@ -272,7 +272,7 @@ func void DIA_Joru_JointsRunning_Info()
 
 		B_GiveInvItems(other,self,itmijoint_2, 3);
 
-		Joru_BringJoints = LOG_SUCCESS; 
+		Joru_BringJoints = LOG_SUCCESS;
 		B_GiveXP(XP_WeedForJoru);
 	}
 	else
@@ -280,7 +280,7 @@ func void DIA_Joru_JointsRunning_Info()
 //		AI_Output(self,other,"DIA_Joru_JointsRunning_NO_JOINTS_07_00"); //We agreed on three Northern Dark and nothing else! Get me the weeds, THEN we can do business!
 //		AI_Output(self,other,"DIA_Joru_JointsRunning_NO_JOINTS_07_00"); //Drei Schwarzer Weiser waren ausgemacht, und nichts anderes! Besorg mir erst das Kraut, DANN sind wir im Geschäft!
 		AI_Output(self,other,"DIA_Joru_JointsRunning_NO_JOINTS_07_00"); //Domluvili jsme si tři Severní soumraky a nic jiného! Dej mi je a POTOM se můžeme bavit!
-	}; 
+	};
 };
 
 // **************************************************
@@ -299,7 +299,7 @@ instance DIA_Joru_ImpressGurus(C_INFO)
 //	description = "How can I impress the Gurus?";
 //	description = "Wie kann ich die Gurus beeindrucken?";
 	description = "Jak můžu udělat dojem na Guru?";
-};                       
+};
 
 func int DIA_Joru_ImpressGurus_Condition()
 {
@@ -364,7 +364,7 @@ instance DIA_Joru_GetMagic(C_INFO)
 //	description = "How do I get at the magic of the Sleeper?";
 //	description = "Wie komme ich an die Magie des Schläfers?";
 	description = "Jak se dostanu ke Spáčově magii?";
-};                       
+};
 
 func int DIA_Joru_GetMagic_Condition()
 {
@@ -405,5 +405,5 @@ Eine spirituelle Reise. Lerne die Macht des Geistes zu nutzen. Lerne sie zu kont
 Komm zu uns in die Gemeinschaft der Erwachten und gleichzeitig Erwecker. Teile mit uns deine Kraft, wie wir unsere Kraft mit dir teilen.
 Mach dich frei von Suche und beginne zu finden. Entdecke die Wahrheit. Das alles kannst du erreichen, wenn du zu uns kommst.
 
-*/ 
+*/
 

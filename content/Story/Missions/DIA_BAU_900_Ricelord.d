@@ -1,5 +1,5 @@
 // ************************************************************
-//	  EXIT 
+//	  EXIT
 // ************************************************************
 
 instance DIA_Ricelord_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Ricelord_EXIT(C_INFO)
 	information = DIA_Ricelord_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Ricelord_EXIT_Condition()
 {
@@ -18,7 +18,7 @@ func int DIA_Ricelord_EXIT_Condition()
 };
 
 func void DIA_Ricelord_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -36,7 +36,7 @@ instance DIA_Ricelord_Hello(C_INFO)
 //	description = "You take care of the rice fields, don't you?";
 //	description = "Du kümmerst dich um die Reisfelder, richtig?";
 	description = "Staráš se o rýžová pole, že jo?";
-};                       
+};
 
 func int DIA_Ricelord_Hello_Condition()
 {
@@ -44,7 +44,7 @@ func int DIA_Ricelord_Hello_Condition()
 };
 
 func void DIA_Ricelord_Hello_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Ricelord_Hello_15_00"); //You take care of the rice fields, don't you?
 //	AI_Output(other,self,"DIA_Ricelord_Hello_15_00"); //Du kümmerst dich um die Reisfelder, richtig?
 	AI_Output(other,self,"DIA_Ricelord_Hello_15_00"); //Staráš se o rýžová pole, že jo?
@@ -67,7 +67,7 @@ instance DIA_Ricelord_Arbeit(C_INFO)
 //	description = "Have you got work for me?";
 //	description = "Hast du Arbeit für mich?";
 	description = "Máš pro mě nějakou práci?";
-};                       
+};
 
 func int DIA_Ricelord_Arbeit_Condition()
 {
@@ -80,7 +80,7 @@ func int DIA_Ricelord_Arbeit_Condition()
 };
 
 func void DIA_Ricelord_Arbeit_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Ricelord_Arbeit_15_00"); //Have you got work for me?
 //	AI_Output(other,self,"DIA_Ricelord_Arbeit_15_00"); //Hast du Arbeit für mich?
 	AI_Output(other,self,"DIA_Ricelord_Arbeit_15_00"); //Máš pro mě nějakou práci?
@@ -104,7 +104,7 @@ instance DIA_Ricelord_TRADE(C_INFO)
 //	description = "Wir könnten handeln...";
 	description = "Můžeme uzavřít smlouvu.";
 	trade = 1;
-};                       
+};
 
 func int DIA_Ricelord_TRADE_Condition()
 {
@@ -115,7 +115,7 @@ func int DIA_Ricelord_TRADE_Condition()
 };
 
 func void DIA_Ricelord_TRADE_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Ricelord_TRADE_15_00"); //We could make a deal...
 //	AI_Output(other,self,"DIA_Ricelord_TRADE_15_00"); //Wir könnten handeln ...
 	AI_Output(other,self,"DIA_Ricelord_TRADE_15_00"); //Můžeme uzavřít smlouvu.
@@ -137,7 +137,7 @@ instance DIA_Ricelord_LeftySentMe(C_INFO)
 //	description = "Lefty sent me.";
 //	description = "Lefty schickt mich.";
 	description = "Poslal mě Lefty.";
-};                       
+};
 
 func int DIA_Ricelord_LeftySentMe_Condition()
 {
@@ -151,7 +151,7 @@ func int DIA_Ricelord_LeftySentMe_Condition()
 };
 
 func void DIA_Ricelord_LeftySentMe_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Ricelord_LeftySentMe_15_00"); //Lefty sent me.
 //	AI_Output(other,self,"DIA_Ricelord_LeftySentMe_15_00"); //Lefty schickt mich.
 	AI_Output(other,self,"DIA_Ricelord_LeftySentMe_15_00"); //Poslal mě Lefty.
@@ -175,7 +175,7 @@ instance DIA_Ricelord_GetWater(C_INFO)
 //	description = "I'm to bring the peasants some water.";
 //	description = "Ich soll den Bauern Wasser bringen.";
 	description = "Mám přinést rolníkům vodu.";
-};                       
+};
 
 func int DIA_Ricelord_GetWater_Condition()
 {
@@ -186,7 +186,7 @@ func int DIA_Ricelord_GetWater_Condition()
 };
 
 func void DIA_Ricelord_GetWater_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Ricelord_GetWater_15_00"); //I'm to bring the peasants some water.
 //	AI_Output(other,self,"DIA_Ricelord_GetWater_15_00"); //Ich soll den Bauern Wasser bringen.
 	AI_Output(other,self,"DIA_Ricelord_GetWater_15_00"); //Mám přinést rolníkům vodu.

@@ -6,10 +6,10 @@ instance Tpl_1401_GorNaKosh_Exit(C_INFO)
 	nr = 999;
 	condition = Tpl_1401_GorNaKosh_Exit_Condition;
 	information = Tpl_1401_GorNaKosh_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Tpl_1401_GorNaKosh_Exit_Condition()
 {
@@ -33,13 +33,13 @@ instance Tpl_1401_GorNaKosh_SUGGEST(C_INFO)
 	information = Tpl_1401_GorNaKosh_SUGGEST_Info;
 	important = 0;
 	permanent = 0;
-//	description = "I know where the nest of the crawlers is."; 
-//	description = "Ich weiß, wo das Nest der Crawler ist..."; 
-	description = "Vím, kde je hnízdo důlních červů..."; 
+//	description = "I know where the nest of the crawlers is.";
+//	description = "Ich weiß, wo das Nest der Crawler ist...";
+	description = "Vím, kde je hnízdo důlních červů...";
 };
 
 func int Tpl_1401_GorNaKosh_SUGGEST_Condition()
-{ 
+{
 	if  Npc_KnowsInfo(hero,Grd_263_Asghan_OPEN)
 	&& !Npc_KnowsInfo(hero,Grd_263_Asghan_OPEN_NOW)
 	{
@@ -60,11 +60,11 @@ func void Tpl_1401_GorNaKosh_SUGGEST_Info()
 	AI_Output(other,self,"Tpl_1401_GorNaKosh_SUGGEST_Info_15_03"); //Dobře. Sejdeme se u velké chodby.
 
 	Npc_ExchangeRoutine(self,"GATE");
-	Npc_SetPermAttitude(self,ATT_FRIENDLY); 
+	Npc_SetPermAttitude(self,ATT_FRIENDLY);
 	B_GiveXP(XP_HireGorNaKosh);
-//	B_LogEntry(CH2_MCEggs,"I convinced the templar Gor Na Kosh to join the reinforcements at Asghan's gate. He's waiting for me there."); 
-//	B_LogEntry(CH2_MCEggs,"Ich konnte den Templer Gor Na Kosh als Verstärkung für Asghans Tor gewinnen. Er wartet dort auf mich."); 
-	B_LogEntry(CH2_MCEggs,"Přesvědčil jsem templáře Gora Na Koshe, aby se přidal k posádce u Asghanových vrat. Bude tam na mě čekat."); 
+//	B_LogEntry(CH2_MCEggs,"I convinced the templar Gor Na Kosh to join the reinforcements at Asghan's gate. He's waiting for me there.");
+//	B_LogEntry(CH2_MCEggs,"Ich konnte den Templer Gor Na Kosh als Verstärkung für Asghans Tor gewinnen. Er wartet dort auf mich.");
+	B_LogEntry(CH2_MCEggs,"Přesvědčil jsem templáře Gora Na Koshe, aby se přidal k posádce u Asghanových vrat. Bude tam na mě čekat.");
 
 	AI_StopProcessInfos(self);
 };
@@ -78,13 +78,13 @@ instance Tpl_1401_GorNaKosh_INFO(C_INFO)
 	information = Tpl_1401_GorNaKosh_INFO_Info;
 	important = 0;
 	permanent = 1;
-//	description = "What are you doing here?"; 
-//	description = "Was machst du hier?"; 
-	description = "Co tady děláš?"; 
+//	description = "What are you doing here?";
+//	description = "Was machst du hier?";
+	description = "Co tady děláš?";
 };
 
 func int Tpl_1401_GorNaKosh_INFO_Condition()
-{ 
+{
 	if ! (Npc_KnowsInfo(hero,Grd_263_Asghan_NEST ))
 	{
 		return 1;
@@ -121,13 +121,13 @@ instance Tpl_1401_GorNaKosh_CRAWLER(C_INFO)
 	information = Tpl_1401_GorNaKosh_CRAWLER_Info;
 	important = 0;
 	permanent = 1;
-//	description = "Can you tell me more about the crawlers?"; 
-//	description = "Kannst du mir mehr von den Crawlern erzählen?"; 
-	description = "Můžeš mi říci něco víc o těch důlních červech?"; 
+//	description = "Can you tell me more about the crawlers?";
+//	description = "Kannst du mir mehr von den Crawlern erzählen?";
+	description = "Můžeš mi říci něco víc o těch důlních červech?";
 };
 
 func int Tpl_1401_GorNaKosh_CRAWLER_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Tpl_1401_GorNaKosh_INFO))
 	{
 		return 1;
@@ -145,7 +145,7 @@ func void Tpl_1401_GorNaKosh_CRAWLER_Info()
 //	AI_Output(self,other,"Tpl_1401_GorNaKosh_CRAWLER_Info_13_03"); //Use this knowledge in your fight against them.
 //	AI_Output(self,other,"Tpl_1401_GorNaKosh_CRAWLER_Info_13_03"); //Wenn du gegen sie kämpfst, mach dir dieses Wissen zu Nutze.
 	AI_Output(self,other,"Tpl_1401_GorNaKosh_CRAWLER_Info_13_03"); //Použij tyto vědomosti, když s nimi bojuješ.
-}; 
+};
 
 // ***************************** Die Königin ist tot, lang lebe die Königin ****************************************//
 
@@ -156,14 +156,14 @@ instance Tpl_1401_GorNaKosh_VICTORY(C_INFO)
 	information = Tpl_1401_GorNaKosh_VICTORY_Info;
 	important = 0;
 	permanent = 0;
-//	description = "I've found the crawler nest!"; 
-//	description = "Ich habe das Nest der Crawler gefunden!"; 
-	description = "Našel jsem hnízdo důlních červů!"; 
+//	description = "I've found the crawler nest!";
+//	description = "Ich habe das Nest der Crawler gefunden!";
+	description = "Našel jsem hnízdo důlních červů!";
 };
 
 func int Tpl_1401_GorNaKosh_VICTORY_Condition()
-{ 
-	if (Npc_HasItems(hero,ItAt_Crawlerqueen) > 3 ) 
+{
+	if (Npc_HasItems(hero,ItAt_Crawlerqueen) > 3 )
 	{
 		return TRUE;
 	};
@@ -180,4 +180,4 @@ func void Tpl_1401_GorNaKosh_VICTORY_Info()
 //	B_LogEntry(CH2_MCEggs,"I'm to take the eggs to Cor Kalom, he's waiting for them.");
 //	B_LogEntry(CH2_MCEggs,"Ich sollte die Eier zu Cor-Kalom bringen, er wird sie schon sehnsüchtig erwarten.");
 	B_LogEntry(CH2_MCEggs,"Měl bych donést ta vajíčka Cor Kalomovi, určitě na ně už čeká.");
-};  
+};

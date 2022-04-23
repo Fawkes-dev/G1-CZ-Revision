@@ -1,5 +1,5 @@
 // ************************************************************
-// 			  				   EXIT 
+// 			  				   EXIT
 // ************************************************************
 
 instance DIA_BaalKagan_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_BaalKagan_EXIT(C_INFO)
 	information = DIA_BaalKagan_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_BaalKagan_EXIT_Condition()
 {
@@ -18,7 +18,7 @@ func int DIA_BaalKagan_EXIT_Condition()
 };
 
 func void DIA_BaalKagan_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -36,7 +36,7 @@ instance DIA_BaalKagan_Hello(C_INFO)
 //	description = "You're from the Sect Camp, aren't you?";
 //	description = "Du bist aus dem Lager der Sekte, richtig?";
 	description = "Ty jsi ze Sektovního tábora, viď?";
-};                       
+};
 
 func int DIA_BaalKagan_Hello_Condition()
 {
@@ -44,7 +44,7 @@ func int DIA_BaalKagan_Hello_Condition()
 };
 
 func void DIA_BaalKagan_Hello_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_BaalKagan_Hello_15_00"); //You're from the Sect Camp, aren't you?
 //	AI_Output(other,self,"DIA_BaalKagan_Hello_15_00"); //Du bist aus dem Lager der Sekte, richtig?
 	AI_Output(other,self,"DIA_BaalKagan_Hello_15_00"); //Ty jsi ze Sektovního tábora, viď?
@@ -70,7 +70,7 @@ instance DIA_BaalKagan_WhyHere(C_INFO)
 //	description = "What are you doing here?";
 //	description = "Was machst du hier?";
 	description = "Co tady děláš?";
-};                       
+};
 
 func int DIA_BaalKagan_WhyHere_Condition()
 {
@@ -81,7 +81,7 @@ func int DIA_BaalKagan_WhyHere_Condition()
 };
 
 func void DIA_BaalKagan_WhyHere_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_BaalKagan_WhyHere_15_00"); //What are you doing here?
 //	AI_Output(other,self,"DIA_BaalKagan_WhyHere_15_00"); //Was machst du hier?
 	AI_Output(other,self,"DIA_BaalKagan_WhyHere_15_00"); //Co tady děláš?
@@ -116,7 +116,7 @@ instance DIA_BaalKagan_TRADE(C_INFO)
 //	description = "Zeig mir deine Waren.";
 	description = "Ukaž mi svoje zboží.";
 	trade = 1;
-};                       
+};
 
 func int DIA_BaalKagan_TRADE_Condition()
 {
@@ -127,7 +127,7 @@ func int DIA_BaalKagan_TRADE_Condition()
 };
 
 func void DIA_BaalKagan_TRADE_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_BaalKagan_TRADE_15_00"); //Show me your goods.
 //	AI_Output(other,self,"DIA_BaalKagan_TRADE_15_00"); //Zeig mir deine Waren.
 	AI_Output(other,self,"DIA_BaalKagan_TRADE_15_00"); //Ukaž mi svoje zboží.
@@ -150,7 +150,7 @@ instance DIA_BaalKagan_OrderHelp(C_INFO)
 //	description = "Why don't they send an extra man here?";
 //	description = "Warum schicken sie nicht einen weiteren Mann?";
 	description = "Proč sem nepošlou jednoho muže navíc?";
-};                       
+};
 
 func int DIA_BaalKagan_OrderHelp_Condition()
 {
@@ -161,7 +161,7 @@ func int DIA_BaalKagan_OrderHelp_Condition()
 };
 
 func void DIA_BaalKagan_OrderHelp_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_BaalKagan_OrderHelp_15_00"); //Why don't they send an extra man here?
 //	AI_Output(other,self,"DIA_BaalKagan_OrderHelp_15_00"); //Warum schicken sie nicht einen weiteren Mann?
 	AI_Output(other,self,"DIA_BaalKagan_OrderHelp_15_00"); //Proč sem nepošlou jednoho muže navíc?
@@ -176,9 +176,9 @@ func void DIA_BaalKagan_OrderHelp_Info()
 	{
 		Log_CreateTopic(CH1_DealerJob,LOG_MISSION);
 		Log_SetTopicStatus(CH1_DealerJob,LOG_RUNNING);
-//		B_LogEntry(CH1_DealerJob,"Baal Isidro is sitting in the bar at the lake and drinking all day."); 
-//		B_LogEntry(CH1_DealerJob,"Baal Isidro sitzt den ganzen Tag in der Kneipe auf dem See und säuft."); 
-		B_LogEntry(CH1_DealerJob,"Baal Isidro sedí v baru na jezeře a celé dny pije."); 
+//		B_LogEntry(CH1_DealerJob,"Baal Isidro is sitting in the bar at the lake and drinking all day.");
+//		B_LogEntry(CH1_DealerJob,"Baal Isidro sitzt den ganzen Tag in der Kneipe auf dem See und säuft.");
+		B_LogEntry(CH1_DealerJob,"Baal Isidro sedí v baru na jezeře a celé dny pije.");
 	};
 };
 
@@ -196,7 +196,7 @@ instance DIA_BaalKagan_WannaHelp(C_INFO)
 //	description = "I could help you sell your weed to the people.";
 //	description = "Ich könnte dir helfen, dein Kraut unter die Leute zu bringen.";
 	description = "Mohl bych ti pomoci prodávat tvou drogu lidem.";
-};                       
+};
 
 func int DIA_BaalKagan_WannaHelp_Condition()
 {
@@ -207,7 +207,7 @@ func int DIA_BaalKagan_WannaHelp_Condition()
 };
 
 func void DIA_BaalKagan_WannaHelp_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_BaalKagan_WannaHelp_15_00"); //I could help you sell your weed to the people.
 //	AI_Output(other,self,"DIA_BaalKagan_WannaHelp_15_00"); //Ich könnte dir helfen, dein Kraut unter die Leute zu bringen.
 	AI_Output(other,self,"DIA_BaalKagan_WannaHelp_15_00"); //Mohl bych ti pomoci prodávat tvou drogu lidem.
@@ -242,7 +242,7 @@ instance DIA_BaalKagan_WasDrin(C_INFO)
 //	description = "What's in it for me if I hand out the weed for you?";
 //	description = "Wenn ich das Kraut für dich verteile - was ist für mich drin?";
 	description = "Co dostanu, když budu za tebe roznášet tu drogu?";
-};                       
+};
 
 func int DIA_BaalKagan_WasDrin_Condition()
 {
@@ -253,7 +253,7 @@ func int DIA_BaalKagan_WasDrin_Condition()
 };
 
 func void DIA_BaalKagan_WasDrin_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_BaalKagan_WasDrin_15_00"); //What's in it for me if I hand out the weed for you?
 //	AI_Output(other,self,"DIA_BaalKagan_WasDrin_15_00"); //Wenn ich das Kraut für dich verteile - was ist für mich drin?
 	AI_Output(other,self,"DIA_BaalKagan_WasDrin_15_00"); //Co dostanu, když bude za tebe roznášet tu drogu?
@@ -293,7 +293,7 @@ instance DIA_BaalKagan_GimmeKraut(C_INFO)
 //	description = "Okay, give me the weed. Who do you want me to give it to?";
 //	description = "Okay, gib her das Kraut. An wen soll ich es verteilen?";
 	description = "Dobrá, dej mi tu drogu. Komu chceš, abych ji předal?";
-};                       
+};
 
 func int DIA_BaalKagan_GimmeKraut_Condition()
 {
@@ -304,7 +304,7 @@ func int DIA_BaalKagan_GimmeKraut_Condition()
 };
 
 func void DIA_BaalKagan_GimmeKraut_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_BaalKagan_GimmeKraut_15_00"); //Okay, give me the weed. Who do you want me to give it to?
 //	AI_Output(other,self,"DIA_BaalKagan_GimmeKraut_15_00"); //Okay, gib her das Kraut. An wen soll ich es verteilen?
 	AI_Output(other,self,"DIA_BaalKagan_GimmeKraut_15_00"); //Dobrá, dej mi tu drogu. Komu chceš, abych ji předal?
@@ -321,9 +321,9 @@ func void DIA_BaalKagan_GimmeKraut_Info()
 
 	Log_CreateTopic(CH1_SpreadJoints,LOG_MISSION);
 	Log_SetTopicStatus(CH1_SpreadJoints,LOG_RUNNING);
-//	B_LogEntry(CH1_SpreadJoints,"The novice Baal Kagan gave me 10 stalks of Green Novice weed, which I have to distribute in the New Camp."); 
-//	B_LogEntry(CH1_SpreadJoints,"Der Novize Baal Kagan hat mir 10 Stengel Sumpfkraut Grüner Novize gegeben, die ich im Neuen Lager verteilen soll."); 
-	B_LogEntry(CH1_SpreadJoints,"Novic Baal Kagan mi předal 10 lodyh drogy od mladých noviců, které musím rozdat v Novém táboře. "); 
+//	B_LogEntry(CH1_SpreadJoints,"The novice Baal Kagan gave me 10 stalks of Green Novice weed, which I have to distribute in the New Camp.");
+//	B_LogEntry(CH1_SpreadJoints,"Der Novize Baal Kagan hat mir 10 Stengel Sumpfkraut Grüner Novize gegeben, die ich im Neuen Lager verteilen soll.");
+	B_LogEntry(CH1_SpreadJoints,"Novic Baal Kagan mi předal 10 lodyh drogy od mladých noviců, které musím rozdat v Novém táboře. ");
 
 	CreateInvItems(self,itmijoint_1, 10);
 	B_GiveInvItems(self,hero,itmijoint_1, 10);
@@ -343,7 +343,7 @@ instance DIA_BaalKagan_SUCCESS(C_INFO)
 //	description = "I've shared out the weed.";
 //	description = "Ich habe das Kraut verteilt";
 	description = "Rozdal jsem všechnu drogu.";
-};                       
+};
 
 func int DIA_BaalKagan_SUCCESS_Condition()
 {
@@ -354,7 +354,7 @@ func int DIA_BaalKagan_SUCCESS_Condition()
 };
 
 func void DIA_BaalKagan_SUCCESS_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_BaalKagan_SUCCESS_15_00"); //I've shared out the weed.
 //	AI_Output(other,self,"DIA_BaalKagan_SUCCESS_15_00"); //Ich habe das Kraut verteilt.
 	AI_Output(other,self,"DIA_BaalKagan_SUCCESS_15_00"); //Rozdal jsem všechnu drogu.
@@ -486,11 +486,11 @@ func void DIA_BaalKagan_SUCCESS_TakeScrolls_Windfaust()
 	B_GiveInvItems(self,hero,ItArScrollWindfist,1);
 
 	BaalKagan_drei = BaalKagan_drei+1;
-	if (BaalKagan_drei >= 3)  
-	{ 
+	if (BaalKagan_drei >= 3)
+	{
 //		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //Das waren drei. Verwende sie weise.
 		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //
-		Info_ClearChoices(DIA_BaalKagan_SUCCESS); 
+		Info_ClearChoices(DIA_BaalKagan_SUCCESS);
 	};
 };
 
@@ -500,11 +500,11 @@ func void DIA_BaalKagan_SUCCESS_TakeScrolls_Telekinese()
 	B_GiveInvItems(self,hero,ItArScrollTelekinesis,1);
 
 	BaalKagan_drei = BaalKagan_drei+1;
-	if (BaalKagan_drei >= 3)  
-	{ 
+	if (BaalKagan_drei >= 3)
+	{
 //		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //Das waren drei. Verwende sie weise.
 		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //
-		Info_ClearChoices(DIA_BaalKagan_SUCCESS); 
+		Info_ClearChoices(DIA_BaalKagan_SUCCESS);
 	};
 };
 
@@ -514,11 +514,11 @@ func void DIA_BaalKagan_SUCCESS_TakeScrolls_Pyrokinese()
 	B_GiveInvItems(self,hero,ItArScrollPyrokinesis,1);
 
 	BaalKagan_drei = BaalKagan_drei+1;
-	if (BaalKagan_drei >= 3)  
-	{ 
+	if (BaalKagan_drei >= 3)
+	{
 //		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //Das waren drei. Verwende sie weise.
 		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //
-		Info_ClearChoices(DIA_BaalKagan_SUCCESS); 
+		Info_ClearChoices(DIA_BaalKagan_SUCCESS);
 	};
 };
 
@@ -528,11 +528,11 @@ func void DIA_BaalKagan_SUCCESS_TakeScrolls_Schlaf()
 	B_GiveInvItems(self,hero,ItArScrollSleep,1);
 
 	BaalKagan_drei = BaalKagan_drei+1;
-	if (BaalKagan_drei >= 3)  
-	{ 
+	if (BaalKagan_drei >= 3)
+	{
 //		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //Das waren drei. Verwende sie weise.
 		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //
-		Info_ClearChoices(DIA_BaalKagan_SUCCESS); 
+		Info_ClearChoices(DIA_BaalKagan_SUCCESS);
 	};
 };
 
@@ -542,11 +542,11 @@ func void DIA_BaalKagan_SUCCESS_TakeScrolls_Charme()
 	B_GiveInvItems(self,hero,ItArScrollCharm,1);
 
 	BaalKagan_drei = BaalKagan_drei+1;
-	if (BaalKagan_drei >= 3)  
-	{ 
+	if (BaalKagan_drei >= 3)
+	{
 //		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //Das waren drei. Verwende sie weise.
 		AI_Output(self,other,"DIA_BaalKagan_SUCCESS_TakeScrolls_DREI_13_00"); //That was three. Use them wisely.
-		Info_ClearChoices(DIA_BaalKagan_SUCCESS); 
+		Info_ClearChoices(DIA_BaalKagan_SUCCESS);
 	};
 };
 

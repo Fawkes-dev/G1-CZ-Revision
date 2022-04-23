@@ -1,5 +1,5 @@
 // ************************************************************
-// 			  				   EXIT 
+// 			  				   EXIT
 // ************************************************************
 
 instance DIA_Fletcher_EXIT(C_INFO)
@@ -8,10 +8,10 @@ instance DIA_Fletcher_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_Fletcher_EXIT_Condition;
 	information = DIA_Fletcher_EXIT_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Fletcher_EXIT_Condition()
 {
@@ -24,7 +24,7 @@ func void DIA_Fletcher_EXIT_Info()
 };
 
 // ************************************************************
-//						FIRST NACHT 
+//						FIRST NACHT
 // ************************************************************
 
 instance DIA_Fletcher_First(C_INFO)
@@ -38,7 +38,7 @@ instance DIA_Fletcher_First(C_INFO)
 };
 
 func int DIA_Fletcher_First_Condition()
-{ 
+{
 	if (Wld_IsTime(00,00,06,00))
 	{
 		return 1;
@@ -73,7 +73,7 @@ func void DIA_Fletcher_First_Info()
 };
 
 // ************************************************************
-//							Hallo 
+//							Hallo
 // ************************************************************
 	var int fletcher_whytalk;
 // ************************************************************
@@ -89,7 +89,7 @@ instance DIA_Fletcher_Hello(C_INFO)
 };
 
 func int DIA_Fletcher_Hello_Condition()
-{ 
+{
 	if (Npc_IsInState(self,ZS_Talk))
 	{
 		return 1;
@@ -157,7 +157,7 @@ func void DIA_Fletcher_Hello_ISee()
 };
 
 // ************************************************************
-//						Wo Nek 
+//						Wo Nek
 // ************************************************************
 
 instance DIA_Fletcher_WoNek(C_INFO)
@@ -173,7 +173,7 @@ instance DIA_Fletcher_WoNek(C_INFO)
 };
 
 func int DIA_Fletcher_WoNek_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_STT_315_LostNek) || (fletcher_whytalk==TRUE))
 	{
 		return 1;
@@ -195,20 +195,15 @@ func void DIA_Fletcher_WoNek_Info()
 //	AI_Output(self,other,"DIA_Fletcher_WoNek_06_03"); //Vor allem nicht jetzt, denn sie wissen, dass ich diese Drecksarbeit hier verabscheue, und insgeheim lachen sie sich über mich tot!
 	AI_Output(self,other,"DIA_Fletcher_WoNek_06_03"); //Obzvlášť ne teď, když vědí, jak já tuhle špinavou práci nenávidím. Vsadím se, že se mi vysmívají za zádama.
 
-	//BugFix: tento dialog znovu otvoril quest o Nekovi, pridana podmienka, checkujuca ci je quest uzatvoreny
-	//Log_CreateTopic(CH1_LostNek,LOG_MISSION);
-	//Log_SetTopicStatus(CH1_LostNek,LOG_RUNNING);
-	if (Sly_LostNek != LOG_SUCCESS) {
-		Log_CreateTopic(CH1_LostNek,LOG_MISSION);
-		Log_SetTopicStatus(CH1_LostNek,LOG_RUNNING);
-	};
+	Log_CreateTopic(CH1_LostNek,LOG_MISSION);
+	Log_SetTopicStatus(CH1_LostNek,LOG_RUNNING);
 //	B_LogEntry(CH1_LostNek,"Maybe the diggers in the arena district know where Nek disappeared to.");
 //	B_LogEntry(CH1_LostNek,"Die Buddler im Arenaviertel wissen vielleicht, wohin Nek verschwunden ist.");
 	B_LogEntry(CH1_LostNek,"Možná budou kopáči kolem arény vědět, kam zmizel Nek.");
 };
 
 // ************************************************************
-//						Trotzdem Schutzgeld 
+//						Trotzdem Schutzgeld
 // ************************************************************
 
 instance DIA_Fletcher_TroSchu(C_INFO)
@@ -224,7 +219,7 @@ instance DIA_Fletcher_TroSchu(C_INFO)
 };
 
 func int DIA_Fletcher_TroSchu_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Fletcher_Hello))
 	{
 		return 1;
@@ -242,7 +237,7 @@ func void DIA_Fletcher_TroSchu_Info()
 };
 
 // ************************************************************
-//						Wegen Nek 
+//						Wegen Nek
 // ************************************************************
 	var int fletcher_foundNek;
 // ************************************************************
@@ -260,7 +255,7 @@ instance DIA_Fletcher_WegenNek(C_INFO)
 };
 
 func int DIA_Fletcher_WegenNek_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Fletcher_WoNek) && (fletcher_foundNek==FALSE))
 	{
 		return 1;
@@ -325,7 +320,7 @@ instance DIA_Fletcher_Problem(C_INFO)
 };
 
 func int DIA_Fletcher_Problem_Condition()
-{ 
+{
 	if (fletcher_foundNek == TRUE)
 	{
 		return 1;
@@ -340,7 +335,7 @@ func void DIA_Fletcher_Problem_Info()
 //	AI_Output(self,other,"DIA_Fletcher_Problem_06_01"); //I'm in debt to Scatty, right up to my neck. Now he knows I'm doing Nek's job, he'll be coming round every day...
 //	AI_Output(self,other,"DIA_Fletcher_Problem_06_01"); //Ich habe Schulden bei Scatty. 'Ne Menge Schulden. Jetzt, wo er weiß, dass ich Neks Job mache, wird er jeden Tag bei mir auf der Matte stehen ...
 	AI_Output(self,other,"DIA_Fletcher_Problem_06_01"); //Jsem dlužný Scattymu, a to pořádně. Teď se dozví, že dělám Nekovu práci a bude sem chodit každý den...
-}; 
+};
 
 //#####################################################################
 //##
@@ -351,7 +346,7 @@ func void DIA_Fletcher_Problem_Info()
 //#####################################################################
 
 // ************************************************************
-//						GARDIST GEWORDEN 
+//						GARDIST GEWORDEN
 // ************************************************************
 instance Grd_255_Fletcher_WELCOME(C_INFO)
 {
@@ -364,7 +359,7 @@ instance Grd_255_Fletcher_WELCOME(C_INFO)
 
 func int Grd_255_Fletcher_WELCOME_Condition()
 {
-	if (Npc_GetTrueGuild(hero) == GIL_GRD) 
+	if (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
 		return TRUE;
 	};
@@ -398,11 +393,11 @@ instance Info_Fletcher_DIE(C_INFO)
 };
 
 func int Info_Fletcher_DIE_Condition()
-{ 
+{
 	if (Kapitel == 4)
 	{
 		return TRUE;
-	}; 
+	};
 };
 
 func void Info_Fletcher_DIE_Info()
@@ -430,7 +425,7 @@ func void Info_Fletcher_DIE_Info()
 //			AI_Output(self,hero,"Info_Fletcher_DIE_06_03"); //Hi, traitor! The fact that you used to be one of Gomez' Shadows won't help you now!
 //			AI_Output(self,hero,"Info_Fletcher_DIE_06_03"); //Hallo Verräter! Auch dein früherer Status als einer von Gomez' Schatten wird dir jetzt nichts mehr helfen!
 			AI_Output(self,hero,"Info_Fletcher_DIE_06_03"); //Zdar, zrádce! To, žes byl jedním z Gomezových Stínů, ti teď nepomůže!
-		}; 
+		};
 
 //		AI_Output(hero,self,"Info_Fletcher_DIE_15_04"); //Hey, what are you talking about, Fletcher?
 //		AI_Output(hero,self,"Info_Fletcher_DIE_15_04"); //Moment. Wovon redest du, Fletcher?

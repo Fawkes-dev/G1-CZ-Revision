@@ -1,5 +1,5 @@
 // ************************************************************
-// 							EXIT 
+// 							EXIT
 // ************************************************************
 
 instance Info_Yberion_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance Info_Yberion_EXIT(C_INFO)
 	information = Info_Yberion_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_Yberion_EXIT_Condition()
 {
@@ -18,7 +18,7 @@ func int Info_Yberion_EXIT_Condition()
 };
 
 func void Info_Yberion_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -32,7 +32,7 @@ instance DIA_YBerion_Wache(C_INFO)
 	information = DIA_YBerion_Wache_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int DIA_YBerion_Wache_Condition()
 {
@@ -43,7 +43,7 @@ func int DIA_YBerion_Wache_Condition()
 };
 
 func void DIA_YBerion_Wache_Info()
-{ 
+{
 //	AI_Output(self,other,"DIA_YBerion_Wache_12_00"); //What are you doin' here? Who let you in? Guards!
 //	AI_Output(self,other,"DIA_YBerion_Wache_12_00"); //Was machst du hier? Wer hat dich hereingelassen? Wache!
 	AI_Output(self,other,"DIA_YBerion_Wache_12_00"); //Co tady děláš? Kdo tě sem pustil? Stráže!
@@ -64,7 +64,7 @@ instance DIA_YBerion_Kennen(C_INFO)
 //	description = "Greetings, Master Y'Berion.";
 //	description = "Sei gegrüßt, Meister Y'Berion.";
 	description = "Buď pozdraven, mistře Y´Berione.";
-};                       
+};
 
 func int DIA_YBerion_Kennen_Condition()
 {
@@ -75,7 +75,7 @@ func int DIA_YBerion_Kennen_Condition()
 };
 
 func void DIA_YBerion_Kennen_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_YBerion_Kennen_15_00"); //Greetings, Master Y'Berion.
 //	AI_Output(other,self,"DIA_YBerion_Kennen_15_00"); //Sei gegrüßt, Meister Y'Berion.
 	AI_Output(other,self,"DIA_YBerion_Kennen_15_00"); //Buď pozdraven, mistře Y´Berione.
@@ -107,7 +107,7 @@ instance Info_YBerion_BringFocus(C_INFO)
 func int Info_YBerion_BringFocus_Condition()
 {
 	if (Npc_KnowsInfo(hero,DIA_YBerion_Kennen))
-	&& (Npc_GetTrueGuild (hero) != GIL_NONE)
+	&& (Npc_GetTrueGuild(hero) != GIL_NONE)
 	&& (YBerion_BringFocus != LOG_RUNNING)
 	&& (YBerion_BringFocus != LOG_SUCCESS)
 	{
@@ -207,7 +207,7 @@ instance Info_YBerion_BringFocus_RUNNING(C_INFO)
 //	description = "I still haven't found the focus.";
 //	description = "Ich habe den Fokus immer noch nicht gefunden.";
 	description = "Pořád to ohnisko nemůžu najít.";
-};                       
+};
 
 func int Info_YBerion_BringFocus_RUNNING_Condition()
 {
@@ -218,7 +218,7 @@ func int Info_YBerion_BringFocus_RUNNING_Condition()
 };
 
 func void Info_YBerion_BringFocus_RUNNING_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_YBerion_BringFocus_RUNNING_15_01"); //I still haven't found the focus.
 //	AI_Output(other,self,"Info_YBerion_BringFocus_RUNNING_15_01"); //Ich habe den Fokus immer noch nicht gefunden.
 	AI_Output(other,self,"Info_YBerion_BringFocus_RUNNING_15_01"); //Pořád to ohnisko nemůžu najít.
@@ -238,7 +238,7 @@ instance Info_YBerion_BringFocus_Success(C_INFO)
 //	description = "I've found the focus.";
 //	description = "Ich habe den Fokus gefunden";
 	description = "Našel jsem to ohnisko.";
-};                       
+};
 
 func int Info_YBerion_BringFocus_Success_Condition()
 {
@@ -249,7 +249,7 @@ func int Info_YBerion_BringFocus_Success_Condition()
 };
 
 func void Info_YBerion_BringFocus_Success_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_YBerion_BringFocus_Success_15_01"); //I've found the focus.
 //	AI_Output(other,self,"Info_YBerion_BringFocus_Success_15_01"); //Ich habe den Fokus gefunden.
 	AI_Output(other,self,"Info_YBerion_BringFocus_Success_15_01"); //Našel jsem to ohnisko.
@@ -270,9 +270,9 @@ func void Info_YBerion_BringFocus_Success_Info()
 //		AI_Output(self,other,"Info_YBerion_BringFocus_Success_12_06"); //Talk to Lester at the entrance to the Camp... he often guides newcomers around the Camp.
 //		AI_Output(self,other,"Info_YBerion_BringFocus_Success_12_06"); //Frag Lester am Eingang des Lagers ... Er führt öfter Neulinge herum.
 		AI_Output(self,other,"Info_YBerion_BringFocus_Success_12_06"); //Zeptej se u vchodu do tábora Lestera... Často tam doprovází nováčky.
-//		B_LogEntry(CH2_Focus,"Y'Berion told me to take the focus to another guru called Cor Kalom. This Cor Kalom spends the whole day in the alchemy lab."); 
-//		B_LogEntry(CH2_Focus,"Y'Berion hat mich beauftragt, den Fokus zu einem anderen Guru namens 'Cor Kalom' zu bringen. Dieser Cor Kalom soll sich den ganzen Tag im Alchemielabor aufhalten."); 
-		B_LogEntry(CH2_Focus,"Y´Berion mi řekl, abych to ohnisko předal dalšímu guru jménem Cor Kalom. Cor Kalom tráví celé dny ve své alchymistické dílně."); 
+//		B_LogEntry(CH2_Focus,"Y'Berion told me to take the focus to another guru called Cor Kalom. This Cor Kalom spends the whole day in the alchemy lab.");
+//		B_LogEntry(CH2_Focus,"Y'Berion hat mich beauftragt, den Fokus zu einem anderen Guru namens 'Cor Kalom' zu bringen. Dieser Cor Kalom soll sich den ganzen Tag im Alchemielabor aufhalten.");
+		B_LogEntry(CH2_Focus,"Y´Berion mi řekl, abych to ohnisko předal dalšímu guru jménem Cor Kalom. Cor Kalom tráví celé dny ve své alchymistické dílně.");
 	}
 	else
 	{
@@ -298,7 +298,7 @@ instance Info_YBerion_NYRAS(C_INFO)
 //	description = "The novice Nyras has gone mad!";
 //	description = "Der Novize Nyras hat den Verstand verloren!";
 	description = "Novic Nyras zešílel!";
-};                       
+};
 
 func int Info_YBerion_NYRAS_Condition()
 {
@@ -309,7 +309,7 @@ func int Info_YBerion_NYRAS_Condition()
 };
 
 func void Info_YBerion_NYRAS_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_YBerion_NYRAS_15_01"); //The novice Nyras has gone mad!
 //	AI_Output(other,self,"Info_YBerion_NYRAS_15_01"); //Der Novize Nyras hat den Verstand verloren!
 	AI_Output(other,self,"Info_YBerion_NYRAS_15_01"); //Novic Nyras zešílel!
@@ -335,14 +335,14 @@ instance GUR_1200_Yberion_EARN(C_INFO)
 	information = GUR_1200_Yberion_EARN_Info;
 	important = 0;
 	permanent = 0;
-//	description = "What about some kind of reward?"; 
-//	description = "Wie siehts mit einer Belohnung aus?"; 
-	description = "Jak to vypadá s mou odměnou?"; 
+//	description = "What about some kind of reward?";
+//	description = "Wie siehts mit einer Belohnung aus?";
+	description = "Jak to vypadá s mou odměnou?";
 };
 
 func int GUR_1200_Yberion_EARN_Condition()
-{ 
-	if (YBerion_BringFocus == LOG_SUCCESS) && (Npc_GetTrueGuild (hero)!= GIL_NOV) && (C_IsChapter (2))
+{
+	if (YBerion_BringFocus == LOG_SUCCESS) && (Npc_GetTrueGuild(hero)!= GIL_NOV) && (C_IsChapter (2))
 	{
 		return 1;
 	};
@@ -361,7 +361,7 @@ func void GUR_1200_Yberion_EARN_Info()
 	AI_Output(self,other,"GUR_1200_Yberion_EARN_Info_12_03"); //Vezmi si tento amulet jako znamení mé vděčnosti.
 	CreateInvItem(self,Schutzamulett_Feuer);
 	B_GiveInvItems(self,hero,Schutzamulett_Feuer,1);
-};  
+};
 
 //############################### KAPITEL 3 ###############################
 //SPIELER HAT DIE HEILKRÄUTER ZU COR ANGAR GEBRACHT
@@ -378,7 +378,7 @@ instance GUR_1200_Yberion_LASTWORDS(C_INFO)
 };
 
 func int GUR_1200_Yberion_LASTWORDS_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_CorAngar_FindHerb_Success))
 	{
 		return 1;
@@ -404,8 +404,8 @@ func void GUR_1200_Yberion_LASTWORDS_Info()
 	AI_Output(self,other,"GUR_1200_Yberion_LASTWORDS_Info_12_08"); //...sag ihnen das wir herausgefunden haben, wie sich die Foki aufladen lassen, sie sollen...sollen die Barriere vernichten......ihr müsst ....
 	AI_Output(self,other,"GUR_1200_Yberion_LASTWORDS_Info_12_08"); //...řekni jim, že jsme zjistil, jak nabít ohniska, měli by...měli by zničit Bariéru... oni musí ....
 	AI_Output(self,other,"GUR_1200_Yberion_LASTWORDS_Info_12_09"); //...das Böse....darf nicht erwachen ....
-	AI_Output(self,other,"GUR_1200_Yberion_LASTWORDS_Info_12_09"); //...zlo... zlo se nesmí probudit.... 
+	AI_Output(self,other,"GUR_1200_Yberion_LASTWORDS_Info_12_09"); //...zlo... zlo se nesmí probudit....
 
-};  
+};
 // ------------------------------  ----------------------------------
 */

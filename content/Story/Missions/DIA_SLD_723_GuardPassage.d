@@ -1,8 +1,8 @@
 //////////////////////////////////////////////////////////////////////////
 //	DURCHGANGSWACHE
-//	=============== 
+//	===============
 //	NSC: SLD_723_Soeldner
-//	Lager: 
+//	Lager:
 //	Durchgang:
 //	Uhrzeit:
 //
@@ -23,7 +23,7 @@ instance Info_SLD_723_FirstWarn(C_INFO)
 	information = Info_SLD_723_FirstWarn_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 //------------------------------------------------------------------------
 //	1. Warnung
@@ -31,7 +31,7 @@ instance Info_SLD_723_FirstWarn(C_INFO)
 func int Info_SLD_723_FirstWarn_Condition()
 {
 	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS]== AIV_GPS_BEGIN)
-	&& (self.aivar[AIV_PASSGATE] == FALSE ) 
+	&& (self.aivar[AIV_PASSGATE] == FALSE )
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self), self.wp)))
 	{
 		return TRUE;
@@ -47,26 +47,26 @@ func void Info_SLD_723_FirstWarn_Info()
 	AI_Output(self,hero,"Info_SLD_723_FirstWarn_11_01"); //STŮJ! Nikdo nesmí bez hesla projít!
 
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,SLD_723_CHECKPOINT);
-	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_FIRSTWARN; 
+	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_FIRSTWARN;
 
 	if (Npc_KnowsInfo(hero,Info_Cronos_SLEEPER))
 	{
 		Info_Clearchoices (Info_SLD_723_FirstWarn);
-//		Info_Addchoice (Info_SLD_723_FirstWarn,"Cronos has given me permission!", Info_SLD_723_Parole_CRONOS);  
-//		Info_Addchoice (Info_SLD_723_FirstWarn,"Cronos hat mir die Erlaubnis gegeben!", Info_SLD_723_Parole_CRONOS);  
-		Info_Addchoice (Info_SLD_723_FirstWarn,"Cronos mi dal povolení!", Info_SLD_723_Parole_CRONOS);  
-//		Info_Addchoice (Info_SLD_723_FirstWarn,"No idea, I've forgotten it!", Info_SLD_723_Parole_FORGOT);  
-//		Info_Addchoice (Info_SLD_723_FirstWarn,"Keine Ahnung, hab' sie vergessen!", Info_SLD_723_Parole_FORGOT);  
-		Info_Addchoice (Info_SLD_723_FirstWarn,"Nevím, zapomněl jsem ho!", Info_SLD_723_Parole_FORGOT);  
-//		Info_Addchoice (Info_SLD_723_FirstWarn,"The password is TERIANTROCH.", Info_SLD_723_Parole_FALSE2);  
-//		Info_Addchoice (Info_SLD_723_FirstWarn,"Die Parole lautet TERIANTROCH", Info_SLD_723_Parole_FALSE2);  
-		Info_Addchoice (Info_SLD_723_FirstWarn,"Heslo zní: TERIANTROCH.", Info_SLD_723_Parole_FALSE2);  
-//		Info_Addchoice (Info_SLD_723_FirstWarn,"The password is TETRIANDOCH.", Info_SLD_723_Parole_TRUE);  
-//		Info_Addchoice (Info_SLD_723_FirstWarn,"Die Parole lautet TETRIANDOCH", Info_SLD_723_Parole_TRUE);  
-		Info_Addchoice (Info_SLD_723_FirstWarn,"Heslo zní: TETRIANDOCH.", Info_SLD_723_Parole_TRUE);  
-//		Info_Addchoice (Info_SLD_723_FirstWarn,"The password is TETRIDANOCH.", Info_SLD_723_Parole_FALSE1);  
-//		Info_Addchoice (Info_SLD_723_FirstWarn,"Die Parole lautet TETRIDANOCH", Info_SLD_723_Parole_FALSE1);  
-		Info_Addchoice (Info_SLD_723_FirstWarn,"Heslo zní: TETRIDANOCH.", Info_SLD_723_Parole_FALSE1);  
+//		Info_Addchoice (Info_SLD_723_FirstWarn,"Cronos has given me permission!", Info_SLD_723_Parole_CRONOS);
+//		Info_Addchoice (Info_SLD_723_FirstWarn,"Cronos hat mir die Erlaubnis gegeben!", Info_SLD_723_Parole_CRONOS);
+		Info_Addchoice (Info_SLD_723_FirstWarn,"Cronos mi dal povolení!", Info_SLD_723_Parole_CRONOS);
+//		Info_Addchoice (Info_SLD_723_FirstWarn,"No idea, I've forgotten it!", Info_SLD_723_Parole_FORGOT);
+//		Info_Addchoice (Info_SLD_723_FirstWarn,"Keine Ahnung, hab' sie vergessen!", Info_SLD_723_Parole_FORGOT);
+		Info_Addchoice (Info_SLD_723_FirstWarn,"Nevím, zapomněl jsem ho!", Info_SLD_723_Parole_FORGOT);
+//		Info_Addchoice (Info_SLD_723_FirstWarn,"The password is TERIANTROCH.", Info_SLD_723_Parole_FALSE2);
+//		Info_Addchoice (Info_SLD_723_FirstWarn,"Die Parole lautet TERIANTROCH", Info_SLD_723_Parole_FALSE2);
+		Info_Addchoice (Info_SLD_723_FirstWarn,"Heslo zní: TERIANTROCH.", Info_SLD_723_Parole_FALSE2);
+//		Info_Addchoice (Info_SLD_723_FirstWarn,"The password is TETRIANDOCH.", Info_SLD_723_Parole_TRUE);
+//		Info_Addchoice (Info_SLD_723_FirstWarn,"Die Parole lautet TETRIANDOCH", Info_SLD_723_Parole_TRUE);
+		Info_Addchoice (Info_SLD_723_FirstWarn,"Heslo zní: TETRIANDOCH.", Info_SLD_723_Parole_TRUE);
+//		Info_Addchoice (Info_SLD_723_FirstWarn,"The password is TETRIDANOCH.", Info_SLD_723_Parole_FALSE1);
+//		Info_Addchoice (Info_SLD_723_FirstWarn,"Die Parole lautet TETRIDANOCH", Info_SLD_723_Parole_FALSE1);
+		Info_Addchoice (Info_SLD_723_FirstWarn,"Heslo zní: TETRIDANOCH.", Info_SLD_723_Parole_FALSE1);
 	}
 	else
 	{
@@ -147,14 +147,14 @@ instance Info_SLD_723_LastWarn(C_INFO)
 	information = Info_SLD_723_LastWarn_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int Info_SLD_723_LastWarn_Condition()
 {
 	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_FIRSTWARN )
-	&& (self.aivar[AIV_PASSGATE] == FALSE ) 
+	&& (self.aivar[AIV_PASSGATE] == FALSE )
 	&& (Npc_GetDistToWP(hero,SLD_723_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
-	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp))) 
+	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
 		return TRUE;
 	};
@@ -183,14 +183,14 @@ instance Info_SLD_723_Attack(C_INFO)
 	information = Info_SLD_723_Attack_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int Info_SLD_723_Attack_Condition()
 {
 	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_LASTWARN )
-	&& (self.aivar[AIV_PASSGATE] == FALSE ) 
+	&& (self.aivar[AIV_PASSGATE] == FALSE )
 	&& (Npc_GetDistToWP(hero,SLD_723_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
-	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp))) 
+	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
 		return TRUE;
 	};
@@ -198,11 +198,10 @@ func int Info_SLD_723_Attack_Condition()
 
 func int Info_SLD_723_Attack_Info()
 {
-
 	hero.aivar[AIV_LASTDISTTOWP] = 0;
-	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_PUNISH; 
+	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_PUNISH;
 
-	B_FullStop(self); 
+	B_FullStop(self);
 	AI_StopProcessInfos(self); // dem Spieler sofort wieder die Kontrolle zurückgeben
 	B_IntruderAlert(self,other);
 	B_SetAttackReason(self,AIV_AR_INTRUDER);
@@ -224,7 +223,7 @@ instance Info_SLD_723_PAROLE(C_INFO)
 //	description = "(say password)";
 //	description = "(Parole sagen)";
 	description = "(řekni heslo)";
-};                       
+};
 
 func int Info_SLD_723_PAROLE_Condition()
 {
@@ -238,19 +237,19 @@ func int Info_SLD_723_PAROLE_Condition()
 func int Info_SLD_723_PAROLE_Info()
 {
 	Info_ClearChoices(Info_SLD_723_PAROLE);
-//	Info_AddChoice(Info_SLD_723_PAROLE,"Cronos has given me permission!", Info_SLD_723_Parole_CRONOS);  
-//	Info_AddChoice(Info_SLD_723_PAROLE,"Cronos hat mir die Erlaubnis gegeben!", Info_SLD_723_Parole_CRONOS);  
-	Info_AddChoice(Info_SLD_723_PAROLE,"Cronos mi dal povolení!", Info_SLD_723_Parole_CRONOS);  
-//	Info_AddChoice(Info_SLD_723_PAROLE,"No idea, I've forgotten it!", Info_SLD_723_Parole_FORGOT);  
-//	Info_AddChoice(Info_SLD_723_PAROLE,"Keine Ahnung, hab' sie vergessen!", Info_SLD_723_Parole_FORGOT);  
-	Info_AddChoice(Info_SLD_723_PAROLE,"Nevím, zapomněl jsem ho!", Info_SLD_723_Parole_FORGOT);  
-//	Info_AddChoice(Info_SLD_723_PAROLE,"The password is TERIANTROCH.", Info_SLD_723_Parole_FALSE2);  
-//	Info_AddChoice(Info_SLD_723_PAROLE,"Die Parole lautet TERIANTROCH", Info_SLD_723_Parole_FALSE2);  
-	Info_AddChoice(Info_SLD_723_PAROLE,"Heslo zní: TERIANTROCH.", Info_SLD_723_Parole_FALSE2);  
-//	Info_AddChoice(Info_SLD_723_PAROLE,"The password is TETRIANDOCH.", Info_SLD_723_Parole_TRUE);  
-//	Info_AddChoice(Info_SLD_723_PAROLE,"Die Parole lautet TETRIANDOCH", Info_SLD_723_Parole_TRUE);  
-	Info_AddChoice(Info_SLD_723_PAROLE,"Heslo zní: TETRIANDOCH.", Info_SLD_723_Parole_TRUE);  
-//	Info_AddChoice(Info_SLD_723_PAROLE,"The password is TETRIDANOCH.", Info_SLD_723_Parole_FALSE1);  
-//	Info_AddChoice(Info_SLD_723_PAROLE,"Die Parole lautet TETRIDANOCH", Info_SLD_723_Parole_FALSE1);  
-	Info_AddChoice(Info_SLD_723_PAROLE,"Heslo zní: TETRIDANOCH.", Info_SLD_723_Parole_FALSE1);  
+//	Info_AddChoice(Info_SLD_723_PAROLE,"Cronos has given me permission!", Info_SLD_723_Parole_CRONOS);
+//	Info_AddChoice(Info_SLD_723_PAROLE,"Cronos hat mir die Erlaubnis gegeben!", Info_SLD_723_Parole_CRONOS);
+	Info_AddChoice(Info_SLD_723_PAROLE,"Cronos mi dal povolení!", Info_SLD_723_Parole_CRONOS);
+//	Info_AddChoice(Info_SLD_723_PAROLE,"No idea, I've forgotten it!", Info_SLD_723_Parole_FORGOT);
+//	Info_AddChoice(Info_SLD_723_PAROLE,"Keine Ahnung, hab' sie vergessen!", Info_SLD_723_Parole_FORGOT);
+	Info_AddChoice(Info_SLD_723_PAROLE,"Nevím, zapomněl jsem ho!", Info_SLD_723_Parole_FORGOT);
+//	Info_AddChoice(Info_SLD_723_PAROLE,"The password is TERIANTROCH.", Info_SLD_723_Parole_FALSE2);
+//	Info_AddChoice(Info_SLD_723_PAROLE,"Die Parole lautet TERIANTROCH", Info_SLD_723_Parole_FALSE2);
+	Info_AddChoice(Info_SLD_723_PAROLE,"Heslo zní: TERIANTROCH.", Info_SLD_723_Parole_FALSE2);
+//	Info_AddChoice(Info_SLD_723_PAROLE,"The password is TETRIANDOCH.", Info_SLD_723_Parole_TRUE);
+//	Info_AddChoice(Info_SLD_723_PAROLE,"Die Parole lautet TETRIANDOCH", Info_SLD_723_Parole_TRUE);
+	Info_AddChoice(Info_SLD_723_PAROLE,"Heslo zní: TETRIANDOCH.", Info_SLD_723_Parole_TRUE);
+//	Info_AddChoice(Info_SLD_723_PAROLE,"The password is TETRIDANOCH.", Info_SLD_723_Parole_FALSE1);
+//	Info_AddChoice(Info_SLD_723_PAROLE,"Die Parole lautet TETRIDANOCH", Info_SLD_723_Parole_FALSE1);
+	Info_AddChoice(Info_SLD_723_PAROLE,"Heslo zní: TETRIDANOCH.", Info_SLD_723_Parole_FALSE1);
 };

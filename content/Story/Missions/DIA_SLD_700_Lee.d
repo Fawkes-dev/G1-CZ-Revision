@@ -1,5 +1,5 @@
 //*********************************************************
-//							EXIT 
+//							EXIT
 //*********************************************************
 
 instance Sld_700_Lee_Exit(C_INFO)
@@ -8,10 +8,10 @@ instance Sld_700_Lee_Exit(C_INFO)
 	nr = 999;
 	condition = Sld_700_Lee_Exit_Condition;
 	information = Sld_700_Lee_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Sld_700_Lee_Exit_Condition()
 {
@@ -24,7 +24,7 @@ func void Sld_700_Lee_Exit_Info()
 };
 
 //*********************************************************
-//						Greet 
+//						Greet
 //*********************************************************
 
 instance Sld_700_Lee_Greet(C_INFO)
@@ -37,7 +37,7 @@ instance Sld_700_Lee_Greet(C_INFO)
 //	description = "You're the boss of the mercenaries, aren't you?";
 //	description = "Du bist der Chef der Söldner, richtig?";
 	description = "Ty jsi velitel žoldáků, viď?";
-};                       
+};
 
 func int Sld_700_Lee_Greet_Condition()
 {
@@ -55,7 +55,7 @@ func void Sld_700_Lee_Greet_Info()
 };
 
 //*********************************************************
-//						Define 
+//						Define
 //*********************************************************
 
 instance Sld_700_Lee_Define(C_INFO)
@@ -68,7 +68,7 @@ instance Sld_700_Lee_Define(C_INFO)
 //	description = "Which tasks do the mages' mercenaries have?";
 //	description = "Was sind die Aufgaben eines Söldners der Magier?";
 	description = "Jaké úkoly dávají mágové žoldákům?";
-};                       
+};
 
 func int Sld_700_Lee_Define_Condition()
 {
@@ -92,7 +92,7 @@ func void Sld_700_Lee_Define_Info()
 };
 
 //*********************************************************
-//						Mitmachen 
+//						Mitmachen
 //*********************************************************
 
 instance Sld_700_Lee_Mitmachen(C_INFO)
@@ -105,7 +105,7 @@ instance Sld_700_Lee_Mitmachen(C_INFO)
 //	description = "I'd like to join you!";
 //	description = "Ich will bei euch mitmachen!";
 	description = "Chtěl bych se k vám přidat!";
-};                       
+};
 
 func int Sld_700_Lee_Mitmachen_Condition()
 {
@@ -131,7 +131,7 @@ func void Sld_700_Lee_Mitmachen_Info()
 };
 
 //*********************************************************
-//						NowReady for Sld? 
+//						NowReady for Sld?
 //*********************************************************
 	var int Lee_SldPossible;
 //*********************************************************
@@ -146,7 +146,7 @@ instance Sld_700_Lee_NowReady(C_INFO)
 //	description = "I'd like to become a mercenary of the mages - am I ready yet?";
 //	description = "Ich will ein Söldner der Magier werden - bin ich jetzt soweit?";
 	description = "Chtěl bych se stát žoldákem mágů - jsem na to už připravený?";
-};                       
+};
 
 func int Sld_700_Lee_NowReady_Condition()
 {
@@ -189,7 +189,7 @@ func void Sld_700_Lee_NowReady_Info()
 		};
 	}
 	else
-	{ 
+	{
 		if hero.level < 10
 		{
 //			AI_Output(self,other,"DIA_Lee_NowReady_08_01"); //You still don't have enough experience. You need to improve your abilities.
@@ -208,7 +208,7 @@ func void Sld_700_Lee_NowReady_Info()
 };
 
 /*------------------------------------------------------------------------
-							SÖLDNER WERDEN 2 
+							SÖLDNER WERDEN 2
 ------------------------------------------------------------------------*/
 
 instance Sld_700_Lee_BECOMESLDNOW(C_INFO)
@@ -218,13 +218,13 @@ instance Sld_700_Lee_BECOMESLDNOW(C_INFO)
 	information = Sld_700_Lee_BECOMESLDNOW_Info;
 	important = 0;
 	permanent = 0;
-//	description = "I want to become a mercenary."; 
-//	description = "Ich will Söldner werden"; 
-	description = "Chci se stát žoldákem."; 
+//	description = "I want to become a mercenary.";
+//	description = "Ich will Söldner werden";
+	description = "Chci se stát žoldákem.";
 };
 
 func int Sld_700_Lee_BECOMESLDNOW_Condition()
-{ 
+{
 	if (Lee_SldPossible == TRUE)
 	&& (hero.level >= 10)
 	{
@@ -317,7 +317,7 @@ func void Sld_700_Lee_BECOMESLDNOW_JUSTBECAUSE()
 //##
 //#####################################################################
 /*------------------------------------------------------------------------
-							SZENE DAMM 
+							SZENE DAMM
 ------------------------------------------------------------------------*/
 
 instance Sld_700_Lee_DAMNPAST(C_INFO)
@@ -330,10 +330,10 @@ instance Sld_700_Lee_DAMNPAST(C_INFO)
 };
 
 func int Sld_700_Lee_DAMNPAST_Condition()
-{ 
+{
 	if (Saturas_BringFoci == 5)
-	&& (Npc_GetDistToNpc(hero,self) < 1000) 
-	&& (Npc_GetDistToWp (self,"NC_DAM") < 1000) 
+	&& (Npc_GetDistToNpc(hero,self) < 1000)
+	&& (Npc_GetDistToWp (self,"NC_DAM") < 1000)
 	{
 		return TRUE;
 	};
@@ -375,12 +375,12 @@ func void Sld_700_Lee_DAMNPAST_Info()
 
 	var C_NPC Homer;
 	Homer = Hlp_GetNpc(BAU_935_HOMER);
-	Npc_ExchangeRoutine(Homer,"START"); 
+	Npc_ExchangeRoutine(Homer,"START");
 	AI_ContinueRoutine(Homer);
 };
 
 //*********************************************************
-//						FMTaken 
+//						FMTaken
 //*********************************************************
 
 instance Sld_700_Lee_FMTaken(C_INFO)
@@ -393,7 +393,7 @@ instance Sld_700_Lee_FMTaken(C_INFO)
 //	description = "What do you think about the mine?";
 //	description = "Was sagst du zu der Sache mit der Mine?";
 	description = "Co si myslíš o dolu?";
-};                       
+};
 
 func int Sld_700_Lee_FMTaken_Condition()
 {
@@ -446,13 +446,13 @@ func void Sld_700_Lee_FMTaken_Info()
 		B_LogEntry(CH4_BannedFromOC, "Informoval jsem Leeho o čistce, kterou jsme s Gornem provedli ve Svobodném dole. Vypadal velmi potěšen.");
 
  	   	B_GiveInvItems(self,other,ItArRuneFirestorm,1);
-		B_GiveXP(500); 
+		B_GiveXP(500);
 		Lee_freeminereport = 0;
 	};
 };
 
 /*------------------------------------------------------------------------
-						WECHSEL VON GRD ZU SLD 
+						WECHSEL VON GRD ZU SLD
 ------------------------------------------------------------------------*/
 instance Sld_700_Lee_CHANGESIDE(C_INFO)
 {
@@ -461,13 +461,13 @@ instance Sld_700_Lee_CHANGESIDE(C_INFO)
 	information = Sld_700_Lee_CHANGESIDE_Info;
 	important = 0;
 	permanent = 0;
-//	description = "The Old Camp has banned me, I'd like to join you!"; 
-//	description = "Das Alte Lager hat mich verbannt, ich möchte mich euch anschließen!"; 
-	description = "Vypověděli mě ze Starého tábora, chtěl bych se přidat k vám!"; 
+//	description = "The Old Camp has banned me, I'd like to join you!";
+//	description = "Das Alte Lager hat mich verbannt, ich möchte mich euch anschließen!";
+	description = "Vypověděli mě ze Starého tábora, chtěl bych se přidat k vám!";
 };
 
 func int Sld_700_Lee_CHANGESIDE_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,KDW_600_Saturas_GOTOLEE))
 	{
 		return TRUE;
@@ -494,7 +494,7 @@ func void Sld_700_Lee_CHANGESIDE_Info()
 	B_GiveInvItems(self,hero,SLD_ARMOR_M,1);
 	Npc_GetInvItemBySlot(hero,INV_ARMOR, 2);
 	if (Hlp_GetInstanceID(item)==SLD_ARMOR_M)
-	{ 
+	{
 		AI_EquipArmor (hero,item);
 	};
 
@@ -509,10 +509,10 @@ func void Sld_700_Lee_CHANGESIDE_Info()
 //	B_LogEntry(GE_TeacherNC,"Lee can teach me to fight with TWO-HANDED WEAPONS. Apart from that, he can teach me to improve my STRENGTH and my DEXTERITY.");
 //	B_LogEntry(GE_TeacherNC,"Lee kann mir den Kampf mit ZWEIHÄNDIGEN Waffen beibringen. Außerdem kann er mich lehren, meine STÄRKE und mein GESCHICK zu verbessern.");
 	B_LogEntry(GE_TeacherNC,"Lee mě může naučit bojovat s OBOURUČNÍMI ZBRANĚMI. Kromě toho mi může pomoci zdokonalit moji SÍLU a OBRATNOST. ");
-};  
+};
 
 /*------------------------------------------------------------------------
-							ARMOR 
+							ARMOR
 ------------------------------------------------------------------------*/
 instance Sld_700_Lee_ARMOR(C_INFO)
 {
@@ -521,13 +521,13 @@ instance Sld_700_Lee_ARMOR(C_INFO)
 	information = Sld_700_Lee_ARMOR_Info;
 	important = 0;
 	permanent = 1;
-//	description = "I need a better armor."; 
-//	description = "Ich brauche eine bessere Rüstung"; 
-	description = "Potřebuju lepší zbroj."; 
+//	description = "I need a better armor.";
+//	description = "Ich brauche eine bessere Rüstung";
+	description = "Potřebuju lepší zbroj.";
 };
 
 func int Sld_700_Lee_ARMOR_Condition()
-{ 
+{
 	if (Npc_GetTrueGuild(hero) == GIL_SLD)
 	{
 		return TRUE;
@@ -547,7 +547,7 @@ func void Sld_700_Lee_ARMOR_Info()
 	Info_AddChoice(Sld_700_Lee_ARMOR,DIALOG_BACK,Sld_700_Lee_ARMOR_BACK);
 	Info_AddChoice(Sld_700_Lee_ARMOR,B_BuildBuyArmorString(NAME_LeeMercs, VALUE_SLD_ARMOR_M),Sld_700_Lee_ARMOR_M);
 	Info_AddChoice(Sld_700_Lee_ARMOR,B_BuildBuyArmorString(NAME_LeeHeavyMercs, VALUE_SLD_ARMOR_H),Sld_700_Lee_ARMOR_H);
-};  
+};
 func void Sld_700_Lee_ARMOR_BACK()
 {
 	Info_ClearChoices(Sld_700_Lee_ARMOR);
@@ -563,13 +563,13 @@ func void Sld_700_Lee_ARMOR_M()
 //		AI_Output(self,other,"Sld_700_Lee_ARMOR_M_Info_08_02"); //Du bist noch nicht so weit, eine bessere Rüstung zu tragen. Komm wieder, wenn du erfahrener geworden bist.
 		AI_Output(self,other,"Sld_700_Lee_ARMOR_M_Info_08_02"); //Ještě tu nejsi tak dlouho, abys nosil lepší zbroj. Přijď, až budeš mít víc zkušeností.
 	}
-	else if (Npc_HasItems(hero,ItMinugget) < VALUE_SLD_ARMOR_M) 
+	else if (Npc_HasItems(hero,ItMinugget) < VALUE_SLD_ARMOR_M)
 	{
 //		AI_Output(self,other,"Sld_700_Lee_ARMOR_M_Info_08_03"); //Without ore you won't get any armor either.
 //		AI_Output(self,other,"Sld_700_Lee_ARMOR_M_Info_08_03"); //Ohne Erz gibt es auch keine Rüstung.
 		AI_Output(self,other,"Sld_700_Lee_ARMOR_M_Info_08_03"); //Bez rudy nedostaneš žádnou zbroj.
 	}
-	else 
+	else
 	{
 //		AI_Output(self,other,"Sld_700_Lee_ARMOR_M_Info_08_04"); //This armor is a good piece of work. It'll protect your body well.
 //		AI_Output(self,other,"Sld_700_Lee_ARMOR_M_Info_08_04"); //Diese Rüstung ist ein ordentliches Stück Arbeit. Sie wird deinen Körper gut schützen.
@@ -593,13 +593,13 @@ func void Sld_700_Lee_ARMOR_H()
 //		AI_Output(self,other,"Sld_700_Lee_ARMOR_H_Info_08_02"); //Du bist noch nicht so weit, die schwere Rüstung zu tragen. Komm wieder, wenn du erfahrener geworden bist.
 		AI_Output(self,other,"Sld_700_Lee_ARMOR_H_Info_08_02"); //Ještě nejsi dost zkušený, abys nosil těžkou zbroj. Přijď, až budeš mít víc zkušeností.
 	}
-	else if (Npc_HasItems(hero,ItMinugget) < VALUE_SLD_ARMOR_H) 
+	else if (Npc_HasItems(hero,ItMinugget) < VALUE_SLD_ARMOR_H)
 	{
 //		AI_Output(self,other,"Sld_700_Lee_ARMOR_H_Info_08_03"); //Without ore you won't get armor either.
 //		AI_Output(self,other,"Sld_700_Lee_ARMOR_H_Info_08_03"); //Ohne Erz gibt es auch keine Rüstung.
 		AI_Output(self,other,"Sld_700_Lee_ARMOR_H_Info_08_03"); //Bez rudy nedostaneš žádnou zbroj.
 	}
-	else 
+	else
 	{
 //		AI_Output(self,other,"Sld_700_Lee_ARMOR_H_Info_08_04"); //This armor is the best piece you'll ever get inside the Barrier. And believe me, it's worth the ore.
 //		AI_Output(self,other,"Sld_700_Lee_ARMOR_H_Info_08_04"); //Diese Rüstung ist das Beste, was du in der Barriere bekommen kannst. Und, glaub mir, sie ist das Erz wert.
@@ -616,7 +616,7 @@ func void Sld_700_Lee_ARMOR_H()
 
 };
 /*------------------------------------------------------------------------
-							STR + DEX 
+							STR + DEX
 ------------------------------------------------------------------------*/
 instance Sld_700_Lee_Teach(C_INFO)
 {
@@ -628,7 +628,7 @@ instance Sld_700_Lee_Teach(C_INFO)
 //	description = "Can you teach me something?";
 //	description = "Kannst du mir was beibringen?";
 	description = "Můžeš mě něco naučit?";
-};                       
+};
 
 func int Sld_700_Lee_Teach_Condition()
 {
@@ -658,7 +658,6 @@ func void Sld_700_Lee_Teach_Info()
 
 func void Sld_700_Lee_Teach_BACK()
 {
-
 	Info_ClearChoices(Sld_700_Lee_Teach);
 };
 
@@ -715,14 +714,14 @@ instance Sld_700_Lee_ZWEIHAND1(C_INFO)
 	information = Sld_700_Lee_ZWEIHAND1_Info;
 	important = 0;
 	permanent = 1;
-//	description = B_BuildLearnString(NAME_Learn2h_1, LPCOST_TALENT_2H_1,0); 
-//	description = B_BuildLearnString(NAME_Learn2h_1, LPCOST_TALENT_2H_1,0); 
-	description = B_BuildLearnString(NAME_Learn2h_1,LPCOST_TALENT_2H_1,0); 
+//	description = B_BuildLearnString(NAME_Learn2h_1, LPCOST_TALENT_2H_1,0);
+//	description = B_BuildLearnString(NAME_Learn2h_1, LPCOST_TALENT_2H_1,0);
+	description = B_BuildLearnString(NAME_Learn2h_1,LPCOST_TALENT_2H_1,0);
 };
 
 func int Sld_700_Lee_ZWEIHAND1_Condition()
-{ 
-	if ( 
+{
+	if (
 		(Npc_GetTalentSkill(hero,NPC_TALENT_2H) < 1)
 		&& ((Npc_GetTrueGuild(hero) == GIL_SLD) || ((Npc_GetTrueGuild(hero)==GIL_KDW) && (Kapitel >= 4))) //jetzt auch als Wassermagier im 4. Kapitel möglich ***BJÖRN***
 	)
@@ -760,7 +759,7 @@ func void Sld_700_Lee_ZWEIHAND1_Info()
 
 		Sld_700_Lee_ZWEIHAND1.permanent = 0;
 	};
-};  
+};
 //-------------------------------------------------------------------------
 //							ZWEIHANDKAMPF LERNEN STUFE 2
 //-------------------------------------------------------------------------
@@ -771,14 +770,14 @@ instance Sld_700_Lee_ZWEIHAND2(C_INFO)
 	information = Sld_700_Lee_ZWEIHAND2_Info;
 	important = 0;
 	permanent = 1;
-//	description = B_BuildLearnString(NAME_Learn2h_2, LPCOST_TALENT_2H_2,0); 
-//	description = B_BuildLearnString(NAME_Learn2h_2, LPCOST_TALENT_2H_2,0); 
-	description = B_BuildLearnString(NAME_Learn2h_2,LPCOST_TALENT_2H_2,0); 
+//	description = B_BuildLearnString(NAME_Learn2h_2, LPCOST_TALENT_2H_2,0);
+//	description = B_BuildLearnString(NAME_Learn2h_2, LPCOST_TALENT_2H_2,0);
+	description = B_BuildLearnString(NAME_Learn2h_2,LPCOST_TALENT_2H_2,0);
 };
 
 func int Sld_700_Lee_ZWEIHAND2_Condition()
-{ 
-	if ( 
+{
+	if (
 		(Npc_GetTalentSkill(hero,NPC_TALENT_2H) == 1)
 		&& ((Npc_GetTrueGuild(hero) == GIL_SLD) || ((Npc_GetTrueGuild(hero)==GIL_KDW) && (Kapitel >= 4))) //jetzt auch als Wassermagier im 4. Kapitel möglich ***BJÖRN***
 	)
@@ -822,4 +821,4 @@ func void Sld_700_Lee_ZWEIHAND2_Info()
 
 		Sld_700_Lee_ZWEIHAND2.permanent = 0;
 	};
-};  
+};

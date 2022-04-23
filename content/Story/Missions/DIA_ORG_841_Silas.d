@@ -1,5 +1,5 @@
 // ************************************************************
-// 			  				   EXIT 
+// 			  				   EXIT
 // ************************************************************
 
 instance DIA_Silas_EXIT(C_Info)
@@ -10,7 +10,7 @@ instance DIA_Silas_EXIT(C_Info)
 	information = DIA_Silas_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Silas_EXIT_Condition()
 {
@@ -18,7 +18,7 @@ func int DIA_Silas_EXIT_Condition()
 };
 
 func void DIA_Silas_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -36,7 +36,7 @@ instance DIA_Silas_Hehler(C_Info)
 //	description = "How are things?";
 //	description = "Wie läuft's denn so?";
 	description = "Jak to jde?";
-};                       
+};
 
 func int DIA_Silas_Hehler_Condition()
 {
@@ -44,7 +44,7 @@ func int DIA_Silas_Hehler_Condition()
 };
 
 func void DIA_Silas_Hehler_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Silas_Hehler_15_00"); //How are things?
 //	AI_Output(other,self,"DIA_Silas_Hehler_15_00"); //Wie läuft's denn so?
 	AI_Output(other,self,"DIA_Silas_Hehler_15_00"); //Jak to jde?
@@ -71,7 +71,7 @@ instance DIA_Silas_Trade(C_Info)
 //	description = "Ich will was trinken.";
 	description = "Chci se napít.";
 	trade = 1;
-};                       
+};
 
 func int DIA_Silas_Trade_Condition()
 {
@@ -79,7 +79,7 @@ func int DIA_Silas_Trade_Condition()
 };
 
 func void DIA_Silas_Trade_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Silas_Trade_15_00"); //I want a drink.
 //	AI_Output(other,self,"DIA_Silas_Trade_15_00"); //Ich will was trinken.
 	AI_Output(other,self,"DIA_Silas_Trade_15_00"); //Chci se napít.

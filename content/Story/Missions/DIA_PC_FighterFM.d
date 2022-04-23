@@ -7,10 +7,10 @@ instance Info_GornFM_EXIT(C_INFO)
 	nr   = 999;
 	condition = Info_GornFM_EXIT_Condition;
 	information = Info_GornFM_EXIT_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_GornFM_EXIT_Condition()
 {
@@ -51,12 +51,12 @@ instance Info_GornFM_WAIT(C_INFO)
 	npc = PC_FighterFM;
 	condition = Info_GornFM_WAIT_Condition;
 	information = Info_GornFM_WAIT_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 //	description = "Hold the position, I'll check the situation!";
 //	description = "Halt die Stellung, ich werde erst mal die Lage prüfen!";
 	description = "Hlídej tuhle pozici, já obhlédnu situaci!";
-};                       
+};
 
 func int Info_GornFM_WAIT_Condition()
 {
@@ -87,12 +87,12 @@ instance Info_GornFM_FOLLOW(C_INFO)
 	npc = PC_FighterFM;
 	condition = Info_GornFM_FOLLOW_Condition;
 	information = Info_GornFM_FOLLOW_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 //	description = "Come on, I need your help.";
 //	description = "Komm mit, ich brauche deine Unterstützung!";
 	description = "Pojď, potřebuji tvou pomoc.";
-};                       
+};
 
 func int Info_GornFM_FOLLOW_Condition()
 {

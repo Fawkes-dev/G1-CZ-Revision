@@ -6,10 +6,10 @@ instance Tpl_1400_GorNaBar_Exit(C_INFO)
 	nr = 999;
 	condition = Tpl_1400_GorNaBar_Exit_Condition;
 	information = Tpl_1400_GorNaBar_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Tpl_1400_GorNaBar_Exit_Condition()
 {
@@ -33,13 +33,13 @@ instance Tpl_1400_GorNaBar_SUGGEST(C_INFO)
 	information = Tpl_1400_GorNaBar_SUGGEST_Info;
 	important = 0;
 	permanent = 0;
-//	description = "I need your help."; 
-//	description = "Ich brauche deine Hilfe"; 
-	description = "Potřebuju tvoji pomoc."; 
+//	description = "I need your help.";
+//	description = "Ich brauche deine Hilfe";
+	description = "Potřebuju tvoji pomoc.";
 };
 
 func int Tpl_1400_GorNaBar_SUGGEST_Condition()
-{ 
+{
 	if  Npc_KnowsInfo(hero,Grd_263_Asghan_OPEN)
 	&& !Npc_KnowsInfo(hero,Grd_263_Asghan_OPEN_NOW)
 	{
@@ -63,8 +63,8 @@ func void Tpl_1400_GorNaBar_SUGGEST_Info()
 	AI_Output(self,other,"Tpl_1400_GorNaBar_SUGGEST_Info_09_04"); //Hnízdo důlních červů! Konečně. Můj meč je ti k službám!
 
 	AI_StopProcessInfos(self);
-	Npc_ExchangeRoutine(self,"GATE"); 
-	Npc_SetPermAttitude(self,ATT_FRIENDLY); 
+	Npc_ExchangeRoutine(self,"GATE");
+	Npc_SetPermAttitude(self,ATT_FRIENDLY);
 	B_GiveXP(XP_HireGorNaBar);
 
 //	B_LogEntry(CH2_MCEggs,"When I mentioned the minecrawlers' nest, the templar Gor Na Bar joined my reinforcements at Asghan's gate. I'll find him there.");
@@ -87,7 +87,7 @@ instance Tpl_1400_GorNaBar_INFO(C_INFO)
 };
 
 func int Tpl_1400_GorNaBar_INFO_Condition()
-{ 
+{
 	if ! (Npc_KnowsInfo(hero,Grd_263_Asghan_NEST ))
 	{
 		return 1;
@@ -102,7 +102,7 @@ func void Tpl_1400_GorNaBar_INFO_Info()
 //	AI_Output(self,other,"Tpl_1400_GorNaBar_INFO_Info_09_02"); //The crawlers must have a nest somewhere. If we only knew where, we could destroy the whole brood!
 //	AI_Output(self,other,"Tpl_1400_GorNaBar_INFO_Info_09_02"); //Die Crawler müssen irgendwo ein Nest haben. Wenn wir nur wüssten, wo es ist, dann würden wir die ganze Brut ausrotten!
 	AI_Output(self,other,"Tpl_1400_GorNaBar_INFO_Info_09_02"); //Důlní červi tu musí mít někde hnízdo. Kdybychom jenom věděli kde, mohli bychom zničit všechna mláďata.
-};    
+};
 
 // EIER AM START
 instance Tpl_1400_GorNaBar_VICTORY(C_INFO)
@@ -112,14 +112,14 @@ instance Tpl_1400_GorNaBar_VICTORY(C_INFO)
 	information = Tpl_1400_GorNaBar_VICTORY_Info;
 	important = 0;
 	permanent = 0;
-//	description = "I've found the nest of the queen!"; 
-//	description = "Ich habe das Nest der Königin gefunden!"; 
-	description = "Našel jsem hnízdo královny!"; 
+//	description = "I've found the nest of the queen!";
+//	description = "Ich habe das Nest der Königin gefunden!";
+	description = "Našel jsem hnízdo královny!";
 };
 
 func int Tpl_1400_GorNaBar_VICTORY_Condition()
-{ 
-	if Npc_HasItems(hero,ItAt_Crawlerqueen ) >= 1 
+{
+	if Npc_HasItems(hero,ItAt_Crawlerqueen ) >= 1
 	{
 		return TRUE;
 	};
@@ -138,4 +138,4 @@ func void Tpl_1400_GorNaBar_VICTORY_Info()
 //	B_LogEntry(GE_BecomeTemplar,"After bringing back the eggs, I should talk to Cor Angar. Maybe he'll let me join the templars.");
 //	B_LogEntry(GE_BecomeTemplar,"Wenn ich die Eier zurückgebracht habe, sollte ich mal mit Cor Angar reden. Vielleicht nimmt er mich in die Reihen der Templer auf.");
 	B_LogEntry(GE_BecomeTemplar,"Až přinesu ta vajíčka, měl bych si promluvit s Corem Angarem. Možná mě přijme k templářům.");
-};  
+};

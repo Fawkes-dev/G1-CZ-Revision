@@ -12,7 +12,7 @@ instance IEFan1_EXIT(C_INFO)
 	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int IEFan1_EXIT_Condition()
 {
@@ -20,7 +20,7 @@ func int IEFan1_EXIT_Condition()
 };
 
 func void IEFan1_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -38,15 +38,15 @@ instance IEFan2_EXIT(C_INFO)
 	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int IEFan2_EXIT_Condition()
-{ 
+{
 	return 1;
 };
 
 func void IEFan2_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -64,15 +64,15 @@ instance IEFan3_EXIT(C_INFO)
 	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int IEFan3_EXIT_Condition()
-{ 
+{
 	return 1;
 };
 
 func void IEFan3_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -90,15 +90,15 @@ instance IEFan4_EXIT(C_INFO)
 	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int IEFan4_EXIT_Condition()
-{ 
+{
 	return 1;
 };
 
 func void IEFan4_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 

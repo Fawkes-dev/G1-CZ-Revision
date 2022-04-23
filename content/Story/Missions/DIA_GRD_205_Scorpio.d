@@ -1,5 +1,5 @@
 // **************************************
-//					EXIT 
+//					EXIT
 // **************************************
 
 instance DIA_Scorpio_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Scorpio_Exit(C_INFO)
 	information = DIA_Scorpio_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Scorpio_Exit_Condition()
 {
@@ -34,10 +34,10 @@ instance DIA_Scorpio_Hello(C_INFO)
 	information = DIA_Scorpio_Hello_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Scorpio_Hello_Condition()
-{ 
+{
 	if !C_NpcBelongsToOldcamp (other)
 	&& (Kapitel < 4)
 	{
@@ -140,14 +140,14 @@ instance DIA_Scorpio_REFUSETRAIN(C_INFO)
 //	description = "Can you teach me to fight?";
 //	description = "Kannst du mir beibringen zu kämpfen?";
 	description = "Naučíš mě bojovat?";
-};                       
+};
 
 func int DIA_Scorpio_REFUSETRAIN_Condition()
 {
 	if (Npc_KnowsInfo(hero,DIA_Scorpio_Hello) && (Npc_GetTrueGuild(hero) != GIL_GRD))
 	//#NEEDS_ATTENTION - tento dialog by nemal byt dostupny od prepadnutia Svobodneho dolu - to uz je Scorpio pri Cavalornovi
 	//Teoreticky postaci dialog obmedzit 3. kapitolou
-	//if (Npc_KnowsInfo(hero,DIA_Scorpio_Hello) && (Npc_GetTrueGuild (hero) != GIL_GRD) && (Kapitel <= 3))
+	//if (Npc_KnowsInfo(hero,DIA_Scorpio_Hello) && (Npc_GetTrueGuild(hero) != GIL_GRD) && (Kapitel <= 3))
 	{
 		return 1;
 	};
@@ -184,14 +184,13 @@ instance GRD_205_Scorpio_WELCOME(C_INFO)
 
 func int GRD_205_Scorpio_WELCOME_Condition()
 {
-	if (Npc_GetTrueGuild(hero) == GIL_GRD) 
+	if (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
 		return TRUE;
 	};
 };
 func void GRD_205_Scorpio_WELCOME_Info()
 {
-
 //	AI_Output(self,other,"GRD_205_Scorpio_WELCOME_Info_13_01"); //Joining us was the best choice you ever made!
 //	AI_Output(self,other,"GRD_205_Scorpio_WELCOME_Info_13_01"); //War die beste Entscheidung von dir, zu uns zu kommen!
 	AI_Output(self,other,"GRD_205_Scorpio_WELCOME_Info_13_01"); //Dát se k nám byla tvoje nejlepší volba v životě!
@@ -199,7 +198,7 @@ func void GRD_205_Scorpio_WELCOME_Info()
 };
 
 /*------------------------------------------------------------------------
-							ARMBRUST TALK 
+							ARMBRUST TALK
 ------------------------------------------------------------------------*/
 
 instance GRD_205_Scorpio_CROSSBOW(C_INFO)
@@ -209,15 +208,15 @@ instance GRD_205_Scorpio_CROSSBOW(C_INFO)
 	information = GRD_205_Scorpio_CROSSBOW_Info;
 	important = 0;
 	permanent = 1;
-//	description = "Will you train me?"; 
-//	description = "Kann ich von dir lernen?"; 
-	description = "Budeš mě cvičit?"; 
+//	description = "Will you train me?";
+//	description = "Kann ich von dir lernen?";
+	description = "Budeš mě cvičit?";
 };
 
 func int GRD_205_Scorpio_CROSSBOW_Condition()
-{ 
+{
 	if (Kapitel >= 4)
-	|| (Npc_GetTrueGuild(hero) == GIL_GRD) 
+	|| (Npc_GetTrueGuild(hero) == GIL_GRD)
 
 	{
 		return TRUE;
@@ -254,7 +253,7 @@ func void GRD_205_Scorpio_CROSSBOW_Info()
 	Info_Addchoice (GRD_205_Scorpio_CROSSBOW,B_BuildLearnString(NAME_LearnCrossbow_1, LPCOST_TALENT_CROSSBOW_1,200),GRD_205_Scorpio_CROSSBOW_OK);
 	Info_Addchoice (GRD_205_Scorpio_CROSSBOW,DIALOG_BACK,GRD_205_Scorpio_CROSSBOW_BACK);
 
-};  
+};
 func void GRD_205_Scorpio_CROSSBOW_BACK()
 {
 	Info_ClearChoices(GRD_205_Scorpio_CROSSBOW);
@@ -297,7 +296,7 @@ func void GRD_205_Scorpio_CROSSBOW_OK()
 };
 
 /*------------------------------------------------------------------------
-							ARMBRUST TALENT2 
+							ARMBRUST TALENT2
 ------------------------------------------------------------------------*/
 
 instance GRD_205_Scorpio_CROSSBOW2(C_INFO)
@@ -307,14 +306,14 @@ instance GRD_205_Scorpio_CROSSBOW2(C_INFO)
 	information = GRD_205_Scorpio_CROSSBOW2_Info;
 	important = 0;
 	permanent = 1;
-//	description = "Show me more about how to handle a crossbow."; 
-//	description = "Zeige mir mehr über den Umgang mit der Armbrust"; 
-	description = "Nauč mě ještě lépe zacházet se samostřílem."; 
+//	description = "Show me more about how to handle a crossbow.";
+//	description = "Zeige mir mehr über den Umgang mit der Armbrust";
+	description = "Nauč mě ještě lépe zacházet se samostřílem.";
 };
 
 func int GRD_205_Scorpio_CROSSBOW2_Condition()
 {
-	if (Npc_GetTalentSkill(hero,NPC_TALENT_CROSSBOW) == 1) 
+	if (Npc_GetTalentSkill(hero,NPC_TALENT_CROSSBOW) == 1)
 	{
 		return TRUE;
 	};
@@ -333,7 +332,7 @@ func void GRD_205_Scorpio_CROSSBOW2_Info()
 	Info_Addchoice (GRD_205_Scorpio_CROSSBOW2,B_BuildLearnString(NAME_LearnCrossbow_2,LPCOST_TALENT_CROSSBOW_2,300),GRD_205_Scorpio_CROSSBOW2_OK);
 	Info_Addchoice (GRD_205_Scorpio_CROSSBOW2,DIALOG_BACK,GRD_205_Scorpio_CROSSBOW2_BACK);
 
-};  
+};
 func void GRD_205_Scorpio_CROSSBOW2_BACK()
 {
 	Info_ClearChoices(GRD_205_Scorpio_CROSSBOW);
@@ -375,7 +374,7 @@ func void GRD_205_Scorpio_CROSSBOW2_OK()
 	};
 };
 /*------------------------------------------------------------------------
-Ab Kapitel 4 steht Scorpio draussen, damit der Spieler bei ihm noch lernen kann 
+Ab Kapitel 4 steht Scorpio draussen, damit der Spieler bei ihm noch lernen kann
 ------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------
 //							hey PC! //
@@ -390,7 +389,7 @@ instance GRD_205_Scorpio_HeyPC(C_INFO)
 };
 
 func int GRD_205_Scorpio_HeyPC_Condition()
-{ 
+{
 	if (kapitel >= 4)
 	&& (Npc_GetDistToNpc(hero,self) < 1000)
 	{
@@ -414,13 +413,13 @@ instance GRD_205_Scorpio_BANISHED(C_INFO)
 	information = GRD_205_Scorpio_BANISHED_Info;
 	important = 0;
 	permanent = 0;
-//	description = "You okay?"; 
-//	description = "Alles klar bei dir?"; 
-	description = "Jsi v pořádku?"; 
+//	description = "You okay?";
+//	description = "Alles klar bei dir?";
+	description = "Jsi v pořádku?";
 };
 
 func int GRD_205_Scorpio_BANISHED_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,GRD_205_Scorpio_HeyPC))
 	{
 		return TRUE;
@@ -446,10 +445,10 @@ func void GRD_205_Scorpio_BANISHED_Info()
 	B_LogEntry(GE_TraderOW,"Scorpio se kvůli situaci ve Starém táboře přesunul do Cavalornovy lovecké chýše mezi Starým a Novým táborem.");
 	Scorpio_Exile = TRUE;
 	};
-};  
+};
 
 /*------------------------------------------------------------------------
-							TRADE 
+							TRADE
 ------------------------------------------------------------------------*/
 
 instance GRD_205_Scorpio_TRADE(C_INFO)
@@ -459,14 +458,14 @@ instance GRD_205_Scorpio_TRADE(C_INFO)
 	information = GRD_205_Scorpio_TRADE_Info;
 	important = 0;
 	permanent = 1;
-//	description = "Show me what you have."; 
-//	description = "Zeig mir deine Ware"; 
-	description = "Ukaž, co máš."; 
+//	description = "Show me what you have.";
+//	description = "Zeig mir deine Ware";
+	description = "Ukaž, co máš.";
 	trade = 1;
 };
 
 func int GRD_205_Scorpio_TRADE_Condition()
-{ 
+{
 	if(Npc_KnowsInfo(hero,GRD_205_Scorpio_BANISHED))
 	{
 		return TRUE;
@@ -479,4 +478,4 @@ func void GRD_205_Scorpio_TRADE_Info()
 //	AI_Output(other,self,"GRD_205_Scorpio_TRADE_Info_15_01"); //Zeig mir deine Ware.
 	AI_Output(other,self,"GRD_205_Scorpio_TRADE_Info_15_01"); //Ukaž, co máš.
 
-};  
+};

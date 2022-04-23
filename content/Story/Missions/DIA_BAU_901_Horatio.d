@@ -1,5 +1,5 @@
 // ************************************************************
-// 			  				   EXIT 
+// 			  				   EXIT
 // ************************************************************
 
 instance DIA_Horatio_EXIT(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Horatio_EXIT(C_INFO)
 	information = DIA_Horatio_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Horatio_EXIT_Condition()
 {
@@ -18,7 +18,7 @@ func int DIA_Horatio_EXIT_Condition()
 };
 
 func void DIA_Horatio_EXIT_Info()
-{ 
+{
 	AI_StopProcessInfos(self);
 };
 
@@ -36,7 +36,7 @@ instance Info_Horatio_Wasser(C_INFO)
 //	description = "Lefty sent me. I've brought you some water.";
 //	description = "Lefty schickt mich. Ich hab' Wasser für dich.";
 	description = "Lefty mě poslal. Přinesl jsem ti trochu vody.";
-};                       
+};
 
 func int Info_Horatio_Wasser_Condition()
 {
@@ -93,7 +93,7 @@ instance DIA_Horatio_Hello(C_INFO)
 	information = DIA_Horatio_Hello_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Horatio_Hello_Condition()
 {
@@ -101,7 +101,7 @@ func int DIA_Horatio_Hello_Condition()
 };
 
 func void DIA_Horatio_Hello_Info()
-{ 
+{
 	AI_GotoNpc(self,hero);
 
 //	AI_Output(self,other,"DIA_Horatio_Hello_09_00"); //What are you doing here? You looking for trouble?
@@ -159,7 +159,7 @@ instance DIA_Horatio_SORRY(C_INFO)
 //	description = "I'm sorry I said what I did about the peasants.";
 //	description = "Tut mir leid, der Spruch mit dem Bauern.";
 	description = "Je mi líto toho, co jsem řekl o rolnících.";
-};                       
+};
 
 func int DIA_Horatio_SORRY_Condition()
 {
@@ -173,7 +173,7 @@ func int DIA_Horatio_SORRY_Condition()
 //Napriklad tento dialog je permanentny --> chceme ho nechat permanentny? (nestaci nam takyto dialog iba raz?)
 //Tu by sme mohli nastavit horatio_trouble zase na false, Horatio uz nebude 'nastvany' a dialog nebude zbytocne dostupny.
 func void DIA_Horatio_SORRY_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Horatio_SORRY_15_00"); //I'm sorry I said what I did about the peasants.
 //	AI_Output(other,self,"DIA_Horatio_SORRY_15_00"); //Tut mir Leid, der Spruch mit dem Bauern.
 	AI_Output(other,self,"DIA_Horatio_SORRY_15_00"); //Je mi líto toho, co jsem řekl o rolnících.
@@ -196,7 +196,7 @@ instance DIA_Horatio_Story(C_INFO)
 //	description = "What's a man like you doing with the peasants?";
 //	description = "Was macht ein Kerl wie du bei den Bauern?";
 	description = "Co dělá chlap jako ty mezi rolníky?";
-};                       
+};
 
 func int DIA_Horatio_Story_Condition()
 {
@@ -207,7 +207,7 @@ func int DIA_Horatio_Story_Condition()
 };
 
 func void DIA_Horatio_Story_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Horatio_Story_15_00"); //What's a man like you doing with the peasants?
 //	AI_Output(other,self,"DIA_Horatio_Story_15_00"); //Was macht ein Kerl wie du bei den Bauern?
 	AI_Output(other,self,"DIA_Horatio_Story_15_00"); //Co dělá chlap jako ty mezi rolníky?
@@ -242,7 +242,7 @@ instance DIA_Horatio_WhyHere(C_INFO)
 //	description = "Why did you join THIS camp?";
 //	description = "Warum bist du ausgerechnet in DIESES Lager gegangen?";
 	description = "Proč ses dal k TOMUHLE táboru?";
-};                       
+};
 
 func int DIA_Horatio_WhyHere_Condition()
 {
@@ -253,7 +253,7 @@ func int DIA_Horatio_WhyHere_Condition()
 };
 
 func void DIA_Horatio_WhyHere_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Horatio_WhyHere_15_00"); //Why did you join THIS camp?
 //	AI_Output(other,self,"DIA_Horatio_WhyHere_15_00"); //Warum bist du ausgerechnet in DIESES Lager gegangen?
 	AI_Output(other,self,"DIA_Horatio_WhyHere_15_00"); //Proč ses dal k TOMUHLE táboru?
@@ -287,7 +287,7 @@ instance DIA_Horatio_PleaseTeachSTR(C_INFO)
 //	description = "Can you teach me to be as strong as you are?";
 //	description = "Kannst du mir beibringen, auch so stark zuzuschlagen?";
 	description = "Naučíš mě, jak se stát tak silným jako jsi ty?"; //#Needs_Attention Tady by mělo být: "Můžeš mě naučit uděřit také tak silně uděřit?" ale asi to nezní tak dobže
-};                       
+};
 
 func int DIA_Horatio_PleaseTeachSTR_Condition()
 {
@@ -298,7 +298,7 @@ func int DIA_Horatio_PleaseTeachSTR_Condition()
 };
 
 func void DIA_Horatio_PleaseTeachSTR_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Horatio_PleaseTeachSTR_15_00"); //Can you teach me to be as strong as you are?
 //	AI_Output(other,self,"DIA_Horatio_PleaseTeachSTR_15_00"); //Kannst du mir beibringen, auch so stark zuzuschlagen?
 	AI_Output(other,self,"DIA_Horatio_PleaseTeachSTR_15_00"); //Naučíš mě, jak se stát tak silným jako jsi ty?
@@ -388,7 +388,7 @@ instance DIA_Horatio_ThoughtSTR(C_INFO)
 //	description = "I've been thinking the whole thing over...";
 //	description = "Ich hab' nochmal über die Sache nachgedacht...";
 	description = "Celé jsem si to znovu promyslel...";
-};                       
+};
 
 func int DIA_Horatio_ThoughtSTR_Condition()
 {
@@ -399,7 +399,7 @@ func int DIA_Horatio_ThoughtSTR_Condition()
 };
 
 func void DIA_Horatio_ThoughtSTR_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Horatio_ThoughtSTR_15_00"); //I've been thinking the whole thing over...
 //	AI_Output(other,self,"DIA_Horatio_ThoughtSTR_15_00"); //Ich hab' noch einmal über die Sache nachgedacht ...
 	AI_Output(other,self,"DIA_Horatio_ThoughtSTR_15_00"); //Celé jsem si to znovu promyslel...
@@ -461,7 +461,7 @@ func void DIA_Horatio_HelpSTR_LEARN_NOW()
 	}
 	else
 	{
-		other.attribute[ATR_STRENGTH] = 100; 
+		other.attribute[ATR_STRENGTH] = 100;
 //		PrintScreen("Strength: 100", -1,-1,"FONT_OLD_20_WHITE.TGA",2);
 //		PrintScreen("Stärke: 100", -1,-1,"FONT_OLD_20_WHITE.TGA",2);
 		PrintScreen("Síla: 100", -1,-1,"FONT_OLD_20_WHITE.TGA",2);
@@ -490,7 +490,7 @@ instance DIA_Horatio_HelpSTR(C_INFO)
 //	description = "I WILL defeat the Rice Lord and his thugs - if you help me!";
 //	description = "Ich WERDE den Reislord fertig machen - wenn du mir dabei hilfst!";
 	description = "PORAZÍM Rýžového Lorda a jeho tlupu - když mi pomůžeš!";
-};                       
+};
 
 func int DIA_Horatio_HelpSTR_Condition()
 {
@@ -501,7 +501,7 @@ func int DIA_Horatio_HelpSTR_Condition()
 };
 
 func void DIA_Horatio_HelpSTR_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Horatio_HelpSTR_15_00"); //I WILL defeat the Rice Lord and his thugs - if you help me!
 //	AI_Output(other,self,"DIA_Horatio_HelpSTR_15_00"); //Ich WERDE den Reislord und seine Schläger fertig machen - wenn du mir dabei hilfst!
 	AI_Output(other,self,"DIA_Horatio_HelpSTR_15_00"); //PORAZÍM Rýžového Lorda a jeho tlupu - když mi pomůžeš!
@@ -533,7 +533,7 @@ instance DIA_Horatio_Thanks(C_INFO)
 //	description = "Thanks for your help!";
 //	description = "Danke für deine Hilfe!";
 	description = "Díky za tvou pomoc!";
-};                       
+};
 
 func int DIA_Horatio_Thanks_Condition()
 {
@@ -544,13 +544,13 @@ func int DIA_Horatio_Thanks_Condition()
 };
 
 func void DIA_Horatio_Thanks_Info()
-{ 
+{
 //	AI_Output(other,self,"DIA_Horatio_Thanks_15_00"); //Thanks for your help!
 //	AI_Output(other,self,"DIA_Horatio_Thanks_15_00"); //Danke für deine Hilfe!
 	AI_Output(other,self,"DIA_Horatio_Thanks_15_00"); //Díky za tvou pomoc!
 //	AI_Output(self,other,"DIA_Horatio_Thanks_09_01"); //Use your knowledge for a just cause, and for NOTHING ELSE.
 //	AI_Output(self,other,"DIA_Horatio_Thanks_09_01"); //Nutze dein Wissen für die gerechte Sache! Und NUR DAFÜR.
-	//#NEEDS_ATENTION Tu mi ta dvojita negacia uplne nesedi, nebrebasnime? : Ne pro NIC JINÉHO 
+	//#NEEDS_ATENTION Tu mi ta dvojita negacia uplne nesedi, nebrebasnime? : Ne pro NIC JINÉHO
 	AI_Output(self,other,"DIA_Horatio_Thanks_09_01"); //Použij své umění pro dobrou věc! Ne pro NIC JINÉHO!
 };
 

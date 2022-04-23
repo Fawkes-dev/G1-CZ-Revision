@@ -1,5 +1,5 @@
 // **************************************************
-//						 EXIT 
+//						 EXIT
 // **************************************************
 
 instance Org_818_Ratford_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance Org_818_Ratford_Exit(C_INFO)
 	information = Org_818_Ratford_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Org_818_Ratford_Exit_Condition()
 {
@@ -34,7 +34,7 @@ instance Org_818_Ratford_WrongWay(C_INFO)
 	information = Org_818_Ratford_WrongWay_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int Org_818_Ratford_WrongWay_Condition()
 {
@@ -68,7 +68,7 @@ instance Org_818_Ratford_WhatGame(C_INFO)
 //	description = "What do you hunt?";
 //	description = "Was jagt ihr denn so?";
 	description = "Co tady lovíte?";
-};                       
+};
 
 func int Org_818_Ratford_WhatGame_Condition()
 {
@@ -105,7 +105,7 @@ instance Org_818_Ratford_WhyDangerous(C_INFO)
 //	description = "Why's this area so dangerous?";
 //	description = "Was ist an diesem Gebiet so gefährlich?";
 	description = "Proč je ta oblast tak nebezpečná?";
-};                       
+};
 
 func int Org_818_Ratford_WhyDangerous_Condition()
 {
@@ -142,7 +142,7 @@ instance Org_818_Ratford_WoEquipment(C_INFO)
 //	description = "Where can I get better equipment?";
 //	description = "Wo kriege ich bessere Ausrüstung her?";
 	description = "Kde dostanu lepší výbavu?";
-};                       
+};
 
 func int Org_818_Ratford_WoEquipment_Condition()
 {
@@ -187,7 +187,7 @@ instance Org_818_Ratford_MoreLocations(C_INFO)
 //	description = "Tell me more about the areas of the colony.";
 //	description = "Erzähl mir mehr über die Gebiete der Kolonie.";
 	description = "Pověz mi víc o oblastech v kolonii.";
-};                       
+};
 
 func int Org_818_Ratford_MoreLocations_Condition()
 {
@@ -233,7 +233,7 @@ instance Org_818_Ratford_WoKarte(C_INFO)
 //	description = "Where do I get a map?";
 //	description = "Wo kriege ich eine Karte her?";
 	description = "Kde dostanu mapu?";
-};                       
+};
 
 func int Org_818_Ratford_WoKarte_Condition()
 {
@@ -281,7 +281,7 @@ func void Org_818_Ratford_WoKarte_Stehlen()
 
 func void Org_818_Ratford_WoKarte_Kaufen()
 {
-//	AI_Output(other,self,"Org_818_Ratford_WoKarte_Kaufen_15_00"); //Why? Doesn't he sell the maps? 
+//	AI_Output(other,self,"Org_818_Ratford_WoKarte_Kaufen_15_00"); //Why? Doesn't he sell the maps?
 //	AI_Output(other,self,"Org_818_Ratford_WoKarte_Kaufen_15_00"); //Wieso? - Verkauft er die Karten nicht?
 	AI_Output(other,self,"Org_818_Ratford_WoKarte_Kaufen_15_00"); //Proč? On neprodává mapy?
 //	AI_Output(self,other,"Org_818_Ratford_WoKarte_Kaufen_07_01"); //If you get enough ore to pay for them...
@@ -304,7 +304,7 @@ instance Org_818_Ratford_Thanks(C_INFO)
 //	description = "Thanks for your help.";
 //	description = "Danke für die Hilfe.";
 	description = "Díky za pomoc.";
-};                       
+};
 
 func int Org_818_Ratford_Thanks_Condition()
 {

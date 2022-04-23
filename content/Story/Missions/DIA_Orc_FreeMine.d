@@ -1,15 +1,15 @@
 /*
 -------------------------------- Die Mission ----------------------------
 
-Die Freemine Mission. 
+Die Freemine Mission.
 Der SC metzelt sich durch die FM und findet dort einen Orc, welcher schwer
-verletzt ist und einen Orcischen Heiltrank braucht. 
+verletzt ist und einen Orcischen Heiltrank braucht.
 Alls Gegenleistung für den Heiltrank sagt er dir was man alles für Items
 für das Ulu-Mulu braucht.
 Wenn man ihm die drei Teile bringt bastelt er dir das Ulumulu.
 
 --------------------------------- Die Items -----------------------------
-OrcHeiltrank: Orcmedicine -> OrcGegengift 
+OrcHeiltrank: Orcmedicine -> OrcGegengift
 
 Teil vom Ulu-Mulu (1) ItAt_Waran_01 -> Flammenzunge
 Teil vom Ulu-Mulu (2) ItAt_Shadow_02 -> Horn eines Shadowbeast
@@ -33,10 +33,10 @@ instance Info_FreemineOrc_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_FreemineOrc_EXIT_Condition;
 	information = Info_FreemineOrc_EXIT_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_FreemineOrc_EXIT_Condition()
 {
@@ -45,7 +45,7 @@ func int Info_FreemineOrc_EXIT_Condition()
 
 func void Info_FreemineOrc_EXIT_Info()
 {
-	if (!Npc_KnowsInfo(hero,Info_FreemineOrc_EveryUlumulu)) 
+	if (!Npc_KnowsInfo(hero,Info_FreemineOrc_EveryUlumulu))
 	{
 //		AI_Output(hero,self,"Info_FreemineOrc_EXIT_15_01"); //I need to move on!
 //		AI_Output(hero,self,"Info_FreemineOrc_EXIT_15_01"); //Ich muss weiter!
@@ -53,8 +53,8 @@ func void Info_FreemineOrc_EXIT_Info()
 //		AI_Output(self,hero,"Info_FreemineOrc_EXIT_17_02"); //Stranger come again!
 //		AI_Output(self,hero,"Info_FreemineOrc_EXIT_17_02"); //Fremder kommen wieder!
 		AI_Output(self,hero,"Info_FreemineOrc_EXIT_17_02"); //Cizinec zase příjde!
-	}                                                              
-	else                                                           
+	}
+	else
 	{
 //		AI_Output(hero,self,"Info_FreemineOrc_EXIT_15_03"); //Thank you. I'll be on my way now.
 //		AI_Output(hero,self,"Info_FreemineOrc_EXIT_15_03"); //Ich danke dir. Ich werde mich jetzt wieder auf den Weg machen.
@@ -98,17 +98,17 @@ instance Info_FreemineOrc_WASPASSIERT(C_INFO)
 	npc = Freemineorc;
 	condition = Info_FreemineOrc_WASPASSIERT_Condition;
 	information = Info_FreemineOrc_WASPASSIERT_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "What happened here?";
 //	description = "Was ist geschehen?";
 	description = "Co se tu stalo?";
-};                       
+};
 
 func int Info_FreemineOrc_WASPASSIERT_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_FreemineOrc_INTRO))
-	{ 
+	{
 		return TRUE;
 	};
 };
@@ -140,17 +140,17 @@ instance Info_FreemineOrc_WASTUN(C_INFO)
 	npc = Freemineorc;
 	condition = Info_FreemineOrc_WASTUN_Condition;
 	information = Info_FreemineOrc_WASTUN_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "What can I do for you?";
 //	description = "Was kann ich für dich tun?";
 	description = "Co pro tebe můžu udělat?";
-};                       
+};
 
 func int Info_FreemineOrc_WASTUN_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_FreemineOrc_WASPASSIERT))
-	{ 
+	{
 		return TRUE;
 	};
 };
@@ -182,19 +182,19 @@ instance Info_FreemineOrc_OFFER(C_INFO)
 	npc = Freemineorc;
 	condition = Info_FreemineOrc_OFFER_Condition;
 	information = Info_FreemineOrc_OFFER_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "I'll get your medicine back!";
 //	description = "Ich werde die Medizin wiederfinden!";
 	description = "Přinesu ti ten lék zpátky!";
-};                       
+};
 
 func int Info_FreemineOrc_OFFER_Condition()
 {
 	if Npc_KnowsInfo(hero,Info_FreemineOrc_WASTUN)
 	&& !Npc_KnowsInfo(hero,Info_FreemineOrc_GIVEPOTION)
-	&& !Npc_HasItems(hero,Orcmedicine) 
-	{ 
+	&& !Npc_HasItems(hero,Orcmedicine)
+	{
 		return TRUE;
 	};
 };
@@ -220,17 +220,17 @@ instance Info_FreemineOrc_CRAWLER(C_INFO)
 	npc = Freemineorc;
 	condition = Info_FreemineOrc_CRAWLER_Condition;
 	information = Info_FreemineOrc_CRAWLER_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "What does GACH LUG mean?";
 //	description = "Was bedeutet GACH LUG?";
 	description = "Co to znamená GACH LUG?";
-};                       
+};
 
 func int Info_FreemineOrc_CRAWLER_Condition()
 {
 	if Npc_KnowsInfo(hero,Info_FreemineOrc_WASPASSIERT)
-	{ 
+	{
 		return TRUE;
 	};
 };
@@ -259,17 +259,17 @@ instance Info_FreemineOrc_TONGUE(C_INFO)
 	npc = Freemineorc;
 	condition = Info_FreemineOrc_TONGUE_Condition;
 	information = Info_FreemineOrc_TONGUE_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "You speak our language?";
 //	description = "Du sprichst unsere Sprache?";
 	description = "Ty mluvíš naším jazykem?";
-};                       
+};
 
 func int Info_FreemineOrc_TONGUE_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_FreemineOrc_INTRO))
-	{ 
+	{
 		return TRUE;
 	};
 };
@@ -292,18 +292,18 @@ instance Info_FreemineOrc_SEARCHPOTION(C_INFO)
 	npc = Freemineorc;
 	condition = Info_FreemineOrc_SEARCHPOTION_Condition;
 	information = Info_FreemineOrc_SEARCHPOTION_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 //	description = "I can't find the medicine!";
 //	description = "Ich kann die Medizin nicht finden!";
 	description = "Nemůžu ten lék najít!";
-};                       
+};
 
 func int Info_FreemineOrc_SEARCHPOTION_Condition()
 {
-	if  Npc_KnowsInfo(hero,Info_FreemineOrc_OFFER) 
+	if  Npc_KnowsInfo(hero,Info_FreemineOrc_OFFER)
 	&& !Npc_KnowsInfo(hero,Info_FreemineOrc_GIVEPOTION)
-	&& !Npc_HasItems(hero,Orcmedicine) 
+	&& !Npc_HasItems(hero,Orcmedicine)
 	{
 		return TRUE;
 	};
@@ -335,12 +335,12 @@ instance Info_FreemineOrc_SUCHEULUMULU(C_INFO)
 	npc = Freemineorc;
 	condition = Info_FreemineOrc_SUCHEULUMULU_Condition;
 	information = Info_FreemineOrc_SUCHEULUMULU_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "Are you a friend of Ur-Shak, the shaman?";
 //	description = "Bist du ein Freund von Ur-Shak, dem Schamanen?";
 	description = "Jsi přítel Ur-Shaka, toho šamana?";
-};                       
+};
 
 func int Info_FreemineOrc_SUCHEULUMULU_Condition()
 {
@@ -386,16 +386,16 @@ instance Info_FreemineOrc_GIVEPOTION(C_INFO)
 	npc = Freemineorc;
 	condition = Info_FreemineOrc_GIVEPOTION_Condition;
 	information = Info_FreemineOrc_GIVEPOTION_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "Here, I've found your medicine!";
 //	description = "Hier, ich habe deine Medizin gefunden!";
 	description = "Tady, našel jsem tvůj lék!";
-};                       
+};
 
 func int Info_FreemineOrc_GIVEPOTION_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_FreemineOrc_WASTUN) 
+	if Npc_KnowsInfo(hero,Info_FreemineOrc_WASTUN)
 	&& Npc_HasItems(hero,Orcmedicine)
 	{
 		return TRUE;
@@ -408,7 +408,7 @@ func void Info_FreemineOrc_GIVEPOTION_Info()
 //	AI_Output(hero,self,"Info_FreemineOrc_GIVEPOTION_15_01"); //Hier, ich habe deine Medizin gefunden!
 	AI_Output(hero,self,"Info_FreemineOrc_GIVEPOTION_15_01"); //Tady, našel jsem tvůj lék!
 
-	B_GiveInvItems(hero,self,Orcmedicine,1); 
+	B_GiveInvItems(hero,self,Orcmedicine,1);
 	EquipItem(self,Orcmedicine);
 	if (C_BodystateContains(self,BS_SIT))
 	{
@@ -453,12 +453,12 @@ instance Info_FreemineOrc_FIREWARAN(C_INFO)
 	npc = Freemineorc;
 	condition = Info_FreemineOrc_FIREWARAN_Condition;
 	information = Info_FreemineOrc_FIREWARAN_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "What is a KROTAHK?";
 //	description = "Was ist ein KROTAHK?";
 	description = "Co je to KROTAHK?";
-};                       
+};
 
 func int Info_FreemineOrc_FIREWARAN_Condition()
 {
@@ -487,12 +487,12 @@ instance Info_FreemineOrc_FIREWARAN2(C_INFO)
 	npc = Freemineorc;
 	condition = Info_FreemineOrc_FIREWARAN2_Condition;
 	information = Info_FreemineOrc_FIREWARAN2_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "Where can I find a fire lizard?";
 //	description = "Wo finde ich eine Feuerechse?";
 	description = "Kde najdu ohnivou ještěrku?";
-};                       
+};
 
 func int Info_FreemineOrc_FIREWARAN2_Condition()
 {
@@ -529,12 +529,12 @@ instance Info_FreemineOrc_SHADOWBEAST(C_INFO)
 	npc = Freemineorc;
 	condition = Info_FreemineOrc_SHADOWBEAST_Condition;
 	information = Info_FreemineOrc_SHADOWBEAST_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "What does KHAZ-TAK mean?";
 //	description = "Was bedeutet KHAZ-TAK?";
 	description = "Co je to KHAZ-TAK?";
-};                       
+};
 
 func int Info_FreemineOrc_SHADOWBEAST_Condition()
 {
@@ -562,12 +562,12 @@ instance Info_FreemineOrc_SHADOWBEAST2(C_INFO)
 	npc = Freemineorc;
 	condition = Info_FreemineOrc_SHADOWBEAST2_Condition;
 	information = Info_FreemineOrc_SHADOWBEAST2_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "Where can I find shadowbeasts?";
 //	description = "Wo findet man Schattenläufer?";
 	description = "Kde najdu stínovou obludu?";
-};                       
+};
 
 func int Info_FreemineOrc_SHADOWBEAST2_Condition()
 {
@@ -604,12 +604,12 @@ instance Info_FreemineOrc_SWAMPSHARK(C_INFO)
 	npc = Freemineorc;
 	condition = Info_FreemineOrc_SWAMPSHARK_Condition;
 	information = Info_FreemineOrc_SWAMPSHARK_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "DWACHKARR? What is that?";
 //	description = "DWACHKARR? Was ist das denn?";
 	description = "DWACHKARR? Co to je?";
-};                       
+};
 
 func int Info_FreemineOrc_SWAMPSHARK_Condition()
 {
@@ -637,12 +637,12 @@ instance Info_FreemineOrc_SWAMPSHARK2(C_INFO)
 	npc = Freemineorc;
 	condition = Info_FreemineOrc_SWAMPSHARK2_Condition;
 	information = Info_FreemineOrc_SWAMPSHARK2_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "Where can I find swampsharks?";
 //	description = "Wo finde ich Sumpfhaie?";
 	description = "Kde najdu močálového žraloka?";
-};                       
+};
 
 func int Info_FreemineOrc_SWAMPSHARK2_Condition()
 {
@@ -663,9 +663,9 @@ func void Info_FreemineOrc_SWAMPSHARK2_Info()
 //	AI_Output(self,hero,"Info_FreemineOrc_SWAMPSHARK2_17_02"); //Viele Sumpfhaie bei Lager von Menschen. Lager in Sumpf natürlich!
 	AI_Output(self,hero,"Info_FreemineOrc_SWAMPSHARK2_17_02"); //Mnoho močálových žraloků být v táboře lidí. V táboře v bažinách, tak!
 
-//	B_LogEntry(CH4_UluMulu,"Tarrok needs the teeth of a swampshark for the Ulu-Mulu. There are loads of the beasts behind the camp of the Brotherhood."); 
-//	B_LogEntry(CH4_UluMulu,"Tarrok benötigt für das Ulu-Mulu Zähne eines Sumpfhais. Im Sumpf hinter dem Lager der Bruderschaft gibt es massenhaft Ungetüme dieser Art."); 
-	B_LogEntry(CH4_UluMulu,"Tarrok potřebuje k výrobě ULU-MULU zuby močálového žraloka. Spousty těchto bestií žije v močále za táborem Bratrstva."); 
+//	B_LogEntry(CH4_UluMulu,"Tarrok needs the teeth of a swampshark for the Ulu-Mulu. There are loads of the beasts behind the camp of the Brotherhood.");
+//	B_LogEntry(CH4_UluMulu,"Tarrok benötigt für das Ulu-Mulu Zähne eines Sumpfhais. Im Sumpf hinter dem Lager der Bruderschaft gibt es massenhaft Ungetüme dieser Art.");
+	B_LogEntry(CH4_UluMulu,"Tarrok potřebuje k výrobě ULU-MULU zuby močálového žraloka. Spousty těchto bestií žije v močále za táborem Bratrstva.");
 };
 
 //---------------------------------------------------------------------
@@ -676,12 +676,12 @@ instance Info_FreemineOrc_TROLL(C_INFO)
 	npc = Freemineorc;
 	condition = Info_FreemineOrc_TROLL_Condition;
 	information = Info_FreemineOrc_TROLL_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "What is an ORTH-ANTAK?";
 //	description = "Was ist ein ORTH-ANTAK?";
 	description = "Co je to ORTH-ANTAK?";
-};                       
+};
 
 func int Info_FreemineOrc_TROLL_Condition()
 {
@@ -709,12 +709,12 @@ instance Info_FreemineOrc_TROLL2(C_INFO)
 	npc = Freemineorc;
 	condition = Info_FreemineOrc_TROLL2_Condition;
 	information = Info_FreemineOrc_TROLL2_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "Where can I find trolls?";
 //	description = "Wo finde ich einen Troll?";
 	description = "Kde najdu trola?";
-};                       
+};
 
 func int Info_FreemineOrc_TROLL2_Condition()
 {
@@ -754,12 +754,12 @@ instance Info_FreemineOrc_LOOKINGULUMULU(C_INFO)
 	npc = Freemineorc;
 	condition = Info_FreemineOrc_LOOKINGULUMULU_Condition;
 	information = Info_FreemineOrc_LOOKINGULUMULU_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 //	description = "I don't have all four items yet.";
 //	description = "Ich habe noch nicht alle vier Teile beisammen.";
 	description = "Ještě nemám všechny čtyři části!";
-};                       
+};
 
 func int Info_FreemineOrc_LOOKINGULUMULU_Condition()
 {
@@ -797,12 +797,12 @@ instance Info_FreemineOrc_EVERYULUMULU(C_INFO)
 	npc = Freemineorc;
 	condition = Info_FreemineOrc_EVERYULUMULU_Condition;
 	information = Info_FreemineOrc_EVERYULUMULU_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "I have all four items for the Ulu-Mulu!";
 //	description = "Ich habe alle Teile für das Ulu-Mulu zusammen!";
 	description = "Už mám všechny čtyři části pro Ulu-Mulu!";
-};                       
+};
 
 func int Info_FreemineOrc_EVERYULUMULU_Condition()
 {
@@ -835,7 +835,7 @@ func void Info_FreemineOrc_EVERYULUMULU_Info()
 	Npc_RemoveInvItem(hero,ItAt_Swampshark_02);
 	Npc_RemoveInvItem(hero,ItAt_Troll_02);
 
-	Npc_RemoveInvItems(self,ItAt_Waran_01, 4);    
+	Npc_RemoveInvItems(self,ItAt_Waran_01, 4);
 
 	B_Story_GotUluMulu();
 

@@ -8,10 +8,10 @@ instance DIA_Shrike_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Shrike_Exit_Condition;
 	information = DIA_Shrike_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Shrike_Exit_Condition()
 {
@@ -40,7 +40,7 @@ instance DIA_Shrike_Hello(C_INFO)
 };
 
 func int DIA_Shrike_Hello_Condition()
-{ 
+{
 	return 1;
 };
 
@@ -53,7 +53,7 @@ func void DIA_Shrike_Hello_Info()
 //	AI_Output(self,other,"DIA_Shrike_Hello_07_01"); //Verpiss dich!
 	AI_Output(self,other,"DIA_Shrike_Hello_07_01"); //Ztrať se!
 
-	//FMTaken = TRUE; //******* TEST - Helper für Sld-KdW Aufnahme!!! *********************  
+	//FMTaken = TRUE; //******* TEST - Helper für Sld-KdW Aufnahme!!! *********************
 	//Kapitel = 4;
 
 	AI_StopProcessInfos(self);
@@ -76,7 +76,7 @@ instance DIA_Shrike_GetLost(C_INFO)
 };
 
 func int DIA_Shrike_GetLost_Condition()
-{ 
+{
 	if self.aivar[AIV_WASDEFEATEDBYSC]
 	{
 		return 1;
@@ -99,7 +99,7 @@ func void DIA_Shrike_GetLost_Info()
 	B_LogEntry(CH1_ShrikesHut,"Podařilo se přesvědčit Shrika, aby si našel jinou chatrč. Jsem zvědav, co na to řekne Gorn.");
 	B_GiveXP(XP_KickedShrike);
 
-	AI_StopProcessInfos(self); 
+	AI_StopProcessInfos(self);
 
 	Npc_ExchangeRoutine(self,"start");
 };

@@ -1,5 +1,5 @@
 // **************************************
-//					EXIT 
+//					EXIT
 // **************************************
 
 instance DIA_846_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_846_Exit(C_INFO)
 	information = DIA_846_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_846_Exit_Condition()
 {
@@ -36,7 +36,7 @@ instance DIA_846_Hello(C_INFO)
 //	description = "What are you doing here?";
 //	description = "Was machst du hier?";
 	description = "Co tady děláš?";
-};                       
+};
 
 func int DIA_846_Hello_Condition()
 {

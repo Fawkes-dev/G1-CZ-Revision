@@ -1,5 +1,5 @@
 // **************************************************
-//						 EXIT 
+//						 EXIT
 // **************************************************
 
 instance Info_Kirgo_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance Info_Kirgo_Exit(C_INFO)
 	information = Info_Kirgo_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_Kirgo_Exit_Condition()
 {
@@ -36,10 +36,10 @@ instance Info_Kirgo_What(C_INFO)
 //	description = "Hi! I'm new here.";
 //	description = "Hi! Ich bin neu hier.";
 	description = "Zdar! Jsem tady nový.";
-};                       
+};
 
 func int Info_Kirgo_What_Condition()
-{ 
+{
 	if (Kapitel <= 2)
 	{
 		return 1;
@@ -72,7 +72,7 @@ instance Info_Kirgo_Good(C_INFO)
 //	description = "Are you good? At fighting, I mean?";
 //	description = "Bist du gut? - Im Kämpfen meine ich.";
 	description = "A jsi dobrý? Myslím v boji.";
-};                       
+};
 
 func int Info_Kirgo_Good_Condition()
 {
@@ -106,7 +106,7 @@ instance Info_Kirgo_Charge(C_INFO)
 //	description = "I'd like to challenge you to a fight in the arena!";
 //	description = "Ich fordere dich zum Kampf in der Arena!";
 	description = "Chtěl bych tě vyzvat na souboj v aréně!";
-};                       
+};
 
 func int Info_Kirgo_Charge_Condition()
 {
@@ -178,11 +178,8 @@ func void Info_Kirgo_Charge_Beer()
 //	AI_Output(self,other,"Info_Kirgo_Charge_Beer_05_09"); //Falls du immer noch gegen mich kämpfen willst - sag mir Bescheid! Aber ich werd' dir nicht gerne die Fresse polieren.
 	AI_Output(self,other,"Info_Kirgo_Charge_Beer_05_09"); //Jestli chceš ještě pořád se mnou bojovat, dej mi vědět. Nebudu mít ale radost z toho, až ti zmaluju obličej.
 
-	//#Bugfix Kirgo si od hraca zobral pivo :)
-	//CreateInvItem(other,ItFoBeer);
-	//B_GiveInvItems(other,self,ItFoBeer,1);
-	CreateInvItem(self, ItFoBeer);
-	B_GiveInvItems(self, other, ItFoBeer, 1);
+	CreateInvItem(other,ItFoBeer);
+	B_GiveInvItems(other,self,ItFoBeer,1);
 
 	self.npctype = npctype_FRIEND;
 
@@ -205,7 +202,7 @@ instance Info_Kirgo_ChargeREAL(C_INFO)
 //	description = "Let's fight - are you ready?";
 //	description = "Lass uns kämpfen - Bist du bereit?";
 	description = "Tak pojďme bojovat - jsi připraven?";
-};                       
+};
 
 func int Info_Kirgo_ChargeREAL_Condition()
 {
@@ -243,7 +240,7 @@ instance Info_Kirgo_InArena(C_INFO)
 	information = Info_Kirgo_InArena_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int Info_Kirgo_InArena_Condition()
 {
@@ -270,7 +267,7 @@ func void Info_Kirgo_InArena_Info()
 	}
 	else
 	{
-//		AI_Output(self,other,"SVM_5_LetsForgetOurLittleFight"); //Den kleinen Streit vergessen wir, okay? 
+//		AI_Output(self,other,"SVM_5_LetsForgetOurLittleFight"); //Den kleinen Streit vergessen wir, okay?
 //		AI_Output(self,other,"SVM_5_LetsForgetOurLittleFight"); //Den kleinen Streit vergessen wir, okay?
 		AI_Output(self,other,"SVM_5_LetsForgetOurLittleFight"); //Dobrá, zapomeňme na tuhle hádku, ano?
 		AI_StopProcessInfos(self);

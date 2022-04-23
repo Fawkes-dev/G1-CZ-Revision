@@ -1,5 +1,5 @@
 // **************************************************
-//						EXIT 
+//						EXIT
 // **************************************************
 
 instance DIA_Caine_Exit(C_INFO)
@@ -8,10 +8,10 @@ instance DIA_Caine_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Caine_Exit_Condition;
 	information = DIA_Caine_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Caine_Exit_Condition()
 {
@@ -37,7 +37,7 @@ instance DIA_Caine_Hallo(C_INFO)
 //	description = "Hi! I'm new here!";
 //	description = "Hi! Ich bin neu hier!";
 	description = "Zdar! Jsem tu nový!";
-};                       
+};
 
 func int DIA_Caine_Hallo_Condition()
 {
@@ -100,7 +100,7 @@ instance DIA_Caine_WaysToKalom(C_INFO)
 	information = DIA_Caine_WaysToKalom_Info;
 	permanent = 0;
 	description = "Ich würde gerne mit Cor Kalom reden - kannst du mir dabei helfen?";
-};                       
+};
 
 func int DIA_Caine_WaysToKalom_Condition()
 {
@@ -129,7 +129,7 @@ instance DIA_Caine_Alchemies(C_INFO)
 	information = DIA_Caine_Alchemies_Info;
 	permanent = 0;
 	description = "Was für alchimistische Substanzen kann ich Kalom bringen?";
-};                       
+};
 
 func int DIA_Caine_Alchemies_Condition()
 {
@@ -149,7 +149,7 @@ func void DIA_Caine_Alchemies_Info()
 */
 
 // **************************************************
-//						Job = Substanzen 
+//						Job = Substanzen
 // **************************************************
 
 instance DIA_Caine_Job(C_INFO)
@@ -162,7 +162,7 @@ instance DIA_Caine_Job(C_INFO)
 //	description = "And what's your job?";
 //	description = "Und was tust du?";
 	description = "Co je tvá práce?";
-};                       
+};
 
 func int DIA_Caine_Job_Condition()
 {
@@ -199,7 +199,7 @@ instance DIA_Caine_WoSekret(C_INFO)
 //	description = "Where do I get the minecrawler secretion?";
 //	description = "Wo bekomme ich das Sekret der Minecrawler?";
 	description = "Kde dostanu ten výměšek důlních červů?";
-};                       
+};
 
 func int DIA_Caine_WoSekret_Condition()
 {
@@ -239,7 +239,7 @@ instance DIA_Caine_AddInfoKalom(C_INFO)
 //	description = "What more can you tell me about your master?";
 //	description = "Was kannst du mir noch über deinen Meister erzählen?";
 	description = "Co mi ještě můžeš říci o svém mistrovi?";
-};                       
+};
 
 func int DIA_Caine_AddInfoKalom_Condition()
 {
@@ -261,7 +261,7 @@ func void DIA_Caine_AddInfoKalom_Info()
 
 /*
 // **************************************************
-//						
+//
 // **************************************************
 
 instance DIA_Caine_WieGuruSend(C_INFO)
@@ -272,7 +272,7 @@ instance DIA_Caine_WieGuruSend(C_INFO)
 	information = DIA_Caine_WieGuruSend_Info;
 	permanent = 0;
 	description = "Wie bringe ich einen Guru dazu, dass er mich zu Kalom schickt.";
-};                       
+};
 
 func int DIA_Caine_WieGuruSend_Condition()
 {
@@ -291,7 +291,7 @@ func void DIA_Caine_WieGuruSend_Info()
 */
 
 /*------------------------------------------------------------------------
-						REZEPT INNER TRUHE 
+						REZEPT INNER TRUHE
 ------------------------------------------------------------------------*/
 
 instance Nov_1301_Caine_CHEST(C_INFO)
@@ -301,13 +301,13 @@ instance Nov_1301_Caine_CHEST(C_INFO)
 	information = Nov_1301_Caine_CHEST_Info;
 	important = 0;
 	permanent = 0;
-//	description = "How can I get Kalom's recipe?"; 
-//	description = "Wie komme ich an das Rezept von Kalom?"; 
-	description = "Jak dostanu Kalomův recept?"; 
+//	description = "How can I get Kalom's recipe?";
+//	description = "Wie komme ich an das Rezept von Kalom?";
+	description = "Jak dostanu Kalomův recept?";
 };
 
 func int Nov_1301_Caine_CHEST_Condition()
-{ 
+{
 	if (Dexter_GetKalomsRecipe == LOG_RUNNING)
 	{
 		return TRUE;
@@ -322,4 +322,4 @@ func void Nov_1301_Caine_CHEST_Info()
 //	AI_Output(self,other,"Nov_1301_Caine_CHEST_Info_13_02"); //You don't. He keeps it in a locked chest and won't give it to anybody.
 //	AI_Output(self,other,"Nov_1301_Caine_CHEST_Info_13_02"); //Gar nicht. Er hält es in seiner Truhe verschlossen. Das rückt er niemals raus.
 	AI_Output(self,other,"Nov_1301_Caine_CHEST_Info_13_02"); //Nedostaneš ho. Má ho zamčený ve své truhle a nikomu ho nedá.
-};  
+};

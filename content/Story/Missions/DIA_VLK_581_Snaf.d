@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Snaf_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Snaf_Exit(C_INFO)
 	information = DIA_Snaf_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Snaf_Exit_Condition()
 {
@@ -39,7 +39,7 @@ instance DIA_Snaf_Hello(C_INFO)
 };
 
 func int DIA_Snaf_Hello_Condition()
-{ 
+{
 	return 1;
 };
 
@@ -68,7 +68,7 @@ func void DIA_Snaf_Hello_Info()
 // **************************************************
 // 				Bring Zutaten
 // **************************************************
-	var int Snaf_Zutaten; 
+	var int Snaf_Zutaten;
 	var int Snaf_FreeMBRagout;
 // **************************************************
 
@@ -85,7 +85,7 @@ instance DIA_Snaf_Zutaten(C_INFO)
 };
 
 func int DIA_Snaf_Zutaten_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,DIA_Snaf_Hello))
 	{
 		return 1;
@@ -151,11 +151,11 @@ func void DIA_Snaf_Zutaten_DoIt()
 
 	Log_CreateTopic(CH1_SnafsRecipe,LOG_MISSION);
 	Log_SetTopicStatus(CH1_SnafsRecipe,LOG_RUNNING);
-//	B_LogEntry(CH1_SnafsRecipe,"Snaf, the cook who lives in the Outer Ring of the Old Camp, sent me to get him 3 meatbugs and 5 hell mushrooms for a new recipe. I can have some when it's finished."); 
-//	B_LogEntry(CH1_SnafsRecipe,"Der Koch Snaf im Aussenring des Alten Lagers hat mich geschickt, ihm 3 Fleischwanzen und 5 Höllenpilze für ein neues Rezept zu besorgen. Er gibt mir dann auch was ab."); 
-	B_LogEntry(CH1_SnafsRecipe,"Snaf, kuchař který žije na Vnějším okruhu Starého tábora, mě poslal, abych mu pro nový kuchařský recept opatřil 3 žravé štěnice a 5 pekelných hub."); 
+//	B_LogEntry(CH1_SnafsRecipe,"Snaf, the cook who lives in the Outer Ring of the Old Camp, sent me to get him 3 meatbugs and 5 hell mushrooms for a new recipe. I can have some when it's finished.");
+//	B_LogEntry(CH1_SnafsRecipe,"Der Koch Snaf im Aussenring des Alten Lagers hat mich geschickt, ihm 3 Fleischwanzen und 5 Höllenpilze für ein neues Rezept zu besorgen. Er gibt mir dann auch was ab.");
+	B_LogEntry(CH1_SnafsRecipe,"Snaf, kuchař který žije na Vnějším okruhu Starého tábora, mě poslal, abych mu pro nový kuchařský recept opatřil 3 žravé štěnice a 5 pekelných hub.");
 
-	Info_ClearChoices(DIA_Snaf_Zutaten); 
+	Info_ClearChoices(DIA_Snaf_Zutaten);
 };
 
 // **************************************************
@@ -175,7 +175,7 @@ instance DIA_Snaf_ZutatenSuccess(C_INFO)
 };
 
 func int DIA_Snaf_ZutatenSuccess_Condition()
-{ 
+{
 	if ((Snaf_Zutaten==LOG_RUNNING) && (Npc_HasItems(other,ItFo_Plants_Mushroom_01)>=5) && (Npc_HasItems(other,ItAt_Meatbug_01)>=3))
 	{
 		return 1;
@@ -238,7 +238,7 @@ instance DIA_Snaf_AfterSuccess(C_INFO)
 };
 
 func int DIA_Snaf_AfterSuccess_Condition()
-{ 
+{
 	if ((Snaf_Zutaten==LOG_SUCCESS) && (Snaf_FreeMBRagout==TRUE))
 	{
 		return 1;
@@ -285,7 +285,7 @@ instance DIA_Snaf_WhereMeatbugs(C_INFO)
 };
 
 func int DIA_Snaf_WhereMeatbugs_Condition()
-{ 
+{
 	if ((Snaf_Zutaten==LOG_RUNNING))
 	{
 		return 1;
@@ -304,9 +304,9 @@ func void DIA_Snaf_WhereMeatbugs_Info()
 //	AI_Output(self,other,"DIA_Snaf_WhereMeatbugs_01_02"); //Lass dich von ihrem fiesen Aussehen nicht täuschen. Gekocht sind sie lecker.
 	AI_Output(self,other,"DIA_Snaf_WhereMeatbugs_01_02"); //Nedej se zmást jejich nevábným vzhledem. Uvařené chutnají znamenitě.
 
-//	B_LogEntry(CH1_SnafsRecipe,"There are meatbugs near the deserted huts by the castle wall."); 
-//	B_LogEntry(CH1_SnafsRecipe,"Fleischwanzen gibt es bei den verlassenen Hütten an der Burgmauer."); 
-	B_LogEntry(CH1_SnafsRecipe,"Žravé štěnice se vyskytují tam, kde se povalují odpadky. Také bych je mohl najít poblíž opuštěných chatrčí u hradních zdí."); 
+//	B_LogEntry(CH1_SnafsRecipe,"There are meatbugs near the deserted huts by the castle wall.");
+//	B_LogEntry(CH1_SnafsRecipe,"Fleischwanzen gibt es bei den verlassenen Hütten an der Burgmauer.");
+	B_LogEntry(CH1_SnafsRecipe,"Žravé štěnice se vyskytují tam, kde se povalují odpadky. Také bych je mohl najít poblíž opuštěných chatrčí u hradních zdí.");
 };
 
 // **************************************************
@@ -326,7 +326,7 @@ instance DIA_Snaf_WhereMushrooms(C_INFO)
 };
 
 func int DIA_Snaf_WhereMushrooms_Condition()
-{ 
+{
 	if ((Snaf_Zutaten==LOG_RUNNING))
 	{
 		return 1;
@@ -342,9 +342,9 @@ func void DIA_Snaf_WhereMushrooms_Info()
 //	AI_Output(self,other,"DIA_Snaf_WhereMushrooms_01_01"); //Wenn du aus dem Südtor rausgehst - das ist der umgestürzte Turm - findest du direkt vor dir eine Ebene, auf der Pilze wachsen.
 	AI_Output(self,other,"DIA_Snaf_WhereMushrooms_01_01"); //Když projdeš jižní branou - to je ta zhroucená věž - uvidíš přímo před sebou pláň. Tam rostou houby.
 
-//	B_LogEntry(CH1_SnafsRecipe,"Hell mushrooms can be found on the plain in front of the fallen tower of the south gate."); 
-//	B_LogEntry(CH1_SnafsRecipe,"Höllenpilze gibt es auf der Ebene vor dem umgestürzten Turm, dem Südtor."); 
-	B_LogEntry(CH1_SnafsRecipe,"Pekelné houby najdu na planině před jižní bránou, to je ta zřícená věž."); 
+//	B_LogEntry(CH1_SnafsRecipe,"Hell mushrooms can be found on the plain in front of the fallen tower of the south gate.");
+//	B_LogEntry(CH1_SnafsRecipe,"Höllenpilze gibt es auf der Ebene vor dem umgestürzten Turm, dem Südtor.");
+	B_LogEntry(CH1_SnafsRecipe,"Pekelné houby najdu na planině před jižní bránou, to je ta zřícená věž.");
 };
 
 // **************************************************
@@ -364,10 +364,8 @@ instance DIA_Snaf_WhereNek(C_INFO)
 };
 
 func int DIA_Snaf_WhereNek_Condition()
-{ 
-	if (Snaf_Zutaten==LOG_RUNNING)
-	//#Bugfix dialog was not available if hero finished successfully mission
-	|| (Snaf_Zutaten==LOG_SUCCESS)
+{
+	if ((Snaf_Zutaten==LOG_RUNNING))
 	{
 		return 1;
 	};

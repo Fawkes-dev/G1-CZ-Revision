@@ -10,7 +10,7 @@ instance DIA_Gilbert_EXIT(C_INFO)
 	information = DIA_Gilbert_EXIT_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Gilbert_EXIT_Condition()
 {
@@ -34,7 +34,7 @@ instance DIA_Gilbert_First(C_INFO)
 	information = DIA_Gilbert_First_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Gilbert_First_Condition()
 {
@@ -70,7 +70,7 @@ instance DIA_Gilbert_Hallo(C_INFO)
 //	description = "What are you doing here?";
 //	description = "Was machst du hier?";
 	description = "Co tady děláš?";
-};                       
+};
 
 func int DIA_Gilbert_Hallo_Condition()
 {

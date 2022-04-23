@@ -1,5 +1,5 @@
 // ****************************************
-// 					FIRST 
+// 					FIRST
 // ****************************************
 
 instance GUR_1201_CorKalom_FIRST(C_INFO)
@@ -26,7 +26,7 @@ func void GUR_1201_CorKalom_FIRST_Info()
 //	AI_Output(self,other,"GUR_1201_CorKalom_FIRST_10_00"); //Was willst du?
 	AI_Output(self,other,"GUR_1201_CorKalom_FIRST_10_00"); //Co chceš?
 	Kalom_TalkedTo = TRUE;
-};  
+};
 
 // ****************************************
 // 				Wanna Join
@@ -39,9 +39,9 @@ instance GUR_1201_CorKalom_WannaJoin(C_INFO)
 	condition = GUR_1201_CorKalom_WannaJoin_Condition;
 	information = GUR_1201_CorKalom_WannaJoin_Info;
 	permanent = 0;
-//	description = "I would like to join the Brotherhood."; 
-//	description = "Ich will in die Bruderschaft aufgenommen werden."; 
-	description = "Chci se přidat k Bratrstvu."; 
+//	description = "I would like to join the Brotherhood.";
+//	description = "Ich will in die Bruderschaft aufgenommen werden.";
+	description = "Chci se přidat k Bratrstvu.";
 };
 
 func int GUR_1201_CorKalom_WannaJoin_Condition()
@@ -73,7 +73,7 @@ func void GUR_1201_CorKalom_WannaJoin_Info()
 //	B_LogEntry(CH1_JoinPsi,"Cor Kalom will let me join the Brotherhood as a novice if I manage to convince four of the Baals to speak in my favor.");
 //	B_LogEntry(CH1_JoinPsi,"Cor Kalom nimmt mich als Novize in die Bruderschaft auf, wenn ich mindestens vier der Baal's davon überzeugen kann, für mich zu sprechen.");
 	B_LogEntry(CH1_JoinPsi,"Cor Kalom mě nechá přidat se k Bratrstvu, pokud se mi podaří přesvědčit nejméně čtyři z Baalů, aby se za mě přimluvili.");
-};  
+};
 
 // ****************************************
 // 				Kaloms Recipe
@@ -86,9 +86,9 @@ instance GUR_1201_CorKalom_Recipe(C_INFO)
 	condition = GUR_1201_CorKalom_Recipe_Condition;
 	information = GUR_1201_CorKalom_Recipe_Info;
 	permanent = 0;
-//	description = "One of the merchants from the Old Camp would like to have a recipe."; 
-//	description = "Einer der Händler aus dem alten Lager will ein Rezept von dir haben."; 
-	description = "Jeden z obchodníků ze Starého tábora by chtěl recept na hojivý lektvar."; 
+//	description = "One of the merchants from the Old Camp would like to have a recipe.";
+//	description = "Einer der Händler aus dem alten Lager will ein Rezept von dir haben.";
+	description = "Jeden z obchodníků ze Starého tábora by chtěl recept na hojivý lektvar.";
 };
 
 func int GUR_1201_CorKalom_Recipe_Condition()
@@ -111,7 +111,7 @@ func void GUR_1201_CorKalom_Recipe_Info()
 //	B_LogEntry(CH1_KalomsRecipe,"Cor Kalom will not give me the recipe. But there are chests in his lab ... and he seemed to be quite busy ...");
 //	B_LogEntry(CH1_KalomsRecipe,"Cor Kalom will das Rezept nicht herausrücken. Aber in seinem Labor stehen Truhen... Und er schien ziemlich beschäftigt zu sein...");
 	B_LogEntry(CH1_KalomsRecipe,"Cor Kalom mi ten recept nedá. V jeho dílně jsou však truhlice... a vypadá, že je docela zaneprázdněný...");
-};  
+};
 
 // ****************************************
 // 				Experimente (PERM)
@@ -124,9 +124,9 @@ instance GUR_1201_CorKalom_Experimente(C_INFO)
 	condition = GUR_1201_CorKalom_Experimente_Condition;
 	information = GUR_1201_CorKalom_Experimente_Info;
 	permanent = 1;
-//	description = "What kind of experiments do you do?"; 
-//	description = "Was machst du für Experimente?"; 
-	description = "Jaký druh experimentů provádíš?"; 
+//	description = "What kind of experiments do you do?";
+//	description = "Was machst du für Experimente?";
+	description = "Jaký druh experimentů provádíš?";
 };
 
 func int GUR_1201_CorKalom_Experimente_Condition()
@@ -145,7 +145,7 @@ func void GUR_1201_CorKalom_Experimente_Info()
 //	AI_Output(self,other,"GUR_1201_CorKalom_Experimente_10_01"); //My research takes place on a level you don't understand anything about, boy. So don't waste my time!
 //	AI_Output(self,other,"GUR_1201_CorKalom_Experimente_10_01"); //Meine Forschung befindet sich auf einer Ebene, von der du nichts verstehst, Bursche. Also verschwende nicht meine Zeit!
 	AI_Output(self,other,"GUR_1201_CorKalom_Experimente_10_01"); //Mé výzkumy jsou na takové úrovni, že bys jim sotva porozuměl, chlapče. Tak mě přestaň zdržovat!
-};  
+};
 
 // ****************************************
 // Info BRINGWEED
@@ -158,9 +158,9 @@ instance GUR_1201_CorKalom_BRINGWEED(C_INFO)
 	condition = GUR_1201_CorKalom_BRINGWEED_Condition;
 	information = GUR_1201_CorKalom_BRINGWEED_Info;
 	permanent = 1;
-//	description = "I'm delivering the daily swampweed harvest!"; 
-//	description = "Ich bringe die tägliche Sumpfkrauternte!"; 
-	description = "Nesu denní sklizeň drogy z bažin!"; 
+//	description = "I'm delivering the daily swampweed harvest!";
+//	description = "Ich bringe die tägliche Sumpfkrauternte!";
+	description = "Nesu denní sklizeň drogy z bažin!";
 };
 
 func int GUR_1201_CorKalom_BRINGWEED_Condition()
@@ -199,10 +199,10 @@ func void GUR_1201_CorKalom_BRINGWEED_Info()
 		Log_SetTopicStatus(CH1_DeliverWeed,LOG_SUCCESS);
 		B_GiveXP(XP_DeliveredWeedHarvest);
 
-		BaalOrun_FetchWeed = LOG_SUCCESS; 
+		BaalOrun_FetchWeed = LOG_SUCCESS;
 		AI_StopProcessInfos(self);
 	};
-};  
+};
 
 // ****************************************
 // 				Crawlerzangen (PERM)
@@ -215,9 +215,9 @@ instance GUR_1201_CorKalom_Crawlerzangen(C_INFO)
 	condition = GUR_1201_CorKalom_Crawlerzangen_Condition;
 	information = GUR_1201_CorKalom_Crawlerzangen_Info;
 	permanent = 1;
-//	description = "I have crawlers' mandibles for you..."; 
-//	description = "Ich habe Crawlerzangen für dich..."; 
-	description = "Mám pro tebe čelisti důlních červů..."; 
+//	description = "I have crawlers' mandibles for you...";
+//	description = "Ich habe Crawlerzangen für dich...";
+	description = "Mám pro tebe čelisti důlních červů...";
 };
 
 func int GUR_1201_CorKalom_Crawlerzangen_Condition()
@@ -238,7 +238,7 @@ func void GUR_1201_CorKalom_Crawlerzangen_Info()
 	#Needs_Attention - toto je strasny sh#t, ktory sa ani v najmensom hracovi nevyplati :) tu domenu musime upravit
 	 - pri 1 celisti 1 lektvar many
 	 - pri 3 - 9 celistiach 2 esence many
-	 - pri 10 + celistiach 3 elixiry many 
+	 - pri 10 + celistiach 3 elixiry many
 	Otazka je ako upravit - dal by som 1 x 1 vymenu lektvaru - a dialogy mozu ostat podla mnozstva celisti
 	*/
 	if (Npc_HasItems(other,ItAt_Crawler_01) > 9)
@@ -268,7 +268,7 @@ func void GUR_1201_CorKalom_Crawlerzangen_Info()
 	};
 
 	B_GiveInvItems(other,self,ItAt_Crawler_01, Npc_HasItems(other,ItAt_Crawler_01));
-}; 
+};
 
 // ****************************************
 // 				Join PSI
@@ -281,15 +281,15 @@ instance GUR_1201_CorKalom_JoinPSI(C_INFO)
 	condition = GUR_1201_CorKalom_JoinPSI_Condition;
 	information = GUR_1201_CorKalom_JoinPSI_Info;
 	permanent = 1;
-//	description = "I think I have convinced the Baals!"; 
-//	description = "Ich glaube, ich habe die Baals überzeugt!"; 
-	description = "Myslím, že jsem přesvědčil Baaly!"; 
+//	description = "I think I have convinced the Baals!";
+//	description = "Ich glaube, ich habe die Baals überzeugt!";
+	description = "Myslím, že jsem přesvědčil Baaly!";
 };
 
 func int GUR_1201_CorKalom_JoinPSI_Condition()
 {
 	if (Npc_GetTrueGuild(hero) == GIL_NONE)
-	&& Npc_KnowsInfo(hero,GUR_1201_CorKalom_WannaJoin) 
+	&& Npc_KnowsInfo(hero,GUR_1201_CorKalom_WannaJoin)
 	{
 		return 1;
 	};
@@ -346,9 +346,9 @@ func void GUR_1201_CorKalom_JoinPSI_Info()
 		AI_Output(other,self,"GUR_1201_CorKalom_JoinPSI_15_07"); //Baal Tondral říká, že bych měl obdržet roucho. Přivedl jsem mu nového žáka.
 		counter = counter + 1;
 	};
-	//------------------------------------- 
+	//-------------------------------------
 	if (hero.level >= 5)
-	{ 
+	{
 		if (counter >= 4)
 		{
 //			AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_08"); //Good. If the Baals support you, that should be enough for me.
@@ -406,7 +406,7 @@ func void GUR_1201_CorKalom_JoinPSI_Info()
 		};
 	}
 	else
-	{ 
+	{
 		B_PrintGuildCondition(5);
 	};
 };
@@ -422,9 +422,9 @@ instance GUR_1201_CorKalom_JoinPSI2(C_INFO)
 	condition = GUR_1201_CorKalom_JoinPSI2_Condition;
 	information = GUR_1201_CorKalom_JoinPSI2_Info;
 	permanent = 0;
-//	description = "That was it? No welcome, no nothing?"; 
-//	description = "Das war alles? Kein 'Herzlich Willkommen', kein gar nichts?"; 
-	description = "To bylo všechno? Žádné 'Vítej', nic?"; 
+//	description = "That was it? No welcome, no nothing?";
+//	description = "Das war alles? Kein 'Herzlich Willkommen', kein gar nichts?";
+	description = "To bylo všechno? Žádné 'Vítej', nic?";
 };
 
 func int GUR_1201_CorKalom_JoinPSI2_Condition()
@@ -459,15 +459,15 @@ func void GUR_1201_CorKalom_JoinPSI2_Info()
 	KALOM_KRAUTBOTE = LOG_RUNNING;
 	Log_CreateTopic(CH1_KrautBote,LOG_MISSION);
 	Log_SetTopicStatus(CH1_KrautBote,LOG_RUNNING);
-//	B_LogEntry(CH1_KrautBote,"Cor Kalom sent me to Gomez in the Old Camp to deliver him weed."); 
-//	B_LogEntry(CH1_KrautBote,"Auf seine charmante Art und Weise schickte Cor Kalom mich zu Gomez ins Alte Lager, um ihm eine Lieferung Kraut zu bringen."); 
-	B_LogEntry(CH1_KrautBote,"Cor Kalom mě svým osobitým způsobem vyslal s dodávkou drogy z bažin za Gomezem do Starého tábora."); 
+//	B_LogEntry(CH1_KrautBote,"Cor Kalom sent me to Gomez in the Old Camp to deliver him weed.");
+//	B_LogEntry(CH1_KrautBote,"Auf seine charmante Art und Weise schickte Cor Kalom mich zu Gomez ins Alte Lager, um ihm eine Lieferung Kraut zu bringen.");
+	B_LogEntry(CH1_KrautBote,"Cor Kalom mě svým osobitým způsobem vyslal s dodávkou drogy z bažin za Gomezem do Starého tábora.");
 
 //	AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_15"); //What, are you still here?
 //	AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_15"); //Du bist ja immer noch hier!
 	AI_Output(self,other,"GUR_1201_CorKalom_JoinPSI_10_15"); //Cože, ty jsi ještě tady?
 	AI_StopProcessInfos(self);
-};  
+};
 
 // **************************************************************************
 // 							MISSION: Drug Monopol
@@ -480,7 +480,7 @@ instance Info_Kalom_DrugMonopol(C_INFO)
 	npc = GUR_1201_CorKalom;
 	condition = Info_Kalom_DrugMonopol_Condition;
 	information = Info_Kalom_DrugMonopol_Info;
-	permanent = 0; 
+	permanent = 0;
 //	description = "Have YOU got another task for me?";
 //	description = "Hast DU noch eine Aufgabe für mich?";
 	description = "Máš pro mě ještě jiný úkol?";
@@ -523,11 +523,11 @@ func void Info_Kalom_DrugMonopol_Info()
 //	B_LogEntry(CH1_DrugMonopol,"Cor Kalom will, dass ich eine konkurrierende Krautproduktion einiger Leute im Neuen Lager unterbinde. Ich hab' keine Ahnung, wo genau ich anfangen soll zu suchen, aber ich sollte VOR dem Neuen Lager anfangen.");
 	B_LogEntry(CH1_DrugMonopol,"Cor Kalom chce, abych zastavil konkurenční produkci drogy v Novém táboře. Nevím přesně kde mám hledat, ale snad bych mohl začít PŘED Novým táborem.");
 
-	var C_NPC Renyu; 
+	var C_NPC Renyu;
 	Renyu = Hlp_GetNpc(ORG_860_Renyu);
 	Renyu.aivar[AIV_WASDEFEATEDBYSC] = FALSE;
 
-	var C_NPC Killian; 
+	var C_NPC Killian;
 	Killian = Hlp_GetNpc(ORG_861_Killian);
 	Killian.aivar[AIV_WASDEFEATEDBYSC] = FALSE;
 };
@@ -648,7 +648,7 @@ func void Info_Kalom_KrautboteBACK_Info()
 //		AI_Output(self,other,"Mis_1_Psi_Kalom_KrautboteBACK_10_02"); //Where's the 500 ore, boy? Make sure I get them real fast!
 //		AI_Output(self,other,"Mis_1_Psi_Kalom_KrautboteBACK_10_02"); //Wo sind die 500 Erz, Bursche? Beeil dich besser, sie mir zu bringen!
 		AI_Output(self,other,"Mis_1_Psi_Kalom_KrautboteBACK_10_02"); //Kde je těch 500 nugetů, chlapče? Zajisti, abych je hodně rychle dostal!
-	}; 
+	};
 };
 
 // **************************************************************************
@@ -669,7 +669,7 @@ instance Info_CorKalom_BringFocus(C_INFO)
 };
 
 func int Info_CorKalom_BringFocus_Condition()
-{ 
+{
 	if (YBerion_BringFocus == LOG_SUCCESS) && (Npc_HasItems(hero,Focus_1 ))
 	{
 		return 1;
@@ -688,9 +688,9 @@ func void Info_CorKalom_BringFocus_Info()
 //	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_Info3_10_03"); //Wenn ich nur ausreichend Sekret hätte ... Verflucht!
 	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_Info3_10_03"); //Kdybych jen měl dostatek výměšku... sakra!
 
-//	B_LogEntry(CH2_Focus,"I've dropped of the ominous focus at Cor Kalom's!"); 
-//	B_LogEntry(CH2_Focus,"Ich habe den ominösen Fokus bei Cor Kalom abgeliefert!"); 
-	B_LogEntry(CH2_Focus,"Nechal jsem u Cora Kaloma zlověstné ohnisko!"); 
+//	B_LogEntry(CH2_Focus,"I've dropped of the ominous focus at Cor Kalom's!");
+//	B_LogEntry(CH2_Focus,"Ich habe den ominösen Fokus bei Cor Kalom abgeliefert!");
+	B_LogEntry(CH2_Focus,"Nechal jsem u Cora Kaloma zlověstné ohnisko!");
 	Log_SetTopicStatus(CH2_Focus,LOG_SUCCESS);
 
 	B_GiveInvItems(hero,self,Focus_1,1);
@@ -712,9 +712,9 @@ instance Info_CorKalom_BLUFF(C_INFO)
 };
 
 func int Info_CorKalom_BLUFF_Condition()
-{ 
-	if (Npc_KnowsInfo(hero,Info_CorKalom_BringFocus)) 
-	&& (CorKalom_BringMCQBalls != LOG_SUCCESS) 
+{
+	if (Npc_KnowsInfo(hero,Info_CorKalom_BringFocus))
+	&& (CorKalom_BringMCQBalls != LOG_SUCCESS)
 	{
 		return 1;
 	};
@@ -741,13 +741,13 @@ instance GUR_1201_CorKalom_SACHE(C_INFO)
 	information = GUR_1201_CorKalom_SACHE_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Secretion?"; 
-//	description = "Sekret?"; 
-	description = "Výměšek?"; 
+//	description = "Secretion?";
+//	description = "Sekret?";
+	description = "Výměšek?";
 };
 
 func int GUR_1201_CorKalom_SACHE_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,Info_CorKalom_BringFocus))
 	{
 		return 1;
@@ -773,7 +773,7 @@ func void GUR_1201_CorKalom_SACHE_Info()
 //	Info_Addchoice (GUR_1201_CorKalom_SACHE,"Yes",GUR_1201_CorKalom_SACHE_JA);
 //	Info_Addchoice (GUR_1201_CorKalom_SACHE,"Ja",GUR_1201_CorKalom_SACHE_JA);
 	Info_Addchoice (GUR_1201_CorKalom_SACHE,"Ano.",GUR_1201_CorKalom_SACHE_JA);
-};  
+};
 //------------------------------------------------------
 func void GUR_1201_CorKalom_SACHE_NEIN()
 {
@@ -810,13 +810,13 @@ instance GUR_1201_CorKalom_VISION(C_INFO)
 	information = GUR_1201_CorKalom_VISION_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Speak on!"; 
-//	description = "Erzähl weiter!"; 
-	description = "Mluv dál!"; 
+//	description = "Speak on!";
+//	description = "Erzähl weiter!";
+	description = "Mluv dál!";
 };
 
 func int GUR_1201_CorKalom_VISION_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,GUR_1201_CorKalom_SACHE))
 	{
 		return 1;
@@ -853,7 +853,7 @@ func void GUR_1201_CorKalom_VISION_Info()
 //	AI_Output(self,other,"GUR_1201_CorKalom_VISION_Info_10_09"); //There must be something else.
 //	AI_Output(self,other,"GUR_1201_CorKalom_VISION_Info_10_09"); //Es muss etwas anderes geben.
 	AI_Output(self,other,"GUR_1201_CorKalom_VISION_Info_10_09"); //Musí tu být ještě něco jiného.
-};  
+};
 
 // ***************************** INFOS ****************************************//
 instance GUR_1201_CorKalom_NEST(C_INFO)
@@ -863,13 +863,13 @@ instance GUR_1201_CorKalom_NEST(C_INFO)
 	information = GUR_1201_CorKalom_NEST_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Have you never examined the minecrawlers?"; 
-//	description = "Habt ihr die Minecrawler nie untersucht?"; 
-	description = "Vy jste důlní červy nikdy nezkoumali?"; 
+//	description = "Have you never examined the minecrawlers?";
+//	description = "Habt ihr die Minecrawler nie untersucht?";
+	description = "Vy jste důlní červy nikdy nezkoumali?";
 };
 
 func int GUR_1201_CorKalom_NEST_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,GUR_1201_CorKalom_VISION))
 	{
 		return 1;
@@ -890,7 +890,7 @@ func void GUR_1201_CorKalom_NEST_Info()
 
 	CorKalom_BringMCQBalls = LOG_RUNNING;
 
-};  
+};
 
 // ***************************** Mission MCEggs annehmen ****************************************//
 func void GUR_1201_CorKalom_WEG_ACCEPT()
@@ -916,14 +916,14 @@ instance GUR_1201_CorKalom_WEG(C_INFO)
 	nr = 21;
 	important = 0;
 	permanent = 0;
-//	description = "That sounds like a dark and sinister kind of search!"; 
-//	description = "Das wird bestimmt eine finstere Suche!"; 
-	description = "To vypadá na temné a zlověstné pátrání!"; 
+//	description = "That sounds like a dark and sinister kind of search!";
+//	description = "Das wird bestimmt eine finstere Suche!";
+	description = "To vypadá na temné a zlověstné pátrání!";
 };
 
 func int GUR_1201_CorKalom_WEG_Condition()
-{ 
-	if (Npc_KnowsInfo(hero,GUR_1201_CorKalom_NEST)) && !(Npc_KnowsInfo(hero,GUR_1201_CorKalom_RAT)) 
+{
+	if (Npc_KnowsInfo(hero,GUR_1201_CorKalom_NEST)) && !(Npc_KnowsInfo(hero,GUR_1201_CorKalom_RAT))
 	{
 		return 1;
 	};
@@ -948,7 +948,7 @@ func void GUR_1201_CorKalom_WEG_Info()
 	B_GiveInvItems(self,other,ItArScrollLight, 5);
 
 	GUR_1201_CorKalom_WEG_ACCEPT();
-};  
+};
 
 // ***************************** INFOS ****************************************//
 instance GUR_1201_CorKalom_RAT(C_INFO)
@@ -959,14 +959,14 @@ instance GUR_1201_CorKalom_RAT(C_INFO)
 	nr = 20;
 	important = 0;
 	permanent = 0;
-//	description = "Looks like this might become quite a bloody adventure!"; 
-//	description = "Das wird bestimmt ein blutiges Abenteuer!"; 
-	description = "Uvědom si, že by to mohlo být docela krvavé dobrodružství!"; 
+//	description = "Looks like this might become quite a bloody adventure!";
+//	description = "Das wird bestimmt ein blutiges Abenteuer!";
+	description = "Uvědom si, že by to mohlo být docela krvavé dobrodružství!";
 };
 
 func int GUR_1201_CorKalom_RAT_Condition()
-{ 
-	if (Npc_KnowsInfo(hero,GUR_1201_CorKalom_NEST)) && !(Npc_KnowsInfo(hero,GUR_1201_CorKalom_WEG)) 
+{
+	if (Npc_KnowsInfo(hero,GUR_1201_CorKalom_NEST)) && !(Npc_KnowsInfo(hero,GUR_1201_CorKalom_WEG))
 	{
 		return 1;
 	};
@@ -988,7 +988,7 @@ func void GUR_1201_CorKalom_RAT_Info()
 	B_GiveInvItems(self,other,ItFo_Potion_Health_02, 5);
 
 	GUR_1201_CorKalom_WEG_ACCEPT();
-};  
+};
 
 // ***************************** INFOS ****************************************//
 instance GUR_1201_CorKalom_RUN(C_INFO)
@@ -998,15 +998,15 @@ instance GUR_1201_CorKalom_RUN(C_INFO)
 	information = GUR_1201_CorKalom_RUN_Info;
 	important = 0;
 	permanent = 0;
-//	description = "Where will I find the minecrawlers?"; 
-//	description = "Wo finde ich die Minecrawler?"; 
-	description = "Kde najdu důlní červy?"; 
+//	description = "Where will I find the minecrawlers?";
+//	description = "Wo finde ich die Minecrawler?";
+	description = "Kde najdu důlní červy?";
 };
 
 func int GUR_1201_CorKalom_RUN_Condition()
-{ 
-	if ((CorKalom_BringMCQBalls == LOG_RUNNING) 
-	&& (Npc_HasItems(hero,ItAt_Crawlerqueen)< 1)) 
+{
+	if ((CorKalom_BringMCQBalls == LOG_RUNNING)
+	&& (Npc_HasItems(hero,ItAt_Crawlerqueen)< 1))
 	{
 		return 1;
 	};
@@ -1029,10 +1029,10 @@ func void GUR_1201_CorKalom_RUN_Info()
 //		AI_Output(self,other,"GUR_1201_CorKalom_RUN_Info_10_04"); //Take this map. Any important places within the Barrier are marked on it.
 //		AI_Output(self,other,"GUR_1201_CorKalom_RUN_Info_10_04"); //Nimm diese Karte. Dort sind alle wichtigen Orte innerhalb der Barriere eingezeichnet.
 		AI_Output(self,other,"GUR_1201_CorKalom_RUN_Info_10_04"); //Vem si tuhle mapu! Jsou na ní vyznačena všechna důležitá místa uvnitř Bariéry.
-		CreateInvItem(self,ItWrWorldmap);   
+		CreateInvItem(self,ItWrWorldmap);
 		B_GiveInvItems(self,other,ItWrWorldmap,1);
 	};
-};  
+};
 
 // ***************************** INFOS ****************************************//
 instance GUR_1201_CorKalom_CRAWLER(C_INFO)
@@ -1042,15 +1042,15 @@ instance GUR_1201_CorKalom_CRAWLER(C_INFO)
 	information = GUR_1201_CorKalom_CRAWLER_Info;
 	important = 0;
 	permanent = 0;
-//	description = "What's the best way to fight the minecrawlers?"; 
-//	description = "Wie kämpfe ich am besten gegen die Minecrawler?"; 
-	description = "Jaký je nejlepší způsob boje s důlními červy?"; 
+//	description = "What's the best way to fight the minecrawlers?";
+//	description = "Wie kämpfe ich am besten gegen die Minecrawler?";
+	description = "Jaký je nejlepší způsob boje s důlními červy?";
 };
 
 func int GUR_1201_CorKalom_CRAWLER_Condition()
 {
 	if Npc_KnowsInfo(hero,GUR_1201_CorKalom_RUN)
-	&& (CorKalom_BringMCQBalls != LOG_SUCCESS) 
+	&& (CorKalom_BringMCQBalls != LOG_SUCCESS)
 	{
 		return 1;
 	};
@@ -1074,9 +1074,9 @@ instance GUR_1201_CorKalom_FIND(C_INFO)
 	information = GUR_1201_CorKalom_FIND_Info;
 	important = 0;
 	permanent = 0;
-//	description = "How can I find the nest in the mine?"; 
-//	description = "Wie soll ich in der Mine das Nest finden?"; 
-	description = "Jak najdu v dole hnízdo?"; 
+//	description = "How can I find the nest in the mine?";
+//	description = "Wie soll ich in der Mine das Nest finden?";
+	description = "Jak najdu v dole hnízdo?";
 };
 
 func int GUR_1201_CorKalom_FIND_Condition()
@@ -1110,7 +1110,7 @@ instance Info_CorKalom_BringMCQBalls_Success(C_INFO)
 //	description = "I found eggs belonging to a crawler queen";
 //	description = "Ich habe Eier einer Crawler-Königin gefunden";
 	description = "Našel jsem vajíčka královny důlních červů.";
-};                       
+};
 
 func int Info_CorKalom_BringMCQBalls_Success_Condition()
 {
@@ -1120,7 +1120,7 @@ func int Info_CorKalom_BringMCQBalls_Success_Condition()
 	};
 };
 func void Info_CorKalom_BringMCQBalls_Success_Info()
-{ 
+{
 //	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_15_01"); //I found eggs belonging to a crawler queen
 //	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_15_01"); //Ich habe Eier einer Crawler-Königin gefunden
 	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_15_01"); //Našel jsem vajíčka královny důlních červů.
@@ -1189,7 +1189,7 @@ func void Info_CorKalom_BringMCQBalls_Success_RUNE()
 	B_GiveInvItems(self,hero,ItArRuneLight,1);
 	Info_ClearChoices(Info_CorKalom_BringMCQBalls_Success);
 
-}; 
+};
 func void Info_CorKalom_BringMCQBalls_Success_WAFFE()
 {
 //	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_WAFFE_15_01"); //A weapon.
@@ -1201,7 +1201,7 @@ func void Info_CorKalom_BringMCQBalls_Success_WAFFE()
 	CreateInvItem(self,ItMw_1H_Mace_War_03);
 	B_GiveInvItems(self,hero,ItMw_1H_Mace_War_03,1);
 	Info_ClearChoices(Info_CorKalom_BringMCQBalls_Success);
-}; 
+};
 func void Info_CorKalom_BringMCQBalls_Success_HEAL()
 {
 //	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_HEAL_15_01"); //A healing potion.
@@ -1213,7 +1213,7 @@ func void Info_CorKalom_BringMCQBalls_Success_HEAL()
 	CreateInvItem(self,ItFo_Potion_Health_Perma_01);
 	B_GiveInvItems(self,hero,ItFo_Potion_Health_Perma_01,1);
 	Info_ClearChoices(Info_CorKalom_BringMCQBalls_Success);
-}; 
+};
 func void Info_CorKalom_BringMCQBalls_Success_ORE()
 {
 //	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_ORE_15_01"); //Ore.
@@ -1225,7 +1225,7 @@ func void Info_CorKalom_BringMCQBalls_Success_ORE()
 	CreateInvItems(self,ItMinugget,100);
 	B_GiveInvItems(self,hero,ItMinugget, 100);
 	Info_ClearChoices(Info_CorKalom_BringMCQBalls_Success);
-}; 
+};
 func void Info_CorKalom_BringMCQBalls_Success_MANA()
 {
 //	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_MANA_15_01"); //Mana.
@@ -1237,7 +1237,7 @@ func void Info_CorKalom_BringMCQBalls_Success_MANA()
 	CreateInvItem(self,ItFo_Potion_Mana_Perma_01);
 	B_GiveInvItems(self,hero,ItFo_Potion_Mana_Perma_01,1);
 	Info_ClearChoices(Info_CorKalom_BringMCQBalls_Success);
-}; 
+};
 
 // **************************************************************************
 // 				MISSION: Bring Book
@@ -1258,7 +1258,7 @@ func int Info_CorKalom_BringBook_Condition()
 	if ( CorKalom_BringMCQBalls == LOG_SUCCESS )
 	{
 		return 1;
-	}; 
+	};
 };
 func void Info_CorKalom_BringBook_Info()
 {
@@ -1357,18 +1357,18 @@ instance Info_CorKalom_BringBook_Success(C_INFO)
 //	description = "I've found the book";
 //	description = "Ich hab' das Buch gefunden";
 	description = "Našel jsem tu knihu.";
-};                       
+};
 
 func int Info_CorKalom_BringBook_Success_Condition()
-{ 
+{
 	if (Npc_HasItems(Hero,ItWrFokusbuch)
 	&& (CorKalom_BringBook==LOG_RUNNING))
 	{
-		return 1 ; 
+		return 1 ;
 	};
 };
 func void Info_CorKalom_BringBook_Success_Info()
-{ 
+{
 //	AI_Output(other,self,"Info_CorKalom_BringBook_Success_15_01"); //I've found the book
 //	AI_Output(other,self,"Info_CorKalom_BringBook_Success_15_01"); //Ich hab' das Buch gefunden
 	AI_Output(other,self,"Info_CorKalom_BringBook_Success_15_01"); //Našel jsem tu knihu.
@@ -1412,7 +1412,7 @@ instance Info_CorKalom_Belohnung(C_INFO)
 //	description = "What about my payment?";
 //	description = "Wie sieht es mit einer Belohnung aus?";
 	description = "A co moje odměna?";
-};                       
+};
 
 func int Info_CorKalom_Belohnung_Condition()
 {
@@ -1488,10 +1488,10 @@ instance GUR_1201_CorKalom_Exit(C_INFO)
 	nr = 999;
 	condition = GUR_1201_CorKalom_Exit_Condition;
 	information = GUR_1201_CorKalom_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int GUR_1201_CorKalom_Exit_Condition()
 {

@@ -6,10 +6,10 @@ instance GRD_262_Aaron_Exit(C_INFO)
 	nr = 999;
 	condition = GRD_262_Aaron_Exit_Condition;
 	information = GRD_262_Aaron_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int GRD_262_Aaron_Exit_Condition()
 {
@@ -27,15 +27,15 @@ instance GRD_262_Aaron_CHEST(C_INFO)
 	npc = GRD_262_Aaron;
 	condition = GRD_262_Aaron_CHEST_Condition;
 	information = GRD_262_Aaron_CHEST_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 //	description = "What are you doing here?";
 //	description = "Was machst du hier?";
 	description = "Co tady děláš?";
-};                       
+};
 
 func int GRD_262_Aaron_CHEST_Condition()
-{ 
+{
 	if ( Npc_GetDistToWp (self,"OM_CAVE1_34") <400 )
 	&& (!Npc_KnowsInfo(hero,GRD_262_Aaron_BLUFF))
 	{
@@ -60,13 +60,13 @@ instance GRD_262_Aaron_BLUFF(C_INFO)
 	information = GRD_262_Aaron_BLUFF_Info;
 	important = 0;
 	permanent = 1;
-//	description = "(lure Aaron away)"; 
-//	description = "(Aaron weglocken)"; 
-	description = "(odlákej Aarona)"; 
+//	description = "(lure Aaron away)";
+//	description = "(Aaron weglocken)";
+	description = "(odlákej Aarona)";
 };
 
 func int GRD_262_Aaron_BLUFF_Condition()
-{ 
+{
 	if Npc_KnowsInfo(hero,VLK_584_Snipes_DEAL)
 	&& (Aaron_lock != LOG_RUNNING)
 	&& (Aaron_lock != LOG_SUCCESS)
@@ -195,9 +195,9 @@ instance GRD_262_Aaron_PISSED(C_INFO)
 	npc = GRD_262_Aaron;
 	condition = GRD_262_Aaron_PISSED_Condition;
 	information = GRD_262_Aaron_PISSED_Info;
-	important = 1; 
+	important = 1;
 	permanent = 0;
-};                       
+};
 
 func int GRD_262_Aaron_PISSED_Condition()
 {
@@ -219,9 +219,9 @@ func void GRD_262_Aaron_PISSED_Info()
 	Npc_ExchangeRoutine(self,"start");
 	Aaron_lock = LOG_SUCCESS;
 
-//	B_LogEntry(CH2_SnipesDeal,"I've met Aaron again, he actually DIDN'T take it in good humor."); 
-//	B_LogEntry(CH2_SnipesDeal,"Ich habe Aaron wiedergetroffen und festgestellt, dass er KEINEN Humor hat."); 
-	B_LogEntry(CH2_SnipesDeal,"Znovu jsem potkal Aarona, který to však NEVZAL jako dobrý vtip."); 
+//	B_LogEntry(CH2_SnipesDeal,"I've met Aaron again, he actually DIDN'T take it in good humor.");
+//	B_LogEntry(CH2_SnipesDeal,"Ich habe Aaron wiedergetroffen und festgestellt, dass er KEINEN Humor hat.");
+	B_LogEntry(CH2_SnipesDeal,"Znovu jsem potkal Aarona, který to však NEVZAL jako dobrý vtip.");
 };
 
 // ***************** Schlüssel verkaufen *****************************
@@ -230,16 +230,16 @@ instance GRD_262_Aaron_SELL(C_INFO)
 	npc = GRD_262_Aaron;
 	condition = GRD_262_Aaron_SELL_Condition;
 	information = GRD_262_Aaron_SELL_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "Hey, don't you miss your key?";
 //	description = "Hey, vermisst du nicht deinen Schlüssel?";
 	description = "Hej, neztratil jsi klíč?";
-};                       
+};
 
 func int GRD_262_Aaron_SELL_Condition()
 {
-	if (Npc_KnowsInfo(hero,VLK_584_Snipes_DEAL_RUN )) 
+	if (Npc_KnowsInfo(hero,VLK_584_Snipes_DEAL_RUN ))
 	{
 		return 1;
 	};
@@ -257,9 +257,9 @@ func void GRD_262_Aaron_SELL_Info()
 //	AI_Output(self,other,"Info_Aaron_SELL_09_03"); //Aber ich gebe dir 20 Erz, wenn du mir meinen Schlüssel wiederholst.
 	AI_Output(self,other,"Info_Aaron_SELL_09_03"); //Dám ti 20 nugetů, jestli mi ho přineseš zpátky.
 
-//	B_LogEntry(CH2_SnipesDeal,"Aaron offered me 20 ore to get the keys to his chest for him!"); 
-//	B_LogEntry(CH2_SnipesDeal,"Aaron hat mir 20 Erz geboten, wenn ich ihm den Schlüssel seiner Truhe besorge!"); 
-	B_LogEntry(CH2_SnipesDeal,"Aaron mi nabídl 20 nugetů, když mu dám klíč od jeho truhlice!"); 
+//	B_LogEntry(CH2_SnipesDeal,"Aaron offered me 20 ore to get the keys to his chest for him!");
+//	B_LogEntry(CH2_SnipesDeal,"Aaron hat mir 20 Erz geboten, wenn ich ihm den Schlüssel seiner Truhe besorge!");
+	B_LogEntry(CH2_SnipesDeal,"Aaron mi nabídl 20 nugetů, když mu dám klíč od jeho truhlice!");
 };
 
 // ***************** Schlüssel verkaufen 2*****************************
@@ -268,12 +268,12 @@ instance GRD_262_Aaron_SELLNOW(C_INFO)
 	npc = GRD_262_Aaron;
 	condition = GRD_262_Aaron_SELLNOW_Condition;
 	information = GRD_262_Aaron_SELLNOW_Info;
-	important = 0; 
+	important = 0;
 	permanent = 0;
 //	description = "(sell key)";
 //	description = "(Schlüssel verkaufen)";
 	description = "(prodej klíč)";
-};                       
+};
 
 func int GRD_262_Aaron_SELLNOW_Condition()
 {
@@ -301,8 +301,8 @@ func void GRD_262_Aaron_SELLNOW_Info()
 
 	B_GiveXP(XP_SellKeyToAaron);
 
-//	B_LogEntry(CH2_SnipesDeal,"I've sold Aaron his own key. Altogether, I've made quite some profit with it!"); 
-//	B_LogEntry(CH2_SnipesDeal,"Ich habe Aaron seinen eigenen Schlüssel verkauft. Alles in allem habe ich bei der ganzen Sache ordentlich Profit gemacht!"); 
-	B_LogEntry(CH2_SnipesDeal,"Prodal jsem Aaronovi jeho vlastní klíč. Celkem vzato, nakonec jsem na tom vydělal!"); 
+//	B_LogEntry(CH2_SnipesDeal,"I've sold Aaron his own key. Altogether, I've made quite some profit with it!");
+//	B_LogEntry(CH2_SnipesDeal,"Ich habe Aaron seinen eigenen Schlüssel verkauft. Alles in allem habe ich bei der ganzen Sache ordentlich Profit gemacht!");
+	B_LogEntry(CH2_SnipesDeal,"Prodal jsem Aaronovi jeho vlastní klíč. Celkem vzato, nakonec jsem na tom vydělal!");
 	Log_SetTopicStatus(CH2_SnipesDeal,LOG_SUCCESS);
 };

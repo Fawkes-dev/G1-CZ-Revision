@@ -1,5 +1,5 @@
 // **************************************************
-//						 EXIT 
+//						 EXIT
 // **************************************************
 
 instance Info_Kharim_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance Info_Kharim_Exit(C_INFO)
 	information = Info_Kharim_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_Kharim_Exit_Condition()
 {
@@ -36,7 +36,7 @@ instance Info_Kharim_What(C_INFO)
 //	description = "I'm new here. Who are you?";
 //	description = "Ich bin neu hier. Wer bist du?";
 	description = "Jsem tady nový. Kdo jsi?";
-};                       
+};
 
 func int Info_Kharim_What_Condition()
 {
@@ -72,7 +72,7 @@ instance Info_Kharim_Charge(C_INFO)
 //	description = "I'll challenge you! Let's go to the arena!";
 //	description = "Ich fordere dich heraus! Lass es uns in der Arena austragen!";
 	description = "Vyzývám tě na souboj! Pojďme do arény!";
-};                       
+};
 
 func int Info_Kharim_Charge_Condition()
 {
@@ -210,7 +210,7 @@ instance Info_Kharim_InArena(C_INFO)
 	information = Info_Kharim_InArena_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int Info_Kharim_InArena_Condition()
 {
@@ -237,7 +237,7 @@ func void Info_Kharim_InArena_Info()
 	}
 	else
 	{
-//		AI_Output(self,other,"SVM_9_LetsForgetOurLittleFight"); //Von mir aus können wir unseren Streit vergessen ... 
+//		AI_Output(self,other,"SVM_9_LetsForgetOurLittleFight"); //Von mir aus können wir unseren Streit vergessen ...
 //		AI_Output(self,other,"SVM_9_LetsForgetOurLittleFight"); //Von mir aus können wir unseren Streit vergessen ...
 		AI_Output(self,other,"SVM_9_LetsForgetOurLittleFight"); //Co se mě týká, mohli bychom na naše malé nedorozumění zapomenout...
 		AI_StopProcessInfos(self);

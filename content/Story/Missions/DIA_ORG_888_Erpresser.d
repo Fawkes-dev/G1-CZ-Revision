@@ -8,12 +8,12 @@ instance Info_Erpresser(C_INFO)
 	information = Info_Erpresser_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int Info_Erpresser_Condition()
 {
-	if ((Npc_GetAttitude(self,other)!=ATT_FRIENDLY) 
-	&& (self.aivar[AIV_HAS_ERPRESSED]==FALSE) 
+	if ((Npc_GetAttitude(self,other)!=ATT_FRIENDLY)
+	&& (self.aivar[AIV_HAS_ERPRESSED]==FALSE)
 	&& (self.aivar[AIV_WASDEFEATEDBYSC]==FALSE))
 	{
 		return 1;
@@ -46,7 +46,7 @@ func void Info_Erpresser_Choice_AufsMaul()
 
 	self.aivar[AIV_HAS_ERPRESSED] = 2;
 
-	AI_StopProcessInfos(self); 
+	AI_StopProcessInfos(self);
 
 	Npc_SetTarget(self,other);
 	AI_StartState(self,ZS_Attack, 1,"");
@@ -93,7 +93,7 @@ instance Info_BereitsErpresst(C_INFO)
 	information = Info_BereitsErpresst_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int Info_BereitsErpresst_Condition()
 {
@@ -120,12 +120,12 @@ instance Info_BereitsAufsMaul(C_INFO)
 	information = Info_BereitsAufsMaul_Info;
 	permanent = 1;
 	important = 1;
-};                       
+};
 
 func int Info_BereitsAufsMaul_Condition()
 {
 	if ((self.aivar[AIV_HAS_ERPRESSED]==2)
-	&& (self.aivar[AIV_WASDEFEATEDBYSC]==FALSE) 
+	&& (self.aivar[AIV_WASDEFEATEDBYSC]==FALSE)
 	&& (Npc_IsInState(self,ZS_Talk)))
 	{
 		return 1;
@@ -147,10 +147,10 @@ instance Info_Exit(C_INFO)
 	nr = 999;
 	condition = Info_Exit_Condition;
 	information = Info_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int Info_Exit_Condition()
 {

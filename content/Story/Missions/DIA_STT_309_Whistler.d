@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Whistler_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Whistler_Exit(C_INFO)
 	information = DIA_Whistler_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Whistler_Exit_Condition()
 {
@@ -23,7 +23,7 @@ func void DIA_Whistler_Exit_Info()
 };
 
 // **************************************************
-// 					 Ich bin neu hier 
+// 					 Ich bin neu hier
 // **************************************************
 
 instance DIA_Whistler_IAmNew(C_INFO)
@@ -36,10 +36,10 @@ instance DIA_Whistler_IAmNew(C_INFO)
 //	description = "Hi! I'm new here!";
 //	description = "Hi! Ich bin neu hier.";
 	description = "Zdar! Jsem tu nový!";
-};                       
+};
 
 func int DIA_Whistler_IAmNew_Condition()
-{ 
+{
 	if (Npc_GetTrueGuild(hero) == GIL_NONE)
 	{
 		return 1;
@@ -81,7 +81,7 @@ instance DIA_Whistler_Favour(C_INFO)
 //	description = "What kind of favor do you want?";
 //	description = "Was ist das für ein Gefallen, den du von mir erwartest?";
 	description = "Jakou službičku ode mě očekáváš?";
-};                       
+};
 
 func int DIA_Whistler_Favour_Condition()
 {
@@ -188,7 +188,7 @@ instance DIA_Whistler_Running110(C_INFO)
 //	description = "Fisk wants 110 ore for his sword now.";
 //	description = "Fisk will jetzt 110 Erz für dein Schwert";
 	description = "Fisk teď chce za tvůj meč 110 nugetů.";
-};                       
+};
 
 func int DIA_Whistler_Running110_Condition()
 {
@@ -214,7 +214,7 @@ func void DIA_Whistler_Running110_Info()
 	AI_Output(self,other,"DIA_Whistler_Running110_11_03"); //Tady, vem si to a pospíchej!
 	CreateInvItems(self,itminugget,10);
 	B_GiveInvItems(self,hero,itminugget, 10);
-}; 
+};
 
 // **************************************************
 // 				RUNNING - PayBack
@@ -230,7 +230,7 @@ instance DIA_Whistler_RunningPayBack(C_INFO)
 //	description = "I can't get the sword - here's your 100 ore back.";
 //	description = "Ich kriege das Schwert nicht - hier hast du deine 100 Erz zurück.";
 	description = "Nedostal jsem ten meč - tady je tvých 100 nugetů zpátky.";
-};                       
+};
 
 func int DIA_Whistler_RunningPayBack_Condition()
 {
@@ -267,7 +267,7 @@ func void DIA_Whistler_RunningPayBack_Info()
 		AI_Output(self,other,"DIA_Whistler_RunningPayBack_11_02"); //Já ale nevidím žádných 100 nugetů - uděláš nejlíp, když odtud vypadneš, jak nejrychleji můžeš, jinak se dostaneš do maléru!
 		AI_StopProcessInfos(self);
 	};
-}; 
+};
 
 // **************************************************
 // 					 Too late
@@ -281,7 +281,7 @@ instance DIA_Whistler_MySword_TooLate(C_INFO)
 	information = DIA_Whistler_MySword_TooLate_Info;
 	permanent = 0;
 	important = 1;
-};                       
+};
 
 func int DIA_Whistler_MySword_TooLate_Condition()
 {
@@ -324,11 +324,11 @@ instance DIA_Whistler_MySword_Success(C_INFO)
 //	description = "I have your sword...";
 //	description = "Ich hab' dein Schwert...";
 	description = "Mám tvůj meč...";
-};                       
+};
 
 func int DIA_Whistler_MySword_Success_Condition()
 {
-	if ((Whistler_BuyMySword==LOG_RUNNING) && (Whistler_BuyMySword_Day>(Wld_GetDay()-2)) 
+	if ((Whistler_BuyMySword==LOG_RUNNING) && (Whistler_BuyMySword_Day>(Wld_GetDay()-2))
 		&& (Npc_HasItems(other,Whistlers_Schwert)>=1))
 	{
 		return 1;
@@ -382,7 +382,7 @@ instance DIA_Whistler_StandardKap1(C_INFO)
 //	description = "How's it going...";
 //	description = "Wie sieht's aus...";
 	description = "Jak to jde...";
-};                       
+};
 
 func int DIA_Whistler_StandardKap1_Condition()
 {

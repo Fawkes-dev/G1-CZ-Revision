@@ -8,7 +8,7 @@ instance KDF_403_Drago_RUNE(C_INFO)
 };
 
 func int KDF_403_Drago_RUNE_Condition()
-{ 
+{
 	if (Npc_KnowsInfo(hero,KDF_402_Corristo_ROBE))
 	{
 		return TRUE;
@@ -32,10 +32,10 @@ instance KDF_403_Drago_Exit(C_INFO)
 	nr = 999;
 	condition = KDF_403_Drago_Exit_Condition;
 	information = KDF_403_Drago_Exit_Info;
-	important = 0; 
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int KDF_403_Drago_Exit_Condition()
 {

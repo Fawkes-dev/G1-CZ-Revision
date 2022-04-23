@@ -1,5 +1,5 @@
 // **************************************************
-// 						 EXIT 
+// 						 EXIT
 // **************************************************
 
 instance DIA_Tpl_1415_Torwache_Exit(C_INFO)
@@ -10,7 +10,7 @@ instance DIA_Tpl_1415_Torwache_Exit(C_INFO)
 	information = DIA_Tpl_1415_Torwache_Exit_Info;
 	permanent = 1;
 	description = DIALOG_ENDE;
-};                       
+};
 
 func int DIA_Tpl_1415_Torwache_Exit_Condition()
 {
@@ -37,7 +37,7 @@ instance DIA_Tpl_1415_Torwache_First(C_INFO)
 };
 
 func int DIA_Tpl_1415_Torwache_First_Condition()
-{ 
+{
 	if (Kapitel >= 2)
 	{
 		return FALSE;
@@ -127,7 +127,7 @@ instance DIA_Tpl_1415_Torwache_Sit(C_INFO)
 };
 
 func int DIA_Tpl_1415_Torwache_Sit_Condition()
-{ 
+{
 	return 1;
 };
 
@@ -153,8 +153,8 @@ instance Tpl_1415_Torwache_TEMPLERAUFNAHME(C_INFO)
 };
 
 func int Tpl_1415_Torwache_TEMPLERAUFNAHME_Condition()
-{ 
-	if ((Npc_HasItems(hero,ItAt_Crawlerqueen) >= 1) 
+{
+	if ((Npc_HasItems(hero,ItAt_Crawlerqueen) >= 1)
 	|| (CorKalom_BringMCQBalls == LOG_SUCCESS))
 	&& (Npc_GetTrueGuild(hero) == GIL_NOV)
 	&& (Npc_GetDistToNpc(hero,self) < 1000)
@@ -164,7 +164,7 @@ func int Tpl_1415_Torwache_TEMPLERAUFNAHME_Condition()
 };
 func void Tpl_1415_Torwache_TEMPLERAUFNAHME_Info()
 {
-	AI_GotoNpc(hero,self); 
+	AI_GotoNpc(hero,self);
 //	AI_Output(self,other,"Tpl_1415_Torwache_IMPORTANT_Info_13_01"); //Hey, I've heard what happened in the mine. Good work. You deserve to be admitted to the templars!
 //	AI_Output(self,other,"Tpl_1415_Torwache_IMPORTANT_Info_13_01"); //Hey, ich habe schon gehört, was in der Mine geschehen ist. Gute Arbeit. Damit hast du dir deine Aufnahme zu den Templern verdient!
 	AI_Output(self,other,"Tpl_1415_Torwache_IMPORTANT_Info_13_01"); //Hej, slyšel jsem, co se stalo v dole. Dobrá práce. Zasloužil sis tím jmenování templářem!
@@ -179,7 +179,7 @@ func void Tpl_1415_Torwache_TEMPLERAUFNAHME_Info()
 };
 
 /*------------------------------------------------------------------------
-						Novizenröckchen 
+						Novizenröckchen
 ------------------------------------------------------------------------*/
 
 instance Tpl_1415_Templer_ROCK(C_INFO)
@@ -189,13 +189,13 @@ instance Tpl_1415_Templer_ROCK(C_INFO)
 	information = Tpl_1415_Templer_ROCK_Info;
 	important = 0;
 	permanent = 1;
-//	description = "I need armor."; 
-//	description = "Ich brauche eine Rüstung"; 
-	description = "Potřebuji zbroj."; 
+//	description = "I need armor.";
+//	description = "Ich brauche eine Rüstung";
+	description = "Potřebuji zbroj.";
 };
 
 func int Tpl_1415_Templer_ROCK_Condition()
-{ 
+{
 	if (Kapitel < 2)
 	{
 		return TRUE;

@@ -8,6 +8,7 @@ instance DIA_Homer_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_Homer_EXIT_Condition;
 	information = DIA_Homer_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Homer_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_Homer_Hello_Condition;
 	information = DIA_Homer_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Are you looking for something?";
 //	description = "Hältst du nach irgendwas Ausschau?";
@@ -70,6 +72,7 @@ instance DIA_Homer_BuiltDam(C_INFO)
 	nr = 2;
 	condition = DIA_Homer_BuiltDam_Condition;
 	information = DIA_Homer_BuiltDam_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Did YOU build the dam?";
 //	description = "Hast DU den Damm gebaut?";
@@ -82,6 +85,8 @@ func int DIA_Homer_BuiltDam_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Homer_BuiltDam_Info()
@@ -109,6 +114,7 @@ instance DIA_Homer_WannaHelp(C_INFO)
 	nr = 1;
 	condition = DIA_Homer_WannaHelp_Condition;
 	information = DIA_Homer_WannaHelp_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Is there anything I can do to help?";
 //	description = "Kann ich dir helfen?";
@@ -121,6 +127,8 @@ func int DIA_Homer_WannaHelp_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Homer_WannaHelp_Info()
@@ -152,6 +160,7 @@ instance DIA_Homer_Running(C_INFO)
 	nr = 1;
 	condition = DIA_Homer_Running_Condition;
 	information = DIA_Homer_Running_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Where can I find the beast?";
 //	description = "Wo finde ich das Biest?";
@@ -164,6 +173,8 @@ func int DIA_Homer_Running_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Homer_Running_Info()
@@ -192,6 +203,7 @@ instance DIA_Homer_Success(C_INFO)
 	nr = 2;
 	condition = DIA_Homer_Success_Condition;
 	information = DIA_Homer_Success_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I've killed the beast!";
 //	description = "Ich hab' das Biest erledigt!";
@@ -203,12 +215,14 @@ func int DIA_Homer_Success_Condition()
 	var C_NPC lurker; lurker = Hlp_GetNpc(DamLurker);
 	PrintDebugString(PD_MISSION, "name: ", lurker.name);
 	PrintDebugInt (PD_MISSION, "hp: ", lurker.attribute[ATR_HITPOINTS]);
-	if (Homer_DamLurker==LOG_RUNNING)
+	if ((Homer_DamLurker == LOG_RUNNING)
 	//&& (Npc_IsDead(lurker)) //SN: auskommentiert, da Hlp_GetNpc() die C_NPC lurker nicht initialisieren kann!
-	&& (Npc_HasItems(hero,ItAt_DamLurker_01)) //SN: Workaround!
+	&& (Npc_HasItems(hero,ItAt_DamLurker_01))) //SN: Workaround!
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Homer_Success_Info()
@@ -244,6 +258,7 @@ instance DIA_Homer_PERM(C_INFO)
 	nr = 2;
 	condition = DIA_Homer_PERM_Condition;
 	information = DIA_Homer_PERM_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Everything okay with the dam?";
 //	description = "Alles klar beim Damm?";
@@ -252,10 +267,12 @@ instance DIA_Homer_PERM(C_INFO)
 
 func int DIA_Homer_PERM_Condition()
 {
-	if (Homer_DamLurker ==LOG_SUCCESS)
+	if (Homer_DamLurker == LOG_SUCCESS)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Homer_PERM_Info()
@@ -267,4 +284,3 @@ func void DIA_Homer_PERM_Info()
 //	AI_Output(self,other,"DIA_Homer_PERM_02_01"); //Steht wie 'ne Festung, den kriegt so schnell nichts klein.
 	AI_Output(self,other,"DIA_Homer_PERM_02_01"); //Stojí jako pevnost, jen tak rychle ji nic nerozboří.
 };
-

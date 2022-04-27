@@ -8,6 +8,7 @@ instance Org_818_Ratford_Exit(C_INFO)
 	nr = 999;
 	condition = Org_818_Ratford_Exit_Condition;
 	information = Org_818_Ratford_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,8 +33,8 @@ instance Org_818_Ratford_WrongWay(C_INFO)
 	nr = 1;
 	condition = Org_818_Ratford_WrongWay_Condition;
 	information = Org_818_Ratford_WrongWay_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Org_818_Ratford_WrongWay_Condition()
@@ -64,6 +65,7 @@ instance Org_818_Ratford_WhatGame(C_INFO)
 	nr = 1;
 	condition = Org_818_Ratford_WhatGame_Condition;
 	information = Org_818_Ratford_WhatGame_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What do you hunt?";
 //	description = "Was jagt ihr denn so?";
@@ -101,6 +103,7 @@ instance Org_818_Ratford_WhyDangerous(C_INFO)
 	nr = 1;
 	condition = Org_818_Ratford_WhyDangerous_Condition;
 	information = Org_818_Ratford_WhyDangerous_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Why's this area so dangerous?";
 //	description = "Was ist an diesem Gebiet so gefährlich?";
@@ -138,6 +141,7 @@ instance Org_818_Ratford_WoEquipment(C_INFO)
 	nr = 1;
 	condition = Org_818_Ratford_WoEquipment_Condition;
 	information = Org_818_Ratford_WoEquipment_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Where can I get better equipment?";
 //	description = "Wo kriege ich bessere Ausrüstung her?";
@@ -150,6 +154,8 @@ func int Org_818_Ratford_WoEquipment_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_818_Ratford_WoEquipment_Info()
@@ -183,6 +189,7 @@ instance Org_818_Ratford_MoreLocations(C_INFO)
 	nr = 1;
 	condition = Org_818_Ratford_MoreLocations_Condition;
 	information = Org_818_Ratford_MoreLocations_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Tell me more about the areas of the colony.";
 //	description = "Erzähl mir mehr über die Gebiete der Kolonie.";
@@ -195,6 +202,8 @@ func int Org_818_Ratford_MoreLocations_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_818_Ratford_MoreLocations_Info()
@@ -229,6 +238,7 @@ instance Org_818_Ratford_WoKarte(C_INFO)
 	nr = 1;
 	condition = Org_818_Ratford_WoKarte_Condition;
 	information = Org_818_Ratford_WoKarte_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Where do I get a map?";
 //	description = "Wo kriege ich eine Karte her?";
@@ -241,6 +251,8 @@ func int Org_818_Ratford_WoKarte_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_818_Ratford_WoKarte_Info()
@@ -300,6 +312,7 @@ instance Org_818_Ratford_Thanks(C_INFO)
 	nr = 888;
 	condition = Org_818_Ratford_Thanks_Condition;
 	information = Org_818_Ratford_Thanks_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Thanks for your help.";
 //	description = "Danke für die Hilfe.";
@@ -326,4 +339,3 @@ func void Org_818_Ratford_Thanks_Info()
 //	AI_Output(other,self,"Org_818_Ratford_Thanks_15_04"); //Werd's mir merken.
 	AI_Output(other,self,"Org_818_Ratford_Thanks_15_04"); //Budu si to pamatovat.
 };
-

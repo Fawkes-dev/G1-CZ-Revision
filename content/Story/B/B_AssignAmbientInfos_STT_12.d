@@ -12,6 +12,7 @@ instance Info_Stt_12_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Stt_12_EXIT_Condition;
 	information = Info_Stt_12_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = "END";
 };
@@ -35,6 +36,7 @@ instance Info_Stt_12_EinerVonEuchWerden(C_INFO) // E1
 	nr = 4;
 	condition = Info_Stt_12_EinerVonEuchWerden_Condition;
 	information = Info_Stt_12_EinerVonEuchWerden_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I'd like to join the Shadows.";
 //	description = "Ich würde mich gerne den Schatten anschliessen.";
@@ -77,6 +79,7 @@ instance Info_Stt_12_WichtigePersonen(C_INFO)
 	nr = 3;
 	condition = Info_Stt_12_WichtigePersonen_Condition;
 	information = Info_Stt_12_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Who's the boss of this place?";
 //	description = "Wer ist hier der Boss?";
@@ -112,6 +115,7 @@ instance Info_Stt_12_DasLager(C_INFO)
 	nr = 2;
 	condition = Info_Stt_12_DasLager_Condition;
 	information = Info_Stt_12_DasLager_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I want to know what this camp has to offer.";
 //	description = "Ich will wissen, was es hier im Lager alles gibt.";
@@ -142,6 +146,7 @@ instance Info_Stt_12_DieLage(C_INFO) // E1
 	nr = 1;
 	condition = Info_Stt_12_DieLage_Condition;
 	information = Info_Stt_12_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Well, how's it going?";
 //	description = "Na, wie steht's?";

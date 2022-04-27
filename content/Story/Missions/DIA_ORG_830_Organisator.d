@@ -8,6 +8,7 @@ instance Info_ORG_830_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_ORG_830_EXIT_Condition;
 	information = Info_ORG_830_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance Info_ORG_830_Hello(C_INFO)
 	nr = 1;
 	condition = Info_ORG_830_Hello_Condition;
 	information = Info_ORG_830_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Hi! I'm new here.";
 //	description = "Hi! Ich bin neu hier.";
@@ -63,6 +65,7 @@ instance Info_ORG_830_What(C_INFO)
 	nr = 1;
 	condition = Info_ORG_830_What_Condition;
 	information = Info_ORG_830_What_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What are you doing?";
 //	description = "Was machst du hier?";
@@ -75,6 +78,8 @@ func int Info_ORG_830_What_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_ORG_830_What_Info()
@@ -100,6 +105,7 @@ instance Info_ORG_830_Aufhalten(C_INFO)
 	nr = 2;
 	condition = Info_ORG_830_Aufhalten_Condition;
 	information = Info_ORG_830_Aufhalten_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Aren't you going to try and stop me? Ask me what or something?";
 //	description = "Willst du mich nicht aufhalten? Mich fragen, was ich hier will oder so?";
@@ -112,6 +118,8 @@ func int Info_ORG_830_Aufhalten_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_ORG_830_Aufhalten_Info()
@@ -134,6 +142,7 @@ instance Info_ORG_830_Perm(C_INFO)
 	nr = 3;
 	condition = Info_ORG_830_Perm_Condition;
 	information = Info_ORG_830_Perm_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What's it like inside?";
 //	description = "Wie sieht's drinnen aus?";
@@ -146,6 +155,8 @@ func int Info_ORG_830_Perm_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_ORG_830_Perm_Info()

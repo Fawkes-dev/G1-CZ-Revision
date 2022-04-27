@@ -8,6 +8,7 @@ instance Info_Nefarius_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Nefarius_EXIT_Condition;
 	information = Info_Nefarius_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance Info_Nefarius_Hallo(C_INFO)
 	nr = 1;
 	condition = Info_Nefarius_Hallo_Condition;
 	information = Info_Nefarius_Hallo_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Who are you?";
 //	description = "Wer bist du?";
@@ -63,6 +65,7 @@ instance Info_Nefarius_WoSaturas(C_INFO)
 	nr = 2;
 	condition = Info_Nefarius_WoSaturas_Condition;
 	information = Info_Nefarius_WoSaturas_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Where can I find Saturas?";
 //	description = "Wo finde ich Saturas?";
@@ -94,6 +97,7 @@ instance Info_Nefarius_WannaMage(C_INFO)
 	nr = 1;
 	condition = Info_Nefarius_WannaMage_Condition;
 	information = Info_Nefarius_WannaMage_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I'd like to become a Magician of the Circle of Water!";
 //	description = "Ich will ein Magier vom Kreis des Wassers werden!";
@@ -106,6 +110,8 @@ func int Info_Nefarius_WannaMage_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Nefarius_WannaMage_Info()
@@ -140,6 +146,7 @@ instance Info_Nefarius_NowReady(C_INFO)
 	nr = 1;
 	condition = Info_Nefarius_NowReady_Condition;
 	information = Info_Nefarius_NowReady_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Am I ready for the Circle of Water?";
 //	description = "Bin ich bereit für den Kreis des Wassers?";
@@ -148,10 +155,14 @@ instance Info_Nefarius_NowReady(C_INFO)
 
 func int Info_Nefarius_NowReady_Condition()
 {
-	if ( !FMTaken && Npc_KnowsInfo(hero,Info_Nefarius_WannaMage) && (Npc_GetTrueGuild(hero)!=GIL_KDW))
+	if ((!FMTaken)
+	&& (Npc_KnowsInfo(hero,Info_Nefarius_WannaMage))
+	&& (Npc_GetTrueGuild(hero) != GIL_KDW))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Nefarius_NowReady_Info()
@@ -193,17 +204,19 @@ instance Info_Nefarius_OCNews(C_INFO)
 	nr = 1;
 	condition = Info_Nefarius_OCNews_Condition;
 	information = Info_Nefarius_OCNews_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_Nefarius_OCNews_Condition()
 {
-	if FMTaken
-	&& !FindXardas
+	if ((FMTaken)
+	&& (!FindXardas))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Nefarius_OCNews_Info()
@@ -217,7 +230,7 @@ func void Info_Nefarius_OCNews_Info()
 //	AI_Output(self,other,"Info_Nefarius_OCNews_04_02"); //No! The cretin! I warned Corristo - he was never to be trusted! You must tell Saturas about it!
 //	AI_Output(self,other,"Info_Nefarius_OCNews_04_02"); //Nein! Dieser Hund! Ich hatte Corristo gewarnt - ihm war noch nie zu trauen! Du mußt Saturas davon berichten!
 	AI_Output(self,other,"Info_Nefarius_OCNews_04_02"); //Ne! Ten grázl! Varoval jsem Corrista - nikdy se mu nedalo věřit! Musíš o tom říci Saturasovi!
-	if (Npc_GetTrueGuild(hero)==GIL_SLD)
+	if (Npc_GetTrueGuild(hero) == GIL_SLD)
 	{
 //		AI_Output(self,other,"Info_Nefarius_OCNews_04_03"); //Wait!
 //		AI_Output(self,other,"Info_Nefarius_OCNews_04_03"); //Warte!

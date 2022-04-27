@@ -8,6 +8,7 @@ instance Info_Kirgo_Exit(C_INFO)
 	nr = 999;
 	condition = Info_Kirgo_Exit_Condition;
 	information = Info_Kirgo_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance Info_Kirgo_What(C_INFO)
 	nr = 1;
 	condition = Info_Kirgo_What_Condition;
 	information = Info_Kirgo_What_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Hi! I'm new here.";
 //	description = "Hi! Ich bin neu hier.";
@@ -44,7 +46,10 @@ func int Info_Kirgo_What_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
+
 func void Info_Kirgo_What_Info()
 {
 //	AI_Output(other,self,"Info_Kirgo_What_15_00"); //Hi! I'm new here.
@@ -68,6 +73,7 @@ instance Info_Kirgo_Good(C_INFO)
 	nr = 1;
 	condition = Info_Kirgo_Good_Condition;
 	information = Info_Kirgo_Good_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Are you good? At fighting, I mean?";
 //	description = "Bist du gut? - Im Kämpfen meine ich.";
@@ -80,6 +86,8 @@ func int Info_Kirgo_Good_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Kirgo_Good_Info()
@@ -102,6 +110,7 @@ instance Info_Kirgo_Charge(C_INFO)
 	nr = 1;
 	condition = Info_Kirgo_Charge_Condition;
 	information = Info_Kirgo_Charge_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I'd like to challenge you to a fight in the arena!";
 //	description = "Ich fordere dich zum Kampf in der Arena!";
@@ -110,10 +119,14 @@ instance Info_Kirgo_Charge(C_INFO)
 
 func int Info_Kirgo_Charge_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Scatty_JoinOC) && Npc_KnowsInfo(hero,Info_Kirgo_What) && (Kapitel <= 1)) // Kapitelfix   ***Björn***
+	if ((Npc_KnowsInfo(hero,DIA_Scatty_JoinOC))
+	&& (Npc_KnowsInfo(hero,Info_Kirgo_What))
+	&& (Kapitel <= 1)) // Kapitelfix   ***Björn***
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Kirgo_Charge_Info()
@@ -198,6 +211,7 @@ instance Info_Kirgo_ChargeREAL(C_INFO)
 	nr = 1;
 	condition = Info_Kirgo_ChargeREAL_Condition;
 	information = Info_Kirgo_ChargeREAL_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Let's fight - are you ready?";
 //	description = "Lass uns kämpfen - Bist du bereit?";
@@ -206,10 +220,13 @@ instance Info_Kirgo_ChargeREAL(C_INFO)
 
 func int Info_Kirgo_ChargeREAL_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Kirgo_Charge) && (Kapitel <= 1)) //Kapitelfix ****Björn****
+	if ((Npc_KnowsInfo(hero,Info_Kirgo_Charge))
+	&& (Kapitel <= 1)) //Kapitelfix ****Björn****
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Kirgo_ChargeREAL_Info()
@@ -238,16 +255,19 @@ instance Info_Kirgo_InArena(C_INFO)
 	nr = 1;
 	condition = Info_Kirgo_InArena_Condition;
 	information = Info_Kirgo_InArena_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_Kirgo_InArena_Condition()
 {
-	if ((Kirgo_Charged == TRUE) && (Npc_GetDistToWp (hero,"OCR_ARENABATTLE_TRAIN") < 500))
+	if ((Kirgo_Charged == TRUE)
+	&& (Npc_GetDistToWp (hero,"OCR_ARENABATTLE_TRAIN") < 500))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Kirgo_InArena_Info()
@@ -273,6 +293,4 @@ func void Info_Kirgo_InArena_Info()
 		AI_StopProcessInfos(self);
 		Npc_ExchangeRoutine(self,"START");
 	};
-
 };
-

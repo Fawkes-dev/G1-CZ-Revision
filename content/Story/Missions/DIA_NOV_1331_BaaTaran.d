@@ -8,6 +8,7 @@ instance DIA_BaalTaran_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_BaalTaran_EXIT_Condition;
 	information = DIA_BaalTaran_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_BaalTaran_Greet(C_INFO)
 	nr = 1;
 	condition = DIA_BaalTaran_Greet_Condition;
 	information = DIA_BaalTaran_Greet_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I'm new here. Who are you?";
 //	description = "Ich bin neu hier. Wer bist du?";
@@ -63,6 +65,7 @@ instance DIA_BaalTaran_Bruderschaft(C_INFO)
 	nr = 1;
 	condition = DIA_BaalTaran_Bruderschaft_Condition;
 	information = DIA_BaalTaran_Bruderschaft_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What is the Brotherhood of the Sleeper?";
 //	description = "Was ist die Bruderschaft des Schläfers?";
@@ -75,6 +78,8 @@ func int DIA_BaalTaran_Bruderschaft_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalTaran_Bruderschaft_Info()
@@ -100,6 +105,7 @@ instance DIA_BaalTaran_Sleeper(C_INFO)
 	nr = 1;
 	condition = DIA_BaalTaran_Sleeper_Condition;
 	information = DIA_BaalTaran_Sleeper_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Who is the Sleeper?";
 //	description = "Wer ist der Schläfer?";
@@ -112,6 +118,8 @@ func int DIA_BaalTaran_Sleeper_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalTaran_Sleeper_Info()
@@ -140,6 +148,7 @@ instance DIA_BaalTaran_Lehre(C_INFO)
 	nr = 3;
 	condition = DIA_BaalTaran_Lehre_Condition;
 	information = DIA_BaalTaran_Lehre_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Tell me about the Sleeper's teachings.";
 //	description = "Erzähl mir von der Lehre des Schläfers.";
@@ -152,6 +161,8 @@ func int DIA_BaalTaran_Lehre_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalTaran_Lehre_Info()
@@ -186,6 +197,7 @@ instance DIA_BaalTaran_Freiheit(C_INFO)
 	nr = 4;
 	condition = DIA_BaalTaran_Freiheit_Condition;
 	information = DIA_BaalTaran_Freiheit_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What will the way to freedom look like?";
 //	description = "Wie soll der Weg in die Freiheit aussehen?";
@@ -198,6 +210,8 @@ func int DIA_BaalTaran_Freiheit_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalTaran_Freiheit_Info()
@@ -223,6 +237,7 @@ instance DIA_BaalTaran_Beweis(C_INFO)
 	nr = 3;
 	condition = DIA_BaalTaran_Beweis_Condition;
 	information = DIA_BaalTaran_Beweis_Info;
+	important = 0;
 	permanent = 0;
 //	description = "How does your god prove his might?";
 //	description = "Wie beweist euch euer Gott seine Macht?";
@@ -235,6 +250,8 @@ func int DIA_BaalTaran_Beweis_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalTaran_Beweis_Info()
@@ -263,6 +280,7 @@ instance DIA_BaalTaran_WayToST(C_INFO)
 	nr = 1;
 	condition = DIA_BaalTaran_WayToST_Condition;
 	information = DIA_BaalTaran_WayToST_Info;
+	important = 0;
 	permanent = 0;
 //	description = "How do I get to the Brotherhood's camp?";
 //	description = "Wie komme ich zum Lager der Bruderschaft?";
@@ -275,6 +293,8 @@ func int DIA_BaalTaran_WayToST_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalTaran_WayToST_Info()
@@ -309,6 +329,7 @@ instance DIA_BaalTaran_IntoCastle(C_INFO)
 	nr = 10;
 	condition = DIA_BaalTaran_IntoCastle_Condition;
 	information = DIA_BaalTaran_IntoCastle_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I need to get into the castle. Can you help me?";
 //	description = "Ich muss in die Burg. Kannst du mir dabei helfen?";
@@ -321,6 +342,8 @@ func int DIA_BaalTaran_IntoCastle_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalTaran_IntoCastle_Info()

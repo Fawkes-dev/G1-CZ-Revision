@@ -23,6 +23,7 @@ func void Grd_260_Drake_Exit_Info()
 	AI_Output(other,self,"Info_Exit_Info_15_01"); //Ještě se uvidíme.
 	AI_StopProcessInfos(self);
 };
+
 /**************** GEFAHREN *********************/
 
 instance Grd_260_Drake_Gefahr(C_INFO) //E1
@@ -84,6 +85,8 @@ func int Grd_260_Drake_Crawler_Okay_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Grd_260_Drake_Crawler_Okay_Info()
@@ -120,8 +123,9 @@ func void Grd_260_Drake_Crawler_Okay_Info()
 //		AI_Output(self,other,"Grd_260_Drake_Crawler_Okay_11_06");//Willst du mich verarschen? Komm wieder, wenn du Bier hast.
 		AI_Output(self,other,"Grd_260_Drake_Crawler_Okay_11_06");//Děláš si ze mě blázny? Vrať se, až budeš mít nějaké pivo.
    		Grd_260_Drake_Crawler_Okay.permanent = 1;
-   };
+	};
 };
+
 // ***************** DIE MINE *****************************
 
 instance Grd_260_Drake_Mine(C_INFO) //E1
@@ -178,6 +182,8 @@ func int Grd_260_Drake_Mine_Mehr_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Grd_260_Drake_Mine_Mehr_Info()
@@ -209,10 +215,13 @@ instance Grd_260_Drake_Ian(C_INFO) //E1
 
 func int Grd_260_Drake_Ian_Condition()
 {
-	if !(Npc_KnowsInfo(hero,STT_301_IAN_HI)) && (Npc_KnowsInfo(hero,Grd_260_Drake_Mine_Mehr))
+	if ((!Npc_KnowsInfo(hero,STT_301_IAN_HI))
+	&& (Npc_KnowsInfo(hero,Grd_260_Drake_Mine_Mehr)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Grd_260_Drake_Ian_Info()
@@ -249,12 +258,14 @@ instance Grd_260_Drake_GARDEAUFNAHME(C_INFO)
 
 func int Grd_260_Drake_GARDEAUFNAHME_Condition()
 {
-	if (Npc_HasItems(hero,ItAt_Crawlerqueen) >= 1)
+	if ((Npc_HasItems(hero,ItAt_Crawlerqueen) >= 1)
 	&& (Npc_GetTrueGuild(hero) == GIL_STT)
-	&& (!Npc_KnowsInfo(hero,Grd_264_Gardist_GARDEAUFNAHME))
+	&& (!Npc_KnowsInfo(hero,Grd_264_Gardist_GARDEAUFNAHME)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Grd_260_Drake_GARDEAUFNAHME_Info()

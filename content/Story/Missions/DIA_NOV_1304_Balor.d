@@ -35,6 +35,7 @@ instance DIA_Balor_FetchWeed(C_INFO)
 	nr = 1;
 	condition = DIA_Balor_FetchWeed_Condition;
 	information = DIA_Balor_FetchWeed_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Baal Orun sent me. I'm to collect all the swampweed.";
 //	description = "Baal Orun schickt mich. Ich soll hier alles Sumpfkraut abholen.";
@@ -94,6 +95,7 @@ instance DIA_Balor_SellUnder(C_INFO)
 	nr = 1;
 	condition = DIA_Balor_SellUnder_Condition;
 	information = DIA_Balor_SellUnder_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Who could I sell the weeds to anyway?";
 //	description = "Wem sollte ich das Kraut denn schon verhökern?";
@@ -174,6 +176,7 @@ instance DIA_Balor_TellDealer(C_INFO)
 	nr = 1;
 	condition = DIA_Balor_TellDealer_Condition;
 	information = DIA_Balor_TellDealer_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Okay - who's the buyer in the New Camp?";
 //	description = "Okay - wer ist der Abnehmer im Neuen Lager?";
@@ -270,6 +273,7 @@ instance DIA_Balor_RipOff(C_INFO)
 	nr = 5;
 	condition = DIA_Balor_RipOff_Condition;
 	information = DIA_Balor_RipOff_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I'm to pick up the next delivery for Cor Kalom.";
 //	description = "Ich soll nochmal alles Kraut zu Cor Kalom bringen.";
@@ -278,10 +282,13 @@ instance DIA_Balor_RipOff(C_INFO)
 
 func int DIA_Balor_RipOff_Condition()
 {
-	if ((Balor_BotenDay<=(Wld_GetDay()-2)) && Npc_KnowsInfo(hero,DIA_Balor_FetchWeed)) //Dann hat der SC auch das erste Kraut bekommen
+	if (((Balor_BotenDay <= (Wld_GetDay() - 2))
+	&& (Npc_KnowsInfo(hero,DIA_Balor_FetchWeed))) //Dann hat der SC auch das erste Kraut bekommen
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Balor_RipOff_Info()
@@ -321,6 +328,7 @@ instance DIA_Balor_Perm(C_INFO)
 	nr = 1;
 	condition = DIA_Balor_Perm_Condition;
 	information = DIA_Balor_Perm_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Just keep picking hard!";
 //	description = "Immer tüchtig weitersammeln!";
@@ -333,6 +341,8 @@ func int DIA_Balor_Perm_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Balor_Perm_Info()

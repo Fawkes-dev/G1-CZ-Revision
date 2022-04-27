@@ -16,6 +16,8 @@ func int DIA_SLD_760_Soeldner_INTRO_CONDITION()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_SLD_760_Soeldner_INTRO_INFO()
@@ -29,8 +31,8 @@ func void DIA_SLD_760_Soeldner_INTRO_INFO()
 
 instance DIA_SLD_760_Soeldner_EXIT_1(C_INFO)
 {
-	nr = 999;
 	npc = SLD_760_Soeldner;
+	nr = 999;
 	condition = DIA_SLD_760_Soeldner_EXIT_1_CONDITION;
 	information = DIA_SLD_760_Soeldner_EXIT_1_INFO;
 	important = 0;
@@ -60,8 +62,8 @@ func void DIA_SLD_760_Soeldner_EXIT_1_INFO()
 
 instance DIA_SLD_760_Soeldner_EXIT_2(C_INFO)
 {
-	nr = 999;
 	npc = SLD_760_Soeldner;
+	nr = 999;
 	condition = DIA_SLD_760_Soeldner_EXIT_2_CONDITION;
 	information = DIA_SLD_760_Soeldner_EXIT_2_INFO;
 	important = 0;
@@ -77,6 +79,8 @@ func int DIA_SLD_760_Soeldner_EXIT_2_CONDITION()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_SLD_760_Soeldner_EXIT_2_INFO()
@@ -172,4 +176,3 @@ func void DIA_SLD_760_Soeldner_INMINE_INFO()
 //	AI_Output(self,other,"DIA_SLD_760_Soeldner_INMINE_INFO_13_07");//Ich weiß zwar nicht, wo er gerade ist, aber wenn du ihm begegnest. solltest du das immer im Hinterkopf haben.
 	AI_Output(self,other,"DIA_SLD_760_Soeldner_INMINE_INFO_13_07");//Zrovna nevím kde je, ale jestli ho potkáš, měl bys mít tuhle věc stále na paměti.
 };
-

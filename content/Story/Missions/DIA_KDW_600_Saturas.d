@@ -33,16 +33,18 @@ instance Info_Saturas_Intruder(C_INFO)
 	nr = 1;
 	condition = Info_Saturas_Intruder_Condition;
 	information = Info_Saturas_Intruder_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_Saturas_Intruder_Condition()
 {
-	if (Npc_IsInState(self,ZS_Talk) && (Kapitel < 3))
+	if ((Npc_IsInState(self,ZS_Talk)) && (Kapitel < 3))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_Intruder_Info()
@@ -70,8 +72,8 @@ instance Info_Saturas_NEWS(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_NEWS_Condition;
 	information = Info_Saturas_NEWS_Info;
-	permanent = 0;
 	IMPORTANT = 0;
+	permanent = 0;
 //	description = "I have important news from the Brotherhood's camp!";
 //	description = "Ich habe wichtige Neuigkeiten aus dem Lager der Bruderschaft!";
 	description = "Mám důležité zprávy z tábora Bratrstva!";
@@ -79,10 +81,13 @@ instance Info_Saturas_NEWS(C_INFO)
 
 func int Info_Saturas_NEWS_Condition()
 {
-	if ((CorAngar_SendToNC==TRUE) && Npc_KnowsInfo(hero,Info_Cronos_SLEEPER))
+	if ((CorAngar_SendToNC == TRUE)
+	&& (Npc_KnowsInfo(hero,Info_Cronos_SLEEPER)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_NEWS_Info()
@@ -103,8 +108,8 @@ instance Info_Saturas_YBERION(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_YBERION_Condition;
 	information = Info_Saturas_YBERION_Info;
-	permanent = 0;
 	IMPORTANT = 0;
+	permanent = 0;
 //	description = "Y'Berion is dead!";
 //	description = "Y'Berion ist tot";
 	description = "Y´Berion je mrtev!";
@@ -114,8 +119,10 @@ func int Info_Saturas_YBERION_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Saturas_NEWS))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_YBERION_Info()
@@ -164,8 +171,8 @@ instance Info_Saturas_BOOK(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_BOOK_Condition;
 	information = Info_Saturas_BOOK_Info;
-	permanent = 0;
 	IMPORTANT = 0;
+	permanent = 0;
 //	description = "I have this almanac...";
 //	description = "Ich habe diesen Almanach hier";
 	description = "Mám tento almanach...";
@@ -173,10 +180,13 @@ instance Info_Saturas_BOOK(C_INFO)
 
 func int Info_Saturas_BOOK_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Saturas_YBERION) && Npc_HasItems(hero,ItWrFokusbuch))
+	if ((Npc_KnowsInfo(hero,Info_Saturas_YBERION))
+	&& (Npc_HasItems(hero,ItWrFokusbuch)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_BOOK_Info()
@@ -207,8 +217,8 @@ instance Info_Saturas_FOCUS(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_FOCUS_Condition;
 	information = Info_Saturas_FOCUS_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "I have this focus...";
 //	description = "Ich habe diesen Fokus hier";
 	description = "Mám toto ohnisko...";
@@ -216,10 +226,13 @@ instance Info_Saturas_FOCUS(C_INFO)
 
 func int Info_Saturas_FOCUS_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Saturas_YBERION) && Npc_HasItems(hero,Focus_1))
+	if ((Npc_KnowsInfo(hero,Info_Saturas_YBERION))
+	&& (Npc_HasItems(hero,Focus_1)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_FOCUS_Info()
@@ -268,8 +281,8 @@ instance Info_Saturas_WHATNOW(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_WHATNOW_Condition;
 	information = Info_Saturas_WHATNOW_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "What are you going to do with the focus and the almanac now?";
 //	description = "Was machst du jetzt mit Fokus und Almanach?";
 	description = "Co teď budeš dělat s tím ohniskem a almanachem?";
@@ -277,10 +290,13 @@ instance Info_Saturas_WHATNOW(C_INFO)
 
 func int Info_Saturas_WHATNOW_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Saturas_FOCUS) && Npc_KnowsInfo(hero,Info_Saturas_BOOK))
+	if ((Npc_KnowsInfo(hero,Info_Saturas_FOCUS))
+	&& (Npc_KnowsInfo(hero,Info_Saturas_BOOK)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_WHATNOW_Info()
@@ -304,8 +320,8 @@ instance Info_Saturas_OFFER(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_OFFER_Condition;
 	information = Info_Saturas_OFFER_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "I'm willing to find the four remaining focus stones for you!";
 //	description = "Ich bin bereit diese vier Foki für euch zu suchen!";
 	description = "Jsem ochoten pro vás ty zbývající čtyři ohniskové kameny najít!";
@@ -315,8 +331,10 @@ func int Info_Saturas_OFFER_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Saturas_WHATNOW))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_OFFER_Info()
@@ -443,11 +461,10 @@ func void B_DeliverFocus()
 		Log_SetTopicStatus(CH3_Stonehenge,LOG_SUCCESS);
 		Log_SetTopicStatus(CH3_Fortress,LOG_SUCCESS);
 		Log_SetTopicStatus(CH3_TrollCanyon,LOG_SUCCESS);
-
 	};
 
 	//-------- Neuer Teleportzauber ? --------
-	if ( !Npc_HasItems(hero,ItArScrollTeleport2) && (Saturas_BringFoci < 5))
+	if ((!Npc_HasItems(hero,ItArScrollTeleport2)) && (Saturas_BringFoci < 5))
 	{
 //		AI_Output(self,other,"Info_Saturas_BRINGFOCUS_14_14"); //I see you've used up the teleportation scroll. Here, take a new one.
 //		AI_Output(self,other,"Info_Saturas_BRINGFOCUS_14_14"); //Du hast die Teleport-Spruchrolle verbraucht, wie ich sehe. Hier, nimm eine neue.
@@ -465,8 +482,8 @@ instance Info_Saturas_BRINGFOCUS2(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_BRINGFOCUS2_Condition;
 	information = Info_Saturas_BRINGFOCUS2_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "I've found a focus in the troll canyon!";
 //	description = "Ich habe in der Trollschlucht einen Fokus gefunden!";
 	description = "Našel jsem ohnisko v Kaňonu trolů!";
@@ -474,10 +491,13 @@ instance Info_Saturas_BRINGFOCUS2(C_INFO)
 
 func int Info_Saturas_BRINGFOCUS2_Condition()
 {
-	if (Npc_HasItems(hero,focus_2) && (Saturas_BringFoci > 0))
+	if ((Npc_HasItems(hero,focus_2))
+	&& (Saturas_BringFoci > 0))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_BRINGFOCUS2_Info()
@@ -505,8 +525,8 @@ instance Info_Saturas_BRINGFOCUS3(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_BRINGFOCUS3_Condition;
 	information = Info_Saturas_BRINGFOCUS3_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "I've found a focus in the mountain fort!";
 //	description = "Ich habe in der Bergfestung einen Fokus gefunden!";
 	description = "Našel jsem ohnisko v horské pevnosti!";
@@ -514,10 +534,13 @@ instance Info_Saturas_BRINGFOCUS3(C_INFO)
 
 func int Info_Saturas_BRINGFOCUS3_Condition()
 {
-	if (Npc_HasItems(hero,focus_3) && (Saturas_BringFoci > 0))
+	if ((Npc_HasItems(hero,focus_3))
+	&& (Saturas_BringFoci > 0))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_BRINGFOCUS3_Info()
@@ -545,8 +568,8 @@ instance Info_Saturas_BRINGFOCUS4(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_BRINGFOCUS4_Condition;
 	information = Info_Saturas_BRINGFOCUS4_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "I've found a focus in the ruined monastery!";
 //	description = "Ich habe in der Klosterruine einen Fokus gefunden!";
 	description = "Našel jsem ohnisko ve zbořeném klášteře!";
@@ -554,10 +577,13 @@ instance Info_Saturas_BRINGFOCUS4(C_INFO)
 
 func int Info_Saturas_BRINGFOCUS4_Condition()
 {
-	if (Npc_HasItems(hero,focus_4) && (Saturas_BringFoci > 0))
+	if ((Npc_HasItems(hero,focus_4))
+	&& (Saturas_BringFoci > 0))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_BRINGFOCUS4_Info()
@@ -588,8 +614,8 @@ instance Info_Saturas_BRINGFOCUS5(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_BRINGFOCUS5_Condition;
 	information = Info_Saturas_BRINGFOCUS5_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "I've found a focus under the ring of stone!";
 //	description = "Ich habe unter dem Stonehenge einen Fokus gefunden!";
 	description = "Našel jsem ohnisko pod kamenným kruhem!";
@@ -597,10 +623,13 @@ instance Info_Saturas_BRINGFOCUS5(C_INFO)
 
 func int Info_Saturas_BRINGFOCUS5_Condition()
 {
-	if (Npc_HasItems(hero,focus_5) && (Saturas_BringFoci > 0))
+	if ((Npc_HasItems(hero,focus_5))
+	&& (Saturas_BringFoci > 0))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_BRINGFOCUS5_Info()
@@ -628,8 +657,8 @@ instance Info_Saturas_ALLFOCI(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_ALLFOCI_Condition;
 	information = Info_Saturas_ALLFOCI_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "Can you blast the ore mound now?";
 //	description = "Kann nun die Sprengung des Erzhaufens beginnen?";
 	description = "Můžeš už tu rudnou haldu odpálit?";
@@ -637,11 +666,13 @@ instance Info_Saturas_ALLFOCI(C_INFO)
 
 func int Info_Saturas_ALLFOCI_Condition()
 {
-	if (Saturas_BringFoci == 5)
-	&& (Kapitel < 4)
+	if ((Saturas_BringFoci == 5)
+	&& (Kapitel < 4))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_ALLFOCI_Info()
@@ -677,8 +708,8 @@ instance Info_Saturas_FAVOR(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_FAVOR_Condition;
 	information = Info_Saturas_FAVOR_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "One more favor?";
 //	description = "Ein weiterer Gefallen?";
 	description = "Ještě jednu službu?";
@@ -688,8 +719,10 @@ func int Info_Saturas_FAVOR_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Saturas_ALLFOCI))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_FAVOR_Info()
@@ -722,8 +755,8 @@ instance Info_Saturas_ACCEPT(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_ACCEPT_Condition;
 	information = Info_Saturas_ACCEPT_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "Alright then, I'll try to convince the Magicians of Fire!";
 //	description = "Nun gut, ich werde versuchen, die Feuermagier zu überreden!";
 	description = "Dobrá tedy, pokusím se přesvědčit mágy Ohně!";
@@ -733,8 +766,10 @@ func int Info_Saturas_ACCEPT_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Saturas_FAVOR))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_ACCEPT_Info()
@@ -786,17 +821,19 @@ instance Info_Saturas_AMBUSH(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_AMBUSH_Condition;
 	information = Info_Saturas_AMBUSH_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_Saturas_AMBUSH_Condition()
 {
-	if FMTaken
-	&& !FindXardas
+	if ((FMTaken)
+	&& (!FindXardas))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_AMBUSH_Info()
@@ -833,8 +870,8 @@ instance Info_Saturas_COLLAPSE(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_COLLAPSE_Condition;
 	information = Info_Saturas_COLLAPSE_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "The Old Mine collapsed after water seeped in!";
 //	description = "Die Alte Mine wurde nach einem Wassereinbruch verschüttet!";
 	description = "Starý důl se zhroutil potom, co ho zatopila voda!";
@@ -844,8 +881,10 @@ func int Info_Saturas_COLLAPSE_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Saturas_AMBUSH))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_COLLAPSE_Info()
@@ -869,8 +908,8 @@ instance Info_Saturas_MURDER(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_MURDER_Condition;
 	information = Info_Saturas_MURDER_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "Gomez has had all the Magicians of Fire killed!";
 //	description = "Gomez hat alle Feuermagier töten lassen!";
 	description = "Gomez zabil všechny mágy Ohně!";
@@ -880,8 +919,10 @@ func int Info_Saturas_MURDER_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Saturas_AMBUSH))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_MURDER_Info()
@@ -927,11 +968,13 @@ instance KDW_600_Saturas_NOMOREOC(C_INFO)
 
 func int KDW_600_Saturas_NOMOREOC_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Saturas_MURDER)
-	&& ((oldHeroGuild == GIL_GRD) || (oldHeroGuild == GIL_KDF))
+	if ((Npc_KnowsInfo(hero,Info_Saturas_MURDER))
+	&& ((oldHeroGuild == GIL_GRD) || (oldHeroGuild == GIL_KDF)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void KDW_600_Saturas_NOMOREOC_Info()
@@ -971,13 +1014,15 @@ instance KDW_600_Saturas_GOTOLEE(C_INFO)
 
 func int KDW_600_Saturas_GOTOLEE_Condition()
 {
-	if (oldHeroGuild == GIL_GRD)
-	&& (Npc_KnowsInfo(hero,KDW_600_Saturas_NOMOREOC))
+	if ((oldHeroGuild == GIL_GRD)
+	&& (Npc_KnowsInfo(hero,KDW_600_Saturas_NOMOREOC)))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void KDW_600_Saturas_GOTOLEE_Info()
 {
 //	AI_Output(other,self,"KDW_600_Saturas_GOTOLEE_Info_15_01"); //Does that mean the mercenaries will take me on?
@@ -1010,13 +1055,15 @@ instance KDW_600_Saturas_OATH(C_INFO)
 
 func int KDW_600_Saturas_OATH_Condition()
 {
-	if (oldHeroGuild == GIL_KDF)
-	&& (Npc_KnowsInfo(hero,KDW_600_Saturas_NOMOREOC))
+	if ((oldHeroGuild == GIL_KDF)
+	&& (Npc_KnowsInfo(hero,KDW_600_Saturas_NOMOREOC)))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void KDW_600_Saturas_OATH_Info()
 {
 //	AI_Output(other,self,"KDW_600_Saturas_OATH_Info_15_01"); //Does that mean that I now belong to the guild of the Magicians of the Water?
@@ -1068,9 +1115,12 @@ func int KDW_600_Saturas_KDWAUFNAHME_Condition()
 {
 	if (Npc_KnowsInfo(hero,KDW_600_Saturas_OATH))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void KDW_600_Saturas_KDWAUFNAHME_Info()
 {
 	AI_GotoNpc(hero,self);
@@ -1132,6 +1182,7 @@ func void KDW_600_Saturas_KDWAUFNAHME_Info()
 
 	AI_StopProcessInfos(self);
 };
+
 /*------------------------------------------------------------------------
 						DIE MAGISCHEN KREISE
 ------------------------------------------------------------------------*/
@@ -1153,23 +1204,25 @@ func int KDW_600_Saturas_LESSON_Condition()
 {
 	if (Npc_GetTrueGuild(hero) == GIL_KDW)
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void KDW_600_Saturas_LESSON_Info()
 {
 //	AI_Output(other,self,"KDW_600_Saturas_LESSON_Info_15_01"); //Can you instruct me?
 //	AI_Output(other,self,"KDW_600_Saturas_LESSON_Info_15_01"); //Kannst du mich unterrichten?
 	AI_Output(other,self,"KDW_600_Saturas_LESSON_Info_15_01"); //Můžeš mě cvičit?
 
-	if (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE ) <= 3)
+	if (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE) <= 3)
 	{
 //		AI_Output(self,other,"KDW_600_Saturas_LESSON_Info_14_02"); //There's much you need to learn. I shall teach you as soon as you're ready.
 //		AI_Output(self,other,"KDW_600_Saturas_LESSON_Info_14_02"); //Es gibt noch viel zu lernen für dich. Wenn du bereit bist, werde ich dich unterrichten.
 		AI_Output(self,other,"KDW_600_Saturas_LESSON_Info_14_02"); //Je toho hodně, co se musíš naučit. Budu tě cvičit, až na to budeš připraven.
 	}
-	else if (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE ) == 4)
+	else if (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE) == 4)
 	{
 //		AI_Output(self,other,"KDW_600_Saturas_LESSON_Info_14_03"); //There is one more Circle you don't know yet. I shall teach you as soon as you're ready.
 //		AI_Output(self,other,"KDW_600_Saturas_LESSON_Info_14_03"); //Es gibt noch einen weiteren Kreis, den du nicht kennst. Wenn du bereit bist, werde ich dich unterrichten.
@@ -1190,6 +1243,7 @@ func void KDW_600_Saturas_LESSON_Info()
 //	B_LogEntry(GE_TeacherNC,"Saturas, der Anführer der Wassermagier lehrt die magischen KREISE. Er hält sich stets am Pentagramm auf der obersten Ebene auf.");
 	B_LogEntry(GE_TeacherNC,"Saturas, vůdce mágů Vody, učí magickým KRUHŮM. Stále přebývá u pentagramu v horní rovině.");
 };
+
 //--------------------------------------------------------------------------
 // 							DER ERSTE KREIS
 //--------------------------------------------------------------------------
@@ -1208,21 +1262,23 @@ instance KDW_600_Saturas_KREIS1(C_INFO)
 
 func int KDW_600_Saturas_KREIS1_Condition()
 {
-	if (Npc_KnowsInfo(hero,KDW_600_Saturas_LESSON))
+	if ((Npc_KnowsInfo(hero,KDW_600_Saturas_LESSON))
 	&& (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE) == 0)
-	&& (Npc_GetTrueGuild(hero) == GIL_KDW)
+	&& (Npc_GetTrueGuild(hero) == GIL_KDW))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void KDW_600_Saturas_KREIS1_Info()
 {
 //	AI_Output(other,self,"KDW_600_Saturas_KREIS1_Info_15_01"); //I am ready to enter the First Circle.
 //	AI_Output(other,self,"KDW_600_Saturas_KREIS1_Info_15_01"); //Ich bin bereit, in den ersten Kreis aufgenommen zu werden.
 	AI_Output(other,self,"KDW_600_Saturas_KREIS1_Info_15_01"); //Jsem připraven vstoupit do Pátého kruhu.
 
-	if (B_GiveSkill(other,NPC_TALENT_MAGE , 1, LPCOST_TALENT_MAGE_1))
+	if (B_GiveSkill(other,NPC_TALENT_MAGE, 1, LPCOST_TALENT_MAGE_1))
 	{
 //		AI_Output(self,other,"KDW_600_Saturas_KREIS1_Info_14_02"); //To enter the first of the magic Circles means learning to use magic runes.
 //		AI_Output(self,other,"KDW_600_Saturas_KREIS1_Info_14_02"); //Den ersten der magischen Kreise zu betreten, bedeutet die Anwendung magischer Runen lernen.
@@ -1251,6 +1307,7 @@ func void KDW_600_Saturas_KREIS1_Info()
 		KDW_600_Saturas_KREIS1.permanent = 0;
 	};
 };
+
 //---------------------------------------------------------------------
 //						DER ZWEITE KREIS
 //---------------------------------------------------------------------
@@ -1269,22 +1326,23 @@ instance KDW_600_Saturas_KREIS2(C_INFO)
 
 func int KDW_600_Saturas_KREIS2_Condition()
 {
-	if (Npc_KnowsInfo(hero,KDW_600_Saturas_LESSON))
+	if ((Npc_KnowsInfo(hero,KDW_600_Saturas_LESSON))
 	&& (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE) == 1)
-	&& (Npc_GetTrueGuild(hero) == GIL_KDW)
-
+	&& (Npc_GetTrueGuild(hero) == GIL_KDW))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void KDW_600_Saturas_KREIS2_Info()
 {
 //	AI_Output(other,self,"KDW_600_Saturas_KREIS2_Info_15_01"); //I am ready to enter the Second Circle.
 //	AI_Output(other,self,"KDW_600_Saturas_KREIS2_Info_15_01"); //Ich bin bereit, in den zweiten Kreis aufgenommen zu werden.
 	AI_Output(other,self,"KDW_600_Saturas_KREIS2_Info_15_01"); //Jsem připraven vstoupit do Druhého kruhu.
 
-	if (B_GiveSkill(other,NPC_TALENT_MAGE , 2, LPCOST_TALENT_MAGE_2))
+	if (B_GiveSkill(other,NPC_TALENT_MAGE, 2, LPCOST_TALENT_MAGE_2))
 	{
 //		AI_Output(self,other,"KDW_600_Saturas_KREIS2_Info_14_02"); //You have learned to understand the runes. Now it is time to deepen this understanding.
 //		AI_Output(self,other,"KDW_600_Saturas_KREIS2_Info_14_02"); //Du hast das Verständnis der Runen gelernt. Nun ist es an der Zeit, dieses Verständnis zu vertiefen.
@@ -1309,8 +1367,8 @@ func void KDW_600_Saturas_KREIS2_Info()
 		AI_Output(self,other,"KDW_600_Saturas_KREIS2_Info_14_08"); //Pokud porozumíš situaci, pak poznáš moc run.
 		KDW_600_Saturas_KREIS2.permanent = 0;
 	};
-
 };
+
 //---------------------------------------------------------------------
 //						DER DRITTE KREIS
 //---------------------------------------------------------------------
@@ -1329,21 +1387,22 @@ instance KDW_600_Saturas_KREIS3(C_INFO)
 
 func int KDW_600_Saturas_KREIS3_Condition()
 {
-	if (Npc_KnowsInfo(hero,KDW_600_Saturas_LESSON))
-	&& (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE ) == 2)
-	&& (Npc_GetTrueGuild(hero) == GIL_KDW)
-
+	if ((Npc_KnowsInfo(hero,KDW_600_Saturas_LESSON))
+	&& (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE) == 2)
+	&& (Npc_GetTrueGuild(hero) == GIL_KDW))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void KDW_600_Saturas_KREIS3_Info()
 {
 //	AI_Output(other,self,"KDW_600_Saturas_KREIS3_Info_15_01"); //Could you teach me the Third Circle?
 //	AI_Output(other,self,"KDW_600_Saturas_KREIS3_Info_15_01"); //Ich bin bereit, den dritten Kreis zu betreten
 	AI_Output(other,self,"KDW_600_Saturas_KREIS3_Info_15_01"); //Můžeš mě připravit do Třetího kruhu?
-	if (B_GiveSkill(other,NPC_TALENT_MAGE , 3, LPCOST_TALENT_MAGE_3))
+	if (B_GiveSkill(other,NPC_TALENT_MAGE, 3, LPCOST_TALENT_MAGE_3))
 	{
 //		AI_Output(self,other,"KDW_600_Saturas_KREIS3_Info_14_02"); //The Third Circle of Magic is one of the most important steps in the life of a magician. Once you've reached it, you cease to be a seeker.
 //		AI_Output(self,other,"KDW_600_Saturas_KREIS3_Info_14_02"); //Der dritte Kreis der Magie ist einer der wichtigsten Schritte im Leben eines Magiers. Nicht länger bist du ein Suchender.
@@ -1365,11 +1424,12 @@ func void KDW_600_Saturas_KREIS3_Info()
 		AI_Output(self,other,"KDW_600_Saturas_KREIS3_Info_14_07"); //Jakmile porozumíš své cestě, pak poznáš sílu rozhodnutí.
 		KDW_600_Saturas_KREIS3.permanent = 0;
 	};
-
 };
+
 //---------------------------------------------------------------------
 //						DER VIERTE KREIS
 //---------------------------------------------------------------------
+
 instance KDW_600_Saturas_KREIS4(C_INFO)
 {
 	npc = KDW_600_Saturas;
@@ -1385,21 +1445,22 @@ instance KDW_600_Saturas_KREIS4(C_INFO)
 
 func int KDW_600_Saturas_KREIS4_Condition()
 {
-	if (Npc_KnowsInfo(hero,KDW_600_Saturas_LESSON))
-	&& (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE ) == 3)
-	&& (Npc_GetTrueGuild(hero) == GIL_KDW)
-
+	if ((Npc_KnowsInfo(hero,KDW_600_Saturas_LESSON))
+	&& (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE) == 3)
+	&& (Npc_GetTrueGuild(hero) == GIL_KDW))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void KDW_600_Saturas_KREIS4_Info()
 {
 //	AI_Output(other,self,"KDW_600_Saturas_KREIS4_Info_15_01"); //I am ready to enter the Fourth Circle.
 //	AI_Output(other,self,"KDW_600_Saturas_KREIS4_Info_15_01"); //Ich bin bereit für den vierten der Kreise.
 	AI_Output(other,self,"KDW_600_Saturas_KREIS4_Info_15_01"); //Jsem připraven vstoupit do Pátého kruhu.
-	if (B_GiveSkill(other,NPC_TALENT_MAGE , 4, LPCOST_TALENT_MAGE_4))
+	if (B_GiveSkill(other,NPC_TALENT_MAGE, 4, LPCOST_TALENT_MAGE_4))
 	{
 //		AI_Output(self,other,"KDW_600_Saturas_KREIS4_Info_14_02"); //You have completed the first three Circles. Now is the time for you to learn the secrets of magic.
 //		AI_Output(self,other,"KDW_600_Saturas_KREIS4_Info_14_02"); //Du hast die ersten drei Kreise durchschritten. Nun ist es an der Zeit, dass du die Geheimnisse der Magie kennen lernst.
@@ -1420,6 +1481,7 @@ func void KDW_600_Saturas_KREIS4_Info()
 		KDW_600_Saturas_KREIS4.permanent = 0;
 	};
 };
+
 /*------------------------------------------------------------------------
 							DER FÜNFTE KREIS
 ------------------------------------------------------------------------*/
@@ -1439,14 +1501,16 @@ instance KDW_600_Saturas_KREIS5(C_INFO)
 
 func int KDW_600_Saturas_KREIS5_Condition()
 {
-	if (Npc_KnowsInfo(hero,KDW_600_Saturas_LESSON))
-	&& (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE ) == 4)
-	&& (Npc_GetTrueGuild(hero) == GIL_KDW)
+	if ((Npc_KnowsInfo(hero,KDW_600_Saturas_LESSON))
+	&& (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE) == 4)
+	&& (Npc_GetTrueGuild(hero) == GIL_KDW))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void KDW_600_Saturas_KREIS5_Info()
 {
 //	AI_Output(other,self,"KDW_600_Saturas_KREIS5_Info_15_01"); //I am ready to enter the Fifth Circle.
@@ -1475,6 +1539,7 @@ func void KDW_600_Saturas_KREIS5_Info()
 		KDW_600_Saturas_KREIS5.permanent = 0;
 	};
 };
+
 /*------------------------------------------------------------------------
 							SCHWERE ROBE
 ------------------------------------------------------------------------*/
@@ -1494,18 +1559,19 @@ func int KDW_600_Saturas_HEAVYARMOR_Condition()
 {
 	if (Npc_GetTrueGuild(hero) == GIL_KDW)
 	{
-		return TRUE;
+		return 1;
 	};
 
 };
+
 func void KDW_600_Saturas_HEAVYARMOR_Info()
 {
 //	AI_Output(other,self,"KDW_600_Saturas_HEAVYARMOR_Info_15_01"); //I'd like to wear the high robe of Water.
 //	AI_Output(other,self,"KDW_600_Saturas_HEAVYARMOR_Info_15_01"); //Ich möchte die hohe Robe des Wassers tragen.
 	AI_Output(other,self,"KDW_600_Saturas_HEAVYARMOR_Info_15_01"); //Chtěl bych nosit vznešené roucho Vody.
 
-	if (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE ) < 4)
-	&& (Kapitel < 5)
+	if ((Npc_GetTalentSkill (hero,NPC_TALENT_MAGE ) < 4)
+	&& (Kapitel < 5))
 	{
 //		AI_Output(self,other,"KDW_600_Saturas_HEAVYARMOR_Info_14_02"); //It is not yet time for you to wear the high robe.
 //		AI_Output(self,other,"KDW_600_Saturas_HEAVYARMOR_Info_14_02"); //Es ist noch nicht an der Zeit, dass du die hohe Robe tragen kannst.
@@ -1543,8 +1609,8 @@ instance Info_Saturas_NOWSLD(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_NOWSLD_Condition;
 	information = Info_Saturas_NOWSLD_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "Lee has admitted me to the mercenaries.";
 //	description = "Lee hat mich bei den Söldnern aufgenommen.";
 	description = "Lee mě přijmul k žoldákům.";
@@ -1554,8 +1620,10 @@ func int Info_Saturas_NOWSLD_Condition()
 {
 	if Npc_KnowsInfo(hero,Sld_700_Lee_CHANGESIDE)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_NOWSLD_Info()
@@ -1584,8 +1652,8 @@ instance Info_Saturas_XARDAS(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_XARDAS_Condition;
 	information = Info_Saturas_XARDAS_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "When you sent me to the Magicians of Fire, you mentioned SOMEBODY...";
 //	description = "Bei der Sache mit den Feuermagiern, erwähntest du einen weiteren... JEMAND";
 	description = "Když jsi mě posílal k mágům Ohně, říkal jsi, že byl... NĚKDO.";
@@ -1593,13 +1661,14 @@ instance Info_Saturas_XARDAS(C_INFO)
 
 func int Info_Saturas_XARDAS_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Saturas_COLLAPSE)
-	&& Npc_KnowsInfo(hero,Info_Saturas_MURDER)
+	if ((Npc_KnowsInfo(hero,Info_Saturas_COLLAPSE))
+	&& (Npc_KnowsInfo(hero,Info_Saturas_MURDER)))
 	{  //***Björn***>
 
-		if((Npc_GetTrueGuild(hero)!=GIL_GRD)  && (Npc_GetTrueGuild(hero)!=GIL_KDF)  )
+		if ((Npc_GetTrueGuild(hero) != GIL_GRD)
+		&& (Npc_GetTrueGuild(hero) != GIL_KDF))
 		{
-			return TRUE;
+			return 1;
 		};
 
 /*
@@ -1607,23 +1676,24 @@ func int Info_Saturas_XARDAS_Condition()
 		{
 			if (Npc_GetTrueGuild(hero)==GIL_SLD)
 			{
-				return TRUE;
+				return 1;
 			};
 		}
 		else if (oldHeroGuild==GIL_KDF)
 		{
 			if (Npc_GetTrueGuild(hero)==GIL_KDW)
 			{
-				return TRUE;
+				return 1;
 			};
 		}
 		else
 		{
-			return TRUE;
+			return 1;
 		}; <***Björn***
 */
-
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_XARDAS_Info()
@@ -1671,8 +1741,8 @@ instance Info_Saturas_XARDASWHO(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_XARDASWHO_Condition;
 	information = Info_Saturas_XARDASWHO_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "What is this thirteenth magician called?";
 //	description = "Wie heißt dieser 13. Zauberer?";
 	description = "Jak se ten třináctý mág jmenoval?";
@@ -1682,8 +1752,10 @@ func int Info_Saturas_XARDASWHO_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Saturas_XARDAS))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_XARDASWHO_Info()
@@ -1707,8 +1779,8 @@ instance Info_Saturas_XARDASWHY(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_XARDASWHY_Condition;
 	information = Info_Saturas_XARDASWHY_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "Why did he leave the Old Camp?";
 //	description = "Warum verließ er das Alte Lager?";
 	description = "Proč opustil Starý tábor?";
@@ -1718,8 +1790,10 @@ func int Info_Saturas_XARDASWHY_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Saturas_XARDAS))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_XARDASWHY_Info()
@@ -1749,8 +1823,8 @@ instance Info_Saturas_XARDASWHERE(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_XARDASWHERE_Condition;
 	information = Info_Saturas_XARDASWHERE_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "Where is this magician today?";
 //	description = "Wo kann man diesen Zauberer finden?";
 	description = "Kde je ten mág dneska?";
@@ -1760,8 +1834,10 @@ func int Info_Saturas_XARDASWHERE_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Saturas_XARDAS))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_XARDASWHERE_Info()
@@ -1785,8 +1861,8 @@ instance Info_Saturas_XARDASHELP(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_XARDASHELP_Condition;
 	information = Info_Saturas_XARDASHELP_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "I'll make my way to Xardas and ask him for help!";
 //	description = "Ich werde zu Xardas aufbrechen und ihn um Hilfe bitten!";
 	description = "Půjdu za Xardasem a požádám ho o pomoc!";
@@ -1794,12 +1870,14 @@ instance Info_Saturas_XARDASHELP(C_INFO)
 
 func int Info_Saturas_XARDASHELP_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Saturas_XARDASWHO)
-	&& Npc_KnowsInfo(hero,Info_Saturas_XARDASWHY)
-	&& Npc_KnowsInfo(hero,Info_Saturas_XARDASWHERE)
+	if ((Npc_KnowsInfo(hero,Info_Saturas_XARDASWHO))
+	&& (Npc_KnowsInfo(hero,Info_Saturas_XARDASWHY))
+	&& (Npc_KnowsInfo(hero,Info_Saturas_XARDASWHERE)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_XARDASHELP_Info()
@@ -1831,8 +1909,8 @@ instance Info_Saturas_XARDASPROBLEM(C_INFO)
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_XARDASPROBLEM_Condition;
 	information = Info_Saturas_XARDASPROBLEM_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "A problem?";
 //	description = "Ein Problem?";
 	description = "Problém?";
@@ -1840,10 +1918,12 @@ instance Info_Saturas_XARDASPROBLEM(C_INFO)
 
 func int Info_Saturas_XARDASPROBLEM_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Saturas_XARDASHELP)
+	if (Npc_KnowsInfo(hero,Info_Saturas_XARDASHELP))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_XARDASPROBLEM_Info()
@@ -1878,13 +1958,14 @@ func void Info_Saturas_XARDASPROBLEM_Info()
 //---------------------------------------------------------------------
 //	Info XARDASGO
 //---------------------------------------------------------------------
+
 instance Info_Saturas_XARDASGO(C_INFO)
 {
 	npc = KDW_600_Saturas;
 	condition = Info_Saturas_XARDASGO_Condition;
 	information = Info_Saturas_XARDASGO_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "How will I get past his creatures?";
 //	description = "Wie werde ich mit seinen Kreaturen fertig?";
 	description = "Jak se dostanu přes ty stvůry?";
@@ -1892,10 +1973,12 @@ instance Info_Saturas_XARDASGO(C_INFO)
 
 func int Info_Saturas_XARDASGO_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Saturas_XARDASPROBLEM)
+	if (Npc_KnowsInfo(hero,Info_Saturas_XARDASPROBLEM))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Saturas_XARDASGO_Info()
@@ -1922,12 +2005,12 @@ func void Info_Saturas_XARDASGO_Info()
 //	B_LogEntry(CH4_FindXardas,"There are writings about the dangers and weaknesses of these creatures in the library of the Magicians of Water. I should take some time to have a look around there.");
 //	B_LogEntry(CH4_FindXardas,"In der Bibliothek der Wassermagier gibt es Schriften über die Gefahren und Schwächen solcher Wesen. Ich sollte mir etwas Zeit nehmen, um dort herumzustöbern.");
 	B_LogEntry(CH4_FindXardas,"V knihovně mágů Vody jsou spisy o síle i slabinách těchto netvorů. Měl bych si udělat čas a pročíst si je.");
-
 };
 
 /*------------------------------------------------------------------------
 //	TIMESUP- Xardas ist die Schlüsselperson, Saturas ist nicht mehr wichtig
 ------------------------------------------------------------------------*/
+
 instance KDW_600_Saturas_TIMESUP(C_INFO)
 {
 	npc = KDW_600_Saturas;
@@ -1939,12 +2022,15 @@ instance KDW_600_Saturas_TIMESUP(C_INFO)
 
 func int KDW_600_Saturas_TIMESUP_Condition()
 {
-	if FindOrcShaman == LOG_RUNNING
-	|| FindOrcShaman == LOG_SUCCESS
+	if ((FindOrcShaman == LOG_RUNNING)
+	|| (FindOrcShaman == LOG_SUCCESS))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void KDW_600_Saturas_TIMESUP_Info()
 {
 //	AI_Output(self,other,"KDW_600_Saturas_TIMESUP_Info_14_00"); //Have you spoken to Xardas?
@@ -1960,8 +2046,8 @@ func void KDW_600_Saturas_TIMESUP_Info()
 //	Info_AddChoice(KDW_600_Saturas_TIMESUP,"The whole thing's not the way you think...",KDW_600_Saturas_TIMESUP_JA3);
 //	Info_AddChoice(KDW_600_Saturas_TIMESUP,"Die ganze Sache ist anders, als du denkst...",KDW_600_Saturas_TIMESUP_JA3);
 	Info_AddChoice(KDW_600_Saturas_TIMESUP,"Celá ta záležitost není taková, jak si myslíš...",KDW_600_Saturas_TIMESUP_JA3);
-
 };
+
 func void KDW_600_Saturas_TIMESUP_JA1()
 {
 //	AI_Output(other,self,"KDW_600_Saturas_TIMESUP_Info_15_01"); //Well...
@@ -1975,6 +2061,7 @@ func void KDW_600_Saturas_TIMESUP_JA1()
 	//B_Story_CancelFindXardas();
 	//AI_StopProcessInfos(self);
 };
+
 func void KDW_600_Saturas_TIMESUP_JA2()
 {
 //	AI_Output(other,self,"KDW_600_Saturas_TIMESUP_Info_15_05"); //No...
@@ -1992,6 +2079,7 @@ func void KDW_600_Saturas_TIMESUP_JA2()
 	B_Story_CancelFindXardas();
 	AI_StopProcessInfos(self);
 };
+
 func void KDW_600_Saturas_TIMESUP_JA3()
 {
 //	AI_Output(other,self,"KDW_600_Saturas_TIMESUP_Info_15_09"); //The whole thing's not the way you think...
@@ -2026,6 +2114,7 @@ instance KDW_600_Saturas_HogeAUFNAHME(C_INFO)
 	nr = 10;
 	condition = KDW_600_Saturas_HogeAUFNAHME_Condition;
 	information = KDW_600_Saturas_HogeAUFNAHME_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Nefarius said I was ready to wear the robe of a Magician of Water.";
 //	description = "Nefarius sagte, ich sei bereit die Robe der Wassermagier zu tragen.";
@@ -2034,10 +2123,13 @@ instance KDW_600_Saturas_HogeAUFNAHME(C_INFO)
 
 func int KDW_600_Saturas_HogeAUFNAHME_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Saturas_MURDER) && (Npc_GetTrueGuild(hero)==GIL_SLD))
+	if ((Npc_KnowsInfo(hero,Info_Saturas_MURDER))
+	&& (Npc_GetTrueGuild(hero)==GIL_SLD))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void KDW_600_Saturas_HogeAUFNAHME_Info()
@@ -2062,12 +2154,14 @@ func void KDW_600_Saturas_HogeAUFNAHME_Info()
 // ****************************************
 // 			Aufnahme eines Sld - Teil 2
 // ****************************************
+
 instance KDW_600_Saturas_HogeAUFNAHMETeil2(C_INFO)
 {
 	npc = KDW_600_Saturas;
 	nr = 10;
 	condition = KDW_600_Saturas_HogeAUFNAHMETeil2_Condition;
 	information = KDW_600_Saturas_HogeAUFNAHMETeil2_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I'm ready to take the oath.";
 //	description = "Ich bin bereit, den Eid abzulegen.";
@@ -2076,10 +2170,13 @@ instance KDW_600_Saturas_HogeAUFNAHMETeil2(C_INFO)
 
 func int KDW_600_Saturas_HogeAUFNAHMETeil2_Condition()
 {
-	if ((Npc_KnowsInfo(hero,KDW_600_Saturas_HogeAUFNAHME)) && (Npc_GetTrueGuild(hero)==GIL_SLD))
+	if ((Npc_KnowsInfo(hero,KDW_600_Saturas_HogeAUFNAHME))
+	&& (Npc_GetTrueGuild(hero) == GIL_SLD))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void KDW_600_Saturas_HogeAUFNAHMETeil2_Info()
@@ -2134,4 +2231,3 @@ func void KDW_600_Saturas_HogeAUFNAHMETeil2_Info()
 
 	AI_StopProcessInfos(self);
 };
-

@@ -8,6 +8,7 @@ instance Info_ORG_829_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_ORG_829_EXIT_Condition;
 	information = Info_ORG_829_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance Info_ORG_829_Hello(C_INFO)
 	nr = 1;
 	condition = Info_ORG_829_Hello_Condition;
 	information = Info_ORG_829_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "How are things?";
 //	description = "Wie sieht's aus?";
@@ -65,6 +67,7 @@ instance Info_ORG_829_OfferJoint(C_INFO)
 	nr = 1;
 	condition = Info_ORG_829_OfferJoint_Condition;
 	information = Info_ORG_829_OfferJoint_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I have swampweed - d'you want some?";
 //	description = "Ich hab' Sumpfkraut dabei - willst du was?";
@@ -77,6 +80,8 @@ func int Info_ORG_829_OfferJoint_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_ORG_829_OfferJoint_Info()
@@ -85,7 +90,7 @@ func void Info_ORG_829_OfferJoint_Info()
 //	AI_Output(other,self,"Info_ORG_829_OfferJoint_15_00"); //Ich hab' Sumpfkraut dabei - willst du was?
 	AI_Output(other,self,"Info_ORG_829_OfferJoint_15_00"); //Mám drogu z bažin - chceš trochu?
 
-	if ((Npc_HasItems(other,ItMiJoint_1)>0) || (Npc_HasItems(other,ItMiJoint_2)>0) || (Npc_HasItems(other,ItMiJoint_3)>0))
+	if ((Npc_HasItems(other,ItMiJoint_1) > 0) || (Npc_HasItems(other,ItMiJoint_2) > 0) || (Npc_HasItems(other,ItMiJoint_3) > 0))
 	{
 		if (Npc_HasItems(other,ItMiJoint_1))
 		{ B_GiveInvItems(other,self,ItMiJoint_1,1);  }
@@ -118,6 +123,7 @@ instance Info_ORG_829_SpecialInfo(C_INFO)
 	nr = 1;
 	condition = Info_ORG_829_SpecialInfo_Condition;
 	information = Info_ORG_829_SpecialInfo_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I've just arrived - can you give me some advice?";
 //	description = "Ich bin neu hier - hast du irgendwelche Tipps für mich?";
@@ -130,6 +136,8 @@ func int Info_ORG_829_SpecialInfo_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_ORG_829_SpecialInfo_Info()
@@ -158,6 +166,7 @@ instance Info_ORG_829_PERM(C_INFO)
 	nr = 1;
 	condition = Info_ORG_829_PERM_Condition;
 	information = Info_ORG_829_PERM_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Do you know what I should expect in the Camp?";
 //	description = "Kannst du mir sagen, was mich da drin erwartet?";
@@ -170,6 +179,8 @@ func int Info_ORG_829_PERM_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_ORG_829_PERM_Info()

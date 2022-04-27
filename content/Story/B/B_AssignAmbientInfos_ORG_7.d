@@ -12,6 +12,7 @@ instance Info_Org_7_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Org_7_EXIT_Condition;
 	information = Info_Org_7_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = "END";
 };
@@ -35,6 +36,7 @@ instance Info_Org_7_EinerVonEuchWerden(C_INFO) // E1
 	nr = 4;
 	condition = Info_Org_7_EinerVonEuchWerden_Condition;
 	information = Info_Org_7_EinerVonEuchWerden_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What do I have to do to join the Camp?";
 //	description = "Was muß ich tun, wenn ich mich dem Lager anschließen will?";
@@ -76,6 +78,7 @@ instance Info_Org_7_WichtigePersonen(C_INFO)
 	nr = 3;
 	condition = Info_Org_7_WichtigePersonen_Condition;
 	information = Info_Org_7_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Who's your leader?";
 //	description = "Wer ist euer Anführer?";
@@ -111,6 +114,7 @@ instance Info_Org_7_DasLager(C_INFO)
 	nr = 2;
 	condition = Info_Org_7_DasLager_Condition;
 	information = Info_Org_7_DasLager_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What can you tell me about this camp?";
 //	description = "Was kannst du mir über dieses Lager sagen?";
@@ -150,6 +154,7 @@ instance Info_Org_7_DieLage(C_INFO) // E1
 	nr = 1;
 	condition = Info_Org_7_DieLage_Condition;
 	information = Info_Org_7_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What goes on here?";
 //	description = "Was läuft denn so?";
@@ -186,6 +191,7 @@ instance Info_Org_7_Krautprobe(C_INFO) // E1
 	nr = 5;
 	condition = Info_Org_7_Krautprobe_Condition;
 	information = Info_Org_7_Krautprobe_Info;
+	important = 0;
 	permanent = 1;
 //	description = "D'you want some swampweed?";
 //	description = "Willst du etwas Sumpfkraut?";

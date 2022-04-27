@@ -8,6 +8,7 @@ instance Info_GorHanis_Exit(C_INFO)
 	nr = 999;
 	condition = Info_GorHanis_Exit_Condition;
 	information = Info_GorHanis_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance Info_GorHanis_What(C_INFO)
 	nr = 1;
 	condition = Info_GorHanis_What_Condition;
 	information = Info_GorHanis_What_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What are you doing here?";
 //	description = "Was machst du hier?";
@@ -63,6 +65,7 @@ instance Info_GorHanis_Arena(C_INFO)
 	nr = 1;
 	condition = Info_GorHanis_Arena_Condition;
 	information = Info_GorHanis_Arena_Info;
+	important = 0;
 	permanent = 1;
 //	description = "You fight in the arena?";
 //	description = "Du kämpfst in der Arena?";
@@ -75,6 +78,8 @@ func int Info_GorHanis_Arena_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_GorHanis_Arena_Info()
@@ -100,6 +105,7 @@ instance Info_GorHanis_Sleeper(C_INFO)
 	nr = 2;
 	condition = Info_GorHanis_Sleeper_Condition;
 	information = Info_GorHanis_Sleeper_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What is the Sleeper?";
 //	description = "Was ist der Schläfer?";
@@ -112,6 +118,8 @@ func int Info_GorHanis_Sleeper_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_GorHanis_Sleeper_Info()
@@ -143,6 +151,7 @@ instance Info_GorHanis_Summoning(C_INFO)
 	nr = 2;
 	condition = Info_GorHanis_Summoning_Condition;
 	information = Info_GorHanis_Summoning_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What kind of invocation is it you're planning?";
 //	description = "Was ist das für eine große Anrufung, die ihr plant?";
@@ -155,6 +164,8 @@ func int Info_GorHanis_Summoning_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_GorHanis_Summoning_Info()
@@ -180,6 +191,7 @@ instance Info_GorHanis_WayToST(C_INFO)
 	nr = 0;
 	condition = Info_GorHanis_WayToST_Condition;
 	information = Info_GorHanis_WayToST_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Could you describe the way to your camp?";
 //	description = "Kannst du mir den Weg zu eurem Lager beschreiben?";
@@ -188,10 +200,13 @@ instance Info_GorHanis_WayToST(C_INFO)
 
 func int Info_GorHanis_WayToST_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_GorHanis_Sleeper) || Npc_KnowsInfo(hero,Info_GorHanis_Summoning))
+	if ((Npc_KnowsInfo(hero,Info_GorHanis_Sleeper))
+	|| (Npc_KnowsInfo(hero,Info_GorHanis_Summoning)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_GorHanis_WayToST_Info()
@@ -214,6 +229,7 @@ instance Info_GorHanis_Charge(C_INFO)
 	nr = 3;
 	condition = Info_GorHanis_Charge_Condition;
 	information = Info_GorHanis_Charge_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I challenge you to a duel in the arena!";
 //	description = "Ich fordere dich zum Duell in der Arena!";
@@ -226,6 +242,8 @@ func int Info_GorHanis_Charge_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_GorHanis_Charge_Info()
@@ -254,6 +272,7 @@ instance Info_GorHanis_ChargeGood(C_INFO)
 	nr = 3;
 	condition = Info_GorHanis_ChargeGood_Condition;
 	information = Info_GorHanis_ChargeGood_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Am I now strong enough to fight against you?";
 //	description = "Bin ich jetzt gut genug, um gegen dich zu kämpfen?";
@@ -266,6 +285,8 @@ func int Info_GorHanis_ChargeGood_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_GorHanis_ChargeGood_Info()
@@ -371,5 +392,4 @@ func void Info_TPL_1422_GorHanis3_Info()
 	AI_Output(other,self,"Info_TPL_1422_GorHanis3_15_01"); //Wie seit ihr an dem Priester vorbei gekommen?
 	AI_Output(self,other,"Info_TPL_1422_GorHanis3_08_02"); //Ich sage es dir, es wird dir eh nicht nutzen. Der Priester hat uns nur passieren lassen, weil Meister Kalom mit im gesprochen hat, dass Glück wirst du nicht haben. Geh nur (lacht).
 };
-
 */

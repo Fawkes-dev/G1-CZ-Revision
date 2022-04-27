@@ -20,6 +20,7 @@ func void Grd_263_Asghan_Exit_Info()
 {
 	AI_StopProcessInfos(self);
 };
+
 // ***************** Infos *****************************
 
 instance Grd_263_Asghan_NEST(C_INFO)
@@ -40,6 +41,8 @@ func int Grd_263_Asghan_NEST_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Grd_263_Asghan_NEST_Info()
@@ -68,6 +71,7 @@ func void Grd_263_Asghan_NEST_Info()
 //	B_LogEntry(CH2_MCEggs,"Asghan, der Chef der Minengardisten weigert sich das Tor zu öffnen. Er will erst die Erlaubnis von Ian haben.");
 	B_LogEntry(CH2_MCEggs,"Asghan, velitel důlní stráže, nechce otevřít bránu. Nejprve chce Ianovo svolení.");
 };
+
 /*------------------------------------------------------------------------
 							ERLAUBNIS VON IAN GEHOLT
 ------------------------------------------------------------------------*/
@@ -86,11 +90,13 @@ instance Grd_263_Asghan_OPEN(C_INFO)
 
 func int Grd_263_Asghan_OPEN_Condition()
 {
-	if Npc_KnowsInfo(hero,Grd_263_Asghan_NEST)
-	&& Npc_KnowsInfo(hero,STT_301_IAN_GEAR_SUC)
+	if ((Npc_KnowsInfo(hero,Grd_263_Asghan_NEST))
+	&& (Npc_KnowsInfo(hero,STT_301_IAN_GEAR_SUC)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Grd_263_Asghan_OPEN_Info()
@@ -136,12 +142,14 @@ instance Grd_263_Asghan_OPEN_NOW(C_INFO)
 
 func int Grd_263_Asghan_OPEN_NOW_Condition()
 {
-	if (Npc_KnowsInfo(hero,Tpl_1400_GorNaBar_SUGGEST)) && (Npc_KnowsInfo(hero,Tpl_1401_GorNaKosh_SUGGEST))
-	|| (Npc_KnowsInfo(hero,Tpl_1401_GorNaKosh_SUGGEST)) && (Npc_KnowsInfo(hero,Tpl_1433_GorNaVid_HEALTH_SUC))
-	|| (Npc_KnowsInfo(hero,Tpl_1433_GorNaVid_HEALTH_SUC)) && (Npc_KnowsInfo(hero,Tpl_1400_GorNaBar_SUGGEST))
+	if (((Npc_KnowsInfo(hero,Tpl_1400_GorNaBar_SUGGEST)) && (Npc_KnowsInfo(hero,Tpl_1401_GorNaKosh_SUGGEST)))
+	|| ((Npc_KnowsInfo(hero,Tpl_1401_GorNaKosh_SUGGEST)) && (Npc_KnowsInfo(hero,Tpl_1433_GorNaVid_HEALTH_SUC)))
+	|| ((Npc_KnowsInfo(hero,Tpl_1433_GorNaVid_HEALTH_SUC)) && (Npc_KnowsInfo(hero,Tpl_1400_GorNaBar_SUGGEST))))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Grd_263_Asghan_OPEN_NOW_Info()
@@ -179,11 +187,13 @@ instance Grd_263_Asghan_LAIRFOUND(C_INFO)
 
 func int Grd_263_Asghan_LAIRFOUND_Condition()
 {
-	if (Npc_HasItems(hero,ItAt_Crawlerqueen)>=3)
-	&& (Npc_GetTrueGuild(hero) == GIL_STT)
+	if ((Npc_HasItems(hero,ItAt_Crawlerqueen) >= 3)
+	&& (Npc_GetTrueGuild(hero) == GIL_STT))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Grd_263_Asghan_LAIRFOUND_Info()
@@ -218,8 +228,10 @@ func int Grd_263_Asghan_SMALLTALK_Condition()
 {
 	if (CorKalom_BringMCQBalls != LOG_RUNNING)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Grd_263_Asghan_SMALLTALK_Info()

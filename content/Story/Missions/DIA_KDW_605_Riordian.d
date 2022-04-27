@@ -13,7 +13,7 @@ instance Info_Riordian_EXIT(C_INFO)
 
 func int Info_Riordian_EXIT_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Info_Riordian_EXIT_Info()
@@ -24,7 +24,6 @@ func void Info_Riordian_EXIT_Info()
 	{
 		CreateInvItem(self,ItArRuneThunderball);
 	};
-
 };
 
 //#####################################################################
@@ -43,8 +42,8 @@ instance Info_Riordian_NEWS(C_INFO)
 	npc = KDW_605_Riordian;
 	condition = Info_Riordian_NEWS_Condition;
 	information = Info_Riordian_NEWS_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "Saturas sent me.";
 //	description = "Saturas schickt mich.";
 	description = "Saturas mě poslal.";
@@ -54,8 +53,10 @@ func int Info_Riordian_NEWS_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Saturas_OFFER))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Riordian_NEWS_Info()
@@ -95,8 +96,8 @@ instance Info_Riordian_REWARD(C_INFO)
 	npc = KDW_605_Riordian;
 	condition = Info_Riordian_REWARD_Condition;
 	information = Info_Riordian_REWARD_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "Saturas said you had a reward for me?";
 //	description = "Saturas sagt, du hättest eine Belohnung für mich?";
 	description = "Saturas řekl, že mě máš odměnit.";
@@ -106,8 +107,10 @@ func int Info_Riordian_REWARD_Condition()
 {
 	if (Saturas_BringFoci == 5)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Riordian_REWARD_Info()
@@ -165,17 +168,19 @@ instance Info_Riordian_MESSAGE(C_INFO)
 	npc = KDW_605_Riordian;
 	condition = Info_Riordian_MESSAGE_Condition;
 	information = Info_Riordian_MESSAGE_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_Riordian_MESSAGE_Condition()
 {
-	if UrShak_SpokeOfUluMulu
-	&& !EnteredFreeMine
+	if ((UrShak_SpokeOfUluMulu)
+	&& (!EnteredFreeMine))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Riordian_MESSAGE_Info()
@@ -188,13 +193,14 @@ func void Info_Riordian_MESSAGE_Info()
 //---------------------------------------------------------------------
 //	Info MESSAGEWHY
 //---------------------------------------------------------------------
+
 instance Info_Riordian_MESSAGEWHY(C_INFO)
 {
 	npc = KDW_605_Riordian;
 	condition = Info_Riordian_MESSAGEWHY_Condition;
 	information = Info_Riordian_MESSAGEWHY_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "You've been expecting me? Why?";
 //	description = "Du hast auf mich gewartet? Warum?";
 	description = "Očekával jsi mě? Jak to?";
@@ -204,8 +210,10 @@ func int Info_Riordian_MESSAGEWHY_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Riordian_MESSAGE))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Riordian_MESSAGEWHY_Info()
@@ -229,9 +237,11 @@ func void Info_Riordian_MESSAGEWHY_Info()
 //	AI_Output(self,hero,"Info_Riordian_MESSAGEWHY_14_06"); //Ja! Bitte suche ihn so schnell wie möglich auf!
 	AI_Output(self,hero,"Info_Riordian_MESSAGEWHY_14_06"); //Ano! Zajdi za ním, prosím, co nejdříve!
 };
+
 /*------------------------------------------------------------------------
 //							WELCOME //
 ------------------------------------------------------------------------*/
+
 instance KDW_605_Riordian_WELCOME(C_INFO)
 {
 	npc = KDW_605_Riordian;
@@ -243,19 +253,23 @@ instance KDW_605_Riordian_WELCOME(C_INFO)
 
 func int KDW_605_Riordian_WELCOME_Condition()
 {
-	if (Npc_GetTrueGuild(hero) == GIL_KDW )
-
+	if (Npc_GetTrueGuild(hero) == GIL_KDW)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void KDW_605_Riordian_WELCOME_Info()
 {
 //	AI_Output(self,other,"KDW_605_Riordian_WELCOME_Info_14_01"); //I'm glad you've joined us.
 //	AI_Output(self,other,"KDW_605_Riordian_WELCOME_Info_14_01"); //Gut, dass du uns beigetreten bist.
 	AI_Output(self,other,"KDW_605_Riordian_WELCOME_Info_14_01"); //Jsem rád, že ses dal k nám.
 };
+
 //-----------------------------------------------------------
+
 instance KDW_605_Riordian_HEAL(C_INFO)
 {
 	npc = KDW_605_Riordian;
@@ -267,18 +281,22 @@ instance KDW_605_Riordian_HEAL(C_INFO)
 
 func int KDW_605_Riordian_HEAL_Condition()
 {
-	if (Npc_GetTrueGuild(hero) == GIL_KDW)
-	&& (Npc_KnowsInfo(hero,KDW_605_Riordian_WELCOME))
+	if ((Npc_GetTrueGuild(hero) == GIL_KDW)
+	&& (Npc_KnowsInfo(hero,KDW_605_Riordian_WELCOME)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void KDW_605_Riordian_HEAL_Info()
 {
 //	AI_Output(self,other,"KDW_605_Riordian_HEAL_Info_14_01"); //If you're injured, I will heal you.
 //	AI_Output(self,other,"KDW_605_Riordian_HEAL_Info_14_01"); //Wenn du verletzt bist, werde ich dich heilen.
 	AI_Output(self,other,"KDW_605_Riordian_HEAL_Info_14_01"); //Jestliže budeš zraněn, já tě vyhojím.
 };
+
 // ***************************** INFOS ****************************************//
 
 instance KDW_605_Riordian_HEALINFO(C_INFO)
@@ -296,13 +314,15 @@ instance KDW_605_Riordian_HEALINFO(C_INFO)
 
 func int KDW_605_Riordian_HEALINFO_Condition()
 {
-	if (hero.attribute[ATR_HITPOINTS] < (hero.attribute[ATR_HITPOINTS_MAX]))
-	&& (Npc_GetTrueGuild(hero) == GIL_KDW)
+	if ((hero.attribute[ATR_HITPOINTS] < (hero.attribute[ATR_HITPOINTS_MAX]))
+	&& (Npc_GetTrueGuild(hero) == GIL_KDW))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void KDW_605_Riordian_HEALINFO_Info()
 {
 //	AI_Output(other,self,"KDW_605_Riordian_HEALINFO_Info_15_01"); //I'm injured. Can you heal me?
@@ -315,6 +335,7 @@ func void KDW_605_Riordian_HEALINFO_Info()
 	hero.attribute [ATR_HITPOINTS] = hero.attribute [ATR_HITPOINTS_MAX];
 	Snd_Play("MFX_Heal_Cast");
 };
+
 /*------------------------------------------------------------------------
 							GREET
 ------------------------------------------------------------------------*/
@@ -333,7 +354,7 @@ instance KDW_605_Riordian_GREET(C_INFO)
 
 func int KDW_605_Riordian_GREET_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void KDW_605_Riordian_GREET_Info()
@@ -361,24 +382,25 @@ instance KDW_605_Riordian_TRADE(C_INFO)
 	information = KDW_605_Riordian_TRADE_Info;
 	important = 0;
 	permanent = 1;
+	trade = 1;
 //	description = "Show me your goods.";
 //	description = "Zeig mir deine Ware";
 	description = "Ukaž mi svoje zboží.";
-	trade = 1;
 };
 
 func int KDW_605_Riordian_TRADE_Condition()
 {
 	if (Npc_KnowsInfo(hero,KDW_605_Riordian_GREET))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void KDW_605_Riordian_TRADE_Info()
 {
 //	AI_Output(other,self,"KDW_605_Riordian_TRADE_Info_15_01"); //Show me your goods.
 //	AI_Output(other,self,"KDW_605_Riordian_TRADE_Info_15_01"); //Zeig mir deine Ware.
 	AI_Output(other,self,"KDW_605_Riordian_TRADE_Info_15_01"); //Ukaž mi svoje zboží.
-
 };

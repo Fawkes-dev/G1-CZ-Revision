@@ -6,11 +6,12 @@ instance Info_HighPriest5(C_INFO)
 	condition = Info_HighPriest5_Condition;
 	information = Info_HighPriest5_Info;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_HighPriest5_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Info_HighPriest5_Info()
@@ -19,7 +20,7 @@ func void Info_HighPriest5_Info()
 	AI_SetWalkmode(self,NPC_WALK);
 	AI_GotoNpc(self,other);
 
-	if (Npc_HasItems(hero,Mythrilklinge02 )) || (Npc_HasItems(hero,UrizielRune ))
+	if ((Npc_HasItems(hero,Mythrilklinge02)) || (Npc_HasItems(hero,UrizielRune)))
 	{
 //		AI_Output(self,other,"Info_HighPriest5_17_04"); //YOUUU have A POWERFUL WEEAAPON!!!
 //		AI_Output(self,other,"Info_HighPriest5_17_04"); //DU HASSST EINE MÄCHTIGEEE WAFFFEE!!!
@@ -60,17 +61,20 @@ instance Info_HighPriest5FAILED(C_INFO)
 	condition = Info_HighPriest5FAILED_Condition;
 	information = Info_HighPriest5FAILED_Info;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_HighPriest5FAILED_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_HighPriest5)
+	if ((Npc_KnowsInfo(hero,Info_HighPriest5))
 	&& (self.aivar[AIV_MISSION1] >= HighPriest_MaxHit)
-	&& !Npc_HasItems(hero,Mythrilklinge02)
-	&& !Npc_HasItems(hero,UrizielRune)
+	&& (!Npc_HasItems(hero,Mythrilklinge02))
+	&& (!Npc_HasItems(hero,UrizielRune)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_HighPriest5FAILED_Info()

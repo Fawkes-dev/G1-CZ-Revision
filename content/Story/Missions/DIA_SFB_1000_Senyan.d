@@ -8,6 +8,7 @@ instance DIA_Senyan_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_Senyan_EXIT_Condition;
 	information = DIA_Senyan_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Senyan_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_Senyan_Hello_Condition;
 	information = DIA_Senyan_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "You're from the Free Mine, right?";
 //	description = "Du kommst aus der Freien Mine, richtig?";
@@ -64,6 +66,7 @@ instance DIA_Senyan_JustTalk(C_INFO)
 	nr = 1;
 	condition = DIA_Senyan_JustTalk_Condition;
 	information = DIA_Senyan_JustTalk_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I just want to talk to you.";
 //	description = "Ich will nur mit dir reden.";
@@ -76,6 +79,8 @@ func int DIA_Senyan_JustTalk_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Senyan_JustTalk_Info()

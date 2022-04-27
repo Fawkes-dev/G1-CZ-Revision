@@ -8,6 +8,7 @@ instance DIA_Gomez_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Gomez_Exit_Condition;
 	information = DIA_Gomez_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Gomez_Fault(C_INFO)
 	nr = 1;
 	condition = DIA_Gomez_Fault_Condition;
 	information = DIA_Gomez_Fault_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I came to offer my services.";
 //	description = "Ich bin gekommen, um dir meine Dienste anzubieten.";
@@ -44,6 +46,8 @@ func int DIA_Gomez_Fault_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Gomez_Fault_Info()
@@ -73,6 +77,7 @@ instance DIA_Gomez_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_Gomez_Hello_Condition;
 	information = DIA_Gomez_Hello_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I have come to offer my services.";
 //	description = "Ich bin gekommen, um dir meine Dienste anzubieten.";
@@ -81,10 +86,13 @@ instance DIA_Gomez_Hello(C_INFO)
 
 func int DIA_Gomez_Hello_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Raven_There) && (gomez_kontakte<4))
+	if ((Npc_KnowsInfo(hero,DIA_Raven_There))
+	&& (gomez_kontakte < 4))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Gomez_Hello_Info()
@@ -151,8 +159,8 @@ func void DIA_Gomez_Hello_Kontakte()
 
 	if (gomez_kontakte < 3)
 	{
-//	Info_AddChoice(DIA_Gomez_Hello,"Zu Y'Berion.",DIA_Gomez_Hello_Kontakte_YBerion);
-	Info_AddChoice(DIA_Gomez_Hello,"S Y'Berionem.",DIA_Gomez_Hello_Kontakte_YBerion);
+//		Info_AddChoice(DIA_Gomez_Hello,"Zu Y'Berion.",DIA_Gomez_Hello_Kontakte_YBerion);
+		Info_AddChoice(DIA_Gomez_Hello,"S Y'Berionem.",DIA_Gomez_Hello_Kontakte_YBerion);
 	};
 };
 
@@ -294,6 +302,7 @@ instance DIA_Gomez_Dabei(C_INFO)
 	nr = 1;
 	condition = DIA_Gomez_Dabei_Condition;
 	information = DIA_Gomez_Dabei_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Does that mean I'm in?";
 //	description = "Heißt das, ich bin dabei?";
@@ -302,11 +311,13 @@ instance DIA_Gomez_Dabei(C_INFO)
 
 func int DIA_Gomez_Dabei_Condition()
 {
-	if (gomez_kontakte >= 3)
-	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
+	if ((gomez_kontakte >= 3)
+	&& (Npc_GetTrueGuild(hero) == GIL_NONE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Gomez_Dabei_Info()
@@ -355,6 +366,7 @@ instance DIA_Gomez_NurSo(C_INFO)
 	nr = 1;
 	condition = DIA_Gomez_NurSo_Condition;
 	information = DIA_Gomez_NurSo_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I just thought I'd report in.";
 //	description = "Ich wollte mal einen Zwischenbericht abgeben.";
@@ -363,10 +375,12 @@ instance DIA_Gomez_NurSo(C_INFO)
 
 func int DIA_Gomez_NurSo_Condition()
 {
-	if (Raven_SpySect==LOG_RUNNING)
+	if (Raven_SpySect == LOG_RUNNING)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Gomez_NurSo_Info()
@@ -400,11 +414,14 @@ instance DIA_EBR_100_Gomez_Wait4SC(C_INFO)
 
 func int DIA_EBR_100_Gomez_Wait4SC_Condition()
 {
-	if ExploreSunkenTower
+	if (ExploreSunkenTower)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void DIA_EBR_100_Gomez_Wait4SC_Info()
 {
 //	AI_Output(self,other,"DIA_EBR_100_Gomez_Wait4SC_11_01"); //How did you get in here?

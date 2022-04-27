@@ -15,7 +15,7 @@ instance Sld_701_Orik_Exit(C_INFO)
 
 func int Sld_701_Orik_Exit_Condition()
 {
-//	return TRUE; //SN: da ambient-NSC!
+//	return 1; //SN: da ambient-NSC!
 };
 
 func void Sld_701_Orik_Exit_Info()

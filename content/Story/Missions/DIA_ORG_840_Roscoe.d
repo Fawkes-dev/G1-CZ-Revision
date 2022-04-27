@@ -8,6 +8,7 @@ instance DIA_Roscoe_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Roscoe_Exit_Condition;
 	information = DIA_Roscoe_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Roscoe_BringList(C_INFO)
 	nr = 1;
 	condition = DIA_Roscoe_BringList_Condition;
 	information = DIA_Roscoe_BringList_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I have the list of requirements for the Old Mine.";
 //	description = "Ich habe die Bedarfsliste der alten Mine.";
@@ -40,10 +42,12 @@ instance DIA_Roscoe_BringList(C_INFO)
 
 func int DIA_Roscoe_BringList_Condition()
 {
-	if (Npc_HasItems(other,TheList)>=1)
+	if (Npc_HasItems(other,TheList) >= 1)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Roscoe_BringList_Info()
@@ -86,6 +90,7 @@ instance DIA_Roscoe_Mordrag(C_INFO)
 	condition = DIA_Roscoe_Mordrag_Condition;
 	information = DIA_Roscoe_Mordrag_Info;
 	important = 0;
+	permanent = 0;
 //	description = "Mordrag sent me.";
 //	description = "Mordrag schickt mich.";
 	description = "Poslal mě Mordrag.";
@@ -98,6 +103,8 @@ func int DIA_Roscoe_Mordrag_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Roscoe_Mordrag_Info()
@@ -139,6 +146,7 @@ instance DIA_Roscoe_WannaJoin(C_INFO)
 	nr = 2;
 	condition = DIA_Roscoe_WannaJoin_Condition;
 	information = DIA_Roscoe_WannaJoin_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I want to join your gang.";
 //	description = "Ich will mich eurer Bande anschließen.";
@@ -147,13 +155,15 @@ instance DIA_Roscoe_WannaJoin(C_INFO)
 
 func int DIA_Roscoe_WannaJoin_Condition()
 {
-	if !Npc_KnowsInfo(hero,DIA_Roscoe_Mordrag)
-	&& !Npc_KnowsInfo(hero,DIA_Roscoe_BringList)
+	if ((!Npc_KnowsInfo(hero,DIA_Roscoe_Mordrag))
+	&& (!Npc_KnowsInfo(hero,DIA_Roscoe_BringList))
 	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
-	&& (oldHeroGuild == 0)
+	&& (oldHeroGuild == 0))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Roscoe_WannaJoin_Info()
@@ -164,7 +174,6 @@ func void DIA_Roscoe_WannaJoin_Info()
 //	AI_Output(self,other,"DIA_Roscoe_WannaJoin_10_01"); //Many people want to join us. You'll have to make a better offer if you want to pass through this gate.
 //	AI_Output(self,other,"DIA_Roscoe_WannaJoin_10_01"); //Das wollen viele. Du musst schon mit mehr kommen, wenn du durch diese Tür gehen willst.
 	AI_Output(self,other,"DIA_Roscoe_WannaJoin_10_01"); //Spousta lidí se chce přidat. Budeš muset udělat lepší nabídku, jestli se chceš dostat přes tyhle vrata.
-
 };
 
 // ****************************************
@@ -177,19 +186,19 @@ instance DIA_Roscoe_ComeAgain(C_INFO)
 	nr = 2;
 	condition = DIA_Roscoe_ComeAgain_Condition;
 	information = DIA_Roscoe_ComeAgain_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Roscoe_ComeAgain_Condition()
 {
-	if (
-		((Npc_HasItems(other,TheList)>=1) && Npc_KnowsInfo(hero,ORG_801_Lares_MordragSentMe))
-	|| (Npc_KnowsInfo(hero,Org_826_Mordrag_AtNewcamp) && Npc_KnowsInfo(hero,ORG_801_Lares_BringList))
-		)
+	if (((Npc_HasItems(other,TheList) >= 1) && (Npc_KnowsInfo(hero,ORG_801_Lares_MordragSentMe)))
+	|| ((Npc_KnowsInfo(hero,Org_826_Mordrag_AtNewcamp)) && (Npc_KnowsInfo(hero,ORG_801_Lares_BringList))))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Roscoe_ComeAgain_Info()
@@ -215,19 +224,21 @@ instance Info_Roscoe_FirstWarn(C_INFO)
 	nr = 2;
 	condition = Info_Roscoe_FirstWarn_Condition;
 	information = Info_Roscoe_FirstWarn_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_Roscoe_FirstWarn_Condition()
 {
-	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS]== AIV_GPS_BEGIN)
-	&& (self.aivar[AIV_PASSGATE] == FALSE )
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY )
+	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_BEGIN)
+	&& (self.aivar[AIV_PASSGATE] == FALSE)
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY)
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self), self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Roscoe_FirstWarn_Info()
@@ -257,20 +268,22 @@ instance Info_Roscoe_LastWarn(C_INFO)
 	nr = 1;
 	condition = Info_Roscoe_LastWarn_Condition;
 	information = Info_Roscoe_LastWarn_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_Roscoe_LastWarn_Condition()
 {
-	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_FIRSTWARN )
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY )
-	&& (self.aivar[AIV_PASSGATE] == FALSE )
+	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_FIRSTWARN)
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY)
+	&& (self.aivar[AIV_PASSGATE] == FALSE)
 	&& (Npc_GetDistToWP(hero,Roscoe_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func int Info_Roscoe_LastWarn_Info()
@@ -294,20 +307,22 @@ instance Info_Roscoe_Attack(C_INFO)
 	nr = 1;
 	condition = Info_Roscoe_Attack_Condition;
 	information = Info_Roscoe_Attack_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_Roscoe_Attack_Condition()
 {
-	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_LASTWARN )
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY )
+	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_LASTWARN)
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY)
 	&& (self.aivar[AIV_PASSGATE] == FALSE)
 	&& (Npc_GetDistToWP(hero,Roscoe_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func int Info_Roscoe_Attack_Info()

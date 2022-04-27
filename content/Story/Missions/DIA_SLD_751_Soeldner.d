@@ -16,6 +16,8 @@ func int DIA_SLD_751_Soeldner_INTRO_CONDITION()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_SLD_751_Soeldner_INTRO_INFO()
@@ -29,8 +31,8 @@ func void DIA_SLD_751_Soeldner_INTRO_INFO()
 
 instance DIA_SLD_751_Soeldner_EXIT_1(C_INFO)
 {
-	nr = 999;
 	npc = SLD_751_Soeldner;
+	nr = 999;
 	condition = DIA_SLD_751_Soeldner_EXIT_1_CONDITION;
 	information = DIA_SLD_751_Soeldner_EXIT_1_INFO;
 	important = 0;
@@ -60,8 +62,8 @@ func void DIA_SLD_751_Soeldner_EXIT_1_INFO()
 
 instance DIA_SLD_751_Soeldner_EXIT_2(C_INFO)
 {
-	nr = 999;
 	npc = SLD_751_Soeldner;
+	nr = 999;
 	condition = DIA_SLD_751_Soeldner_EXIT_2_CONDITION;
 	information = DIA_SLD_751_Soeldner_EXIT_2_INFO;
 	important = 0;
@@ -77,6 +79,8 @@ func int DIA_SLD_751_Soeldner_EXIT_2_CONDITION()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_SLD_751_Soeldner_EXIT_2_INFO()
@@ -146,6 +150,4 @@ func void DIA_SLD_751_Soeldner_INMINE_INFO()
 //	AI_Output(self,other,"DIA_SLD_751_Soeldner_INMINE_INFO_01_02");//I can hardly believe you'll manage that. But just speak to Okyl.
 //	AI_Output(self,other,"DIA_SLD_751_Soeldner_INMINE_INFO_01_02");//Ich glaube kaum, dass dir dass gelingen wird. Aber sprich mal mit Okyl.
 	AI_Output(self,other,"DIA_SLD_751_Soeldner_INMINE_INFO_01_02");//Nevěřím, že se ti to povede, ale promluv si s Okylem.
-
 };
-

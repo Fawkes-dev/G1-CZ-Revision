@@ -8,6 +8,7 @@ instance DIA_Orry_PreExit(C_INFO)
 	nr = 999;
 	condition = DIA_Orry_PreExit_Condition;
 	information = DIA_Orry_PreExit_Info;
+	important = 0;
 	permanent = 0;
 	description = DIALOG_ENDE;
 };
@@ -35,6 +36,7 @@ instance DIA_Orry_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Orry_Exit_Condition;
 	information = DIA_Orry_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -45,6 +47,8 @@ func int DIA_Orry_Exit_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Orry_Exit_Info()
@@ -62,6 +66,7 @@ instance DIA_Orry_GuardGate(C_INFO)
 	nr = 2;
 	condition = DIA_Orry_GuardGate_Condition;
 	information = DIA_Orry_GuardGate_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What are you doing here?";
 //	description = "Was machst du hier?";
@@ -74,6 +79,8 @@ func int DIA_Orry_GuardGate_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Orry_GuardGate_Info()
@@ -143,6 +150,7 @@ instance DIA_Orry_NewCamp(C_INFO)
 	nr = 1;
 	condition = DIA_Orry_NewCamp_Condition;
 	information = DIA_Orry_NewCamp_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Why do I have to watch out for the guys from the New Camp?";
 //	description = "Warum sollte ich mich vor dem Neuen Lager in Acht nehmen?";
@@ -155,6 +163,8 @@ func int DIA_Orry_NewCamp_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Orry_NewCamp_Info()
@@ -180,6 +190,7 @@ instance DIA_Orry_OldCamp(C_INFO)
 	nr = 2;
 	condition = DIA_Orry_OldCamp_Condition;
 	information = DIA_Orry_OldCamp_Info;
+	important = 0;
 	permanent = 0;
 //	description = "And the Old Camp?";
 //	description = "Und das Alte Lager?";
@@ -192,6 +203,8 @@ func int DIA_Orry_OldCamp_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Orry_OldCamp_Info()
@@ -217,6 +230,7 @@ instance DIA_Orry_Shore(C_INFO)
 	nr = 3;
 	condition = DIA_Orry_Shore_Condition;
 	information = DIA_Orry_Shore_Info;
+	important = 0;
 	permanent = 0;
 //	description = "When I was washed ashore, one of the guys punched me in the face.";
 //	description = "Als ich ans Ufer gespült wurde. hat mich einer von den Typen geschlagen.";
@@ -229,6 +243,8 @@ func int DIA_Orry_Shore_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Orry_Shore_Info()
@@ -257,6 +273,7 @@ instance DIA_Orry_Woman(C_INFO)
 	nr = 3;
 	condition = DIA_Orry_Woman_Condition;
 	information = DIA_Orry_Woman_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I saw a woman being sent down with the goods.";
 //	description = "Sie haben eine Frau zusammen mit den Waren reingeschickt.";
@@ -269,6 +286,8 @@ func int DIA_Orry_Woman_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Orry_Woman_Info()
@@ -300,6 +319,7 @@ instance DIA_Orry_Waffe(C_INFO)
 	nr = 3;
 	condition = DIA_Orry_Waffe_Condition;
 	information = DIA_Orry_Waffe_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I'm looking for a weapon...";
 //	description = "Ich suche eine Waffe...";
@@ -312,6 +332,8 @@ func int DIA_Orry_Waffe_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Orry_Waffe_Info()
@@ -332,4 +354,3 @@ func void DIA_Orry_Waffe_Info()
 	AI_Output(self,other,"DIA_Orry_Waffe_06_03"); //Nezkušený bojovník by ho měl použít jen v nouzi.
 
 };
-

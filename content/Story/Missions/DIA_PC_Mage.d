@@ -7,6 +7,7 @@ instance DIA_Milten_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_Milten_EXIT_Condition;
 	information = DIA_Milten_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -43,17 +44,20 @@ instance DIA_Milten_First(C_INFO)
 	nr = 1;
 	condition = DIA_Milten_First_Condition;
 	information = DIA_Milten_First_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Milten_First_Condition()
 {
-	if ((CorKalom_BringMCQBalls != LOG_SUCCESS) && (!Npc_KnowsInfo(hero,GRD_200_Thorus_WANNABEMAGE)))
-	&& (Npc_GetDistToNpc(self,other)<=ZivilAnquatschDist)
+	if ((CorKalom_BringMCQBalls != LOG_SUCCESS)
+	&& (!Npc_KnowsInfo(hero,GRD_200_Thorus_WANNABEMAGE))
+	&& (Npc_GetDistToNpc(self,other) <= ZivilAnquatschDist))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Milten_First_Info()
@@ -73,6 +77,7 @@ instance DIA_Milten_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_Milten_Hello_Condition;
 	information = DIA_Milten_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I'm looking for the High Magician of the Circle of Fire.";
 //	description = "Ich suche den obersten Magier des Feuers.";
@@ -81,10 +86,13 @@ instance DIA_Milten_Hello(C_INFO)
 
 func int DIA_Milten_Hello_Condition()
 {
-	if (Saturas_BringFoci == FALSE) && (!Npc_KnowsInfo(hero,DIA_Milten_GotoCorristo))
+	if ((Saturas_BringFoci == FALSE)
+	&& (!Npc_KnowsInfo(hero,DIA_Milten_GotoCorristo)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Milten_Hello_Info()
@@ -107,22 +115,24 @@ instance DIA_Milten_GotoCorristo(C_INFO)
 	nr = 1;
 	condition = DIA_Milten_GotoCorristo_Condition;
 	information = DIA_Milten_GotoCorristo_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Milten_GotoCorristo_Condition()
 {
-	if ((CorKalom_BringMCQBalls == LOG_SUCCESS) || Npc_KnowsInfo(hero,GRD_200_Thorus_WANNABEMAGE))
-	&& (Npc_GetTrueGuild(hero) == GIL_STT)
+	if (((CorKalom_BringMCQBalls == LOG_SUCCESS) || (Npc_KnowsInfo(hero,GRD_200_Thorus_WANNABEMAGE)))
+	&& (Npc_GetTrueGuild(hero) == GIL_STT))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Milten_GotoCorristo_Info()
 {
-	if ((Npc_HasItems(other,ItWr_Fire_Letter_01)>=1) || (Npc_HasItems(other,ItWr_Fire_Letter_02)>=1))
+	if ((Npc_HasItems(other,ItWr_Fire_Letter_01) >= 1) || (Npc_HasItems(other,ItWr_Fire_Letter_02) >= 1))
 	{
 		//***kopierte AI_outputs, falls SC Brief noch hat***
 //		AI_Output(other,self,"DIA_Milten_Hello_15_00"); //I'm looking for the High Magician of the Circle of Fire.
@@ -145,11 +155,11 @@ func void DIA_Milten_GotoCorristo_Info()
 //		AI_Output(other,self,"DIA_Milten_Letter_Give_15_00"); //Hier ist er.
 		AI_Output(other,self,"DIA_Milten_Letter_Give_15_00"); //Tady je,
 		B_GiveXP(XP_XardasLetter);
-		if Npc_HasItems(other,ItWr_Fire_Letter_01)
+		if (Npc_HasItems(other,ItWr_Fire_Letter_01))
 		{
 			B_GiveInvItems(other,self,ItWr_Fire_Letter_01,1);
 		}
-		else if Npc_HasItems(other,ItWr_Fire_Letter_02)
+		else if (Npc_HasItems(other,ItWr_Fire_Letter_02))
 		{
 			B_GiveInvItems(other,self,ItWr_Fire_Letter_02,1);
 		};
@@ -182,6 +192,7 @@ instance DIA_Milten_Letter(C_INFO)
 	nr = 1;
 	condition = DIA_Milten_Letter_Condition;
 	information = DIA_Milten_Letter_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I have a letter for the High Magician of the Circle of Fire.";
 //	description = "Ich habe einen Brief für den obersten Feuermagier.";
@@ -190,11 +201,15 @@ instance DIA_Milten_Letter(C_INFO)
 
 func int DIA_Milten_Letter_Condition()
 {
-	if ((Npc_KnowsInfo(hero,DIA_Milten_Hello)) && ((Npc_HasItems(other,ItWr_Fire_Letter_01)>=1) || (Npc_HasItems(other,ItWr_Fire_Letter_02)>=1)))
-	&& (Kapitel < 4) && (Saturas_BringFoci == FALSE)
+	if ((Npc_KnowsInfo(hero,DIA_Milten_Hello))
+	&& ((Npc_HasItems(other,ItWr_Fire_Letter_01) >= 1) || (Npc_HasItems(other,ItWr_Fire_Letter_02) >= 1))
+	&& (Kapitel < 4)
+	&& (Saturas_BringFoci == FALSE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Milten_Letter_Info()
@@ -251,11 +266,11 @@ func void DIA_Milten_Letter_Give()
 	AI_GotoWP (self,"OCC_CHAPEL_STAIRCASE_TOP");
 	AI_GotoWP (self,"OCC_CHAPEL_ENTRANCE");
 
-	if Npc_HasItems(other,ItWr_Fire_Letter_01)
+	if (Npc_HasItems(other,ItWr_Fire_Letter_01))
 	{
 		B_GiveInvItems(other,self,ItWr_Fire_Letter_01,1);
 	}
-	else if Npc_HasItems(other,ItWr_Fire_Letter_02)
+	else if (Npc_HasItems(other,ItWr_Fire_Letter_02))
 	{
 		B_GiveInvItems(other,self,ItWr_Fire_Letter_02,1);
 	};
@@ -317,16 +332,20 @@ instance DIA_Milten_ComesBack(C_INFO)
 	nr = 1;
 	condition = DIA_Milten_ComesBack_Condition;
 	information = DIA_Milten_ComesBack_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Milten_ComesBack_Condition()
 {
-	if ((Npc_KnowsInfo(hero,DIA_Milten_Letter)) && (Npc_RefuseTalk(self) == FALSE) && (Kapitel <= 3))
+	if ((Npc_KnowsInfo(hero,DIA_Milten_Letter))
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Kapitel <= 3))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Milten_ComesBack_Info()
@@ -358,6 +377,7 @@ instance DIA_Milten_WoTorrez(C_INFO)
 	nr = 1;
 	condition = DIA_Milten_WoTorrez_Condition;
 	information = DIA_Milten_WoTorrez_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Where can I find Torrez?";
 //	description = "Wo finde ich Torrez?";
@@ -366,10 +386,13 @@ instance DIA_Milten_WoTorrez(C_INFO)
 
 func int DIA_Milten_WoTorrez_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Milten_ComesBack) && (Saturas_BringFoci == FALSE))
+	if ((Npc_KnowsInfo(hero,DIA_Milten_ComesBack))
+	&& (Saturas_BringFoci == FALSE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Milten_WoTorrez_Info()
@@ -395,6 +418,7 @@ instance DIA_Milten_NochEinBrief(C_INFO)
 	nr = 2;
 	condition = DIA_Milten_NochEinBrief_Condition;
 	information = DIA_Milten_NochEinBrief_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I have a letter from the Magicians of Water.";
 //	description = "Ich habe da noch einen Brief von den Wassermagiern.";
@@ -403,10 +427,13 @@ instance DIA_Milten_NochEinBrief(C_INFO)
 
 func int DIA_Milten_NochEinBrief_Condition()
 {
-	if ((Cronos_Messenger == LOG_RUNNING) && (Kapitel <= 3))
+	if ((Cronos_Messenger == LOG_RUNNING)
+	&& (Kapitel <= 3))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Milten_NochEinBrief_Info()
@@ -435,6 +462,7 @@ instance DIA_Milten_PERM(C_INFO)
 	nr = 1;
 	condition = DIA_Milten_PERM_Condition;
 	information = DIA_Milten_PERM_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Tell me something about the Magicians of Fire.";
 //	description = "Erzähl mir was über die Feuermagier.";
@@ -443,10 +471,13 @@ instance DIA_Milten_PERM(C_INFO)
 
 func int DIA_Milten_PERM_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Milten_ComesBack) && (Kapitel <= 3))
+	if (Npc_KnowsInfo(hero,DIA_Milten_ComesBack)
+	&& (Kapitel <= 3))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Milten_PERM_Info()
@@ -478,6 +509,7 @@ instance DIA_Milten_WannaMage(C_INFO)
 	nr = 2;
 	condition = DIA_Milten_WannaMage_Condition;
 	information = DIA_Milten_WannaMage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I want to become a magician's apprentice, too. Just like you.";
 //	description = "Ich will ein Lehrling der Magier werden - so wie du.";
@@ -486,10 +518,13 @@ instance DIA_Milten_WannaMage(C_INFO)
 
 func int DIA_Milten_WannaMage_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Milten_PERM) && (CorKalom_BringMCQBalls != LOG_SUCCESS))
+	if (Npc_KnowsInfo(hero,DIA_Milten_PERM)
+	&& (CorKalom_BringMCQBalls != LOG_SUCCESS))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Milten_WannaMage_Info()
@@ -530,10 +565,12 @@ instance Info_Milten_SHWAIT(C_INFO)
 
 func int Info_Milten_SHWAIT_Condition()
 {
-	if (Npc_GetDistToWP(hero,"OW_PATH_274")<1000)
+	if (Npc_GetDistToWP(hero,"OW_PATH_274") < 1000)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_SHWAIT_Info()
@@ -571,10 +608,13 @@ instance Info_Milten_SHGORN(C_INFO)
 
 func int Info_Milten_SHGORN_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Milten_SHWAIT) && Npc_KnowsInfo(hero,Info_Gorn_RUINSUCCESS))
+	if ((Npc_KnowsInfo(hero,Info_Milten_SHWAIT))
+	&& (Npc_KnowsInfo(hero,Info_Gorn_RUINSUCCESS)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_SHGORN_Info()
@@ -610,10 +650,13 @@ instance Info_Milten_SHLESTER(C_INFO)
 
 func int Info_Milten_SHLESTER_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Milten_SHWAIT) && Npc_KnowsInfo(hero,PC_Psionic_FINISH))
+	if ((Npc_KnowsInfo(hero,Info_Milten_SHWAIT))
+	&& (Npc_KnowsInfo(hero,PC_Psionic_FINISH)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_SHLESTER_Info()
@@ -653,6 +696,8 @@ func int Info_Milten_SHYOU_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_SHYOU_Info()
@@ -691,11 +736,13 @@ instance Info_Milten_SHME(C_INFO)
 
 func int Info_Milten_SHME_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Milten_SHWAIT)
-	&& !Npc_KnowsInfo(hero,Info_Milten_SHACCEPT)
+	if ((Npc_KnowsInfo(hero,Info_Milten_SHWAIT))
+	&& (!Npc_KnowsInfo(hero,Info_Milten_SHACCEPT)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_SHME_Info()
@@ -727,8 +774,10 @@ func int Info_Milten_SHPROBLEM_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Milten_SHYOU))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_SHPROBLEM_Info()
@@ -769,8 +818,10 @@ func int Info_Milten_SHFOCUS_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Milten_SHPROBLEM))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_SHFOCUS_Info()
@@ -808,8 +859,10 @@ func int Info_Milten_SHSEAL_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Milten_SHPROBLEM))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_SHSEAL_Info()
@@ -856,8 +909,10 @@ func int Info_Milten_SHTALISMAN_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Milten_SHFOCUS))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_SHTALISMAN_Info()
@@ -890,11 +945,13 @@ instance Info_Milten_SHOFFER(C_INFO)
 
 func int Info_Milten_SHOFFER_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Milten_SHSEAL)
-	&& Npc_KnowsInfo(hero,Info_Milten_SHTALISMAN))
+	if ((Npc_KnowsInfo(hero,Info_Milten_SHSEAL))
+	&& (Npc_KnowsInfo(hero,Info_Milten_SHTALISMAN)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_SHOFFER_Info()
@@ -944,8 +1001,10 @@ func int Info_Milten_SHOFFER2_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Milten_SHOFFER))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_SHOFFER2_Info()
@@ -992,8 +1051,10 @@ func int Info_Milten_SHACCEPT_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Milten_SHOFFER2))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_SHACCEPT_Info()
@@ -1046,10 +1107,13 @@ instance Info_Milten_SHARRIVED(C_INFO)
 
 func int Info_Milten_SHARRIVED_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Milten_SHACCEPT) && (Npc_GetDistToWP(hero,"OW_PATH_3_STONES")<500))
+	if ((Npc_KnowsInfo(hero,Info_Milten_SHACCEPT)
+	&& (Npc_GetDistToWP(hero,"OW_PATH_3_STONES") < 500)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_SHARRIVED_Info()
@@ -1085,13 +1149,15 @@ instance Info_Milten_SHHEAL(C_INFO)
 
 func int Info_Milten_SHHEAL_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Milten_SHACCEPT)
-	&& !Npc_KnowsInfo(hero,Info_Milten_SHSUCCESS)
+	if ((Npc_KnowsInfo(hero,Info_Milten_SHACCEPT))
+	&& (!Npc_KnowsInfo(hero,Info_Milten_SHSUCCESS))
 	&& (hero.attribute[ATR_HITPOINTS] < ((hero.attribute[ATR_HITPOINTS_MAX]*7)/10))
 	&& (Npc_HasItems(hero,ItFo_Potion_Health_02) == 0))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_SHHEAL_Info()
@@ -1100,7 +1166,7 @@ func void Info_Milten_SHHEAL_Info()
 //	AI_Output(hero,self,"Info_Milten_SHHEAL_15_01"); //Ich bin verwundet. Bitte hilf mir!
 	AI_Output(hero,self,"Info_Milten_SHHEAL_15_01"); //Jsem zraněný. Pomoz mi, prosím.
 
-	if ((Npc_HasItems(self,ItFo_Potion_Health_02) >  0))
+	if (Npc_HasItems(self,ItFo_Potion_Health_02) > 0)
 	{
 //		AI_Output(self,hero,"Info_Milten_SHHEAL_02_02"); //Take this healing potion.
 //		AI_Output(self,hero,"Info_Milten_SHHEAL_02_02"); //Nimm diesen Heiltrank. Aber sei nicht verschwenderisch, ich habe nicht unendlich viel davon.
@@ -1138,11 +1204,13 @@ func int Info_Milten_SHRUNNING_Condition()
 	Npc_PerceiveAll(self);
 	keeperFound = Wld_DetectNpc(self,ZombieTheKeeper, NOFUNC, -1);
 
-	if Npc_KnowsInfo(hero,Info_Milten_SHACCEPT)
-	&& (keeperFound && !Npc_IsDead(other)) // Wächter noch nicht besiegt...
+	if ((Npc_KnowsInfo(hero,Info_Milten_SHACCEPT))
+	&& ((keeperFound) && (!Npc_IsDead(other)))) // Wächter noch nicht besiegt...
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_SHRUNNING_Info()
@@ -1175,13 +1243,16 @@ func int Info_Milten_SHSCROLL_Condition()
 	var int keeperFound;
 	Npc_PerceiveAll(self);
 	keeperFound = Wld_DetectNpc(self,ZombieTheKeeper, NOFUNC, -1);
-	if ((keeperFound && !Npc_IsDead(other)) // Wächter noch nicht besiegt...
-	&& Npc_KnowsInfo(hero,Info_Milten_SHACCEPT)
-	&& (Npc_HasItems(hero,ItArScrollDestroyUndead)==0)
-	&& (Npc_HasItems(hero,ItArRuneDestroyUndead)==0))
+
+	if ((Npc_KnowsInfo(hero,Info_Milten_SHACCEPT))
+	&& ((keeperFound) && (!Npc_IsDead(other))) // Wächter noch nicht besiegt...
+	&& (Npc_HasItems(hero,ItArScrollDestroyUndead) == 0)
+	&& (Npc_HasItems(hero,ItArRuneDestroyUndead) == 0))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_SHSCROLL_Info()
@@ -1222,12 +1293,14 @@ instance Info_Milten_SHNEWSCROLL(C_INFO)
 
 func int Info_Milten_SHNEWSCROLL_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Milten_SHSCROLL)
-	&& !Npc_KnowsInfo(hero,Info_Milten_SHSUCCESS)
-	&& ((Npc_HasItems(hero,ItArScrollDestroyUndead)>0) || (Npc_HasItems(hero,ItArRuneDestroyUndead)>0)))
+	if ((Npc_KnowsInfo(hero,Info_Milten_SHSCROLL))
+	&& (!Npc_KnowsInfo(hero,Info_Milten_SHSUCCESS))
+	&& ((Npc_HasItems(hero,ItArScrollDestroyUndead) > 0) || (Npc_HasItems(hero,ItArRuneDestroyUndead) > 0)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_SHNEWSCROLL_Info()
@@ -1261,13 +1334,15 @@ instance Info_Milten_SHLEAVE(C_INFO)
 
 func int Info_Milten_SHLEAVE_Condition()
 {
-	if  Npc_KnowsInfo(hero,Info_Milten_SHACCEPT)
-	&& !Npc_KnowsInfo(hero,Info_Milten_SHSUCCESS)
-	&& (Npc_GetDistToWP(hero,"OW_PATH_3_STONES")>10000)
-  	&& (self.aivar[AIV_PARTYMEMBER] == TRUE)
+	if ((Npc_KnowsInfo(hero,Info_Milten_SHACCEPT))
+	&& (!Npc_KnowsInfo(hero,Info_Milten_SHSUCCESS))
+	&& (Npc_GetDistToWP(hero,"OW_PATH_3_STONES") > 10000)
+  	&& (self.aivar[AIV_PARTYMEMBER] == TRUE))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_SHLEAVE_Info()
@@ -1303,13 +1378,15 @@ instance Info_Milten_SHCONTINUE(C_INFO)
 
 func int Info_Milten_SHCONTINUE_Condition()
 {
-	if (self.aivar[AIV_PARTYMEMBER] == FALSE)
-	&& Npc_KnowsInfo(hero,Info_Milten_SHACCEPT)
-	&& !Npc_KnowsInfo(hero,Info_Milten_SHSUCCESS)
-	&& (Npc_GetDistToWP(hero,"OW_PATH_3_STONES")<9000)
+	if ((Npc_KnowsInfo(hero,Info_Milten_SHACCEPT))
+	&& (!Npc_KnowsInfo(hero,Info_Milten_SHSUCCESS))
+	&& (Npc_GetDistToWP(hero,"OW_PATH_3_STONES") < 9000)
+	&& (self.aivar[AIV_PARTYMEMBER] == FALSE))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_SHCONTINUE_Info()
@@ -1342,10 +1419,13 @@ instance Info_Milten_SHSUCCESS(C_INFO)
 
 func int Info_Milten_SHSUCCESS_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Milten_SHACCEPT) && Npc_HasItems(hero,ItMi_OrcTalisman))
+	if ((Npc_KnowsInfo(hero,Info_Milten_SHACCEPT))
+	&& (Npc_HasItems(hero,ItMi_OrcTalisman)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_SHSUCCESS_Info()
@@ -1401,8 +1481,10 @@ func int Info_Milten_OCWARN_Condition()
 {
 	if (Kapitel == 4)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_OCWARN_Info()
@@ -1477,10 +1559,13 @@ instance Info_Milten_OCMINE(C_INFO)
 
 func int Info_Milten_OCMINE_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Milten_OCWARN) && !Npc_KnowsInfo(hero,Info_Diego_OCRETREAT))
+	if ((Npc_KnowsInfo(hero,Info_Milten_OCWARN))
+	&& (!Npc_KnowsInfo(hero,Info_Diego_OCRETREAT)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_OCMINE_Info()
@@ -1516,10 +1601,13 @@ instance Info_Milten_OCKDW(C_INFO)
 
 func int Info_Milten_OCKDW_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Milten_OCWARN) && !Npc_KnowsInfo(hero,Info_Diego_OCRETREAT))
+	if ((Npc_KnowsInfo(hero,Info_Milten_OCWARN))
+	&& (!Npc_KnowsInfo(hero,Info_Diego_OCRETREAT)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_OCKDW_Info()
@@ -1557,8 +1645,10 @@ func int Info_Milten_OCWHY_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Milten_OCKDW))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_OCWHY_Info()
@@ -1593,8 +1683,10 @@ func int Info_Milten_OCYOU_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Milten_OCKDW))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_OCYOU_Info()
@@ -1636,12 +1728,14 @@ instance Info_Milten_OCDIEGO(C_INFO)
 
 func int Info_Milten_OCDIEGO_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Milten_OCWHY)
-	&& Npc_KnowsInfo(hero,Info_Milten_OCYOU)
-	&& !Npc_KnowsInfo(hero,Info_Diego_OCSTORY)
+	if ((Npc_KnowsInfo(hero,Info_Milten_OCWHY))
+	&& (Npc_KnowsInfo(hero,Info_Milten_OCYOU))
+	&& (!Npc_KnowsInfo(hero,Info_Diego_OCSTORY)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_OCDIEGO_Info()
@@ -1686,8 +1780,10 @@ func int Info_Milten_LOADSWORD_Condition()
 {
 	if (LoadSword)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_LOADSWORD_Info()
@@ -1722,10 +1818,12 @@ instance Info_Milten_LOADSWORD1(C_INFO)
 
 func int Info_Milten_LOADSWORD1_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Milten_LOADSWORD)
+	if (Npc_KnowsInfo(hero,Info_Milten_LOADSWORD))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_LOADSWORD1_Info()
@@ -1761,11 +1859,13 @@ instance Info_Milten_LSAWAY(C_INFO)
 
 func int Info_Milten_LSAWAY_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Milten_LOADSWORD1)
-	&& (Npc_GetDistToWP(hero,"NC_KDW04_IN") < 500)
+	if ((Npc_KnowsInfo(hero,Info_Milten_LOADSWORD1))
+	&& (Npc_GetDistToWP(hero,"NC_KDW04_IN") < 500))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_LSAWAY_Info()
@@ -1830,10 +1930,12 @@ instance Info_Milten_LOADSWORD4(C_INFO)
 
 func int Info_Milten_LOADSWORD4_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Milten_LSAWAY)
+	if (Npc_KnowsInfo(hero,Info_Milten_LSAWAY))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_LOADSWORD4_Info()
@@ -1870,10 +1972,12 @@ instance Info_Milten_LSRISK(C_INFO)
 
 func int Info_Milten_LSRISK_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Milten_LOADSWORD4)
+	if (Npc_KnowsInfo(hero,Info_Milten_LOADSWORD4))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_LSRISK_Info()
@@ -1928,11 +2032,13 @@ instance Info_Milten_LSOREHEAP(C_INFO)
 
 func int Info_Milten_LSOREHEAP_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Milten_LSRISK )
-	&& (Npc_GetDistToWP(hero,"NC_PATH41") < 500)
+	if ((Npc_KnowsInfo(hero,Info_Milten_LSRISK ))
+	&& (Npc_GetDistToWP(hero,"NC_PATH41") < 500))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_LSOREHEAP_Info()
@@ -1961,13 +2067,15 @@ instance Info_Milten_LSNOW(C_INFO)
 
 func int Info_Milten_LSNOW_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Milten_LSOREHEAP)
-	&& Npc_HasItems(hero,Mythrilklinge01)
-	&& Npc_HasItems(hero,Scroll4Milten)
-	&& (Npc_GetDistToWP(hero,"NC_PATH41") < 1000)
+	if ((Npc_KnowsInfo(hero,Info_Milten_LSOREHEAP))
+	&& (Npc_HasItems(hero,Mythrilklinge01))
+	&& (Npc_HasItems(hero,Scroll4Milten))
+	&& (Npc_GetDistToWP(hero,"NC_PATH41") < 1000))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_LSNOW_Info()
@@ -2007,11 +2115,13 @@ instance Info_Milten_CHAPTERSIX(C_INFO)
 
 func int Info_Milten_CHAPTERSIX_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Milten_LSNOW)
-	&& StartChaptersSix
+	if ((Npc_KnowsInfo(hero,Info_Milten_LSNOW))
+	&& (StartChaptersSix))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_CHAPTERSIX_Info()
@@ -2036,8 +2146,10 @@ func int Info_Milten_LSDONE_Condition()
 {
 	if (Kapitel == 6)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Milten_LSDONE_Info()

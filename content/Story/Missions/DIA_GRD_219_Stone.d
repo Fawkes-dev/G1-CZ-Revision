@@ -12,6 +12,7 @@ instance DIA_Stone_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_Stone_Hello_Condition;
 	information = DIA_Stone_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "You're the smith, aren't you?";
 //	description = "Du bist der Schmied, richtig?";
@@ -22,8 +23,10 @@ func int DIA_Stone_Hello_Condition()
 {
 	if (Kapitel < 4)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Stone_Hello_Info()
@@ -46,6 +49,7 @@ instance DIA_Stone_NotSelling(C_INFO)
 	nr = 1;
 	condition = DIA_Stone_NotSelling_Condition;
 	information = DIA_Stone_NotSelling_Info;
+	important = 0;
 	permanent = 1;
 //	description = "D'you sell weapons and armor?";
 //	description = "Verkaufst du Waffen und Rüstungen?";
@@ -54,11 +58,13 @@ instance DIA_Stone_NotSelling(C_INFO)
 
 func int DIA_Stone_NotSelling_Condition()
 {
-	if (Npc_GetTrueGuild(hero) != GIL_GRD)
-	&& (Kapitel < 4)
+	if ((Npc_GetTrueGuild(hero) != GIL_GRD)
+	&& (Kapitel < 4))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Stone_NotSelling_Info()
@@ -97,8 +103,10 @@ func int GRD_219_Stone_GETSTUFF_Condition()
 {
 	if (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void GRD_219_Stone_GETSTUFF_Info()
@@ -147,11 +155,13 @@ instance GRD_219_Stone_BETTERARMOR(C_INFO)
 
 func int GRD_219_Stone_BETTERARMOR_Condition()
 {
-	if (Npc_KnowsInfo(hero,GRD_219_Stone_GETSTUFF))
-	&& (Kapitel < 4)
+	if ((Npc_KnowsInfo(hero,GRD_219_Stone_GETSTUFF))
+	&& (Kapitel < 4))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void GRD_219_Stone_BETTERARMOR_Info()
@@ -181,7 +191,7 @@ func void GRD_219_Stone_BETTERARMOR_M()
 //		AI_Output(self,hero,"GRD_219_Stone_BETTERARMOR_Info_M_06_02"); //Thorus sagt, du musst dich erst mal als Gardist bewähren, bevor du eine bessere Rüstung bekommen kannst, du Arsch!
 		AI_Output(self,hero,"GRD_219_Stone_BETTERARMOR_Info_M_06_02"); //Thorus říká, že se musíš nejdříve osvědčit jako strážce, než dostaneš lepší zbroj.
 	}
-	else if (Npc_HasItems(hero,ItMiNugget)<VALUE_GRD_ARMOR_M)
+	else if (Npc_HasItems(hero,ItMiNugget) < VALUE_GRD_ARMOR_M)
 	{
 //		AI_Output(self,hero,"GRD_219_Stone_BETTERARMOR_Info_M_06_03"); //I have one in stock, but you don't seem to have enough ore with you! Come back when you can afford it!
 //		AI_Output(self,hero,"GRD_219_Stone_BETTERARMOR_Info_M_06_03"); //Ich hätte eine hier, aber du scheinst nicht genug Erz dabei zu haben! Komm wieder, wenn du sie dir leisten kannst!
@@ -300,6 +310,8 @@ func int DIA_GRD_219_Stone_Condition()
 	{
  		return 1;
  	};
+
+	return 0;
 };
 
 func void DIA_GRD_219_Stone_Info()
@@ -330,6 +342,8 @@ func int DIA_GRD_219_Stone1_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_GRD_219_Stone1_Info()
@@ -382,10 +396,13 @@ instance DIA_GRD_219_Stone3(C_INFO)
 
 func int DIA_GRD_219_Stone3_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone1)) && (Hlp_StrCmp(Npc_GetNearestWP (self), "OCC_STABLE_LEFT_FRONT"))
+	if ((Npc_KnowsInfo(hero,DIA_GRD_219_Stone1))
+	&& (Hlp_StrCmp(Npc_GetNearestWP (self), "OCC_STABLE_LEFT_FRONT")))
 	{
-			return 1;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_GRD_219_Stone3_Info()
@@ -423,6 +440,8 @@ func int DIA_GRD_219_Stone2_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_GRD_219_Stone2_Info()
@@ -456,9 +475,14 @@ instance DIA_GRD_219_Stone4(C_INFO)
 
 func int DIA_GRD_219_Stone4_Condition()
 {
-	 if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone3)) && (Npc_HasItems(hero,ORE_ARMOR_M)) && (KnowStone == 0)  {
+	if ((Npc_KnowsInfo(hero,DIA_GRD_219_Stone3))
+	&& (Npc_HasItems(hero,ORE_ARMOR_M))
+	&& (KnowStone == 0))
+	{
 		return 1;
-	 };
+	};
+
+	return 0;
 };
 
 func void DIA_GRD_219_Stone4_Info()
@@ -509,9 +533,13 @@ instance DIA_GRD_219_Stone5(C_INFO)
 
 func int DIA_GRD_219_Stone5_Condition()
 {
-	 if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone3)) && (KnowStone == 0) {
+	if ((Npc_KnowsInfo(hero,DIA_GRD_219_Stone3))
+	&& (KnowStone == 0))
+	{
 		return 1;
-	 };
+	};
+
+	return 0;
 };
 
 func void DIA_GRD_219_Stone5_Info()
@@ -558,9 +586,13 @@ instance DIA_GRD_219_Stone6(C_INFO)
 
 func int DIA_GRD_219_Stone6_Condition()
 {
-	 if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone3)) && (KnowStone == 0){
+	if ((Npc_KnowsInfo(hero,DIA_GRD_219_Stone3))
+	&& (KnowStone == 0))
+	{
 		return 1;
-	 };
+	};
+
+	return 0;
 };
 
 func void DIA_GRD_219_Stone6_Info()
@@ -606,9 +638,13 @@ instance DIA_GRD_219_Stone7(C_INFO)
 
 func int DIA_GRD_219_Stone7_Condition()
 {
-	 if (Npc_KnowsInfo(hero,DIA_GRD_219_Stone3)) && (KnowStone == 0) {
+	if ((Npc_KnowsInfo(hero,DIA_GRD_219_Stone3))
+	&& (KnowStone == 0))
+	{
 		return 1;
-	 };
+	};
+
+	return 0;
 };
 
 func void DIA_GRD_219_Stone7_Info()

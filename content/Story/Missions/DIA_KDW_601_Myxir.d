@@ -13,7 +13,7 @@ instance Info_Myxir_EXIT(C_INFO)
 
 func int Info_Myxir_EXIT_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Info_Myxir_EXIT_Info()

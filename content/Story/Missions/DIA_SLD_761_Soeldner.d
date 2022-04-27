@@ -1,4 +1,4 @@
-//-------------------- Intro ---------------------------
+3//-------------------- Intro ---------------------------
 
 instance DIA_SLD_761_Soeldner_INTRO(C_INFO)
 {
@@ -16,6 +16,8 @@ func int DIA_SLD_761_Soeldner_INTRO_CONDITION()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_SLD_761_Soeldner_INTRO_INFO()
@@ -29,8 +31,8 @@ func void DIA_SLD_761_Soeldner_INTRO_INFO()
 
 instance DIA_SLD_761_Soeldner_EXIT_1(C_INFO)
 {
-	nr = 999;
 	npc = SLD_761_Soeldner;
+	nr = 999;
 	condition = DIA_SLD_761_Soeldner_EXIT_1_CONDITION;
 	information = DIA_SLD_761_Soeldner_EXIT_1_INFO;
 	important = 0;
@@ -60,8 +62,8 @@ func void DIA_SLD_761_Soeldner_EXIT_1_INFO()
 
 instance DIA_SLD_761_Soeldner_EXIT_2(C_INFO)
 {
-	nr = 999;
 	npc = SLD_761_Soeldner;
+	nr = 999;
 	condition = DIA_SLD_761_Soeldner_EXIT_2_CONDITION;
 	information = DIA_SLD_761_Soeldner_EXIT_2_INFO;
 	important = 0;
@@ -77,6 +79,8 @@ func int DIA_SLD_761_Soeldner_EXIT_2_CONDITION()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_SLD_761_Soeldner_EXIT_2_INFO()
@@ -146,7 +150,6 @@ func void DIA_SLD_761_Soeldner_INMINE_INFO()
 //	AI_Output(self,other,"DIA_SLD_761_Soeldner_INMINE_INFO_03_02");//Suppose you can see that the mine is locked, so there's absolutely nothing for you to see.
 //	AI_Output(self,other,"DIA_SLD_761_Soeldner_INMINE_INFO_03_02");//Du siehst doch, dass die Mine abgeschlossen ist, also hier gibt´s nichts zu sehen.
 	AI_Output(self,other,"DIA_SLD_761_Soeldner_INMINE_INFO_03_02");//Snad vidíš, že důl je zamčený, takže tu není vůbec nic k vidění.
-
 };
 
 //----------------------- Bestechen --------------------------------
@@ -169,6 +172,8 @@ func int DIA_SLD_761_Soeldner_Bribe_CONDITION()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_SLD_761_Soeldner_Bribe_INFO()
@@ -190,4 +195,3 @@ func void DIA_SLD_761_Soeldner_Bribe_INFO()
 	AI_Output(other,self,"DIA_SLD_761_Soeldner_Bribe_INFO_15_05");//Já myslím, že bys měl raději jít pryč.
 	AI_StopProcessInfos(self);
 };
-

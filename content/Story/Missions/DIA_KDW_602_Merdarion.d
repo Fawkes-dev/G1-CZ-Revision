@@ -13,7 +13,7 @@ instance Info_Merdarion_EXIT(C_INFO)
 
 func int Info_Merdarion_EXIT_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Info_Merdarion_EXIT_Info()

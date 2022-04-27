@@ -8,6 +8,7 @@ instance DIA_Org_875_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_Org_875_EXIT_Condition;
 	information = DIA_Org_875_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Org_875_PERM(C_INFO)
 	nr = 1;
 	condition = DIA_Org_875_PERM_Condition;
 	information = DIA_Org_875_PERM_Info;
+	important = 0;
 	permanent = 1;
 //	description = "You only let in rogues and scrapers?";
 //	description = "Ihr lasst hier nur Banditen und Schürfer rein?";

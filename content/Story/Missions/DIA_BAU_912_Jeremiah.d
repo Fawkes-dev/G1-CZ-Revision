@@ -8,6 +8,7 @@ instance DIA_Jeremiah_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_Jeremiah_EXIT_Condition;
 	information = DIA_Jeremiah_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Jeremiah_Hallo(C_INFO)
 	nr = 1;
 	condition = DIA_Jeremiah_Hallo_Condition;
 	information = DIA_Jeremiah_Hallo_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What are you doing?";
 //	description = "Was machst du hier?";
@@ -71,6 +73,7 @@ instance DIA_Jeremiah_PERM(C_INFO)
 	nr = 1;
 	condition = DIA_Jeremiah_PERM_Condition;
 	information = DIA_Jeremiah_PERM_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How's the distillery going?";
 //	description = "Wie läuft das Schnapsbrennergeschäft?";
@@ -107,6 +110,7 @@ instance DIA_Jeremiah_Horatio(C_INFO)
 	nr = 2;
 	condition = DIA_Jeremiah_Horatio_Condition;
 	information = DIA_Jeremiah_Horatio_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What can you tell me about the Rice Lord?";
 //	description = "Was kannst du mir über den Reislord sagen?";
@@ -119,6 +123,8 @@ func int DIA_Jeremiah_Horatio_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Jeremiah_Horatio_Info()
@@ -139,4 +145,3 @@ func void DIA_Jeremiah_Horatio_Info()
 //	AI_Output(self,other,"DIA_Jeremiah_Horatio_04_04"); //Seine Überzeugung hält ihn davon ab.
 	AI_Output(self,other,"DIA_Jeremiah_Horatio_04_04"); //Bylo by to proti jeho přesvědčení.
 };
-

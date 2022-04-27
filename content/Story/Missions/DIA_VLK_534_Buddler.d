@@ -8,6 +8,7 @@ instance DIA_Vlk_534_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Vlk_534_Exit_Condition;
 	information = DIA_Vlk_534_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Vlk_534_LeaveMe(C_INFO)
 	nr = 1;
 	condition = DIA_Vlk_534_LeaveMe_Condition;
 	information = DIA_Vlk_534_LeaveMe_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Why are you here and not in the Camp?";
 //	description = "Warum bist du hier und nicht im Lager?";

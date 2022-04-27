@@ -20,6 +20,7 @@ func void GRD_271_ULBERT_Exit_Info()
 {
 	AI_StopProcessInfos(self);
 };
+
 // ***************** Infos *****************************
 instance GRD_271_ULBERT_KEY(C_INFO)
 {
@@ -67,6 +68,8 @@ func int GRD_271_ULBERT_TRICK_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GRD_271_ULBERT_TRICK_Info()
@@ -101,10 +104,13 @@ instance GRD_271_ULBERT_DRINK(C_INFO)
 
 func int GRD_271_ULBERT_DRINK_Condition()
 {
-	if (Npc_KnowsInfo(hero,GRD_271_ULBERT_TRICK)) && (Npc_HasItems(hero,ItFobeer )|| Npc_HasItems(hero,ItFoWine )|| Npc_HasItems(hero,ItFoBooze))
+	if ((Npc_KnowsInfo(hero,GRD_271_ULBERT_TRICK))
+	&& ((Npc_HasItems(hero,ItFobeer)) || (Npc_HasItems(hero,ItFoWine)) || (Npc_HasItems(hero,ItFoBooze))))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GRD_271_ULBERT_DRINK_Info()
@@ -116,7 +122,7 @@ func void GRD_271_ULBERT_DRINK_Info()
 //	AI_Output(self,other,"GRD_271_ULBERT_DRINK_Info_07_02"); //Danke.
 	AI_Output(self,other,"GRD_271_ULBERT_DRINK_Info_07_02"); //Díky.
 
-	if (Npc_HasItems(hero,ItFobeer ))
+	if (Npc_HasItems(hero,ItFobeer))
 	{
 		B_GiveInvItems(hero,self,ItFobeer,1);
 		if (C_BodystateContains(self,BS_SIT))
@@ -126,7 +132,7 @@ func void GRD_271_ULBERT_DRINK_Info()
 		};
 		AI_UseItem(self,ItFobeer);
 	}
-	else if (Npc_HasItems(hero,ItFowine ))
+	else if (Npc_HasItems(hero,ItFowine))
 	{
 		B_GiveInvItems(hero,self,ItFowine,1);
 		if (C_BodystateContains(self,BS_SIT))
@@ -147,6 +153,7 @@ func void GRD_271_ULBERT_DRINK_Info()
 		AI_UseItem(self,ItFoBooze);
 	};
 };
+
 // ***************** Infos *****************************
 instance GRD_271_ULBERT_DRUNK(C_INFO)
 {
@@ -166,6 +173,8 @@ func int GRD_271_ULBERT_DRUNK_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GRD_271_ULBERT_DRUNK_Info()
@@ -203,10 +212,12 @@ instance GRD_271_ULBERT_LOCK(C_INFO)
 
 func int GRD_271_ULBERT_LOCK_Condition()
 {
-	if (Npc_KnowsInfo(hero ,GRD_271_ULBERT_DRUNK))
+	if (Npc_KnowsInfo(hero,GRD_271_ULBERT_DRUNK))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GRD_271_ULBERT_LOCK_Info()
@@ -238,11 +249,13 @@ instance GRD_271_ULBERT_ANGRY(C_INFO)
 
 func int GRD_271_ULBERT_ANGRY_Condition()
 {
-	if Npc_KnowsInfo(hero,GRD_271_ULBERT_LOCK)
-	&& (Npc_GetDistToWP(hero,"OM_CAVE1_49") < 600)
+	if ((Npc_KnowsInfo(hero,GRD_271_ULBERT_LOCK))
+	&& (Npc_GetDistToWP(hero,"OM_CAVE1_49") < 600))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void GRD_271_ULBERT_ANGRY_Info()

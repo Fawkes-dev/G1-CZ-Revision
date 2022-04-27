@@ -6,13 +6,14 @@ instance DIA_ORG_833_Buster(C_INFO)
 	important = 1;
 	permanent = 0;
 };
-
 func int DIA_ORG_833_Buster_Condition()
 {
 	if (Npc_GetTalentSkill(hero,NPC_TALENT_ACROBAT) == 0)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_ORG_833_Buster_Info()
@@ -70,7 +71,7 @@ func void DIA_ORG_833_Buster3_Info()
 	AI_Output(self,other,"DIA_ORG_833_Buster3_02_01"); //Můžu ti ukázat, jak ovládat své tělo. To je umění AKROBACIE.
 
 	Info_ClearChoices(DIA_ORG_833_Buster3);
-	Info_AddChoice(DIA_ORG_833_Buster3, DIALOG_BACK , DIA_ORG_833_Buster_Back);
+	Info_AddChoice(DIA_ORG_833_Buster3, DIALOG_BACK, DIA_ORG_833_Buster_Back);
 	Info_AddChoice(DIA_ORG_833_Buster3, B_BuildLearnString(NAME_LearnAcrobat, LPCOST_TALENT_ACROBAT,0), DIA_ORG_833_Buster_Train1);
 
 	Log_CreateTopic(GE_TeacherNC,LOG_NOTE);
@@ -84,7 +85,7 @@ func void DIA_ORG_833_Buster_Train1()
 {
 	Info_ClearChoices(DIA_ORG_833_Buster3);
 
-	if (B_GiveSkill(other,NPC_TALENT_ACROBAT , 1, LPCOST_TALENT_ACROBAT))
+	if (B_GiveSkill(other,NPC_TALENT_ACROBAT, 1, LPCOST_TALENT_ACROBAT))
 	{
 //		AI_Output(self,other,"DIA_ORG_833_Buster3_02_02"); //As soon as you've gained control of your body, you'll be able to jump much further.
 //		AI_Output(self,other,"DIA_ORG_833_Buster3_02_02"); //Wenn du deinen Körper beherrscht, bist du in der Lage viel weiter zu springen.
@@ -103,4 +104,3 @@ func void DIA_ORG_833_Buster_Back()
 {
 	Info_ClearChoices(DIA_ORG_833_Buster3);
 };
-

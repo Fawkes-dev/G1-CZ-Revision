@@ -15,6 +15,8 @@ func int DIA_SLD_752_OKYL_INTRO_CONDITION()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_SLD_752_OKYL_INTRO_INFO()
@@ -28,8 +30,8 @@ func void DIA_SLD_752_OKYL_INTRO_INFO()
 
 instance DIA_SLD_752_OKYL_EXIT(C_INFO)
 {
-	nr = 999;
 	npc = SLD_752_OKYL;
+	nr = 999;
 	condition = DIA_SLD_752_OKYL_EXIT_CONDITION;
 	information = DIA_SLD_752_OKYL_EXIT_INFO;
 	important = 0;
@@ -111,7 +113,6 @@ func void DIA_SLD_752_OKYL_WERBISTDU_INFO()
 //	AI_Output(self,other,"DIA_SLD_752_OKYL_WERBISTDU_INFO_11_02");//I'm Okyl. I'm the boss of the Hollow.
 //	AI_Output(self,other,"DIA_SLD_752_OKYL_WERBISTDU_INFO_11_02");//Ich bin Okyl. Ich hab' das Kommando über den Kessel.
 	AI_Output(self,other,"DIA_SLD_752_OKYL_WERBISTDU_INFO_11_02");//Jsem Okyl. Jsem šéf Kotliny.
-
 };
 
 //----------------------- Will nur mal in die Mine ------------------
@@ -169,6 +170,8 @@ func int DIA_SLD_752_OKYL_PERMIT_CONDITION()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_SLD_752_OKYL_PERMIT_INFO()

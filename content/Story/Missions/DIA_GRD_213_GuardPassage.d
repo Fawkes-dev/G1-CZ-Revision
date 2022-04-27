@@ -21,8 +21,8 @@ instance Info_Grd_213_FirstWarn(C_INFO)
 	nr = 1;
 	condition = Info_Grd_213_FirstWarn_Condition;
 	information = Info_Grd_213_FirstWarn_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 //------------------------------------------------------------------------
@@ -31,12 +31,14 @@ instance Info_Grd_213_FirstWarn(C_INFO)
 func int Info_Grd_213_FirstWarn_Condition()
 {
 	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS]== AIV_GPS_BEGIN)
-	&& (self.aivar[AIV_PASSGATE] == FALSE )
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY )
+	&& (self.aivar[AIV_PASSGATE] == FALSE)
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY)
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self), self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Grd_213_FirstWarn_Info()
@@ -68,20 +70,22 @@ instance Info_Grd_213_LastWarn(C_INFO)
 	nr = 1;
 	condition = Info_Grd_213_LastWarn_Condition;
 	information = Info_Grd_213_LastWarn_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_Grd_213_LastWarn_Condition()
 {
-	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_FIRSTWARN )
-	&& (self.aivar[AIV_PASSGATE] == FALSE )
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY )
+	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_FIRSTWARN)
+	&& (self.aivar[AIV_PASSGATE] == FALSE)
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY)
 	&& (Npc_GetDistToWP(hero,Grd_213_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func int Info_Grd_213_LastWarn_Info()
@@ -105,20 +109,22 @@ instance Info_Grd_213_Attack(C_INFO)
 	nr = 1;
 	condition = Info_Grd_213_Attack_Condition;
 	information = Info_Grd_213_Attack_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_Grd_213_Attack_Condition()
 {
-	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_LASTWARN )
-	&& (self.aivar[AIV_PASSGATE] == FALSE )
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY )
+	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_LASTWARN)
+	&& (self.aivar[AIV_PASSGATE] == FALSE)
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY)
 	&& (Npc_GetDistToWP(hero,Grd_213_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func int Info_Grd_213_Attack_Info()
@@ -149,9 +155,12 @@ func int Grd_213_Torwache_WELCOME_Condition()
 {
 	if (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void Grd_213_Torwache_WELCOME_Info()
 {
 //	AI_Output(self,other,"Grd_213_Torwache_WELCOME_Info_07_01"); //I hear you're one of us now? Not bad for someone who's not been here long.
@@ -169,6 +178,7 @@ instance Info_Grd_213_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Grd_213_EXIT_Condition;
 	information = Info_Grd_213_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -193,6 +203,7 @@ instance Info_Grd_213_Abblitzen(C_INFO)
 	nr = 1;
 	condition = Info_Grd_213_Abblitzen_Condition;
 	information = Info_Grd_213_Abblitzen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Bring a bit more excitement into your life! Like letting someone in...";
 //	description = "Lass doch mal zur Abwechslung jemanden in die Burg.";
@@ -205,6 +216,8 @@ func int Info_Grd_213_Abblitzen_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Grd_213_Abblitzen_Info()
@@ -228,6 +241,7 @@ instance Info_Grd_213_Passgate(C_INFO)
 	nr = 1;
 	condition = Info_Grd_213_Passgate_Condition;
 	information = Info_Grd_213_Passgate_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Hey, you okay?";
 //	description = "Na, alles klar?";
@@ -240,6 +254,8 @@ func int Info_Grd_213_Passgate_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Grd_213_Passgate_Info()

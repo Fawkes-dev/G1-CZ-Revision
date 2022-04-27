@@ -8,6 +8,7 @@ instance DIA_Scatty_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Scatty_Exit_Condition;
 	information = DIA_Scatty_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Scatty_WhatDoYouDo(C_INFO)
 	nr = 1;
 	condition = DIA_Scatty_WhatDoYouDo_Condition;
 	information = DIA_Scatty_WhatDoYouDo_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What's your job here?";
 //	description = "Was machst du hier?";
@@ -67,6 +69,7 @@ instance DIA_Scatty_JoinOC(C_INFO)
 	nr = 1;
 	condition = DIA_Scatty_JoinOC_Condition;
 	information = DIA_Scatty_JoinOC_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I want to join the Camp. Can you help me?";
 //	description = "Ich will mich dem Lager anschließen. Kannst du mir dabei helfen?";
@@ -83,6 +86,8 @@ func int DIA_Scatty_JoinOC_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Scatty_JoinOC_Info()
@@ -122,6 +127,7 @@ instance DIA_Scatty_KirgoSuccess(C_INFO)
 	nr = 1;
 	condition = DIA_Scatty_KirgoSuccess_Condition;
 	information = DIA_Scatty_KirgoSuccess_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I fought Kirgo!";
 //	description = "Ich habe gegen Kirgo gekämpft!";
@@ -136,6 +142,8 @@ func int DIA_Scatty_KirgoSuccess_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Scatty_KirgoSuccess_Info()
@@ -183,6 +191,7 @@ instance DIA_Scatty_KHARIMSuccess(C_INFO)
 	nr = 1;
 	condition = DIA_Scatty_KHARIMSuccess_Condition;
 	information = DIA_Scatty_KHARIMSuccess_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I challenged Kharim!";
 //	description = "Ich bin gegen Kharim angetreten!";
@@ -197,6 +206,8 @@ func int DIA_Scatty_KHARIMSuccess_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Scatty_KHARIMSuccess_Info()
@@ -254,6 +265,7 @@ instance DIA_Scatty_OtherCamps(C_INFO)
 	nr = 1;
 	condition = DIA_Scatty_OtherCamps_Condition;
 	information = DIA_Scatty_OtherCamps_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Why do you let the people from the other camps fight here?";
 //	description = "Wieso lasst ihr die Leute aus den anderen Lagern hier kämpfen?";
@@ -267,6 +279,8 @@ func int DIA_Scatty_OtherCamps_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Scatty_OtherCamps_Info()
@@ -296,6 +310,7 @@ instance DIA_Scatty_WannaBet(C_INFO)
 	nr = 1;
 	condition = DIA_Scatty_WannaBet_Condition;
 	information = DIA_Scatty_WannaBet_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I want to place a bet.";
 //	description = "Ich will wetten!";
@@ -308,6 +323,8 @@ func int DIA_Scatty_WannaBet_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Scatty_WannaBet_Info()
@@ -321,7 +338,6 @@ func void DIA_Scatty_WannaBet_Info()
 //	AI_Output(self,other,"DIA_Scatty_WannaBet_01_02"); //The next fight's due in a couple of days. There'll be an announcement.
 //	AI_Output(self,other,"DIA_Scatty_WannaBet_01_02"); //Der nächste Kampf ist in ein paar Tagen - er wird vorher angekündigt.
 	AI_Output(self,other,"DIA_Scatty_WannaBet_01_02"); //Další souboj bude za několik dní. Bude to vyhlášeno.
-
 };
 
 // **************************************************
@@ -334,6 +350,7 @@ instance DIA_Scatty_WannaFight(C_INFO)
 	nr = 1;
 	condition = DIA_Scatty_WannaFight_Condition;
 	information = DIA_Scatty_WannaFight_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I want to fight in the arena!";
 //	description = "Ich will in der Arena kämpfen!";
@@ -373,6 +390,7 @@ instance DIA_Scatty_TRAIN(C_INFO)
 	nr = 10;
 	condition = DIA_Scatty_TRAIN_Condition;
 	information = DIA_Scatty_TRAIN_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Do you train fighters at all?";
 //	description = "Trainierst du auch Kämpfer?";
@@ -385,17 +403,19 @@ func int DIA_Scatty_TRAIN_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Scatty_TRAIN_Info()
 {
-	if( log_scattytrain == FALSE)
+	if (log_scattytrain == FALSE)
 	{
-	Log_CreateTopic(GE_TeacherOC,LOG_NOTE);
-//	B_LogEntry(GE_TeacherOC,"Scatty, the master of the arena, can teach me to fight with ONE-HANDED WEAPONS.");
-//	B_LogEntry(GE_TeacherOC,"Scatty der Arenameister kann mich im Kampf mit EINHÄNDERN ausbilden.");
-	B_LogEntry(GE_TeacherOC,"Scatty, mistr arény, mě může naučit bojovat s JEDNORUČNÍMI ZBRANĚMI.");
-	log_scattytrain = TRUE;
+		Log_CreateTopic(GE_TeacherOC,LOG_NOTE);
+//		B_LogEntry(GE_TeacherOC,"Scatty, the master of the arena, can teach me to fight with ONE-HANDED WEAPONS.");
+//		B_LogEntry(GE_TeacherOC,"Scatty der Arenameister kann mich im Kampf mit EINHÄNDERN ausbilden.");
+		B_LogEntry(GE_TeacherOC,"Scatty, mistr arény, mě může naučit bojovat s JEDNORUČNÍMI ZBRANĚMI.");
+		log_scattytrain = TRUE;
 	};
 //	AI_Output(other,self,"DIA_Scatty_TRAIN_15_00"); //Do you train fighters at all?
 //	AI_Output(other,self,"DIA_Scatty_TRAIN_15_00"); //Trainierst du auch Kämpfer?

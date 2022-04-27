@@ -12,6 +12,7 @@ instance Info_Mine_Org_6_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Mine_Org_6_EXIT_Condition;
 	information = Info_Mine_Org_6_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = "END";
 };
@@ -35,6 +36,7 @@ instance Info_Mine_Org_6_Mine(C_INFO) // E1
 	nr = 1;
 	condition = Info_Mine_Org_6_Mine_Condition;
 	information = Info_Mine_Org_6_Mine_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What goes on in the mine?";
 //	description = "Was läuft in der Mine?";
@@ -69,6 +71,7 @@ instance Info_Mine_Org_6_WichtigePersonen(C_INFO)
 	nr = 1;
 	condition = Info_Mine_Org_6_WichtigePersonen_Condition;
 	information = Info_Mine_Org_6_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Who gives the orders here?";
 //	description = "Wer erteilt hier die Befehle?";
@@ -105,6 +108,7 @@ instance Info_Mine_Org_6_DieLage(C_INFO) // E1
 	nr = 1;
 	condition = Info_Mine_Org_6_DieLage_Condition;
 	information = Info_Mine_Org_6_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "You don't exactly seem to be overworking yourself.";
 //	description = "Scheinst Dich ja nicht gerade zu überarbeiten.";

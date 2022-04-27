@@ -8,6 +8,7 @@ instance Info_Jacko_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Jacko_EXIT_Condition;
 	information = Info_Jacko_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,18 +33,20 @@ instance ORG_862_Jacko_GoAway(C_INFO)
 	nr = 1;
 	condition = ORG_862_Jacko_GoAway_Condition;
 	information = ORG_862_Jacko_GoAway_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int ORG_862_Jacko_GoAway_Condition()
 {
-	if (Npc_GetDistToWP(hero,"LOCATION_23_CAVE_1_IN")<500)
+	if ((Npc_GetDistToWP(hero,"LOCATION_23_CAVE_1_IN") < 500)
 	&& (Kalom_DrugMonopol != LOG_RUNNING)
-	&& (Kalom_DrugMonopol != LOG_SUCCESS)
+	&& (Kalom_DrugMonopol != LOG_SUCCESS))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void ORG_862_Jacko_GoAway_Info()
@@ -66,16 +69,18 @@ instance ORG_862_Jacko_GUARD(C_INFO)
 	nr = 1;
 	condition = ORG_862_Jacko_GUARD_Condition;
 	information = ORG_862_Jacko_GUARD_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int ORG_862_Jacko_GUARD_Condition()
 {
 	if (Kalom_DrugMonopol == LOG_RUNNING)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void ORG_862_Jacko_GUARD_Info()
@@ -205,6 +210,7 @@ instance ORG_862_Jacko_Banditencamp(C_INFO)
 	nr = 1;
 	condition = ORG_862_Jacko_Banditencamp_Condition;
 	information = ORG_862_Jacko_Banditencamp_Info;
+	important = 0;
 	permanent = 1;
 //	description = "So this where you sneaked off to.";
 //	description = "Hierher habt ihr euch also verkrümelt.";
@@ -213,10 +219,13 @@ instance ORG_862_Jacko_Banditencamp(C_INFO)
 
 func int ORG_862_Jacko_Banditencamp_Condition()
 {
-	if ((Kalom_DrugMonopol == LOG_SUCCESS) && Hlp_StrCmp(Npc_GetNearestWP(self),"LOCATION_11_08"))
+	if ((Kalom_DrugMonopol == LOG_SUCCESS)
+	&& (Hlp_StrCmp(Npc_GetNearestWP(self),"LOCATION_11_08")))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void ORG_862_Jacko_Banditencamp_Info()
@@ -248,8 +257,9 @@ instance ORG_862_Jacko_DRUGGUARD(C_INFO)
 
 func int ORG_862_Jacko_DRUGGUARD_Condition()
 {
-	return TRUE;
+	return 1;
 };
+
 func void ORG_862_Jacko_DRUGGUARD_Info()
 {
 	AI_Output(other,self,"ORG_862_Jacko_DRUGGUARD_Info_15_01"); //Was machst du hier?
@@ -273,13 +283,15 @@ instance ORG_862_Jacko_KALOM(C_INFO)
 
 func int ORG_862_Jacko_KALOM_Condition()
 {
-	if (Npc_KnowsInfo(hero,ORG_862_Jacko_DRUGGUARD))
-	&& ( Kalom_DrugMonopol == LOG_RUNNING)
+	if ((Npc_KnowsInfo(hero,ORG_862_Jacko_DRUGGUARD))
+	&& (Kalom_DrugMonopol == LOG_RUNNING))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void ORG_862_Jacko_KALOM_Info()
 {
 //	AI_Output(other,self,"ORG_862_Jacko_KALOM_Info_15_01"); //Ich bin im Auftrag der Bruderschaft hier.
@@ -306,10 +318,12 @@ func int ORG_862_Jacko_ANGEBOT_Condition()
 {
 	if (Npc_KnowsInfo(hero,ORG_862_Jacko_KALOM))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void ORG_862_Jacko_ANGEBOT_Info()
 {
 	AI_Output(other,self,"ORG_862_Jacko_ANGEBOT_Info_15_01"); //Ich will euch ein Angebot machen!
@@ -320,5 +334,4 @@ func void ORG_862_Jacko_ANGEBOT_Info()
 	AI_Output(self,other,"ORG_862_Jacko_ANGEBOT_Info_06_04"); //Na schön,dann rede mit Renyu. Aber keine faulen Tricks, sonst zerschlage ich jeden deiner Knochen einzeln!
 	AI_StopProcessInfos(self);
 };
-
 */

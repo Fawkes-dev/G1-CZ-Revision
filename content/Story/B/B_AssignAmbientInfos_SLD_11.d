@@ -12,6 +12,7 @@ instance Info_Sld_11_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Sld_11_EXIT_Condition;
 	information = Info_Sld_11_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = "END";
 };
@@ -35,6 +36,7 @@ instance Info_Sld_11_EinerVonEuchWerden(C_INFO) // E1
 	nr = 4;
 	condition = Info_Sld_11_EinerVonEuchWerden_Condition;
 	information = Info_Sld_11_EinerVonEuchWerden_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I want to become a mercenary for the mages.";
 //	description = "Ich will ein Söldner der Magier werden.";
@@ -85,6 +87,7 @@ instance Info_Sld_11_WichtigePersonen(C_INFO)
 	nr = 3;
 	condition = Info_Sld_11_WichtigePersonen_Condition;
 	information = Info_Sld_11_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Who calls the shots around here?";
 //	description = "Wer hat hier das Sagen?";
@@ -122,6 +125,7 @@ instance Info_Sld_11_DasLager(C_INFO)
 	nr = 2;
 	condition = Info_Sld_11_DasLager_Condition;
 	information = Info_Sld_11_DasLager_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Is there any trouble in this camp?";
 //	description = "Gibt es Probleme hier im Lager?";
@@ -152,6 +156,7 @@ instance Info_Sld_11_DieLage(C_INFO) // E1
 	nr = 1;
 	condition = Info_Sld_11_DieLage_Condition;
 	information = Info_Sld_11_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "You okay?";
 //	description = "Alles klar bei dir?";
@@ -191,6 +196,7 @@ instance Info_Sld_11_Krautprobe(C_INFO) // E1
 	nr = 5;
 	condition = Info_Sld_11_Krautprobe_Condition;
 	information = Info_Sld_11_Krautprobe_Info;
+	important = 0;
 	permanent = 1;
 //	description = "D'you want some swampweed?";
 //	description = "Willst du etwas Sumpfkraut?";

@@ -58,6 +58,7 @@ func void VLK_583_Glen_INFO_Info()
 //	AI_Output(self,other,"VLK_583_Glen_INFO_Info_02_05"); //Gnadenlos und schnell. Wenn du am Leben hängst, solltest du dich nicht hier unten aufhalten. Geh lieber, bevor dir noch was passiert.
 	AI_Output(self,other,"VLK_583_Glen_INFO_Info_02_05"); //Jsou nemilosrdní a rychlí. Jestli chceš zůstat naživu, neměl bys chodit dolů. Měl bys odejít, než se ti něco stane.
 };
+
 // ***************** Infos *****************************
 
 instance VLK_583_Glen_LOCKPICK(C_INFO)
@@ -78,6 +79,8 @@ func int VLK_583_Glen_LOCKPICK_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void VLK_583_Glen_LOCKPICK_Info()
@@ -88,8 +91,8 @@ func void VLK_583_Glen_LOCKPICK_Info()
 //	AI_Output(self,other,"VLK_583_Glen_LOCKPICK_02_02"); //Well, since you were brainy enough to find that out, you can have some. 10 ore a piece.
 //	AI_Output(self,other,"VLK_583_Glen_LOCKPICK_02_02"); //Nun, wenn du schlau genug warst, das herauszufinden, dann kannst du welche haben. 10 Erz das Stück.
 	AI_Output(self,other,"VLK_583_Glen_LOCKPICK_02_02"); //Jistě, protože jsi dost bystrý, když jsi to zjistil, tak si můžeš nějaký koupit. 10 nugetů za kus.
-
 };
+
 // ***************** Infos *****************************
 
 instance VLK_583_Glen_BUY(C_INFO)
@@ -99,10 +102,10 @@ instance VLK_583_Glen_BUY(C_INFO)
 	information = VLK_583_Glen_BUY_Info;
 	important = 0;
 	permanent = 1;
+	trade = 1;
 //	description = "(buy lockpicks)";
 //	description = "(Dietriche kaufen)";
 	description = "Chci koupit paklíče."; // #COMMENT Zvyšuje immersion:tm:
-	trade = 1;
 };
 
 func int VLK_583_Glen_BUY_Condition()
@@ -111,11 +114,13 @@ func int VLK_583_Glen_BUY_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
+
 func void VLK_583_Glen_BUY_Info()
 {
 //	AI_Output(other,self,"VLK_583_Glen_BUY_Info_15_01"); //I wanna buy lockpicks.
 //	AI_Output(other,self,"VLK_583_Glen_BUY_Info_15_01"); //Ich will Dietriche kaufen.
 	AI_Output(other,self,"VLK_583_Glen_BUY_Info_15_01"); //Chci koupit paklíče.
-
 };

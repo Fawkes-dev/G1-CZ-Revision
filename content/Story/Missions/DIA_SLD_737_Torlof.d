@@ -8,6 +8,7 @@ instance DIA_Torlof_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_Torlof_EXIT_Condition;
 	information = DIA_Torlof_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Torlof_Hallo(C_INFO)
 	nr = 1;
 	condition = DIA_Torlof_Hallo_Condition;
 	information = DIA_Torlof_Hallo_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Who are you?";
 //	description = "Wer bist du?";
@@ -72,6 +74,7 @@ instance DIA_Torlof_Mitmachen(C_INFO)
 	nr = 2;
 	condition = DIA_Torlof_Mitmachen_Condition;
 	information = DIA_Torlof_Mitmachen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I'd like to join you.";
 //	description = "Ich will bei euch mitmachen.";
@@ -80,11 +83,13 @@ instance DIA_Torlof_Mitmachen(C_INFO)
 
 func int DIA_Torlof_Mitmachen_Condition()
 {
-	if (Npc_GetTrueGuild(hero) == GIL_NONE)
-	|| (Npc_GetTrueGuild(hero) == GIL_ORG)
+	if ((Npc_GetTrueGuild(hero) == GIL_NONE)
+	|| (Npc_GetTrueGuild(hero) == GIL_ORG))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Torlof_Mitmachen_Info()
@@ -124,6 +129,7 @@ instance DIA_Torlof_PERM(C_INFO)
 	nr = 3;
 	condition = DIA_Torlof_PERM_Condition;
 	information = DIA_Torlof_PERM_Info;
+	important = 0;
 	permanent = 1;
 	description = "Was kannst du mir über dieses Lager sagen?";
 };
@@ -139,6 +145,4 @@ func void DIA_Torlof_PERM_Info()
 	AI_Output(self,other,"DIA_Torlof_PERM_04_01"); //Ist wie auf'm Piratenschiff, Junge. Solange ab und zu ein fetter Fischzug gegen Gomez drin ist, sind die Banditen zufrieden.
 	AI_Output(self,other,"DIA_Torlof_PERM_04_02"); //Wenn sie kein Erz mehr haben, um sich in der Kneipe vollaufen zu lassen, gibt's ne Menge Schlägereien.
 };
-
 */
-

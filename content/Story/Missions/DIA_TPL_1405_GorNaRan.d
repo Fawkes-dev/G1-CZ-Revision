@@ -8,13 +8,14 @@ instance DIA_GorNaRan_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_GorNaRan_Exit_Condition;
 	information = DIA_GorNaRan_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
 
 func int DIA_GorNaRan_Exit_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void DIA_GorNaRan_Exit_Info()
@@ -32,6 +33,7 @@ instance DIA_GorNaRan_Wache(C_INFO)
 	nr = 1;
 	condition = DIA_GorNaRan_Wache_Condition;
 	information = DIA_GorNaRan_Wache_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What are you doing here?";
 //	description = "Was machst du hier?";
@@ -40,7 +42,7 @@ instance DIA_GorNaRan_Wache(C_INFO)
 
 func int DIA_GorNaRan_Wache_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void DIA_GorNaRan_Wache_Info()
@@ -65,16 +67,18 @@ instance Info_TPL_1405_GorNaRan(C_INFO)
 	npc = TPL_1405_GorNaRan;
 	condition = Info_TPL_1405_GorNaRan_Condition;
 	information = Info_TPL_1405_GorNaRan_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_TPL_1405_GorNaRan_Condition()
 {
 	if (Kapitel == 6)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_TPL_1405_GorNaRan_Info()
@@ -92,6 +96,7 @@ instance Info_TPL_1405_GorNaRan2(C_INFO)
 	nr = 1;
 	condition = Info_TPL_1405_GorNaRan2_Condition;
 	information = Info_TPL_1405_GorNaRan2_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What's going on here anyway?";
 //	description = "Was ist hier eigentlich los?";
@@ -100,9 +105,11 @@ instance Info_TPL_1405_GorNaRan2(C_INFO)
 
 func int Info_TPL_1405_GorNaRan2_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_TPL_1405_GorNaRan )) {
+	if (Npc_KnowsInfo(hero,Info_TPL_1405_GorNaRan)) {
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_TPL_1405_GorNaRan2_Info()
@@ -123,6 +130,7 @@ instance Info_TPL_1405_GorNaRan3(C_INFO)
 	nr = 1;
 	condition = Info_TPL_1405_GorNaRan3_Condition;
 	information = Info_TPL_1405_GorNaRan3_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Just wanted to have a look around.";
 //	description = "Wollte mich nur umsehen";
@@ -131,9 +139,11 @@ instance Info_TPL_1405_GorNaRan3(C_INFO)
 
 func int Info_TPL_1405_GorNaRan3_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_TPL_1405_GorNaRan )) {
+	if (Npc_KnowsInfo(hero,Info_TPL_1405_GorNaRan)) {
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_TPL_1405_GorNaRan3_Info()
@@ -157,6 +167,7 @@ instance Info_TPL_1405_GorNaRan4(C_INFO)
 	nr = 1;
 	condition = Info_TPL_1405_GorNaRan4_Condition;
 	information = Info_TPL_1405_GorNaRan4_Info;
+	important = 0;
 	permanent = 0;
 //	description = "You can't stop me!";
 //	description = "Du kannst mich nicht aufhalten!";
@@ -165,9 +176,11 @@ instance Info_TPL_1405_GorNaRan4(C_INFO)
 
 func int Info_TPL_1405_GorNaRan4_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_TPL_1405_GorNaRan )) {
+	if (Npc_KnowsInfo(hero,Info_TPL_1405_GorNaRan)) {
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_TPL_1405_GorNaRan4_Info()

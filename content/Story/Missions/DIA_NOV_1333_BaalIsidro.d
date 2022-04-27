@@ -8,6 +8,7 @@ instance DIA_BaalIsidro_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_BaalIsidro_EXIT_Condition;
 	information = DIA_BaalIsidro_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_BaalIsidro_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_BaalIsidro_Hello_Condition;
 	information = DIA_BaalIsidro_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "You don't look very happy.";
 //	description = "Du siehst nicht sehr glücklich aus.";
@@ -72,11 +74,12 @@ instance DIA_BaalIsidro_TRADE(C_INFO)
 	nr = 800;
 	condition = DIA_BaalIsidro_TRADE_Condition;
 	information = DIA_BaalIsidro_TRADE_Info;
+	important = 0;
 	permanent = 1;
+	trade = 1;
 //	description = "Show me what you have.";
 //	description = "Zeig mir, was du hast.";
 	description = "Ukaž, co máš.";
-	trade = 1;
 };
 
 func int DIA_BaalIsidro_TRADE_Condition()
@@ -85,6 +88,8 @@ func int DIA_BaalIsidro_TRADE_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalIsidro_TRADE_Info()
@@ -107,6 +112,7 @@ instance DIA_BaalIsidro_GimmeKraut(C_INFO)
 	nr = 1;
 	condition = DIA_BaalIsidro_GimmeKraut_Condition;
 	information = DIA_BaalIsidro_GimmeKraut_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I could sell the weed for you - for a consideration, of course.";
 //	description = "Ich könnte das Kraut für dich verkaufen - gegen Beteiligung versteht sich.";
@@ -119,6 +125,8 @@ func int DIA_BaalIsidro_GimmeKraut_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalIsidro_GimmeKraut_Info()
@@ -147,6 +155,7 @@ instance DIA_BaalIsidro_Problem(C_INFO)
 	nr = 1;
 	condition = DIA_BaalIsidro_Problem_Condition;
 	information = DIA_BaalIsidro_Problem_Info;
+	important = 0;
 	permanent = 0;
 //	description = "You have a problem. Baal Kagan will make sure you'll be replaced.";
 //	description = "Du hast ein Problem. Baal Kagan will dafür sorgen, dass du ersetzt wirst.";
@@ -159,6 +168,8 @@ func int DIA_BaalIsidro_Problem_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalIsidro_Problem_Info()
@@ -196,6 +207,7 @@ instance DIA_BaalIsidro_Drink(C_INFO)
 	nr = 1;
 	condition = DIA_BaalIsidro_Drink_Condition;
 	information = DIA_BaalIsidro_Drink_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Here you go - have another drink on me.";
 //	description = "Hier - trink noch einen auf meine Rechnung.";
@@ -204,10 +216,13 @@ instance DIA_BaalIsidro_Drink(C_INFO)
 
 func int DIA_BaalIsidro_Drink_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_BaalIsidro_GimmeKraut) && (BaalIsidro_GotDrink == FALSE))
+	if ((Npc_KnowsInfo(hero,DIA_BaalIsidro_GimmeKraut))
+	&& (BaalIsidro_GotDrink == FALSE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalIsidro_Drink_Info()
@@ -216,7 +231,7 @@ func void DIA_BaalIsidro_Drink_Info()
 //	AI_Output(other,self,"DIA_BaalIsidro_Drink_15_00"); //Hier - trink noch einen auf meine Rechnung.
 	AI_Output(other,self,"DIA_BaalIsidro_Drink_15_00"); //Tady - dej si na mě ještě jednu.
 
-	if ((Npc_HasItems(other,ItFoBooze)>0) || (Npc_HasItems(other,ItFoBeer)>0) || (Npc_HasItems(other,ItFoWine)>0))
+	if ((Npc_HasItems(other,ItFoBooze) > 0) || (Npc_HasItems(other,ItFoBeer) > 0) || (Npc_HasItems(other,ItFoWine) > 0))
 	{
 //		AI_Output(self,other,"DIA_BaalIsidro_Drink_03_01"); //Thanks, man. I'll drink to your health!
 //		AI_Output(self,other,"DIA_BaalIsidro_Drink_03_01"); //Danke, Mann. Ich trinke auf dein Wohl!
@@ -255,7 +270,7 @@ func void DIA_BaalIsidro_Drink_Info()
 
 		BaalIsidro_GotDrink = TRUE;
 
-		if Npc_KnowsInfo(hero,DIA_BaalIsidro_Problem)
+		if (Npc_KnowsInfo(hero,DIA_BaalIsidro_Problem))
 		{
 //			B_LogEntry(CH1_DealerJob,"The last sip of my generous offer drowned the last bit of Baal Isidro's resistance. I think he'll accept my offer now.");
 //			B_LogEntry(CH1_DealerJob,"Der letzte Schluck meiner spendablen Geste hat den letzten Widerstand Baal Isidro's weggespült. Ich glaube jetzt ist er für mein Angebot empfänglich.");
@@ -288,6 +303,7 @@ instance DIA_BaalIsidro_ThinkAgain(C_INFO)
 	nr = 1;
 	condition = DIA_BaalIsidro_ThinkAgain_Condition;
 	information = DIA_BaalIsidro_ThinkAgain_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Think about it - give me the weed and we'll share the profit.";
 //	description = "Überleg's dir - Gib mir das Kraut und wir teilen den Gewinn.";
@@ -296,10 +312,14 @@ instance DIA_BaalIsidro_ThinkAgain(C_INFO)
 
 func int DIA_BaalIsidro_ThinkAgain_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_BaalIsidro_GimmeKraut) && ((BaalIsidro_DealerJob!=LOG_RUNNING)&&(BaalIsidro_DealerJob!=LOG_SUCCESS)))
+	if ((Npc_KnowsInfo(hero,DIA_BaalIsidro_GimmeKraut))
+	&& (BaalIsidro_DealerJob != LOG_RUNNING)
+	&& (BaalIsidro_DealerJob != LOG_SUCCESS))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalIsidro_ThinkAgain_Info()
@@ -363,6 +383,7 @@ instance DIA_BaalIsidro_RUNNING(C_INFO)
 	nr = 1;
 	condition = DIA_BaalIsidro_RUNNING_Condition;
 	information = DIA_BaalIsidro_RUNNING_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I've sold the weed. Here's your 200 ore.";
 //	description = "Ich hab' das Kraut verkauft. Hier sind deine 200 Erz.";
@@ -375,6 +396,8 @@ func int DIA_BaalIsidro_RUNNING_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalIsidro_RUNNING_Info()
@@ -386,7 +409,7 @@ func void DIA_BaalIsidro_RUNNING_Info()
 //	AI_Output(self,other,"DIA_BaalIsidro_RUNNING_03_01"); //Meine 200?
 	AI_Output(self,other,"DIA_BaalIsidro_RUNNING_03_01"); //A co mých 200 nugetů?
 
-	if (Npc_HasItems(other,itminugget)>=200)
+	if (Npc_HasItems(other,itminugget) >= 200)
 	{
 //		AI_Output(other,self,"DIA_BaalIsidro_RUNNING_15_02"); //Here it is.
 //		AI_Output(other,self,"DIA_BaalIsidro_RUNNING_15_02"); //Hier sind sie.
@@ -418,4 +441,3 @@ func void DIA_BaalIsidro_RUNNING_Info()
 		AI_StopProcessInfos(self);
 	};
 };
-

@@ -8,6 +8,7 @@ instance DIA_BaalTondral_MuteExit(C_INFO)
 	nr = 999;
 	condition = DIA_BaalTondral_MuteExit_Condition;
 	information = DIA_BaalTondral_MuteExit_Info;
+	important = 0;
 	permanent = 0;
 	description = "(Nic neříkat)";
 };
@@ -18,6 +19,8 @@ func int DIA_BaalTondral_MuteExit_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalTondral_MuteExit_Info()
@@ -35,6 +38,7 @@ instance DIA_BaalTondral_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_BaalTondral_Exit_Condition;
 	information = DIA_BaalTondral_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -62,8 +66,8 @@ instance DIA_BaalTondral_FanaticTeacher(C_INFO)
 	nr = 1;
 	condition = DIA_BaalTondral_FanaticTeacher_Condition;
 	information = DIA_BaalTondral_FanaticTeacher_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_BaalTondral_FanaticTeacher_Condition()
@@ -112,6 +116,7 @@ instance DIA_BaalTondral_YouTalked(C_INFO)
 	nr = 1;
 	condition = DIA_BaalTondral_YouTalked_Condition;
 	information = DIA_BaalTondral_YouTalked_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Hey! You've spoken to me. Does that mean I may talk to you now?";
 //	description = "Hey! Du hast mich angesprochen. Heißt das, ich kann jetzt mit dir reden?";
@@ -151,6 +156,7 @@ instance DIA_BaalTondral_Loyality(C_INFO)
 	nr = 1;
 	condition = DIA_BaalTondral_Loyality_Condition;
 	information = DIA_BaalTondral_Loyality_Info;
+	important = 0;
 	permanent = 0;
 //	description = "How can I prove my loyalty?";
 //	description = "Wie kann ich dir meine Loyalität beweisen?";
@@ -163,6 +169,8 @@ func int DIA_BaalTondral_Loyality_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalTondral_Loyality_Info()
@@ -196,6 +204,7 @@ instance DIA_BaalTondral_NewMember(C_INFO)
 	nr = 1;
 	condition = DIA_BaalTondral_NewMember_Condition;
 	information = DIA_BaalTondral_NewMember_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Where can I recruit new members for the Brotherhood?";
 //	description = "Wo kann ich neue Leute für die Bruderschaft anwerben?";
@@ -208,6 +217,8 @@ func int DIA_BaalTondral_NewMember_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalTondral_NewMember_Info()
@@ -233,6 +244,7 @@ instance DIA_BaalTondral_NewMember2(C_INFO)
 	nr = 1;
 	condition = DIA_BaalTondral_NewMember2_Condition;
 	information = DIA_BaalTondral_NewMember2_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Why are you so desperate for new members?";
 //	description = "Wieso braucht ihr so dringend neue Leute?";
@@ -245,6 +257,8 @@ func int DIA_BaalTondral_NewMember2_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalTondral_NewMember2_Info()
@@ -278,6 +292,7 @@ instance DIA_BaalTondral_DustySuccess(C_INFO)
 	nr = 1;
 	condition = DIA_BaalTondral_DustySuccess_Condition;
 	information = DIA_BaalTondral_DustySuccess_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Here's somebody who would like to make your acquaintance, Master!";
 //	description = "Ich habe hier jemanden, der dich kennen lernen möchte, Meister!";
@@ -287,10 +302,13 @@ instance DIA_BaalTondral_DustySuccess(C_INFO)
 func int DIA_BaalTondral_DustySuccess_Condition()
 {
 	var C_NPC dusty; dusty = Hlp_GetNpc(Vlk_524_Dusty);
-	if ((BaalTondral_GetNewGuy == LOG_RUNNING) && (Npc_GetDistToNpc(self,dusty)<1000))
+	if ((BaalTondral_GetNewGuy == LOG_RUNNING)
+	&& (Npc_GetDistToNpc(self,dusty) < 1000))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalTondral_DustySuccess_Info()
@@ -346,6 +364,7 @@ instance DIA_BaalTondral_SendToKalom(C_INFO)
 	nr = 1;
 	condition = DIA_BaalTondral_SendToKalom_Condition;
 	information = DIA_BaalTondral_SendToKalom_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Master! I would like to join the Brotherhood.";
 //	description = "Meister! Ich will in die Bruderschaft aufgenommen werden.";
@@ -358,6 +377,8 @@ func int DIA_BaalTondral_SendToKalom_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalTondral_SendToKalom_Info()
@@ -374,4 +395,3 @@ func void DIA_BaalTondral_SendToKalom_Info()
 //	B_LogEntry(CH1_JoinPsi,"Baal Tondral hält mich für würdig, die Robe eines Novizen zu tragen!");
 	B_LogEntry(CH1_JoinPsi,"Baal Tondral rozhodl, že jsem hoden nosit roucho novice!");
 };
-

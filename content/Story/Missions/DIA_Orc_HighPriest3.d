@@ -7,6 +7,7 @@ instance Info_HighPriest3(C_INFO)
 	condition = Info_HighPriest3_Condition;
 	information = Info_HighPriest3_Info;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_HighPriest3_Condition()
@@ -39,4 +40,3 @@ func void Info_HighPriest3_Info()
 	Npc_SetAttitude(self,ATT_HOSTILE);
 	Npc_SetTempAttitude(self,ATT_HOSTILE);
 };
-

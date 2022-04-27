@@ -8,6 +8,7 @@ instance DIA_Grd_214_Torwache_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Grd_214_Torwache_Exit_Condition;
 	information = DIA_Grd_214_Torwache_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Grd_214_Torwache_job(C_INFO)
 	nr = 2;
 	condition = DIA_Grd_214_Torwache_job_Condition;
 	information = DIA_Grd_214_Torwache_job_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What do you do all day?";
 //	description = "Was machst du hier?";
@@ -70,14 +72,17 @@ instance Grd_214_Torwache_SEETHORUS(C_INFO)
 
 func int Grd_214_Torwache_SEETHORUS_Condition()
 {
-	if (!Npc_KnowsInfo(hero,GRD_216_TORWACHE_SEETHORUS))
+	if ((!Npc_KnowsInfo(hero,GRD_216_TORWACHE_SEETHORUS))
 	&& ((CorKalom_BringMCQBalls == LOG_SUCCESS) || (Npc_HasItems(hero,ItAt_Crawlerqueen) >= 3))
 	&& (!Npc_KnowsInfo(hero,GRD_200_Thorus_GARDIST))
-	&& (Npc_GetTrueGuild(hero) == GIL_STT)
+	&& (Npc_GetTrueGuild(hero) == GIL_STT))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void Grd_214_Torwache_SEETHORUS_Info()
 {
 //	AI_Output(self,other,"Grd_214_Torwache_SEETHORUS_Info_07_01"); //Hey, I'm glad you're here. Thorus wants to see you!
@@ -106,12 +111,15 @@ instance Grd_214_Torwache_NODUSTY(C_INFO)
 func int Grd_214_Torwache_NODUSTY_Condition()
 {
 	var C_NPC Dusty; Dusty = Hlp_GetNpc(Vlk_524_Dusty);
-	if (Dusty.aivar[AIV_PARTYMEMBER] == TRUE)
-	&& (Npc_GetDistToNpc(hero,dusty)<2000)
+	if ((Dusty.aivar[AIV_PARTYMEMBER] == TRUE)
+	&& (Npc_GetDistToNpc(hero,dusty) < 2000))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void Grd_214_Torwache_NODUSTY_Info()
 {
 //	AI_Output(self,other,"Grd_214_Torwache_NODUSTY_Info_07_01"); //HEY, YOU!!! You wouldn't be trying to smuggle Dusty out o' here, would you?
@@ -133,4 +141,3 @@ func void Grd_214_Torwache_NODUSTY_Info()
 	dusty.aivar[AIV_PARTYMEMBER] = FALSE;
 	dusty.flags = 0; // Immortal löschen
 };
-

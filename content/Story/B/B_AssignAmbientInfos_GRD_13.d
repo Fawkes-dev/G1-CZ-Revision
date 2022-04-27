@@ -12,6 +12,7 @@ instance Info_grd_13_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_grd_13_EXIT_Condition;
 	information = Info_grd_13_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -35,6 +36,7 @@ instance Info_grd_13_EinerVonEuchWerden(C_INFO) // E1
 	nr = 1;
 	condition = Info_grd_13_EinerVonEuchWerden_Condition;
 	information = Info_grd_13_EinerVonEuchWerden_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I want to join the guards.";
 //	description = "Ich will Gardist werden.";
@@ -71,6 +73,7 @@ instance Info_grd_13_WichtigePersonen(C_INFO)
 	nr = 1;
 	condition = Info_grd_13_WichtigePersonen_Condition;
 	information = Info_grd_13_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Who calls the shots around here?";
 //	description = "Wer hat hier das Sagen?";
@@ -101,6 +104,7 @@ instance Info_grd_13_DasLager(C_INFO)
 	nr = 1;
 	condition = Info_grd_13_DasLager_Condition;
 	information = Info_grd_13_DasLager_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How do I get into the castle?";
 //	description = "Wie komme ich in die Burg?";
@@ -190,6 +194,7 @@ instance Info_grd_13_DieLage(C_INFO) // E1
 	nr = 1;
 	condition = Info_grd_13_DieLage_Condition;
 	information = Info_grd_13_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How's it going?";
 //	description = "Wie läuft's?";

@@ -8,6 +8,7 @@ instance Info_Swiney_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Swiney_EXIT_Condition;
 	information = Info_Swiney_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance Info_Swiney_Hello(C_INFO)
 	nr = 1;
 	condition = Info_Swiney_Hello_Condition;
 	information = Info_Swiney_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Who are you?";
 //	description = "Wer bist du?";
@@ -66,6 +68,7 @@ instance Info_Swiney_Schuerfer(C_INFO)
 	nr = 1;
 	condition = Info_Swiney_Schuerfer_Condition;
 	information = Info_Swiney_Schuerfer_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I'd like to join you as a scraper!";
 //	description = "Ich will bei euch als Schürfer mitmachen!";
@@ -78,6 +81,8 @@ func int Info_Swiney_Schuerfer_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Swiney_Schuerfer_Info()
@@ -158,6 +163,7 @@ instance Info_Swiney_PERM(C_INFO)
 	nr = 1;
 	condition = Info_Swiney_PERM_Condition;
 	information = Info_Swiney_PERM_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How much ore have you collected so far?";
 //	description = "Wieviel Erz habt ihr schon gesammelt?";
@@ -170,6 +176,8 @@ func int Info_Swiney_PERM_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Swiney_PERM_Info()
@@ -182,4 +190,3 @@ func void Info_Swiney_PERM_Info()
 	AI_Output(self,other,"Info_Swiney_PERM_09_01"); //Mágové říkají, že už jí tolik nepotřebujeme. Jdi do Nového tábora a prohlédni si haldu.
 	AI_StopProcessInfos(self);
 };
-

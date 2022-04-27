@@ -8,6 +8,7 @@ instance DIA_Kyle_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Kyle_Exit_Condition;
 	information = DIA_Kyle_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -33,13 +34,14 @@ instance DIA_Kyle_HutRage(C_INFO)
 	nr = 2;
 	condition = DIA_Kyle_HutRage_Condition;
 	information = DIA_Kyle_HutRage_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Kyle_HutRage_Condition()
 {
-	if ((Npc_RefuseTalk(self) == FALSE) && (Npc_GetDistToNpc(self,other)<=ZivilAnquatschDist))
+	if ((Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,other) <= ZivilAnquatschDist))
 	{
 		return 1;
 	};
@@ -62,6 +64,7 @@ instance DIA_Kyle_Problem(C_INFO)
 	nr = 2;
 	condition = DIA_Kyle_Problem_Condition;
 	information = DIA_Kyle_Problem_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What's your problem?";
 //	description = "Was ist dein Problem?";
@@ -100,4 +103,3 @@ func void DIA_Kyle_Problem_Info()
 //	AI_Output(self,other,"DIA_Kyle_Problem_10_07"); //Jetzt rennt jeder durch meine Hütte. Jeder Arsch.
 	AI_Output(self,other,"DIA_Kyle_Problem_10_07"); //Každý teď prochází mojí chatrčí. Každý idiot.
 };
-

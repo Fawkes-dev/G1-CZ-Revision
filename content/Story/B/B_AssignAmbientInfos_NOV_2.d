@@ -12,6 +12,7 @@ instance Info_Nov_2_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Nov_2_EXIT_Condition;
 	information = Info_Nov_2_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = "END";
 };
@@ -35,6 +36,7 @@ instance Info_Nov_2_EinerVonEuchWerden(C_INFO) // E1
 	nr = 4;
 	condition = Info_Nov_2_EinerVonEuchWerden_Condition;
 	information = Info_Nov_2_EinerVonEuchWerden_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I want to join you.";
 //	description = "Ich will bei euch mitmachen.";
@@ -74,6 +76,7 @@ instance Info_Nov_2_WichtigePersonen(C_INFO)
 	nr = 3;
 	condition = Info_Nov_2_WichtigePersonen_Condition;
 	information = Info_Nov_2_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Who are your leaders?";
 //	description = "Wer sind eure Anführer?";
@@ -114,6 +117,7 @@ instance Info_Nov_2_DasLager(C_INFO)
 	nr = 2;
 	condition = Info_Nov_2_DasLager_Condition;
 	information = Info_Nov_2_DasLager_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What should I know about this place?";
 //	description = "Was gibt es wichtiges über diesen Ort zu wissen?";
@@ -147,6 +151,7 @@ instance Info_Nov_2_DieLage(C_INFO) // E1
 	nr = 1;
 	condition = Info_Nov_2_DieLage_Condition;
 	information = Info_Nov_2_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How's it going?";
 //	description = "Wie sieht's aus?";

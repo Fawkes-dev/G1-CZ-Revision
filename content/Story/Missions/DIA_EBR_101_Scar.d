@@ -8,6 +8,7 @@ instance DIA_SCAR_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_SCAR_EXIT_Condition;
 	information = DIA_SCAR_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_SCAR_Hello(C_INFO)
 	nr = 3;
 	condition = DIA_SCAR_Hello_Condition;
 	information = DIA_SCAR_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Who are you?";
 //	description = "Wer bist du?";
@@ -63,6 +65,7 @@ instance DIA_SCAR_What(C_INFO)
 	nr = 3;
 	condition = DIA_SCAR_What_Condition;
 	information = DIA_SCAR_What_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What's your job?";
 //	description = "Was ist deine Aufgabe hier?";
@@ -75,6 +78,8 @@ func int DIA_SCAR_What_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_SCAR_What_Info()
@@ -100,6 +105,7 @@ instance DIA_SCAR_Frau(C_INFO)
 	nr = 3;
 	condition = DIA_SCAR_Frau_Condition;
 	information = DIA_SCAR_Frau_Info;
+	important = 0;
 	permanent = 0;
 //	description = "When they threw me in here, I saw a woman being brought down...";
 //	description = "Als sie mich reingeworfen haben, habe ich eine Frau gesehen.";
@@ -112,6 +118,8 @@ func int DIA_SCAR_Frau_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_SCAR_Frau_Info()
@@ -146,6 +154,7 @@ instance DIA_SCAR_PERM(C_INFO)
 	nr = 3;
 	condition = DIA_SCAR_PERM_Condition;
 	information = DIA_SCAR_PERM_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Is there anything you can tell me about Gomez?";
 //	description = "Kannst du mir etwas über Gomez erzählen?";
@@ -158,6 +167,8 @@ func int DIA_SCAR_PERM_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_SCAR_PERM_Info()
@@ -172,4 +183,3 @@ func void DIA_SCAR_PERM_Info()
 //	AI_Output(self,other,"DIA_SCAR_PERM_08_02"); //Er kann alles haben, was er will, aber das einzige, was ihn WIRKLICH interessiert, ist Einfluss.
 	AI_Output(self,other,"DIA_SCAR_PERM_08_02"); //Dostane vše, co chce, ale to, co chce opravdu nejvíce, je moc.
 };
-

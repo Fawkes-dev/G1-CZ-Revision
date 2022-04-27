@@ -8,6 +8,7 @@ instance DIA_Graham_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Graham_EXIT_Condition;
 	information = Info_Graham_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Graham_Hello(C_INFO)
 	nr = 3;
 	condition = DIA_Graham_Hello_Condition;
 	information = DIA_Graham_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Hi! I'm new here.";
 //	description = "Hi! Ich bin neu hier.";
@@ -71,6 +73,7 @@ instance DIA_Graham_SellMap(C_INFO)
 	nr = 3;
 	condition = DIA_Graham_SellMap_Condition;
 	information = DIA_Graham_SellMap_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Diego sent me. He asks you to give me a map to the Old Mine.";
 //	description = "Diego schickt mich. Er sagt, du sollst mir ne Karte geben.";
@@ -79,10 +82,15 @@ instance DIA_Graham_SellMap(C_INFO)
 
 func int DIA_Graham_SellMap_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Graham_Hello) && Npc_KnowsInfo(hero,Info_Diego_MapToOldMine) && (Graham_OMKarteVerkauft==FALSE) && (Graham_OMKarteErpresst==FALSE))
+	if ((Npc_KnowsInfo(hero,DIA_Graham_Hello))
+	&& (Npc_KnowsInfo(hero,Info_Diego_MapToOldMine))
+	&& (Graham_OMKarteVerkauft == FALSE)
+	&& (Graham_OMKarteErpresst == FALSE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Graham_SellMap_Info()
@@ -121,7 +129,7 @@ func void DIA_Graham_SellMap_Pay()
 //	AI_Output(other,self,"DIA_Graham_SellMap_Pay_15_00"); //I'll pay for the map. Here, take the ore.
 //	AI_Output(other,self,"DIA_Graham_SellMap_Pay_15_00"); //Ich werde die Karte bezahlen. Hier, nimm das Erz.
 	AI_Output(other,self,"DIA_Graham_SellMap_Pay_15_00"); //Dobře - zaplatím za tu mapu. Tady, vezmi si tu rudu.
-	if (Npc_HasItems(other,itminugget)>=20)
+	if (Npc_HasItems(other,itminugget) >= 20)
 	{
 //		AI_Output(self,other,"DIA_Graham_SellMap_Pay_02_01"); //Okay. You'll never get a map like this that cheap - believe me.
 //		AI_Output(self,other,"DIA_Graham_SellMap_Pay_02_01"); //Gut. So billig kommst du nie wieder an so eine Karte - glaub mir.
@@ -173,11 +181,12 @@ instance DIA_Graham_BuyMaps(C_INFO)
 	nr = 800;
 	condition = DIA_Graham_BuyMaps_Condition;
 	information = DIA_Graham_BuyMaps_Info;
+	important = 0;
 	permanent = 1;
+	Trade = 1;
 //	description = "I'd like to buy a map.";
 //	description = "Ich würde gerne eine Karte kaufen.";
 	description = "Chtěl bych koupit mapu.";
-	Trade = 1;
 };
 
 func int DIA_Graham_BuyMaps_Condition()
@@ -186,6 +195,8 @@ func int DIA_Graham_BuyMaps_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Graham_BuyMaps_Info()
@@ -197,4 +208,3 @@ func void DIA_Graham_BuyMaps_Info()
 //	AI_Output(self,other,"DIA_Graham_BuyMaps_02_01"); //Klar ... Was suchst du? Je mehr drauf zu sehen ist, desto teurer sind die Karten.
 	AI_Output(self,other,"DIA_Graham_BuyMaps_02_01"); //Jistě... Jakou máš na mysli? Čím více toho na mapě vidíš, tím je dražší.
 };
-

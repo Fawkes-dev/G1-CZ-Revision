@@ -8,6 +8,7 @@ instance DIA_Whistler_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Whistler_Exit_Condition;
 	information = DIA_Whistler_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Whistler_IAmNew(C_INFO)
 	nr = 1;
 	condition = DIA_Whistler_IAmNew_Condition;
 	information = DIA_Whistler_IAmNew_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Hi! I'm new here!";
 //	description = "Hi! Ich bin neu hier.";
@@ -44,7 +46,10 @@ func int DIA_Whistler_IAmNew_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
+
 func void DIA_Whistler_IAmNew_Info()
 {
 //	AI_Output(other,self,"DIA_Whistler_IAmNew_15_00"); //Hi! I'm new here!
@@ -77,6 +82,7 @@ instance DIA_Whistler_Favour(C_INFO)
 	nr = 1;
 	condition = DIA_Whistler_Favour_Condition;
 	information = DIA_Whistler_Favour_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What kind of favor do you want?";
 //	description = "Was ist das für ein Gefallen, den du von mir erwartest?";
@@ -89,6 +95,8 @@ func int DIA_Whistler_Favour_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Whistler_Favour_Info()
@@ -184,6 +192,7 @@ instance DIA_Whistler_Running110(C_INFO)
 	nr = 4;
 	condition = DIA_Whistler_Running110_Condition;
 	information = DIA_Whistler_Running110_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Fisk wants 110 ore for his sword now.";
 //	description = "Fisk will jetzt 110 Erz für dein Schwert";
@@ -192,10 +201,13 @@ instance DIA_Whistler_Running110(C_INFO)
 
 func int DIA_Whistler_Running110_Condition()
 {
-	if ((Whistler_BuyMySword==LOG_RUNNING) && (Fisk_SCknows110 == TRUE))
+	if ((Whistler_BuyMySword == LOG_RUNNING)
+	&& (Fisk_SCknows110 == TRUE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Whistler_Running110_Info()
@@ -226,6 +238,7 @@ instance DIA_Whistler_RunningPayBack(C_INFO)
 	nr = 5;
 	condition = DIA_Whistler_RunningPayBack_Condition;
 	information = DIA_Whistler_RunningPayBack_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I can't get the sword - here's your 100 ore back.";
 //	description = "Ich kriege das Schwert nicht - hier hast du deine 100 Erz zurück.";
@@ -234,10 +247,12 @@ instance DIA_Whistler_RunningPayBack(C_INFO)
 
 func int DIA_Whistler_RunningPayBack_Condition()
 {
-	if ((Whistler_BuyMySword==LOG_RUNNING))
+	if (Whistler_BuyMySword == LOG_RUNNING)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Whistler_RunningPayBack_Info()
@@ -279,16 +294,19 @@ instance DIA_Whistler_MySword_TooLate(C_INFO)
 	nr = 1;
 	condition = DIA_Whistler_MySword_TooLate_Condition;
 	information = DIA_Whistler_MySword_TooLate_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Whistler_MySword_TooLate_Condition()
 {
-	if ((Whistler_BuyMySword==LOG_RUNNING) && (Whistler_BuyMySword_Day<=(Wld_GetDay()-2)))
+	if ((Whistler_BuyMySword == LOG_RUNNING)
+	&& (Whistler_BuyMySword_Day <= (Wld_GetDay() - 2)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Whistler_MySword_TooLate_Info()
@@ -320,6 +338,7 @@ instance DIA_Whistler_MySword_Success(C_INFO)
 	nr = 800;
 	condition = DIA_Whistler_MySword_Success_Condition;
 	information = DIA_Whistler_MySword_Success_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I have your sword...";
 //	description = "Ich hab' dein Schwert...";
@@ -328,11 +347,14 @@ instance DIA_Whistler_MySword_Success(C_INFO)
 
 func int DIA_Whistler_MySword_Success_Condition()
 {
-	if ((Whistler_BuyMySword==LOG_RUNNING) && (Whistler_BuyMySword_Day>(Wld_GetDay()-2))
-		&& (Npc_HasItems(other,Whistlers_Schwert)>=1))
+	if ((Whistler_BuyMySword == LOG_RUNNING)
+	&& (Whistler_BuyMySword_Day > (Wld_GetDay() - 2))
+	&& (Npc_HasItems(other,Whistlers_Schwert) >= 1))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Whistler_MySword_Success_Info()
@@ -348,19 +370,19 @@ func void DIA_Whistler_MySword_Success_Info()
 	AI_Output(self,other,"DIA_Whistler_MySword_Success_11_01"); //To nebylo tak těžké, že ne? Ale aťsi - ruka ruku myje.
 	if (Npc_GetTrueGuild(hero) == GIL_NONE)
 	{
-//	AI_Output(self,other,"DIA_Whistler_MySword_Success_11_02"); //If Diego should ask after you, I'll speak in your favor. Until then - have a good time!
-//	AI_Output(self,other,"DIA_Whistler_MySword_Success_11_02"); //Falls Diego mich nach dir fragt, ist dir meine Stimme sicher. Bis dahin - mach's gut!
-	AI_Output(self,other,"DIA_Whistler_MySword_Success_11_02"); //Až se na tebe bude Diego ptát, budu mluvit v tvůj prospěch. Do té doby - měj se!
+//		AI_Output(self,other,"DIA_Whistler_MySword_Success_11_02"); //If Diego should ask after you, I'll speak in your favor. Until then - have a good time!
+//		AI_Output(self,other,"DIA_Whistler_MySword_Success_11_02"); //Falls Diego mich nach dir fragt, ist dir meine Stimme sicher. Bis dahin - mach's gut!
+		AI_Output(self,other,"DIA_Whistler_MySword_Success_11_02"); //Až se na tebe bude Diego ptát, budu mluvit v tvůj prospěch. Do té doby - měj se!
 
-//	B_LogEntry(CH1_JoinOC,"Whistler was content when I gave him the sword he wanted. He'll recommend me to Diego.");
-//	B_LogEntry(CH1_JoinOC,"Whistler war zufrieden, als ich ihm das gewünschte Schwert übergab. Er will sich bei Diego für mich einsetzen.");
-	B_LogEntry(CH1_JoinOC,"Whistler byl spokojený, když jsem mu dal meč, o který žádal. Přimluví se za mě u Diega.");
+//		B_LogEntry(CH1_JoinOC,"Whistler was content when I gave him the sword he wanted. He'll recommend me to Diego.");
+//		B_LogEntry(CH1_JoinOC,"Whistler war zufrieden, als ich ihm das gewünschte Schwert übergab. Er will sich bei Diego für mich einsetzen.");
+		B_LogEntry(CH1_JoinOC,"Whistler byl spokojený, když jsem mu dal meč, o který žádal. Přimluví se za mě u Diega.");
 	}
 	else
 	{
-//	B_LogEntry(CH1_JoinOC,"Whistler was content when I gave him the sword he wanted. Unfortunately, there's nothing in it for me, because I can't become a Shadow any more.");
-//	B_LogEntry(CH1_JoinOC,"Whistler war zufrieden, als ich ihm das gewünschte Schwert übergab.Leider nützt mir das nicht viel, denn Schatten kann ich nicht mehr werden.");
-	B_LogEntry(CH1_JoinOC,"Whistler byl spokojený, když jsem mu dal meč, o který žádal. Bohužel z toho nic nebudu mít, protože už se nikdy nebudu moci stát Stínem.");
+//		B_LogEntry(CH1_JoinOC,"Whistler was content when I gave him the sword he wanted. Unfortunately, there's nothing in it for me, because I can't become a Shadow any more.");
+//		B_LogEntry(CH1_JoinOC,"Whistler war zufrieden, als ich ihm das gewünschte Schwert übergab.Leider nützt mir das nicht viel, denn Schatten kann ich nicht mehr werden.");
+		B_LogEntry(CH1_JoinOC,"Whistler byl spokojený, když jsem mu dal meč, o který žádal. Bohužel z toho nic nebudu mít, protože už se nikdy nebudu moci stát Stínem.");
 	};
 	Whistler_BuyMySword = LOG_SUCCESS;
 	B_GiveXP(XP_Whistlerssword);
@@ -378,6 +400,7 @@ instance DIA_Whistler_StandardKap1(C_INFO)
 	nr = 800;
 	condition = DIA_Whistler_StandardKap1_Condition;
 	information = DIA_Whistler_StandardKap1_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How's it going...";
 //	description = "Wie sieht's aus...";
@@ -386,10 +409,12 @@ instance DIA_Whistler_StandardKap1(C_INFO)
 
 func int DIA_Whistler_StandardKap1_Condition()
 {
-	if ( Whistler_BuyMySword == LOG_SUCCESS )
+	if (Whistler_BuyMySword == LOG_SUCCESS)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Whistler_StandardKap1_Info()
@@ -401,4 +426,3 @@ func void DIA_Whistler_StandardKap1_Info()
 //	AI_Output(self,other,"DIA_Whistler_StandardKap1_11_01"); //Gut! Du hast mir einen Gefallen getan, ich tue dir einen. Ich werd Diego erzählen, dass du ein zuverlässiger Mann bist.
 	AI_Output(self,other,"DIA_Whistler_StandardKap1_11_01"); //Výborně! Prokázal jsi mi službu a já ti ji teď oplatím. Řeknu Diegovi, že jsi spolehlivý muž.
 };
-

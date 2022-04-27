@@ -36,16 +36,20 @@ instance DIA_BaalOrun_NoTalk(C_INFO)
 	nr = 2;
 	condition = DIA_BaalOrun_NoTalk_Condition;
 	information = DIA_BaalOrun_NoTalk_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_BaalOrun_NoTalk_Condition()
 {
-	if (Npc_IsInState(self,ZS_TALK) && (BaalOrun_Ansprechbar==FALSE) && (Npc_GetPermAttitude(self,other)!=ATT_FRIENDLY))
+	if ((Npc_IsInState(self,ZS_TALK))
+	&& (BaalOrun_Ansprechbar == FALSE)
+	&& (Npc_GetPermAttitude(self,other) != ATT_FRIENDLY))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalOrun_NoTalk_Info()
@@ -107,8 +111,8 @@ instance DIA_BaalOrun_FirstTalk(C_INFO)
 	nr = 1;
 	condition = DIA_BaalOrun_FirstTalk_Condition;
 	information = DIA_BaalOrun_FirstTalk_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_BaalOrun_FirstTalk_Condition()
@@ -118,6 +122,8 @@ func int DIA_BaalOrun_FirstTalk_Condition()
 		BaalOrun_Ansprechbar = TRUE; //damit NoTalk-info nicht kommt
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalOrun_FirstTalk_Info()
@@ -191,8 +197,8 @@ instance DIA_BaalOrun_GotWeed(C_INFO)
 	nr = 1;
 	condition = DIA_BaalOrun_GotWeed_Condition;
 	information = DIA_BaalOrun_GotWeed_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_BaalOrun_GotWeed_Condition()
@@ -201,6 +207,8 @@ func int DIA_BaalOrun_GotWeed_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalOrun_GotWeed_Info()
@@ -238,6 +246,7 @@ instance DIA_BaalOrun_WeedAtKaloms(C_INFO)
 	nr = 1;
 	condition = DIA_BaalOrun_WeedAtKaloms_Condition;
 	information = DIA_BaalOrun_WeedAtKaloms_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I took the swampweed to Cor Kalom.";
 //	description = "Ich habe Cor Kalom das Sumpfkraut gebracht.";
@@ -250,6 +259,8 @@ func int DIA_BaalOrun_WeedAtKaloms_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalOrun_WeedAtKaloms_Info()
@@ -281,6 +292,7 @@ instance DIA_BaalOrun_Perm(C_INFO)
 	nr = 2;
 	condition = DIA_BaalOrun_Perm_Condition;
 	information = DIA_BaalOrun_Perm_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How's weed production going?";
 //	description = "Wie läuft die Krautproduktion?";
@@ -293,6 +305,8 @@ func int DIA_BaalOrun_Perm_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalOrun_Perm_Info()
@@ -307,4 +321,3 @@ func void DIA_BaalOrun_Perm_Info()
 //	AI_Output(self,other,"DIA_BaalOrun_Perm_12_02"); //Aber es ist ein Opfer für den Schläfer, und so bringen es die Novizen gerne.
 	AI_Output(self,other,"DIA_BaalOrun_Perm_12_02"); //To je ale oběť pro Spáče, kterou naši novicové ochotně přináší.
 };
-

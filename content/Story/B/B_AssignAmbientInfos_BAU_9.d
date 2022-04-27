@@ -12,6 +12,7 @@ instance Info_Bau_9_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Bau_9_EXIT_Condition;
 	information = Info_Bau_9_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = "END";
 };
@@ -35,6 +36,7 @@ instance Info_Bau_9_WichtigePersonen(C_INFO)
 	nr = 3;
 	condition = Info_Bau_9_WichtigePersonen_Condition;
 	information = Info_Bau_9_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Whose job is it to make sure everything goes according to plan in the fields?";
 //	description = "Wer kümmert sich darum, daß hier auf den Feldern alles glatt geht?";
@@ -70,6 +72,7 @@ instance Info_Bau_9_DasLager(C_INFO)
 	nr = 2;
 	condition = Info_Bau_9_DasLager_Condition;
 	information = Info_Bau_9_DasLager_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Tell me about this camp.";
 //	description = "Erzähl mir was über dieses Lager.";
@@ -103,6 +106,7 @@ instance Info_Bau_9_DieLage(C_INFO) // E1
 	nr = 1;
 	condition = Info_Bau_9_DieLage_Condition;
 	information = Info_Bau_9_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How are you?";
 //	description = "Wie steht's?";
@@ -133,6 +137,7 @@ instance Info_Bau_9_Wasser(C_INFO) // E1
 	nr = 800;
 	condition = Info_Bau_9_Wasser_Condition;
 	information = Info_Bau_9_Wasser_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Lefty sent me. I've brought you some water.";
 //	description = "Lefty schickt mich. Ich hab Wasser für dich.";

@@ -8,6 +8,7 @@ instance Org_825_Organisator_Exit(C_INFO)
 	nr = 999;
 	condition = Org_825_Organisator_Exit_Condition;
 	information = Org_825_Organisator_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance Org_825_Organisator_PERM(C_INFO)
 	nr = 1;
 	condition = Org_825_Organisator_PERM_Condition;
 	information = Org_825_Organisator_PERM_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What are you guarding?";
 //	description = "Was bewacht ihr hier?";

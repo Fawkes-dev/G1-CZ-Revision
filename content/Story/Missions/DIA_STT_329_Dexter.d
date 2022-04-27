@@ -8,6 +8,7 @@ instance DIA_Dexter_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Dexter_Exit_Condition;
 	information = DIA_Dexter_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,8 +33,8 @@ instance DIA_Dexter_First(C_INFO)
 	nr = 1;
 	condition = DIA_Dexter_First_Condition;
 	information = DIA_Dexter_First_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Dexter_First_Condition()
@@ -42,6 +43,8 @@ func int DIA_Dexter_First_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Dexter_First_Info()
@@ -61,6 +64,7 @@ instance DIA_Dexter_Kraut(C_INFO)
 	nr = 1;
 	condition = DIA_Dexter_Kraut_Condition;
 	information = DIA_Dexter_Kraut_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What is swampweed?";
 //	description = "Was ist Sumpfkraut?";
@@ -94,11 +98,12 @@ instance DIA_Dexter_Trade(C_INFO)
 	nr = 800;
 	condition = DIA_Dexter_Trade_Condition;
 	information = DIA_Dexter_Trade_Info;
+	important = 0;
 	permanent = 1;
+	Trade = 1;
 //	description = "Show me your goods.";
 //	description = "Zeig mir deine Ware.";
 	description = "Ukaž mi svoje zboží.";
-	Trade = 1;
 };
 
 func int DIA_Dexter_Trade_Condition()
@@ -138,6 +143,7 @@ instance DIA_Dexter_JoinOC(C_INFO)
 	nr = 1;
 	condition = DIA_Dexter_JoinOC_Condition;
 	information = DIA_Dexter_JoinOC_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I want to join the Camp - I want to become a Shadow.";
 //	description = "Ich will mich dem Lager anschließen - ich will Schatten werden.";
@@ -150,7 +156,10 @@ func int DIA_Dexter_JoinOC_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
+
 func void DIA_Dexter_JoinOC_Info()
 {
 //	AI_Output(other,self,"DIA_Dexter_JoinOC_15_00"); //I want to join the Camp - I want to become a Shadow.
@@ -318,6 +327,7 @@ instance DIA_Dexter_WhereST(C_INFO)
 	nr = 800;
 	condition = DIA_Dexter_WhereST_Condition;
 	information = DIA_Dexter_WhereST_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Where is the Sect Camp?";
 //	description = "Wo ist das Sektenlager?";
@@ -330,6 +340,8 @@ func int DIA_Dexter_WhereST_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Dexter_WhereST_Info()
@@ -341,12 +353,12 @@ func void DIA_Dexter_WhereST_Info()
 //	AI_Output(self,other,"DIA_Dexter_WhereST_10_01"); //Durch den Südausgang aus dem Lager raus, dann immer östlich halten. Am besten besorgst du dir eine Karte -
 	AI_Output(self,other,"DIA_Dexter_WhereST_10_01"); //Vyjdeš z tábora jižním východem, pak se dáš na východ. Nejlepší by bylo, kdyby sis opatřil mapu.
 
-	if (Npc_HasItems(self,ItWrWorldmap) >0) //Björn
-		{ //Björn
-//			AI_Output(self,other,"DIA_Dexter_WhereST_10_02"); //I've got one here for 50 ore...
-//			AI_Output(self,other,"DIA_Dexter_WhereST_10_02"); //Ich hab' eine da für 50 Erz ...
-			AI_Output(self,other,"DIA_Dexter_WhereST_10_02"); //Mám tady jednu za 50 nugetů...
-		}; //Björn
+	if (Npc_HasItems(self,ItWrWorldmap) > 0) //Björn
+	{ //Björn
+//		AI_Output(self,other,"DIA_Dexter_WhereST_10_02"); //I've got one here for 50 ore...
+//		AI_Output(self,other,"DIA_Dexter_WhereST_10_02"); //Ich hab' eine da für 50 Erz ...
+		AI_Output(self,other,"DIA_Dexter_WhereST_10_02"); //Mám tady jednu za 50 nugetů...
+	}; //Björn
 
 //	AI_Output(other,self,"DIA_Dexter_WhereST_15_02"); //The south exit is the collapsed tower, isn't it?
 //	AI_Output(other,self,"DIA_Dexter_WhereST_15_02"); //Der Südausgang ist der umgestürzte Turm, richtig?
@@ -355,7 +367,7 @@ func void DIA_Dexter_WhereST_Info()
 //	AI_Output(self,other,"DIA_Dexter_WhereST_10_03"); //Stimmt genau.
 	AI_Output(self,other,"DIA_Dexter_WhereST_10_03"); //Přesně tak.
 
-	if !Dexter_PsiCamp
+	if (!Dexter_PsiCamp)
 	{
 //		B_LogEntry(CH1_KalomsRecipe,"The Sect Camp is to the east of the Old Camp");
 //		B_LogEntry(CH1_KalomsRecipe,"Das Sektenlager befindet sich östlich vom Alten Lager");
@@ -374,6 +386,7 @@ instance DIA_Dexter_KalomsRecipeSuccess(C_INFO)
 	nr = 800;
 	condition = DIA_Dexter_KalomsRecipeSuccess_Condition;
 	information = DIA_Dexter_KalomsRecipeSuccess_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I have the recipe you wanted!";
 //	description = "Ich hab' das Rezept, das du wolltest!";
@@ -382,10 +395,13 @@ instance DIA_Dexter_KalomsRecipeSuccess(C_INFO)
 
 func int DIA_Dexter_KalomsRecipeSuccess_Condition()
 {
-	if ((Dexter_GetKalomsRecipe == LOG_RUNNING) && (Npc_HasItems(other,KalomsRecipe) > 0))
+	if ((Dexter_GetKalomsRecipe == LOG_RUNNING)
+	&& (Npc_HasItems(other,KalomsRecipe) > 0))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Dexter_KalomsRecipeSuccess_Info()
@@ -431,4 +447,3 @@ func void DIA_Dexter_KalomsRecipeSuccess_Info()
 	};
 	B_GiveXP(XP_DexterKalom);
 };
-

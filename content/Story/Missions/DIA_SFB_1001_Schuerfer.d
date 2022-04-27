@@ -8,6 +8,7 @@ instance DIA_Sfb_1001_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_Sfb_1001_EXIT_Condition;
 	information = DIA_Sfb_1001_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Sfb_1001_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_Sfb_1001_Hello_Condition;
 	information = DIA_Sfb_1001_Hello_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Well, how's the mine going on?";
 //	description = "Na, wie steht's in der Mine?";

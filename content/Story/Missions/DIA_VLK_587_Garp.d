@@ -53,4 +53,3 @@ func void Vlk_587_Garp_ORK_Info()
 //	AI_Output(self,other,"Vlk_587_Garp_ORK_Info_01_04"); //Er hat es einmal versucht. Die Gardisten haben ihm so stark zugesetzt, dass er ein paar Wochen nicht laufen konnte. Seitdem hat er nie wieder versucht zu fliehen.
 	AI_Output(self,other,"Vlk_587_Garp_ORK_Info_01_04"); //Jednou se o to pokusil. Strážci ho zbili tak tvrdě, že nemohl pár týdnů chodit. Od té doby se už nikdy o útěk nepokusil.
 };
-

@@ -8,6 +8,7 @@ instance DIA_Snaf_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Snaf_Exit_Condition;
 	information = DIA_Snaf_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Snaf_Hello(C_INFO)
 	nr = 2;
 	condition = DIA_Snaf_Hello_Condition;
 	information = DIA_Snaf_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "How's things?";
 //	description = "Wie steht's?";
@@ -78,6 +80,7 @@ instance DIA_Snaf_Zutaten(C_INFO)
 	nr = 2;
 	condition = DIA_Snaf_Zutaten_Condition;
 	information = DIA_Snaf_Zutaten_Info;
+	important = 0;
 	permanent = 0;
 //	description ="What can I do for you?";
 //	description = "Was kann ich für dich tun?";
@@ -90,6 +93,8 @@ func int DIA_Snaf_Zutaten_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Snaf_Zutaten_Info()
@@ -168,6 +173,7 @@ instance DIA_Snaf_ZutatenSuccess(C_INFO)
 	nr = 2;
 	condition = DIA_Snaf_ZutatenSuccess_Condition;
 	information = DIA_Snaf_ZutatenSuccess_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I have the things you wanted from me!";
 //	description = "Ich hab' die Sachen, die du von mir wolltest!";
@@ -176,10 +182,14 @@ instance DIA_Snaf_ZutatenSuccess(C_INFO)
 
 func int DIA_Snaf_ZutatenSuccess_Condition()
 {
-	if ((Snaf_Zutaten==LOG_RUNNING) && (Npc_HasItems(other,ItFo_Plants_Mushroom_01)>=5) && (Npc_HasItems(other,ItAt_Meatbug_01)>=3))
+	if ((Snaf_Zutaten == LOG_RUNNING)
+	&& (Npc_HasItems(other,ItFo_Plants_Mushroom_01) >= 5)
+	&& (Npc_HasItems(other,ItAt_Meatbug_01) >= 3))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Snaf_ZutatenSuccess_Info()
@@ -207,7 +217,7 @@ func void DIA_Snaf_ZutatenSuccess_Info()
 //	B_LogEntry(CH1_SnafsRecipe,"Snaf war sehr zufrieden, als ich ihm die Zutaten übergab.");
 	B_LogEntry(CH1_SnafsRecipe,"Snaf byl velmi spokojený, když jsem mu přinesl přísady.");
 
-	if Snaf_FreeMBRagout==TRUE
+	if (Snaf_FreeMBRagout == TRUE)
 	{
 //		B_LogEntry(CH1_SnafsRecipe,"From now on, he'll give me meatbug ragout every day.");
 //		B_LogEntry(CH1_SnafsRecipe,"Ab jetzt kann ich jeden Tag Fleischwanzen-Ragout bei ihm essen.");
@@ -231,6 +241,7 @@ instance DIA_Snaf_AfterSuccess(C_INFO)
 	nr = 2;
 	condition = DIA_Snaf_AfterSuccess_Condition;
 	information = DIA_Snaf_AfterSuccess_Info;
+	important = 0;
 	permanent = 1;
 //	description = "You told me I could have as much stew as I wanted...";
 //	description = "Du hast gesagt, ich kann soviel von dem Eintopf haben, wie ich will...";
@@ -239,10 +250,13 @@ instance DIA_Snaf_AfterSuccess(C_INFO)
 
 func int DIA_Snaf_AfterSuccess_Condition()
 {
-	if ((Snaf_Zutaten==LOG_SUCCESS) && (Snaf_FreeMBRagout==TRUE))
+	if ((Snaf_Zutaten == LOG_SUCCESS)
+	&& (Snaf_FreeMBRagout == TRUE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Snaf_AfterSuccess_Info()
@@ -251,7 +265,7 @@ func void DIA_Snaf_AfterSuccess_Info()
 // 	AI_Output(other,self,"DIA_Snaf_AfterSuccess_15_00"); //Du hast gesagt, ich kann so viel von den Eintopf haben, wie ich will ...
  	AI_Output(other,self,"DIA_Snaf_AfterSuccess_15_00"); //Řekl jsi mi, že můžu mít tolik ragú, kolik budu chtít...
 
- 	if (Snaf_RagoutDay!=Wld_GetDay())
+ 	if (Snaf_RagoutDay != Wld_GetDay())
  	{
 // 		AI_Output(self,other,"DIA_Snaf_AfterSuccess_01_01"); //And that's true. Here, take 3 portions.
 // 		AI_Output(self,other,"DIA_Snaf_AfterSuccess_01_01"); //Und das stimmt auch. Hier, nimm 3 Portionen!
@@ -278,6 +292,7 @@ instance DIA_Snaf_WhereMeatbugs(C_INFO)
 	nr = 3;
 	condition = DIA_Snaf_WhereMeatbugs_Condition;
 	information = DIA_Snaf_WhereMeatbugs_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Where can I find meatbugs?";
 //	description = "Wo finde ich Fleischwanzen?";
@@ -286,10 +301,12 @@ instance DIA_Snaf_WhereMeatbugs(C_INFO)
 
 func int DIA_Snaf_WhereMeatbugs_Condition()
 {
-	if ((Snaf_Zutaten==LOG_RUNNING))
+	if ((Snaf_Zutaten == LOG_RUNNING))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Snaf_WhereMeatbugs_Info()
@@ -319,6 +336,7 @@ instance DIA_Snaf_WhereMushrooms(C_INFO)
 	nr = 4;
 	condition = DIA_Snaf_WhereMushrooms_Condition;
 	information = DIA_Snaf_WhereMushrooms_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Where can I find hell mushrooms?";
 //	description = "Wo finde ich Höllenpilze?";
@@ -327,10 +345,12 @@ instance DIA_Snaf_WhereMushrooms(C_INFO)
 
 func int DIA_Snaf_WhereMushrooms_Condition()
 {
-	if ((Snaf_Zutaten==LOG_RUNNING))
+	if ((Snaf_Zutaten == LOG_RUNNING))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Snaf_WhereMushrooms_Info()
@@ -357,6 +377,7 @@ instance DIA_Snaf_WhereNek(C_INFO)
 	nr = 5;
 	condition = DIA_Snaf_WhereNek_Condition;
 	information = DIA_Snaf_WhereNek_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Who was the guy you sent before me?";
 //	description = "Wer war der Typ, den du vor mir losgeschickt hast?";
@@ -365,10 +386,12 @@ instance DIA_Snaf_WhereNek(C_INFO)
 
 func int DIA_Snaf_WhereNek_Condition()
 {
-	if ((Snaf_Zutaten==LOG_RUNNING))
+	if ((Snaf_Zutaten == LOG_RUNNING))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Snaf_WhereNek_Info()
@@ -383,8 +406,8 @@ func void DIA_Snaf_WhereNek_Info()
 //	AI_Output(self,other,"DIA_Snaf_WhereNek_01_02"); //Hab ihn Pilze suchen geschickt - aber er kam nicht wieder ...
 	AI_Output(self,other,"DIA_Snaf_WhereNek_01_02"); //Poslal jsem ho nasbírat houby - ale už se nevrátil zpátky...
 
-	if (Sly_LostNek != LOG_SUCCESS)
-	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
+	if ((Sly_LostNek != LOG_SUCCESS)
+	&& (Npc_GetTrueGuild(hero) == GIL_NONE))
 	{
 		Log_CreateTopic(CH1_LostNek,LOG_MISSION);
 		Log_SetTopicStatus(CH1_LostNek,LOG_RUNNING);
@@ -393,4 +416,3 @@ func void DIA_Snaf_WhereNek_Info()
 //	B_LogEntry(CH1_LostNek,"Der Koch Snaf hat Nek zum letzten Mal gesehen, als er Pilze pflücken ging.");
 	B_LogEntry(CH1_LostNek,"Kuchař Snaf viděl Neka naposledy, když odešel sbírat houby.");
 };
-

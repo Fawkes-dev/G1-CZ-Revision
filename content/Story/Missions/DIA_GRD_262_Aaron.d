@@ -36,12 +36,15 @@ instance GRD_262_Aaron_CHEST(C_INFO)
 
 func int GRD_262_Aaron_CHEST_Condition()
 {
-	if ( Npc_GetDistToWp (self,"OM_CAVE1_34") <400 )
-	&& (!Npc_KnowsInfo(hero,GRD_262_Aaron_BLUFF))
+	if ((Npc_GetDistToWp (self,"OM_CAVE1_34") < 400)
+	&& (!Npc_KnowsInfo(hero,GRD_262_Aaron_BLUFF)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
+
 func void GRD_262_Aaron_CHEST_Info()
 {
 //	AI_Output(other,self,"GRD_262_Aaron_CHEST_Info_15_01"); //What are you doing here?
@@ -67,12 +70,14 @@ instance GRD_262_Aaron_BLUFF(C_INFO)
 
 func int GRD_262_Aaron_BLUFF_Condition()
 {
-	if Npc_KnowsInfo(hero,VLK_584_Snipes_DEAL)
+	if ((Npc_KnowsInfo(hero,VLK_584_Snipes_DEAL))
 	&& (Aaron_lock != LOG_RUNNING)
-	&& (Aaron_lock != LOG_SUCCESS)
+	&& (Aaron_lock != LOG_SUCCESS))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GRD_262_Aaron_BLUFF_Info()
@@ -201,11 +206,13 @@ instance GRD_262_Aaron_PISSED(C_INFO)
 
 func int GRD_262_Aaron_PISSED_Condition()
 {
-	if (Aaron_lock == LOG_RUNNING)
-	&& (Npc_GetDistToWP(hero,"OM_CAVE1_47") < 1000)
+	if ((Aaron_lock == LOG_RUNNING)
+	&& (Npc_GetDistToWP(hero,"OM_CAVE1_47") < 1000))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void GRD_262_Aaron_PISSED_Info()
@@ -239,10 +246,12 @@ instance GRD_262_Aaron_SELL(C_INFO)
 
 func int GRD_262_Aaron_SELL_Condition()
 {
-	if (Npc_KnowsInfo(hero,VLK_584_Snipes_DEAL_RUN ))
+	if (Npc_KnowsInfo(hero,VLK_584_Snipes_DEAL_RUN))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GRD_262_Aaron_SELL_Info()
@@ -277,10 +286,13 @@ instance GRD_262_Aaron_SELLNOW(C_INFO)
 
 func int GRD_262_Aaron_SELLNOW_Condition()
 {
-	if (Npc_KnowsInfo(hero,GRD_262_Aaron_SELL)) && (Npc_HasItems(hero,ItKe_OM_02))
+	if ((Npc_KnowsInfo(hero,GRD_262_Aaron_SELL))
+	&& (Npc_HasItems(hero,ItKe_OM_02)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GRD_262_Aaron_SELLNOW_Info()

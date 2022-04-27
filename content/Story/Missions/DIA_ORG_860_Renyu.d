@@ -7,6 +7,7 @@ instance Info_Renyu_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Renyu_EXIT_Condition;
 	information = Info_Renyu_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -31,16 +32,18 @@ instance ORG_860_Renyu_GetLost(C_INFO)
 	nr = 1;
 	condition = ORG_860_Renyu_GetLost_Condition;
 	information = ORG_860_Renyu_GetLost_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int ORG_860_Renyu_GetLost_Condition()
 {
 	if (Npc_IsInState(self,ZS_Talk))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void ORG_860_Renyu_GetLost_Info()
@@ -69,13 +72,15 @@ instance ORG_860_Renyu_DEAL(C_INFO)
 
 func int ORG_860_Renyu_DEAL_Condition()
 {
-	if (Npc_KnowsInfo(hero,ORG_862_Jacko_ANGEBOT))
-	&& ( Kalom_DrugMonopol == LOG_RUNNING)
+	if ((Npc_KnowsInfo(hero,ORG_862_Jacko_ANGEBOT))
+	&& (Kalom_DrugMonopol == LOG_RUNNING))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void ORG_860_Renyu_DEAL_Info()
 {
 	AI_Output(other,self,"ORG_860_Renyu_DEAL_Info_15_01"); //Ich bin hier, um euch ein Angebot zu unterbreiten.
@@ -87,6 +92,7 @@ func void ORG_860_Renyu_DEAL_Info()
 	Info_AddChoice(ORG_860_Renyu_DEAL,"Gebt mir 500 Erz",ORG_860_Renyu_DEAL_500);
 	Info_AddChoice(ORG_860_Renyu_DEAL,"Gebt mir 250 Erz",ORG_860_Renyu_DEAL_250);
 };
+
 func void ORG_860_Renyu_DEAL_500()
 {
 	AI_Output(other,self,"ORG_860_Renyu_DEAL_500_Info_15_01"); //Gebt mir 500 Erz dann sorge ich dafür, das die Bruderschaft euch in Ruhe lässt.!
@@ -109,6 +115,7 @@ func void ORG_860_Renyu_DEAL_500()
 	AI_StartState(jacko, ZS_Attack, 1, "");
 	Npc_SetPermAttitude(jacko,ATT_HOSTILE);
 };
+
 func void ORG_860_Renyu_DEAL_250()
 {
 	AI_Output(other,self,"ORG_860_Renyu_DEAL_250_Info_15_01"); //Gebt mir 250 erz, dann sorge ich dafür, das die Bruderschaft euch in ruhe lässt.
@@ -141,14 +148,16 @@ func int ORG_860_Renyu_LOST_Condition()
 	Renyu = Hlp_GetNpc(ORG_860_Renyu);
 	Renyu.aivar[AIV_WASDEFEATEDBYSC] ;
 
-	if (Renyu.aivar[AIV_WASDEFEATEDBYSC] == TRUE)
+	if ((Renyu.aivar[AIV_WASDEFEATEDBYSC] == TRUE)
 	&& (Npc_KnowsInfo(hero,ORG_860_Renyu_DEAL))
-	&& ( Kalom_DrugMonopol == LOG_RUNNING)
+	&& (Kalom_DrugMonopol == LOG_RUNNING))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void ORG_860_Renyu_LOST_Info()
 {
 //	AI_Output(other,self,"ORG_860_Renyu_LOST_Info_15_01"); //Was sagst du jetzt? Du mieser Schwächling!
@@ -161,6 +170,4 @@ func void ORG_860_Renyu_LOST_Info()
 	jacko = Hlp_GetNpc(ORG_862_jacko);
 	Npc_ExchangeRoutine(jacko,"ARBEITSLOS");
 };
-
 */
-

@@ -8,7 +8,6 @@ instance Tpl_1438_Templer_Exit(C_INFO)
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
-
 func int Tpl_1438_Templer_Exit_Condition()
 {
 	return 1;
@@ -25,6 +24,7 @@ func void Tpl_1438_Templer_Exit_Info()
 
 	AI_StopProcessInfos(self);
 };
+
 // ***************** GELABER *****************************
 
 instance Tpl_1438_Templer_INFO(C_INFO)
@@ -41,11 +41,12 @@ instance Tpl_1438_Templer_INFO(C_INFO)
 
 func int Tpl_1438_Templer_INFO_Condition()
 {
-	if (  CorKalom_BringMCQBalls != LOG_RUNNING )
+	if (CorKalom_BringMCQBalls != LOG_RUNNING)
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
 
 func void Tpl_1438_Templer_INFO_Info()
@@ -74,7 +75,7 @@ instance Tpl_1438_Templer_WHY(C_INFO)
 
 func int Tpl_1438_Templer_WHY_Condition()
 {
-	if (Npc_KnowsInfo(hero,Tpl_1438_Templer_INFO ))
+	if (Npc_KnowsInfo(hero,Tpl_1438_Templer_INFO))
 	{
 		return 1;
 	};
@@ -95,6 +96,7 @@ func void Tpl_1438_Templer_WHY_Info()
 //	AI_Output(self,other,"Tpl_1438_Templer_WHY_Info_13_04"); //Ein Gift. Nur unser Guru Cor Kalom weiß, wie man daraus Tränke brauen kann.
 	AI_Output(self,other,"Tpl_1438_Templer_WHY_Info_13_04"); //Jed. Jedině náš Guru Cor Kalom ví, jak z něj připravit lektvar.
 };
+
 // ***************** KALOM *****************************
 
 instance Tpl_1438_Templer_KALOM(C_INFO)
@@ -116,6 +118,7 @@ func int Tpl_1438_Templer_KALOM_Condition()
 		return 1;
 	};
 
+	return 0;
 };
 
 func void Tpl_1438_Templer_KALOM_Info()
@@ -133,7 +136,9 @@ func void Tpl_1438_Templer_KALOM_Info()
 //	AI_Output(other,self,"Tpl_1438_Templer_KALOM_Info_15_04"); //Ich werde mal darüber nachdenken.
 	AI_Output(other,self,"Tpl_1438_Templer_KALOM_Info_15_04"); //Budu o tom přemýšlet.
 };
+
 //---------------------WENN DIE EIERSUCHE LÄUFT-------------------------------
+
 instance Tpl_1438_Templer_EGGSEARCH(C_INFO)
 {
 	npc = Tpl_1438_Templer;
@@ -148,12 +153,14 @@ instance Tpl_1438_Templer_EGGSEARCH(C_INFO)
 
 func int Tpl_1438_Templer_EGGSEARCH_Condition()
 {
-	if (CorKalom_BringMCQBalls == LOG_RUNNING )
+	if (CorKalom_BringMCQBalls == LOG_RUNNING)
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void Tpl_1438_Templer_EGGSEARCH_Info()
 {
 //	AI_Output(other,self,"Tpl_1438_Templer_EGGSEARCH_Info_15_01"); //I'm looking for the nest of the crawlers.
@@ -185,13 +192,15 @@ instance Tpl_1438_Templer_ZANGEN(C_INFO)
 
 func int Tpl_1438_Templer_ZANGEN_Condition()
 {
-	if (Npc_KnowsInfo(hero,Tpl_1438_Templer_WHY) || (CorKalom_BringMCQBalls == LOG_RUNNING))
-	&& (Knows_GetMCMandibles == FALSE)
+	if (((Npc_KnowsInfo(hero,Tpl_1438_Templer_WHY)) || (CorKalom_BringMCQBalls == LOG_RUNNING))
+	&& (Knows_GetMCMandibles == FALSE))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void Tpl_1438_Templer_ZANGEN_Info()
 {
 //	AI_Output(other,self,"Tpl_1438_Templer_ZANGEN_Info_15_01"); //How can I remove the mandibles from the minecrawlers?
@@ -201,6 +210,7 @@ func void Tpl_1438_Templer_ZANGEN_Info()
 //	AI_Output(self,other,"Tpl_1438_Templer_ZANGEN_Info_13_02"); //Das ist ein Vorgang, der nicht so einfach ist. Ich kann dir das beibringen.
 	AI_Output(self,other,"Tpl_1438_Templer_ZANGEN_Info_13_02"); //Není to tak snadné. Mohu tě to naučit.
 };
+
 /*------------------------------------------------------------------------
 //							LERNEN ZANGEN ZU ENTFERNEN //
 ------------------------------------------------------------------------*/
@@ -219,13 +229,15 @@ instance Tpl_1438_Templer_TEACHZANGEN(C_INFO)
 
 func int Tpl_1438_Templer_TEACHZANGEN_Condition()
 {
-	if (Npc_KnowsInfo(hero,Tpl_1438_Templer_ZANGEN))
-	&& (Knows_GetMCMandibles == FALSE)
+	if ((Npc_KnowsInfo(hero,Tpl_1438_Templer_ZANGEN))
+	&& (Knows_GetMCMandibles == FALSE))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void Tpl_1438_Templer_TEACHZANGEN_Info()
 {
 //	AI_Output(other,self,"Tpl_1438_Templer_TEACHZANGEN_Info_15_01"); //Can you teach me how to remove the mandibles?

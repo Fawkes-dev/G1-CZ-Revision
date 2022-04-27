@@ -18,8 +18,10 @@ func int Info_Xardas_OT_Condition()
 {
 	if (Npc_GetDistToWP(self,"TPL_331") < 1000)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Xardas_OT_Info()

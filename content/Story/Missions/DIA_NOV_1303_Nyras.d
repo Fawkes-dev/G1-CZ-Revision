@@ -8,6 +8,7 @@ instance DIA_Nyras_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Nyras_Exit_Condition;
 	information = DIA_Nyras_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Nyras_Hallo(C_INFO)
 	nr = 1;
 	condition = DIA_Nyras_Hallo_Condition;
 	information = DIA_Nyras_Hallo_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Hi! I'm new here.";
 //	description = "Hi! Ich bin neu hier.";
@@ -42,9 +44,12 @@ func int DIA_Nyras_Hallo_Condition()
 {
 	if (Kapitel <= 1)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void DIA_Nyras_Hallo_Info()
 {
 //	AI_Output(other,self,"DIA_Nyras_Hallo_15_00"); //Hi! I'm new here.
@@ -65,6 +70,7 @@ instance DIA_Nyras_Ort(C_INFO)
 	nr = 1;
 	condition = DIA_Nyras_Ort_Condition;
 	information = DIA_Nyras_Ort_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What can you tell me about this place?";
 //	description = "Was kannst du mir über diesen Ort sagen?";
@@ -73,11 +79,13 @@ instance DIA_Nyras_Ort(C_INFO)
 
 func int DIA_Nyras_Ort_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Nyras_Hallo))
-	&& (Kapitel <= 1)
+	if ((Npc_KnowsInfo(hero,DIA_Nyras_Hallo))
+	&& (Kapitel <= 1))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Nyras_Ort_Info()
@@ -161,17 +169,21 @@ instance Nov_1303_Nyras_GREET(C_INFO)
 
 func int Nov_1303_Nyras_GREET_Condition()
 {
-	if ( YBerion_BringFocus == LOG_RUNNING )
+	if (YBerion_BringFocus == LOG_RUNNING)
 	{
 		return 1;
 	};
+
+	return 0;
 };
+
 func void Nov_1303_Nyras_GREET_Info()
 {
 //	AI_Output(self,other ,"Nov_1303_Nyras_GREET_Info_03_00"); //Scram! You have no business to be here!
 //	AI_Output(self,other ,"Nov_1303_Nyras_GREET_Info_03_00"); //Verschwinde! Hier gibt es nichts für dich zu holen!
 	AI_Output(self,other ,"Nov_1303_Nyras_GREET_Info_03_00"); //Zmiz! Tady nemáš co dělat!
 };
+
 // ***************************** INFOS ****************************************//
 
 instance Nov_1303_Nyras_LEAVE(C_INFO)
@@ -192,7 +204,10 @@ func int Nov_1303_Nyras_LEAVE_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
+
 func void Nov_1303_Nyras_LEAVE_Info()
 {
 //	AI_Output(other,self,"Nov_1303_Nyras_LEAVE_Info_15_01"); //I'm searching for the focus.
@@ -223,6 +238,4 @@ func void Nov_1303_Nyras_LEAVE_Info()
 
 	Npc_SetPermAttitude(self,ATT_HOSTILE);
 	AI_StopProcessInfos(self);
-
 };
-

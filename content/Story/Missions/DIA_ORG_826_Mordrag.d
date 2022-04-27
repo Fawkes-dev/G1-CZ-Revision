@@ -15,6 +15,7 @@ instance Org_826_Mordrag_Exit(C_INFO)
 	nr = 999;
 	condition = Org_826_Mordrag_Exit_Condition;
 	information = Org_826_Mordrag_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -39,8 +40,8 @@ instance Org_826_Mordrag_Greet(C_INFO)
 	nr = 1;
 	condition = Org_826_Mordrag_Greet_Condition;
 	information = Org_826_Mordrag_Greet_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Org_826_Mordrag_Greet_Condition()
@@ -49,6 +50,8 @@ func int Org_826_Mordrag_Greet_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_826_Mordrag_Greet_Info()
@@ -70,11 +73,12 @@ instance Org_826_Mordrag_Trade(C_INFO)
 	nr = 800;
 	condition = Org_826_Mordrag_Trade_Condition;
 	information = Org_826_Mordrag_Trade_Info;
+	important = 0;
 	permanent = 1;
+	trade = 1;
 //	description = "Show me your goods.";
 //	description = "Zeig mir deine Ware.";
 	description = "Ukaž mi svoje zboží.";
-	trade = 1;
 };
 
 func int Org_826_Mordrag_Trade_Condition()
@@ -90,13 +94,13 @@ func void Org_826_Mordrag_Trade_Info()
 //	AI_Output(self,other,"Org_826_Mordrag_Trade_11_01"); //Choose something...
 //	AI_Output(self,other,"Org_826_Mordrag_Trade_11_01"); //Such dir was aus ...
 	AI_Output(self,other,"Org_826_Mordrag_Trade_11_01"); //Něco si vyber...
-	if (Mordrag_Traded==0)
+	if (Mordrag_Traded == 0)
 	{
 		Log_CreateTopic(GE_TraderOC,LOG_NOTE);
 //		B_LogEntry(GE_TraderOC,"The rogue Mordrag sells stolen goods at the market.");
 //		B_LogEntry(GE_TraderOC,"Bandit Mordrag verhökert am Marktplatz Diebesgut");
 		B_LogEntry(GE_TraderOC,"Bandita Mordrag prodává na tržišti kradené zboží.");
-		Mordrag_Traded=1;
+		Mordrag_Traded = 1;
 	};
 };
 
@@ -110,6 +114,7 @@ instance Org_826_Mordrag_Courier(C_INFO)
 	nr = 3;
 	condition = Org_826_Mordrag_Courier_Condition;
 	information = Org_826_Mordrag_Courier_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Are you really the magicians' courier?";
 //	description = "Stimmt es, dass du Kurier für die Magier bist?";
@@ -118,10 +123,12 @@ instance Org_826_Mordrag_Courier(C_INFO)
 
 func int Org_826_Mordrag_Courier_Condition()
 {
-	if Thorus_MordragMageMessenger
+	if (Thorus_MordragMageMessenger)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_826_Mordrag_Courier_Info()
@@ -150,6 +157,7 @@ instance Org_826_Mordrag_Problem(C_INFO)
 	nr = 3;
 	condition = Org_826_Mordrag_Problem_Condition;
 	information = Org_826_Mordrag_Problem_Info;
+	important = 0;
 	permanent = 0;
 //	description = "You have a problem.";
 //	description = "Du hast ein Problem.";
@@ -158,10 +166,12 @@ instance Org_826_Mordrag_Problem(C_INFO)
 
 func int Org_826_Mordrag_Problem_Condition()
 {
-	if Thorus_MordragKo == LOG_RUNNING
+	if (Thorus_MordragKo == LOG_RUNNING)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_826_Mordrag_Problem_Info()
@@ -199,6 +209,7 @@ instance Org_826_Mordrag_NCInfo(C_INFO)
 	nr = 3;
 	condition = Org_826_Mordrag_NCInfo_Condition;
 	information = Org_826_Mordrag_NCInfo_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Tell me more about the New Camp.";
 //	description = "Erzähl mir was über das Neue Lager.";
@@ -207,10 +218,13 @@ instance Org_826_Mordrag_NCInfo(C_INFO)
 
 func int Org_826_Mordrag_NCInfo_Condition()
 {
-	if (Npc_KnowsInfo(hero,Org_826_Mordrag_Problem) || Npc_KnowsInfo(hero,Org_826_Mordrag_Courier))
+	if ((Npc_KnowsInfo(hero,Org_826_Mordrag_Problem))
+	|| (Npc_KnowsInfo(hero,Org_826_Mordrag_Courier)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_826_Mordrag_NCInfo_Info()
@@ -245,6 +259,7 @@ instance Org_826_Mordrag_JoinNewcamp(C_INFO)
 	nr = 3;
 	condition = Org_826_Mordrag_JoinNewcamp_Condition;
 	information = Org_826_Mordrag_JoinNewcamp_Info;
+	important = 0;
 	permanent = 0;
 //	description = "And if I want to join the New Camp...";//könntest du mir dabei helfen... ZU LANG
 //	description = "Und wenn ich mich dem Neuen Lager anschließen will, ...";//könntest du mir dabei helfen... ZU LANG
@@ -253,10 +268,12 @@ instance Org_826_Mordrag_JoinNewcamp(C_INFO)
 
 func int Org_826_Mordrag_JoinNewcamp_Condition()
 {
-	if (Npc_KnowsInfo(hero,Org_826_Mordrag_Problem) || Npc_KnowsInfo(hero,Org_826_Mordrag_Courier))
+	if ((Npc_KnowsInfo(hero,Org_826_Mordrag_Problem)) || (Npc_KnowsInfo(hero,Org_826_Mordrag_Courier)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_826_Mordrag_JoinNewcamp_Info()
@@ -278,6 +295,7 @@ instance Org_826_Mordrag_GotoNewcamp(C_INFO)
 	nr = 3;
 	condition = Org_826_Mordrag_GotoNewcamp_Condition;
 	information = Org_826_Mordrag_GotoNewcamp_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Let's go to the New Camp!";
 //	description = "Lass uns zum Neuen Lager gehen!";
@@ -290,6 +308,8 @@ func int Org_826_Mordrag_GotoNewcamp_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_826_Mordrag_GotoNewcamp_Info()
@@ -331,22 +351,25 @@ instance Org_826_Mordrag_AtNewcamp(C_INFO)
 	nr = 3;
 	condition = Org_826_Mordrag_AtNewcamp_Condition;
 	information = Org_826_Mordrag_AtNewcamp_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Org_826_Mordrag_AtNewcamp_Condition()
 {
-	if (Npc_KnowsInfo(hero,Org_826_Mordrag_GotoNewcamp) && Hlp_StrCmp(Npc_GetNearestWP(self),"OW_PATH_07_21"))
+	if ((Npc_KnowsInfo(hero,Org_826_Mordrag_GotoNewcamp))
+	&& (Hlp_StrCmp(Npc_GetNearestWP(self),"OW_PATH_07_21")))
 	{
 		self.flags = 0;
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_826_Mordrag_AtNewcamp_Info()
 {
-	if (Mordrag_GotoNC_Day > (Wld_GetDay()-2))
+	if (Mordrag_GotoNC_Day > (Wld_GetDay() - 2))
 	{
 //		AI_Output(self,other,"Org_826_Mordrag_AtNewcamp_11_00"); //Well, here we are.
 //		AI_Output(self,other,"Org_826_Mordrag_AtNewcamp_11_00"); //So, hier sind wir.
@@ -402,6 +425,7 @@ instance Org_826_Mordrag_Fight(C_INFO)
 	nr = 3;
 	condition = Org_826_Mordrag_Fight_Condition;
 	information = Org_826_Mordrag_Fight_Info;
+	important = 0;
 	permanent = 0;
 //	description = "The camp ain't big enough for the both of us!";
 //	description = "In diesem Lager ist nicht genug Platz für uns beide!";
@@ -410,10 +434,13 @@ instance Org_826_Mordrag_Fight(C_INFO)
 
 func int Org_826_Mordrag_Fight_Condition()
 {
-	if ((Thorus_MordragKo == LOG_RUNNING) && (!Npc_KnowsInfo(hero,Org_826_Mordrag_GotoNewcamp)))
+	if ((Thorus_MordragKo == LOG_RUNNING)
+	&& (!Npc_KnowsInfo(hero,Org_826_Mordrag_GotoNewcamp)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_826_Mordrag_Fight_Info()
@@ -493,8 +520,8 @@ instance Org_826_Mordrag_HauAb(C_INFO)
 	nr = 3;
 	condition = Org_826_Mordrag_HauAb_Condition;
 	information = Org_826_Mordrag_HauAb_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Org_826_Mordrag_HauAb_Condition()
@@ -506,6 +533,8 @@ func int Org_826_Mordrag_HauAb_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_826_Mordrag_HauAb_Info()
@@ -535,6 +564,7 @@ instance Org_826_Mordrag_GotoKalom(C_INFO)
 	nr = 2;
 	condition = Org_826_Mordrag_GotoKalom_Condition;
 	information = Org_826_Mordrag_GotoKalom_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Lares has a message for you.";
 //	description = "Lares hat eine Nachricht für dich.";
@@ -543,11 +573,13 @@ instance Org_826_Mordrag_GotoKalom(C_INFO)
 
 func int Org_826_Mordrag_GotoKalom_Condition()
 {
-	if (Npc_GetTrueGuild(other)!=GIL_ORG)
-	&& (Lares_InformMordrag == LOG_RUNNING)
+	if ((Npc_GetTrueGuild(other) != GIL_ORG)
+	&& (Lares_InformMordrag == LOG_RUNNING))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_826_Mordrag_GotoKalom_Info()
@@ -582,6 +614,7 @@ instance Org_826_Mordrag_GotoKalomNOW(C_INFO)
 	nr = 2;
 	condition = Org_826_Mordrag_GotoKalomNOW_Condition;
 	information = Org_826_Mordrag_GotoKalomNOW_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Lares told me to help you with this sect business.";
 //	description = "Lares sagt, ich soll dich bei der Sektensache unterstützen.";
@@ -590,11 +623,13 @@ instance Org_826_Mordrag_GotoKalomNOW(C_INFO)
 
 func int Org_826_Mordrag_GotoKalomNOW_Condition()
 {
-	if (Npc_GetTrueGuild(other)==GIL_ORG)
-	&& Npc_KnowsInfo(hero,ORG_801_Lares_GotoKalom)
+	if ((Npc_GetTrueGuild(other) == GIL_ORG)
+	&& (Npc_KnowsInfo(hero,ORG_801_Lares_GotoKalom)))
 	{
-		return TRUE;
+		return 1;;
 	};
+
+	return 0;
 };
 
 func void Org_826_Mordrag_GotoKalomNOW_Info()
@@ -671,6 +706,7 @@ instance Org_826_Mordrag_RUNNING(C_INFO)
 	nr = 2;
 	condition = Org_826_Mordrag_RUNNING_Condition;
 	information = Org_826_Mordrag_RUNNING_Info;
+	important = 0;
 	permanent = 1;
 //	description = "About that sect business...";
 //	description = "Wegen der Sektensache...";
@@ -683,6 +719,8 @@ func int Org_826_Mordrag_RUNNING_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_826_Mordrag_RUNNING_Info()
@@ -745,4 +783,3 @@ func void Org_826_Mordrag_RUNNING_Info()
 		AI_Output(self,other,"Org_826_Mordrag_RUNNING_11_05"); //(sarkastisch) Hab' ich auch gemerkt. Diese verdammten Sektenspinner haben Gomez die alte Mine gekostet. Wird nicht mehr lange dauern, dann stehen seine Gardisten bei UNS vor der Tür, um sich ihr Erz abzuholen...
 */
 };
-

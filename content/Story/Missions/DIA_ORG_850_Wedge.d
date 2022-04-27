@@ -15,7 +15,7 @@ instance DIA_Wedge_Exit(C_INFO)
 
 func int DIA_Wedge_Exit_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void DIA_Wedge_Exit_Info()
@@ -39,11 +39,15 @@ instance DIA_Wedge_Psst(C_INFO)
 
 func int DIA_Wedge_Psst_Condition()
 {
-	if ((Npc_GetDistToNpc(hero,self) < 900) && (Wld_IsTime(08,00,23,30)))
+	if ((Npc_GetDistToNpc(hero,self) < 900)
+	&& (Wld_IsTime(08,00,23,30)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void DIA_Wedge_Psst_Info()
 {
 //	AI_Output(self,other,"DIA_Wedge_Psst_05_00"); //Sshh... hey, you!
@@ -78,10 +82,12 @@ func int DIA_Wedge_Hello_Condition()
 {
 	if (Npc_KnowsInfo(hero,DIA_Wedge_Psst))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void DIA_Wedge_Hello_Info()
 {
 //	AI_Output(other,self,"DIA_Wedge_Hello_15_00"); //What do you want?
@@ -118,10 +124,12 @@ func int DIA_Wedge_WarnsOfButch_Condition()
 {
 	if (Npc_KnowsInfo(hero,DIA_Wedge_Hello))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void DIA_Wedge_WarnsOfButch_Info()
 {
 //	AI_Output(other,self,"DIA_Wedge_WarnsOfButch_15_00"); //What's the matter with Butch?
@@ -143,6 +151,7 @@ instance DIA_Wedge_Lehrer(C_INFO)
 	nr = 700;
 	condition = DIA_Wedge_Lehrer_Condition;
 	information = DIA_Wedge_Lehrer_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What can you teach me?";
 //	description = "Was kannst du mir beibringen?";
@@ -153,8 +162,10 @@ func int DIA_Wedge_Lehrer_Condition()
 {
 	if (Npc_KnowsInfo(hero,DIA_Wedge_Hello))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Wedge_Lehrer_Info()
@@ -309,4 +320,3 @@ func void DIA_Wedge_Lehrer_BACK()
 {
 	Info_ClearChoices(DIA_Wedge_Lehrer);
 };
-

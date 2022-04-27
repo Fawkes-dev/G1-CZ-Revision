@@ -8,6 +8,7 @@ instance DIA_Jesse_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Jesse_Exit_Condition;
 	information = DIA_Jesse_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Jesse_Hallo(C_INFO)
 	nr = 1;
 	condition = DIA_Jesse_Hallo_Condition;
 	information = DIA_Jesse_Hallo_Info;
+	important = 0;
 	permanent = 0;
 //	description = "How's things?";
 //	description = "Wie sieht's aus?";
@@ -44,6 +46,8 @@ func int DIA_Jesse_Hallo_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Jesse_Hallo_Info()
@@ -69,16 +73,19 @@ instance DIA_Jesse_Warn(C_INFO)
 	nr = 1;
 	condition = DIA_Jesse_Warn_Condition;
 	information = DIA_Jesse_Warn_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Jesse_Warn_Condition()
 {
-	if ((Npc_KnowsInfo(hero,DIA_Herek_Bully)) && (Herek_ProtectionBully==TRUE))
+	if ((Npc_KnowsInfo(hero,DIA_Herek_Bully))
+	&& (Herek_ProtectionBully == TRUE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Jesse_Warn_Info()
@@ -119,6 +126,7 @@ instance DIA_Jesse_Mission(C_INFO)
 	nr = 1;
 	condition = DIA_Jesse_Mission_Condition;
 	information = DIA_Jesse_Mission_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Why did you tell me the story about Bloodwyn?";
 //	description = "Warum hast du mir die Sache mit Bloodwyn erzählt?";
@@ -134,6 +142,8 @@ func int DIA_Jesse_Mission_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Jesse_Mission_Info()
@@ -190,6 +200,7 @@ func void DIA_Jesse_Mission_What()
 //	Info_AddChoice(DIA_Jesse_Mission,"Ich werd sehen, was ich machen kann...",DIA_Jesse_Mission_YES);
 	Info_AddChoice(DIA_Jesse_Mission,"Uvidím, co budu moci udělat...",DIA_Jesse_Mission_YES);
 };
+
 //-------------------------------
 func void DIA_Jesse_Mission_YES()
 {
@@ -227,6 +238,7 @@ instance DIA_Jesse_MisSuccess(C_INFO)
 	nr = 1;
 	condition = DIA_Jesse_MisSuccess_Condition;
 	information = DIA_Jesse_MisSuccess_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I paid Bloodwyn!";
 //	description = "Ich habe Bloodwyn bezahlt!";
@@ -239,6 +251,8 @@ func int DIA_Jesse_MisSuccess_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Jesse_MisSuccess_Info()

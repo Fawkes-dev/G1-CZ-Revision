@@ -8,6 +8,7 @@ instance DIA_BaalNamib_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_BaalNamib_EXIT_Condition;
 	information = DIA_BaalNamib_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -33,16 +34,20 @@ instance DIA_BaalNamib_NoTalk(C_INFO)
 	nr = 1;
 	condition = DIA_BaalNamib_NoTalk_Condition;
 	information = DIA_BaalNamib_NoTalk_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_BaalNamib_NoTalk_Condition()
 {
-	if (Npc_IsInState(self,ZS_TALK) && (BaalNamib_Ansprechbar==FALSE) && (Npc_GetPermAttitude(self,other)!=ATT_FRIENDLY))
+	if (Npc_IsInState(self,ZS_TALK)
+	&& (BaalNamib_Ansprechbar == FALSE)
+	&& (Npc_GetPermAttitude(self,other) != ATT_FRIENDLY))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalNamib_NoTalk_Info()
@@ -105,16 +110,18 @@ instance DIA_BaalNamib_FirstTalk(C_INFO)
 	nr = 1;
 	condition = DIA_BaalNamib_FirstTalk_Condition;
 	information = DIA_BaalNamib_FirstTalk_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_BaalNamib_FirstTalk_Condition()
 {
-	if (BaalNamib_Ansprechbar==TRUE)
+	if (BaalNamib_Ansprechbar == TRUE)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalNamib_FirstTalk_Info()
@@ -176,13 +183,15 @@ instance GUR_1204_BaalNamib_ARMOR(C_INFO)
 
 func int GUR_1204_BaalNamib_ARMOR_Condition()
 {
-	if (Npc_GetTrueGuild(hero) == GIL_NOV)
-	&& (!Npc_HasItems(hero,NOV_ARMOR_H))
+	if ((Npc_GetTrueGuild(hero) == GIL_NOV)
+	&& (!Npc_HasItems(hero,NOV_ARMOR_H)))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void GUR_1204_BaalNamib_ARMOR_Info()
 {
 //	AI_Output(hero,self,"GUR_1204_BaalNamib_ARMOR_Info_15_01");//I'd like to have better armor.
@@ -199,7 +208,7 @@ func void GUR_1204_BaalNamib_ARMOR_Info()
 //		AI_Output(self,other,"GUR_1204_BaalNamib_ARMOR_Info_02_02");//Es ist noch nicht an der Zeit für dich, die schwere Rüstung der Novizen zu tragen.
 		AI_Output(self,other,"GUR_1204_BaalNamib_ARMOR_Info_02_02");//Ještě nepřišel čas, abys oblékl těžkou zbroj novice.
 	}
-	else if (Npc_HasItems(hero,ItMinugget) < VALUE_NOV_ARMOR_H )
+	else if (Npc_HasItems(hero,ItMinugget) < VALUE_NOV_ARMOR_H)
 	{
 //		AI_Output(self,other,"GUR_1204_BaalNamib_ARMOR_Info_02_03");//Come back as soon as you have enough ore.
 //		AI_Output(self,other,"GUR_1204_BaalNamib_ARMOR_Info_02_03");//Komm wieder, wenn du genug Erz hast.
@@ -268,6 +277,7 @@ func void Info_BaalNamib_BROTHERHOOD_Info()
 	Npc_ExchangeRoutine(Kalom,"kapitel2");
 	AI_ContinueRoutine(Kalom);
 };
+
 func void Info_BaalNamib_BROTHERHOOD_YBWO()
 {
 //	AI_Output(other,self,"Info_BaalNamib_BROTHERHOOD_YBWO_15_01"); //Where can I find Y'Berion?
@@ -276,8 +286,8 @@ func void Info_BaalNamib_BROTHERHOOD_YBWO()
 //	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_YBWO_02_02"); //He's inside the temple hill. As always.
 //	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_YBWO_02_02"); //Er hält sich im Inneren des Tempelbergs auf. Wie immer.
 	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_YBWO_02_02"); //Je v chrámu, jako vždy.
-
 };
+
 func void Info_BaalNamib_BROTHERHOOD_YBWAS()
 {
 //	AI_Output(other,self,"Info_BaalNamib_BROTHERHOOD_YBWAS_15_01"); //Do you know what Y'Berion wants me to do?
@@ -296,6 +306,7 @@ func void Info_BaalNamib_BROTHERHOOD_YBWAS()
 //	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_YBWAS_02_05"); //Wenn es einfach wäre, hätten wir den Gegenstand schon. Sprich erst mal mit Y'Berion. Er wird dir alles erklären.
 	AI_Output(self,other,"Info_BaalNamib_BROTHERHOOD_YBWAS_02_05"); //Kdyby to bylo snadné, už bychom ten předmět měli. Promluv si nejdříve s Y'Berionem. Všechno ti vysvětlí.
 };
+
 func void Info_BaalNamib_BROTHERHOOD_OK()
 {
 //	AI_Output(other,self,"Info_BaalNamib_BROTHERHOOD_OK_15_01"); //Okay, I'll call on him right away.

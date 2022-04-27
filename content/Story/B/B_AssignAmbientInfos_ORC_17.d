@@ -4,10 +4,10 @@ instance Info_Orc_17_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Orc_17_EXIT_Condition;
 	information = Info_Orc_17_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
-
 func int Info_Orc_17_EXIT_Condition()
 {
 	return 1;

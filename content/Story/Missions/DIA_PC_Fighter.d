@@ -20,7 +20,7 @@ func int Info_Gorn_EXIT_Condition()
 
 func void Info_Gorn_EXIT_Info()
 {
-	if self.aivar[AIV_PARTYMEMBER]
+	if (self.aivar[AIV_PARTYMEMBER])
 	{
 //		AI_Output(self,other,"Info_Gorn_EXIT_09_01"); //Let's fight!
 //		AI_Output(self,other,"Info_Gorn_EXIT_09_01"); //Auf in den Kampf!
@@ -46,8 +46,8 @@ instance DIA_Gorn_First(C_INFO)
 	nr = 1;
 	condition = Dia_Gorn_First_Condition;
 	information = Dia_Gorn_First_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Gorn_First_Condition()
@@ -56,6 +56,8 @@ func int DIA_Gorn_First_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Gorn_First_Info()
@@ -81,6 +83,7 @@ instance DIA_Gorn_Leben(C_INFO)
 	nr = 2;
 	condition = Dia_Gorn_Leben_Condition;
 	information = Dia_Gorn_Leben_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What do you have to do as a mercenary of the magicians?";
 //	description = "Was machst du als Söldner der Magier?";
@@ -93,6 +96,8 @@ func int DIA_Gorn_Leben_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Gorn_Leben_Info()
@@ -123,6 +128,7 @@ instance DIA_Gorn_Hut(C_INFO)
 	nr = 3;
 	condition = Dia_Gorn_Hut_Condition;
 	information = Dia_Gorn_Hut_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Can I stay somewhere here?";
 //	description = "Kann ich hier irgendwo pennen?";
@@ -135,6 +141,8 @@ func int DIA_Gorn_Hut_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Gorn_Hut_Info()
@@ -177,6 +185,7 @@ instance DIA_Gorn_HutFree(C_INFO)
 	nr = 3;
 	condition = Dia_Gorn_HutFree_Condition;
 	information = Dia_Gorn_HutFree_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Shrike has moved to another hut.";
 //	description = "Shrike hat sich eine andere Hütte gesucht.";
@@ -192,6 +201,8 @@ func int DIA_Gorn_HutFree_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Gorn_HutFree_Info()
@@ -221,6 +232,7 @@ instance DIA_Gorn_BecomeSLD(C_INFO)
 	nr = 5;
 	condition = Dia_Gorn_BecomeSLD_Condition;
 	information = Dia_Gorn_BecomeSLD_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What do I have to do to join the New Camp?";
 //	description = "Was muss ich tun, um im Neuen Lager aufgenommen zu werden?";
@@ -229,11 +241,13 @@ instance DIA_Gorn_BecomeSLD(C_INFO)
 
 func int DIA_Gorn_BecomeSLD_Condition()
 {
-	if Npc_KnowsInfo(hero,DIA_Gorn_First)
-	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
+	if ((Npc_KnowsInfo(hero,DIA_Gorn_First))
+	&& (Npc_GetTrueGuild(hero) == GIL_NONE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Gorn_BecomeSLD_Info()
@@ -264,6 +278,7 @@ instance DIA_Gorn_PERM(C_INFO)
 	nr = 1;
 	condition = Dia_Gorn_PERM_Condition;
 	information = Dia_Gorn_PERM_Info;
+	important = 0;
 	permanent = 1;
 	description = "";
 };
@@ -292,9 +307,10 @@ instance DIA_Gorn_TRADE(C_INFO)
 	nr = 800;
 	condition = Dia_Gorn_TRADE_Condition;
 	information = Dia_Gorn_TRADE_Info;
+	important = 0;
 	permanent = 1;
-	description = DIALOG_TRADE;
 	trade = 1;
+	description = DIALOG_TRADE;
 };
 
 func int DIA_Gorn_TRADE_Condition()
@@ -325,6 +341,7 @@ instance DIA_Gorn_DuHehler(C_INFO)
 	nr = 1;
 	condition = Dia_Gorn_DuHehler_Condition;
 	information = Dia_Gorn_DuHehler_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Why did you take part in one of the gang's raids?";
 //	description = "Wie kommt es, dass du dich an einem Überfall der Bande beteiligt hast?";
@@ -337,6 +354,8 @@ func int DIA_Gorn_DuHehler_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Gorn_DuHehler_Info()
@@ -397,10 +416,12 @@ instance Info_Gorn_NCWAIT(C_INFO)
 
 func int Info_Gorn_NCWAIT_Condition()
 {
-	if (Npc_GetDistToWP(self,"NC_PATH52")<1000)
+	if (Npc_GetDistToWP(self,"NC_PATH52") < 1000)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_NCWAIT_Info()
@@ -438,8 +459,10 @@ func int Info_Gorn_MAGES_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Gorn_NCWAIT))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_MAGES_Info()
@@ -480,8 +503,10 @@ func int Info_Gorn_CRONOS_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Gorn_MAGES))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_CRONOS_Info()
@@ -525,10 +550,12 @@ instance Info_Gorn_RUINWAIT(C_INFO)
 
 func int Info_Gorn_RUINWAIT_Condition()
 {
-	if (Npc_GetDistToWP(self,"OW_PATH_ABYSS_4")<1000)
+	if (Npc_GetDistToWP(self,"OW_PATH_ABYSS_4") < 1000)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_RUINWAIT_Info()
@@ -565,6 +592,8 @@ func int Info_Gorn_RUINWHAT_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_RUINWHAT_Info()
@@ -620,6 +649,8 @@ func int Info_Gorn_RUINFOCUS_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_RUINFOCUS_Info()
@@ -652,10 +683,13 @@ instance Info_Gorn_RUINJOIN(C_INFO)
 
 func int Info_Gorn_RUINJOIN_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Gorn_RUINFOCUS) && Npc_KnowsInfo(hero,Info_Gorn_RUINWHAT))
+	if ((Npc_KnowsInfo(hero,Info_Gorn_RUINFOCUS))
+	&& (Npc_KnowsInfo(hero,Info_Gorn_RUINWHAT)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_RUINJOIN_Info()
@@ -710,10 +744,13 @@ instance Info_Gorn_RUINABYSS(C_INFO)
 
 func int Info_Gorn_RUINABYSS_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Gorn_RUINJOIN) && (Npc_GetDistToWP(self,"OW_ABYSS_TO_CAVE_MOVE6")<1000))
+	if ((Npc_KnowsInfo(hero,Info_Gorn_RUINJOIN))
+	&& (Npc_GetDistToWP(self,"OW_ABYSS_TO_CAVE_MOVE6") < 1000))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_RUINABYSS_Info()
@@ -749,12 +786,14 @@ instance Info_Gorn_RUINLEAVE(C_INFO)
 
 func int Info_Gorn_RUINLEAVE_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Gorn_RUINJOIN)
-	&& (Npc_GetDistToWP(hero,"OW_PATH_175_MEATBUG")>15000)
-	&& !Npc_KnowsInfo(hero,Info_Gorn_RUINGATE)
+	if ((Npc_KnowsInfo(hero,Info_Gorn_RUINJOIN))
+	&& (Npc_GetDistToWP(hero,"OW_PATH_175_MEATBUG") > 15000)
+	&& (!Npc_KnowsInfo(hero,Info_Gorn_RUINGATE)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_RUINLEAVE_Info()
@@ -790,11 +829,13 @@ instance Info_Gorn_RUINWALL(C_INFO)
 
 func int Info_Gorn_RUINWALL_Condition()
 {
-	if ((Npc_KnowsInfo(hero,Info_Gorn_RUINJOIN) || Npc_KnowsInfo(hero,Info_Gorn_RUINLEAVE))
-	&& (Npc_GetDistToWP(hero,"OW_PATH_175_GATE1")<1000))
+	if (((Npc_KnowsInfo(hero,Info_Gorn_RUINJOIN)) || (Npc_KnowsInfo(hero,Info_Gorn_RUINLEAVE)))
+	&& (Npc_GetDistToWP(hero,"OW_PATH_175_GATE1") < 1000))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_RUINWALL_Info()
@@ -833,11 +874,13 @@ instance Info_Gorn_RUINWALLWHAT(C_INFO)
 
 func int Info_Gorn_RUINWALLWHAT_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Gorn_RUINWALL)
-	&& !Npc_KnowsInfo(hero,Info_Gorn_RUINGATE))
+	if ((Npc_KnowsInfo(hero,Info_Gorn_RUINWALL))
+	&& (!Npc_KnowsInfo(hero,Info_Gorn_RUINGATE)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_RUINWALLWHAT_Info()
@@ -864,12 +907,14 @@ instance Info_Gorn_RUINLEDGE(C_INFO)
 
 func int Info_Gorn_RUINLEDGE_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Gorn_RUINJOIN)
-	&& !Npc_KnowsInfo(hero,Info_Gorn_RUINSUCCESS)
-	&& (Npc_GetDistToWP(hero,"OW_MONSTER_NAVIGATE_02")<1000))
+	if ((Npc_KnowsInfo(hero,Info_Gorn_RUINJOIN))
+	&& (!Npc_KnowsInfo(hero,Info_Gorn_RUINSUCCESS))
+	&& (Npc_GetDistToWP(hero,"OW_MONSTER_NAVIGATE_02") < 1000))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_RUINLEDGE_Info()
@@ -900,12 +945,14 @@ instance Info_Gorn_RUINPLATFORM(C_INFO)
 
 func int Info_Gorn_RUINPLATFORM_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Gorn_RUINJOIN)
-	&& !Npc_KnowsInfo(hero,Info_Gorn_RUINSUCCESS)
-	&& (Npc_GetDistToWP(hero,"OW_PATH_176_TEMPELFOCUS4")<300))
+	if ((Npc_KnowsInfo(hero,Info_Gorn_RUINJOIN))
+	&& (!Npc_KnowsInfo(hero,Info_Gorn_RUINSUCCESS))
+	&& (Npc_GetDistToWP(hero,"OW_PATH_176_TEMPELFOCUS4") < 300))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_RUINPLATFORM_Info()
@@ -936,11 +983,13 @@ instance Info_Gorn_RUINGATE(C_INFO)
 
 func int Info_Gorn_RUINGATE_Condition()
 {
-	if ((Npc_KnowsInfo(hero,Info_Gorn_RUINJOIN) || Npc_KnowsInfo(hero,Info_Gorn_RUINLEAVE))
-	&& MonasteryRuin_GateOpen )
+	if (((Npc_KnowsInfo(hero,Info_Gorn_RUINJOIN)) || (Npc_KnowsInfo(hero,Info_Gorn_RUINLEAVE)))
+	&& (MonasteryRuin_GateOpen))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_RUINGATE_Info()
@@ -980,12 +1029,14 @@ instance Info_Gorn_RUINLEAVEINSIDE(C_INFO)
 
 func int Info_Gorn_RUINLEAVEINSIDE_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Gorn_RUINGATE)
-	&& (Npc_GetDistToWP(hero,"OW_PATH_ABYSS_CROSS_6")<1000)
-	&& !Npc_HasItems(hero,Focus_4)
+	if ((Npc_KnowsInfo(hero,Info_Gorn_RUINGATE))
+	&& (Npc_GetDistToWP(hero,"OW_PATH_ABYSS_CROSS_6") < 1000)
+	&& (!Npc_HasItems(hero,Focus_4)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_RUINLEAVEINSIDE_Info()
@@ -1021,11 +1072,13 @@ instance Info_Gorn_RUINSUCCESS(C_INFO)
 
 func int Info_Gorn_RUINSUCCESS_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Gorn_RUINJOIN)
-	&& Npc_HasItems(hero,Focus_4))
+	if ((Npc_KnowsInfo(hero,Info_Gorn_RUINJOIN))
+	&& (Npc_HasItems(hero,Focus_4)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_RUINSUCCESS_Info()
@@ -1066,11 +1119,13 @@ instance Info_Gorn_RUINTROLL(C_INFO)
 
 func int Info_Gorn_RUINTROLL_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Gorn_RUINSUCCESS)
-	&& (Npc_GetDistToWP(hero,"OW_PATH_SNAPPER04_SPAWN01")<1000))
+	if ((Npc_KnowsInfo(hero,Info_Gorn_RUINSUCCESS))
+	&& (Npc_GetDistToWP(hero,"OW_PATH_SNAPPER04_SPAWN01") < 1000))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_RUINTROLL_Info()
@@ -1114,11 +1169,13 @@ func int Info_Gorn_RUINVICTORY_Condition()
 	var C_NPC yTroll;
 	yTroll = Hlp_GetNpc(YoungTroll);
 
-	if Npc_KnowsInfo(hero,Info_Gorn_RUINTROLL)
-	&& Npc_IsDead(yTroll)
+	if ((Npc_KnowsInfo(hero,Info_Gorn_RUINTROLL))
+	&& (Npc_IsDead(yTroll)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_RUINVICTORY_Info()
@@ -1181,10 +1238,12 @@ instance Info_Gorn_DIEGOMILTEN(C_INFO)
 
 func int Info_Gorn_DIEGOMILTEN_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Diego_OCFAVOR)
+	if (Npc_KnowsInfo(hero,Info_Diego_OCFAVOR))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_DIEGOMILTEN_Info()
@@ -1218,7 +1277,6 @@ func void Info_Gorn_DIEGOMILTEN_Info()
 		B_LogEntry(CH4_4Friends, "Řekl jsem Lesterovi a Gornovi o setkání s jejich přáteli. Teď už to není moje věc. Dál si poradí sami...");
 		Log_SetTopicStatus(CH4_4Friends,LOG_SUCCESS);
 	};
-
 };
 
 //---------------------------------------------------------------------
@@ -1238,11 +1296,13 @@ instance Info_Gorn_FREEMINE(C_INFO)
 
 func int Info_Gorn_FREEMINE_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Saturas_AMBUSH)
-	&& !FindXardas
+	if ((Npc_KnowsInfo(hero,Info_Saturas_AMBUSH))
+	&& (!FindXardas))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_FREEMINE_Info()
@@ -1288,10 +1348,12 @@ instance Info_Gorn_GUARDNC(C_INFO)
 
 func int Info_Gorn_GUARDNC_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Saturas_AMBUSH)
+	if (Npc_KnowsInfo(hero,Info_Saturas_AMBUSH))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_GUARDNC_Info()
@@ -1337,11 +1399,13 @@ instance Info_Gorn_GUARDNCRUNNING(C_INFO)
 
 func int Info_Gorn_GUARDNCRUNNING_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Gorn_GUARDNC)
-	&& !UrShak_SpokeOfUluMulu
+	if ((Npc_KnowsInfo(hero,Info_Gorn_GUARDNC))
+	&& (!UrShak_SpokeOfUluMulu))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_GUARDNCRUNNING_Info()
@@ -1373,8 +1437,10 @@ func int Info_Gorn_POST_Condition()
 {
 	if (UrShak_SpokeOfUluMulu)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_POST_Info()
@@ -1408,8 +1474,10 @@ func int Info_Gorn_TAKEBACK_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Gorn_POST))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_TAKEBACK_Info()
@@ -1481,8 +1549,10 @@ func int Info_Gorn_SECOND_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Gorn_POST))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_SECOND_Info()
@@ -1520,8 +1590,10 @@ func int Info_Gorn_WHYME_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Gorn_TAKEBACK))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_WHYME_Info()
@@ -1557,11 +1629,13 @@ instance Info_Gorn_KICKBUTT(C_INFO)
 
 func int Info_Gorn_KICKBUTT_Condition()
 {
-	if  Npc_KnowsInfo(hero,Info_Gorn_WHYME)
-	&& !Npc_KnowsInfo(hero,Info_Gorn_MYWAY)
+	if ((Npc_KnowsInfo(hero,Info_Gorn_WHYME))
+	&& (!Npc_KnowsInfo(hero,Info_Gorn_MYWAY)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_KICKBUTT_Info()
@@ -1596,11 +1670,13 @@ instance Info_Gorn_MYWAY(C_INFO)
 
 func int Info_Gorn_MYWAY_Condition()
 {
-	if  Npc_KnowsInfo(hero,Info_Gorn_WHYME)
-	&& !Npc_KnowsInfo(hero,Info_Gorn_KICKBUTT)
+	if ((Npc_KnowsInfo(hero,Info_Gorn_WHYME))
+	&& (!Npc_KnowsInfo(hero,Info_Gorn_KICKBUTT)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_MYWAY_Info()
@@ -1632,11 +1708,13 @@ instance Info_Gorn_WOLF(C_INFO)
 
 func int Info_Gorn_WOLF_Condition()
 {
-	if Gorn_JoinedForFM
-	&& (Npc_GetDistToWP(hero,"OW_PATH_076")<500)
+	if ((Gorn_JoinedForFM)
+	&& (Npc_GetDistToWP(hero,"OW_PATH_076") < 500))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_WOLF_Info()
@@ -1706,12 +1784,14 @@ instance Info_Gorn_LEAVEFORPOST(C_INFO)
 
 func int Info_Gorn_LEAVEFORPOST_Condition()
 {
-	if Gorn_JoinedForFM
-	&& (Npc_GetDistToWP(hero,"OW_PATH_074")<2000)
-	&& (FreemineOrc_LookingUlumulu != LOG_RUNNING)
+	if ((Gorn_JoinedForFM)
+	&& (Npc_GetDistToWP(hero,"OW_PATH_074") < 2000)
+	&& (FreemineOrc_LookingUlumulu != LOG_RUNNING))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_LEAVEFORPOST_Info()
@@ -1757,12 +1837,14 @@ instance Info_Gorn_REJOINFORFM(C_INFO)
 
 func int Info_Gorn_REJOINFORFM_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Gorn_MYWAY) || Npc_KnowsInfo(hero,Info_Gorn_KICKBUTT))
-	&& (Npc_GetDistToWP(hero,"OW_PATH_075_GUARD4")<1000)
-	&& (!Gorn_JoinedForFM)
+	if (((Npc_KnowsInfo(hero,Info_Gorn_MYWAY)) || (Npc_KnowsInfo(hero,Info_Gorn_KICKBUTT)))
+	&& (Npc_GetDistToWP(hero,"OW_PATH_075_GUARD4") < 1000)
+	&& (!Gorn_JoinedForFM))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_REJOINFORFM_Info()
@@ -1797,11 +1879,13 @@ instance Info_Gorn_RAZOR(C_INFO)
 
 func int Info_Gorn_RAZOR_Condition()
 {
-	if Gorn_JoinedForFM
-	&& (Npc_GetDistToWP(hero,"OW_PATH_3000")<1000)
+	if ((Gorn_JoinedForFM)
+	&& (Npc_GetDistToWP(hero,"OW_PATH_3000") < 1000))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_RAZOR_Info()
@@ -1835,11 +1919,13 @@ instance Info_Gorn_FMCENTRANCE(C_INFO)
 
 func int Info_Gorn_FMCENTRANCE_Condition()
 {
-	if Gorn_JoinedForFM
-	&& (Npc_GetDistToWP(hero,"FMC_ENTRANCE")<1000)
+	if ((Gorn_JoinedForFM)
+	&& (Npc_GetDistToWP(hero,"FMC_ENTRANCE") < 1000))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_FMCENTRANCE_Info()
@@ -1874,12 +1960,14 @@ instance Info_Gorn_FMGATE(C_INFO)
 
 func int Info_Gorn_FMGATE_Condition()
 {
-	if Gorn_JoinedForFM
-	&& !FM_GateOpen
-	&& (Npc_GetDistToWP(hero,"FMC_FM_ENTRANCE")<1000)
+	if ((Gorn_JoinedForFM)
+	&& (!FM_GateOpen)
+	&& (Npc_GetDistToWP(hero,"FMC_FM_ENTRANCE") < 1000))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_FMGATE_Info()
@@ -1914,10 +2002,12 @@ instance Info_Gorn_AFTERFM(C_INFO)
 
 func int Info_Gorn_AFTERFM_Condition()
 {
-	if FreemineOrc_LookingUlumulu
+	if (FreemineOrc_LookingUlumulu)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_AFTERFM_Info()
@@ -1961,10 +2051,12 @@ instance Info_Gorn_FMWATCH(C_INFO)
 
 func int Info_Gorn_FMWATCH_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Gorn_AFTERFM)
+	if (Npc_KnowsInfo(hero,Info_Gorn_AFTERFM))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_FMWATCH_Info()
@@ -1999,8 +2091,10 @@ func int Info_Gorn_FOUNDULUMULU_Condition()
 {
 	if (FreemineOrc_LookingUlumulu == LOG_SUCCESS)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Gorn_FOUNDULUMULU_Info()
@@ -2024,4 +2118,3 @@ func void Info_Gorn_FOUNDULUMULU_Info()
 
 	AI_StopProcessInfos(self);
 };
-

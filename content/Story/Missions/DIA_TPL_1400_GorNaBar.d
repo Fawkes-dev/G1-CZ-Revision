@@ -40,11 +40,13 @@ instance Tpl_1400_GorNaBar_SUGGEST(C_INFO)
 
 func int Tpl_1400_GorNaBar_SUGGEST_Condition()
 {
-	if  Npc_KnowsInfo(hero,Grd_263_Asghan_OPEN)
-	&& !Npc_KnowsInfo(hero,Grd_263_Asghan_OPEN_NOW)
+	if ((Npc_KnowsInfo(hero,Grd_263_Asghan_OPEN))
+	&& (!Npc_KnowsInfo(hero,Grd_263_Asghan_OPEN_NOW)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Tpl_1400_GorNaBar_SUGGEST_Info()
@@ -88,10 +90,12 @@ instance Tpl_1400_GorNaBar_INFO(C_INFO)
 
 func int Tpl_1400_GorNaBar_INFO_Condition()
 {
-	if ! (Npc_KnowsInfo(hero,Grd_263_Asghan_NEST ))
+	if (!Npc_KnowsInfo(hero,Grd_263_Asghan_NEST))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Tpl_1400_GorNaBar_INFO_Info()
@@ -119,12 +123,14 @@ instance Tpl_1400_GorNaBar_VICTORY(C_INFO)
 
 func int Tpl_1400_GorNaBar_VICTORY_Condition()
 {
-	if Npc_HasItems(hero,ItAt_Crawlerqueen ) >= 1
+	if (Npc_HasItems(hero,ItAt_Crawlerqueen) >= 1)
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void Tpl_1400_GorNaBar_VICTORY_Info()
 {
 //	AI_Output(other,self,"Tpl_1400_GorNaBar_VICTORY_Info_15_01"); //I've found the nest of the queen!

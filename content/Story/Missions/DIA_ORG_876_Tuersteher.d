@@ -8,6 +8,7 @@ instance DIA_Org_876_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_Org_876_EXIT_Condition;
 	information = DIA_Org_876_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Org_876_AmSfb(C_INFO)
 	nr = 1;
 	condition = DIA_Org_876_AmSfb_Condition;
 	information = DIA_Org_876_AmSfb_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I'm a scraper! And I'm thirsty!";
 //	description = "Ich bin Schürfer! Und ich habe Durst!";
@@ -40,11 +42,13 @@ instance DIA_Org_876_AmSfb(C_INFO)
 
 func int DIA_Org_876_AmSfb_Condition()
 {
-	if (self.aivar[AIV_PASSGATE] == FALSE)
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY)
+	if ((self.aivar[AIV_PASSGATE] == FALSE)
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Org_876_AmSfb_Info()
@@ -83,6 +87,7 @@ instance DIA_Org_876_Bribe(C_INFO)
 	nr = 1;
 	condition = DIA_Org_876_Bribe_Condition;
 	information = DIA_Org_876_Bribe_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How about some ore as an admission fee?";
 //	description = "Was hältst du von etwas Erz als Eintrittsgeld?";
@@ -91,11 +96,13 @@ instance DIA_Org_876_Bribe(C_INFO)
 
 func int DIA_Org_876_Bribe_Condition()
 {
-	if (self.aivar[AIV_PASSGATE] == FALSE)
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY)
+	if ((self.aivar[AIV_PASSGATE] == FALSE)
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Org_876_Bribe_Info()
@@ -194,6 +201,7 @@ instance DIA_Org_876_PERM(C_INFO)
 	nr = 1;
 	condition = DIA_Org_876_PERM_Condition;
 	information = DIA_Org_876_PERM_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How's the schnapps business going?";
 //	description = "Wie läuft das Schnapsgeschäft?";
@@ -202,11 +210,13 @@ instance DIA_Org_876_PERM(C_INFO)
 
 func int DIA_Org_876_PERM_Condition()
 {
-	if (self.aivar[AIV_PASSGATE] == TRUE)
-	|| (Npc_GetAttitude(self,hero) == ATT_FRIENDLY)
+	if ((self.aivar[AIV_PASSGATE] == TRUE)
+	|| (Npc_GetAttitude(self,hero) == ATT_FRIENDLY))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Org_876_PERM_Info()
@@ -229,8 +239,8 @@ instance DIA_Org_876_ScSld(C_INFO)
 	nr = 1;
 	condition = DIA_Org_876_ScSld_Condition;
 	information = DIA_Org_876_ScSld_Info;
+	important = 1;
 	permanent = 0;
-	important   = 1;
 };
 
 func int DIA_Org_876_ScSld_Condition()
@@ -239,6 +249,8 @@ func int DIA_Org_876_ScSld_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Org_876_ScSld_Info()
@@ -265,8 +277,8 @@ instance DIA_Org_876_ScSekte(C_INFO)
 	nr = 1;
 	condition = DIA_Org_876_ScSekte_Condition;
 	information = DIA_Org_876_ScSekte_Info;
+	important = 1;
 	permanent = 0;
-	important   = 1;
 };
 
 func int DIA_Org_876_ScSekte_Condition()
@@ -275,6 +287,8 @@ func int DIA_Org_876_ScSekte_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Org_876_ScSekte_Info()
@@ -299,6 +313,7 @@ instance DIA_Org_876_GibKraut(C_INFO)
 	nr = 1;
 	condition = DIA_Org_876_GibKraut_Condition;
 	information = DIA_Org_876_GibKraut_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I have some stalks on me - here, take one.";
 //	description = "Ich habe ein paar Krautstengel bei mir - hier, nimm einen.";
@@ -311,6 +326,8 @@ func int DIA_Org_876_GibKraut_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Org_876_GibKraut_Info()
@@ -319,7 +336,7 @@ func void DIA_Org_876_GibKraut_Info()
 //	AI_Output(other,self,"DIA_Org_876_GibKraut_15_00"); //Ich habe ein paar Krautstengel bei mir - hier, nimm einen.
 	AI_Output(other,self,"DIA_Org_876_GibKraut_15_00"); //Mám s sebou pár lodyh - tady, vezmi si jednu.
 
-	if ((Npc_HasItems(other,ItMiJoint_1)>0) || (Npc_HasItems(other,ItMiJoint_2)>0) || (Npc_HasItems(other,ItMiJoint_3)>0))
+	if ((Npc_HasItems(other,ItMiJoint_1) > 0) || (Npc_HasItems(other,ItMiJoint_2) > 0) || (Npc_HasItems(other,ItMiJoint_3) > 0))
 	{
 		if (Npc_HasItems(other,ItMiJoint_1))
 		{ B_GiveInvItems(other,self,ItMiJoint_1,1); }
@@ -374,19 +391,21 @@ instance Info_Org_876_FirstWarn(C_INFO)
 	nr = 2;
 	condition = Info_Org_876_FirstWarn_Condition;
 	information = Info_Org_876_FirstWarn_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_Org_876_FirstWarn_Condition()
 {
-	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS]== AIV_GPS_BEGIN)
-	&& (self.aivar[AIV_PASSGATE] == FALSE )
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY )
+	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_BEGIN)
+	&& (self.aivar[AIV_PASSGATE] == FALSE)
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY)
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self), self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Org_876_FirstWarn_Info()
@@ -416,20 +435,22 @@ instance Info_Org_876_LastWarn(C_INFO)
 	nr = 1;
 	condition = Info_Org_876_LastWarn_Condition;
 	information = Info_Org_876_LastWarn_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_Org_876_LastWarn_Condition()
 {
-	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_FIRSTWARN )
-	&& (self.aivar[AIV_PASSGATE] == FALSE )
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY )
+	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_FIRSTWARN)
+	&& (self.aivar[AIV_PASSGATE] == FALSE)
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY)
 	&& (Npc_GetDistToWP(hero,Org_876_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func int Info_Org_876_LastWarn_Info()
@@ -453,20 +474,22 @@ instance Info_Org_876_Attack(C_INFO)
 	nr = 1;
 	condition = Info_Org_876_Attack_Condition;
 	information = Info_Org_876_Attack_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_Org_876_Attack_Condition()
 {
-	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_LASTWARN )
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY )
+	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_LASTWARN)
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY)
 	&& (self.aivar[AIV_PASSGATE] == FALSE)
 	&& (Npc_GetDistToWP(hero,Org_876_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func int Info_Org_876_Attack_Info()

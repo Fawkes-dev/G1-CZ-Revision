@@ -20,6 +20,7 @@ func void Stt_302_Viper_Exit_Info()
 {
 	AI_StopProcessInfos(self);
 };
+
 // ***************************** INFOS ****************************************//
 
 instance Stt_302_Viper_GREET(C_INFO)
@@ -48,7 +49,9 @@ func void Stt_302_Viper_GREET_Info()
 //	AI_Output(self,other,"Stt_302_Viper_GREET_Info_11_02"); //Du bist ja ein ganz schlauer Bursche.
 	AI_Output(self,other,"Stt_302_Viper_GREET_Info_11_02"); //Ty jsi ale chytrý mladík.
 };
+
 // ***************************** SCHMELZGESCHICHTE ****************************************//
+
 instance Stt_302_Viper_MELT(C_INFO)
 {
 	npc = Stt_302_Viper;
@@ -63,12 +66,15 @@ instance Stt_302_Viper_MELT(C_INFO)
 
 func int Stt_302_Viper_MELT_Condition()
 {
-	if Npc_KnowsInfo(hero,Stt_302_Viper_GREET) && Npc_KnowsInfo(hero,Grd_260_Drake_Mine_Mehr)
+	if ((Npc_KnowsInfo(hero,Stt_302_Viper_GREET))
+	&& (Npc_KnowsInfo(hero,Grd_260_Drake_Mine_Mehr)))
 	{
 		return 1;
 	};
 
+	return 0;
 };
+
 func void Stt_302_Viper_MELT_Info()
 {
 //	AI_Output(other,self,"Stt_302_Viper_MELT_Info_15_01"); //I hear you only melt down part of the ore.
@@ -87,7 +93,9 @@ func void Stt_302_Viper_MELT_Info()
 //	AI_Output(self,other,"Stt_302_Viper_MELT_Info_11_05"); //Das Ende vom Lied war, dass wir nur noch einen Teil des Erzes einschmelzen. Die Magier sind nicht mehr hier runter gekommen.
 	AI_Output(self,other,"Stt_302_Viper_MELT_Info_11_05"); //Nakonec jsme přetavili jenom část rudy. Mágové už sem nikdy znovu nepřišli.
 };
+
 // *****************************  ****************************************//
+
 instance Stt_302_Viper_BUY(C_INFO)
 {
 	npc = Stt_302_Viper;
@@ -95,20 +103,22 @@ instance Stt_302_Viper_BUY(C_INFO)
 	information = Stt_302_Viper_BUY_Info;
 	important = 0;
 	permanent = 1;
+	trade = 1;
 //	description = "Can you give me ore?";
 //	description = "Kannst du mir Erz geben?";
 	description = "Můžeš mi dát rudu?";
-	trade           = 1;
 };
 
 func int Stt_302_Viper_BUY_Condition()
 {
-	if Npc_KnowsInfo(hero,Stt_302_Viper_GREET)
+	if (Npc_KnowsInfo(hero,Stt_302_Viper_GREET))
 	{
 		return 1;
 	};
 
+	return 0;
 };
+
 func void Stt_302_Viper_BUY_Info()
 {
 //	AI_Output(other,self,"Stt_302_Viper_BUY_Info_15_01"); //Can you give me ore?
@@ -118,4 +128,3 @@ func void Stt_302_Viper_BUY_Info()
 //	AI_Output(self,other,"Stt_302_Viper_BUY_Info_11_02"); //Wenn du mir Waren geben kannst.
 	AI_Output(self,other,"Stt_302_Viper_BUY_Info_11_02"); //Pokud mi můžeš dát nějaké zboží.
 };
-

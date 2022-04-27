@@ -8,6 +8,7 @@ instance Org_804_Organisator_Exit(C_INFO)
 	nr = 999;
 	condition = Org_804_Organisator_Exit_Condition;
 	information = Org_804_Organisator_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -18,6 +19,8 @@ func int Org_804_Organisator_Exit_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_804_Organisator_Exit_Info()
@@ -35,8 +38,8 @@ instance Org_804_Organisator_Greet(C_INFO)
 	nr = 1;
 	condition = Org_804_Organisator_Greet_Condition;
 	information = Org_804_Organisator_Greet_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Org_804_Organisator_Greet_Condition()
@@ -45,6 +48,8 @@ func int Org_804_Organisator_Greet_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_804_Organisator_Greet_Info()
@@ -64,6 +69,7 @@ instance Org_804_Organisator_WayTo(C_INFO)
 	nr = 1;
 	condition = Org_804_Organisator_WayTo_Condition;
 	information = Org_804_Organisator_WayTo_Info;
+	important = 0;
 	permanent = 0;
 //	description  = "Where can I go?";
 //	description  = "Wo geht's hier denn hin?";
@@ -97,6 +103,7 @@ instance Org_804_Organisator_ToLares(C_INFO)
 	nr = 1;
 	condition = Org_804_Organisator_ToLares_Condition;
 	information = Org_804_Organisator_ToLares_Info;
+	important = 0;
 	permanent = 0;
 //	description  = "I want to see Lares.";
 //	description  = "Ich will zu Lares.";
@@ -109,6 +116,8 @@ func int Org_804_Organisator_ToLares_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_804_Organisator_ToLares_Info()
@@ -138,6 +147,7 @@ instance Org_804_Organisator_PERM(C_INFO)
 	nr = 1;
 	condition = Org_804_Organisator_PERM_Condition;
 	information = Org_804_Organisator_PERM_Info;
+	important = 0;
 	permanent = 1;
 //	description  = "Can I see Lares?";
 //	description  = "Kann ich zu Lares?";
@@ -150,6 +160,8 @@ func int Org_804_Organisator_PERM_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_804_Organisator_PERM_Info()
@@ -181,18 +193,20 @@ instance Info_Org_804_FirstWarn(C_INFO)
 	nr = 2;
 	condition = Info_Org_804_FirstWarn_Condition;
 	information = Info_Org_804_FirstWarn_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_Org_804_FirstWarn_Condition()
 {
 	if (((other.guild == GIL_GRD) || (other.guild == GIL_STT))
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY )
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY)
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Org_804_FirstWarn_Info()
@@ -218,20 +232,22 @@ instance Info_Org_804_LastWarn(C_INFO)
 	nr = 1;
 	condition = Info_Org_804_LastWarn_Condition;
 	information = Info_Org_804_LastWarn_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_Org_804_LastWarn_Condition()
 {
-	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_FIRSTWARN )
+	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_FIRSTWARN)
 	&& ((other.guild == GIL_GRD) || (other.guild == GIL_STT))
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY )
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY)
 	&& (Npc_GetDistToWP(hero,Org_804_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func int Info_Org_804_LastWarn_Info()
@@ -255,20 +271,22 @@ instance Info_Org_804_Attack(C_INFO)
 	nr = 1;
 	condition = Info_Org_804_Attack_Condition;
 	information = Info_Org_804_Attack_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_Org_804_Attack_Condition()
 {
-	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_LASTWARN )
+	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_LASTWARN)
 	&& ((other.guild == GIL_GRD) || (other.guild == GIL_STT))
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY )
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY)
 	&& (Npc_GetDistToWP(hero,Org_804_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func int Info_Org_804_Attack_Info()

@@ -8,6 +8,7 @@ instance DIA_Bullit_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Bullit_Exit_Condition;
 	information = DIA_Bullit_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,8 +33,8 @@ instance DIA_Bullit_First(C_INFO)
 	nr = 1;
 	condition = DIA_Bullit_First_Condition;
 	information = DIA_Bullit_First_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Bullit_First_Condition()
@@ -58,6 +59,7 @@ instance DIA_Bullit_AufsMAul(C_INFO)
 	nr = 1;
 	condition = DIA_Bullit_AufsMAul_Condition;
 	information = DIA_Bullit_AufsMAul_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I've come to stuff your big mouth for you.";
 //	description = "Ich bin gekommen, um dir dein großes Maul zu stopfen.";
@@ -102,10 +104,12 @@ instance DIA_GRD_203_Bullit_Wait4SC(C_INFO)
 
 func int DIA_GRD_203_Bullit_Wait4SC_Condition()
 {
-	if(Npc_KnowsInfo(hero,Info_Xardas_LOADSWORD02 ))
+	if (Npc_KnowsInfo(hero,Info_Xardas_LOADSWORD02))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_GRD_203_Bullit_Wait4SC_Info()

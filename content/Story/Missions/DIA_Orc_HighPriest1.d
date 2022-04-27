@@ -6,13 +6,13 @@ instance Info_HighPriest1(C_INFO)
 	nr = 1;
 	condition = Info_HighPriest1_Condition;
 	information = Info_HighPriest1_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_HighPriest1_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Info_HighPriest1_Info()
@@ -43,4 +43,3 @@ func void Info_HighPriest1_Info()
 	Npc_SetAttitude(self,ATT_HOSTILE);
 	Npc_SetTempAttitude(self,ATT_HOSTILE);
 };
-

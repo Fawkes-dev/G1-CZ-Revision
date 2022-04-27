@@ -6,18 +6,20 @@ instance Info_Erpresser(C_INFO)
 	nr = 1;
 	condition = Info_Erpresser_Condition;
 	information = Info_Erpresser_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_Erpresser_Condition()
 {
-	if ((Npc_GetAttitude(self,other)!=ATT_FRIENDLY)
-	&& (self.aivar[AIV_HAS_ERPRESSED]==FALSE)
-	&& (self.aivar[AIV_WASDEFEATEDBYSC]==FALSE))
+	if ((Npc_GetAttitude(self,other) != ATT_FRIENDLY)
+	&& (self.aivar[AIV_HAS_ERPRESSED] == FALSE)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Erpresser_Info()
@@ -91,16 +93,18 @@ instance Info_BereitsErpresst(C_INFO)
 	nr = 1;
 	condition = Info_BereitsErpresst_Condition;
 	information = Info_BereitsErpresst_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_BereitsErpresst_Condition()
 {
-	if ((self.aivar[AIV_HAS_ERPRESSED]==1) && (Npc_IsInState(self,ZS_Talk)))
+	if ((self.aivar[AIV_HAS_ERPRESSED] == 1) && (Npc_IsInState(self,ZS_Talk)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_BereitsErpresst_Info()
@@ -118,18 +122,20 @@ instance Info_BereitsAufsMaul(C_INFO)
 	nr = 1;
 	condition = Info_BereitsAufsMaul_Condition;
 	information = Info_BereitsAufsMaul_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_BereitsAufsMaul_Condition()
 {
-	if ((self.aivar[AIV_HAS_ERPRESSED]==2)
-	&& (self.aivar[AIV_WASDEFEATEDBYSC]==FALSE)
+	if ((self.aivar[AIV_HAS_ERPRESSED] == 2)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE)
 	&& (Npc_IsInState(self,ZS_Talk)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_BereitsAufsMaul_Info()

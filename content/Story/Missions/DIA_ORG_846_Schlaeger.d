@@ -8,6 +8,7 @@ instance DIA_846_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_846_Exit_Condition;
 	information = DIA_846_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_846_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_846_Hello_Condition;
 	information = DIA_846_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What are you doing here?";
 //	description = "Was machst du hier?";

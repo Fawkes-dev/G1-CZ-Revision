@@ -8,6 +8,7 @@ instance DIA_Grim_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Grim_Exit_Condition;
 	information = DIA_Grim_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,17 +33,19 @@ instance DIA_Grim_Falle(C_INFO)
 	nr = 2;
 	condition = DIA_Grim_Falle_Condition;
 	information = DIA_Grim_Falle_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Grim_Falle_Condition()
 {
-	if (Grim_ProtectionBully == TRUE)
-	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
+	if ((Grim_ProtectionBully == TRUE)
+	&& (Npc_GetTrueGuild(hero) == GIL_NONE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Grim_Falle_Info()
@@ -141,6 +144,7 @@ instance DIA_Grim_ReadyToGo(C_INFO)
 	nr = 2;
 	condition = DIA_Grim_ReadyToGo_Condition;
 	information = DIA_Grim_ReadyToGo_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I'm ready to go with you - let's get the amulet!";
 //	description = "Ich bin bereit, mit dir zu gehen - lass uns das Amulett holen!";
@@ -153,6 +157,8 @@ func int DIA_Grim_ReadyToGo_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Grim_ReadyToGo_Info()
@@ -179,16 +185,19 @@ instance DIA_Grim_AtOCdraussen(C_INFO)
 	nr = 3;
 	condition = DIA_Grim_AtOCdraussen_Condition;
 	information = DIA_Grim_AtOCdraussen_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Grim_AtOCdraussen_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Grim_ReadyToGo)) && (Npc_GetDistToWp (hero,"OC_ROUND_22_CF_2_MOVEMENT") < 500 )
+	if ((Npc_KnowsInfo(hero,DIA_Grim_ReadyToGo))
+	&& (Npc_GetDistToWp (hero,"OC_ROUND_22_CF_2_MOVEMENT") < 500))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Grim_AtOCdraussen_Info()
@@ -196,7 +205,7 @@ func void DIA_Grim_AtOCdraussen_Info()
 //	AI_Output(self,other,"DIA_Grim_AtOCdraussen_06_00"); //So, here we are - far away from your friend Diego.
 //	AI_Output(self,other,"DIA_Grim_AtOCdraussen_06_00"); //So, hier sind wir. Schön weit weg von deinem Freund Diego.
 	AI_Output(self,other,"DIA_Grim_AtOCdraussen_06_00"); //Tak, jsme tady - daleko od našeho přítele Diega.
-	if (((Npc_GetDistToNpc(self,Bu520)<1000)&&(!Npc_IsDead(Bu520))) || ((Npc_GetDistToNpc(self,Bu534)<1000)&&(!Npc_IsDead(Bu534))))
+	if (((Npc_GetDistToNpc(self,Bu520) < 1000) && (!Npc_IsDead(Bu520))) || ((Npc_GetDistToNpc(self,Bu534) < 1000) && (!Npc_IsDead(Bu534))))
 	{
 //		AI_Output(self,other,"DIA_Grim_AtOCdraussen_06_01"); //We're to send you regards from Bloodwyn!
 //		AI_Output(self,other,"DIA_Grim_AtOCdraussen_06_01"); //Wir sollen dir schöne Grüße von Bloodwyn bestellen!
@@ -218,13 +227,13 @@ func void DIA_Grim_AtOCdraussen_Info()
 	var C_NPC Bu520; Bu520 = Hlp_GetNpc(Vlk_520_Buddler);
 	var C_NPC Bu534; Bu534 = Hlp_GetNpc(Vlk_534_Buddler);
 
-	if ((Npc_GetDistToNpc(self,Bu520)<1000) && (!Npc_IsDead(Bu520)))
+	if ((Npc_GetDistToNpc(self,Bu520) < 1000) && (!Npc_IsDead(Bu520)))
 	{
 		Npc_SetTarget(Bu520,other);
 		AI_StartState(Bu520,ZS_ATTACK,1,"");
 	};
 
-	if ((Npc_GetDistToNpc(self,Bu534)<1000) && (!Npc_IsDead(Bu534)))
+	if ((Npc_GetDistToNpc(self,Bu534) < 1000) && (!Npc_IsDead(Bu534)))
 	{
 		Npc_SetTarget(Bu534,other);
 		AI_StartState(Bu534,ZS_ATTACK,1,"");
@@ -241,16 +250,19 @@ instance DIA_Grim_NACHFalle(C_INFO)
 	nr = 2;
 	condition = DIA_Grim_NACHFalle_Condition;
 	information = DIA_Grim_NACHFalle_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Grim_NACHFalle_Condition()
 {
-	if ((Npc_KnowsInfo(hero,DIA_Grim_AtOCdraussen)) && (Npc_GetDistToNpc(self,other)<ZivilAnquatschDist))
+	if ((Npc_KnowsInfo(hero,DIA_Grim_AtOCdraussen))
+	&& (Npc_GetDistToNpc(self,other)<ZivilAnquatschDist))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Grim_NACHFalle_Info()
@@ -327,6 +339,7 @@ instance DIA_Grim_Hallo(C_INFO)
 	nr = 1;
 	condition = DIA_Grim_Hallo_Condition;
 	information = DIA_Grim_Hallo_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I am new here.";
 //	description = "Ich bin neu hier!";
@@ -335,7 +348,7 @@ instance DIA_Grim_Hallo(C_INFO)
 
 func int DIA_Grim_Hallo_Condition()
 {
-	if (Grim_ProtectionBully==TRUE)
+	if (Grim_ProtectionBully == TRUE)
 	{
 		FirstOver = TRUE;
 	};
@@ -344,6 +357,8 @@ func int DIA_Grim_Hallo_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Grim_Hallo_Info()
@@ -366,6 +381,7 @@ instance DIA_Grim_Leben(C_INFO)
 	nr = 2;
 	condition = DIA_Grim_Leben_Condition;
 	information = DIA_Grim_Leben_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What's life like here?";
 //	description = "Wie ist das Leben hier so?";
@@ -397,6 +413,7 @@ instance DIA_Grim_Aufnahme(C_INFO)
 	nr = 3;
 	condition = DIA_Grim_Aufnahme_Condition;
 	information = DIA_Grim_Aufnahme_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What do I have to do if I want to get admitted to this camp?";
 //	description = "Was muss ich machen, wenn ich in dieses Lager aufgenommen werden will?";
@@ -439,6 +456,7 @@ instance DIA_Grim_HowFarAreYou(C_INFO)
 	nr = 4;
 	condition = DIA_Grim_HowFarAreYou_Condition;
 	information = DIA_Grim_HowFarAreYou_Info;
+	important = 0;
 	permanent = 1;
 //	description = "And - how far have you got with your tests?";
 //	description = "Und - wie weit bist du mit deinen Prüfungen?";
@@ -447,10 +465,13 @@ instance DIA_Grim_HowFarAreYou(C_INFO)
 
 func int DIA_Grim_HowFarAreYou_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Grim_Aufnahme) && Npc_KnowsInfo(hero,Info_Diego_Rules))
+	if ((Npc_KnowsInfo(hero,DIA_Grim_Aufnahme)
+	&& (Npc_KnowsInfo(hero,Info_Diego_Rules)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Grim_HowFarAreYou_Info()
@@ -462,7 +483,7 @@ func void DIA_Grim_HowFarAreYou_Info()
 //	AI_Output(self,other,"DIA_Grim_HowFarAreYou_06_01"); //Ich hab' schon mit Dexter, Sly und Fingers geredet. Das sind einige der einflussreichsten Schatten hier im Lager.
 	AI_Output(self,other,"DIA_Grim_HowFarAreYou_06_01"); //Už jsem mluvil s Dexterem, Slyem a Fingersem. Ti patří k nejdůležitějším lidem v táboře.
 
-	if !Grim_Tests
+	if (!Grim_Tests)
 	{
 //		B_LogEntry(CH1_JoinOC,"Dexter, Sly and Fingers are influential Shadows.");
 //		B_LogEntry(CH1_JoinOC,"Einflussreiche Schatten sind Dexter, Sly und Fingers");
@@ -481,6 +502,7 @@ instance DIA_Grim_YourPDV(C_INFO)
 	nr = 5;
 	condition = DIA_Grim_YourPDV_Condition;
 	information = DIA_Grim_YourPDV_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What was YOUR test of faith?";
 //	description = "Was ist DEINE Prüfung des Vertrauens?";
@@ -493,6 +515,8 @@ func int DIA_Grim_YourPDV_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Grim_YourPDV_Info()
@@ -522,16 +546,19 @@ instance DIA_Grim_INEXTREMO(C_INFO)
 	nr = 1;
 	condition = DIA_Grim_INEXTREMO_Condition;
 	information = DIA_Grim_INEXTREMO_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Grim_INEXTREMO_Condition()
 {
-	if ((Kapitel == 2) && (InExtremoPlaying == true))
+	if ((Kapitel == 2)
+	&& (InExtremoPlaying == true))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Grim_INEXTREMO_Info()
@@ -568,8 +595,8 @@ instance DIA_Grim_INEXTREMOAWAY(C_INFO)
 	nr = 1;
 	condition = DIA_Grim_INEXTREMOAWAY_Condition;
 	information = DIA_Grim_INEXTREMOAWAY_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "Where are In Extremo?";
 //	description = "Wo sind InExtremo?";
 	description = "Kde jsou In Extremo?";
@@ -577,11 +604,13 @@ instance DIA_Grim_INEXTREMOAWAY(C_INFO)
 
 func int DIA_Grim_INEXTREMOAWAY_Condition()
 {
-	if Npc_KnowsInfo(hero,DIA_Grim_INEXTREMO)
-	&& (Kapitel == 3)
+	if ((Npc_KnowsInfo(hero,DIA_Grim_INEXTREMO))
+	&& (Kapitel == 3))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Grim_INEXTREMOAWAY_Info()
@@ -595,4 +624,3 @@ func void DIA_Grim_INEXTREMOAWAY_Info()
 
 	AI_StopProcessInfos(self);
 };
-

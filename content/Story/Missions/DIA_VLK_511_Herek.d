@@ -8,6 +8,7 @@ instance DIA_Herek_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Herek_Exit_Condition;
 	information = DIA_Herek_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,16 +33,19 @@ instance DIA_Herek_Bully(C_INFO)
 	nr = 2;
 	condition = DIA_Herek_Bully_Condition;
 	information = DIA_Herek_Bully_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Herek_Bully_Condition()
 {
-	if ((Npc_GetDistToNpc(self,other)<=ZivilAnquatschDist) && (Herek_ProtectionBully==TRUE))
+	if ((Npc_GetDistToNpc(self,other) <= ZivilAnquatschDist)
+	&& (Herek_ProtectionBully == TRUE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Herek_Bully_Info()
@@ -80,6 +84,7 @@ instance DIA_Herek_Motz(C_INFO)
 	nr = 2;
 	condition = DIA_Herek_Motz_Condition;
 	information = DIA_Herek_Motz_Info;
+	important = 0;
 	permanent = 0;
 //	description = "And, how's things?";
 //	description = "Na, wie sieht's aus?";
@@ -88,10 +93,12 @@ instance DIA_Herek_Motz(C_INFO)
 
 func int DIA_Herek_Motz_Condition()
 {
-	if (Herek_ProtectionBully==FALSE)
+	if (Herek_ProtectionBully == FALSE)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Herek_Motz_Info()
@@ -127,6 +134,7 @@ instance DIA_Herek_Anlegen(C_INFO)
 	nr = 2;
 	condition = DIA_Herek_Anlegen_Condition;
 	information = DIA_Herek_Anlegen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "So you think you're one of the wild boys, do you? Try it with me...";
 //	description = "Du denkst, du bist einer von den Harten? Versuch's doch nochmal bei mir.";
@@ -135,10 +143,13 @@ instance DIA_Herek_Anlegen(C_INFO)
 
 func int DIA_Herek_Anlegen_Condition()
 {
-	if ((Npc_KnowsInfo(hero,DIA_Herek_Motz)) || (Npc_KnowsInfo(hero,DIA_Herek_Bully)))
+	if ((Npc_KnowsInfo(hero,DIA_Herek_Motz))
+	|| (Npc_KnowsInfo(hero,DIA_Herek_Bully)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Herek_Anlegen_Info()
@@ -155,4 +166,3 @@ func void DIA_Herek_Anlegen_Info()
 	Npc_SetTarget(self,other);
 	AI_StartState(self,ZS_ATTACK,1,"");
 };
-

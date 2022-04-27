@@ -14,8 +14,8 @@ instance Info_Grd_237_FirstWarn(C_INFO)
 	nr = 1;
 	condition = Info_Grd_237_FirstWarn_Condition;
 	information = Info_Grd_237_FirstWarn_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 //------------------------------------------------------------------------
@@ -23,13 +23,15 @@ instance Info_Grd_237_FirstWarn(C_INFO)
 //------------------------------------------------------------------------
 func int Info_Grd_237_FirstWarn_Condition()
 {
-	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS]== AIV_GPS_BEGIN)
-	&& (self.aivar[AIV_PASSGATE] == FALSE )
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY )
+	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_BEGIN)
+	&& (self.aivar[AIV_PASSGATE] == FALSE)
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY)
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self), self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Grd_237_FirstWarn_Info()
@@ -122,19 +124,21 @@ instance Info_Grd_237_LastWarn(C_INFO)
 	nr = 2;
 	condition = Info_Grd_237_LastWarn_Condition;
 	information = Info_Grd_237_LastWarn_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_Grd_237_LastWarn_Condition()
 {
-	if ((self.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_FIRSTWARN )
-	&& (self.aivar[AIV_PASSGATE] == FALSE )
+	if ((self.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_FIRSTWARN)
+	&& (self.aivar[AIV_PASSGATE] == FALSE)
 	&& (Npc_GetDistToWP(hero,Grd_237_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func int Info_Grd_237_LastWarn_Info()
@@ -158,19 +162,21 @@ instance Info_Grd_237_Attack(C_INFO)
 	nr = 1;
 	condition = Info_Grd_237_Attack_Condition;
 	information = Info_Grd_237_Attack_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_Grd_237_Attack_Condition()
 {
-	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_LASTWARN )
+	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_LASTWARN)
 	&& (self.aivar[AIV_PASSGATE] == FALSE)
 	&& (Npc_GetDistToWP(hero,Grd_237_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func int Info_Grd_237_Attack_Info()

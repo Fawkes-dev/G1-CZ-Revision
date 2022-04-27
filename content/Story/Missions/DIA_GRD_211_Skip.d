@@ -8,6 +8,7 @@ instance DIA_Skip_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Skip_Exit_Condition;
 	information = DIA_Skip_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -34,6 +35,7 @@ instance DIA_Skip_First(C_INFO)
 	nr = 1;
 	condition = DIA_Skip_First_Condition;
 	information = DIA_Skip_First_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What do you do here?";
 //	description = "Was machst du hier?";
@@ -43,10 +45,12 @@ instance DIA_Skip_First(C_INFO)
 func int DIA_Skip_First_Condition()
 {
 	//#NEEDS_ATTENTION - dialog dostupny pre Magov Ohna? GIL_KDF
-	if ( !((Npc_GetTrueGuild(other)==GIL_STT) || (Npc_GetTrueGuild(other)==GIL_GRD) || (Npc_GetTrueGuild(other)==GIL_KDF)))
+	if (!((Npc_GetTrueGuild(other) == GIL_STT) || (Npc_GetTrueGuild(other) == GIL_GRD) || (Npc_GetTrueGuild(other) == GIL_KDF)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Skip_First_Info()
@@ -64,7 +68,7 @@ func void DIA_Skip_First_Info()
 //	AI_Output(self,other,"DIA_Skip_First_12_03"); //Nur an Gomez' Leute.
 	AI_Output(self,other,"DIA_Skip_First_12_03"); //Jen Gomezovým mužům.
 
-	if !Npc_KnowsInfo(hero,DIA_Raven_Equipment)
+	if (!Npc_KnowsInfo(hero,DIA_Raven_Equipment))
 	{
 		Log_CreateTopic(GE_TraderOC,LOG_NOTE);
 //		B_LogEntry(GE_TraderOC,"The guard Skip at the back courtyard sells WEAPONS. But only to Gomez' men.");
@@ -128,6 +132,7 @@ func void DIA_Skip_First_BACK()
 	Info_ClearChoices(DIA_Skip_First);
 	AI_StopProcessInfos(self);
 };
+
 //------------------------------------------------------
 func void DIA_Skip_First_Thorus_Stranger()
 {
@@ -195,6 +200,7 @@ instance DIA_Skip_VERPATZT(C_INFO)
 	nr = 1;
 	condition = DIA_Skip_VERPATZT_Condition;
 	information = DIA_Skip_VERPATZT_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I just thought I'd come back and ask about that equipment...";
 //	description = "Ich dachte, ich frag' noch mal wegen der Ausrüstung ...";
@@ -203,13 +209,13 @@ instance DIA_Skip_VERPATZT(C_INFO)
 
 func int DIA_Skip_VERPATZT_Condition()
 {
-	if (
-		( !((Npc_GetTrueGuild(other)==GIL_STT) || (Npc_GetTrueGuild(other)==GIL_GRD) || (Npc_GetTrueGuild(other)==GIL_KDF)))
-		&& ((Npc_KnowsInfo(hero,DIA_Skip_First)) && (Skip_TradeFree == FALSE))
-		)
+	if ((!((Npc_GetTrueGuild(other) == GIL_STT) || (Npc_GetTrueGuild(other) == GIL_GRD) || (Npc_GetTrueGuild(other) == GIL_KDF)))
+	&& ((Npc_KnowsInfo(hero,DIA_Skip_First)) && (Skip_TradeFree == FALSE)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Skip_VERPATZT_Info()
@@ -231,20 +237,25 @@ instance GRD_211_Skip_TRADE(C_INFO)
 	npc = GRD_211_Skip;
 	condition = GRD_211_Skip_TRADE_Condition;
 	information = GRD_211_Skip_TRADE_Info;
+	important = 0;
 	permanent = 1;
+	trade = 1;
 //	description = "I could do with a few things.";
 //	description = "Ich könnte ein paar Sachen gebrauchen";
 	description = "Potřeboval bych pár věcí.";
-	trade = 1;
 };
 
 func int GRD_211_Skip_TRADE_Condition()
 {
-	if ((Npc_GetTrueGuild(other)==GIL_STT) || (Npc_GetTrueGuild(other)==GIL_GRD) || (Npc_GetTrueGuild(other)==GIL_KDF)
-			|| (Skip_TradeFree == TRUE))
+	if (((Npc_GetTrueGuild(other) == GIL_STT)
+	|| (Npc_GetTrueGuild(other) == GIL_GRD)
+	|| (Npc_GetTrueGuild(other) == GIL_KDF))
+	|| (Skip_TradeFree == TRUE))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void GRD_211_Skip_TRADE_Info()
@@ -273,9 +284,12 @@ func int GRD_211_Skip_WELCOME_Condition()
 {
 	if (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void GRD_211_Skip_WELCOME_Info()
 {
 //	AI_Output(self,other,"GRD_211_Skip_WELCOME_Info_12_01"); //Hey, you've made it pretty far, considering you ain't been here long!

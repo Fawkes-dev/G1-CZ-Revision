@@ -8,6 +8,7 @@ instance DIA_Rufus_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_Rufus_EXIT_Condition;
 	information = DIA_Rufus_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance Info_Rufus_Wasser(C_INFO) // E1
 	nr = 800;
 	condition = Info_Rufus_Wasser_Condition;
 	information = Info_Rufus_Wasser_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Lefty sent me. I've brought you some water.";
 //	description = "Lefty schickt mich. Ich hab' Wasser für dich.";
@@ -40,11 +42,13 @@ instance Info_Rufus_Wasser(C_INFO) // E1
 
 func int Info_Rufus_Wasser_Condition()
 {
-	if ((Lefty_Mission==LOG_RUNNING) || ((Lefty_Mission==LOG_SUCCESS) && Npc_HasItems(other,ItFo_Potion_Water_01)))
-	&& (self.aivar[AIV_DEALDAY] <= Wld_GetDay())
+	if (((Lefty_Mission == LOG_RUNNING) || ((Lefty_Mission == LOG_SUCCESS) && Npc_HasItems(other,ItFo_Potion_Water_01)))
+	&& (self.aivar[AIV_DEALDAY] <= Wld_GetDay()))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Rufus_Wasser_Info()
@@ -89,6 +93,7 @@ instance DIA_Rufus_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_Rufus_Hello_Condition;
 	information = DIA_Rufus_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Hi! I'm new here. I just wanted to know what goes on around here.";
 //	description = "Hi! Ich bin neu hier. Wollte mal fragen, was hier so läuft.";
@@ -123,6 +128,7 @@ instance DIA_Rufus_Why(C_INFO)
 	nr = 1;
 	condition = DIA_Rufus_Why_Condition;
 	information = DIA_Rufus_Why_Info;
+	important = 0;
 	permanent = 0;
 //	description = "If you don't like it, why are you working here?";
 //	description = "Wenn's dir nicht gefällt, warum arbeitest du dann hier? ";
@@ -135,6 +141,8 @@ func int DIA_Rufus_Why_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Rufus_Why_Info()
@@ -180,6 +188,7 @@ instance DIA_Rufus_Ricelord(C_INFO)
 	nr = 2;
 	condition = DIA_Rufus_Ricelord_Condition;
 	information = DIA_Rufus_Ricelord_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Who is the Rice Lord?";
 //	description = "Wer ist der Reislord?";
@@ -192,6 +201,8 @@ func int DIA_Rufus_Ricelord_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Rufus_Ricelord_Info()
@@ -208,4 +219,3 @@ func void DIA_Rufus_Ricelord_Info()
 	var C_NPC Ricelord; Ricelord = Hlp_GetNpc(Bau_900_Ricelord);
 	Ricelord.aivar[AIV_FINDABLE] = TRUE;
 };
-

@@ -8,13 +8,14 @@ instance DIA_TPL_1402_GorNaToth_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_TPL_1402_GorNaToth_Exit_Condition;
 	information = DIA_TPL_1402_GorNaToth_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
 
 func int DIA_TPL_1402_GorNaToth_Exit_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void DIA_TPL_1402_GorNaToth_Exit_Info()
@@ -31,6 +32,7 @@ instance DIA_GorNaToth_Abweisend(C_INFO)
 	nr = 1;
 	condition = DIA_GorNaToth_Abweisend_Condition;
 	information = DIA_GorNaToth_Abweisend_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Can you train me?";
 //	description = "Kannst du mich trainieren?";
@@ -39,11 +41,13 @@ instance DIA_GorNaToth_Abweisend(C_INFO)
 
 func int DIA_GorNaToth_Abweisend_Condition()
 {
-	if !Npc_KnowsInfo(hero,DIA_GorNaToth_AngarTalked)
-	&& !C_NpcBelongsToPsiCamp(hero)
+	if ((!Npc_KnowsInfo(hero,DIA_GorNaToth_AngarTalked))
+	&& (!C_NpcBelongsToPsiCamp(hero)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_GorNaToth_Abweisend_Info()
@@ -67,8 +71,8 @@ instance DIA_GorNaToth_AngarTalked(C_INFO)
 	nr = 1;
 	condition = DIA_GorNaToth_AngarTalked_Condition;
 	information = DIA_GorNaToth_AngarTalked_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_GorNaToth_AngarTalked_Condition()
@@ -77,6 +81,8 @@ func int DIA_GorNaToth_AngarTalked_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_GorNaToth_AngarTalked_Info()
@@ -155,13 +161,15 @@ instance TPL_1402_GorNaToth_GETSTUFF(C_INFO)
 
 func int TPL_1402_GorNaToth_GETSTUFF_Condition()
 {
-	if (Npc_KnowsInfo(hero,GUR_1202_CorAngar_WANNABETPL))
-	&& (Npc_GetTrueGuild(hero) == GIL_TPL)
+	if ((Npc_KnowsInfo(hero,GUR_1202_CorAngar_WANNABETPL))
+	&& (Npc_GetTrueGuild(hero) == GIL_TPL))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void TPL_1402_GorNaToth_GETSTUFF_Info()
 {
 //	AI_Output(other,self,"TPL_1402_GorNaToth_GETSTUFF_Info_15_01"); //I'd like to collect my templar's armor.
@@ -211,10 +219,12 @@ func int TPL_1402_GorNaToth_ARMOR_Condition()
 {
 	if (Npc_KnowsInfo(hero,TPL_1402_GorNaToth_GETSTUFF))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void TPL_1402_GorNaToth_ARMOR_Info()
 {
 //	AI_Output(other,self,"Info_GorNaToth_ARMOR_15_01"); //I need better armor.
@@ -228,7 +238,6 @@ func void TPL_1402_GorNaToth_ARMOR_Info()
 	Info_AddChoice(TPL_1402_GorNaToth_ARMOR, DIALOG_BACK , TPL_1402_GorNaToth_ARMOR_BACK);
 	Info_AddChoice(TPL_1402_GorNaToth_ARMOR, B_BuildBuyArmorString(NAME_GorNaTothHeavyTpl,VALUE_TPL_ARMOR_H),TPL_1402_GorNaToth_ARMOR_H);
 	Info_AddChoice(TPL_1402_GorNaToth_ARMOR, B_BuildBuyArmorString(NAME_GorNaTothTpl,VALUE_TPL_ARMOR_M), TPL_1402_GorNaToth_ARMOR_M);
-
 };
 
 func void TPL_1402_GorNaToth_ARMOR_M()
@@ -243,7 +252,7 @@ func void TPL_1402_GorNaToth_ARMOR_M()
 //		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_02"); //Du bist noch nicht so weit! Bewähre dich erst als Templer, dann wirst dir auch das Recht zuteil, eine bessere Rüstung zu tragen.
 		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_02"); //Ještě nemáš dost zkušeností! Prokaž svou vážnost jako templář, tím získáš právo nosit lepší zbroj.
 	}
-	else if (Npc_HasItems(hero,ItMiNugget)<VALUE_TPL_ARMOR_M)
+	else if (Npc_HasItems(hero,ItMiNugget) < VALUE_TPL_ARMOR_M)
 	{
 //		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_03"); //As soon as you are able to make a sufficient donation to our community, you shall have better armor!
 //		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_03"); //Sobald du in der Lage bist, eine ausreichend große Spende an unsere Gemeinschaft zu leisten, steht dir eine bessere Rüstung zur Verfügung!
@@ -280,7 +289,7 @@ func void TPL_1402_GorNaToth_ARMOR_H()
 //		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_02"); //Du bist noch nicht so weit! Bewähre dich erst noch weiter für unsere Gemeinschaft, dann wirst dir auch das Recht zuteil, solch eine erlesene Rüstung zu tragen.
 		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_02"); //Ještě nemáš dost zkušeností! Prokaž svou vážnost jako člen našeho společenství, tím získáš právo nosit takovou krásnou zbroj.
 	}
-	else if (Npc_HasItems(hero,ItMiNugget)<VALUE_TPL_ARMOR_H)
+	else if (Npc_HasItems(hero,ItMiNugget) < VALUE_TPL_ARMOR_H)
 	{
 //		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_03"); //Meanwhile, you have earned the right to wear such armor, but at the moment you're not able to make the sufficient donation to the community!
 //		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_03"); //Du hast dir mittlerweile das Recht verdient, einen solchen Panzer zu tragen, doch du bist zurzeit nicht in der Lage, eine ausreichende Spende an die Gemeinschaft zu leisten!
@@ -320,12 +329,14 @@ func void TPL_1402_GorNaToth_ARMOR_BACK()
 //---------------------------------------------------------------
 //	 						STR + DEX
 //---------------------------------------------------------------
+
 instance TPL_1402_GorNaToth_Teach(C_INFO)
 {
 	npc = TPL_1402_GorNaToth;
 	nr = 10;
 	condition = TPL_1402_GorNaToth_Teach_Condition;
 	information = TPL_1402_GorNaToth_Teach_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Can you train me?";
 //	description = "Kannst du mich trainieren?";
@@ -336,8 +347,10 @@ func int TPL_1402_GorNaToth_Teach_Condition()
 {
 	if (C_NpcBelongsToPsiCamp(hero))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void TPL_1402_GorNaToth_Teach_Info()
@@ -465,13 +478,15 @@ instance TPL_1402_GorNaToth_TRAIN(C_INFO)
 
 func int TPL_1402_GorNaToth_TRAIN_Condition()
 {
-	if (Npc_GetTalentSkill (hero,NPC_TALENT_1H) < 1)
-	&& (C_NpcBelongsToPsiCamp(hero))
+	if ((Npc_GetTalentSkill (hero,NPC_TALENT_1H) < 1)
+	&& (C_NpcBelongsToPsiCamp(hero)))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void TPL_1402_GorNaToth_TRAIN_Info()
 {
 	if (log_gornatothfight == FALSE)
@@ -482,6 +497,7 @@ func void TPL_1402_GorNaToth_TRAIN_Info()
 		B_LogEntry(GE_TeacherPSI,"Templář Gor Na Toth mě může naučit bojovat s JEDNORUČNÍMI zbraněmi.");
 		log_gornatothfight = TRUE;
 	};
+
 //	AI_Output(other,self,"TPL_1402_GorNaToth_TRAIN_Info_15_00"); //I want to improve my handling of one-handed weapons.
 //	AI_Output(other,self,"TPL_1402_GorNaToth_TRAIN_Info_15_00"); //Ich will besser mit Einhandwaffen umgehen können.
 	AI_Output(other,self,"TPL_1402_GorNaToth_TRAIN_Info_15_00"); //Chci se zlepšit v ovládání jednoručních zbraní.
@@ -515,6 +531,7 @@ func void TPL_1402_GorNaToth_TRAIN_Info()
 		B_PracticeCombat ("PSI_PATH_6_7");
 	};
 };
+
 /*------------------------------------------------------------------------
 						EINHANDKAMPF DIE ZWEITE LEHRSTUNDE
 ------------------------------------------------------------------------*/
@@ -533,13 +550,15 @@ instance TPL_1402_GorNaToth_TRAINAGAIN(C_INFO)
 
 func int TPL_1402_GorNaToth_TRAINAGAIN_Condition()
 {
-	if (Npc_GetTalentSkill (hero,NPC_TALENT_1H) == 1)
-	&& (C_NpcBelongsToPsiCamp(hero))
+	if ((Npc_GetTalentSkill (hero,NPC_TALENT_1H) == 1)
+	&& (C_NpcBelongsToPsiCamp(hero)))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void TPL_1402_GorNaToth_TRAINAGAIN_Info()
 {
 //	AI_Output(other,self,"TPL_1402_GorNaToth_TRAINAGAIN_Info_15_01"); //Teach me how to handle one-handed weapons more skillfully.

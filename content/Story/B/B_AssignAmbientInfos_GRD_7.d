@@ -12,6 +12,7 @@ instance Info_grd_7_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_grd_7_EXIT_Condition;
 	information = Info_grd_7_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -35,6 +36,7 @@ instance Info_grd_7_EinerVonEuchWerden(C_INFO) // E1
 	nr = 1;
 	condition = Info_grd_7_EinerVonEuchWerden_Condition;
 	information = Info_grd_7_EinerVonEuchWerden_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What do I have to do to get accepted as one of Gomez' guards?";
 //	description = "Was muß ich tun, um bei Gomez' Gardisten aufgenommen zu werden?";
@@ -77,6 +79,7 @@ instance Info_grd_7_WichtigePersonen(C_INFO)
 	nr = 1;
 	condition = Info_grd_7_WichtigePersonen_Condition;
 	information = Info_grd_7_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Who calls the shots around here?";
 //	description = "Wer hat hier das Sagen?";
@@ -116,6 +119,7 @@ instance Info_grd_7_DasLager(C_INFO)
 	nr = 1;
 	condition = Info_grd_7_DasLager_Condition;
 	information = Info_grd_7_DasLager_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Do all the people here work for Gomez?";
 //	description = "Arbeiten alle Leute hier für die Erzbarone?";
@@ -222,6 +226,7 @@ instance Info_grd_7_DieLage(C_INFO) // E1
 	nr = 1;
 	condition = Info_grd_7_DieLage_Condition;
 	information = Info_grd_7_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How's it going?";
 //	description = "Wie steht's?";

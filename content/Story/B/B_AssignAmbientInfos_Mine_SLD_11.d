@@ -11,6 +11,7 @@ instance Info_Mine_Sld_11_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Mine_Sld_11_EXIT_Condition;
 	information = Info_Mine_Sld_11_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = "END";
 };
@@ -34,6 +35,7 @@ instance Info_Mine_Sld_11_EinerVonEuchWerden(C_INFO) // E1
 	nr = 4;
 	condition = Info_Mine_Sld_11_EinerVonEuchWerden_Condition;
 	information = Info_Mine_Sld_11_EinerVonEuchWerden_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How do I join you?";
 //	description = "Wie kann ich bei Euch mitmachen?";
@@ -73,6 +75,7 @@ instance Info_Mine_Sld_11_WichtigePersonen(C_INFO)
 	nr = 3;
 	condition = Info_Mine_Sld_11_WichtigePersonen_Condition;
 	information = Info_Mine_Sld_11_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Who gives the orders here?";
 //	description = "Wer erteilt hier die Befehle?";
@@ -106,6 +109,7 @@ instance Info_Mine_Sld_11_DasLager(C_INFO)
 	nr = 2;
 	condition = Info_Mine_Sld_11_DasLager_Condition;
 	information = Info_Mine_Sld_11_DasLager_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Anything special go on here?";
 //	description = "Gibt´s hier irgendwas besonderes?";
@@ -139,6 +143,7 @@ instance Info_Mine_Sld_11_DieLage(C_INFO) // E1
 	nr = 1;
 	condition = Info_Mine_Sld_11_DieLage_Condition;
 	information = Info_Mine_Sld_11_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How's it going?";
 //	description = "Wie sieht´s aus?";

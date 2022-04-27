@@ -8,6 +8,7 @@ instance DIA_BaalParvez_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_BaalParvez_EXIT_Condition;
 	information = DIA_BaalParvez_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,8 +33,8 @@ instance DIA_BaalParvez_Greet(C_INFO)
 	nr = 1;
 	condition = DIA_BaalParvez_Greet_Condition;
 	information = DIA_BaalParvez_Greet_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_BaalParvez_Greet_Condition()
@@ -42,6 +43,8 @@ func int DIA_BaalParvez_Greet_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalParvez_Greet_Info()
@@ -64,6 +67,7 @@ instance DIA_BaalParvez_RightWay(C_INFO)
 	nr = 1;
 	condition = DIA_BaalParvez_RightWay_Condition;
 	information = DIA_BaalParvez_RightWay_Info;
+	important = 0;
 	permanent = 0;
 //	description = "And which is the right path?";
 //	description = "Und was ist der rechte Weg?";
@@ -76,6 +80,8 @@ func int DIA_BaalParvez_RightWay_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalParvez_RightWay_Info()
@@ -110,6 +116,7 @@ instance DIA_BaalParvez_MyAdvantage(C_INFO)
 	nr = 1;
 	condition = DIA_BaalParvez_MyAdvantage_Condition;
 	information = DIA_BaalParvez_MyAdvantage_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What would be the benefit of joining you?";
 //	description = "Was hätte ich davon, mich euch anzuschließen?";
@@ -122,6 +129,8 @@ func int DIA_BaalParvez_MyAdvantage_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalParvez_MyAdvantage_Info()
@@ -156,6 +165,7 @@ instance DIA_BaalParvez_Sleeper(C_INFO)
 	nr = 2;
 	condition = DIA_BaalParvez_Sleeper_Condition;
 	information = DIA_BaalParvez_Sleeper_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Who's the Sleeper?";
 //	description = "Wer ist der Schläfer?";
@@ -168,6 +178,8 @@ func int DIA_BaalParvez_Sleeper_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalParvez_Sleeper_Info()
@@ -202,6 +214,7 @@ instance DIA_BaalParvez_SleeperSaid(C_INFO)
 	nr = 2;
 	condition = DIA_BaalParvez_SleeperSaid_Condition;
 	information = DIA_BaalParvez_SleeperSaid_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What did the Sleeper tell you?";
 //	description = "Was hat euch der Schläfer gesagt?";
@@ -214,6 +227,8 @@ func int DIA_BaalParvez_SleeperSaid_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalParvez_SleeperSaid_Info()
@@ -245,6 +260,7 @@ instance DIA_BaalParvez_PSIMagic(C_INFO)
 	nr = 4;
 	condition = DIA_BaalParvez_PSIMagic_Condition;
 	information = DIA_BaalParvez_PSIMagic_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Tell me about the magic of the Sleeper.";
 //	description = "Erzähl mir von der Magie des Schläfers.";
@@ -257,6 +273,8 @@ func int DIA_BaalParvez_PSIMagic_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalParvez_PSIMagic_Info()
@@ -284,6 +302,7 @@ instance DIA_BaalParvez_GotoPSI(C_INFO)
 	nr = 800;
 	condition = DIA_BaalParvez_GotoPSI_Condition;
 	information = DIA_BaalParvez_GotoPSI_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Take me to your camp. I want to have a look at it!";
 //	description = "Bring mich zu eurem Lager. Das will ich mir ansehen!";
@@ -292,13 +311,15 @@ instance DIA_BaalParvez_GotoPSI(C_INFO)
 
 func int DIA_BaalParvez_GotoPSI_Condition()
 {
-	if (Npc_RefuseTalk(self)==FALSE)
+	if ((Npc_RefuseTalk(self) == FALSE)
 	&& (Npc_KnowsInfo(hero,DIA_BaalParvez_RightWay))
-	&& (Npc_GetDistToWP(self,"PATH_OC_PSI_18")>5000)
-	&& !Npc_KnowsInfo(hero,DIA_BaalParvez_AtPSI)
+	&& (Npc_GetDistToWP(self,"PATH_OC_PSI_18") > 5000)
+	&& (!Npc_KnowsInfo(hero,DIA_BaalParvez_AtPSI)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalParvez_GotoPSI_Info()
@@ -343,8 +364,8 @@ instance DIA_BaalParvez_AtPSI(C_INFO)
 	nr = 1;
 	condition = DIA_BaalParvez_AtPSI_Condition;
 	information = DIA_BaalParvez_AtPSI_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_BaalParvez_AtPSI_Condition()
@@ -353,11 +374,13 @@ func int DIA_BaalParvez_AtPSI_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalParvez_AtPSI_Info()
 {
-	if (BaalParvez_GotoPSI_Day > (Wld_GetDay()-2))
+	if (BaalParvez_GotoPSI_Day > (Wld_GetDay() - 2))
 	{
 //		AI_Output(self,other,"DIA_BaalParvez_AtPSI_10_00"); //Here we are. Down there lies the camp of the Brotherhood.
 //		AI_Output(self,other,"DIA_BaalParvez_AtPSI_10_00"); //Wir sind angekommen. Dort unten liegt das Lager der Bruderschaft.
@@ -396,4 +419,3 @@ func void DIA_BaalParvez_AtPSI_Info()
 
 	Npc_ExchangeRoutine(self,"START");
 };
-

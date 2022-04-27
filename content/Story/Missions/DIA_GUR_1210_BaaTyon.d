@@ -36,16 +36,20 @@ instance DIA_BaalTyon_NoTalk(C_INFO)
 	nr = 1;
 	condition = DIA_BaalTyon_NoTalk_Condition;
 	information = DIA_BaalTyon_NoTalk_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_BaalTyon_NoTalk_Condition()
 {
-	if (Npc_IsInState(self,ZS_TALK) && (BaalTyon_Ansprechbar==FALSE) && (Npc_GetPermAttitude(self,other)!=ATT_FRIENDLY))
+	if ((Npc_IsInState(self,ZS_TALK))
+	&& (BaalTyon_Ansprechbar == FALSE)
+	&& (Npc_GetPermAttitude(self,other) != ATT_FRIENDLY))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalTyon_NoTalk_Info()
@@ -138,16 +142,19 @@ instance DIA_BaalTyon_Vision(C_INFO)
 	nr = 1;
 	condition = DIA_BaalTyon_Vision_Condition;
 	information = DIA_BaalTyon_Vision_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_BaalTyon_Vision_Condition()
 {
-	if ((BaalTyon_Ansprechbar==TRUE) && (Npc_RefuseTalk(self)==FALSE))
+	if ((BaalTyon_Ansprechbar == TRUE)
+	&& (Npc_RefuseTalk(self) == FALSE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalTyon_Vision_Info()
@@ -183,4 +190,3 @@ func void DIA_BaalTyon_Vision_Info()
 
 	AI_StopProcessInfos(self);
 };
-

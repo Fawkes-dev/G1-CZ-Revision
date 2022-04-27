@@ -8,6 +8,7 @@ instance DIA_Gravo_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Gravo_Exit_Condition;
 	information = DIA_Gravo_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Gravo_Hallo(C_INFO)
 	nr = 1;
 	condition = DIA_Gravo_Hallo_Condition;
 	information = DIA_Gravo_Hallo_Info;
+	important = 0;
 	permanent = 0;
 //	description = "How are you doing?";
 //	description = "Wie steht's denn so?";
@@ -72,6 +74,7 @@ instance DIA_Gravo_HelpHow(C_INFO)
 	nr = 1;
 	condition = DIA_Gravo_HelpHow_Condition;
 	information = DIA_Gravo_HelpHow_Info;
+	important = 0;
 	permanent = 0;
 //	description = "If I was in trouble, YOU could help me? How?";
 //	description = "Wenn ich hier Ärger habe, kannst DU mir also helfen? Wie?";
@@ -84,6 +87,8 @@ func int DIA_Gravo_HelpHow_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Gravo_HelpHow_Info()
@@ -120,7 +125,7 @@ func void DIA_Gravo_HelpHow_Info()
 func void B_Gravo_HelpAttitude(var C_NPC prob)
 {
 	//#Needs_Attention tu by sme mali Gravovi odstranit rudu - inak ju hrac moze vymlatit naspat. A Gravo tu rudu predsa pouzije aby uplatil NPC #Immerion
-	if (Npc_GetPermAttitude(prob, other)==ATT_ANGRY)
+	if (Npc_GetPermAttitude(prob, other) == ATT_ANGRY)
 	{
 //		AI_Output(self,other,"B_Gravo_HelpAttitude_ANGRY_04_00"); //That's right, you're in his bad books.
 //		AI_Output(self,other,"B_Gravo_HelpAttitude_ANGRY_04_00"); //Stimmt, er ist nicht besonders gut auf dich zu sprechen.
@@ -128,7 +133,7 @@ func void B_Gravo_HelpAttitude(var C_NPC prob)
 //		AI_Output(self,other,"B_Gravo_HelpAttitude_ANGRY_04_01"); //I'll have some people talk to him. 100 ore and I'll take care of the problem.
 //		AI_Output(self,other,"B_Gravo_HelpAttitude_ANGRY_04_01"); //Ich werd' zusehen, dass sich ein paar Leute mal mit ihm unterhalten. 100 Erz und ich erledige die Sache.
 		AI_Output(self,other,"B_Gravo_HelpAttitude_ANGRY_04_01"); //Zajdu za pár lidmi a popovídám si s nimi. 100 nugetů a já se o to postarám.
-		if (Npc_HasItems(other,itminugget)>=100)
+		if (Npc_HasItems(other,itminugget) >= 100)
 		{
 //			AI_Output(self,other,"B_Gravo_HelpAttitude_ANGRY_04_02"); //Well, let's see how much you have... Ah! Yeah, that should be enough. You can consider the affair settled.
 //			AI_Output(self,other,"B_Gravo_HelpAttitude_ANGRY_04_02"); //Lass sehen, wie viel du hast ... Ah! Das sollte reichen. Betrachte die Sache als erledigt.
@@ -150,7 +155,7 @@ func void B_Gravo_HelpAttitude(var C_NPC prob)
 		};
 
 	}
-	else if (Npc_GetPermAttitude(prob, other)==ATT_HOSTILE)
+	else if (Npc_GetPermAttitude(prob, other) == ATT_HOSTILE)
 	{
 //		AI_Output(self,other,"B_Gravo_HelpAttitude_HOSTILE_04_00"); //You call that trouble? That's an understatement, I think. I think he would like to tear you into little pieces, boy.
 //		AI_Output(self,other,"B_Gravo_HelpAttitude_HOSTILE_04_00"); //Ärger ist gar kein Ausdruck, Junge. Er würde dir am liebsten den Kopf abreißen.
@@ -158,7 +163,7 @@ func void B_Gravo_HelpAttitude(var C_NPC prob)
 //		AI_Output(self,other,"B_Gravo_HelpAttitude_HOSTILE_04_01"); //It won't be cheap if I'm to convince some people to calm him down again. It'll cost you 500 ore at least.
 //		AI_Output(self,other,"B_Gravo_HelpAttitude_HOSTILE_04_01"); //Wenn ich ein paar Jungs davon überzeugen soll, ihn wieder gut zu stimmen, wird das nicht billig. 500 Erz musst du schon hinlegen.
 		AI_Output(self,other,"B_Gravo_HelpAttitude_HOSTILE_04_01"); //Jestli mám pár chlapů přesvědčit, aby ho zase uklidnili, tak to nebude vůbec levné. Musíš složit alespoň 500 nugetů.
-		if (Npc_HasItems(other,itminugget)>=500)
+		if (Npc_HasItems(other,itminugget) >= 500)
 		{
 //			AI_Output(self,other,"B_Gravo_HelpAttitude_HOSTILE_04_02"); //Let's see what you have there... You seem to be a rich boy. I'll take the 500 and sort the thing out.
 //			AI_Output(self,other,"B_Gravo_HelpAttitude_HOSTILE_04_02"); //Lass sehen, wie viel du hast ... Du scheinst ein reicher Bursche zu sein. Ich nehme die 500 und kümmere mich drum.
@@ -195,6 +200,7 @@ instance DIA_Gravo_HelpAngryNow(C_INFO)
 	nr = 1;
 	condition = DIA_Gravo_HelpAngryNow_Condition;
 	information = DIA_Gravo_HelpAngryNow_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Can you help me - I think I'm in trouble.";
 //	description = "Kannst du mir helfen - ich glaub, ich hab' Ärger.";
@@ -207,6 +213,8 @@ func int DIA_Gravo_HelpAngryNow_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Gravo_HelpAngryNow_Info()
@@ -280,6 +288,7 @@ instance DIA_Gravo_Influence(C_INFO)
 	condition = DIA_Gravo_Influence_Condition;
 	information = DIA_Gravo_Influence_Info;
 	//#Needs_Attention toto nemusi byt permanent - kedze mame aj zapis do denniku :-/
+	important = 0;
 	permanent = 1;
 //	description = "Could you tell me who belongs to the influential people here?";
 //	description = "Kannst du mir sagen, wer hier zu den einflussreichen Leuten gehört?";
@@ -292,6 +301,8 @@ func int DIA_Gravo_Influence_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Gravo_Influence_Info()
@@ -316,6 +327,4 @@ func void DIA_Gravo_Influence_Info()
 //	B_LogEntry(GE_TraderOC,"Dexter and Fisk trade in various goods on the market square.");
 //	B_LogEntry(GE_TraderOC,"Dexter und Fisk handeln mit verschiedenen Waren am Marktplatz.");
 	B_LogEntry(GE_TraderOC,"Dexter a Fisk obchodují na tržišti s různým zbožím.");
-
 };
-

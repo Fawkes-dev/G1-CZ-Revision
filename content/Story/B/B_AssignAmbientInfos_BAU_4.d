@@ -12,6 +12,7 @@ instance Info_Bau_4_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Bau_4_EXIT_Condition;
 	information = Info_Bau_4_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = "END";
 };
@@ -35,6 +36,7 @@ instance Info_Bau_4_WichtigePersonen(C_INFO)
 	nr = 3;
 	condition = Info_Bau_4_WichtigePersonen_Condition;
 	information = Info_Bau_4_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Do you have a leader?";
 //	description = "Habt ihr einen Anführer?";
@@ -70,6 +72,7 @@ instance Info_Bau_4_DasLager(C_INFO)
 	nr = 2;
 	condition = Info_Bau_4_DasLager_Condition;
 	information = Info_Bau_4_DasLager_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Is there anything I should know about this place?";
 //	description = "Was muß ich über diesen Ort wissen?";
@@ -100,6 +103,7 @@ instance Info_Bau_4_DieLage(C_INFO) // E1
 	nr = 1;
 	condition = Info_Bau_4_DieLage_Condition;
 	information = Info_Bau_4_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How's it going?";
 //	description = "Wie läuft's denn so?";
@@ -130,6 +134,7 @@ instance Info_Bau_4_Wasser(C_INFO) // E1
 	nr = 800;
 	condition = Info_Bau_4_Wasser_Condition;
 	information = Info_Bau_4_Wasser_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Lefty sent me. I've brought you some water.";
 //	description = "Lefty schickt mich. Ich hab Wasser für dich.";

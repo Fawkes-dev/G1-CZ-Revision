@@ -8,6 +8,7 @@ instance DIA_Horatio_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_Horatio_EXIT_Condition;
 	information = DIA_Horatio_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance Info_Horatio_Wasser(C_INFO)
 	nr = 800;
 	condition = Info_Horatio_Wasser_Condition;
 	information = Info_Horatio_Wasser_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Lefty sent me. I've brought you some water.";
 //	description = "Lefty schickt mich. Ich hab' Wasser für dich.";
@@ -40,11 +42,13 @@ instance Info_Horatio_Wasser(C_INFO)
 
 func int Info_Horatio_Wasser_Condition()
 {
-	if ((Lefty_Mission==LOG_RUNNING) || ((Lefty_Mission==LOG_SUCCESS) && Npc_HasItems(other,ItFo_Potion_Water_01)))
-	&& (self.aivar[AIV_DEALDAY] <= Wld_GetDay())
+	if (((Lefty_Mission == LOG_RUNNING) || ((Lefty_Mission == LOG_SUCCESS) && Npc_HasItems(other,ItFo_Potion_Water_01)))
+	&& (self.aivar[AIV_DEALDAY] <= Wld_GetDay()))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Horatio_Wasser_Info()
@@ -91,8 +95,8 @@ instance DIA_Horatio_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_Horatio_Hello_Condition;
 	information = DIA_Horatio_Hello_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Horatio_Hello_Condition()
@@ -155,6 +159,7 @@ instance DIA_Horatio_SORRY(C_INFO)
 	nr = 1;
 	condition = DIA_Horatio_SORRY_Condition;
 	information = DIA_Horatio_SORRY_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I'm sorry I said what I did about the peasants.";
 //	description = "Tut mir leid, der Spruch mit dem Bauern.";
@@ -167,6 +172,8 @@ func int DIA_Horatio_SORRY_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 //#NEEDS_ATTENTION hmmmm viem, ze sme hovorili revizia cestiny :) ale co tak upravit aj logiku niektorych dialogov?
@@ -192,6 +199,7 @@ instance DIA_Horatio_Story(C_INFO)
 	nr = 1;
 	condition = DIA_Horatio_Story_Condition;
 	information = DIA_Horatio_Story_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What's a man like you doing with the peasants?";
 //	description = "Was macht ein Kerl wie du bei den Bauern?";
@@ -200,10 +208,12 @@ instance DIA_Horatio_Story(C_INFO)
 
 func int DIA_Horatio_Story_Condition()
 {
-	if ((horatio_trouble==FALSE) && (Npc_KnowsInfo(hero,DIA_Horatio_Hello)))
+	if ((horatio_trouble == FALSE) && (Npc_KnowsInfo(hero,DIA_Horatio_Hello)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Horatio_Story_Info()
@@ -238,6 +248,7 @@ instance DIA_Horatio_WhyHere(C_INFO)
 	nr = 1;
 	condition = DIA_Horatio_WhyHere_Condition;
 	information = DIA_Horatio_WhyHere_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Why did you join THIS camp?";
 //	description = "Warum bist du ausgerechnet in DIESES Lager gegangen?";
@@ -250,6 +261,8 @@ func int DIA_Horatio_WhyHere_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Horatio_WhyHere_Info()
@@ -283,6 +296,7 @@ instance DIA_Horatio_PleaseTeachSTR(C_INFO)
 	nr = 2;
 	condition = DIA_Horatio_PleaseTeachSTR_Condition;
 	information = DIA_Horatio_PleaseTeachSTR_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Can you teach me to be as strong as you are?";
 //	description = "Kannst du mir beibringen, auch so stark zuzuschlagen?";
@@ -295,6 +309,8 @@ func int DIA_Horatio_PleaseTeachSTR_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Horatio_PleaseTeachSTR_Info()
@@ -384,6 +400,7 @@ instance DIA_Horatio_ThoughtSTR(C_INFO)
 	nr = 2;
 	condition = DIA_Horatio_ThoughtSTR_Condition;
 	information = DIA_Horatio_ThoughtSTR_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I've been thinking the whole thing over...";
 //	description = "Ich hab' nochmal über die Sache nachgedacht...";
@@ -396,6 +413,8 @@ func int DIA_Horatio_ThoughtSTR_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Horatio_ThoughtSTR_Info()
@@ -486,6 +505,7 @@ instance DIA_Horatio_HelpSTR(C_INFO)
 	nr = 2;
 	condition = DIA_Horatio_HelpSTR_Condition;
 	information = DIA_Horatio_HelpSTR_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I WILL defeat the Rice Lord and his thugs - if you help me!";
 //	description = "Ich WERDE den Reislord fertig machen - wenn du mir dabei hilfst!";
@@ -498,6 +518,8 @@ func int DIA_Horatio_HelpSTR_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Horatio_HelpSTR_Info()
@@ -529,6 +551,7 @@ instance DIA_Horatio_Thanks(C_INFO)
 	nr = 2;
 	condition = DIA_Horatio_Thanks_Condition;
 	information = DIA_Horatio_Thanks_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Thanks for your help!";
 //	description = "Danke für deine Hilfe!";
@@ -541,6 +564,8 @@ func int DIA_Horatio_Thanks_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Horatio_Thanks_Info()

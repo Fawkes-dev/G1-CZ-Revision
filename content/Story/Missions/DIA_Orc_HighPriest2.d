@@ -6,13 +6,13 @@ instance Info_HighPriest2(C_INFO)
 	nr = 1;
 	condition = Info_HighPriest2_Condition;
 	information = Info_HighPriest2_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_HighPriest2_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Info_HighPriest2_Info()

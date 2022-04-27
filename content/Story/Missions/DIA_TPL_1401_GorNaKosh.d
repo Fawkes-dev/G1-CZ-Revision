@@ -40,11 +40,13 @@ instance Tpl_1401_GorNaKosh_SUGGEST(C_INFO)
 
 func int Tpl_1401_GorNaKosh_SUGGEST_Condition()
 {
-	if  Npc_KnowsInfo(hero,Grd_263_Asghan_OPEN)
-	&& !Npc_KnowsInfo(hero,Grd_263_Asghan_OPEN_NOW)
+	if ((Npc_KnowsInfo(hero,Grd_263_Asghan_OPEN))
+	&& (!Npc_KnowsInfo(hero,Grd_263_Asghan_OPEN_NOW)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Tpl_1401_GorNaKosh_SUGGEST_Info()
@@ -85,10 +87,12 @@ instance Tpl_1401_GorNaKosh_INFO(C_INFO)
 
 func int Tpl_1401_GorNaKosh_INFO_Condition()
 {
-	if ! (Npc_KnowsInfo(hero,Grd_263_Asghan_NEST ))
+	if (!Npc_KnowsInfo(hero,Grd_263_Asghan_NEST))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Tpl_1401_GorNaKosh_INFO_Info()
@@ -132,6 +136,8 @@ func int Tpl_1401_GorNaKosh_CRAWLER_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Tpl_1401_GorNaKosh_CRAWLER_Info()
@@ -163,12 +169,14 @@ instance Tpl_1401_GorNaKosh_VICTORY(C_INFO)
 
 func int Tpl_1401_GorNaKosh_VICTORY_Condition()
 {
-	if (Npc_HasItems(hero,ItAt_Crawlerqueen) > 3 )
+	if (Npc_HasItems(hero,ItAt_Crawlerqueen) > 3)
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void Tpl_1401_GorNaKosh_VICTORY_Info()
 {
 //	AI_Output(other,self,"Tpl_1401_GorNaKosh_VICTORY_Info_15_01"); //I've found the crawler nest!

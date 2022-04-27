@@ -8,6 +8,7 @@ instance DIA_Cutter_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Cutter_Exit_Condition;
 	information = DIA_Cutter_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Cutter_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_Cutter_Hello_Condition;
 	information = DIA_Cutter_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "This castle's pretty roomy.";
 //	description = "Ihr habt ganz schön viel Platz hier in der Burg.";
@@ -44,7 +46,10 @@ func int DIA_Cutter_Hello_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
+
 func void DIA_Cutter_Hello_Info()
 {
 //	AI_Output(other,self,"DIA_Cutter_Hello_15_00"); //This castle's pretty roomy.
@@ -68,6 +73,7 @@ instance DIA_Cutter_Burg(C_INFO)
 	nr = 1;
 	condition = DIA_Cutter_Burg_Condition;
 	information = DIA_Cutter_Burg_Info;
+	important = 0;
 	permanent = 10;
 //	description = "What can you tell me about the castle?";
 //	description = "Was kannst du mir über die Burg sagen?";
@@ -80,6 +86,8 @@ func int DIA_Cutter_Burg_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Cutter_Burg_Info()
@@ -114,6 +122,7 @@ instance DIA_Cutter_PERM(C_INFO)
 	nr = 1;
 	condition = DIA_Cutter_PERM_Condition;
 	information = DIA_Cutter_PERM_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What's life like as a guard?";
 //	description = "Wie ist das Leben als Gardist?";
@@ -126,6 +135,8 @@ func int DIA_Cutter_PERM_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Cutter_PERM_Info()
@@ -158,9 +169,12 @@ func int GRD_208_Cutter_WELCOME_Condition()
 {
 	if (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void GRD_208_Cutter_WELCOME_Info()
 {
 //	AI_Output(self,other,"GRD_208_Cutter_WELCOME_Info_08_01"); //You've made the right choice. You'll enjoy being a guard!

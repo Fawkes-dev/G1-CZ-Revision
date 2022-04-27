@@ -33,6 +33,7 @@ instance DIA_Viran_What(C_INFO)
 	nr = 1;
 	condition = DIA_Viran_What_Condition;
 	information = DIA_Viran_What_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What are you doing here?";
 //	description = "Was macht ihr hier?";
@@ -76,6 +77,7 @@ instance DIA_Viran_FetchWeed(C_INFO)
 	nr = 1;
 	condition = DIA_Viran_FetchWeed_Condition;
 	information = DIA_Viran_FetchWeed_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Baal Orun sent me. I'm to take the whole harvest to Kalom.";
 //	description = "Baal Orun schickt mich. Ich soll die gesamte Ernte zu Kalom bringen.";
@@ -88,6 +90,8 @@ func int DIA_Viran_FetchWeed_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Viran_FetchWeed_Info()
@@ -144,6 +148,7 @@ instance DIA_Viran_Bloodflies(C_INFO)
 	nr = 1;
 	condition = DIA_Viran_Bloodflies_Condition;
 	information = DIA_Viran_Bloodflies_Info;
+	important = 0;
 	permanent = 0;
 //	description = "And what do you want me to do?";
 //	description = "Und was soll ich machen?";
@@ -156,6 +161,8 @@ func int DIA_Viran_Bloodflies_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Viran_Bloodflies_Info()
@@ -188,6 +195,7 @@ instance DIA_Viran_Running(C_INFO)
 	nr = 1;
 	condition = DIA_Viran_Running_Condition;
 	information = DIA_Viran_Running_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I don't see any more bloodflies anywhere.";
 //	description = "Ich seh weit und breit keine Blutfliegen mehr.";
@@ -200,6 +208,8 @@ func int DIA_Viran_Running_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Viran_Running_Info()
@@ -208,7 +218,7 @@ func void DIA_Viran_Running_Info()
 //	AI_Output(other,self,"DIA_Viran_Running_15_00"); //Ich seh' weit und breit keine Blutfliegen mehr.
 	AI_Output(other,self,"DIA_Viran_Running_15_00"); //Už tu žádné krvavé mouchy nevidím.
 	Npc_PerceiveAll(self);
-	if ( Wld_DetectNpc(self,bloodfly,ZS_MM_Rtn_Wusel,-1) && (Npc_GetDistToNpc(self,other)<2000)) //other = nearest Bloodfly (Instance/ZS/Guild)
+	if (Wld_DetectNpc(self,bloodfly,ZS_MM_Rtn_Wusel,-1) && (Npc_GetDistToNpc(self,other) < 2000)) //other = nearest Bloodfly (Instance/ZS/Guild)
 	//wenn keine Bloodfly in 40m, dann other noch unverändert (= hero)
 	{
 //		AI_Output(self,hero,"DIA_Viran_Running_07_00"); //But there are some more bugs within twenty paces!
@@ -238,7 +248,7 @@ func void DIA_Viran_Running_Info()
 
 		B_GiveInvItems(self,hero,ItMi_Plants_Swampherb_01, 50);
 
-		if Npc_KnowsInfo(hero,DIA_Balor_FetchWeed)
+		if (Npc_KnowsInfo(hero,DIA_Balor_FetchWeed))
 		{
 //			B_LogEntry(CH1_DeliverWeed,"Viran gave me the second half of today's swampweed harvest. Let's see whether Cor Kalom is satisfied with the amount.");
 //			B_LogEntry(CH1_DeliverWeed,"Viran gab mir die zweite Hälfte der heutigen Sumpfkrauternte. Mal sehen, ob Cor Kalom mit der Menge zufrieden ist.");
@@ -268,6 +278,7 @@ instance DIA_Viran_Perm(C_INFO)
 	nr = 1;
 	condition = DIA_Viran_Perm_Condition;
 	information = DIA_Viran_Perm_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How's the picking going?";
 //	description = "Wie steht's mit der Sammelei?";
@@ -280,6 +291,8 @@ func int DIA_Viran_Perm_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Viran_Perm_Info()
@@ -305,6 +318,7 @@ instance DIA_Viran_RipOff(C_INFO)
 	nr = 5;
 	condition = DIA_Viran_RipOff_Condition;
 	information = DIA_Viran_RipOff_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I'm to take all the weeds to Cor Kalom again.";
 //	description = "Ich soll nochmal alles Kraut zu Cor Kalom bringen.";
@@ -313,10 +327,13 @@ instance DIA_Viran_RipOff(C_INFO)
 
 func int DIA_Viran_RipOff_Condition()
 {
-	if ((Viran_BotenDay<=(Wld_GetDay()-2)) && (Viran_Bloodflies == LOG_SUCCESS)) //Dann hat der SC auch das erste Kraut bekommen
+	if ((Viran_BotenDay <= (Wld_GetDay() - 2))
+	&& (Viran_Bloodflies == LOG_SUCCESS)) //Dann hat der SC auch das erste Kraut bekommen
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Viran_RipOff_Info()
@@ -336,4 +353,3 @@ func void DIA_Viran_RipOff_Info()
 	CreateInvItems(self,ItMi_Plants_Swampherb_01, 50);
 	B_GiveInvItems(self,hero,ItMi_Plants_Swampherb_01, 50);
 };
-

@@ -8,13 +8,14 @@ instance DIA_Grd_264_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Grd_264_Exit_Condition;
 	information = DIA_Grd_264_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
 
 func int DIA_Grd_264_Exit_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void DIA_Grd_264_Exit_Info()
@@ -36,12 +37,14 @@ instance Grd_264_Gardist_GARDEAUFNAHME(C_INFO)
 
 func int Grd_264_Gardist_GARDEAUFNAHME_Condition()
 {
-	if (Npc_HasItems(hero,ItAt_Crawlerqueen) >= 1)
+	if ((Npc_HasItems(hero,ItAt_Crawlerqueen) >= 1)
 	&& (Npc_GetTrueGuild(hero) == GIL_STT)
-	&& (!Npc_KnowsInfo(hero,Grd_260_Drake_GARDEAUFNAHME))
+	&& (!Npc_KnowsInfo(hero,Grd_260_Drake_GARDEAUFNAHME)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Grd_264_Gardist_GARDEAUFNAHME_Info()

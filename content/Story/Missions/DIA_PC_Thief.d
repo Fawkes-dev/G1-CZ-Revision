@@ -10,9 +10,8 @@ instance Info_Diego_Gamestart(C_INFO)
 	nr = 1;
 	condition = Info_Diego_Gamestart_Condition;
 	information = Info_Diego_Gamestart_Info;
-	permanent = 0;
 	important = 1;
-//	//description = "(Startsatz: zum Goldmaster wieder zu Important-Info machen !!!)";
+	permanent = 0;
 	//description = " [important - no description required]";
 };
 
@@ -20,8 +19,10 @@ func int Info_Diego_Gamestart_Condition()
 {
 	if (Kapitel < 2)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_Gamestart_Info()
@@ -52,6 +53,7 @@ instance Info_Diego_EXIT_Gamestart(C_INFO)
 	nr = 999;
 	condition = Info_Diego_EXIT_Gamestart_Condition;
 	information = Info_Diego_EXIT_Gamestart_Info;
+	important = 0;
 	permanent = 0;
 	description = DIALOG_ENDE;
 };
@@ -97,6 +99,7 @@ instance Info_Diego_EXIT_Later(C_INFO)
 	nr = 999;
 	condition = Info_Diego_EXIT_Later_Condition;
 	information = Info_Diego_EXIT_Later_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -107,6 +110,8 @@ func int Info_Diego_EXIT_Later_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_EXIT_Later_Info()
@@ -137,6 +142,7 @@ instance Info_Diego_Brief(C_INFO) // E1
 	nr = 10;
 	condition = Info_Diego_Brief_Condition;
 	information = Info_Diego_Brief_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I have a letter for the High Magician of the Circle of Fire.";
 //	description = "Ich habe einen Brief für den obersten Feuermagier.";
@@ -147,8 +153,10 @@ func int Info_Diego_Brief_Condition()
 {
 	if (Kapitel < 2)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_Brief_Info()
@@ -189,6 +197,7 @@ instance Info_Diego_WarumGeholfen(C_INFO) // E1
 	nr = 5;
 	condition = Info_Diego_WarumGeholfen_Condition;
 	information = Info_Diego_WarumGeholfen_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Why did you help me?";
 //	description = "Warum hast du mir geholfen?";
@@ -197,11 +206,13 @@ instance Info_Diego_WarumGeholfen(C_INFO) // E1
 
 func int Info_Diego_WarumGeholfen_Condition()
 {
-	if (!Diego_After_Gamestart)
-	&& (Kapitel < 2)
+	if ((!Diego_After_Gamestart)
+	&& (Kapitel < 2))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_WarumGeholfen_Info()
@@ -237,6 +248,7 @@ instance Info_Diego_Bullit(C_INFO) // E2
 	nr = 5;
 	condition = Info_Diego_Bullit_Condition;
 	information = Info_Diego_Bullit_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Where's Bullit now?";
 //	description = "Wo ist dieser Bullit jetzt?";
@@ -245,10 +257,13 @@ instance Info_Diego_Bullit(C_INFO) // E2
 
 func int Info_Diego_Bullit_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Diego_WarumGeholfen) && (!Diego_After_Gamestart))
+	if ((Npc_KnowsInfo(hero,Info_Diego_WarumGeholfen))
+	&& (!Diego_After_Gamestart))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_Bullit_Info()
@@ -274,6 +289,7 @@ instance Info_Diego_Kolonie(C_INFO)
 	nr = 1;
 	condition = Info_Diego_Kolonie_Condition;
 	information = Info_Diego_Kolonie_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Okay, what do I need to know about this place?";
 //	description = "Okay, was muss ich über diesen Ort wissen?";
@@ -284,8 +300,10 @@ func int Info_Diego_Kolonie_Condition()
 {
 	if (Kapitel < 2)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_Kolonie_Info()
@@ -312,6 +330,7 @@ instance Info_Diego_Barriere(C_INFO) // E2
 	nr = 3;
 	condition = Info_Diego_Barriere_Condition;
 	information = Info_Diego_Barriere_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Tell me more about the Barrier.";
 //	description = "Erzähl mir was über die Barriere.";
@@ -320,10 +339,13 @@ instance Info_Diego_Barriere(C_INFO) // E2
 
 func int Info_Diego_Barriere_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Diego_Kolonie) && (Diego_After_Gamestart==TRUE))
+	if ((Npc_KnowsInfo(hero,Info_Diego_Kolonie))
+	&& (Diego_After_Gamestart == TRUE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_Barriere_Info()
@@ -356,6 +378,7 @@ instance Info_Diego_OtherCamps(C_INFO) // E2
 	nr = 2;
 	condition = Info_Diego_OtherCamps_Condition;
 	information = Info_Diego_OtherCamps_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What about the two other camps?";
 //	description = "Was ist mit den beiden anderen Lagern?";
@@ -364,11 +387,14 @@ instance Info_Diego_OtherCamps(C_INFO) // E2
 
 func int Info_Diego_OtherCamps_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Diego_Kolonie) && (Diego_After_Gamestart==TRUE))
-	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
+	if ((Npc_KnowsInfo(hero,Info_Diego_Kolonie))
+	&& (Diego_After_Gamestart == TRUE)
+	&& (Npc_GetTrueGuild(hero) == GIL_NONE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_OtherCamps_Info()
@@ -401,6 +427,7 @@ instance Info_Diego_OldCamp(C_INFO) // E2
 	nr = 1;
 	condition = Info_Diego_OldCamp_Condition;
 	information = Info_Diego_OldCamp_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Tell me something about the Old Camp.";
 //	description = "Erzähl mir was über das alte Lager.";
@@ -409,10 +436,13 @@ instance Info_Diego_OldCamp(C_INFO) // E2
 
 func int Info_Diego_OldCamp_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Diego_Kolonie) && (Diego_After_Gamestart==TRUE))
+	if ((Npc_KnowsInfo(hero,Info_Diego_Kolonie))
+	&& (Diego_After_Gamestart == TRUE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_OldCamp_Info()
@@ -432,9 +462,9 @@ func void Info_Diego_OldCamp_Info()
 
 	if (Npc_GetTrueGuild(hero) == GIL_NONE)
 	{
-//	AI_Output(self,hero,"Info_Diego_OldCamp_11_04"); //You can also get some of it. All you have to do is join Gomez' people.
-//	AI_Output(self,hero,"Info_Diego_OldCamp_11_04"); //Du kannst auch deinen Teil davon bekommen. Alles, was du tun mußt, ist dich Gomez' Leuten anzuschließen.
-	AI_Output(self,hero,"Info_Diego_OldCamp_11_04"); //Také z toho můžeš něco dostat. Jediné, co musíš udělat je přidat ke Gomezovi.
+//		AI_Output(self,hero,"Info_Diego_OldCamp_11_04"); //You can also get some of it. All you have to do is join Gomez' people.
+//		AI_Output(self,hero,"Info_Diego_OldCamp_11_04"); //Du kannst auch deinen Teil davon bekommen. Alles, was du tun mußt, ist dich Gomez' Leuten anzuschließen.
+		AI_Output(self,hero,"Info_Diego_OldCamp_11_04"); //Také z toho můžeš něco dostat. Jediné, co musíš udělat je přidat ke Gomezovi.
 	};
 };
 
@@ -448,6 +478,7 @@ instance Info_Diego_WhosGomez(C_INFO) // E2/E3
 	nr = 3;
 	condition = Info_Diego_WhosGomez_Condition;
 	information = Info_Diego_WhosGomez_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Who's Gomez?";
 //	description = "Wer ist Gomez?";
@@ -456,10 +487,13 @@ instance Info_Diego_WhosGomez(C_INFO) // E2/E3
 
 func int Info_Diego_WhosGomez_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Diego_OldCamp) || Npc_KnowsInfo(hero,Info_Diego_Brief))
+	if ((Npc_KnowsInfo(hero,Info_Diego_OldCamp))
+	|| (Npc_KnowsInfo(hero,Info_Diego_Brief)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_WhosGomez_Info()
@@ -482,6 +516,7 @@ instance Info_Diego_JoinOldcamp(C_INFO) // E2/E3
 	nr = 4;
 	condition = Info_Diego_JoinOldcamp_Condition;
 	information = Info_Diego_JoinOldcamp_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Let's assume I want to join his people, what do I need to do?";
 //	description = "Wie kann ich mich Gomez' Leuten anschliessen?";
@@ -490,12 +525,14 @@ instance Info_Diego_JoinOldcamp(C_INFO) // E2/E3
 
 func int Info_Diego_JoinOldcamp_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Diego_OldCamp) || Npc_KnowsInfo(hero,Info_Diego_Brief))
-	&& !C_NpcBelongsToOldCamp(hero)
-	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
+	if (((Npc_KnowsInfo(hero,Info_Diego_OldCamp)) || (Npc_KnowsInfo(hero,Info_Diego_Brief)))
+	&& (!C_NpcBelongsToOldCamp(hero))
+	&& (Npc_GetTrueGuild(hero) == GIL_NONE))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_JoinOldcamp_Info()
@@ -507,7 +544,7 @@ func void Info_Diego_JoinOldcamp_Info()
 //	AI_Output(self,hero,"Info_Diego_JoinOldcamp_11_01"); //Am Eingang zur Burg findest du einen Mann, der Thorus heißt. Sag ihm Diego schickt dich.
 	AI_Output(self,hero,"Info_Diego_JoinOldcamp_11_01"); //U hradní brány najdeš člověka jménem Thorus. Řekni mu, že tě posílá Diego.
 	VAR C_NPC Thorus; Thorus = Hlp_GetNpc(GRD_200_THORUS);
-	Thorus.aivar[AIV_FINDABLE]=TRUE;
+	Thorus.aivar[AIV_FINDABLE] = TRUE;
 
 	Log_CreateTopic(CH1_JoinOC,LOG_MISSION);
 	Log_SetTopicStatus(CH1_JoinOC,LOG_RUNNING);
@@ -526,6 +563,7 @@ instance Info_Diego_WayToOldcamp(C_INFO) // E2/E3
 	nr = 4;
 	condition = Info_Diego_WayToOldcamp_Condition;
 	information = Info_Diego_WayToOldcamp_Info;
+	important = 0;
 	permanent = 0;
 //	description = "How do I get to the Old Camp?";
 //	description = "Wie komme ich zum alten Lager?";
@@ -534,10 +572,13 @@ instance Info_Diego_WayToOldcamp(C_INFO) // E2/E3
 
 func int Info_Diego_WayToOldcamp_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Diego_Kolonie) && (!Diego_After_Gamestart))
+	if ((Npc_KnowsInfo(hero,Info_Diego_Kolonie))
+	&& (!Diego_After_Gamestart))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_WayToOldcamp_Info()
@@ -563,6 +604,7 @@ instance Info_Diego_WoWaffe(C_INFO) // E2/E3
 	nr = 4;
 	condition = Info_Diego_WoWaffe_Condition;
 	information = Info_Diego_WoWaffe_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Where do I get a weapon?";
 //	description = "Wo kriege ich eine Waffe her?";
@@ -571,10 +613,13 @@ instance Info_Diego_WoWaffe(C_INFO) // E2/E3
 
 func int Info_Diego_WoWaffe_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Diego_WayToOldcamp) && (!Diego_After_Gamestart))
+	if ((Npc_KnowsInfo(hero,Info_Diego_WayToOldcamp))
+	&& (!Diego_After_Gamestart))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_WoWaffe_Info()
@@ -600,6 +645,7 @@ instance Info_Diego_ThorusSays(C_INFO) // E2/E3
 	nr = 1;
 	condition = Info_Diego_ThorusSays_Condition;
 	information = Info_Diego_ThorusSays_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I've talked to Thorus.";
 //	description = "Ich habe mit Thorus geredet.";
@@ -612,6 +658,8 @@ func int Info_Diego_ThorusSays_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_ThorusSays_Info()
@@ -646,6 +694,7 @@ instance Info_Diego_Rules(C_INFO) // E2/E3
 	nr = 10;
 	condition = Info_Diego_Rules_Condition;
 	information = Info_Diego_Rules_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What do I have to know to be accepted in the Old Camp?";
 //	description = "Was muss ich wissen, um im Alten Lager aufgenommen zu werden?";
@@ -658,6 +707,8 @@ func int Info_Diego_Rules_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_Rules_Info()
@@ -693,6 +744,7 @@ instance Info_Diego_Celebs(C_INFO) // E2/E3
 	nr = 10;
 	condition = Info_Diego_Celebs_Condition;
 	information = Info_Diego_Celebs_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Where do I find the important people?";
 //	description = "Wo finde ich die wichtigen Leute?";
@@ -705,6 +757,8 @@ func int Info_Diego_Celebs_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_Celebs_Info()
@@ -733,6 +787,7 @@ instance Info_Diego_Teachers(C_INFO) // E2/E3
 	nr = 10;
 	condition = Info_Diego_Teachers_Condition;
 	information = Info_Diego_Teachers_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Who can teach me?";
 //	description = "Bei wem kann ich was lernen?";
@@ -745,6 +800,8 @@ func int Info_Diego_Teachers_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_Teachers_Info()
@@ -790,6 +847,7 @@ instance Info_Diego_Teach(C_INFO)
 	nr = 100;
 	condition = Info_Diego_Teach_Condition;
 	information = Info_Diego_Teach_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Can you teach me something?";
 //	description = "Kannst du mir was beibringen?";
@@ -802,6 +860,8 @@ func int Info_Diego_Teach_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_Teach_Info()
@@ -926,7 +986,7 @@ func void Info_Diego_Teach_DEX_5()
 // BRING LIST
 // ************************************************************
 
-VAR INT Diego_BringList; //MISSIONSVARIABLE
+var int Diego_BringList; //MISSIONSVARIABLE
 
 // ----------------------------- OFFER -------------------------------------
 
@@ -936,6 +996,7 @@ instance Info_Diego_BringList_Offer(C_INFO)
 	nr = 10;
 	condition = Info_Diego_BringList_Offer_Condition;
 	information = Info_Diego_BringList_Offer_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What's the test of faith?";
 //	description = "Was ist die Prüfung des Vertrauens?";
@@ -948,6 +1009,8 @@ func int Info_Diego_BringList_Offer_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_BringList_Offer_Info()
@@ -994,6 +1057,7 @@ instance Info_Diego_IanPassword(C_INFO)
 	nr = 1;
 	condition = Info_Diego_IanPassword_Condition;
 	information = Info_Diego_IanPassword_Info;
+	important = 0;
 	permanent = 0;
 //	description = "If the list is so important, why should Ian give it to me?";
 //	description = "Wenn die Liste so vichtig ist, wieso sollte Ian sie mir geben?";
@@ -1006,6 +1070,8 @@ func int Info_Diego_IanPassword_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_IanPassword_Info()
@@ -1033,6 +1099,7 @@ instance Info_Diego_MapToOldMine(C_INFO)
 	nr = 1;
 	condition = Info_Diego_MapToOldMine_Condition;
 	information = Info_Diego_MapToOldMine_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Where can I find the Old Mine?";
 //	description = "Wo finde ich die Alte Mine?";
@@ -1045,6 +1112,8 @@ func int Info_Diego_MapToOldMine_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_MapToOldMine_Info()
@@ -1072,6 +1141,7 @@ instance Info_Diego_BringList_Success(C_INFO)
 	nr = 1;
 	condition = Info_Diego_BringList_Success_Condition;
 	information = Info_Diego_BringList_Success_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I have the list from Ian.";
 //	description = "Ich hab' die Liste von Ian.";
@@ -1080,10 +1150,13 @@ instance Info_Diego_BringList_Success(C_INFO)
 
 func int Info_Diego_BringList_Success_Condition()
 {
-	if ((Diego_BringList == LOG_RUNNING) && (Npc_HasItems(hero,TheList) || Npc_HasItems(hero,TheListNC)))
+	if ((Diego_BringList == LOG_RUNNING)
+	&& ((Npc_HasItems(hero,TheList)) || (Npc_HasItems(hero,TheListNC))))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_BringList_Success_Info()
@@ -1092,14 +1165,14 @@ func void Info_Diego_BringList_Success_Info()
 //	AI_Output(hero,self,"Info_Diego_BringList_Success_15_00"); //Ich hab' die Liste von Ian.
 	AI_Output(hero,self,"Info_Diego_BringList_Success_15_00"); //Mám seznam od Iana.
 
-	if Npc_HasItems(hero,TheList)
+	if (Npc_HasItems(hero,TheList))
 	{
 		B_GiveInvItems(hero,self,TheList,1);
 //		B_LogEntry(CH1_BringList,"Diego was very happy when I gave him Ian's list.");
 //		B_LogEntry(CH1_BringList,"Diego war sehr zufrieden als ich ihm Ian's Liste überreichte.");
 		B_LogEntry(CH1_BringList,"Diego měl velkou radost, když jsem mu předal seznam, který jsem dostal od Iana.");
 	}
-	else if Npc_HasItems(hero,TheListNC)
+	else if (Npc_HasItems(hero,TheListNC))
 	{
 		B_GiveInvItems(hero,self,TheListNC,1);
 //		B_LogEntry(CH1_BringList,"Diego was very content when I gave him Ian's list. Looks like he didn't notice that Lares forged it, or did I just see a sparkle in his eyes?");
@@ -1132,6 +1205,7 @@ instance Info_Diego_JoinAnalyze(C_INFO)
 	nr = 800;
 	condition = Info_Diego_JoinAnalyze_Condition;
 	information = Info_Diego_JoinAnalyze_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What about my esteem within the Camp?";
 //	description = "Wie steht's mit meinem Ansehen im Lager?";
@@ -1140,12 +1214,14 @@ instance Info_Diego_JoinAnalyze(C_INFO)
 
 func int Info_Diego_JoinAnalyze_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Diego_Rules)
+	if ((Npc_KnowsInfo(hero,Info_Diego_Rules))
 	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
-	&& (oldHeroGuild == 0)
+	&& (oldHeroGuild == 0))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_JoinAnalyze_Info()
@@ -1211,7 +1287,7 @@ func void Info_Diego_JoinAnalyze_Info()
 		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Whistler_11_01"); //Whistler mi vyprávěl příběh o Fiskovi... No, být tebou, vzal bych tu rudu a zmizel. Mluvil o tobě velice kladně.
 		Points_OC = Points_OC + 3;
 	}
-	else if ((Whistler_BuyMySword == LOG_FAILED) || ((Whistler_BuyMySword==LOG_RUNNING)&&(Whistler_BuyMySword_Day<=(Wld_GetDay()-2))))
+	else if ((Whistler_BuyMySword == LOG_FAILED) || ((Whistler_BuyMySword == LOG_RUNNING) && (Whistler_BuyMySword_Day <= (Wld_GetDay() - 2))))
 	{
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Whistler_11_02"); //I've talked to Whistler. You took his ore, you clever bastard! I must admit, you're quite brave!
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Whistler_11_02"); //Ich hab' mit Whistler geredet. Du bist mit seinem Erz durchgebrannt, du gerissener Hund! Ich muss schon sagen, Mut hast du ja!
@@ -1300,7 +1376,7 @@ func void Info_Diego_JoinAnalyze_Info()
 		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Fisk_11_01"); //Fisk mi řekl, že jsi ho překvapil. V každém případě bude na tvojí straně.
 		Points_OC = Points_OC + 5;
 	}
-	else if ((MordragKO_HauAb==TRUE) || (MordragKO_StayAtNC==TRUE))
+	else if ((MordragKO_HauAb == TRUE) || (MordragKO_StayAtNC == TRUE))
 	{
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Fisk_11_02"); //Fisk is really pissed off with you. If I were you I'd look for someone to replace Mordrag.
 //		AI_Output(self,hero,"Info_Diego_JoinAnalyze_Fisk_11_02"); //Fisk ist echt sauer auf dich, Mann. Wenn ich du wäre würd ich mich um Ersatz für Mordrag kümmern.
@@ -1313,7 +1389,7 @@ func void Info_Diego_JoinAnalyze_Info()
 //		AI_Output(self,hero,"Info_Diego_Points_11_00"); //Du hast genug Leute gefunden, die für dich sprechen.
 		AI_Output(self,hero,"Info_Diego_Points_11_00"); //Našel jsi dost lidí, kteří budou mluvit v tvůj prospěch.
 
-		if hero.level >= 5
+		if (hero.level >= 5)
 		{
 			if (Diego_BringList == LOG_SUCCESS)
 			{
@@ -1345,7 +1421,7 @@ func void Info_Diego_JoinAnalyze_Info()
 //		AI_Output(self,hero,"Info_Diego_Points_11_10"); //Alles in allem schon nicht so schlecht für eine Neuen.
 		AI_Output(self,hero,"Info_Diego_Points_11_10"); //Konec konců to nebylo zlé, na nováčka.
 	}
-	else if points_oc >= 0
+	else if (points_oc >= 0)
 	{
 //		AI_Output(self,hero,"Info_Diego_Points_11_20"); //Get on with it! There are still many things to do if you wanna get anywhere here in the Camp.
 //		AI_Output(self,hero,"Info_Diego_Points_11_20"); //Halt dich ran, es gibt noch viel zu tun, wenn du es hier im Lager zu was bringen willst.
@@ -1393,6 +1469,7 @@ instance Info_Diego_WhatToSayToGomez(C_INFO)
 	nr = 1;
 	condition = Info_Diego_WhatToSayToGomez_Condition;
 	information = Info_Diego_WhatToSayToGomez_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What do I have to do when I meet Gomez?";
 //	description = "Was soll ich machen, wenn ich bei Gomez bin?";
@@ -1405,6 +1482,8 @@ func int Info_Diego_WhatToSayToGomez_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_WhatToSayToGomez_Info()
@@ -1442,13 +1521,15 @@ instance PC_Thief_ARMOR(C_INFO)
 
 func int PC_Thief_ARMOR_Condition()
 {
-	if (Npc_GetTrueGuild(hero) == GIL_STT)
-	&& (!Npc_HasItems(hero,STT_ARMOR_H))
+	if ((Npc_GetTrueGuild(hero) == GIL_STT)
+	&& (!Npc_HasItems(hero,STT_ARMOR_H)))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void PC_Thief_ARMOR_Info()
 {
 	if (Npc_HasItems(hero,ItMinugget) >= VALUE_STT_ARMOR_H)
@@ -1487,6 +1568,7 @@ func void PC_Thief_ARMOR_Info()
 //----------------------------------------------------------------
 // Die Troll Situation
 //----------------------------------------------------------------
+
 instance PC_Thief_MEETAGAIN(C_INFO)
 {
 	npc = PC_Thief;
@@ -1498,12 +1580,15 @@ instance PC_Thief_MEETAGAIN(C_INFO)
 
 func int PC_Thief_MEETAGAIN_Condition()
 {
-	if (Kapitel == 3)
-	&& (Npc_GetDistToWP(self,"OW_PATH_190") < 700 )
+	if ((Kapitel == 3)
+	&& (Npc_GetDistToWP(self,"OW_PATH_190") < 700))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void PC_Thief_MEETAGAIN_Info()
 {
 	AI_GotoNpc(self,hero);
@@ -1573,12 +1658,15 @@ instance PC_Thief_SHOWFOCUS(C_INFO)
 
 func int PC_Thief_SHOWFOCUS_Condition()
 {
-	if (Npc_KnowsInfo(hero,PC_Thief_MEETAGAIN))
-	&& (Npc_GetDistToWP(self,"LOCATION_12_01") < 1000)
+	if ((Npc_KnowsInfo(hero,PC_Thief_MEETAGAIN))
+	&& (Npc_GetDistToWP(self,"LOCATION_12_01") < 1000))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void PC_Thief_SHOWFOCUS_Info()
 {
 	AI_GotoNpc(self,hero);
@@ -1626,13 +1714,18 @@ func int PC_Thief_AFTERTROLL_Condition()
 	Npc_PerceiveAll(self);
 	trollFound = Wld_DetectNpc(self,Troll, NOFUNC, -1);
 
-	if Npc_KnowsInfo(hero,PC_Thief_SHOWFOCUS)
-	&& ((trollFound && (Npc_IsDead(other) || Npc_IsInState(other,ZS_MagicShrink))) // Troll besiegt...
-		|| (Npc_GetDistToWP(hero,"LOCATION_12_14_WHEEL") < 1000)) // ...oder Spieler an der Winde angekommen
+	if (Npc_KnowsInfo(hero,PC_Thief_SHOWFOCUS))
 	{
-		return TRUE;
+		if (((trollFound) && ((Npc_IsDead(other)) || (Npc_IsInState(other,ZS_MagicShrink)))) // Troll besiegt...
+		|| ((Npc_GetDistToWP(hero,"LOCATION_12_14_WHEEL")) < 1000)) // ...oder Spieler an der Winde angekommen
+		{
+			return 1;
+		};
 	};
+
+	return 0;
 };
+
 func void PC_Thief_AFTERTROLL_Info()
 {
 	AI_GotoNpc(self,hero);
@@ -1653,6 +1746,7 @@ func void PC_Thief_AFTERTROLL_Info()
 //---------------------------------------------------------------------
 // Info WHEEL
 //---------------------------------------------------------------------
+
 instance PC_Thief_WHEEL(C_INFO)
 {
 	npc = PC_Thief;
@@ -1664,12 +1758,15 @@ instance PC_Thief_WHEEL(C_INFO)
 
 func int PC_Thief_WHEEL_Condition()
 {
-	if (Npc_KnowsInfo(hero,PC_Thief_AFTERTROLL))
-	&& (Troll_Wheel == 1)
+	if ((Npc_KnowsInfo(hero,PC_Thief_AFTERTROLL))
+	&& (Troll_Wheel == 1))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void PC_Thief_WHEEL_Info()
 {
 //	AI_Output(self,hero,"PC_Thief_WHEEL_Info_11_01"); //The winch seems to be jammed.
@@ -1688,6 +1785,7 @@ func void PC_Thief_WHEEL_Info()
 //---------------------------------------------------------------------
 // Info FIXWHEEL
 //---------------------------------------------------------------------
+
 instance PC_Thief_FIXWHEEL(C_INFO)
 {
 	npc = PC_Thief;
@@ -1701,9 +1799,12 @@ func int PC_Thief_FIXWHEEL_Condition()
 {
 	if (Npc_KnowsInfo(hero,PC_Thief_WHEEL))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void PC_Thief_FIXWHEEL_Info()
 {
 //	AI_Output(self,hero,"PC_Thief_FIXWHEEL_Info_11_01"); //Well, it ought to work now.
@@ -1734,12 +1835,15 @@ instance PC_Thief_WAITATFOCUS(C_INFO)
 
 func int PC_Thief_WAITATFOCUS_Condition()
 {
-	if Npc_KnowsInfo(hero,PC_Thief_FIXWHEEL)
-	&& (Npc_GetDistToWP(hero,"LOCATION_12_03") < 1000)
+	if ((Npc_KnowsInfo(hero,PC_Thief_FIXWHEEL))
+	&& (Npc_GetDistToWP(hero,"LOCATION_12_03") < 1000))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void PC_Thief_WAITATFOCUS_Info()
 {
 	AI_GotoNpc(self,hero);
@@ -1755,6 +1859,7 @@ func void PC_Thief_WAITATFOCUS_Info()
 // Info GOTIT
 //---------------------------------------------------------------------
 //-----SPIELER HAT DEN FOKUS GEFUNDEN---------------------
+
 instance PC_Thief_GOTIT(C_INFO)
 {
 	npc = PC_Thief;
@@ -1768,8 +1873,10 @@ func int PC_Thief_GOTIT_Condition()
 {
 	if (Npc_HasItems(hero,Focus_2))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void PC_Thief_GOTIT_Info()
@@ -1812,6 +1919,7 @@ func void PC_Thief_GOTIT_Info()
 //***************************************************************************
 // Info OCWARN
 //***************************************************************************
+
 instance Info_Diego_OCWARN(C_INFO)
 {
 	npc = PC_Thief;
@@ -1825,8 +1933,10 @@ func int Info_Diego_OCWARN_Condition()
 {
 	if (Kapitel == 4)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_OCWARN_Info()
@@ -1887,8 +1997,10 @@ func int Info_Diego_OCMINE_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Diego_OCWARN))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_OCMINE_Info()
@@ -1910,6 +2022,7 @@ func void Info_Diego_OCMINE_Info()
 //***************************************************************************
 // Info OCKDF
 //***************************************************************************
+
 instance Info_Diego_OCKDF(C_INFO)
 {
 	npc = PC_Thief;
@@ -1924,10 +2037,13 @@ instance Info_Diego_OCKDF(C_INFO)
 
 func int Info_Diego_OCKDF_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Diego_OCWARN) && !Npc_KnowsInfo(hero,Info_Diego_OCFM))
+	if ((Npc_KnowsInfo(hero,Info_Diego_OCWARN))
+	&& (!Npc_KnowsInfo(hero,Info_Diego_OCFM)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_OCKDF_Info()
@@ -1943,6 +2059,7 @@ func void Info_Diego_OCKDF_Info()
 //***************************************************************************
 // Info OCFM
 //***************************************************************************
+
 instance Info_Diego_OCFM(C_INFO)
 {
 	npc = PC_Thief;
@@ -1957,10 +2074,13 @@ instance Info_Diego_OCFM(C_INFO)
 
 func int Info_Diego_OCFM_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Diego_OCWARN) && !Npc_KnowsInfo(hero,Info_Diego_OCKDF))
+	if ((Npc_KnowsInfo(hero,Info_Diego_OCWARN))
+	&& (!Npc_KnowsInfo(hero,Info_Diego_OCKDF)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_OCFM_Info()
@@ -1976,6 +2096,7 @@ func void Info_Diego_OCFM_Info()
 //***************************************************************************
 // Info OCSTORY
 //***************************************************************************
+
 instance Info_Diego_OCSTORY(C_INFO)
 {
 	npc = PC_Thief;
@@ -1990,10 +2111,13 @@ instance Info_Diego_OCSTORY(C_INFO)
 
 func int Info_Diego_OCSTORY_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Diego_OCFM) || Npc_KnowsInfo(hero,Info_Diego_OCKDF))
+	if ((Npc_KnowsInfo(hero,Info_Diego_OCFM))
+	|| (Npc_KnowsInfo(hero,Info_Diego_OCKDF)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_OCSTORY_Info()
@@ -2032,6 +2156,7 @@ func void Info_Diego_OCSTORY_Info()
 //***************************************************************************
 // Info OCWARNNC
 //***************************************************************************
+
 instance Info_Diego_OCWARNNC(C_INFO)
 {
 	npc = PC_Thief;
@@ -2048,8 +2173,10 @@ func int Info_Diego_OCWARNNC_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Diego_OCSTORY))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_OCWARNNC_Info()
@@ -2071,6 +2198,7 @@ func void Info_Diego_OCWARNNC_Info()
 //***************************************************************************
 // Info OCGUARDS
 //***************************************************************************
+
 instance Info_Diego_OCGUARDS(C_INFO)
 {
 	npc = PC_Thief;
@@ -2087,8 +2215,10 @@ func int Info_Diego_OCGUARDS_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Diego_OCSTORY))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_OCGUARDS_Info()
@@ -2123,8 +2253,10 @@ func int Info_Diego_OCMURDER_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Diego_OCSTORY))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_OCMURDER_Info()
@@ -2165,8 +2297,10 @@ func int Info_Diego_OCRETREAT_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Diego_OCMURDER))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_OCRETREAT_Info()
@@ -2201,8 +2335,10 @@ func int Info_Diego_OCFAVOR_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Diego_OCRETREAT))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Diego_OCFAVOR_Info()
@@ -2242,7 +2378,9 @@ func void Info_Diego_OCFAVOR_Info()
 	Info_AddChoice(Info_Diego_Gamestart, "Wahre Worte zum falschen Mann (+3 Mana)" ,Info_Diego_Gamestart_Choice_Man);
 	Info_AddChoice(Info_Diego_Gamestart, "Unschuldig                    (+1 auf alle Attribute)" ,Info_Diego_Gamestart_Choice_All);
 };
+
 // -------------------------------------------- CHOICES ----------------------------------------------------
+
 func void Info_Diego_Gamestart_Choice_Dex()
 {
 	AI_Output(hero,self,"Info_Diego_Gamestart_Choice_Dex_15_00"); //Ich habe ne Ladung Erz verschwinden lassen.
@@ -2285,5 +2423,4 @@ func void Info_Diego_Gamestart_Choice_All()
 	hero.attribute[ATR_MANA] = hero.attribute[ATR_MANA] +1;
 	hero.attribute[ATR_MANA_MAX] = hero.attribute[ATR_MANA_MAX] +1;
 	Info_ClearChoices(Info_Diego_Gamestart);
-
 */

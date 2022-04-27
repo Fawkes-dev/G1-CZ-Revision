@@ -8,6 +8,7 @@ instance DIA_GRD_245_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_GRD_245_Exit_Condition;
 	information = DIA_GRD_245_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_GRD_245_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_GRD_245_Hello_Condition;
 	information = DIA_GRD_245_Hello_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What's in this house?";
 //	description = "Was ist in diesem Haus?";
@@ -52,4 +54,3 @@ func void DIA_GRD_245_Hello_Info()
 //	AI_Output(self,other,"DIA_GRD_245_Hello_13_01"); //Das ist das Haus der Erzbarone. Also wenn du hier reingehst, benimm dich!
 	AI_Output(self,other,"DIA_GRD_245_Hello_13_01"); //To je dům Rudobaronů. Pokud chceš jít dál, měl by ses lépe chovat!
 };
-

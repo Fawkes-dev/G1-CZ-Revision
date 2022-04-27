@@ -8,6 +8,7 @@ instance DIA_Joru_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Joru_Exit_Condition;
 	information = DIA_Joru_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Joru_Greet(C_INFO)
 	nr = 1;
 	condition = DIA_Joru_Greet_Condition;
 	information = DIA_Joru_Greet_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What are you doing here?";
 //	description = "Was machst du hier?";
@@ -75,6 +77,7 @@ instance DIA_Joru_Tester(C_INFO)
 	nr = 1;
 	condition = DIA_Joru_Tester_Condition;
 	information = DIA_Joru_Tester_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What's your task here?";
 //	description = "Was ist deine Aufgabe hier?";
@@ -87,6 +90,8 @@ func int DIA_Joru_Tester_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Joru_Tester_Info()
@@ -115,6 +120,7 @@ instance DIA_Joru_SleeperContact(C_INFO)
 	nr = 1;
 	condition = DIA_Joru_SleeperContact_Condition;
 	information = DIA_Joru_SleeperContact_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Have you ever been in contact with the Sleeper?";
 //	description = "Hattest du schon Kontakt zum Schläfer?";
@@ -127,6 +133,8 @@ func int DIA_Joru_SleeperContact_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Joru_SleeperContact_Info()
@@ -160,6 +168,7 @@ instance DIA_Joru_JoinPsi(C_INFO)
 	nr = 5;
 	condition = DIA_Joru_JoinPsi_Condition;
 	information = DIA_Joru_JoinPsi_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I'd like to join your camp - can you help me?";
 //	description = "Ich will mich eurem Lager anschließen - kannst du mir dabei helfen?";
@@ -168,11 +177,13 @@ instance DIA_Joru_JoinPsi(C_INFO)
 
 func int DIA_Joru_JoinPsi_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Joru_Greet))
-	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
+	if ((Npc_KnowsInfo(hero,DIA_Joru_Greet))
+	&& (Npc_GetTrueGuild(hero) == GIL_NONE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Joru_JoinPsi_Info()
@@ -241,6 +252,7 @@ instance DIA_Joru_JointsRunning(C_INFO)
 	nr = 5;
 	condition = DIA_Joru_JointsRunning_Condition;
 	information = DIA_Joru_JointsRunning_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I have swampweed on me. You can have it.";
 //	description = "Ich habe Sumpfkraut bei mir. Du kannst es haben.";
@@ -253,6 +265,8 @@ func int DIA_Joru_JointsRunning_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Joru_JointsRunning_Info()
@@ -261,7 +275,7 @@ func void DIA_Joru_JointsRunning_Info()
 //	AI_Output(other,self,"DIA_Joru_JointsRunning_15_00"); //Ich habe Sumpfkraut bei mir. Du kannst es haben.
 	AI_Output(other,self,"DIA_Joru_JointsRunning_15_00"); //Mám svoji drogu z bažin. Můžeš ji mít.
 
-	if (Npc_HasItems(other,itmijoint_2)>=3)
+	if (Npc_HasItems(other,itmijoint_2) >= 3)
 	{
 //		AI_Output(self,other,"DIA_Joru_JointsRunning_07_01"); //Good! You must have noticed that none of the Gurus wants to talk to you.
 //		AI_Output(self,other,"DIA_Joru_JointsRunning_07_01"); //Gut! Du hast sicher schon bemerkt, dass so gut wie keiner der Gurus mit dir reden will.
@@ -295,6 +309,7 @@ instance DIA_Joru_ImpressGurus(C_INFO)
 	nr = 5;
 	condition = DIA_Joru_ImpressGurus_Condition;
 	information = DIA_Joru_ImpressGurus_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How can I impress the Gurus?";
 //	description = "Wie kann ich die Gurus beeindrucken?";
@@ -307,6 +322,8 @@ func int DIA_Joru_ImpressGurus_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Joru_ImpressGurus_Info()
@@ -336,7 +353,7 @@ func void DIA_Joru_ImpressGurus_Info()
 //	AI_Output(self,other,"DIA_Joru_ImpressGurus_07_07"); //Hey - eine Hand wäscht die andere.
 	AI_Output(self,other,"DIA_Joru_ImpressGurus_07_07"); //Hej - dohoda je dohoda.
 
-	if ( Joru_JoinPsi == FALSE)
+	if (Joru_JoinPsi == FALSE)
 	{
 //		B_LogEntry(CH1_JoinPsi,"In order to impress Baal Cadar I have to cast a sleeping spell on one of his listeners.");
 //		B_LogEntry(CH1_JoinPsi,"Um Baal Cadar zu beeindrucken muss ich auf einen seiner Zuhörer einen Schlafzauber legen.");
@@ -360,6 +377,7 @@ instance DIA_Joru_GetMagic(C_INFO)
 	nr = 5;
 	condition = DIA_Joru_GetMagic_Condition;
 	information = DIA_Joru_GetMagic_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How do I get at the magic of the Sleeper?";
 //	description = "Wie komme ich an die Magie des Schläfers?";
@@ -372,6 +390,8 @@ func int DIA_Joru_GetMagic_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Joru_GetMagic_Info()
@@ -406,4 +426,3 @@ Komm zu uns in die Gemeinschaft der Erwachten und gleichzeitig Erwecker. Teile m
 Mach dich frei von Suche und beginne zu finden. Entdecke die Wahrheit. Das alles kannst du erreichen, wenn du zu uns kommst.
 
 */
-

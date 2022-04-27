@@ -33,6 +33,7 @@ instance DIA_Darrion_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_Darrion_Hello_Condition;
 	information = DIA_Darrion_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Hi - I'm new here and I'd like to get to know the Camp.";
 //	description = "Hi - ich bin neu hier und will das Lager kennenlernen.";
@@ -72,19 +73,22 @@ instance DIA_Darrion_Trade(C_INFO)
 	nr = 800;
 	condition = DIA_Darrion_Trade_Condition;
 	information = DIA_Darrion_Trade_Info;
+	important = 0;
 	permanent = 1;
+	trade = 1;
 //	description = "I'd like to trade with you!";
 //	description = "Ich will mit dir handeln!";
 	description = "Chtěl bych s tebou obchodovat!";
-	trade = 1;
 };
 
 func int DIA_Darrion_Trade_Condition()
 {
 	if (Npc_KnowsInfo(hero,DIA_Darrion_Hello))
 	{
-		return TRUE;
+		return 1;;
 	};
+
+	return 0;
 };
 
 func void DIA_Darrion_Trade_Info()

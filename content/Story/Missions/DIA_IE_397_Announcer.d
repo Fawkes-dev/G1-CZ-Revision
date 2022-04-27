@@ -37,8 +37,10 @@ func int IE_397_Announcer_ANNOUNCE_Condition()
 {
 	if (Kapitel == 2)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void IE_397_Announcer_ANNOUNCE_Info()
@@ -60,4 +62,3 @@ func void IE_397_Announcer_ANNOUNCE_Info()
 
 	AI_StopProcessInfos(self);
 };
-

@@ -8,6 +8,7 @@ instance DIA_Grd_215_Torwache_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Grd_215_Torwache_Exit_Condition;
 	information = DIA_Grd_215_Torwache_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,17 +33,19 @@ instance DIA_Grd_215_Torwache_First(C_INFO)
 	nr = 2;
 	condition = DIA_Grd_215_Torwache_First_Condition;
 	information = DIA_Grd_215_Torwache_First_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Grd_215_Torwache_First_Condition()
 {
-	if (!Npc_KnowsInfo(hero,DIA_Grd_216_First))  //Wenn der SC nicht durchs Hintertor rein ist.
-	&& (Kapitel < 2)
+	if ((!Npc_KnowsInfo(hero,DIA_Grd_216_First))  //Wenn der SC nicht durchs Hintertor rein ist.
+	&& (Kapitel < 2))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Grd_215_Torwache_First_Info()
@@ -147,7 +150,6 @@ func void DIA_Grd_215_Torwache_First_Pay()
 //		AI_Output(self,other,"DIA_Grd_215_Torwache_First_Pay_NoOre_06_01"); //I'll make an exception, just this once, 'cos you're new here.
 //		AI_Output(self,other,"DIA_Grd_215_Torwache_First_Pay_NoOre_06_01"); //Diesmal mach' ich noch 'ne Ausnahme - weil du neu bist .
 		AI_Output(self,other,"DIA_Grd_215_Torwache_First_Pay_NoOre_06_01"); //Pro tentokrát udělám výjimku, protože jsi tu nový.
-
 	};
 
 	Info_ClearChoices(DIA_Grd_215_Torwache_First);
@@ -164,6 +166,7 @@ instance DIA_Grd_215_Torwache_PERM(C_INFO)
 	nr = 1;
 	condition = DIA_Grd_215_Torwache_PERM_Condition;
 	information = DIA_Grd_215_Torwache_PERM_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Any news?";
 //	description = "Irgendwas Neues passiert?";

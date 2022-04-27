@@ -8,6 +8,7 @@ instance DIA_STT_331_Fingers_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_STT_331_Fingers_Exit_Condition;
 	information = DIA_STT_331_Fingers_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -34,6 +35,7 @@ instance DIA_Fingers_BecomeShadow(C_INFO)
 	nr = 2;
 	condition = DIA_Fingers_BecomeShadow_Condition;
 	information = DIA_Fingers_BecomeShadow_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I want to become a Shadow!";
 //	description = "Ich will Schatten werden!";
@@ -42,11 +44,13 @@ instance DIA_Fingers_BecomeShadow(C_INFO)
 
 func int DIA_Fingers_BecomeShadow_Condition()
 {
-	if ((Fingers_CanTeach == FALSE))
-	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
+	if ((Fingers_CanTeach == FALSE)
+	&& (Npc_GetTrueGuild(hero) == GIL_NONE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Fingers_BecomeShadow_Info()
@@ -57,6 +61,7 @@ func void DIA_Fingers_BecomeShadow_Info()
 //	AI_Output(self,other,"DIA_Fingers_BecomeShadow_05_01"); //So?
 //	AI_Output(self,other,"DIA_Fingers_BecomeShadow_05_01"); //Und?
 	AI_Output(self,other,"DIA_Fingers_BecomeShadow_05_01"); //No a?
+
 	Info_ClearChoices(DIA_Fingers_BecomeShadow);
 	Info_AddChoice(DIA_Fingers_BecomeShadow,DIALOG_BACK ,DIA_Fingers_BecomeShadow_BACK);
 	if (Npc_KnowsInfo(hero,Info_Diego_Teachers))
@@ -130,6 +135,7 @@ instance DIA_Fingers_Lehrer(C_INFO)
 	nr = 2;
 	condition = DIA_Fingers_Lehrer_Condition;
 	information = DIA_Fingers_Lehrer_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What can you teach me?";
 //	description = "Was kannst du mir beibringen?";
@@ -142,6 +148,8 @@ func int DIA_Fingers_Lehrer_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Fingers_Lehrer_Info()
@@ -284,6 +292,7 @@ instance DIA_Fingers_WhereCavalorn(C_INFO)
 	nr = 2;
 	condition = DIA_Fingers_WhereCavalorn_Condition;
 	information = DIA_Fingers_WhereCavalorn_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Where can I find Cavalorn?";
 //	description = "Wo finde ich Cavalorn?";
@@ -296,6 +305,8 @@ func int DIA_Fingers_WhereCavalorn_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Fingers_WhereCavalorn_Info()
@@ -327,6 +338,7 @@ instance DIA_Fingers_Learnt(C_INFO)
 	nr = 2;
 	condition = DIA_Fingers_Learnt_Condition;
 	information = DIA_Fingers_Learnt_Info;
+	important = 0;
 	permanent = 1;
 //	description = "You wouldn't speak up for me in front of Diego, would you?";
 //	description = "Du würdest nicht zufällig bei Diego ein gutes Wort für mich einlegen?";
@@ -335,11 +347,13 @@ instance DIA_Fingers_Learnt(C_INFO)
 
 func int DIA_Fingers_Learnt_Condition()
 {
-	if ((Fingers_Learnt != LOG_SUCCESS))
-	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
+	if ((Fingers_Learnt != LOG_SUCCESS)
+	&& (Npc_GetTrueGuild(hero) == GIL_NONE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Fingers_Learnt_Info()
@@ -348,7 +362,7 @@ func void DIA_Fingers_Learnt_Info()
 //	AI_Output(other,self,"DIA_Fingers_Learnt_15_00"); //Du würdest nicht zufällig bei Diego ein gutes Wort für mich einlegen?
 	AI_Output(other,self,"DIA_Fingers_Learnt_15_00"); //Nepřimluvil by ses za mě u Diega?
 
-	if ( Npc_GetTalentSkill(other,NPC_TALENT_PICKLOCK)+Npc_GetTalentSkill(other,NPC_TALENT_PICKPOCKET)+Npc_GetTalentSkill(other,NPC_TALENT_SNEAK) > 0)
+	if (Npc_GetTalentSkill(other,NPC_TALENT_PICKLOCK) + Npc_GetTalentSkill(other,NPC_TALENT_PICKPOCKET) + Npc_GetTalentSkill(other,NPC_TALENT_SNEAK) > 0)
 	{
 //		AI_Output(self,other,"DIA_Fingers_Learnt_05_01"); //Yes. You've learned something which makes you quite useful to us.
 //		AI_Output(self,other,"DIA_Fingers_Learnt_05_01"); //Ja. Du hast was gelernt, was dich wertvoll für uns macht.
@@ -384,4 +398,3 @@ func void DIA_Fingers_Learnt_Info()
 		B_LogEntry(CH1_JoinOC,"Jakmile se naučím nějakou zlodějskou dovednost, Fingers se za mě přimluví.");
 	};
 };
-

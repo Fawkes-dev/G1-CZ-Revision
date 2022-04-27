@@ -21,8 +21,8 @@ instance Info_TPL_1442_FirstWarn(C_INFO)
 	nr = 1;
 	condition = Info_TPL_1442_FirstWarn_Condition;
 	information = Info_TPL_1442_FirstWarn_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 //------------------------------------------------------------------------
@@ -31,11 +31,13 @@ instance Info_TPL_1442_FirstWarn(C_INFO)
 func int Info_TPL_1442_FirstWarn_Condition()
 {
 	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS]== AIV_GPS_BEGIN)
-	&& (self.aivar[AIV_PASSGATE] == FALSE )
+	&& (self.aivar[AIV_PASSGATE] == FALSE)
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self), self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_TPL_1442_FirstWarn_Info()
@@ -101,18 +103,20 @@ instance Info_TPL_1442_LastWarn(C_INFO)
 	nr = 1;
 	condition = Info_TPL_1442_LastWarn_Condition;
 	information = Info_TPL_1442_LastWarn_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_TPL_1442_LastWarn_Condition()
 {
-	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_FIRSTWARN )
+	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_FIRSTWARN)
 	&& (Npc_GetDistToWP(hero,TPL_1442_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func int Info_TPL_1442_LastWarn_Info()
@@ -136,19 +140,21 @@ instance Info_TPL_1442_Attack(C_INFO)
 	nr = 1;
 	condition = Info_TPL_1442_Attack_Condition;
 	information = Info_TPL_1442_Attack_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_TPL_1442_Attack_Condition()
 {
-	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_LASTWARN )
+	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_LASTWARN)
 	&& (self.aivar[AIV_PASSGATE] == FALSE)
 	&& (Npc_GetDistToWP(hero,TPL_1442_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func int Info_TPL_1442_Attack_Info()

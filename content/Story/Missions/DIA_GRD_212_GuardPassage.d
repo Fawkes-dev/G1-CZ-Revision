@@ -21,8 +21,8 @@ instance Info_Grd_212_FirstWarn(C_INFO)
 	nr = 1;
 	condition = Info_Grd_212_FirstWarn_Condition;
 	information = Info_Grd_212_FirstWarn_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 //------------------------------------------------------------------------
@@ -30,13 +30,15 @@ instance Info_Grd_212_FirstWarn(C_INFO)
 //------------------------------------------------------------------------
 func int Info_Grd_212_FirstWarn_Condition()
 {
-	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS]== AIV_GPS_BEGIN)
-	&& (self.aivar[AIV_PASSGATE] == FALSE )
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY )
+	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_BEGIN)
+	&& (self.aivar[AIV_PASSGATE] == FALSE)
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY)
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self), self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Grd_212_FirstWarn_Info()
@@ -68,20 +70,22 @@ instance Info_Grd_212_LastWarn(C_INFO)
 	nr = 1;
 	condition = Info_Grd_212_LastWarn_Condition;
 	information = Info_Grd_212_LastWarn_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_Grd_212_LastWarn_Condition()
 {
-	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_FIRSTWARN )
-	&& (self.aivar[AIV_PASSGATE] == FALSE )
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY )
+	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_FIRSTWARN)
+	&& (self.aivar[AIV_PASSGATE] == FALSE)
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY)
 	&& (Npc_GetDistToWP(hero,Grd_212_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func int Info_Grd_212_LastWarn_Info()
@@ -105,20 +109,22 @@ instance Info_Grd_212_Attack(C_INFO)
 	nr = 1;
 	condition = Info_Grd_212_Attack_Condition;
 	information = Info_Grd_212_Attack_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_Grd_212_Attack_Condition()
 {
-	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_LASTWARN )
-	&& (self.aivar[AIV_PASSGATE] == FALSE )
-	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY )
+	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_LASTWARN)
+	&& (self.aivar[AIV_PASSGATE] == FALSE)
+	&& (Npc_GetAttitude(self,hero) != ATT_FRIENDLY)
 	&& (Npc_GetDistToWP(hero,Grd_212_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func int Info_Grd_212_Attack_Info()
@@ -144,6 +150,7 @@ instance Info_Grd_212_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Grd_212_EXIT_Condition;
 	information = Info_Grd_212_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -168,6 +175,7 @@ instance Info_Grd_212_Abblitzen(C_INFO)
 	nr = 1;
 	condition = Info_Grd_212_Abblitzen_Condition;
 	information = Info_Grd_212_Abblitzen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I want to get in the castle!";
 //	description = "Ich will in die Burg.";
@@ -180,6 +188,8 @@ func int Info_Grd_212_Abblitzen_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Grd_212_Abblitzen_Info()
@@ -212,8 +222,8 @@ instance Info_Grd_212_FirstIn(C_INFO)
 	nr = 1;
 	condition = Info_Grd_212_FirstIn_Condition;
 	information = Info_Grd_212_FirstIn_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_Grd_212_FirstIn_Condition()
@@ -222,6 +232,8 @@ func int Info_Grd_212_FirstIn_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Grd_212_FirstIn_Info()
@@ -248,6 +260,7 @@ instance Info_Grd_212_Passgate(C_INFO)
 	nr = 1;
 	condition = Info_Grd_212_Passgate_Condition;
 	information = Info_Grd_212_Passgate_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Can I still go in?";
 //	description = "Kann ich immer noch rein?";
@@ -260,6 +273,8 @@ func int Info_Grd_212_Passgate_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Grd_212_Passgate_Info()

@@ -10,6 +10,7 @@ instance DIA_Pock_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_Pock_EXIT_Condition;
 	information = DIA_Pock_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -35,6 +36,7 @@ instance Info_Pock_Wasser(C_INFO) // E1
 	nr = 800;
 	condition = Info_Pock_Wasser_Condition;
 	information = Info_Pock_Wasser_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Lefty sent me. I've brought you some water.";
 //	description = "Lefty schickt mich. Ich hab' Wasser für dich.";
@@ -43,11 +45,13 @@ instance Info_Pock_Wasser(C_INFO) // E1
 
 func int Info_Pock_Wasser_Condition()
 {
-	if ((Lefty_Mission==LOG_RUNNING) || ((Lefty_Mission==LOG_SUCCESS) && Npc_HasItems(other,ItFo_Potion_Water_01)))
-	&& (self.aivar[AIV_DEALDAY] <= Wld_GetDay())
+	if (((Lefty_Mission == LOG_RUNNING) || ((Lefty_Mission == LOG_SUCCESS) && Npc_HasItems(other,ItFo_Potion_Water_01)))
+	&& (self.aivar[AIV_DEALDAY] <= Wld_GetDay()))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Pock_Wasser_Info()
@@ -55,7 +59,7 @@ func void Info_Pock_Wasser_Info()
 //	AI_Output(other,self,"Info_Pock_Wasser_15_00"); //Lefty sent me. I've brought you some water.
 //	AI_Output(other,self,"Info_Pock_Wasser_15_00"); //Lefty schickt mich. Ich hab' Wasser für dich.
 	AI_Output(other,self,"Info_Pock_Wasser_15_00"); //Lefty mě poslal. Mám pro tebe trochu vody.
-	if (Npc_HasItems(other,ItFo_Potion_Water_01)>=1)
+	if (Npc_HasItems(other,ItFo_Potion_Water_01) >= 1)
 	{
 		B_GiveInvItems(other,self,ItFo_Potion_Water_01,1);
 		if (C_BodystateContains(self,BS_SIT))
@@ -68,7 +72,7 @@ func void Info_Pock_Wasser_Info()
 //		AI_Output(self,other,"Info_Pock_Wasser_04_01"); //Danke, Junge! Das hab' ich gebraucht!
 		AI_Output(self,other,"Info_Pock_Wasser_04_01"); //Díky, chlapče! To jsem potřeboval!
 		An_Bauern_verteilt = An_Bauern_verteilt+1;
-		if (An_Bauern_verteilt>=DurstigeBauern)
+		if (An_Bauern_verteilt >= DurstigeBauern)
 		{
 			Lefty_Mission = LOG_SUCCESS;
 		};
@@ -92,6 +96,7 @@ instance DIA_Pock_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_Pock_Hello_Condition;
 	information = DIA_Pock_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Hi! I'm new here.";
 //	description = "Hi! Ich bin neu hier.";
@@ -104,6 +109,8 @@ func int DIA_Pock_Hello_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Pock_Hello_Info()
@@ -132,6 +139,7 @@ instance DIA_Pock_KnowMuch(C_INFO)
 	nr = 1;
 	condition = DIA_Pock_KnowMuch_Condition;
 	information = DIA_Pock_KnowMuch_Info;
+	important = 0;
 	permanent = 0;
 //	description = "In that case you must know a lot about this place?";
 //	description = "Dann weißt du bestimmt ne Menge über all das hier?";
@@ -140,10 +148,12 @@ instance DIA_Pock_KnowMuch(C_INFO)
 
 func int DIA_Pock_KnowMuch_Condition()
 {
-	if ((Pock_ForgetAll==FALSE) && Npc_KnowsInfo(hero,DIA_Pock_Hello))
+	if ((Pock_ForgetAll == FALSE) && (Npc_KnowsInfo(hero,DIA_Pock_Hello)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Pock_KnowMuch_Info()
@@ -169,6 +179,7 @@ instance DIA_Pock_WhyJail(C_INFO)
 	nr = 2;
 	condition = DIA_Pock_WhyJail_Condition;
 	information = DIA_Pock_WhyJail_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Why are you here?";
 //	description = "Weshalb bist du hier?";
@@ -177,10 +188,12 @@ instance DIA_Pock_WhyJail(C_INFO)
 
 func int DIA_Pock_WhyJail_Condition()
 {
-	if ((Pock_ForgetAll==FALSE) && Npc_KnowsInfo(hero,DIA_Pock_Hello))
+	if ((Pock_ForgetAll == FALSE) && (Npc_KnowsInfo(hero,DIA_Pock_Hello)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Pock_WhyJail_Info()
@@ -209,6 +222,7 @@ instance DIA_Pock_ForgotAll(C_INFO)
 	nr = 1;
 	condition = DIA_Pock_ForgotAll_Condition;
 	information = DIA_Pock_ForgotAll_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Everything okay with you?";
 //	description = "Alles klar bei dir?";
@@ -221,6 +235,8 @@ func int DIA_Pock_ForgotAll_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Pock_ForgotAll_Info()
@@ -241,4 +257,3 @@ func void DIA_Pock_ForgotAll_Info()
 //	AI_Output(other,self,"DIA_Pock_ForgotAll_15_04"); //Natürlich ...
 	AI_Output(other,self,"DIA_Pock_ForgotAll_15_04"); //Jistě...
 };
-

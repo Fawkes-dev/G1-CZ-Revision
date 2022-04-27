@@ -8,6 +8,7 @@ instance Info_Kharim_Exit(C_INFO)
 	nr = 999;
 	condition = Info_Kharim_Exit_Condition;
 	information = Info_Kharim_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance Info_Kharim_What(C_INFO)
 	nr = 1;
 	condition = Info_Kharim_What_Condition;
 	information = Info_Kharim_What_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I'm new here. Who are you?";
 //	description = "Ich bin neu hier. Wer bist du?";
@@ -68,6 +70,7 @@ instance Info_Kharim_Charge(C_INFO)
 	nr = 2;
 	condition = Info_Kharim_Charge_Condition;
 	information = Info_Kharim_Charge_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I'll challenge you! Let's go to the arena!";
 //	description = "Ich fordere dich heraus! Lass es uns in der Arena austragen!";
@@ -76,10 +79,15 @@ instance Info_Kharim_Charge(C_INFO)
 
 func int Info_Kharim_Charge_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Scatty_JoinOC) && Npc_KnowsInfo(hero,Info_Kharim_What) && (Kharim_Charged != TRUE) && (Kapitel <= 1)) // Kapitelfix ***Björn***
+	if ((Npc_KnowsInfo(hero,DIA_Scatty_JoinOC))
+	&& (Npc_KnowsInfo(hero,Info_Kharim_What))
+	&& (Kharim_Charged != TRUE)
+	&& (Kapitel <= 1)) // Kapitelfix ***Björn***
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Kharim_Charge_Info()
@@ -101,7 +109,6 @@ func void Info_Kharim_Charge_Info()
 //	Info_AddChoice(Info_Kharim_Charge,"So you don't get hurt, you coward?!",Info_Kharim_Charge_Insult);
 //	Info_AddChoice(Info_Kharim_Charge,"Damit du ungeschoren davonkommst, du feiges Schwein?!",Info_Kharim_Charge_Insult);
 	Info_AddChoice(Info_Kharim_Charge,"Ne tak zhurta, ty zbabělče?!",Info_Kharim_Charge_Insult);
-
 };
 
 func void Info_Kharim_Charge_BACK()
@@ -140,7 +147,6 @@ func void Info_Kharim_Charge_Insult()
 //	Info_AddChoice(Info_Kharim_Charge,"Okay, okay, let's forget about it.",Info_Kharim_Charge_BACK);
 //	Info_AddChoice(Info_Kharim_Charge,"Okay, okay, vergessen wir die Sache.",Info_Kharim_Charge_BACK);
 	Info_AddChoice(Info_Kharim_Charge,"Dobře, dobře, zapomeňme na to.",Info_Kharim_Charge_BACK);
-
 };
 
 // --------------------------------------------------------------------------------------
@@ -208,16 +214,19 @@ instance Info_Kharim_InArena(C_INFO)
 	nr = 1;
 	condition = Info_Kharim_InArena_Condition;
 	information = Info_Kharim_InArena_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_Kharim_InArena_Condition()
 {
-	if ((Kharim_Charged == TRUE) && (Npc_GetDistToWp (hero,"OCR_ARENABATTLE_TRAIN") < 500))
+	if ((Kharim_Charged == TRUE)
+	&& (Npc_GetDistToWp (hero,"OCR_ARENABATTLE_TRAIN") < 500))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Kharim_InArena_Info()

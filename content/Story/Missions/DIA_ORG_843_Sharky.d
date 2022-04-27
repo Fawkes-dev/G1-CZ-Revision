@@ -31,21 +31,24 @@ instance Org_843_Sharky_Fisk(C_INFO)
 	nr = 2;
 	condition = Org_843_Sharky_Fisk_Condition;
 	information = Org_843_Sharky_Fisk_Info;
+	important = 0;
 	permanent = 0;
+	trade = 1;
 //	description = "Fisk from the Old Camp is looking for a new trading partner.";
 //	description = "Fisk aus dem Alten Lager sucht nach einem neuen Handelspartner.";
 	description = "Fisk ze Starého tábora hledá nového obchodního partnera.";
-	trade = 1;
 };
 
 func int Org_843_Sharky_Fisk_Condition()
 {
 	if (Fisk_GetNewHehler == LOG_RUNNING)
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void Org_843_Sharky_Fisk_Info()
 {
 //	AI_Output(other,self,"Org_843_Sharky_Fisk_Info_15_00"); //Fisk from the Old Camp is looking for a new trading partner.
@@ -73,20 +76,22 @@ instance Org_843_Sharky_TRADE(C_INFO)
 	information = Org_843_Sharky_TRADE_Info;
 	important = 0;
 	permanent = 1;
+	trade = 1;
 //	description = "I need a few things...";
 //	description = "Ich könnte ein paar Sachen gebrauchen";
 	description = "Potřebuji pár věcí...";
-	trade = 1;
 };
 
 func int Org_843_Sharky_TRADE_Condition()
 {
 	if (Npc_KnowsInfo(hero,Org_843_Sharky_GREET))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void Org_843_Sharky_TRADE_Info()
 {
 //	AI_Output(other,self,"Org_843_Sharky_TRADE_Info_15_01"); //I need a few things...
@@ -112,7 +117,7 @@ instance Org_843_Sharky_GREET(C_INFO)
 
 func int Org_843_Sharky_GREET_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Org_843_Sharky_GREET_Info()
@@ -128,4 +133,3 @@ func void Org_843_Sharky_GREET_Info()
 //	B_LogEntry(GE_TraderNC,"Sharky der Bandit, handelt mit WAFFEN und anderen Waren. Er hält sich meistens irgendwo im Neuen Lager auf.");
 	B_LogEntry(GE_TraderNC,"Bandita Sharky obchoduje se ZBRANĚMI a jiným zbožím. Obvykle je k nalezení v Novém táboře.");
 };
-

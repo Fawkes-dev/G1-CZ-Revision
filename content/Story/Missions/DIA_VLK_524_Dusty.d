@@ -8,6 +8,7 @@ instance DIA_Dusty_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Dusty_Exit_Condition;
 	information = DIA_Dusty_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Dusty_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_Dusty_Hello_Condition;
 	information = DIA_Dusty_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Hi! I'm new here - how's things?";
 //	description = "Hi! Ich bin neu hier - wie sieht's aus?";
@@ -72,6 +74,7 @@ instance DIA_Dusty_WhyNotLeave(C_INFO)
 	nr = 1;
 	condition = DIA_Dusty_WhyNotLeave_Condition;
 	information = DIA_Dusty_WhyNotLeave_Info;
+	important = 0;
 	permanent = 0;
 //	description = "You don't like it here? Why don't you just go then?";
 //	description = "Dir gefällt's hier nicht? Wieso gehst du dann nicht einfach?";
@@ -80,11 +83,13 @@ instance DIA_Dusty_WhyNotLeave(C_INFO)
 
 func int DIA_Dusty_WhyNotLeave_Condition()
 {
-	if  Npc_KnowsInfo(hero,DIA_Dusty_Hello)
-	&& !Npc_KnowsInfo(hero,DIA_Dusty_MetMelvin)
+	if ((Npc_KnowsInfo(hero,DIA_Dusty_Hello))
+	&& (!Npc_KnowsInfo(hero,DIA_Dusty_MetMelvin)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Dusty_WhyNotLeave_Info()
@@ -116,6 +121,7 @@ instance DIA_Dusty_MetMelvin(C_INFO)
 	nr = 1;
 	condition = DIA_Dusty_MetMelvin_Condition;
 	information = DIA_Dusty_MetMelvin_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I was in the Sect Camp and met Melvin.";
 //	description = "Ich war im Lager der Sekte und hab' Melvin getroffen.";
@@ -128,6 +134,8 @@ func int DIA_Dusty_MetMelvin_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Dusty_MetMelvin_Info()
@@ -165,6 +173,7 @@ instance DIA_Dusty_Offer100Ore(C_INFO)
 	nr = 1;
 	condition = DIA_Dusty_Offer100Ore_Condition;
 	information = DIA_Dusty_Offer100Ore_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What if I gave you the 100 ore for the guards?";
 //	description = "Was wäre, wenn ich dir die 100 Erz für die Wachen geben würde?";
@@ -173,11 +182,13 @@ instance DIA_Dusty_Offer100Ore(C_INFO)
 
 func int DIA_Dusty_Offer100Ore_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Dusty_MetMelvin))
-	&& (BaalTondral_GetNewGuy == LOG_RUNNING)
+	if ((Npc_KnowsInfo(hero,DIA_Dusty_MetMelvin))
+	&& (BaalTondral_GetNewGuy == LOG_RUNNING))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Dusty_Offer100Ore_Info()
@@ -207,6 +218,7 @@ instance DIA_Dusty_IWouldGo(C_INFO)
 	nr = 1;
 	condition = DIA_Dusty_IWouldGo_Condition;
 	information = DIA_Dusty_IWouldGo_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I WILL go with you to the Sect Camp.";
 //	description = "Ich WERDE mit dir zum Sektenlager gehen.";
@@ -219,6 +231,8 @@ func int DIA_Dusty_IWouldGo_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Dusty_IWouldGo_Info()
@@ -251,6 +265,7 @@ instance DIA_Dusty_LetsGo(C_INFO)
 	nr = 1;
 	condition = DIA_Dusty_LetsGo_Condition;
 	information = DIA_Dusty_LetsGo_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I'm ready - let's go!";
 //	description = "Ich bin bereit - lass uns gehen.";
@@ -259,13 +274,15 @@ instance DIA_Dusty_LetsGo(C_INFO)
 
 func int DIA_Dusty_LetsGo_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Dusty_IWouldGo))
+	if ((Npc_KnowsInfo(hero,DIA_Dusty_IWouldGo))
 	&& (Npc_GetDistToWP(hero,"OCR_MAINGATE_INSIDE") > 1500)
 	&& (Npc_GetDistToWP(hero,"OCR_NORTHGATE_RAMP_ATOP") > 1500)
-	&& (BaalTondral_GetNewGuy == LOG_RUNNING)
+	&& (BaalTondral_GetNewGuy == LOG_RUNNING))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Dusty_LetsGo_Info()
@@ -285,7 +302,7 @@ func void DIA_Dusty_LetsGo_Info()
 //	AI_Output(other,self,"DIA_Dusty_LetsGo_15_03"); //Gut - also los!
 	AI_Output(other,self,"DIA_Dusty_LetsGo_15_03"); //Dobrá - pojďme!
 
-	if !Dusty_LetsGo
+	if (!Dusty_LetsGo)
 	{
 //		B_LogEntry(CH1_RecruitDusty,"Dusty warned me not to use the main gate in the north. It seems to be easier to bribe the guards at the gate to the south.");
 //		B_LogEntry(CH1_RecruitDusty,"Dusty warnte mich davor das Haupttor im Norden zu benutzen. Die Wachen am hinteren Südtor sind angeblich empfänglicher für Bestechungen.");
@@ -298,6 +315,4 @@ func void DIA_Dusty_LetsGo_Info()
 	Npc_ExchangeRoutine(self,"FOLLOW");
 
 	AI_StopProcessInfos(self);
-
 };
-

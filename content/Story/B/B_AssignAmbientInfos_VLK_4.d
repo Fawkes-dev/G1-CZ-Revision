@@ -12,6 +12,7 @@ instance Info_Vlk_4_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Vlk_4_EXIT_Condition;
 	information = Info_Vlk_4_EXIT_Info;
+	important = 0;
 	permanent = 1;
 //	description = "END";
 //	description = "ENDE";
@@ -43,6 +44,7 @@ instance Info_Vlk_4_EinerVonEuchWerden(C_INFO) // E1
 	nr = 4;
 	condition = Info_Vlk_4_EinerVonEuchWerden_Condition;
 	information = Info_Vlk_4_EinerVonEuchWerden_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What do I have to do to join this camp?";
 //	description = "Was muß ich tun, um in diesem Lager aufgenommen zu werden?";
@@ -85,6 +87,7 @@ instance Info_Vlk_4_WichtigePersonen(C_INFO)
 	nr = 3;
 	condition = Info_Vlk_4_WichtigePersonen_Condition;
 	information = Info_Vlk_4_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Is there anyone special here I should know?";
 //	description = "Gibt es hier Leute, die ich kennen sollte?";
@@ -118,6 +121,7 @@ instance Info_Vlk_4_DasLager(C_INFO)
 	nr = 2;
 	condition = Info_Vlk_4_DasLager_Condition;
 	information = Info_Vlk_4_DasLager_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What places around here should I know about?";
 //	description = "Was gibt es hier für wichtige Orte?";
@@ -162,6 +166,7 @@ instance Info_Vlk_4_DieLage(C_INFO) // E1
 	nr = 1;
 	condition = Info_Vlk_4_DieLage_Condition;
 	information = Info_Vlk_4_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "You okay?";
 //	description = "Alles klar?";

@@ -15,15 +15,17 @@ func int NOV_1319_Novize_CALLSLEEPER_Condition()
 
 	if ((CorKalom_BringBook == LOG_SUCCESS)
 
-	&& (Npc_GetDistToWP(Novize, "PSI_TEMPLE_COURT_2")<1000)
-	&& C_TimeForGreatPrayer()
+	&& (Npc_GetDistToWP(Novize, "PSI_TEMPLE_COURT_2") < 1000)
+	&& (C_TimeForGreatPrayer())
 	&& (!Npc_KnowsInfo(hero,NOV_1320_Novize_CALLSLEEPER))
-	&& ( !Npc_KnowsInfo(hero,Tpl_1431_Templer_CALLSLEEPER ))
-	&& ( !Npc_KnowsInfo(hero,Tpl_1430_Templer_CALLSLEEPER ))
+	&& (!Npc_KnowsInfo(hero,Tpl_1431_Templer_CALLSLEEPER))
+	&& (!Npc_KnowsInfo(hero,Tpl_1430_Templer_CALLSLEEPER))
 	&& (Npc_GetDisttoWP (Kalom,"PSI_TEMPLE_STAIRS_RIGHT") < 300))
 	{
-		return TRUE;
+		return 1;;
 	};
+
+	return 0;
 };
 func void NOV_1319_Novize_CALLSLEEPER_Info()
 {

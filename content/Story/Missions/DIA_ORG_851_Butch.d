@@ -15,7 +15,7 @@ instance DIA_Butch_Exit(C_INFO)
 
 func int DIA_Butch_Exit_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void DIA_Butch_Exit_Info()
@@ -34,6 +34,7 @@ instance DIA_Butch_Hello(C_INFO)
 	condition = DIA_Butch_Hello_Condition;
 	information = DIA_Butch_Hello_Info;
 	important = 0;
+	permanent = 0;
 //	description = "Hi. Who are you?";
 //	description = "Hi. Wer bist du?";
 	description = "Kdo jsi?";
@@ -54,4 +55,3 @@ func void DIA_Butch_Hello_Info()
 	AI_Output(self,other,"DIA_Butch_Hello_13_01"); //Po tom ti nic není! Nelíbí se mi tvůj ciferník!
 	AI_StopProcessInfos(self);
 };
-

@@ -14,6 +14,7 @@ instance DIA_Mud_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Exit_Condition;
 	information = DIA_Mud_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -41,8 +42,8 @@ instance DIA_Mud_FirstEXIT(C_INFO)
 	nr = 1;
 	condition = DIA_Mud_FirstEXIT_Condition;
 	information = DIA_Mud_FirstEXIT_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Mud_FirstEXIT_Condition()
@@ -51,6 +52,8 @@ func int DIA_Mud_FirstEXIT_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Mud_FirstEXIT_Info()
@@ -106,6 +109,7 @@ instance DIA_Mud_ShutUp(C_INFO)
 	nr = 3;
 	condition = DIA_Mud_ShutUp_Condition;
 	information = DIA_Mud_ShutUp_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Could you PLEASE keep quiet for a minute?";
 //	description = "Kannst du mal BITTE einen Moment die Klappe halten?";
@@ -118,6 +122,8 @@ func int DIA_Mud_ShutUp_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Mud_ShutUp_Info()
@@ -141,6 +147,7 @@ instance DIA_Mud_GetLost(C_INFO)
 	nr = 2;
 	condition = DIA_Mud_GetLost_Condition;
 	information = DIA_Mud_GetLost_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Get lost!";
 //	description = "Verpiss dich!";
@@ -172,16 +179,18 @@ instance DIA_Mud_Defeated(C_INFO)
 	nr = 1;
 	condition = DIA_Mud_Defeated_Condition;
 	information = DIA_Mud_Defeated_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Mud_Defeated_Condition()
 {
-	if (self.aivar[AIV_WASDEFEATEDBYSC]==TRUE)
+	if (self.aivar[AIV_WASDEFEATEDBYSC] == TRUE)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Mud_Defeated_Info()
@@ -210,13 +219,21 @@ instance DIA_Mud_Nerve_0(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Nerve_0_Condition;
 	information = DIA_Mud_Nerve_0_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Mud_Nerve_0_Condition()
 {
-	if ((Mud_Nerve==0) && (Npc_RefuseTalk(self)==FALSE) && (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist) && (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE )) { return 1; };
+	if ((Mud_Nerve == 0)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
+	{
+		return 1;
+	};
+
+	return 0;
 };
 
 func void DIA_Mud_Nerve_0_Info()
@@ -239,13 +256,21 @@ instance DIA_Mud_Nerve_1(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Nerve_1_Condition;
 	information = DIA_Mud_Nerve_1_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Mud_Nerve_1_Condition()
 {
-	if ((Mud_Nerve==1) && (Npc_RefuseTalk(self)==FALSE) && (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist) && (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE )) { return 1; };
+	if ((Mud_Nerve == 1)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
+	{
+		return 1;
+	};
+
+	return 0;
 };
 
 func void DIA_Mud_Nerve_1_Info()
@@ -269,13 +294,21 @@ instance DIA_Mud_Nerve_2(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Nerve_2_Condition;
 	information = DIA_Mud_Nerve_2_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Mud_Nerve_2_Condition()
 {
-	if ((Mud_Nerve==2) && (Npc_RefuseTalk(self)==FALSE) && (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist) && (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE )) { return 1; };
+	if ((Mud_Nerve == 2)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
+	{
+		return 1;
+	};
+
+	return 0;
 };
 
 func void DIA_Mud_Nerve_2_Info()
@@ -300,13 +333,21 @@ instance DIA_Mud_Nerve_3(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Nerve_3_Condition;
 	information = DIA_Mud_Nerve_3_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Mud_Nerve_3_Condition()
 {
-	if ((Mud_Nerve==3) && (Npc_RefuseTalk(self)==FALSE) && (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist) && (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE )) { return 1; };
+	if ((Mud_Nerve == 3)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
+	{
+		return 1;
+	};
+
+	return 0;
 };
 
 func void DIA_Mud_Nerve_3_Info()
@@ -331,13 +372,21 @@ instance DIA_Mud_Nerve_4(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Nerve_4_Condition;
 	information = DIA_Mud_Nerve_4_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Mud_Nerve_4_Condition()
 {
-	if ((Mud_Nerve==4) && (Npc_RefuseTalk(self)==FALSE) && (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist) && (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE )) { return 1; };
+	if ((Mud_Nerve == 4)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
+	{
+		return 1;
+	};
+
+	return 0;
 };
 
 func void DIA_Mud_Nerve_4_Info()
@@ -361,13 +410,21 @@ instance DIA_Mud_Nerve_5(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Nerve_5_Condition;
 	information = DIA_Mud_Nerve_5_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Mud_Nerve_5_Condition()
 {
-	if ((Mud_Nerve==5) && (Npc_RefuseTalk(self)==FALSE) && (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist) && (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE )) { return 1; };
+	if ((Mud_Nerve == 5)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
+	{
+		return 1;
+	};
+
+	return 0;
 };
 
 func void DIA_Mud_Nerve_5_Info()
@@ -390,13 +447,21 @@ instance DIA_Mud_Nerve_6(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Nerve_6_Condition;
 	information = DIA_Mud_Nerve_6_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Mud_Nerve_6_Condition()
 {
-	if ((Mud_Nerve==6) && (Npc_RefuseTalk(self)==FALSE) && (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist) && (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE )) { return 1; };
+	if ((Mud_Nerve == 6)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
+	{
+		return 1;
+	};
+
+	return 0;
 };
 
 func void DIA_Mud_Nerve_6_Info()
@@ -419,13 +484,21 @@ instance DIA_Mud_Nerve_7(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Nerve_7_Condition;
 	information = DIA_Mud_Nerve_7_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Mud_Nerve_7_Condition()
 {
-	if ((Mud_Nerve==7) && (Npc_RefuseTalk(self)==FALSE) && (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist) && (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE )) { return 1; };
+	if ((Mud_Nerve == 7)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
+	{
+		return 1;
+	};
+
+	return 0;
 };
 
 func void DIA_Mud_Nerve_7_Info()
@@ -448,13 +521,21 @@ instance DIA_Mud_Nerve_8(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Nerve_8_Condition;
 	information = DIA_Mud_Nerve_8_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Mud_Nerve_8_Condition()
 {
-	if ((Mud_Nerve==8) && (Npc_RefuseTalk(self)==FALSE) && (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist) && (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE )) { return 1; };
+	if ((Mud_Nerve == 8)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
+	{
+		return 1;
+	};
+
+	return 0;
 };
 
 func void DIA_Mud_Nerve_8_Info()
@@ -477,13 +558,21 @@ instance DIA_Mud_Nerve_9(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Nerve_9_Condition;
 	information = DIA_Mud_Nerve_9_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Mud_Nerve_9_Condition()
 {
-	if ((Mud_Nerve==9) && (Npc_RefuseTalk(self)==FALSE) && (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist) && (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE )) { return 1; };
+	if ((Mud_Nerve == 9)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
+	{
+		return 1;
+	};
+
+	return 0;
 };
 
 func void DIA_Mud_Nerve_9_Info()
@@ -506,13 +595,21 @@ instance DIA_Mud_Nerve_10(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Nerve_10_Condition;
 	information = DIA_Mud_Nerve_10_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Mud_Nerve_10_Condition()
 {
-	if ((Mud_Nerve==10) && (Npc_RefuseTalk(self)==FALSE) && (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist) && (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE )) { return 1; };
+	if ((Mud_Nerve == 10)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
+	{
+		return 1;
+	};
+
+	return 0;
 };
 
 func void DIA_Mud_Nerve_10_Info()
@@ -535,13 +632,21 @@ instance DIA_Mud_Nerve_11(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Nerve_11_Condition;
 	information = DIA_Mud_Nerve_11_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Mud_Nerve_11_Condition()
 {
-	if ((Mud_Nerve==11) && (Npc_RefuseTalk(self)==FALSE) && (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist) && (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE )) { return 1; };
+	if ((Mud_Nerve == 11)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
+	{
+		return 1;
+	};
+
+	return 0;
 };
 
 func void DIA_Mud_Nerve_11_Info()
@@ -565,13 +670,21 @@ instance DIA_Mud_Nerve_12(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Nerve_12_Condition;
 	information = DIA_Mud_Nerve_12_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Mud_Nerve_12_Condition()
 {
-	if ((Mud_Nerve==12) && (Npc_RefuseTalk(self)==FALSE) && (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist) && (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE )) { return 1; };
+	if ((Mud_Nerve == 12)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
+	{
+		return 1;
+	};
+
+	return 0;
 };
 
 func void DIA_Mud_Nerve_12_Info()
@@ -594,13 +707,21 @@ instance DIA_Mud_Nerve_13(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Nerve_13_Condition;
 	information = DIA_Mud_Nerve_13_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Mud_Nerve_13_Condition()
 {
-	if ((Mud_Nerve==13) && (Npc_RefuseTalk(self)==FALSE) && (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist) && (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE )) { return 1; };
+	if ((Mud_Nerve == 13)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
+	{
+		return 1;
+	};
+
+	return 0;
 };
 
 func void DIA_Mud_Nerve_13_Info()
@@ -623,13 +744,21 @@ instance DIA_Mud_Nerve_14(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Nerve_14_Condition;
 	information = DIA_Mud_Nerve_14_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Mud_Nerve_14_Condition()
 {
-	if ((Mud_Nerve==14) && (Npc_RefuseTalk(self)==FALSE) && (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist) && (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE )) { return 1; };
+	if ((Mud_Nerve == 14)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
+	{
+		return 1;
+	};
+
+	return 0;
 };
 
 func void DIA_Mud_Nerve_14_Info()
@@ -656,13 +785,21 @@ instance DIA_Mud_Nerve_15(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Nerve_15_Condition;
 	information = DIA_Mud_Nerve_15_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Mud_Nerve_15_Condition()
 {
-	if ((Mud_Nerve==15) && (Npc_RefuseTalk(self)==FALSE) && (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist) && (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE )) { return 1; };
+	if ((Mud_Nerve == 15)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
+	{
+		return 1;
+	};
+
+	return 0;
 };
 
 func void DIA_Mud_Nerve_15_Info()
@@ -685,13 +822,21 @@ instance DIA_Mud_Nerve_16(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Nerve_16_Condition;
 	information = DIA_Mud_Nerve_16_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Mud_Nerve_16_Condition()
 {
-	if ((Mud_Nerve==16) && (Npc_RefuseTalk(self)==FALSE) && (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist) && (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE )) { return 1; };
+	if ((Mud_Nerve == 16)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
+	{
+		return 1;
+	};
+
+	return 0;
 };
 
 func void DIA_Mud_Nerve_16_Info()
@@ -714,13 +859,21 @@ instance DIA_Mud_Nerve_17(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Nerve_17_Condition;
 	information = DIA_Mud_Nerve_17_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Mud_Nerve_17_Condition()
 {
-	if ((Mud_Nerve==17) && (Npc_RefuseTalk(self)==FALSE) && (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist) && (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE )) { return 1; };
+	if ((Mud_Nerve == 17)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
+	{
+		return 1;
+	};
+
+	return 0;
 };
 
 func void DIA_Mud_Nerve_17_Info()
@@ -743,13 +896,21 @@ instance DIA_Mud_Nerve_18(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Nerve_18_Condition;
 	information = DIA_Mud_Nerve_18_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Mud_Nerve_18_Condition()
 {
-	if ((Mud_Nerve==18) && (Npc_RefuseTalk(self)==FALSE) && (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist) && (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE )) { return 1; };
+	if ((Mud_Nerve == 18)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
+	{
+		return 1;
+	};
+
+	return 0;
 };
 
 func void DIA_Mud_Nerve_18_Info()
@@ -772,13 +933,21 @@ instance DIA_Mud_Nerve_19(C_INFO)
 	nr = 999;
 	condition = DIA_Mud_Nerve_19_Condition;
 	information = DIA_Mud_Nerve_19_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Mud_Nerve_19_Condition()
 {
-	if ((Mud_Nerve==19) && (Npc_RefuseTalk(self)==FALSE) && (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist) && (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE )) { return 1; };
+	if ((Mud_Nerve == 19)
+	&& (Npc_RefuseTalk(self) == FALSE)
+	&& (Npc_GetDistToNpc(self,hero) < ZivilAnquatschDist)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
+	{
+		return 1;
+	};
+
+	return 0;
 };
 
 func void DIA_Mud_Nerve_19_Info()

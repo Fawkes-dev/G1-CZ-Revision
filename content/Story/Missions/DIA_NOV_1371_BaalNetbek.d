@@ -15,7 +15,7 @@ instance Nov_1371_BaalNetbek_Exit(C_INFO)
 
 func int Nov_1371_BaalNetbek_Exit_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Nov_1371_BaalNetbek_Exit_Info()
@@ -40,7 +40,7 @@ instance Nov_1371_BaalNetbek_CRAZY(C_INFO)
 
 func int Nov_1371_BaalNetbek_CRAZY_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Nov_1371_BaalNetbek_CRAZY_Info()
@@ -92,10 +92,12 @@ func int Nov_1371_BaalNetbek_AGAIN_Condition()
 {
 	if (Npc_KnowsInfo(hero,Nov_1371_BaalNetbek_CRAZY))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void Nov_1371_BaalNetbek_AGAIN_Info()
 {
 //	AI_Output(other,self,"Nov_1371_BaalNetbek_AGAIN_Info_15_01"); //Hey, how's it going?

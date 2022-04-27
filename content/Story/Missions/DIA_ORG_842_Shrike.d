@@ -34,6 +34,7 @@ instance DIA_Shrike_Hello(C_INFO)
 	condition = DIA_Shrike_Hello_Condition;
 	information = DIA_Shrike_Hello_Info;
 	important = 0;
+	permanent = 0;
 //	description = "How are things?";
 //	description = "Wie sieht's aus?";
 	description = "Jak to jde?";
@@ -70,6 +71,7 @@ instance DIA_Shrike_GetLost(C_INFO)
 	condition = DIA_Shrike_GetLost_Condition;
 	information = DIA_Shrike_GetLost_Info;
 	important = 0;
+	permanent = 0;
 //	description = "Get lost.";
 //	description = "Mach, dass du wegkommst.";
 	description = "Ztrať se.";
@@ -77,10 +79,12 @@ instance DIA_Shrike_GetLost(C_INFO)
 
 func int DIA_Shrike_GetLost_Condition()
 {
-	if self.aivar[AIV_WASDEFEATEDBYSC]
+	if (self.aivar[AIV_WASDEFEATEDBYSC])
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Shrike_GetLost_Info()
@@ -103,4 +107,3 @@ func void DIA_Shrike_GetLost_Info()
 
 	Npc_ExchangeRoutine(self,"start");
 };
-

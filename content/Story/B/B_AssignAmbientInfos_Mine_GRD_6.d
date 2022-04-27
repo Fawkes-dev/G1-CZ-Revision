@@ -12,6 +12,7 @@ instance Info_Mine_Grd_6_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Mine_Grd_6_EXIT_Condition;
 	information = Info_Mine_Grd_6_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = "END";
 };
@@ -35,6 +36,7 @@ instance Info_Mine_Grd_6_Mine(C_INFO) // E1
 	nr = 1;
 	condition = Info_Mine_Grd_6_Mine_Condition;
 	information = Info_Mine_Grd_6_Mine_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What goes on in the mine?";
 //	description = "Was läuft in der Mine?";
@@ -69,6 +71,7 @@ instance Info_Mine_Grd_6_WichtigePersonen(C_INFO)
 	nr = 1;
 	condition = Info_Mine_Grd_6_WichtigePersonen_Condition;
 	information = Info_Mine_Grd_6_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Who calls the shots around here?";
 //	description = "Wer hat hier das Sagen?";
@@ -103,6 +106,7 @@ instance Info_Mine_Grd_6_Minecrawler(C_INFO)
 	nr = 1;
 	condition = Info_Mine_Grd_6_Minecrawler_Condition;
 	information = Info_Mine_Grd_6_Minecrawler_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Tell me about the crawlers.";
 //	description = "Erzähl mir was von den Crawlern";
@@ -137,6 +141,7 @@ instance Info_Mine_Grd_6_DieLage(C_INFO) // E1
 	nr = 1;
 	condition = Info_Mine_Grd_6_DieLage_Condition;
 	information = Info_Mine_Grd_6_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How's it going?";
 //	description = "Wie sieht's aus?";

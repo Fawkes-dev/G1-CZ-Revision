@@ -41,10 +41,12 @@ func int SLD_709_Cord_TRAINOFFER_Condition()
 {
 	if (Npc_GetTalentSkill (hero,NPC_TALENT_1H) < 2)
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void SLD_709_Cord_TRAINOFFER_Info()
 {
 //	AI_Output(other,self,"SLD_709_Cord_TRAINOFFER_Info_15_01"); //I want to improve my handling of one-handed weapons.
@@ -59,6 +61,7 @@ func void SLD_709_Cord_TRAINOFFER_Info()
 //	B_LogEntry(GE_TeacherNC,"Cord der Söldner, kann mich im Kampf mit EINHÄNDERN schulen. Er ist tagsüber auf dem Felsplateau am See zu finden.");
 	B_LogEntry(GE_TeacherNC,"Žoldák Cord mě může naučit bojovat s JEDNORUČNÍMI ZBRANĚMI. Přes den ho můžu najít na skalnaté plošině u jezera.");
 };
+
 /*------------------------------------------------------------------------
 						EINHANDKAMPF DIE ERSTE LEHRSTUNDE
 ------------------------------------------------------------------------*/
@@ -77,12 +80,15 @@ instance SLD_709_Cord_TRAIN(C_INFO)
 
 func int SLD_709_Cord_TRAIN_Condition()
 {
-	if (Npc_KnowsInfo(hero,SLD_709_Cord_TRAINOFFER))
-	&& (Npc_GetTalentSkill (hero,NPC_TALENT_1H) == 0)
+	if ((Npc_KnowsInfo(hero,SLD_709_Cord_TRAINOFFER))
+	&& (Npc_GetTalentSkill (hero,NPC_TALENT_1H) == 0))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void SLD_709_Cord_TRAIN_Info()
 {
 //	AI_Output(other,self,"SLD_709_Cord_TRAIN_Info_15_00"); //I want to improve my handling of one-handed weapons.
@@ -91,7 +97,7 @@ func void SLD_709_Cord_TRAIN_Info()
 
 	if (Npc_HasItems(hero,ItMiNugget) >= 30)
 	{
-		if B_GiveSkill(hero,NPC_TALENT_1H,1,LPCOST_TALENT_1H_1)
+		if (B_GiveSkill(hero,NPC_TALENT_1H,1,LPCOST_TALENT_1H_1))
 		{
 //			AI_Output(self,other,"SLD_709_Cord_TRAIN_14_01"); //That's a good decision! Before you can improve your technique, you'll have to learn how to hold the weapon right.
 //			AI_Output(self,other,"SLD_709_Cord_TRAIN_14_01"); //Gute Entscheidung! Um deine Technik zu verbessern, musst du erst einmal lernen, deine Waffe richtig zu halten.
@@ -126,6 +132,7 @@ func void SLD_709_Cord_TRAIN_Info()
 		AI_Output(self,other,"KDF_402_Corristo_HEAVYARMOR_Info_14_03"); //Nemáš dost rudy.
 	};
 };
+
 /*------------------------------------------------------------------------
 						EINHANDKAMPF DIE ZWEITE LEHRSTUNDE
 ------------------------------------------------------------------------*/
@@ -144,13 +151,15 @@ instance SLD_709_Cord_TRAINAGAIN(C_INFO)
 
 func int SLD_709_Cord_TRAINAGAIN_Condition()
 {
-	if (Npc_KnowsInfo(hero,SLD_709_Cord_TRAINOFFER))
-	&& (Npc_GetTalentSkill (hero,NPC_TALENT_1H) < 2)
+	if ((Npc_KnowsInfo(hero,SLD_709_Cord_TRAINOFFER))
+	&& (Npc_GetTalentSkill (hero,NPC_TALENT_1H) < 2))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void SLD_709_Cord_TRAINAGAIN_Info()
 {
 //	AI_Output(other,self,"SLD_709_Cord_TRAINAGAIN_Info_15_01"); //Teach me how to handle one-handed weapons more skillfully.
@@ -159,7 +168,7 @@ func void SLD_709_Cord_TRAINAGAIN_Info()
 
 	if (Npc_HasItems(hero,ItMiNugget) >= 50)
 	{
-		if B_GiveSkill(hero,NPC_TALENT_1H,2,LPCOST_TALENT_1H_2)
+		if (B_GiveSkill(hero,NPC_TALENT_1H,2,LPCOST_TALENT_1H_2))
 		{
 //			AI_Output(self,other,"SLD_709_Cord_TRAINAGAIN_Info_14_02"); //Okay, you know the basics. Holding the weapon lower down will put more force into your first strike.
 //			AI_Output(self,other,"SLD_709_Cord_TRAINAGAIN_Info_14_02"); //Na gut, die Grundkenntnisse hast du ja schon. Wenn du die Waffe gesenkt hältst, dann kannst du direkt mehr Wucht in deinen ersten Schlag legen.

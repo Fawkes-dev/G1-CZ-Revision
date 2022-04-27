@@ -8,6 +8,7 @@ instance DIA_Gilbert_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_Gilbert_EXIT_Condition;
 	information = DIA_Gilbert_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,8 +33,8 @@ instance DIA_Gilbert_First(C_INFO)
 	nr = 1;
 	condition = DIA_Gilbert_First_Condition;
 	information = DIA_Gilbert_First_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Gilbert_First_Condition()
@@ -42,6 +43,8 @@ func int DIA_Gilbert_First_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Gilbert_First_Info()
@@ -66,6 +69,7 @@ instance DIA_Gilbert_Hallo(C_INFO)
 	nr = 1;
 	condition = DIA_Gilbert_Hallo_Condition;
 	information = DIA_Gilbert_Hallo_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What are you doing here?";
 //	description = "Was machst du hier?";
@@ -89,4 +93,3 @@ func void DIA_Gilbert_Hallo_Info()
 //	AI_Output(self,other,"DIA_Gilbert_Hallo_04_02"); //Schätze, jetzt kräht kein Hahn mehr danach. Aber ich bleibe hier. Im alten Lager rennen mir zu viele Schwachköpfe rum.
 	AI_Output(self,other,"DIA_Gilbert_Hallo_04_02"); //Myslím, že už si to nikdo nepamatuje. Já tady ale zůstávám. Po Starém táboře se motají spousty zabedněnců.
 };
-

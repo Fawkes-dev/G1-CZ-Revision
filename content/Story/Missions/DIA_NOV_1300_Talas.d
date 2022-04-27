@@ -13,13 +13,14 @@ instance Nov_1300_Talas_Exit(C_INFO)
 
 func int Nov_1300_Talas_Exit_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Nov_1300_Talas_Exit_Info()
 {
 	AI_StopProcessInfos(self);
 };
+
 // ***************************** INFOS ****************************************//
 
 instance Nov_1300_Talas_UR(C_INFO)
@@ -36,13 +37,15 @@ instance Nov_1300_Talas_UR(C_INFO)
 
 func int Nov_1300_Talas_UR_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_CorKalom_BringBook)
-	&& (CorKalom_BringBook != LOG_SUCCESS)
+	if ((Npc_KnowsInfo(hero,Info_CorKalom_BringBook))
+	&& (CorKalom_BringBook != LOG_SUCCESS))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void Nov_1300_Talas_UR_Info()
 {
 //	AI_Output(other,self,"Nov_1300_Talas_UR_Info_15_01"); //You're Talas, the one who was mugged.
@@ -52,6 +55,7 @@ func void Nov_1300_Talas_UR_Info()
 //	AI_Output(self,other,"Nov_1300_Talas_UR_Info_02_02"); //Lass mich in Ruhe, ich will nicht darüber reden!
 	AI_Output(self,other,"Nov_1300_Talas_UR_Info_02_02"); //Nech mě na pokoji, nechci o tom mluvit!
 };
+
 // ***************************** INFOS ****************************************//
 
 instance Nov_1300_Talas_HELP(C_INFO)
@@ -68,12 +72,15 @@ instance Nov_1300_Talas_HELP(C_INFO)
 
 func int Nov_1300_Talas_HELP_Condition()
 {
-	if Npc_KnowsInfo(hero,Nov_1300_Talas_UR)
-	&& (CorKalom_BringBook != LOG_SUCCESS)
+	if ((Npc_KnowsInfo(hero,Nov_1300_Talas_UR))
+	&& (CorKalom_BringBook != LOG_SUCCESS))
 	{
 		return 1;
 	};
+
+	return 0;
 };
+
 func void Nov_1300_Talas_HELP_Info()
 {
 //	AI_Output(other,self,"Nov_1300_Talas_HELP_Info_15_01"); //I can help you to bring the almanac back.
@@ -109,6 +116,7 @@ func void Nov_1300_Talas_HELP_OK()
 	AI_Output(self,other,"Nov_1300_Talas_HELP_OK_02_02"); //Dobře, až budeš připraven, můžeme vyrazit.
 	Info_ClearChoices(Nov_1300_Talas_HELP);
 };
+
 func void Nov_1300_Talas_HELP_BRING()
 {
 //	AI_Output(other,self,"Nov_1300_Talas_HELP_BRING_15_01"); //That'll cost you 30 ore.
@@ -121,6 +129,7 @@ func void Nov_1300_Talas_HELP_BRING()
 	B_GiveInvItems(self,hero,ItMiNugget,30);
 	Info_ClearChoices(Nov_1300_Talas_HELP);
 };
+
 func void Nov_1300_Talas_HELP_MORE()
 {
 //	AI_Output(other,self,"Nov_1300_Talas_HELP_MORE_15_01"); //Give me 50 ore and I'm in.
@@ -135,6 +144,7 @@ func void Nov_1300_Talas_HELP_MORE()
 };
 
 // ***************************** INFOS ****************************************//
+
 instance Nov_1300_Talas_READY(C_INFO)
 {
 	npc = Nov_1300_Talas;
@@ -149,13 +159,15 @@ instance Nov_1300_Talas_READY(C_INFO)
 
 func int Nov_1300_Talas_READY_Condition()
 {
-	if Npc_KnowsInfo(hero,Nov_1300_Talas_HELP)
-	&& (CorKalom_BringBook != LOG_SUCCESS)
+	if ((Npc_KnowsInfo(hero,Nov_1300_Talas_HELP))
+	&& (CorKalom_BringBook != LOG_SUCCESS))
 	{
 		return 1;
 	};
 
+	return 0;
 };
+
 func void Nov_1300_Talas_READY_Info()
 {
 //	AI_Output(other,self,"Nov_1300_Talas_READY_Info_15_01"); //I'm ready, we can leave now.
@@ -172,7 +184,6 @@ func void Nov_1300_Talas_READY_Info()
 	self.aivar[AIV_PARTYMEMBER] = TRUE;
 	Npc_ExchangeRoutine(self,"GOBBOCAVE");
 	AI_StopProcessInfos(self);
-
 };
 
 // ***************************** AN DER BRÜCKE ****************************************//
@@ -183,17 +194,19 @@ instance Nov_1300_Talas_BRIDGE(C_INFO)
 	information = Nov_1300_Talas_BRIDGE_Info;
 	important = 1;
 	permanent = 0;
-
 };
+
 func int Nov_1300_Talas_BRIDGE_Condition()
 {
-	if (Npc_KnowsInfo(hero,Nov_1300_Talas_READY ))
-	&& (Npc_GetDistToWP(self,"LOCATION_29_02")<1000)
+	if ((Npc_KnowsInfo(hero,Nov_1300_Talas_READY))
+	&& (Npc_GetDistToWP(self,"LOCATION_29_02") < 1000))
 	{
 		return 1;
 	};
 
+	return 0;
 };
+
 func void Nov_1300_Talas_BRIDGE_Info()
 {
 //	AI_Output(self,other,"Nov_1300_Talas_BRIDGE_Info_02_01"); //Those damn little beasts live in a cave behind this bridge! Be careful!
@@ -219,17 +232,19 @@ instance Nov_1300_Talas_BACK(C_INFO)
 	information = Nov_1300_Talas_BACK_Info;
 	important = 1;
 	permanent = 0;
-
 };
+
 func int Nov_1300_Talas_BACK_Condition()
 {
-	if (Npc_KnowsInfo(hero,Nov_1300_Talas_BRIDGE ))
-	&& (Npc_HasItems(hero,ItWrFokusbuch))
+	if ((Npc_KnowsInfo(hero,Nov_1300_Talas_BRIDGE))
+	&& (Npc_HasItems(hero,ItWrFokusbuch)))
 	{
 		return 1;
 	};
 
+	return 0;
 };
+
 func void Nov_1300_Talas_BACK_Info()
 {
 //	AI_Output(self,other,"Nov_1300_Talas_BACK_Info_02_01"); //You have the almanac! Well done. Let's go back to the Camp.
@@ -252,19 +267,21 @@ instance Nov_1300_Talas_RETURNED(C_INFO)
 	information = Nov_1300_Talas_RETURNED_Info;
 	important = 1;
 	permanent = 0;
-
 };
+
 func int Nov_1300_Talas_RETURNED_Condition()
 {
-	if (Npc_KnowsInfo(hero,Nov_1300_Talas_BACK ))
-	&& Npc_HasItems(hero,ItWrFokusbuch)
-	&& (Npc_GetDistToWP(self,"PSI_START")<1000)
-	&& (CorKalom_BringBook != LOG_SUCCESS)
+	if ((Npc_KnowsInfo(hero,Nov_1300_Talas_BACK))
+	&& (Npc_HasItems(hero,ItWrFokusbuch))
+	&& (Npc_GetDistToWP(self,"PSI_START") < 1000)
+	&& (CorKalom_BringBook != LOG_SUCCESS))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void Nov_1300_Talas_RETURNED_Info()
 {
 //	AI_Output(self,other,"Info_Talas_RETURNED_02_01"); //We're back. You'd better take the almanac to Cor Kalom right away.
@@ -287,6 +304,7 @@ func void Nov_1300_Talas_RETURNED_Info()
 };
 
 // ***************************** zum OGY ****************************************//
+
 instance Nov_1300_Talas_OGY(C_INFO)
 {
 	npc = Nov_1300_Talas;
@@ -301,12 +319,14 @@ instance Nov_1300_Talas_OGY(C_INFO)
 
 func int Nov_1300_Talas_OGY_Condition()
 {
-	if (Npc_KnowsInfo(hero,GUR_1202_CorAngar_WHERE ))
+	if (Npc_KnowsInfo(hero,GUR_1202_CorAngar_WHERE))
 	{
 		return 1;
 	};
 
+	return 0;
 };
+
 func void Nov_1300_Talas_OGY_Info()
 {
 //	AI_Output(other,self,"Nov_1300_Talas_OGY_15_01"); //Cor Angar sent me. He said you should take me to the Orc cemetery so I can find Baal Lukor and his templars.
@@ -325,6 +345,7 @@ func void Nov_1300_Talas_OGY_Info()
 };
 
 // ***************************** am OGY ****************************************//
+
 instance Nov_1300_Talas_BACKAGAIN(C_INFO)
 {
 	npc = Nov_1300_Talas;
@@ -332,14 +353,16 @@ instance Nov_1300_Talas_BACKAGAIN(C_INFO)
 	information = Nov_1300_Talas_BACKAGAIN_Info;
 	important = 1;
 	permanent = 0;
-
 };
+
 func int Nov_1300_Talas_BACKAGAIN_Condition()
 {
-	if (Npc_GetDistToWP(self,"OW_PATH_011")<1000 )
+	if (Npc_GetDistToWP(self,"OW_PATH_011") < 1000)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Nov_1300_Talas_BACKAGAIN_Info()
@@ -357,6 +380,4 @@ func void Nov_1300_Talas_BACKAGAIN_Info()
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	AI_StopProcessInfos(self);
 	Npc_ExchangeRoutine(self,"ReturnToCampAgain");
-
 };
-

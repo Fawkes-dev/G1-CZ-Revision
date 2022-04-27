@@ -12,6 +12,7 @@ instance Info_Nov_5_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Nov_5_EXIT_Condition;
 	information = Info_Nov_5_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = "END";
 };
@@ -35,6 +36,7 @@ instance Info_Nov_5_EinerVonEuchWerden(C_INFO) // E1
 	nr = 4;
 	condition = Info_Nov_5_EinerVonEuchWerden_Condition;
 	information = Info_Nov_5_EinerVonEuchWerden_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How can I join this camp?";
 //	description = "Wie werde ich in diesem Lager aufgenommen?";
@@ -71,6 +73,7 @@ instance Info_Nov_5_WichtigePersonen(C_INFO)
 	nr = 3;
 	condition = Info_Nov_5_WichtigePersonen_Condition;
 	information = Info_Nov_5_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Who calls the shots around here?";
 //	description = "Wer hat hier das Sagen?";
@@ -101,6 +104,7 @@ instance Info_Nov_5_DasLager(C_INFO)
 	nr = 2;
 	condition = Info_Nov_5_DasLager_Condition;
 	information = Info_Nov_5_DasLager_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What can you tell me about this camp?";
 //	description = "Was kannst du mit über dieses Lager erzählen?";
@@ -143,6 +147,7 @@ instance Info_Nov_5_DieLage(C_INFO) // E1
 	nr = 1;
 	condition = Info_Nov_5_DieLage_Condition;
 	information = Info_Nov_5_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How are things?";
 //	description = "Wie sieht's aus?";

@@ -1,3 +1,4 @@
+
 # G1-CZ-revision status: WIP
 Gothic 1 CZ revision
 
@@ -49,3 +50,7 @@ func void DIA_Ricelord_Arbeit_Info()
 1. [ ] First step - review all C_INFO.description texts, AI_Output dialogs, B_LogEntry & PrintScreen entries
 2. [ ] Then review all other czech texts (C_ITEM, SVM, etc.)
 3. [ ] Fix all bugs (not only dialog related, e.g. ZS_Sleep routine, where NPC actually don't use beds and don't sleep)
+
+### Credits
+We have used following sources to find & fix all the issues:
+[AmProsius/Gothic-1-Community -Patch](https://github.com/AmProsius/gothic-1-community-patch) all issues which we sourced from here will have extra label `source:G1CP`

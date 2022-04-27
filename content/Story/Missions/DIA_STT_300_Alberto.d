@@ -30,8 +30,8 @@ instance STT_300_Alberto_BUY(C_INFO)
 	information = STT_300_Alberto_BUY_Info;
 	important = 0;
 	permanent = 1;
-	description = DIALOG_TRADE;
 	Trade = 1;
+	description = DIALOG_TRADE;
 };
 
 func int STT_300_Alberto_BUY_Condition()
@@ -47,5 +47,4 @@ func void STT_300_Alberto_BUY_Info()
 //	AI_Output(self,other,"STT_300_Alberto_BUY_Info_12_02"); //Yep. Anything you want. If you have ore.
 //	AI_Output(self,other,"STT_300_Alberto_BUY_Info_12_02"); //Jupp. Alles, was du willst. Wenn du Erz hast.
 	AI_Output(self,other,"STT_300_Alberto_BUY_Info_12_02"); //Jistě. Cokoliv chceš, jestli máš rudu.
-
 };

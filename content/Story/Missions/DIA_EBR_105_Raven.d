@@ -8,6 +8,7 @@ instance DIA_Raven_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Raven_Exit_Condition;
 	information = DIA_Raven_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,17 +33,19 @@ instance DIA_Raven_FirstIn(C_INFO)
 	nr = 1;
 	condition = DIA_Raven_FirstIn_Condition;
 	information = DIA_Raven_FirstIn_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Raven_FirstIn_Condition()
 {
 	var C_NPC wache218; wache218 = Hlp_GetNpc(Grd_218_Gardist);
-	if (wache218.aivar[AIV_PASSGATE]==TRUE)
+	if (wache218.aivar[AIV_PASSGATE] == TRUE)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Raven_FirstIn_Info()
@@ -62,6 +65,7 @@ instance DIA_Raven_Who(C_INFO)
 	nr = 1;
 	condition = DIA_Raven_Who_Condition;
 	information = DIA_Raven_Who_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Who are you?";
 //	description = "Wer bist du?";
@@ -93,6 +97,7 @@ instance DIA_Raven_Krautbote(C_INFO)
 	nr = 1;
 	condition = DIA_Raven_Krautbote_Condition;
 	information = DIA_Raven_Krautbote_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I have some weed for Gomez from Cor Kalom.";
 //	description = "Ich habe eine Ladung Kraut für Gomez von Cor Kalom.";
@@ -106,6 +111,8 @@ func int DIA_Raven_Krautbote_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Raven_Krautbote_Info()
@@ -138,6 +145,7 @@ instance DIA_Raven_Aufnahme(C_INFO)
 	nr = 1;
 	condition = DIA_Raven_Aufnahme_Condition;
 	information = DIA_Raven_Aufnahme_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I want to see Gomez. Thorus says I'm to be taken on as a Shadow.";
 //	description = "Ich will zu Gomez. Thorus sagt, ich soll als Schatten aufgenommen werden.";
@@ -151,6 +159,8 @@ func int DIA_Raven_Aufnahme_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Raven_Aufnahme_Info()
@@ -179,8 +189,8 @@ instance DIA_Raven_There(C_INFO)
 	nr = 1;
 	condition = DIA_Raven_There_Condition;
 	information = DIA_Raven_There_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Raven_There_Condition()
@@ -189,6 +199,8 @@ func int DIA_Raven_There_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Raven_There_Info()
@@ -211,6 +223,7 @@ instance DIA_Raven_PERM(C_INFO)
 	nr = 8;
 	condition = DIA_Raven_PERM_Condition;
 	information = DIA_Raven_PERM_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How's the ore trade going?";
 //	description = "Wie steht der Erzhandel?";
@@ -223,6 +236,8 @@ func int DIA_Raven_PERM_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Raven_PERM_Info()
@@ -245,6 +260,7 @@ instance DIA_Raven_BinDabei(C_INFO)
 	nr = 8;
 	condition = DIA_Raven_BinDabei_Condition;
 	information = DIA_Raven_BinDabei_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Gomez says I'm in.";
 //	description = "Gomez sagt, ich bin dabei.";
@@ -257,6 +273,8 @@ func int DIA_Raven_BinDabei_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Raven_BinDabei_Info()
@@ -292,6 +310,7 @@ instance DIA_Raven_SpySect(C_INFO)
 	nr = 1;
 	condition = DIA_Raven_SpySect_Condition;
 	information = DIA_Raven_SpySect_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What d'you want me to do?";
 //	description = "Was soll ich für dich erledigen?";
@@ -304,6 +323,8 @@ func int DIA_Raven_SpySect_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Raven_SpySect_Info()
@@ -350,6 +371,7 @@ instance DIA_Raven_Equipment(C_INFO)
 	nr = 1;
 	condition = DIA_Raven_Equipment_Condition;
 	information = DIA_Raven_Equipment_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Where can I get better equipment?";
 //	description = "Wo bekomme ich bessere Ausrüstung her?";
@@ -358,10 +380,12 @@ instance DIA_Raven_Equipment(C_INFO)
 
 func int DIA_Raven_Equipment_Condition()
 {
-	if (Raven_SpySect==LOG_RUNNING)
+	if (Raven_SpySect == LOG_RUNNING)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Raven_Equipment_Info()
@@ -383,7 +407,7 @@ func void DIA_Raven_Equipment_Info()
 //	B_LogEntry(GE_TraderOC,"Diego has better ARMORS for Gomez' shadows. He's at the entry of the castle.");
 //	B_LogEntry(GE_TraderOC,"Diego verteilt bessere RÜSTUNGEN für Gomez' Schatten. Er hängt vor dem Eingang zur Burg herum.");
 	B_LogEntry(GE_TraderOC,"Diego nabízí lepší ZBROJE pro Gomezovy Stíny. Najdu ho před branou do hradu.");
-	if !Npc_KnowsInfo(hero,DIA_Skip_First)
+	if (!Npc_KnowsInfo(hero,DIA_Skip_First))
 	{
 //		B_LogEntry(GE_TraderOC,"The guard Skip in the rear courtyard sells WEAPONS. But only to Gomez' men.");
 //		B_LogEntry(GE_TraderOC,"Der Gardist Skip auf dem hinteren Burginnenhof verkauft WAFFEN. Aber nur an Gomez' Leute.");
@@ -407,6 +431,7 @@ instance DIA_Raven_SpyBericht(C_INFO)
 	nr = 1;
 	condition = DIA_Raven_SpyBericht_Condition;
 	information = DIA_Raven_SpyBericht_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I just thought I'd report in.";
 //	description = "Ich will einen Zwischenbericht abgeben.";
@@ -415,10 +440,12 @@ instance DIA_Raven_SpyBericht(C_INFO)
 
 func int DIA_Raven_SpyBericht_Condition()
 {
-	if ( Raven_SpySect==LOG_RUNNING )
+	if (Raven_SpySect == LOG_RUNNING)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Raven_SpyBericht_Info()
@@ -429,8 +456,8 @@ func void DIA_Raven_SpyBericht_Info()
 //	AI_Output(self,other,"DIA_Raven_SpyBericht_10_01"); //Good. I like being kept up to date.
 //	AI_Output(self,other,"DIA_Raven_SpyBericht_10_01"); //Gut. Ich bin gerne gut informiert.
 	AI_Output(self,other,"DIA_Raven_SpyBericht_10_01"); //Dobře. Rád dostávám ty nejnovější informace.
-	if (Npc_HasItems(other,itat_Crawlerqueen)>=1)
-	|| (CorKalom_BringMCQBalls == LOG_SUCCESS)
+	if ((Npc_HasItems(other,itat_Crawlerqueen) >= 1)
+	|| (CorKalom_BringMCQBalls == LOG_SUCCESS))
 	{
 		if (Kapitel >= 3)
 		{

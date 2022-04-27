@@ -11,8 +11,8 @@ instance Info_SFB_2_Pre(C_INFO)
 	nr = 1;
 	condition = Info_SFB_2_Pre_Condition;
 	information = Info_SFB_2_Pre_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_SFB_2_Pre_Condition()
@@ -36,6 +36,7 @@ instance Info_SFB_2_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_SFB_2_EXIT_Condition;
 	information = Info_SFB_2_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = "END";
 };
@@ -59,6 +60,7 @@ instance Info_SFB_2_EinerVonEuchWerden(C_INFO)
 	nr = 4;
 	condition = Info_SFB_2_EinerVonEuchWerden_Condition;
 	information = Info_SFB_2_EinerVonEuchWerden_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What do I have to do to join you?";
 //	description = "Was muss ich tun, um bei euch mitzumachen?";
@@ -92,6 +94,7 @@ instance Info_SFB_2_WichtigePersonen(C_INFO)
 	nr = 3;
 	condition = Info_SFB_2_WichtigePersonen_Condition;
 	information = Info_SFB_2_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Who's in charge here.";
 //	description = "Wer hat hier was zu sagen?";
@@ -125,6 +128,7 @@ instance Info_SFB_2_DasLager(C_INFO)
 	nr = 2;
 	condition = Info_SFB_2_DasLager_Condition;
 	information = Info_SFB_2_DasLager_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I need to know more about the Camp.";
 //	description = "Ich will mehr über dieses Lager erfahren.";
@@ -155,6 +159,7 @@ instance Info_SFB_2_DieLage(C_INFO)
 	nr = 1;
 	condition = Info_SFB_2_DieLage_Condition;
 	information = Info_SFB_2_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What's life like here?";
 //	description = "Wie ist das Leben hier?";

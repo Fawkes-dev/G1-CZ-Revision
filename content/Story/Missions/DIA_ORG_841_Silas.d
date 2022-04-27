@@ -8,6 +8,7 @@ instance DIA_Silas_EXIT(C_Info)
 	nr = 999;
 	condition = DIA_Silas_EXIT_Condition;
 	information = DIA_Silas_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Silas_Hehler(C_Info)
 	nr = 1;
 	condition = DIA_Silas_Hehler_Condition;
 	information = DIA_Silas_Hehler_Info;
+	important = 0;
 	permanent = 0;
 //	description = "How are things?";
 //	description = "Wie läuft's denn so?";
@@ -66,11 +68,12 @@ instance DIA_Silas_Trade(C_Info)
 	nr = 1;
 	condition = DIA_Silas_Trade_Condition;
 	information = DIA_Silas_Trade_Info;
+	important = 0;
 	permanent = 0;
+	trade = 1;
 //	description = "I want a drink.";
 //	description = "Ich will was trinken.";
 	description = "Chci se napít.";
-	trade = 1;
 };
 
 func int DIA_Silas_Trade_Condition()

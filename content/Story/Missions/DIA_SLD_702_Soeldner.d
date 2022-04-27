@@ -8,6 +8,7 @@ instance DIA_Sld_702_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_Sld_702_EXIT_Condition;
 	information = DIA_Sld_702_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,8 +33,8 @@ instance DIA_Sld_702_First(C_INFO)
 	nr = 1;
 	condition = DIA_Sld_702_First_Condition;
 	information = DIA_Sld_702_First_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Sld_702_First_Condition()
@@ -42,6 +43,8 @@ func int DIA_Sld_702_First_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Sld_702_First_Info()
@@ -67,6 +70,7 @@ instance DIA_Sld_702_PERM(C_INFO)
 	nr = 1;
 	condition = DIA_Sld_702_PERM_Condition;
 	information = DIA_Sld_702_PERM_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What do I need to do to make you let me see Lee?";
 //	description = "Was muss ich machen, damit du mich zu Lee läßt?";
@@ -96,4 +100,3 @@ func void DIA_Sld_702_PERM_Info()
 //	AI_Output(self,other,"DIA_Sld_702_PERM_04_04"); //WIR sind nur hier, falls er uns braucht.
 	AI_Output(self,other,"DIA_Sld_702_PERM_04_04"); //MY jsme tady jen pro případ, kdyby nás potřeboval.
 };
-

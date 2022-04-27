@@ -10,7 +10,7 @@ instance Info_TPL_1455_GorBoba(C_INFO)
 
 func int Info_TPL_1455_GorBoba_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Info_TPL_1455_GorBoba_Info()
@@ -34,9 +34,11 @@ instance Info_TPL_1455_GorBoba1(C_INFO)
 
 func int Info_TPL_1455_GorBoba1_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_TPL_1455_GorBoba )) {
+	if (Npc_KnowsInfo(hero,Info_TPL_1455_GorBoba)) {
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_TPL_1455_GorBoba1_Info()

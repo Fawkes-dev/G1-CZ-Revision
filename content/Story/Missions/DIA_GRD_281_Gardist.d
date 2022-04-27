@@ -8,6 +8,7 @@ instance DIA_Grd_281_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Grd_281_Exit_Condition;
 	information = DIA_Grd_281_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -33,6 +34,7 @@ instance DIA_Grd_281_GuardGate(C_INFO)
 	condition = DIA_Grd_281_GuardGate_Condition;
 	information = DIA_Grd_281_GuardGate_Info;
 	//#Needs_Attention - zbytocny permanentny dialog - zrusil by som to
+	important = 0;
 	permanent = 1;
 //	description = "How's it going?";
 //	description = "Wie steht's?";
@@ -45,6 +47,8 @@ func int DIA_Grd_281_GuardGate_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Grd_281_GuardGate_Info()

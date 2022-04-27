@@ -29,6 +29,7 @@ instance DIA_Ghorim_MissingHarlok(C_INFO)
 	nr = 1;
 	condition = DIA_Ghorim_MissingHarlok_Condition;
 	information = DIA_Ghorim_MissingHarlok_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Hi! How's it going?";
 //	description = "Hi! Wie sieht's aus?";
@@ -86,6 +87,7 @@ instance DIA_Ghorim_SUCCESS(C_INFO)
 	nr = 1;
 	condition = DIA_Ghorim_SUCCESS_Condition;
 	information = DIA_Ghorim_SUCCESS_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Well? Has he taken over now?";
 //	description = "Na? Endlich abgelöst worden?";
@@ -98,6 +100,8 @@ func int DIA_Ghorim_SUCCESS_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Ghorim_SUCCESS_Info()
@@ -109,4 +113,3 @@ func void DIA_Ghorim_SUCCESS_Info()
 //	AI_Output(self,other,"DIA_Ghorim_SUCCESS_02_01"); //Ja - jetzt kann ich endlich mal wieder richtig ausschlafen. Danke, Mann!
 	AI_Output(self,other,"DIA_Ghorim_SUCCESS_02_01"); //Dobře - konečně se budu moci vyspat. Díky, člověče!
 };
-

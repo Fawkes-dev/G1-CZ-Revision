@@ -5,8 +5,8 @@ instance KDW_604_Cronos_Exit(C_INFO)
 	nr = 999;
 	condition = KDW_604_Cronos_Exit_Condition;
 	information = KDW_604_Cronos_Exit_Info;
-	permanent = 1;
 	important = 0;
+	permanent = 1;
 	description = DIALOG_ENDE;
 };
 
@@ -20,11 +20,11 @@ func void KDW_604_Cronos_Exit_Info()
 	AI_StopProcessInfos(self);
 	if (!Npc_HasItems(self,ItArRuneIceCube))
 	{
-	CreateInvItem(self,ItArRuneIceCube);
+		CreateInvItem(self,ItArRuneIceCube);
 	};
 	if (!Npc_HasItems(self,ItArRuneThunderbolt))
 	{
-	CreateInvItem(self,ItArRuneThunderbolt);
+		CreateInvItem(self,ItArRuneThunderbolt);
 	};
 };
 
@@ -39,6 +39,7 @@ instance KDW_604_Cronos_Greet(C_INFO)
 	nr = 1;
 	condition = KDW_604_Cronos_Greet_Condition;
 	information = KDW_604_Cronos_Greet_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Ich grüße dich, Magier.";
 //	description = "Ich grüße dich, Magier.";
@@ -67,6 +68,7 @@ instance KDW_604_Cronos_Brief(C_INFO)
 	nr = 1;
 	condition = KDW_604_Cronos_Brief_Condition;
 	information = KDW_604_Cronos_Brief_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I have a letter for the High Magician of the Circle of Fire.";
 //	description = "Ich habe einen Brief für den obersten Feuermagier.";
@@ -75,13 +77,15 @@ instance KDW_604_Cronos_Brief(C_INFO)
 
 func int KDW_604_Cronos_Brief_Condition()
 {
-	if Npc_KnowsInfo(hero,KDW_604_Cronos_Greet)
+	if ((Npc_KnowsInfo(hero,KDW_604_Cronos_Greet))
 	&& (Npc_GetTrueGuild(hero) != GIL_STT)
 	&& (Npc_GetTrueGuild(hero) != GIL_KDF)
-	&& (hero.level < 10)
+	&& (hero.level < 10))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void KDW_604_Cronos_Brief_Info()
@@ -113,6 +117,7 @@ instance KDW_604_Cronos_Barrier(C_INFO)
 	nr = 2;
 	condition = KDW_604_Cronos_Barrier_Condition;
 	information = KDW_604_Cronos_Barrier_Info;
+	important = 0;
 	permanent = 0;
 //	description = "You want to destroy the Barrier - how exactly do you plan to do that?";
 //	description = "Ihr wollt die Barriere zerstören - wie genau soll das gehen?";
@@ -125,6 +130,8 @@ func int KDW_604_Cronos_Barrier_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void KDW_604_Cronos_Barrier_Info()
@@ -156,6 +163,7 @@ instance KDW_604_Cronos_WannaJoin(C_INFO)
 	nr = 3;
 	condition = KDW_604_Cronos_WannaJoin_Condition;
 	information = KDW_604_Cronos_WannaJoin_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I'd like to join you!";
 //	description = "Ich will bei euch mitmachen!";
@@ -168,6 +176,8 @@ func int KDW_604_Cronos_WannaJoin_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void KDW_604_Cronos_WannaJoin_Info()
@@ -190,6 +200,7 @@ instance KDW_604_Cronos_WannaMage(C_INFO)
 	nr = 3;
 	condition = KDW_604_Cronos_WannaMage_Condition;
 	information = KDW_604_Cronos_WannaMage_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I'd like to become a magician!";
 //	description = "Ich will Magier werden!";
@@ -202,6 +213,8 @@ func int KDW_604_Cronos_WannaMage_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void KDW_604_Cronos_WannaMage_Info()
@@ -233,6 +246,7 @@ instance KDW_604_Cronos_Bandit(C_INFO)
 	nr = 4;
 	condition = KDW_604_Cronos_Bandit_Condition;
 	information = KDW_604_Cronos_Bandit_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I am now one of Lares' men. Have you got a message for the Fire-mages?";
 //	description = "Ich gehöre jetzt zu Lares. Hast du eine Nachricht für die Feuermagier?";
@@ -241,10 +255,13 @@ instance KDW_604_Cronos_Bandit(C_INFO)
 
 func int KDW_604_Cronos_Bandit_Condition()
 {
-	if ((Npc_GetTrueGuild(hero)==GIL_ORG) || (Npc_GetTrueGuild(hero)==GIL_SLD))
+	if ((Npc_GetTrueGuild(hero) == GIL_ORG)
+	|| (Npc_GetTrueGuild(hero) == GIL_SLD))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void KDW_604_Cronos_Bandit_Info()
@@ -275,6 +292,7 @@ instance KDW_604_Cronos_BriefBack(C_INFO)
 	nr = 3;
 	condition = KDW_604_Cronos_BriefBack_Condition;
 	information = KDW_604_Cronos_BriefBack_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I've passed the message on!";
 //	description = "Ich habe deine Nachricht überbracht!";
@@ -287,6 +305,8 @@ func int KDW_604_Cronos_BriefBack_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void KDW_604_Cronos_BriefBack_Info()
@@ -318,8 +338,8 @@ instance Info_Cronos_NEWS(C_INFO)
 	npc = KDW_604_Cronos;
 	condition = Info_Cronos_NEWS_Condition;
 	information = Info_Cronos_NEWS_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "I have an important message for Saturas!";
 //	description = "Ich habe wichtige Nachrichten für Saturas!";
 	description = "Mám důležitou zprávu pro Saturase!";
@@ -327,11 +347,13 @@ instance Info_Cronos_NEWS(C_INFO)
 
 func int Info_Cronos_NEWS_Condition()
 {
-	if (CorAngar_SendToNC==TRUE)
-	&& !Npc_KnowsInfo(hero,Info_Cronos_SLEEPER)
+	if ((CorAngar_SendToNC == TRUE)
+	&& (!Npc_KnowsInfo(hero,Info_Cronos_SLEEPER)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Cronos_NEWS_Info()
@@ -353,8 +375,8 @@ instance Info_Cronos_KALOM(C_INFO)
 	nr = 10;
 	condition = Info_Cronos_KALOM_Condition;
 	information = Info_Cronos_KALOM_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "Cor Kalom has left the Brotherhood!";
 //	description = "Cor Kalom hat die Bruderschaft verlassen!";
 	description = "Cor Kalom opustil Bratrstvo!";
@@ -362,10 +384,13 @@ instance Info_Cronos_KALOM(C_INFO)
 
 func int Info_Cronos_KALOM_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Cronos_NEWS) && !Npc_KnowsInfo(hero,Info_Cronos_SLEEPER))
+	if ((Npc_KnowsInfo(hero,Info_Cronos_NEWS))
+	&& (!Npc_KnowsInfo(hero,Info_Cronos_SLEEPER)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Cronos_KALOM_Info()
@@ -398,8 +423,8 @@ instance Info_Cronos_YBERION(C_INFO)
 	nr = 20;
 	condition = Info_Cronos_YBERION_Condition;
 	information = Info_Cronos_YBERION_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "Y'Berion, the leader of the Sect Camp, is dead!";
 //	description = "Y'Berion, der Anführer des Sektenlagers, ist tot!";
 	description = "Y´Berion, vůdce Sektovního tábora, je mrtev!";
@@ -407,10 +432,13 @@ instance Info_Cronos_YBERION(C_INFO)
 
 func int Info_Cronos_YBERION_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Cronos_NEWS) && !Npc_KnowsInfo(hero,Info_Cronos_SLEEPER))
+	if ((Npc_KnowsInfo(hero,Info_Cronos_NEWS))
+	&& (!Npc_KnowsInfo(hero,Info_Cronos_SLEEPER)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Cronos_YBERION_Info()
@@ -446,8 +474,8 @@ instance Info_Cronos_SLEEPER(C_INFO)
 	nr = 30;
 	condition = Info_Cronos_SLEEPER_Condition;
 	information = Info_Cronos_SLEEPER_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "The Gurus have recognized that they're praying to an evil arch demon!";
 //	description = "Die Gurus haben erkannt, dass sie einen üblen Erzdämonen anbeten!";
 	description = "Guru zjistili, že se modlí ke zlému arcidémonovi!";
@@ -457,8 +485,10 @@ func int Info_Cronos_SLEEPER_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_Cronos_NEWS))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Cronos_SLEEPER_Info()
@@ -512,8 +542,8 @@ instance Info_Cronos_PAROLE(C_INFO)
 	nr = 30;
 	condition = Info_Cronos_PAROLE_Condition;
 	information = Info_Cronos_PAROLE_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "What was the password again?";
 //	description = "Wie war die Parole nochmal?";
 	description = "Jakže bylo to heslo?";
@@ -521,10 +551,13 @@ instance Info_Cronos_PAROLE(C_INFO)
 
 func int Info_Cronos_PAROLE_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_Cronos_SLEEPER) && !Npc_KnowsInfo(hero,Info_Saturas_NEWS))
+	if ((Npc_KnowsInfo(hero,Info_Cronos_SLEEPER))
+	&& (!Npc_KnowsInfo(hero,Info_Saturas_NEWS)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Cronos_PAROLE_Info()
@@ -546,8 +579,8 @@ instance Info_Cronos_REWARD(C_INFO)
 	nr = 30;
 	condition = Info_Cronos_REWARD_Condition;
 	information = Info_Cronos_REWARD_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "Saturas said you had a reward for me.";
 //	description = "Saturas sagte, du hättest eine Belohnung für mich.";
 	description = "Saturas řekl, že mě máš odměnit.";
@@ -557,8 +590,10 @@ func int Info_Cronos_REWARD_Condition()
 {
 	if (Saturas_BringFoci == 5)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Cronos_REWARD_Info()
@@ -576,7 +611,7 @@ func void Info_Cronos_REWARD_Info()
 //	B_LogEntry(CH3_BringFoci,"Cronos gave me a huge amount of ore, which will hardly diminish this giant ore mound.");
 //	B_LogEntry(CH3_BringFoci,"Cronos übergab mir eine stattliche Menge Erz, die diesen riesiegen Erzhaufen wohl kaum merklich verkleinern werden.");
 	B_LogEntry(CH3_BringFoci,"Cronos mi dal velké množství rudy, které dost zmenší tu obrovitou rudnou haldu.");
-	if Npc_KnowsInfo(hero,Info_Riordian_REWARD)
+	if (Npc_KnowsInfo(hero,Info_Riordian_REWARD))
 	{
 		Log_SetTopicStatus(CH3_BringFoci,LOG_SUCCESS);
 	};
@@ -584,9 +619,11 @@ func void Info_Cronos_REWARD_Info()
 	CreateInvItems(self,ItMiNugget, 1000);
 	B_GiveInvItems(self,hero,ItMiNugget, 1000);
 };
+
 /*------------------------------------------------------------------------
 //						NACH DER WEIHE //
 ------------------------------------------------------------------------*/
+
 instance KDW_604_Cronos_WELCOME(C_INFO)
 {
 	npc = KDW_604_Cronos;
@@ -600,9 +637,12 @@ func int KDW_604_Cronos_WELCOME_Condition()
 {
 	if (Npc_GetTrueGuild(hero) == GIL_KDW)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void KDW_604_Cronos_WELCOME_Info()
 {
 //	AI_Output(self,other,"KDW_604_Cronos_WELCOME_Info_08_01"); //Your decision to join the Magicians of Water was right. Be welcome, brother!
@@ -630,13 +670,15 @@ instance KDW_604_Cronos_MANA(C_INFO)
 
 func int KDW_604_Cronos_MANA_Condition()
 {
-	if (Npc_KnowsInfo(hero,KDW_604_Cronos_GREET))
-	&& ((CorAngar_SendToNC == FALSE) || Npc_KnowsInfo(hero,Info_Cronos_SLEEPER))
+	if ((Npc_KnowsInfo(hero,KDW_604_Cronos_GREET))
+	&& ((CorAngar_SendToNC == FALSE) || Npc_KnowsInfo(hero,Info_Cronos_SLEEPER)))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void KDW_604_Cronos_MANA_Info()
 {
 //	AI_Output(other,self,"KDW_604_Cronos_MANA_Info_15_01"); //I need more magic power.
@@ -651,6 +693,7 @@ func void KDW_604_Cronos_MANA_Info()
 	Info_AddChoice(KDW_604_Cronos_MANA, B_BuildLearnString(NAME_LearnMana_5,5*LPCOST_ATTRIBUTE_MANA,0),KDW_604_Cronos_MANA_MAN_5);
 	Info_AddChoice(KDW_604_Cronos_MANA,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),KDW_604_Cronos_MANA_MAN_1);
 };
+
 func void KDW_604_Cronos_MANA_BACK()
 {
 	Info_ClearChoices(KDW_604_Cronos_MANA);
@@ -675,9 +718,11 @@ func void KDW_604_Cronos_MANA_MAN_5()
 	Info_AddChoice(KDW_604_Cronos_MANA,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),KDW_604_Cronos_MANA_MAN_1);
 
 };
+
 //---------------------------------------------------------
 //					MAGISCHEN KRAM KAUFEN
 //---------------------------------------------------------
+
 instance KDW_604_Cronos_SELLSTUFF(C_INFO)
 {
 	npc = KDW_604_Cronos;
@@ -686,26 +731,28 @@ instance KDW_604_Cronos_SELLSTUFF(C_INFO)
 	information = KDW_604_Cronos_SELLSTUFF_Info;
 	important = 0;
 	permanent = 1;
-	description = DIALOG_TRADE;
 	trade = 1;
+	description = DIALOG_TRADE;
 };
 
 func int KDW_604_Cronos_SELLSTUFF_Condition()
 {
-	if (Npc_KnowsInfo(hero,KDW_604_Cronos_GREET))
-	&& ((CorAngar_SendToNC == FALSE) || Npc_KnowsInfo(hero,Info_Cronos_SLEEPER))
+	if ((Npc_KnowsInfo(hero,KDW_604_Cronos_GREET))
+	&& ((CorAngar_SendToNC == FALSE) || Npc_KnowsInfo(hero,Info_Cronos_SLEEPER)))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void KDW_604_Cronos_SELLSTUFF_Info()
 {
 //	AI_Output(other,self,"KDW_604_Cronos_SELLSTUFF_Info_15_01"); //I want to acquire magic writings.
 //	AI_Output(other,self,"KDW_604_Cronos_SELLSTUFF_Info_15_01"); //Ich möchte Schriften über Magie erwerben.
 	AI_Output(other,self,"KDW_604_Cronos_SELLSTUFF_Info_15_01"); //Rád bych získal magické spisy.
-
 };
+
 /*------------------------------------------------------------------------
 						BEGRÜSSUNG
 ------------------------------------------------------------------------*/
@@ -724,7 +771,7 @@ instance KDW_604_Cronos_GREET(C_INFO)
 
 func int KDW_604_Cronos_GREET_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void KDW_604_Cronos_GREET_Info()

@@ -21,8 +21,8 @@ instance Info_SLD_732_FirstWarn(C_INFO)
 	nr = 1;
 	condition = Info_SLD_732_FirstWarn_Condition;
 	information = Info_SLD_732_FirstWarn_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 //------------------------------------------------------------------------
@@ -30,12 +30,14 @@ instance Info_SLD_732_FirstWarn(C_INFO)
 //------------------------------------------------------------------------
 func int Info_SLD_732_FirstWarn_Condition()
 {
-	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS]== AIV_GPS_BEGIN)
-	&& (self.aivar[AIV_PASSGATE] == FALSE )
+	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_BEGIN)
+	&& (self.aivar[AIV_PASSGATE] == FALSE)
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self), self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_SLD_732_FirstWarn_Info()
@@ -139,25 +141,28 @@ func void Info_SLD_732_Parole_TRUE()
 //------------------------------------------------------------------------
 //	2. Warnung
 //------------------------------------------------------------------------
+
 instance Info_SLD_732_LastWarn(C_INFO)
 {
 	npc = SLD_732_Soeldner;
 	nr = 2;
 	condition = Info_SLD_732_LastWarn_Condition;
 	information = Info_SLD_732_LastWarn_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_SLD_732_LastWarn_Condition()
 {
-	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_FIRSTWARN )
-	&& (self.aivar[AIV_PASSGATE] == FALSE )
+	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_FIRSTWARN)
+	&& (self.aivar[AIV_PASSGATE] == FALSE)
 	&& (Npc_GetDistToWP(hero,SLD_732_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func int Info_SLD_732_LastWarn_Info()
@@ -181,19 +186,21 @@ instance Info_SLD_732_Attack(C_INFO)
 	nr = 3;
 	condition = Info_SLD_732_Attack_Condition;
 	information = Info_SLD_732_Attack_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int Info_SLD_732_Attack_Condition()
 {
-	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_LASTWARN )
-	&& (self.aivar[AIV_PASSGATE] == FALSE )
+	if ((hero.aivar[AIV_GUARDPASSAGE_STATUS] == AIV_GPS_LASTWARN)
+	&& (self.aivar[AIV_PASSGATE] == FALSE)
 	&& (Npc_GetDistToWP(hero,SLD_732_CHECKPOINT) < (hero.aivar[AIV_LASTDISTTOWP]-100))
 	&& (Hlp_StrCmp(Npc_GetNearestWP(self),self.wp)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func int Info_SLD_732_Attack_Info()
@@ -218,8 +225,8 @@ instance Info_SLD_732_PAROLE(C_INFO)
 	nr = 10;
 	condition = Info_SLD_732_PAROLE_Condition;
 	information = Info_SLD_732_PAROLE_Info;
-	permanent = 1;
 	important = 0;
+	permanent = 1;
 //	description = "(say password)";
 //	description = "(Parole sagen)";
 	description = "(řekni heslo)";
@@ -227,11 +234,13 @@ instance Info_SLD_732_PAROLE(C_INFO)
 
 func int Info_SLD_732_PAROLE_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Cronos_SLEEPER)
-	&& (self.aivar[AIV_PASSGATE] == FALSE)
+	if ((Npc_KnowsInfo(hero,Info_Cronos_SLEEPER))
+	&& (self.aivar[AIV_PASSGATE] == FALSE))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func int Info_SLD_732_PAROLE_Info()

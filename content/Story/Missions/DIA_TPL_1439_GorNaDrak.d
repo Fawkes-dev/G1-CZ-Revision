@@ -8,6 +8,7 @@ instance DIA_GorNaDrak_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_GorNaDrak_EXIT_Condition;
 	information = DIA_GorNaDrak_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_GorNaDrak_Greet(C_INFO)
 	nr = 1;
 	condition = DIA_GorNaDrak_Greet_Condition;
 	information = DIA_GorNaDrak_Greet_Info;
+	important = 0;
 	permanent = 0;
 //	description  = "Hi! Where are you off to?";
 //	description  = "Hi! Wohin soll's denn gehen?";
@@ -66,6 +68,7 @@ instance DIA_GorNaDrak_WasSekret(C_INFO)
 	nr = 1;
 	condition = DIA_GorNaDrak_WasSekret_Condition;
 	information = DIA_GorNaDrak_WasSekret_Info;
+	important = 0;
 	permanent = 0;
 //	description  = "What kind of secretion is it?";
 //	description  = "Was ist das für ein Sekret?";
@@ -78,6 +81,8 @@ func int DIA_GorNaDrak_WasSekret_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_GorNaDrak_WasSekret_Info()
@@ -100,6 +105,7 @@ instance DIA_GorNaDrak_TeachMandibles(C_INFO)
 	nr = 1;
 	condition = DIA_GorNaDrak_TeachMandibles_Condition;
 	information = DIA_GorNaDrak_TeachMandibles_Info;
+	important = 0;
 	permanent = 0;
 //	description  = "Can you tell me how to get the secretion of a minecrawler?";
 //	description  = "Kannst du mir sagen, wie ich an das Sekret eines Minecrawlers herankomme?";
@@ -108,10 +114,13 @@ instance DIA_GorNaDrak_TeachMandibles(C_INFO)
 
 func int DIA_GorNaDrak_TeachMandibles_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_GorNaDrak_WasSekret) && (Knows_GetMCMandibles == FALSE))
+	if ((Npc_KnowsInfo(hero,DIA_GorNaDrak_WasSekret)
+	&& (Knows_GetMCMandibles == FALSE)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_GorNaDrak_TeachMandibles_Info()
@@ -143,6 +152,7 @@ instance DIA_GorNaDrak_WhatFor(C_INFO)
 	nr = 1;
 	condition = DIA_GorNaDrak_WhatFor_Condition;
 	information = DIA_GorNaDrak_WhatFor_Info;
+	important = 0;
 	permanent = 0;
 //	description  = "What does Cor Kalom need the secretion for?";
 //	description  = "Wofür braucht Cor Kalom das Sekret?";
@@ -155,6 +165,8 @@ func int DIA_GorNaDrak_WhatFor_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_GorNaDrak_WhatFor_Info()
@@ -183,6 +195,7 @@ instance DIA_GorNaDrak_Permanent(C_INFO)
 	nr = 1;
 	condition = DIA_GorNaDrak_Permanent_Condition;
 	information = DIA_GorNaDrak_Permanent_Info;
+	important = 0;
 	permanent = 1;
 //	description  = "Have you enough of the potion for the great invocation of the Sleeper?";
 //	description  = "Habt ihr schon genug Elixier für die große Anrufung des Schläfers?";
@@ -191,10 +204,13 @@ instance DIA_GorNaDrak_Permanent(C_INFO)
 
 func int DIA_GorNaDrak_Permanent_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_GorNaDrak_WhatFor) && (Kapitel < 3))
+	if ((Npc_KnowsInfo(hero,DIA_GorNaDrak_WhatFor)
+	&& (Kapitel < 3)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_GorNaDrak_Permanent_Info()
@@ -206,4 +222,3 @@ func void DIA_GorNaDrak_Permanent_Info()
 //	AI_Output(self,other,"DIA_GorNaDrak_Permanent_09_01"); //Nein - Wir müssen noch 'ne Menge sammeln - in der Alten Mine sind unsere Minecrawler-Jagdtrupps Tag und Nacht im Einsatz.
 	AI_Output(self,other,"DIA_GorNaDrak_Permanent_09_01"); //Ne - Musíme toho ještě mnoho nasbírat - naše lovecké skupiny loví ve Starém dole ve dne, v noci.
 };
-

@@ -8,6 +8,7 @@ instance DIA_BaalKagan_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_BaalKagan_EXIT_Condition;
 	information = DIA_BaalKagan_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_BaalKagan_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_BaalKagan_Hello_Condition;
 	information = DIA_BaalKagan_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "You're from the Sect Camp, aren't you?";
 //	description = "Du bist aus dem Lager der Sekte, richtig?";
@@ -66,6 +68,7 @@ instance DIA_BaalKagan_WhyHere(C_INFO)
 	nr = 1;
 	condition = DIA_BaalKagan_WhyHere_Condition;
 	information = DIA_BaalKagan_WhyHere_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What are you doing here?";
 //	description = "Was machst du hier?";
@@ -78,6 +81,8 @@ func int DIA_BaalKagan_WhyHere_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalKagan_WhyHere_Info()
@@ -111,11 +116,12 @@ instance DIA_BaalKagan_TRADE(C_INFO)
 	nr = 800;
 	condition = DIA_BaalKagan_TRADE_Condition;
 	information = DIA_BaalKagan_TRADE_Info;
+	important = 0;
 	permanent = 1;
+	trade = 1;
 //	description = "Show me your goods.";
 //	description = "Zeig mir deine Waren.";
 	description = "Ukaž mi svoje zboží.";
-	trade = 1;
 };
 
 func int DIA_BaalKagan_TRADE_Condition()
@@ -124,6 +130,8 @@ func int DIA_BaalKagan_TRADE_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalKagan_TRADE_Info()
@@ -146,6 +154,7 @@ instance DIA_BaalKagan_OrderHelp(C_INFO)
 	nr = 2;
 	condition = DIA_BaalKagan_OrderHelp_Condition;
 	information = DIA_BaalKagan_OrderHelp_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Why don't they send an extra man here?";
 //	description = "Warum schicken sie nicht einen weiteren Mann?";
@@ -158,6 +167,8 @@ func int DIA_BaalKagan_OrderHelp_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalKagan_OrderHelp_Info()
@@ -192,6 +203,7 @@ instance DIA_BaalKagan_WannaHelp(C_INFO)
 	nr = 3;
 	condition = DIA_BaalKagan_WannaHelp_Condition;
 	information = DIA_BaalKagan_WannaHelp_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I could help you sell your weed to the people.";
 //	description = "Ich könnte dir helfen, dein Kraut unter die Leute zu bringen.";
@@ -204,6 +216,8 @@ func int DIA_BaalKagan_WannaHelp_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalKagan_WannaHelp_Info()
@@ -238,6 +252,7 @@ instance DIA_BaalKagan_WasDrin(C_INFO)
 	nr = 3;
 	condition = DIA_BaalKagan_WasDrin_Condition;
 	information = DIA_BaalKagan_WasDrin_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What's in it for me if I hand out the weed for you?";
 //	description = "Wenn ich das Kraut für dich verteile - was ist für mich drin?";
@@ -250,6 +265,8 @@ func int DIA_BaalKagan_WasDrin_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalKagan_WasDrin_Info()
@@ -289,6 +306,7 @@ instance DIA_BaalKagan_GimmeKraut(C_INFO)
 	nr = 3;
 	condition = DIA_BaalKagan_GimmeKraut_Condition;
 	information = DIA_BaalKagan_GimmeKraut_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Okay, give me the weed. Who do you want me to give it to?";
 //	description = "Okay, gib her das Kraut. An wen soll ich es verteilen?";
@@ -301,6 +319,8 @@ func int DIA_BaalKagan_GimmeKraut_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalKagan_GimmeKraut_Info()
@@ -339,6 +359,7 @@ instance DIA_BaalKagan_SUCCESS(C_INFO)
 	nr = 3;
 	condition = DIA_BaalKagan_SUCCESS_Condition;
 	information = DIA_BaalKagan_SUCCESS_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I've shared out the weed.";
 //	description = "Ich habe das Kraut verteilt";
@@ -351,6 +372,8 @@ func int DIA_BaalKagan_SUCCESS_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalKagan_SUCCESS_Info()
@@ -427,7 +450,7 @@ func void DIA_BaalKagan_SUCCESS_Join()
 //	AI_Output(self,other,"DIA_BaalKagan_SUCCESS_Join_13_04"); //If you give him this here, it'll loosen his tongue.
 //	AI_Output(self,other,"DIA_BaalKagan_SUCCESS_Join_13_04"); //Wenn du ihm das hier gibst, wird sich seine Zunge lösen.
 	AI_Output(self,other,"DIA_BaalKagan_SUCCESS_Join_13_04"); //Když mu dáš tohle, rozváže mu to jazyk.
-	CreateInvItem       (self,SpecialJoint);
+	CreateInvItem(self,SpecialJoint);
 	B_GiveInvItems(self,other,SpecialJoint,1);
 
 	Log_CreateTopic(CH1_JoinPsi,LOG_MISSION);
@@ -477,9 +500,11 @@ func void DIA_BaalKagan_SUCCESS_TakeScrolls()
 //	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Charme",DIA_BaalKagan_SUCCESS_TakeScrolls_Charme);
 	Info_AddChoice(DIA_BaalKagan_SUCCESS,"Šarm",DIA_BaalKagan_SUCCESS_TakeScrolls_Charme);
 };
+
 //-----------------------------------------------------------------------
 	var int BaalKagan_drei;
 //-----------------------------------------------------------------------
+
 func void DIA_BaalKagan_SUCCESS_TakeScrolls_Windfaust()
 {
 	CreateInvItem(self,ItArScrollWindfist);
@@ -549,4 +574,3 @@ func void DIA_BaalKagan_SUCCESS_TakeScrolls_Charme()
 		Info_ClearChoices(DIA_BaalKagan_SUCCESS);
 	};
 };
-

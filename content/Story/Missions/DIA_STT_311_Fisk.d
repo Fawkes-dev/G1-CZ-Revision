@@ -8,6 +8,7 @@ instance Stt_311_Fisk_Exit(C_INFO)
 	nr = 999;
 	condition = Stt_311_Fisk_Exit_Condition;
 	information = Stt_311_Fisk_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,13 +33,13 @@ instance Stt_311_Fisk_First(C_INFO)
 	nr = 1;
 	condition = Stt_311_Fisk_First_Condition;
 	information = Stt_311_Fisk_First_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Stt_311_Fisk_First_Condition()
 {
-		return 1;
+	return 1;
 };
 
 func void Stt_311_Fisk_First_Info()
@@ -50,7 +51,6 @@ func void Stt_311_Fisk_First_Info()
 //	B_LogEntry(GE_TraderOC,"Fisk, the Shadow, trades with all kinds of goods, especially WEAPONS. He's usually at the market.");
 //	B_LogEntry(GE_TraderOC,"Fisk, der Schatten handelt mit Waren aller Art, vor allem WAFFEN. Er hält sich am Marktplatz auf.");
 	B_LogEntry(GE_TraderOC,"Fisk, jeden ze Stínů, obchoduje se vším zbožím, zejména však se ZBRANĚMI. Obvykle se zdržuje na tržišti.");
-
 };
 
 // **************************************************
@@ -63,11 +63,12 @@ instance Stt_311_Fisk_Trade(C_INFO)
 	nr = 800;
 	condition = Stt_311_Fisk_Trade_Condition;
 	information = Stt_311_Fisk_Trade_Info;
+	important = 0;
 	permanent = 1;
+	trade = 1;
 //	description = "Show me your goods.";
 //	description = "Zeig mir deine Ware.";
 	description = "Ukaž mi svoje zboží.";
-	trade = 1;
 };
 
 func int Stt_311_Fisk_Trade_Condition()
@@ -88,6 +89,7 @@ instance Stt_311_Fisk_WhistlersSword(C_INFO)
 	nr = 801;
 	condition = Stt_311_Fisk_WhistlersSword_Condition;
 	information = Stt_311_Fisk_WhistlersSword_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I'd like to buy a sword - I'd like something more ornamental...";
 //	description = "Ich will ein Schwert kaufen. Was mit Ornamenten wär schön.";
@@ -96,10 +98,14 @@ instance Stt_311_Fisk_WhistlersSword(C_INFO)
 
 func int Stt_311_Fisk_WhistlersSword_Condition()
 {
-	if ((Fisk_ForgetSword==FALSE) && (Whistler_BuyMySword == LOG_RUNNING) && (Fisk_SwordSold == FALSE)  )
+	if ((Fisk_ForgetSword == FALSE)
+	&& (Whistler_BuyMySword == LOG_RUNNING)
+	&& (Fisk_SwordSold == FALSE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Stt_311_Fisk_WhistlersSword_Info()
@@ -190,6 +196,7 @@ instance Stt_311_Fisk_ForgetSword(C_INFO)
 	nr = 800;
 	condition = Stt_311_Fisk_ForgetSword_Condition;
 	information = Stt_311_Fisk_ForgetSword_Info;
+	important = 0;
 	permanent = 1;
 //	description = "About Whistler's sword...";
 //	description = "Wegen Whistlers Schwert...";
@@ -198,10 +205,12 @@ instance Stt_311_Fisk_ForgetSword(C_INFO)
 
 func int Stt_311_Fisk_ForgetSword_Condition()
 {
-	if (Fisk_ForgetSword==TRUE)
+	if (Fisk_ForgetSword == TRUE)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Stt_311_Fisk_ForgetSword_Info()
@@ -226,17 +235,19 @@ instance Stt_311_Fisk_MordragKO(C_INFO)
 	nr = 800;
 	condition = Stt_311_Fisk_MordragKO_Condition;
 	information = Stt_311_Fisk_MordragKO_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Stt_311_Fisk_MordragKO_Condition()
 {
-	if (MordragKO_HauAb == TRUE)
-	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
+	if ((MordragKO_HauAb == TRUE)
+	&& (Npc_GetTrueGuild(hero) == GIL_NONE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Stt_311_Fisk_MordragKO_Info()
@@ -317,6 +328,7 @@ instance Stt_311_Fisk_HehlerSuccess(C_INFO)
 	nr = 10;
 	condition = Stt_311_Fisk_HehlerSuccess_Condition;
 	information = Stt_311_Fisk_HehlerSuccess_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I have somebody from the New Camp who wants to get into business...";
 //	description = "Ich habe jemanden aus dem Neuen Lager, der mit dir handeln will.";
@@ -325,10 +337,13 @@ instance Stt_311_Fisk_HehlerSuccess(C_INFO)
 
 func int Stt_311_Fisk_HehlerSuccess_Condition()
 {
-	if ((Fisk_GetNewHehler==LOG_RUNNING) && (Npc_KnowsInfo(hero,Org_843_Sharky_Fisk)))
+	if ((Fisk_GetNewHehler == LOG_RUNNING)
+	&& (Npc_KnowsInfo(hero,Org_843_Sharky_Fisk)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Stt_311_Fisk_HehlerSuccess_Info()
@@ -360,6 +375,7 @@ func void Stt_311_Fisk_HehlerSuccess_Info()
 //	B_LogEntry(CH1_FiskNewDealer,"Fisk is zufrieden ,denn Sharky wird Mordrags Geschäfte übernehmen.");
 	B_LogEntry(CH1_FiskNewDealer,"Fisk je spokojený, protože Sharky převzal Mordragovy obchody.");
 };
+
 /*------------------------------------------------------------------------
 							RÜSTUNG
 ------------------------------------------------------------------------*/
@@ -378,13 +394,15 @@ instance Stt_311_Fisk_ARMOR(C_INFO)
 
 func int Stt_311_Fisk_ARMOR_Condition()
 {
-	if (Kapitel < 2)
-	&& (Npc_KnowsInfo(hero,Stt_311_Fisk_First))
+	if ((Kapitel < 2)
+	&& (Npc_KnowsInfo(hero,Stt_311_Fisk_First)))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void Stt_311_Fisk_ARMOR_Info()
 {
 //	AI_Output(other,self,"Stt_311_Fisk_ARMOR_Info_15_01"); //Have you got armor for me as well?
@@ -393,11 +411,11 @@ func void Stt_311_Fisk_ARMOR_Info()
 //	AI_Output(self,other,"Stt_311_Fisk_ARMOR_Info_12_02"); //Well, I'm sure that I can satisfy you.
 //	AI_Output(self,other,"Stt_311_Fisk_ARMOR_Info_12_02"); //Nun, ich bin sicher, dass ich dich zufrieden stellen kann.
 	AI_Output(self,other,"Stt_311_Fisk_ARMOR_Info_12_02"); //Ano, určitě budeš spokojený.
+
 	Info_ClearChoices(Stt_311_Fisk_ARMOR);
 	Info_Addchoice (Stt_311_Fisk_ARMOR,DIALOG_BACK,Stt_311_Fisk_ARMOR_BACK);
 	Info_Addchoice (Stt_311_Fisk_ARMOR,B_BuildBuyArmorString(NAME_FiskLightDiggers,VALUE_VLK_ARMOR_L),Stt_311_Fisk_ARMOR_L);
 	Info_Addchoice (Stt_311_Fisk_ARMOR,B_BuildBuyArmorString(NAME_FiskDiggers,VALUE_VLK_ARMOR_M),Stt_311_Fisk_ARMOR_M);
-
 };
 
 func void Stt_311_Fisk_ARMOR_BACK()
@@ -411,7 +429,7 @@ func void Stt_311_Fisk_ARMOR_L()
 //	AI_Output(other,self,"Stt_311_Fisk_ARMOR_L_Info_15_01"); //Gib mir die leichte Buddlerhose.
 	AI_Output(other,self,"Stt_311_Fisk_ARMOR_L_Info_15_01"); //Dej mi lehké kopáčské kalhoty.
 
-	if (Npc_HasItems(hero,ItMiNugget) <  VALUE_VLK_ARMOR_L)
+	if (Npc_HasItems(hero,ItMiNugget) < VALUE_VLK_ARMOR_L)
 	{
 //		AI_Output(self,other,"Stt_311_Fisk_ARMOR_L_Info_12_02"); //Come back as soon as you have enough ore!
 //		AI_Output(self,other,"Stt_311_Fisk_ARMOR_L_Info_12_02"); //Komm wieder, wenn du genug Erz hast!
@@ -433,7 +451,8 @@ func void Stt_311_Fisk_ARMOR_M()
 //	AI_Output(other,self,"Stt_311_Fisk_ARMOR_M_Info_15_01"); //Give me the digger's trousers.
 //	AI_Output(other,self,"Stt_311_Fisk_ARMOR_M_Info_15_01"); //Gib mir die Buddlerhose.
 	AI_Output(other,self,"Stt_311_Fisk_ARMOR_M_Info_15_01"); //Dej mi kopáčské kalhoty.
-	if (Npc_HasItems(hero,ItMiNugget) <  VALUE_VLK_ARMOR_M)
+
+	if (Npc_HasItems(hero,ItMiNugget) < VALUE_VLK_ARMOR_M)
 	{
 //		AI_Output(self,other,"Stt_311_Fisk_ARMOR_M_Info_12_02"); //Come back as soon as you have enough ore!
 //		AI_Output(self,other,"Stt_311_Fisk_ARMOR_M_Info_12_02"); //Komm wieder, wenn du genug Erz hast!
@@ -449,4 +468,3 @@ func void Stt_311_Fisk_ARMOR_M()
 		B_GiveInvItems(self,hero,VLK_ARMOR_M,1);
 	};
 };
-

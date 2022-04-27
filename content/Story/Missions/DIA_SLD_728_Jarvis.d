@@ -8,6 +8,7 @@ instance DIA_Jarvis_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_Jarvis_EXIT_Condition;
 	information = DIA_Jarvis_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -35,8 +36,8 @@ instance DIA_Jarvis_First(C_INFO)
 	nr = 1;
 	condition = DIA_Jarvis_First_Condition;
 	information = DIA_Jarvis_First_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Jarvis_First_Condition()
@@ -73,6 +74,7 @@ instance DIA_Jarvis_SldInfo(C_INFO)
 	nr = 1;
 	condition = DIA_Jarvis_SldInfo_Condition;
 	information = DIA_Jarvis_SldInfo_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What do the mercenaries do?";
 //	description = "Was machen die Söldner?";
@@ -85,6 +87,8 @@ func int DIA_Jarvis_SldInfo_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Jarvis_SldInfo_Info()
@@ -113,6 +117,7 @@ instance DIA_Jarvis_Magier(C_INFO)
 	nr = 2;
 	condition = DIA_Jarvis_Magier_Condition;
 	information = DIA_Jarvis_Magier_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What do the mages do?";
 //	description = "Was machen die Magier?";
@@ -125,6 +130,8 @@ func int DIA_Jarvis_Magier_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Jarvis_Magier_Info()
@@ -156,6 +163,7 @@ instance DIA_Jarvis_Erzhaufen(C_INFO)
 	nr = 2;
 	condition = DIA_Jarvis_Erzhaufen_Condition;
 	information = DIA_Jarvis_Erzhaufen_Info;
+	important = 0;
 	permanent = 0;
 //	description = "You have a massive ore mound here?";
 //	description = "Ihr habt einen riesigen Haufen Erz hier?";
@@ -168,6 +176,8 @@ func int DIA_Jarvis_Erzhaufen_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Jarvis_Erzhaufen_Info()
@@ -193,6 +203,7 @@ instance DIA_Jarvis_WoHaufen(C_INFO)
 	nr = 2;
 	condition = DIA_Jarvis_WoHaufen_Condition;
 	information = DIA_Jarvis_WoHaufen_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Where's the ore mound?";
 //	description = "Wo ist der Erzhaufen?";
@@ -205,6 +216,8 @@ func int DIA_Jarvis_WoHaufen_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Jarvis_WoHaufen_Info()
@@ -233,6 +246,7 @@ instance DIA_Jarvis_Rest(C_INFO)
 	nr = 3;
 	condition = DIA_Jarvis_Rest_Condition;
 	information = DIA_Jarvis_Rest_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What about the rest of the people?";
 //	description = "Was ist mit dem Rest der Leute?";
@@ -245,6 +259,8 @@ func int DIA_Jarvis_Rest_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Jarvis_Rest_Info()
@@ -267,6 +283,7 @@ instance DIA_Jarvis_PERM(C_INFO)
 	nr = 10;
 	condition = DIA_Jarvis_PERM_Condition;
 	information = DIA_Jarvis_PERM_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How are things going at the moment?";
 //	description = "Wie ist die Lage zur Zeit?";
@@ -279,6 +296,8 @@ func int DIA_Jarvis_PERM_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Jarvis_PERM_Info()
@@ -305,13 +324,16 @@ instance Sld_728_Jarvis_AUFNAHMESOLDIER(C_INFO)
 
 func int Sld_728_Jarvis_AUFNAHMESOLDIER_Condition()
 {
-	if (Npc_GetTrueGuild(hero) == GIL_ORG)
+	if ((Npc_GetTrueGuild(hero) == GIL_ORG)
 	&& ((Npc_HasItems(hero,ItAt_Crawlerqueen) >= 1) || (CorKalom_BringMCQBalls == LOG_SUCCESS))
-	&& (Npc_GetDistToNpc(hero,self) < 1000)
+	&& (Npc_GetDistToNpc(hero,self) < 1000))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void Sld_728_Jarvis_AUFNAHMESOLDIER_Info()
 {
 	AI_GotoNpc(hero,self);
@@ -329,4 +351,3 @@ func void Sld_728_Jarvis_AUFNAHMESOLDIER_Info()
 //	B_LogEntry(GE_BecomeMercenary,"Ich sollte mal mit Lee reden. Vielleicht nimmt er mich in die Reihen der Söldner auf.");
 	B_LogEntry(GE_BecomeMercenary,"Měl bych si promluvit s Leem. Možná mě přijme k žoldákům.");
 };
-

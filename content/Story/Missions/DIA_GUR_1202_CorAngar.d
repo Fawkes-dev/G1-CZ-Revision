@@ -14,13 +14,14 @@ instance DIA_GUR_1202_CorAngar_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_GUR_1202_CorAngar_Exit_Condition;
 	information = DIA_GUR_1202_CorAngar_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
 
 func int DIA_GUR_1202_CorAngar_Exit_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void DIA_GUR_1202_CorAngar_Exit_Info()
@@ -38,6 +39,7 @@ instance DIA_CorAngar_LaterTrainer(C_INFO)
 	nr = 1;
 	condition = DIA_CorAngar_LaterTrainer_Condition;
 	information = DIA_CorAngar_LaterTrainer_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Will you train me?";
 //	description = "Kannst du mich trainieren?";
@@ -75,6 +77,7 @@ instance DIA_CorAngar_WieTempler(C_INFO)
 	nr = 1;
 	condition = DIA_CorAngar_WieTempler_Condition;
 	information = DIA_CorAngar_WieTempler_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How can I become a templar?";
 //	description = "Wie werde ich in den Kreis der Templer aufgenommen?";
@@ -83,10 +86,13 @@ instance DIA_CorAngar_WieTempler(C_INFO)
 
 func int DIA_CorAngar_WieTempler_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_CorAngar_LaterTrainer) && (Npc_GetTrueGuild(other) != GIL_TPL))
+	if ((Npc_KnowsInfo(hero,DIA_CorAngar_LaterTrainer))
+	&& (Npc_GetTrueGuild(other) != GIL_TPL))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_CorAngar_WieTempler_Info()
@@ -118,6 +124,7 @@ instance GUR_1202_CorAngar_Teach(C_INFO)
 	nr = 10;
 	condition = GUR_1202_CorAngar_Teach_Condition;
 	information = GUR_1202_CorAngar_Teach_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Can you train my strength and dexterity?";
 //	description = "Kannst du meine Stärke und mein Geschick trainieren?";
@@ -128,8 +135,10 @@ func int GUR_1202_CorAngar_Teach_Condition()
 {
 	if (C_NpcBelongsToPsiCamp(hero))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void GUR_1202_CorAngar_Teach_Info()
@@ -215,13 +224,15 @@ instance GUR_1202_CorAngar_WANNABETPL(C_INFO)
 
 func int GUR_1202_CorAngar_WANNABETPL_Condition()
 {
-	if (CorKalom_BringMCQBalls == LOG_SUCCESS)
-	&& (Npc_GetTrueGuild(hero) == GIL_NOV)
+	if ((CorKalom_BringMCQBalls == LOG_SUCCESS)
+	&& (Npc_GetTrueGuild(hero) == GIL_NOV))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void GUR_1202_CorAngar_WANNABETPL_Info()
 {
 //	AI_Output(other,self,"GUR_1202_CorAngar_WANNABETPL_Info_15_01"); //I want to become a templar!
@@ -287,14 +298,16 @@ instance GUR_1202_CorAngar_ZWEIHAND1(C_INFO)
 
 func int GUR_1202_CorAngar_ZWEIHAND1_Condition()
 {
-	if (Npc_GetTalentSkill (hero,NPC_TALENT_2H) < 1)
+	if ((Npc_GetTalentSkill (hero,NPC_TALENT_2H) < 1)
 	&& (Npc_GetTalentSkill (hero,NPC_TALENT_1H) == 2)
-	&& (Npc_GetTrueGuild(hero) == GIL_TPL)
+	&& (Npc_GetTrueGuild(hero) == GIL_TPL))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void GUR_1202_CorAngar_ZWEIHAND1_Info()
 {
 //	AI_Output(other,self,"GUR_1202_CorAngar_ZWEIHAND1_Info_15_01"); //I want to learn how to handle a two-handed sword.
@@ -340,13 +353,15 @@ instance GUR_1202_CorAngar_ZWEIHAND2(C_INFO)
 
 func int GUR_1202_CorAngar_ZWEIHAND2_Condition()
 {
-	if (Npc_GetTalentSkill (hero,NPC_TALENT_2H) == 1)
-	&& (Npc_GetTrueGuild(hero) == GIL_TPL)
+	if ((Npc_GetTalentSkill (hero,NPC_TALENT_2H) == 1)
+	&& (Npc_GetTrueGuild(hero) == GIL_TPL))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void GUR_1202_CorAngar_ZWEIHAND2_Info()
 {
 //	AI_Output(other,self,"GUR_1202_CorAngar_ZWEIHAND2_Info_15_01"); //I want to learn more about fighting with two-handed weapons.
@@ -410,13 +425,15 @@ instance GUR_1202_CorAngar_SENDS(C_INFO)
 
 func int GUR_1202_CorAngar_SENDS_Condition()
 {
-	if (Kapitel == 3)
-	&& (CorAngar_GotoOGY == FALSE)
+	if ((Kapitel == 3)
+	&& (CorAngar_GotoOGY == FALSE))
 	{
 		return 1;
 	};
 
+	return 0;
 };
+
 func void GUR_1202_CorAngar_SENDS_Info()
 {
 //	AI_Output(other,self,"GUR_1202_CorAngar_SENDS_Info_15_01"); //What happens now?
@@ -458,6 +475,7 @@ func void GUR_1202_CorAngar_SENDS_Info()
 //	Info_AddChoice(GUR_1202_CorAngar_SENDS,"Ich mache mich sofort auf den Weg!", GUR_1202_CorAngar_SENDS_KNOW);
 	Info_AddChoice(GUR_1202_CorAngar_SENDS,"Ihned se vydám na cestu!", GUR_1202_CorAngar_SENDS_KNOW);
 };
+
 func void GUR_1202_CorAngar_SENDS_EARN()
 {
 //	AI_Output(other,self,"GUR_1202_CorAngar_SENDS_EARN_Info_15_01"); //What will I get in exchange?
@@ -504,6 +522,8 @@ func int GUR_1202_CorAngar_WHERE_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GUR_1202_CorAngar_WHERE_Info()
@@ -541,6 +561,8 @@ func int GUR_1202_CorAngar_AFTER_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GUR_1202_CorAngar_AFTER_Info()
@@ -594,8 +616,8 @@ instance Info_CorAngar_FindHerb(C_INFO)
 	npc = GUR_1202_CorAngar;
 	condition = Info_CorAngar_FindHerb_Condition;
 	information = Info_CorAngar_FindHerb_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "How is Y'Berion doing?";
 //	description = "Wie steht es um Y'Berion?";
 	description = "Co je s Y´Berionem?";
@@ -607,6 +629,8 @@ func int Info_CorAngar_FindHerb_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_CorAngar_FindHerb_Info()
@@ -643,8 +667,8 @@ instance Info_CorAngar_FindHerb_WHERE(C_INFO)
 	nr = 1;
 	condition = Info_CorAngar_FindHerb_WHERE_Condition;
 	information = Info_CorAngar_FindHerb_WHERE_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "Where can I find these plants?";
 //	description = "Wo findet man solche Pflanzen ?";
 	description = "Kde najdu ty byliny?";
@@ -652,10 +676,13 @@ instance Info_CorAngar_FindHerb_WHERE(C_INFO)
 
 func int Info_CorAngar_FindHerb_WHERE_Condition()
 {
-	if ((CorAngar_FindHerb==LOG_RUNNING) && (Npc_HasItems(other,ItFo_Plants_Herb_03)<5))
+	if ((CorAngar_FindHerb == LOG_RUNNING)
+	&& (Npc_HasItems(other,ItFo_Plants_Herb_03) < 5))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_CorAngar_FindHerb_WHERE_Info()
@@ -683,8 +710,8 @@ instance Info_CorAngar_FindHerb_LOOK(C_INFO)
 	nr = 1;
 	condition = Info_CorAngar_FindHerb_LOOK_Condition;
 	information = Info_CorAngar_FindHerb_LOOK_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "How will I recognize these herbs?";
 //	description = "Wie kann ich diese Kräuter erkennen?";
 	description = "Jak ty byliny poznám?";
@@ -692,10 +719,13 @@ instance Info_CorAngar_FindHerb_LOOK(C_INFO)
 
 func int Info_CorAngar_FindHerb_LOOK_Condition()
 {
-	if ((CorAngar_FindHerb==LOG_RUNNING) && (Npc_HasItems(other,ItFo_Plants_Herb_03)<5))
+	if ((CorAngar_FindHerb == LOG_RUNNING)
+	&& (Npc_HasItems(other,ItFo_Plants_Herb_03) < 5))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_CorAngar_FindHerb_LOOK_Info()
@@ -723,8 +753,8 @@ instance Info_CorAngar_FindHerb_Running(C_INFO)
 	nr = 1;
 	condition = Info_CorAngar_FindHerb_Running_Condition;
 	information = Info_CorAngar_FindHerb_Running_Info;
-	permanent = 1;
 	important = 0;
+	permanent = 1;
 //	description = "I haven't found enough healing herbs yet.";
 //	description = "Ich habe noch nicht genug Heilkräuter gefunden";
 	description = "Ještě jsem nenašel dost léčivých bylin.";
@@ -732,13 +762,15 @@ instance Info_CorAngar_FindHerb_Running(C_INFO)
 
 func int Info_CorAngar_FindHerb_Running_Condition()
 {
-	if (CorAngar_FindHerb==LOG_RUNNING)
-	&& (Npc_HasItems(other,ItFo_Plants_Herb_03)<5)
-	&& Npc_KnowsInfo(hero,Info_CorAngar_FindHerb_WHERE)
-	&& Npc_KnowsInfo(hero,Info_CorAngar_FindHerb_LOOK)
+	if ((CorAngar_FindHerb == LOG_RUNNING)
+	&& (Npc_HasItems(other,ItFo_Plants_Herb_03) < 5)
+	&& (Npc_KnowsInfo(hero,Info_CorAngar_FindHerb_WHERE))
+	&& (Npc_KnowsInfo(hero,Info_CorAngar_FindHerb_LOOK)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_CorAngar_FindHerb_Running_Info()
@@ -774,6 +806,7 @@ instance Info_CorAngar_FindHerb_Success(C_INFO)
 	npc = GUR_1202_CorAngar;
 	condition = Info_CorAngar_FindHerb_Success_Condition;
 	information = Info_CorAngar_FindHerb_Success_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I have the healing herbs for Y'Berion.";
 //	description = "Ich habe die Heilkräuter für Y'Berion.";
@@ -782,10 +815,13 @@ instance Info_CorAngar_FindHerb_Success(C_INFO)
 
 func int Info_CorAngar_FindHerb_Success_Condition()
 {
-	if (Npc_HasItems(other,ItFo_Plants_Herb_03) >= 5) && (CorAngar_FindHerb == LOG_RUNNING)
+	if ((Npc_HasItems(other,ItFo_Plants_Herb_03) >= 5)
+	&& (CorAngar_FindHerb == LOG_RUNNING))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_CorAngar_FindHerb_Success_Info()
@@ -871,16 +907,18 @@ instance Info_CorAngar_TELEPORT(C_INFO)
 	npc = GUR_1202_CorAngar;
 	condition = Info_CorAngar_TELEPORT_Condition;
 	information = Info_CorAngar_TELEPORT_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_CorAngar_TELEPORT_Condition()
 {
 	if Npc_KnowsInfo(hero,Info_CorAngar_FindHerb_Success)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_CorAngar_TELEPORT_Info()
@@ -905,4 +943,3 @@ func void Info_CorAngar_TELEPORT_Info()
 	//-------- Spieler wird losgeschickt --------
 	B_Story_SentToNC();
 };
-

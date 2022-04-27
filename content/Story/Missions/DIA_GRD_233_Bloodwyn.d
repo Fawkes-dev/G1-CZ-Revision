@@ -11,6 +11,7 @@ instance Info_Bloodwyn_EXIT_Schutzgeld(C_INFO)
 	nr = 999;
 	condition = Info_Bloodwyn_EXIT_Schutzgeld_Condition;
 	information = Info_Bloodwyn_EXIT_Schutzgeld_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -50,8 +51,8 @@ instance Info_Bloodwyn_Hello(C_INFO)
 	nr = 3;
 	condition = Info_Bloodwyn_Hello_Condition;
 	information = Info_Bloodwyn_Hello_Info;
+	important = 1;
 	permanent = 0;
-	important   = 1;
 };
 
 func int Info_Bloodwyn_Hello_Condition()
@@ -62,7 +63,10 @@ func int Info_Bloodwyn_Hello_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
+
 func void Info_Bloodwyn_Hello_Info()
 {
 //	AI_Output(self,other,"Info_Bloodwyn_Hello_08_00"); //Hey, you!
@@ -137,13 +141,14 @@ func void Info_Bloodwyn_Hello_HowMuch()
 //	Info_AddChoice(Info_Bloodwyn_Hello,"I don't have 10 ore.",Info_Bloodwyn_Hello_NotNow);
 //	Info_AddChoice(Info_Bloodwyn_Hello,"Ich habe gerade keine 10 Erz.",Info_Bloodwyn_Hello_NotNow);
 	Info_AddChoice(Info_Bloodwyn_Hello,"Nemám 10 nugetů.",Info_Bloodwyn_Hello_NotNow);
-	if (Npc_HasItems(other,itminugget)>=10)
+	if (Npc_HasItems(other,itminugget) >= 10)
 	{
 //		Info_AddChoice(Info_Bloodwyn_Hello,"Here's your ore. I can always use a friend or two.",Info_Bloodwyn_Hello_OkTakeIt);
 //		Info_AddChoice(Info_Bloodwyn_Hello,"Hier hast du das Erz. Ich kann Freunde brauchen.",Info_Bloodwyn_Hello_OkTakeIt);
 		Info_AddChoice(Info_Bloodwyn_Hello,"Tady je tvoje ruda. Přátelé se vždycky hodí.",Info_Bloodwyn_Hello_OkTakeIt);
 	};
 };
+
 // -------------------------------------------------------
 func void Info_Bloodwyn_Hello_OkTakeIt()
 {
@@ -228,18 +233,22 @@ instance Info_Bloodwyn_PayDay(C_INFO)
 	nr = 3;
 	condition = Info_Bloodwyn_PayDay_Condition;
 	information = Info_Bloodwyn_PayDay_Info;
+	important = 1; //*** NUR, WENN SC AUCH 10 ERZ HAT! ***
 	permanent = 1;
-	important   = 1; //*** NUR, WENN SC AUCH 10 ERZ HAT! ***
 };
 
 func int Info_Bloodwyn_PayDay_Condition()
 {
-	if ((Kapitel <= 2) && (Bloodwyn_PayDay <= Wld_GetDay()-1) && (Npc_HasItems(other,itminugget)>=10))
+	if ((Kapitel <= 2)
+	&& (Bloodwyn_PayDay <= Wld_GetDay() - 1)
+	&& (Npc_HasItems(other,itminugget) >= 10))
 	//#NEEDS_ATTENTION ak hrac zaplatil ako GIL_NONE, tak od neho Bloodwyn bude stale pytat rudu, mali by sme obmedzit na GIL_NONE
-	//if ((Kapitel <= 2) && (Bloodwyn_PayDay <= Wld_GetDay()-1) && (Npc_HasItems(other,itminugget)>=10) && (Npc_GetTrueGuild(other) == GIL_NONE))
+	//if ((Kapitel <= 2) && (Bloodwyn_PayDay <= Wld_GetDay() - 1) && (Npc_HasItems(other,itminugget) >= 10) && (Npc_GetTrueGuild(other) == GIL_NONE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Bloodwyn_PayDay_Info()
@@ -328,6 +337,7 @@ instance Info_Bloodwyn_Doch(C_INFO)
 	nr = 3;
 	condition = Info_Bloodwyn_Doch_Condition;
 	information = Info_Bloodwyn_Doch_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I've changed my mind. I'm going to pay you the 10 ore after all.";
 //	description = "Ich hab's mir überlegt - ich würde DOCH gern die 10 Erz bezahlen.";
@@ -342,6 +352,8 @@ func int Info_Bloodwyn_Doch_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Bloodwyn_Doch_Info()
@@ -378,6 +390,7 @@ instance Info_Bloodwyn_PayForJesse(C_INFO)
 	nr = 5;
 	condition = Info_Bloodwyn_PayForJesse_Condition;
 	information = Info_Bloodwyn_PayForJesse_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Jesse sent me to pay his 10 ore for him.";
 //	description = "Jesse schickt mich - ich will seine 10 Erz für ihn zahlen.";
@@ -390,6 +403,8 @@ func int Info_Bloodwyn_PayForJesse_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Bloodwyn_PayForJesse_Info()
@@ -442,8 +457,10 @@ func int GRD_233_Bloodwyn_WELCOME_Condition()
 {
 	if (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void GRD_233_Bloodwyn_WELCOME_Info()
@@ -469,25 +486,27 @@ instance Info_Bloodwyn_DIE(C_INFO)
 	npc = Grd_233_Bloodwyn;
 	condition = Info_Bloodwyn_DIE_Condition;
 	information = Info_Bloodwyn_DIE_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_Bloodwyn_DIE_Condition()
 {
 	if (Kapitel == 4)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Bloodwyn_DIE_Info()
 {
 	AI_GotoNpc(self,hero);
 
-	if (oldHeroGuild == GIL_STT)
+	if ((oldHeroGuild == GIL_STT)
 	|| (oldHeroGuild == GIL_GRD)
-	|| (oldHeroGuild == GIL_KDF)
+	|| (oldHeroGuild == GIL_KDF))
 	{
 		if (oldHeroGuild == GIL_GRD)
 		{
@@ -530,7 +549,7 @@ func void Info_Bloodwyn_DIE_Info()
 //		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_10"); //STIRB, ABTRÜNNIGER!!!
 		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_10"); //SMRT ZRÁDCI!!!
 
-		if Npc_KnowsInfo(hero,Info_Fletcher_DIE)
+		if (Npc_KnowsInfo(hero,Info_Fletcher_DIE))
 		{
 //			B_LogEntry(CH4_BannedFromOC,"Fletcher, who's guarding the main gate now, reacted the same way as Bloodwyn at the back gate. I don't know why, but it must somehow be connected to my search for the focus on behalf of the New Camp.");
 //			B_LogEntry(CH4_BannedFromOC,"Fletcher, der nun das Haupttor bewacht, reagierte ähnlich wie Bloodwyn am hinteren Tor. Mir ist nicht klar warum, aber es muss etwas mit meiner Fokussuche für das Neue Lager zu tun haben.");
@@ -601,7 +620,7 @@ func void Info_Bloodwyn_DIE_Info()
 	B_SetPermAttitude (GRD_216_Torwache, ATT_HOSTILE);
 	B_SetPermAttitude (GRD_217_Torwache, ATT_HOSTILE);
 
-	if !Npc_KnowsInfo(hero,Info_Fletcher_DIE)
+	if (!Npc_KnowsInfo(hero,Info_Fletcher_DIE))
 	{
 //		B_LogEntry(CH4_Firemages,"The gates of the Old Camp are now closed, they're protected by guards. They attack anybody approaching the Camp.");
 //		B_LogEntry(CH4_Firemages,"Die Tore des Alten Lagers sind nun verschlossen und werden von Gardisten bewacht. Sie attackieren jeden der dem Lager zu nahe kommt.");

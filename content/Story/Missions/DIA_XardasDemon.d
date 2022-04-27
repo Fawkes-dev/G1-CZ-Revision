@@ -38,21 +38,24 @@ func void Info_XardasDemon_EXIT_Info()
 //***************************************************************************
 //	Info INTRO
 //***************************************************************************
+
 instance Info_XardasDemon_INTRO(C_INFO)
 {
 	npc = XardasDemon;
 	condition = Info_XardasDemon_INTRO_Condition;
 	information = Info_XardasDemon_INTRO_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_XardasDemon_INTRO_Condition()
 {
 	if (FindXardas)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_XardasDemon_INTRO_Info()
@@ -83,13 +86,14 @@ func void Info_XardasDemon_INTRO_Info()
 //***************************************************************************
 //	Info MASTERWHO
 //***************************************************************************
+
 instance Info_XardasDemon_MASTERWHO(C_INFO)
 {
 	npc = XardasDemon;
 	condition = Info_XardasDemon_MASTERWHO_Condition;
 	information = Info_XardasDemon_MASTERWHO_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "Is your master's name perhaps Xardas?";
 //	description = "Heißt Dein Herr und Meister zufällig Xardas?";
 	description = "Nejmenuje se tvůj pán náhodou Xardas?";
@@ -99,8 +103,10 @@ func int Info_XardasDemon_MASTERWHO_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_XardasDemon_INTRO))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_XardasDemon_MASTERWHO_Info()
@@ -121,13 +127,14 @@ func void Info_XardasDemon_MASTERWHO_Info()
 //***************************************************************************
 //	Info MASTERHOW
 //***************************************************************************
+
 instance Info_XardasDemon_MASTERHOW(C_INFO)
 {
 	npc = XardasDemon;
 	condition = Info_XardasDemon_MASTERHOW_Condition;
 	information = Info_XardasDemon_MASTERHOW_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "I have to talk to your master!";
 //	description = "Ich muss mit deinem Meister sprechen!";
 	description = "Musím mluvit s tvým pánem!";
@@ -137,8 +144,10 @@ func int Info_XardasDemon_MASTERHOW_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_XardasDemon_INTRO))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_XardasDemon_MASTERHOW_Info()
@@ -173,13 +182,14 @@ func void Info_XardasDemon_MASTERHOW_Info()
 //***************************************************************************
 //	Info NOHEART
 //***************************************************************************
+
 instance Info_XardasDemon_NOHEART(C_INFO)
 {
 	npc = XardasDemon;
 	condition = Info_XardasDemon_NOHEART_Condition;
 	information = Info_XardasDemon_NOHEART_Info;
-	permanent = 1;
 	important = 0;
+	permanent = 1;
 //	description = "You're speaking in riddles!";
 //	description = "Du sprichst in Rätseln!";
 	description = "Mluvíš v hádankách!";
@@ -187,14 +197,18 @@ instance Info_XardasDemon_NOHEART(C_INFO)
 
 func int Info_XardasDemon_NOHEART_Condition()
 {
-	if  Npc_KnowsInfo(hero,Info_XardasDemon_MASTERHOW)
-	&& !Npc_HasItems(hero,ItAt_StoneGolem_01)
-	&& !Npc_HasItems(hero,ItAt_IceGolem_01)
-	&& !Npc_HasItems(hero,ItAt_FireGolem_01)
-	&& (FindGolemHearts < 4)
+	if ((Npc_KnowsInfo(hero,Info_XardasDemon_MASTERHOW))
+	&& (FindGolemHearts < 4))
 	{
-		return TRUE;
+		if ((!Npc_HasItems(hero,ItAt_StoneGolem_01))
+		&& (!Npc_HasItems(hero,ItAt_IceGolem_01))
+		&& (!Npc_HasItems(hero,ItAt_FireGolem_01)))
+		{
+			return 1;
+		};
 	};
+
+	return 0;
 };
 
 func void Info_XardasDemon_NOHEART_Info()
@@ -215,6 +229,7 @@ func void Info_XardasDemon_NOHEART_Info()
 //***************************************************************************
 //	Ein Herz abliefern
 //***************************************************************************
+
 func void B_XardasDemon_GiveHeart()
 {
 	if (FindGolemHearts == 1)
@@ -265,13 +280,14 @@ func void B_XardasDemon_GiveHeart()
 //***************************************************************************
 //	Info STONEHEART
 //***************************************************************************
+
 instance Info_XardasDemon_STONEHEART(C_INFO)
 {
 	npc = XardasDemon;
 	condition = Info_XardasDemon_STONEHEART_Condition;
 	information = Info_XardasDemon_STONEHEART_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "Here's the heart of a stone golem.";
 //	description = "Ich habe hier das Herz eines Steingolems!";
 	description = "Tady je srdce kamenného Golema.";
@@ -279,11 +295,13 @@ instance Info_XardasDemon_STONEHEART(C_INFO)
 
 func int Info_XardasDemon_STONEHEART_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_XardasDemon_MASTERHOW)
-	&& Npc_HasItems(hero,ItAt_StoneGolem_01)
+	if ((Npc_KnowsInfo(hero,Info_XardasDemon_MASTERHOW))
+	&& (Npc_HasItems(hero,ItAt_StoneGolem_01)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_XardasDemon_STONEHEART_Info()
@@ -301,13 +319,14 @@ func void Info_XardasDemon_STONEHEART_Info()
 //***************************************************************************
 //	Info ICEHEART
 //***************************************************************************
+
 instance Info_XardasDemon_ICEHEART(C_INFO)
 {
 	npc = XardasDemon;
 	condition = Info_XardasDemon_ICEHEART_Condition;
 	information = Info_XardasDemon_ICEHEART_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "Is this heart of an ice golem the proof?";
 //	description = "Ist dieses Herz eines Eisgolems ein Beweis?";
 	description = "Je toto srdce ledového Golema důkaz?";
@@ -315,11 +334,13 @@ instance Info_XardasDemon_ICEHEART(C_INFO)
 
 func int Info_XardasDemon_ICEHEART_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_XardasDemon_MASTERHOW)
-	&& Npc_HasItems(hero,ItAt_IceGolem_01)
+	if ((Npc_KnowsInfo(hero,Info_XardasDemon_MASTERHOW))
+	&& (Npc_HasItems(hero,ItAt_IceGolem_01)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_XardasDemon_ICEHEART_Info()
@@ -336,13 +357,14 @@ func void Info_XardasDemon_ICEHEART_Info()
 //***************************************************************************
 //	Info FIREHEART
 //***************************************************************************
+
 instance Info_XardasDemon_FIREHEART(C_INFO)
 {
 	npc = XardasDemon;
 	condition = Info_XardasDemon_FIREHEART_Condition;
 	information = Info_XardasDemon_FIREHEART_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "What about this heart of a fire golem?";
 //	description = "Was ist mit diesem Herz des Feuergolems?";
 	description = "A co toto srdce ohnivého Golema?";
@@ -350,11 +372,13 @@ instance Info_XardasDemon_FIREHEART(C_INFO)
 
 func int Info_XardasDemon_FIREHEART_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_XardasDemon_MASTERHOW)
-	&& Npc_HasItems(hero,ItAt_FireGolem_01)
+	if ((Npc_KnowsInfo(hero,Info_XardasDemon_MASTERHOW))
+	&& (Npc_HasItems(hero,ItAt_FireGolem_01)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_XardasDemon_FIREHEART_Info()
@@ -367,4 +391,3 @@ func void Info_XardasDemon_FIREHEART_Info()
 
 	B_XardasDemon_GiveHeart();
 };
-

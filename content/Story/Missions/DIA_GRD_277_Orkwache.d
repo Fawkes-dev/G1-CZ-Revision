@@ -18,8 +18,10 @@ func int Grd_277_Gardist_SITTINGORK_Condition()
 {
 	if (Ian_gearwheel != LOG_SUCCESS)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Grd_277_Gardist_SITTINGORK_Info()
@@ -56,8 +58,10 @@ func int Grd_277_Gardist_WORKINGORK_Condition()
 {
 	if (Ian_gearwheel == LOG_SUCCESS)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Grd_277_Gardist_WORKINGORK_Info()

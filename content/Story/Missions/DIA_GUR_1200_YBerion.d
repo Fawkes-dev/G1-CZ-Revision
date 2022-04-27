@@ -8,6 +8,7 @@ instance Info_Yberion_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Yberion_EXIT_Condition;
 	information = Info_Yberion_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -30,8 +31,8 @@ instance DIA_YBerion_Wache(C_INFO)
 	nr = 1;
 	condition = DIA_YBerion_Wache_Condition;
 	information = DIA_YBerion_Wache_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_YBerion_Wache_Condition()
@@ -40,6 +41,8 @@ func int DIA_YBerion_Wache_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_YBerion_Wache_Info()
@@ -60,6 +63,7 @@ instance DIA_YBerion_Kennen(C_INFO)
 	nr = 1;
 	condition = DIA_YBerion_Kennen_Condition;
 	information = DIA_YBerion_Kennen_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Greetings, Master Y'Berion.";
 //	description = "Sei gegrüßt, Meister Y'Berion.";
@@ -72,6 +76,8 @@ func int DIA_YBerion_Kennen_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_YBerion_Kennen_Info()
@@ -98,6 +104,7 @@ instance Info_YBerion_BringFocus(C_INFO)
 	npc = GUR_1200_Yberion;
 	condition = Info_YBerion_BringFocus_Condition;
 	information = Info_YBerion_BringFocus_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I heard you were looking for something.";
 //	description = "Mir kam zu Ohren, du suchst etwas";
@@ -106,13 +113,15 @@ instance Info_YBerion_BringFocus(C_INFO)
 
 func int Info_YBerion_BringFocus_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_YBerion_Kennen))
+	if ((Npc_KnowsInfo(hero,DIA_YBerion_Kennen))
 	&& (Npc_GetTrueGuild(hero) != GIL_NONE)
 	&& (YBerion_BringFocus != LOG_RUNNING)
-	&& (YBerion_BringFocus != LOG_SUCCESS)
+	&& (YBerion_BringFocus != LOG_SUCCESS))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_YBerion_BringFocus_Info()
@@ -203,6 +212,7 @@ instance Info_YBerion_BringFocus_RUNNING(C_INFO)
 	nr = 1;
 	condition = Info_YBerion_BringFocus_RUNNING_Condition;
 	information = Info_YBerion_BringFocus_RUNNING_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I still haven't found the focus.";
 //	description = "Ich habe den Fokus immer noch nicht gefunden.";
@@ -211,10 +221,13 @@ instance Info_YBerion_BringFocus_RUNNING(C_INFO)
 
 func int Info_YBerion_BringFocus_RUNNING_Condition()
 {
-	if ( YBerion_BringFocus == LOG_RUNNING ) && ( !Npc_HasItems(hero,Focus_1 ))
+	if ((YBerion_BringFocus == LOG_RUNNING)
+	&& (!Npc_HasItems(hero,Focus_1)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_YBerion_BringFocus_RUNNING_Info()
@@ -234,6 +247,7 @@ instance Info_YBerion_BringFocus_Success(C_INFO)
 	nr = 1;
 	condition = Info_YBerion_BringFocus_Success_Condition;
 	information = Info_YBerion_BringFocus_Success_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I've found the focus.";
 //	description = "Ich habe den Fokus gefunden";
@@ -242,10 +256,13 @@ instance Info_YBerion_BringFocus_Success(C_INFO)
 
 func int Info_YBerion_BringFocus_Success_Condition()
 {
-	if ( YBerion_BringFocus == LOG_RUNNING ) && (Npc_HasItems(hero,Focus_1 ))
+	if ((YBerion_BringFocus == LOG_RUNNING)
+	&& (Npc_HasItems(hero,Focus_1)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_YBerion_BringFocus_Success_Info()
@@ -294,6 +311,7 @@ instance Info_YBerion_NYRAS(C_INFO)
 	nr = 1;
 	condition = Info_YBerion_NYRAS_Condition;
 	information = Info_YBerion_NYRAS_Info;
+	important = 0;
 	permanent = 0;
 //	description = "The novice Nyras has gone mad!";
 //	description = "Der Novize Nyras hat den Verstand verloren!";
@@ -302,10 +320,12 @@ instance Info_YBerion_NYRAS(C_INFO)
 
 func int Info_YBerion_NYRAS_Condition()
 {
-	if (Npc_HasItems(hero,Focus_1 ))
+	if (Npc_HasItems(hero,Focus_1))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_YBerion_NYRAS_Info()
@@ -342,12 +362,16 @@ instance GUR_1200_Yberion_EARN(C_INFO)
 
 func int GUR_1200_Yberion_EARN_Condition()
 {
-	if (YBerion_BringFocus == LOG_SUCCESS) && (Npc_GetTrueGuild(hero)!= GIL_NOV) && (C_IsChapter (2))
+	if ((YBerion_BringFocus == LOG_SUCCESS)
+	&& (Npc_GetTrueGuild(hero) != GIL_NOV)
+	&& (C_IsChapter (2)))
 	{
 		return 1;
 	};
 
+	return 0;
 };
+
 func void GUR_1200_Yberion_EARN_Info()
 {
 //	AI_Output(other,self,"GUR_1200_Yberion_EARN_Info_15_01"); //What about some kind of reward?
@@ -374,7 +398,6 @@ instance GUR_1200_Yberion_LASTWORDS(C_INFO)
 	information = GUR_1200_Yberion_LASTWORDS_Info;
 	important = 1;
 	permanent = 0;
-
 };
 
 func int GUR_1200_Yberion_LASTWORDS_Condition()
@@ -383,8 +406,9 @@ func int GUR_1200_Yberion_LASTWORDS_Condition()
 	{
 		return 1;
 	};
-
+	return 0;
 };
+
 func void GUR_1200_Yberion_LASTWORDS_Info()
 {
 	AI_Output(self,other,"GUR_1200_Yberion_LASTWORDS_Info_12_01"); //Das Ende...der Schläfer...ich sah...IHN!

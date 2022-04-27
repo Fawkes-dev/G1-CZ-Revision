@@ -7,6 +7,7 @@ instance Info_BaalLukor_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_BaalLukor_EXIT_Condition;
 	information = Info_BaalLukor_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -29,13 +30,13 @@ instance Info_BaalLukor_MEET(C_INFO)
 	npc = GUR_1211_BaalLukor;
 	condition = Info_BaalLukor_MEET_Condition;
 	information = Info_BaalLukor_MEET_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_BaalLukor_MEET_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Info_BaalLukor_MEET_Info()
@@ -53,11 +54,11 @@ func void Info_BaalLukor_MEET_Info()
 instance Info_BaalLukor_DEAD(C_INFO)
 {
 	npc = GUR_1211_BaalLukor;
+	nr = 20;
 	condition = Info_BaalLukor_DEAD_Condition;
 	information = Info_BaalLukor_DEAD_Info;
-	nr = 20;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "I came across some dead templars on the way here!";
 //	description = "Ich habe tote Templer auf dem Weg hierher gefunden!";
 	description = "Na cestě sem jsem viděl několik mrtvých templářů!";
@@ -65,7 +66,7 @@ instance Info_BaalLukor_DEAD(C_INFO)
 
 func int Info_BaalLukor_DEAD_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Info_BaalLukor_DEAD_Info()
@@ -100,11 +101,11 @@ func void Info_BaalLukor_DEAD_Info()
 instance Info_BaalLukor_SUMMONING(C_INFO)
 {
 	npc = GUR_1211_BaalLukor;
+	nr = 10;
 	condition = Info_BaalLukor_SUMMONING_Condition;
 	information = Info_BaalLukor_SUMMONING_Info;
-	nr = 10;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "Cor Angar sent me!";
 //	description = "Cor Angar schickt mich!";
 	description = "Cor Angar mě vyslal!";
@@ -112,7 +113,7 @@ instance Info_BaalLukor_SUMMONING(C_INFO)
 
 func int Info_BaalLukor_SUMMONING_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Info_BaalLukor_SUMMONING_Info()
@@ -145,8 +146,8 @@ instance Info_BaalLukor_HELP(C_INFO)
 	npc = GUR_1211_BaalLukor;
 	condition = Info_BaalLukor_HELP_Condition;
 	information = Info_BaalLukor_HELP_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "I'll help you.";
 //	description = "Ich werde dir helfen";
 	description = "Pomůžu ti.";
@@ -185,8 +186,8 @@ instance Info_BaalLukor_FOUNDNONE(C_INFO)
 	npc = GUR_1211_BaalLukor;
 	condition = Info_BaalLukor_FOUNDNONE_Condition;
 	information = Info_BaalLukor_FOUNDNONE_Info;
-	permanent = 1;
 	important = 0;
+	permanent = 1;
 //	description = "I can't find a thing!";
 //	description = "Ich kann keinen Hinweis finden!";
 	description = "Nedokážu se tu orientovat!";
@@ -194,13 +195,15 @@ instance Info_BaalLukor_FOUNDNONE(C_INFO)
 
 func int Info_BaalLukor_FOUNDNONE_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_BaalLukor_HELP)
+	if ((Npc_KnowsInfo(hero,Info_BaalLukor_HELP))
 	&& (BaalLukor_BringParchment == 0)
-	&& !Npc_HasItems(hero,OrkParchmentOne)
-	&& !Npc_HasItems(hero,OrkParchmentTwo))
+	&& (!Npc_HasItems(hero,OrkParchmentOne))
+	&& (!Npc_HasItems(hero,OrkParchmentTwo)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_BaalLukor_FOUNDNONE_Info()
@@ -223,8 +226,8 @@ instance Info_BaalLukor_FOUNDONE(C_INFO)
 	npc = GUR_1211_BaalLukor;
 	condition = Info_BaalLukor_FOUNDONE_Condition;
 	information = Info_BaalLukor_FOUNDONE_Info;
-	permanent = 1;
 	important = 0;
+	permanent = 1;
 //	description = "Apparently there is no other half to the parchment!";
 //	description = "Es scheint hier keine andere Pergamenthälfte zu geben!";
 	description = "Zdá se, že druhá polovina pergamenu tu není!";
@@ -232,11 +235,16 @@ instance Info_BaalLukor_FOUNDONE(C_INFO)
 
 func int Info_BaalLukor_FOUNDONE_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_BaalLukor_HELP)
-	&& (((BaalLukor_BringParchment==1) && !Npc_HasItems(hero,OrkParchmentTwo)) || ((BaalLukor_BringParchment==2) && !Npc_HasItems(hero,OrkParchmentOne))))
+	if (Npc_KnowsInfo(hero,Info_BaalLukor_HELP))
 	{
-		return TRUE;
+		if (((BaalLukor_BringParchment == 1) && (!Npc_HasItems(hero,OrkParchmentTwo)))
+		|| ((BaalLukor_BringParchment == 2) && (!Npc_HasItems(hero,OrkParchmentOne))))
+		{
+			return 1;
+		};
 	};
+
+	return 0;
 };
 
 func void Info_BaalLukor_FOUNDONE_Info()
@@ -259,17 +267,19 @@ instance Info_BaalLukor_FIRSTWAIT(C_INFO)
 	npc = GUR_1211_BaalLukor;
 	condition = Info_BaalLukor_FIRSTWAIT_Condition;
 	information = Info_BaalLukor_FIRSTWAIT_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_BaalLukor_FIRSTWAIT_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_BaalLukor_HELP)
-	&& (Npc_GetDistToWP(self,"GRYD_040")<500))
+	if ((Npc_KnowsInfo(hero,Info_BaalLukor_HELP))
+	&& (Npc_GetDistToWP(self,"GRYD_040") < 500))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_BaalLukor_FIRSTWAIT_Info()
@@ -297,8 +307,8 @@ instance Info_BaalLukor_FIRSTSCROLL(C_INFO)
 	npc = GUR_1211_BaalLukor;
 	condition = Info_BaalLukor_FIRSTSCROLL_Condition;
 	information = Info_BaalLukor_FIRSTSCROLL_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "I've found a piece of parchment!";
 //	description = "Ich habe dieses Stück Pergament hier gefunden!";
 	description = "Našel jsem tu tento kus pergamenu!";
@@ -306,11 +316,13 @@ instance Info_BaalLukor_FIRSTSCROLL(C_INFO)
 
 func int Info_BaalLukor_FIRSTSCROLL_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_BaalLukor_HELP)
-	&& Npc_HasItems(hero,OrkParchmentOne))
+	if ((Npc_KnowsInfo(hero,Info_BaalLukor_HELP))
+	&& (Npc_HasItems(hero,OrkParchmentOne)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_BaalLukor_FIRSTSCROLL_Info()
@@ -349,17 +361,19 @@ instance Info_BaalLukor_SECONDWAIT(C_INFO)
 	npc = GUR_1211_BaalLukor;
 	condition = Info_BaalLukor_SECONDWAIT_Condition;
 	information = Info_BaalLukor_SECONDWAIT_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_BaalLukor_SECONDWAIT_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_BaalLukor_HELP)
-	&& (Npc_GetDistToWP(self,"GRYD_047")<500))
+	if ((Npc_KnowsInfo(hero,Info_BaalLukor_HELP))
+	&& (Npc_GetDistToWP(self,"GRYD_047") < 500))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_BaalLukor_SECONDWAIT_Info()
@@ -391,6 +405,7 @@ instance Info_BaalLukor_SECONDSCROLL(C_INFO)
 	npc = GUR_1211_BaalLukor;
 	condition = Info_BaalLukor_SECONDSCROLL_Condition;
 	information = Info_BaalLukor_SECONDSCROLL_Info;
+	important = 0;
 	permanent = 0;
 //	description = "There is a torn piece of parchment here!";
 	description = "Tady je roztržený kus pergamenu!";
@@ -398,11 +413,13 @@ instance Info_BaalLukor_SECONDSCROLL(C_INFO)
 
 func int Info_BaalLukor_SECONDSCROLL_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_BaalLukor_HELP)
-	&& Npc_HasItems(hero,OrkParchmentTwo))
+	if ((Npc_KnowsInfo(hero,Info_BaalLukor_HELP))
+	&& (Npc_HasItems(hero,OrkParchmentTwo)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_BaalLukor_SECONDSCROLL_Info()
@@ -444,8 +461,8 @@ instance Info_BaalLukor_BOTHSCROLLS(C_INFO)
 	npc = GUR_1211_BaalLukor;
 	condition = Info_BaalLukor_BOTHSCROLLS_Condition;
 	information = Info_BaalLukor_BOTHSCROLLS_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "What do we do with the two pieces now?";
 //	description = "Was fangen wir jetzt mit den beiden Stücken an?";
 	description = "Co teď s těmi dvěma kusy uděláme?";
@@ -456,8 +473,10 @@ func int Info_BaalLukor_BOTHSCROLLS_Condition()
 	if (Npc_KnowsInfo(hero,Info_BaalLukor_HELP)
 	&& (BaalLukor_BringParchment == 3))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_BaalLukor_BOTHSCROLLS_Info()
@@ -484,17 +503,19 @@ instance Info_BaalLukor_RUNES(C_INFO)
 	npc = GUR_1211_BaalLukor;
 	condition = Info_BaalLukor_RUNES_Condition;
 	information = Info_BaalLukor_RUNES_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_BaalLukor_RUNES_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_BaalLukor_BOTHSCROLLS)
-	&& ((Npc_GetDistToWP(hero,"GRYD_025")<600) || (Npc_GetDistToWP(hero,"GRYD_048")<600)))
+	if ((Npc_KnowsInfo(hero,Info_BaalLukor_BOTHSCROLLS))
+	&& ((Npc_GetDistToWP(hero,"GRYD_025") < 600) || (Npc_GetDistToWP(hero,"GRYD_048") < 600)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_BaalLukor_RUNES_Info()
@@ -542,8 +563,8 @@ instance Info_BaalLukor_WHATNOW(C_INFO)
 	npc = GUR_1211_BaalLukor;
 	condition = Info_BaalLukor_WHATNOW_Condition;
 	information = Info_BaalLukor_WHATNOW_Info;
-	permanent = 1;
 	important = 0;
+	permanent = 1;
 //	description = "What 'certain' place?";
 //	description = "Was für ein 'gewisser' Ort!";
 	description = "Na jakém 'určitém' místě?";
@@ -551,12 +572,14 @@ instance Info_BaalLukor_WHATNOW(C_INFO)
 
 func int Info_BaalLukor_WHATNOW_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_BaalLukor_RUNES)
-	&& Npc_KnowsInfo(hero,Info_BaalLukor_HALLWITHOUT)
-	&& !Npc_KnowsInfo(hero,Info_BaalLukor_HALLWITH))
+	if ((Npc_KnowsInfo(hero,Info_BaalLukor_RUNES))
+	&& (Npc_KnowsInfo(hero,Info_BaalLukor_HALLWITHOUT))
+	&& (!Npc_KnowsInfo(hero,Info_BaalLukor_HALLWITH)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_BaalLukor_WHATNOW_Info()
@@ -579,17 +602,19 @@ instance Info_BaalLukor_HALLWITHOUT(C_INFO)
 	npc = GUR_1211_BaalLukor;
 	condition = Info_BaalLukor_HALLWITHOUT_Condition;
 	information = Info_BaalLukor_HALLWITHOUT_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_BaalLukor_HALLWITHOUT_Condition()
 {
-	if ( !Npc_KnowsInfo(hero,Info_BaalLukor_RUNES)
-	&& (Npc_GetDistToWP(hero,"GRYD_055")<500))
+	if ((!Npc_KnowsInfo(hero,Info_BaalLukor_RUNES))
+	&& (Npc_GetDistToWP(hero,"GRYD_055") < 500))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_BaalLukor_HALLWITHOUT_Info()
@@ -620,17 +645,19 @@ instance Info_BaalLukor_HALLWITH(C_INFO)
 	npc = GUR_1211_BaalLukor;
 	condition = Info_BaalLukor_HALLWITH_Condition;
 	information = Info_BaalLukor_HALLWITH_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_BaalLukor_HALLWITH_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_BaalLukor_RUNES)
-	&& Npc_GetDistToWP(hero,"GRYD_055")<500 )
+	if ((Npc_KnowsInfo(hero,Info_BaalLukor_RUNES))
+	&& (Npc_GetDistToWP(hero,"GRYD_055") < 500))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_BaalLukor_HALLWITH_Info()
@@ -665,17 +692,19 @@ instance Info_BaalLukor_DOOR(C_INFO)
 	npc = GUR_1211_BaalLukor;
 	condition = Info_BaalLukor_DOOR_Condition;
 	information = Info_BaalLukor_DOOR_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_BaalLukor_DOOR_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_BaalLukor_HALLWITH)
-	&& Npc_GetDistToWP(hero,"GRYD_060")<500)
+	if ((Npc_KnowsInfo(hero,Info_BaalLukor_HALLWITH))
+	&& (Npc_GetDistToWP(hero,"GRYD_060") < 500))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_BaalLukor_DOOR_Info()
@@ -709,18 +738,20 @@ instance Info_BaalLukor_TELEPORT(C_INFO)
 	npc = GUR_1211_BaalLukor;
 	condition = Info_BaalLukor_TELEPORT_Condition;
 	information = Info_BaalLukor_TELEPORT_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_BaalLukor_TELEPORT_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_BaalLukor_DOOR)
-	&& Npc_CanSeeNpcFreeLOS(self,hero)
-	&& Npc_GetDistToWP(hero,"GRYD_072")<550)
+	if ((Npc_KnowsInfo(hero,Info_BaalLukor_DOOR))
+	&& (Npc_CanSeeNpcFreeLOS(self,hero))
+	&& (Npc_GetDistToWP(hero,"GRYD_072") < 550))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_BaalLukor_TELEPORT_Info()
@@ -761,18 +792,20 @@ instance Info_BaalLukor_ALTAR(C_INFO)
 	npc = GUR_1211_BaalLukor;
 	condition = Info_BaalLukor_ALTAR_Condition;
 	information = Info_BaalLukor_ALTAR_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_BaalLukor_ALTAR_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_BaalLukor_TELEPORT)
-	&& Npc_GetDistToWP(hero,"GRYD_082")<400
-	&& Npc_CanSeeNpcFreeLOS(self,hero))
+	if ((Npc_KnowsInfo(hero,Info_BaalLukor_TELEPORT))
+	&& (Npc_GetDistToWP(hero,"GRYD_082") < 400)
+	&& (Npc_CanSeeNpcFreeLOS(self,hero)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_BaalLukor_ALTAR_Info()
@@ -844,4 +877,3 @@ func void Info_BaalLukor_ALTAR_Info()
 
 	AI_StartState(self,ZS_Attack, 1, "");
 };
-

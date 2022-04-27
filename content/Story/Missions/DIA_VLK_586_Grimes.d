@@ -49,6 +49,7 @@ func int VLK_586_Grimes_STORY_Condition()
 		return 1;
 	};
 
+	return 0;
 };
 
 func void VLK_586_Grimes_STORY_Info()
@@ -89,7 +90,9 @@ func int VLK_586_Grimes_KNOW_Condition()
 		return 1;
 	};
 
+	return 0;
 };
+
 func void VLK_586_Grimes_KNOW_Info()
 {
 //	AI_Output(other,self,"VLK_586_Grimes_KNOW_Info_15_01"); //You must have heard about many escape plans as well.

@@ -82,11 +82,13 @@ instance DIA_SLD_753_Baloro_Worumgehts(C_INFO)
 
 func int DIA_SLD_753_Baloro_Worumgehts_Condition()
 {
-	if ((Npc_KnowsInfo(hero,DIA_SLD_753_Baloro_Wasmeinstdu)) && (SLD_753_Baloro_SC_choice == 0))
+	if ((Npc_KnowsInfo(hero,DIA_SLD_753_Baloro_Wasmeinstdu))
+	&& (SLD_753_Baloro_SC_choice == 0))
 	{
-	return 1;
+		return 1;
 	};
 
+	return 0;
 };
 
 func void DIA_SLD_753_Baloro_Worumgehts_Info()
@@ -117,7 +119,6 @@ func void DIA_SLD_753_Baloro_Worumgehts_Info()
 //	Info_AddChoice(DIA_SLD_753_Baloro_Worumgehts,"I don't believe a word he says.",DIA_SLD_753_Baloro_Exit_Info);
 //	Info_AddChoice(DIA_SLD_753_Baloro_Worumgehts,"Der Typ will mich doch verarschen!",DIA_SLD_753_Baloro_Exit_Info);
 	Info_AddChoice(DIA_SLD_753_Baloro_Worumgehts,"Ten chlápek mele nesmysly.",DIA_SLD_753_Baloro_Exit_Info);
-
 };
 
 func void DIA_SLD_753_Baloro_Worumgehts_ja()
@@ -161,7 +162,7 @@ func void DIA_SLD_753_Baloro_Worumgehts_jaklar()
 
 //******** Auftragannahme **************************
 
-	SLD_753_Baloro_SC_besorgt_den_Kram = LOG_RUNNING ;
+	SLD_753_Baloro_SC_besorgt_den_Kram = LOG_RUNNING;
 
 	Log_CreateTopic(Baloros_Waffe,LOG_MISSION);
 	Log_SetTopicStatus(Baloros_Waffe,LOG_RUNNING);
@@ -193,6 +194,7 @@ func int DIA_SLD_753_Baloro_habsnichtdabei_Condition()
 		return 1;
 	};
 
+	return 0;
 };
 
 func void DIA_SLD_753_Baloro_habsnichtdabei_Info()
@@ -229,19 +231,22 @@ instance DIA_SLD_753_Baloro_habsdabei(C_INFO)
 
 func int DIA_SLD_753_Baloro_habsdabei_Condition()
 {
-	if ((SLD_753_Baloro_SC_besorgt_den_Kram == LOG_RUNNING)
-		&& (Npc_KnowsInfo(hero,DIA_SLD_753_Baloro_Worumgehts))
-		&& (SLD_753_Baloro_SC_choice == 0)
-		&& (Npc_HasItems(other,ItFoApple)>=5)
-		&& (Npc_HasItems(other,ItFoBooze)>=2)
-		&& (Npc_HasItems(other,ItFoBeer)>=5)
-		&& (Npc_HasItems(other,ItFoLoaf)>=3)
-		&& (Npc_HasItems(other,ItFoCheese)>=2)
-		&& (Npc_HasItems(other,ItFo_wineberrys_01)>=2))
+	if ((Npc_KnowsInfo(hero,DIA_SLD_753_Baloro_Worumgehts))
+	&& (SLD_753_Baloro_SC_besorgt_den_Kram == LOG_RUNNING)
+	&& (SLD_753_Baloro_SC_choice == 0))
 	{
-		return 1;
+		if ((Npc_HasItems(other,ItFoApple) >= 5)
+		&& (Npc_HasItems(other,ItFoBooze) >= 2)
+		&& (Npc_HasItems(other,ItFoBeer) >= 5)
+		&& (Npc_HasItems(other,ItFoLoaf) >= 3)
+		&& (Npc_HasItems(other,ItFoCheese) >= 2)
+		&& (Npc_HasItems(other,ItFo_wineberrys_01) >= 2))
+		{
+			return 1;
+		};
 	};
 
+	return 0;
 };
 
 func void DIA_SLD_753_Baloro_habsdabei_Info()
@@ -295,7 +300,7 @@ func void DIA_SLD_753_Baloro_habsdabei_Info()
 //	AI_Output(self,other,"DIA_SLD_753_Baloro_habsdabei_Info_08_06"); //Macht aber nichts! Jetzt haben wir Jungs wenigstens genügend Fressalien zum Feiern! Schönen Dank auch! Und vielleicht sehen wir uns ja noch mal. He he he!
 	AI_Output(self,other,"DIA_SLD_753_Baloro_habsdabei_Info_08_06"); //Ale nevadí! Teď máme my chlapi dost jídla na oslavu! Díky moc! Možná se ještě uvidíme. Hehehe!
 
-	SLD_753_Baloro_SC_besorgt_den_Kram = LOG_SUCCESS ;
+	SLD_753_Baloro_SC_besorgt_den_Kram = LOG_SUCCESS;
 	B_GiveXP(300);
 //	B_LogEntry(Baloros_Waffe, "I should have known better than trusting this jerk! Nevermind, now I've learned my lesson!");
 //	B_LogEntry(Baloros_Waffe, "Hätte ich mir gleich denken können, daß der Typ mich nur verarschen will. Egal! Jetzt bin um eine Erfahrung reicher!");
@@ -318,32 +323,31 @@ instance DIA_SLD_753_Baloro_letztes_Wort(C_INFO)
 //	description = "Hey man! You can't do that to me!";
 //	description = "Hey, Mann! Das kannst du mit mir nicht machen!";
 	description = "Hej, člověče! Tohle mi nemůžeš udělat!";
-
 };
 
 func int DIA_SLD_753_Baloro_letztes_Wort_Condition()
+{
+	if (SLD_753_Baloro_SC_besorgt_den_Kram == LOG_SUCCESS)
 	{
-		if (SLD_753_Baloro_SC_besorgt_den_Kram == LOG_SUCCESS)
-		{
 		return 1;
-		};
 	};
 
+	return 0;
+};
+
 func void DIA_SLD_753_Baloro_letztes_Wort_Info()
+{
+//	AI_Output(other,self,"DIA_SLD_753_Baloro_letztes_Wort_Info_15_01"); //Hey man! You can't do that to me!
+//	AI_Output(other,self,"DIA_SLD_753_Baloro_letztes_Wort_Info_15_01"); //Hey, Mann! Das kannst du mit mir nicht machen!
+	AI_Output(other,self,"DIA_SLD_753_Baloro_letztes_Wort_Info_15_01"); //Hej, člověče! Tohle mi nemůžeš udělat!
+//	AI_Output(self,other,"DIA_SLD_753_Baloro_letztes_Wort_Info_08_01"); //What more do you want! Piss off! Get on somebody else's nerves, or you'll get it! Got it?
+//	AI_Output(self,other,"DIA_SLD_753_Baloro_letztes_Wort_Info_08_01"); //Was willst du denn noch! Verschwinde! Geh jemand anders auf die Nerven, sonst setzt's was! Kapiert?
+	AI_Output(self,other,"DIA_SLD_753_Baloro_letztes_Wort_Info_08_01"); //Co chceš víc? Zmizni! Lez si na nervy někomu jinému, nebo tě rozmáznu! Jasný!
 
-	 	{
-//			AI_Output(other,self,"DIA_SLD_753_Baloro_letztes_Wort_Info_15_01"); //Hey man! You can't do that to me!
-//			AI_Output(other,self,"DIA_SLD_753_Baloro_letztes_Wort_Info_15_01"); //Hey, Mann! Das kannst du mit mir nicht machen!
-			AI_Output(other,self,"DIA_SLD_753_Baloro_letztes_Wort_Info_15_01"); //Hej, člověče! Tohle mi nemůžeš udělat!
-//			AI_Output(self,other,"DIA_SLD_753_Baloro_letztes_Wort_Info_08_01"); //What more do you want! Piss off! Get on somebody else's nerves, or you'll get it! Got it?
-//			AI_Output(self,other,"DIA_SLD_753_Baloro_letztes_Wort_Info_08_01"); //Was willst du denn noch! Verschwinde! Geh jemand anders auf die Nerven, sonst setzt's was! Kapiert?
-			AI_Output(self,other,"DIA_SLD_753_Baloro_letztes_Wort_Info_08_01"); //Co chceš víc? Zmizni! Lez si na nervy někomu jinému, nebo tě rozmáznu! Jasný!
+	SLD_753_Baloro_SC_wills_wissen = 1;
 
-			SLD_753_Baloro_SC_wills_wissen = 1 ;
-
-			AI_StopProcessInfos(self);
-
-		};
+	AI_StopProcessInfos(self);
+};
 
 // ********************** EXIT\ Spieler will´s wissen *****************
 
@@ -357,17 +361,17 @@ instance DIA_SLD_753_Baloro_SC_wills_wissen(C_INFO)
 //	description = "I'm afraid I'm going to have to whack you one!";
 //	description = "Ich glaube, ich muss dir jetzt leider die Fresse polieren!";
 	description = "Myslím, že ti budu muset zmalovat obličej!";
-
 };
 
 func int DIA_SLD_753_Baloro_SC_wills_wissen_Condition()
+{
+	if (SLD_753_Baloro_SC_wills_wissen == 1)
 	{
-		if (SLD_753_Baloro_SC_wills_wissen == 1)
-		{
-
 		return 1;
-		};
 	};
+
+	return 0;
+};
 
 func void DIA_SLD_753_Baloro_Attack()
 {
@@ -392,8 +396,7 @@ func void DIA_SLD_753_Baloro_SC_wills_wissen_Info()
 //	AI_Output(self,other,"DIA_SLD_753_Baloro_SC_wills_wissen_Info_08_02"); //Na gut! Du willst es ja nicht anders! Ich hab' dich gewarnt!
 	AI_Output(self,other,"DIA_SLD_753_Baloro_SC_wills_wissen_Info_08_02"); //Dobrá! Říkal sis o to! Já tě varoval!
 
-	DIA_SLD_753_Baloro_Attack() ;
-
+	DIA_SLD_753_Baloro_Attack();
 };
 
 // ********************** EXIT *****************
@@ -409,39 +412,41 @@ instance DIA_SLD_753_Baloro_Exit(C_INFO)
 //	description = "I need to go on.";
 //	description = "Ich muss weiter!";
 	description = "Musím jít dál. (KONEC)";
-
 };
 
 func int DIA_SLD_753_Baloro_Exit_Condition()
+{
+	if ((SLD_753_Baloro_SC_wills_wissen == 0)
+	&& (SLD_753_Baloro_SC_besorgt_den_Kram == 0))
 	{
-		if    ((SLD_753_Baloro_SC_wills_wissen == 0) && (SLD_753_Baloro_SC_besorgt_den_Kram == 0)    )
-		{
 		return 1;
-		};
 	};
+
+	return 0;
+};
 
 func void DIA_SLD_753_Baloro_Exit_Info()
 {
-				if ((Npc_KnowsInfo(hero,DIA_SLD_753_Baloro_Wasmeinstdu)) && (SLD_753_Baloro_SC_choice == 0))
-					{
-//						AI_Output(other,self,"DIA_SLD_753_Baloro_Exit_Info_15_01"); //No, no! Just leave it! I'm not interested!
-//						AI_Output(other,self,"DIA_SLD_753_Baloro_Exit_Info_15_01"); //Nee, nee! Lass mal! Kein Interesse!
-						AI_Output(other,self,"DIA_SLD_753_Baloro_Exit_Info_15_01"); //Ne, nech to být! Nemám zájem!
-//						AI_Output(self,other,"DIA_SLD_753_Baloro_Exit_Info_08_02"); //Well then! As you wish! You've had your chance!
-//						AI_Output(self,other,"DIA_SLD_753_Baloro_Exit_Info_08_02"); //Na gut! Wie du willst! Du hattest deine Chance!
-						AI_Output(self,other,"DIA_SLD_753_Baloro_Exit_Info_08_02"); //Dobrá! Jak chceš! Dostal si šanci!
+	if ((Npc_KnowsInfo(hero,DIA_SLD_753_Baloro_Wasmeinstdu)) && (SLD_753_Baloro_SC_choice == 0))
+	{
+//		AI_Output(other,self,"DIA_SLD_753_Baloro_Exit_Info_15_01"); //No, no! Just leave it! I'm not interested!
+//		AI_Output(other,self,"DIA_SLD_753_Baloro_Exit_Info_15_01"); //Nee, nee! Lass mal! Kein Interesse!
+		AI_Output(other,self,"DIA_SLD_753_Baloro_Exit_Info_15_01"); //Ne, nech to být! Nemám zájem!
+//		AI_Output(self,other,"DIA_SLD_753_Baloro_Exit_Info_08_02"); //Well then! As you wish! You've had your chance!
+//		AI_Output(self,other,"DIA_SLD_753_Baloro_Exit_Info_08_02"); //Na gut! Wie du willst! Du hattest deine Chance!
+		AI_Output(self,other,"DIA_SLD_753_Baloro_Exit_Info_08_02"); //Dobrá! Jak chceš! Dostal si šanci!
 
-						SLD_753_Baloro_SC_choice = 1 ;
-					}
-				else
-					{
-//						AI_Output(other,self,"DIA_SLD_753_Baloro_Exit_Info_15_03"); //I'm sorry! Unfortunately I don't have any time to chat!
-//						AI_Output(other,self,"DIA_SLD_753_Baloro_Exit_Info_15_03"); //Tut mir Leid! Ich hab' leider keine Zeit für ein Pläuschchen!
-						AI_Output(other,self,"DIA_SLD_753_Baloro_Exit_Info_15_03"); //Je mi líto! Bohužel nemám čas si povídat!
-//						AI_Output(self,other,"DIA_SLD_753_Baloro_Exit_Info_08_04"); //Oh, you're busy! I'll see you!
-//						AI_Output(self,other,"DIA_SLD_753_Baloro_Exit_Info_08_04"); //Oh, haben wir es eilig! Na dann! Wir sehen uns!
-						AI_Output(self,other,"DIA_SLD_753_Baloro_Exit_Info_08_04"); //Och, ty nemáš čas! Ještě se uvidíme!
-					};
+		SLD_753_Baloro_SC_choice = 1;
+	}
+	else
+	{
+//		AI_Output(other,self,"DIA_SLD_753_Baloro_Exit_Info_15_03"); //I'm sorry! Unfortunately I don't have any time to chat!
+//		AI_Output(other,self,"DIA_SLD_753_Baloro_Exit_Info_15_03"); //Tut mir Leid! Ich hab' leider keine Zeit für ein Pläuschchen!
+		AI_Output(other,self,"DIA_SLD_753_Baloro_Exit_Info_15_03"); //Je mi líto! Bohužel nemám čas si povídat!
+//		AI_Output(self,other,"DIA_SLD_753_Baloro_Exit_Info_08_04"); //Oh, you're busy! I'll see you!
+//		AI_Output(self,other,"DIA_SLD_753_Baloro_Exit_Info_08_04"); //Oh, haben wir es eilig! Na dann! Wir sehen uns!
+		AI_Output(self,other,"DIA_SLD_753_Baloro_Exit_Info_08_04"); //Och, ty nemáš čas! Ještě se uvidíme!
+	};
 
 	AI_StopProcessInfos(self);
 };
@@ -458,28 +463,26 @@ instance DIA_SLD_753_Baloro_Angebotdochannehmen(C_INFO)
 //	description = "I've thought about it. I'd like to get back to your offer now.";
 //	description = "Ich hab's mir überlegt. Ich möchte dein Angebot doch annehmen.";
 	description = "Přemýšlel jsem o tom! Chtěl bych tvoji nabídku přijmout.";
-
 };
 
 func int DIA_SLD_753_Baloro_Angebotdochannehmen_Condition()
+{
+	if (SLD_753_Baloro_SC_choice == 1)
 	{
-		if (SLD_753_Baloro_SC_choice == 1)
-		{
 		return 1;
-		};
 	};
 
+	return 0;
+};
+
 func void DIA_SLD_753_Baloro_Angebotdochannehmen_Info()
+{
+//	AI_Output(other,self,"DIA_SLD_753_Baloro_Angebotdochannehmen_Info_15_01"); //I thought about it. I'd like to get back to your offer now.
+//	AI_Output(other,self,"DIA_SLD_753_Baloro_Angebotdochannehmen_Info_15_01"); //Ich hab's mir überlegt. Ich möchte dein Angebot doch annehmen.
+	AI_Output(other,self,"DIA_SLD_753_Baloro_Angebotdochannehmen_Info_15_01"); //Přemýšlel jsem o tom! Chtěl bych tvoji nabídku přijmout.
+//	AI_Output(self,other,"DIA_SLD_753_Baloro_Angebotdochannehmen_Info_08_01"); //It's too late now! You've had your chance!
+//	AI_Output(self,other,"DIA_SLD_753_Baloro_Angebotdochannehmen_Info_08_01"); //Dafür ist es jetzt zu spät! Du hattest deine Chance!
+	AI_Output(self,other,"DIA_SLD_753_Baloro_Angebotdochannehmen_Info_08_01"); //To už je pozdě! Svoji šanci si propásl!
 
-	 	{
-//			AI_Output(other,self,"DIA_SLD_753_Baloro_Angebotdochannehmen_Info_15_01"); //I thought about it. I'd like to get back to your offer now.
-//			AI_Output(other,self,"DIA_SLD_753_Baloro_Angebotdochannehmen_Info_15_01"); //Ich hab's mir überlegt. Ich möchte dein Angebot doch annehmen.
-			AI_Output(other,self,"DIA_SLD_753_Baloro_Angebotdochannehmen_Info_15_01"); //Přemýšlel jsem o tom! Chtěl bych tvoji nabídku přijmout.
-//			AI_Output(self,other,"DIA_SLD_753_Baloro_Angebotdochannehmen_Info_08_01"); //It's too late now! You've had your chance!
-//			AI_Output(self,other,"DIA_SLD_753_Baloro_Angebotdochannehmen_Info_08_01"); //Dafür ist es jetzt zu spät! Du hattest deine Chance!
-			AI_Output(self,other,"DIA_SLD_753_Baloro_Angebotdochannehmen_Info_08_01"); //To už je pozdě! Svoji šanci si propásl!
-
-			AI_StopProcessInfos(self);
-
-		};
-
+	AI_StopProcessInfos(self);
+};

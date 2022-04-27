@@ -8,6 +8,7 @@ instance DIA_Melvin_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Melvin_Exit_Condition;
 	information = DIA_Melvin_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Melvin_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_Melvin_Hello_Condition;
 	information = DIA_Melvin_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Hi! You aren't from this camp, are you?";
 //	description = "Hi! Du bist nicht aus diesem Lager, oder?";
@@ -69,6 +71,7 @@ instance DIA_Melvin_MetDusty(C_INFO)
 	nr = 1;
 	condition = DIA_Melvin_MetDusty_Condition;
 	information = DIA_Melvin_MetDusty_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I know Dusty - I talked to him for a short time.";
 //	description = "Ich kenne Dusty - hab' mich kurz mit ihm unterhalten.";
@@ -77,10 +80,13 @@ instance DIA_Melvin_MetDusty(C_INFO)
 
 func int DIA_Melvin_MetDusty_Condition()
 {
-	if ((Npc_KnowsInfo(hero,DIA_Melvin_Hello)) && (Npc_KnowsInfo(hero,DIA_Dusty_Hello)))
+	if ((Npc_KnowsInfo(hero,DIA_Melvin_Hello))
+	&& (Npc_KnowsInfo(hero,DIA_Dusty_Hello)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Melvin_MetDusty_Info()
@@ -95,4 +101,3 @@ func void DIA_Melvin_MetDusty_Info()
 //	AI_Output(other,self,"DIA_Melvin_MetDusty_15_02"); //Werd's ihm ausrichten, wenn ich ihn noch mal sehe.
 	AI_Output(other,self,"DIA_Melvin_MetDusty_15_02"); //Vyřídím mu to, až ho zase uvidím.
 };
-

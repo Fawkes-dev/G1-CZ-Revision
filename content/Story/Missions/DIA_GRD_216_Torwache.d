@@ -8,6 +8,7 @@ instance DIA_Grd_216_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Grd_216_Exit_Condition;
 	information = DIA_Grd_216_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,8 +33,8 @@ instance DIA_Grd_216_First(C_INFO)
 	nr = 1;
 	condition = DIA_Grd_216_First_Condition;
 	information = DIA_Grd_216_First_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Grd_216_First_Condition()
@@ -46,12 +47,14 @@ func int DIA_Grd_216_First_Condition()
 	if (Npc_RefuseTalk(self) == FALSE)
 	{
 		var C_NPC Dusty; Dusty = Hlp_GetNpc(Vlk_524_Dusty);
-		if (Dusty.aivar[AIV_PARTYMEMBER] == FALSE)
-		&& (Kapitel < 2)
+		if ((Dusty.aivar[AIV_PARTYMEMBER] == FALSE)
+		&& (Kapitel < 2))
 		{
 			return 1;
 		};
 	};
+
+	return 0;
 };
 
 func void DIA_Grd_216_First_Info()
@@ -77,18 +80,20 @@ instance DIA_Grd_216_DustyZoll(C_INFO)
 	nr = 1;
 	condition = DIA_Grd_216_DustyZoll_Condition;
 	information = DIA_Grd_216_DustyZoll_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Grd_216_DustyZoll_Condition()
 {
 	var C_NPC Dusty; Dusty = Hlp_GetNpc(Vlk_524_Dusty);
-	if (Dusty.aivar[AIV_PARTYMEMBER] == TRUE)
-	&& (Npc_GetDistToNpc(hero,dusty)<2000)
+	if ((Dusty.aivar[AIV_PARTYMEMBER] == TRUE)
+	&& (Npc_GetDistToNpc(hero,dusty) < 2000))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Grd_216_DustyZoll_Info()
@@ -197,13 +202,15 @@ instance GRD_216_Torwache_SEETHORUS(C_INFO)
 
 func int GRD_216_Torwache_SEETHORUS_Condition()
 {
-	if (!Npc_KnowsInfo(hero,GRD_214_TORWACHE_SEETHORUS))
+	if ((!Npc_KnowsInfo(hero,GRD_214_TORWACHE_SEETHORUS))
 	&& ((CorKalom_BringMCQBalls == LOG_SUCCESS) || (Npc_HasItems(hero,ItAt_Crawlerqueen) >= 3))
 	&& (!Npc_KnowsInfo(hero,GRD_200_Thorus_GARDIST))
-	&& (Npc_GetTrueGuild(hero) == GIL_STT)
+	&& (Npc_GetTrueGuild(hero) == GIL_STT))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void GRD_216_Torwache_SEETHORUS_Info()

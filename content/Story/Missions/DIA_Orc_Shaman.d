@@ -14,7 +14,7 @@ instance Info_OrcShaman_EXIT(C_INFO)
 
 func int Info_OrcShaman_EXIT_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Info_OrcShaman_EXIT_Info()
@@ -46,8 +46,10 @@ func int Info_OrcShaman_THX_Condition()
 {
 	if (Kapitel == 4)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_THX_Info()
@@ -82,8 +84,10 @@ func int Info_OrcShaman_WHO_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_THX))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_WHO_Info()
@@ -118,8 +122,10 @@ func int Info_OrcShaman_TONGUE_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_THX))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_TONGUE_Info()
@@ -154,8 +160,10 @@ func int Info_OrcShaman_MINE_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_TONGUE))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_MINE_Info()
@@ -187,8 +195,10 @@ func int Info_OrcShaman_WHY_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_THX))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_WHY_Info()
@@ -226,8 +236,10 @@ func int Info_OrcShaman_KRUSHAK_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_WHY))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_KRUSHAK_Info()
@@ -265,8 +277,10 @@ func int Info_OrcShaman_SLEEPER_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_KRUSHAK))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_SLEEPER_Info()
@@ -316,8 +330,10 @@ func int Info_OrcShaman_CURSE_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_SLEEPER))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_CURSE_Info()
@@ -364,8 +380,10 @@ func int Info_OrcShaman_OUTSIDE_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_CURSE))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_OUTSIDE_Info()
@@ -406,8 +424,10 @@ func int Info_OrcShaman_INTEMPLE_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_OUTSIDE))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_INTEMPLE_Info()
@@ -443,11 +463,13 @@ instance Info_OrcShaman_MAP(C_INFO)
 
 func int Info_OrcShaman_MAP_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_OrcShaman_INTEMPLE)
-	&& Npc_HasItems(hero,ItWrWorldmap))
+	if ((Npc_KnowsInfo(hero,Info_OrcShaman_INTEMPLE))
+	&& (Npc_HasItems(hero,ItWrWorldmap)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_MAP_Info()
@@ -492,8 +514,10 @@ func int Info_OrcShaman_FIGHT_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_INTEMPLE))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_FIGHT_Info()
@@ -531,8 +555,10 @@ func int Info_OrcShaman_OTHERWAY_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_FIGHT))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_OTHERWAY_Info()
@@ -573,8 +599,10 @@ func int Info_OrcShaman_ULUMULU_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_OTHERWAY))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_ULUMULU_Info()
@@ -663,8 +691,10 @@ func int Info_OrcShaman_BYEBYE_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_ULUMULU))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_BYEBYE_Info()
@@ -707,11 +737,13 @@ instance Info_OrcShaman_FRIENDLYHELLO(C_INFO)
 
 func int Info_OrcShaman_FRIENDLYHELLO_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_OrcShaman_BYEBYE)
-	&& FriendOfUrShak)
+	if ((Npc_KnowsInfo(hero,Info_OrcShaman_BYEBYE))
+	&& (FriendOfUrShak))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_FRIENDLYHELLO_Info()
@@ -759,10 +791,12 @@ instance Info_OrcShaman_ORCCITY(C_INFO)
 
 func int Info_OrcShaman_ORCCITY_Condition()
 {
-	if (Npc_GetDistToWP(hero,"SPAWN_OW_WARAN_ORC_01")<1000)
+	if (Npc_GetDistToWP(hero,"SPAWN_OW_WARAN_ORC_01") < 1000)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_ORCCITY_Info()
@@ -813,8 +847,10 @@ func int Info_OrcShaman_YOUHERE_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_ORCCITY))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_YOUHERE_Info()
@@ -858,8 +894,10 @@ func int Info_OrcShaman_SEAL_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_OrcShaman_ORCCITY))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_SEAL_Info()
@@ -895,10 +933,12 @@ instance Info_OrcShaman_SCROLL(C_INFO)
 
 func int Info_OrcShaman_SCROLL_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_OrcShaman_SEAL)
+	if (Npc_KnowsInfo(hero,Info_OrcShaman_SEAL))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_SCROLL_Info()
@@ -938,11 +978,13 @@ instance Info_OrcShaman_IDOL(C_INFO)
 
 func int Info_OrcShaman_IDOL_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_OrcShaman_SCROLL)
-	&& !OrcCity_Sanctum_OuterGateOpen
+	if ((Npc_KnowsInfo(hero,Info_OrcShaman_SCROLL))
+	&& (!OrcCity_Sanctum_OuterGateOpen))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_OrcShaman_IDOL_Info()
@@ -951,7 +993,7 @@ func void Info_OrcShaman_IDOL_Info()
 	//AI_Output(hero,self,"Info_OrcShaman_IDOL_15_01"); //Ich habe den Teleportzauber verbraucht und das Gitter zur Tempelvorhalle lässt sich nicht öffnen!
 	//AI_Output(hero,self,"Info_OrcShaman_IDOL_15_02"); //Wie komme ich jetzt wieder in den Tempel?
 
-	if Npc_HasItems(hero,ItMi_Stuff_Idol_Sleeper_01)
+	if (Npc_HasItems(hero,ItMi_Stuff_Idol_Sleeper_01))
 	{
 //		AI_Output(self,hero,"Info_OrcShaman_IDOL_17_03"); //Friend have found figure on column!
 //		AI_Output(self,hero,"Info_OrcShaman_IDOL_17_03"); //Freund haben gefunden Figur auf Säule!
@@ -978,4 +1020,3 @@ func void Info_OrcShaman_IDOL_Info()
 		B_LogEntry(CH4_EnterTemple,"Do chrámu vede další cesta. Na posvátném sloupu skřetích šamanů je figurka Spáče, která otevře vrata chrámu. Ur-Shakovi bratři se nepotěší, až uvidí, že používám jejich svatou ikonu.");
 	};
 };
-

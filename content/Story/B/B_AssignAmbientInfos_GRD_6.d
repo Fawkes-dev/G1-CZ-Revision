@@ -12,6 +12,7 @@ instance Info_Grd_6_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Grd_6_EXIT_Condition;
 	information = Info_Grd_6_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -35,6 +36,7 @@ instance Info_Grd_6_EinerVonEuchWerden(C_INFO) // E1
 	nr = 1;
 	condition = Info_Grd_6_EinerVonEuchWerden_Condition;
 	information = Info_Grd_6_EinerVonEuchWerden_Info;
+	important = 0;
 	permanent = 1;
 //	description = "D'you need an extra man?";
 //	description = "Ich will Gardist werden.";
@@ -74,6 +76,7 @@ instance Info_Grd_6_WichtigePersonen(C_INFO)
 	nr = 1;
 	condition = Info_Grd_6_WichtigePersonen_Condition;
 	information = Info_Grd_6_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Who calls the shots around here?";
 //	description = "Wer hat hier das Sagen?";
@@ -106,6 +109,7 @@ instance Info_Grd_6_DasLager(C_INFO)
 	nr = 1;
 	condition = Info_Grd_6_DasLager_Condition;
 	information = Info_Grd_6_DasLager_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I'm new here. How's things?";
 //	description = "Ich bin neu hier. Was läuft denn so?";
@@ -181,6 +185,7 @@ instance Info_Grd_6_DieLage(C_INFO) // E1
 	nr = 1;
 	condition = Info_Grd_6_DieLage_Condition;
 	information = Info_Grd_6_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How's it going?";
 //	description = "Wie sieht's aus?";

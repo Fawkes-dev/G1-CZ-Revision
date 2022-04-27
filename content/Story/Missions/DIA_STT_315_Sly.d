@@ -8,6 +8,7 @@ instance DIA_STT_315_Sly_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_STT_315_Sly_Exit_Condition;
 	information = DIA_STT_315_Sly_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -68,6 +69,7 @@ instance DIA_STT_315_LostNek(C_INFO)
 	nr = 1;
 	condition = DIA_STT_315_LostNek_Condition;
 	information = DIA_STT_315_LostNek_Info;
+	important = 0;
 	permanent = 0;
 //	description = "You have a job for me? What is it?";
 //	description = "Du hast was zu tun für mich? Um was geht's?";
@@ -169,6 +171,7 @@ instance DIA_STT_315_LostNekSuccess(C_INFO)
 	nr = 1;
 	condition = DIA_STT_315_LostNekSuccess_Condition;
 	information = DIA_STT_315_LostNekSuccess_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I've found Nek.";
 //	description = "Ich hab' Nek gefunden.";
@@ -282,6 +285,7 @@ instance DIA_STT_315_Sly_AfterSuccess(C_INFO)
 	nr = 1;
 	condition = DIA_STT_315_Sly_AfterSuccess_Condition;
 	information = DIA_STT_315_Sly_AfterSuccess_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How's it going?";
 //	description = "Wie läuft's denn so?";
@@ -312,4 +316,3 @@ func void DIA_STT_315_Sly_AfterSuccess_Info()
 //	AI_Output(self,other,"DIA_STT_315_Sly_AfterSuccess_10_03"); //So ist es.
 	AI_Output(self,other,"DIA_STT_315_Sly_AfterSuccess_10_03"); //Tak to je.
 };
-

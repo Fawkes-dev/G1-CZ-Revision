@@ -33,8 +33,8 @@ instance DIA_Fletcher_First(C_INFO)
 	nr = 1;
 	condition = DIA_Fletcher_First_Condition;
 	information = DIA_Fletcher_First_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Fletcher_First_Condition()
@@ -43,6 +43,8 @@ func int DIA_Fletcher_First_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Fletcher_First_Info()
@@ -84,8 +86,8 @@ instance DIA_Fletcher_Hello(C_INFO)
 	nr = 2;
 	condition = DIA_Fletcher_Hello_Condition;
 	information = DIA_Fletcher_Hello_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Fletcher_Hello_Condition()
@@ -94,6 +96,8 @@ func int DIA_Fletcher_Hello_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Fletcher_Hello_Info()
@@ -166,6 +170,7 @@ instance DIA_Fletcher_WoNek(C_INFO)
 	nr = 1;
 	condition = DIA_Fletcher_WoNek_Condition;
 	information = DIA_Fletcher_WoNek_Info;
+	important = 0;
 	permanent = 0;
 //	description = "D'you know where Nek's got to?";
 //	description = "Weißt du, wo Nek geblieben ist?";
@@ -174,10 +179,13 @@ instance DIA_Fletcher_WoNek(C_INFO)
 
 func int DIA_Fletcher_WoNek_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_STT_315_LostNek) || (fletcher_whytalk==TRUE))
+	if ((Npc_KnowsInfo(hero,DIA_STT_315_LostNek))
+	|| (fletcher_whytalk == TRUE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Fletcher_WoNek_Info()
@@ -212,6 +220,7 @@ instance DIA_Fletcher_TroSchu(C_INFO)
 	nr = 1;
 	condition = DIA_Fletcher_TroSchu_Condition;
 	information = DIA_Fletcher_TroSchu_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Why don't you just collect some more protection money?";
 //	description = "Warum sammelst du nicht trotzdem Schutzgeld?";
@@ -224,6 +233,8 @@ func int DIA_Fletcher_TroSchu_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Fletcher_TroSchu_Info()
@@ -248,6 +259,7 @@ instance DIA_Fletcher_WegenNek(C_INFO)
 	nr = 1;
 	condition = DIA_Fletcher_WegenNek_Condition;
 	information = DIA_Fletcher_WegenNek_Info;
+	important = 0;
 	permanent = 1;
 //	description = "It's about Nek...";
 //	description = "Wegen Nek...";
@@ -256,10 +268,13 @@ instance DIA_Fletcher_WegenNek(C_INFO)
 
 func int DIA_Fletcher_WegenNek_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Fletcher_WoNek) && (fletcher_foundNek==FALSE))
+	if ((Npc_KnowsInfo(hero,DIA_Fletcher_WoNek))
+	&& (fletcher_foundNek == FALSE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Fletcher_WegenNek_Info()
@@ -313,6 +328,7 @@ instance DIA_Fletcher_Problem(C_INFO)
 	nr = 1;
 	condition = DIA_Fletcher_Problem_Condition;
 	information = DIA_Fletcher_Problem_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What's the problem?";
 //	description = "Was ist dein Problem?";
@@ -325,6 +341,8 @@ func int DIA_Fletcher_Problem_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Fletcher_Problem_Info()
@@ -361,8 +379,10 @@ func int Grd_255_Fletcher_WELCOME_Condition()
 {
 	if (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Grd_255_Fletcher_WELCOME_Info()
@@ -388,25 +408,27 @@ instance Info_Fletcher_DIE(C_INFO)
 	npc = Grd_255_Fletcher;
 	condition = Info_Fletcher_DIE_Condition;
 	information = Info_Fletcher_DIE_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_Fletcher_DIE_Condition()
 {
 	if (Kapitel == 4)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Fletcher_DIE_Info()
 {
 	AI_GotoNpc(self,hero);
 
-	if (oldHeroGuild == GIL_STT)
+	if ((oldHeroGuild == GIL_STT)
 	|| (oldHeroGuild == GIL_GRD)
-	|| (oldHeroGuild == GIL_KDF)
+	|| (oldHeroGuild == GIL_KDF))
 	{
 		if (oldHeroGuild == GIL_GRD)
 		{
@@ -449,7 +471,7 @@ func void Info_Fletcher_DIE_Info()
 //		AI_Output(self,hero,"Info_Fletcher_DIE_06_10"); //STIRB, VERRÄTER!!!
 		AI_Output(self,hero,"Info_Fletcher_DIE_06_10"); //SMRT ZRÁDCI!!!
 
-		if Npc_KnowsInfo(hero,Info_Bloodwyn_DIE)
+		if (Npc_KnowsInfo(hero,Info_Bloodwyn_DIE))
 		{
 //			B_LogEntry(CH4_BannedFromOC,"Bloodwyn has entrenched himself at the back gate. He reacted the same way as Fletcher at the main gate. I don't really know why, but it must have something to do with my search for the focus on behalf of the New Camp.");
 //			B_LogEntry(CH4_BannedFromOC,"Bloodwyn, hat sich am hinteren Tor verschanzt. Er reagierte ähnlich wie Fletcher am Haupttor. Mir ist nicht klar warum, aber es muss etwas mit meiner Fokussuche für das Neue Lager zu tun haben.");
@@ -522,7 +544,7 @@ func void Info_Fletcher_DIE_Info()
 	B_SetPermAttitude (GRD_214_Torwache, ATT_HOSTILE);
 	B_SetPermAttitude (GRD_215_Torwache, ATT_HOSTILE);
 
-	if !Npc_KnowsInfo(hero,Info_Bloodwyn_DIE)
+	if (!Npc_KnowsInfo(hero,Info_Bloodwyn_DIE))
 	{
 //		B_LogEntry(CH4_Firemages,"The gates of the Old Camp are now closed, they're protected by guards. They attack anybody approaching the Camp.");
 //		B_LogEntry(CH4_Firemages,"Die Tore des Alten Lagers sind nun verschlossen und werden von Gardisten bewacht. Sie attackieren jeden der dem Lager zu nahe kommt.");
@@ -531,4 +553,3 @@ func void Info_Fletcher_DIE_Info()
 
 	AI_StopProcessInfos(self);
 };
-

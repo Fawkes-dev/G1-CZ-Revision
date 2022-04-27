@@ -41,6 +41,8 @@ func int GRD_261_Brandick_ALEPH_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GRD_261_Brandick_ALEPH_Info()

@@ -12,6 +12,7 @@ instance Info_Mine_Vlk_4_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Mine_Vlk_4_EXIT_Condition;
 	information = Info_Mine_Vlk_4_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = "END";
 };
@@ -35,6 +36,7 @@ instance Info_Mine_Vlk_4_Mine(C_INFO) // E1
 	nr = 4;
 	condition = Info_Mine_Vlk_4_Mine_Condition;
 	information = Info_Mine_Vlk_4_Mine_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Tell me about the mine.";
 //	description = "Erzähl mir was von der Mine";
@@ -71,6 +73,7 @@ instance Info_Mine_Vlk_4_WichtigePersonen(C_INFO)
 	nr = 3;
 	condition = Info_Mine_Vlk_4_WichtigePersonen_Condition;
 	information = Info_Mine_Vlk_4_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Who's in charge here?";
 //	description = "Wer hat hier was zu Sagen?";
@@ -104,6 +107,7 @@ instance Info_Mine_Vlk_4_Minecrawler(C_INFO)
 	nr = 2;
 	condition = Info_Mine_Vlk_4_Minecrawler_Condition;
 	information = Info_Mine_Vlk_4_Minecrawler_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What do you know about minecrawlers?";
 //	description = "Was weißt Du über Minecrawler?";
@@ -138,6 +142,7 @@ instance Info_Mine_Vlk_4_DieLage(C_INFO) // E1
 	nr = 1;
 	condition = Info_Mine_Vlk_4_DieLage_Condition;
 	information = Info_Mine_Vlk_4_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How are you?";
 //	description = "Wie sieht's aus?";

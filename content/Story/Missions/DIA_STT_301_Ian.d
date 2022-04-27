@@ -27,6 +27,7 @@ func void STT_301_IAN_Exit_Info()
 
 	AI_StopProcessInfos(self);
 };
+
 // ***************** Erstes Treffen *****************************
 
 instance STT_301_IAN_HI(C_INFO)
@@ -43,11 +44,14 @@ instance STT_301_IAN_HI(C_INFO)
 
 func int STT_301_IAN_HI_Condition()
 {
-	if ( ! Npc_KnowsInfo(hero,STT_301_IAN_NEST))
+	if (!Npc_KnowsInfo(hero,STT_301_IAN_NEST))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void STT_301_IAN_HI_Info()
 {
 //	AI_Output(other,self,"STT_301_IAN_HI_Info_15_01"); //Are you Ian, the boss of the mine?
@@ -57,7 +61,9 @@ func void STT_301_IAN_HI_Info()
 //	AI_Output(self,other,"STT_301_IAN_HI_Info_13_02"); //Ja, ich bin Ian. Und das hier ist meine Mine. Also fass nichts an und mach nichts kaputt.
 	AI_Output(self,other,"STT_301_IAN_HI_Info_13_02"); //Ano, jsem Ian. A tohle je můj důl. Tak se ničeho nedotýkej a nic nerozbij.
 };
+
 // ***************** Infos *****************************
+
 instance STT_301_IAN_GOMEZ(C_INFO)
 {
 	npc = STT_301_IAN;
@@ -74,10 +80,12 @@ func int STT_301_IAN_GOMEZ_Condition()
 {
 	if Npc_KnowsInfo(hero,STT_301_IAN_HI)
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void STT_301_IAN_GOMEZ_Info()
 {
 //	AI_Output(other,self,"STT_301_IAN_GOMEZ_Info_15_01"); //Isn't that Gomez' mine?
@@ -87,7 +95,9 @@ func void STT_301_IAN_GOMEZ_Info()
 //	AI_Output(self,other,"STT_301_IAN_GOMEZ_Info_13_02"); //Ja, natürlich ist das die Mine des Alten Lagers. Aber hier drin gibt's nur einen Chef - und das bin ich.
 	AI_Output(self,other,"STT_301_IAN_GOMEZ_Info_13_02"); //Ano, jistě, že je to důl Starého tábora. Ale je tady jediný šéf - a to jsem já.
 };
+
 // ***************** Infos *****************************
+
 instance STT_301_IAN_ORE(C_INFO)
 {
 	npc = STT_301_IAN;
@@ -102,12 +112,14 @@ instance STT_301_IAN_ORE(C_INFO)
 
 func int STT_301_IAN_ORE_Condition()
 {
-	if Npc_KnowsInfo(hero,STT_301_IAN_GOMEZ)
+	if (Npc_KnowsInfo(hero,STT_301_IAN_GOMEZ))
 	{
-		return TRUE ;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void STT_301_IAN_ORE_Info()
 {
 //	AI_Output(other,self,"STT_301_IAN_ORE_Info_15_01"); //Can you tell me something about the ore production here?
@@ -121,7 +133,9 @@ func void STT_301_IAN_ORE_Info()
 	AI_Output(self,other,"STT_301_IAN_ORE_Info_13_03"); //Z rudy, kterou dodáváme králi, se můžou ukovat stovky ostří.
 
 };
+
 // ***************** Infos *****************************
+
 instance STT_301_IAN_MORE(C_INFO)
 {
 	npc = STT_301_IAN;
@@ -136,7 +150,7 @@ instance STT_301_IAN_MORE(C_INFO)
 
 func int STT_301_IAN_MORE_Condition()
 {
-	return Npc_KnowsInfo(hero,STT_301_IAN_ORE) ;
+	return (Npc_KnowsInfo(hero,STT_301_IAN_ORE));
 };
 
 func void STT_301_IAN_MORE_Info()
@@ -150,9 +164,10 @@ func void STT_301_IAN_MORE_Info()
 //	AI_Output(self,other,"STT_301_IAN_MORE_Info_13_03"); //An army equipped with these weapons has a decisive advantage in battle.
 //	AI_Output(self,other,"STT_301_IAN_MORE_Info_13_03"); //Eine Armee, die mit solchen Waffen ausgestattet ist, hat einen entscheidenden Vorteil in jeder Schlacht.
 	AI_Output(self,other,"STT_301_IAN_MORE_Info_13_03"); //Armáda vybavená takovými zbraněmi má rozhodující převahu v boji.
-
 };
+
 // ***************** Infos *****************************
+
 instance STT_301_IAN_MAGIC(C_INFO)
 {
 	npc = STT_301_IAN;
@@ -167,7 +182,7 @@ instance STT_301_IAN_MAGIC(C_INFO)
 
 func int STT_301_IAN_MAGIC_Condition()
 {
-	return Npc_KnowsInfo(hero,STT_301_IAN_MORE) ;
+	return (Npc_KnowsInfo(hero,STT_301_IAN_MORE));
 };
 
 func void STT_301_IAN_MAGIC_Info()
@@ -181,9 +196,10 @@ func void STT_301_IAN_MAGIC_Info()
 //	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_03"); //But even without the magic powers, weapons made from this ore are extremely resistant and do more damage than normal weapons.
 //	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_03"); //Aber selbst ohne die magische Wirkung sind Waffen aus diesem Erz extrem widerstandsfähig und richten mehr Schaden an als gewöhnliche Waffen.
 	AI_Output(self,other,"STT_301_IAN_MAGIC_Info_13_03"); //Ale zbraně vyrobené z této rudy jsou i bez magických vlastností výjimečně odolné a působí daleko větší škody než zbraně obyčejné.
-
 };
+
 // ***************** Infos *****************************
+
 instance STT_301_IAN_MINE(C_INFO)
 {
 	npc = STT_301_IAN;
@@ -198,13 +214,15 @@ instance STT_301_IAN_MINE(C_INFO)
 
 func int STT_301_IAN_MINE_Condition()
 {
-	if (Kapitel < 3)
-	&& (Npc_KnowsInfo(hero,STT_301_IAN_HI))
+	if ((Npc_KnowsInfo(hero,STT_301_IAN_HI))
+	&& (Kapitel < 3))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void STT_301_IAN_MINE_Info()
 {
 //	AI_Output(other,self,"STT_301_IAN_MINE_Info_15_01"); //Tell me about the mine.
@@ -244,13 +262,15 @@ instance STT_301_IAN_WANTLIST(C_INFO)
 
 func int STT_301_IAN_WANTLIST_Condition()
 {
-	if (Diego_BringList == LOG_RUNNING)
-	&& (!Npc_KnowsInfo(hero,Info_Diego_IanPassword))
+	if ((Diego_BringList == LOG_RUNNING)
+	&& (!Npc_KnowsInfo(hero,Info_Diego_IanPassword)))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void STT_301_IAN_WANTLIST_Info()
 {
 //	AI_Output(other,self,"STT_301_IAN_WANTLIST_Info_15_01"); //I'm here to collect the list for the Camp.
@@ -259,8 +279,8 @@ func void STT_301_IAN_WANTLIST_Info()
 //	AI_Output(self,other,"STT_301_IAN_WANTLIST_Info_13_02"); //Anybody could say that. Get lost.
 //	AI_Output(self,other,"STT_301_IAN_WANTLIST_Info_13_02"); //Da könnte ja jeder kommen. Verpiss dich.
 	AI_Output(self,other,"STT_301_IAN_WANTLIST_Info_13_02"); //To by mohl říci každý. Ztrať se.
-
 };
+
 /*------------------------------------------------------------------------
 							LISTE ABHOLEN
 ------------------------------------------------------------------------*/
@@ -279,13 +299,15 @@ instance STT_301_IAN_GETLIST(C_INFO)
 
 func int STT_301_IAN_GETLIST_Condition()
 {
-	if (Diego_BringList == LOG_RUNNING)
-	&& (Npc_KnowsInfo(hero,Info_Diego_IanPassword))
+	if ((Diego_BringList == LOG_RUNNING)
+	&& (Npc_KnowsInfo(hero,Info_Diego_IanPassword)))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void STT_301_IAN_GETLIST_Info()
 {
 //	AI_Output(other,self,"STT_301_IAN_GETLIST_Info_15_01"); //Diego sent me. I'm to collect the list.
@@ -299,10 +321,12 @@ func void STT_301_IAN_GETLIST_Info()
 	B_LogEntry(CH1_BringList,"Ian mi bez problémů vydal seznam.");
 	B_GiveInvItems(self,hero,TheList,1);
 };
+
 // **************************************************************************
 // 							MISSION BRING MCQ EIER RUNNING ,
 //							oder: Ohne Zahnrad keine Eier
 // **************************************************************************
+
 instance STT_301_IAN_NEST(C_INFO)
 {
 	npc = STT_301_IAN;
@@ -317,12 +341,15 @@ instance STT_301_IAN_NEST(C_INFO)
 
 func int STT_301_IAN_NEST_Condition()
 {
-	if (CorKalom_BringMCQBalls == LOG_RUNNING)
-	&& (Npc_KnowsInfo(hero,STT_301_IAN_HI))
+	if ((CorKalom_BringMCQBalls == LOG_RUNNING)
+	&& (Npc_KnowsInfo(hero,STT_301_IAN_HI)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
+
 func void STT_301_IAN_NEST_Info()
 {
 //	AI_Output(other,self,"STT_301_IAN_NEST_Info_15_01"); //There must be a nest of minecrawlers somewhere here.
@@ -350,7 +377,9 @@ func void STT_301_IAN_NEST_Info()
 
 	Ian_gearwheel = LOG_RUNNING;
 };
+
 // ******************************MISSION RUNNING********************************************
+
 instance STT_301_IAN_GEAR_RUN(C_INFO)
 {
 	npc = STT_301_IAN;
@@ -368,11 +397,14 @@ func int STT_301_IAN_GEAR_RUN_Condition()
 	PrintDebugInt (PD_MISSION, "Ian_gearwheel: ", Ian_gearwheel);
 
 	if ((Ian_gearwheel == LOG_RUNNING)
-	&& !Npc_HasItems(hero,ItMi_Stuff_Gearwheel_01))
+	&& (!Npc_HasItems(hero,ItMi_Stuff_Gearwheel_01)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
+
 func void STT_301_IAN_GEAR_RUN_Info()
 {
 //	AI_Output(other,self,"STT_301_IAN_GEAR_RUN_Info_15_01"); //A gearwheel? Where am I supposed to get that?
@@ -387,6 +419,7 @@ func void STT_301_IAN_GEAR_RUN_Info()
 };
 
 // ******************************MISSION SUCCESS********************************************
+
 instance STT_301_IAN_GEAR_SUC(C_INFO)
 {
 	npc = STT_301_IAN;
@@ -401,12 +434,15 @@ instance STT_301_IAN_GEAR_SUC(C_INFO)
 
 func int STT_301_IAN_GEAR_SUC_Condition()
 {
-	if (Npc_HasItems(hero,ItMi_Stuff_Gearwheel_01))
-	&& (Ian_gearwheel == LOG_RUNNING)
+	if ((Npc_HasItems(hero,ItMi_Stuff_Gearwheel_01))
+	&& (Ian_gearwheel == LOG_RUNNING))
 	{
 		return 1;
 	};
+
+	return 0;
 };
+
 func void STT_301_IAN_GEAR_SUC_Info()
 {
 	B_GiveInvItems(hero,self,ItMi_Stuff_Gearwheel_01 ,1);
@@ -438,6 +474,7 @@ func void STT_301_IAN_GEAR_SUC_Info()
 };
 
 // ******************************GOTO ASGHAN********************************************
+
 instance STT_301_IAN_GOTOASGHAN(C_INFO)
 {
 	npc = STT_301_IAN;
@@ -457,7 +494,10 @@ func int STT_301_IAN_GOTOASGHAN_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
+
 func void STT_301_IAN_GOTOASGHAN_Info()
 {
 //	AI_Output(other,self,"STT_301_IAN_GOTOASGHAN_Info_15_01"); //I'm still looking for the crawlers nest.
@@ -473,6 +513,7 @@ func void STT_301_IAN_GOTOASGHAN_Info()
 };
 
 //--SPIELER HAT DIE EIER AM START-------------------------
+
 instance STT_301_IAN_AFTERALL(C_INFO)
 {
 	npc = STT_301_IAN;
@@ -491,7 +532,10 @@ func int STT_301_IAN_AFTERALL_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
+
 func void STT_301_IAN_AFTERALL_Info()
 {
 //	AI_Output(other,self,"STT_301_IAN_AFTERALL_Info_15_01"); //I've found the nest!
@@ -511,6 +555,7 @@ func void STT_301_IAN_AFTERALL_Info()
 };
 
 //-------NOT ENOUGH EGGS---------------
+
 instance STT_301_IAN_NOTENOUGH(C_INFO)
 {
 	npc = STT_301_IAN;
@@ -525,12 +570,15 @@ instance STT_301_IAN_NOTENOUGH(C_INFO)
 
 func int STT_301_IAN_NOTENOUGH_Condition()
 {
-	if (Npc_HasItems(hero,ItAt_Crawlerqueen) > 1 )
-	&& (Npc_HasItems(hero,ItAt_Crawlerqueen) < 3 )
+	if ((Npc_HasItems(hero,ItAt_Crawlerqueen) > 1)
+	&& (Npc_HasItems(hero,ItAt_Crawlerqueen) < 3))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void STT_301_IAN_NOTENOUGH_Info()
 {
 //	AI_Output(other,self,"STT_301_IAN_NOTENOUGH_Info_15_01"); //I've found the nest! And the eggs of the minecrawler queen!

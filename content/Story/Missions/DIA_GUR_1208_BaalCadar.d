@@ -8,6 +8,7 @@ instance DIA_BaalCadar_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_BaalCadar_Exit_Condition;
 	information = DIA_BaalCadar_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -35,19 +36,21 @@ instance DIA_BaalCadar_NoTalk(C_INFO)
 	nr = 2;
 	condition = DIA_BaalCadar_NoTalk_Condition;
 	information = DIA_BaalCadar_NoTalk_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_BaalCadar_NoTalk_Condition()
 {
-	if Npc_IsInState(self,ZS_TALK)
-	&& (BaalCadar_Ansprechbar==FALSE)
-	&& (Npc_GetPermAttitude(self,other)!=ATT_FRIENDLY)
-	&& (Npc_GetTrueGuild(other) == GIL_NONE)
+	if ((Npc_IsInState(self,ZS_TALK))
+	&& (BaalCadar_Ansprechbar == FALSE)
+	&& (Npc_GetPermAttitude(self,other) != ATT_FRIENDLY)
+	&& (Npc_GetTrueGuild(other) == GIL_NONE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalCadar_NoTalk_Info()
@@ -101,7 +104,6 @@ func void DIA_BaalCadar_NoTalk_ENDE()
 };
 
 /*
-
 //	AI_Output(self,other,"Sit_1_PSI_BaalCadar_HypnoticTeacher_2FuncNo_02_01"); //Du solltest deinen Weg mit Bedacht wählen und nach reiflicher Überlegung.
 	AI_Output(self,other,"Sit_1_PSI_BaalCadar_HypnoticTeacher_2FuncNo_02_01"); //Du solltest deinen Weg mit Bedacht wählen und nach reiflicher Überlegung.
 	AI_Output(self,other,"Sit_1_PSI_BaalCadar_HypnoticTeacher_2FuncNo_02_02"); //Bedenke wie du entscheidest. In den anderen Lagern bekommst zwar Schutz und Nahrung, aber ist es das, was du willst?
@@ -126,20 +128,24 @@ instance DIA_BaalCadar_SleepSpell(C_INFO)
 	nr = 1;
 	condition = DIA_BaalCadar_SleepSpell_Condition;
 	information = DIA_BaalCadar_SleepSpell_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_BaalCadar_SleepSpell_Condition()
 {
-	var C_NPC Nov1336; Nov1336=Hlp_GetNpc(Nov_1336_Novize);
-	var C_NPC Nov1340; Nov1340=Hlp_GetNpc(Nov_1340_Novize);
-	var C_NPC Nov1345; Nov1345=Hlp_GetNpc(Nov_1345_Novize);
+	var C_NPC Nov1336; Nov1336 = Hlp_GetNpc(Nov_1336_Novize);
+	var C_NPC Nov1340; Nov1340 = Hlp_GetNpc(Nov_1340_Novize);
+	var C_NPC Nov1345; Nov1345 = Hlp_GetNpc(Nov_1345_Novize);
 
-	if (Npc_IsInState(Nov1336,ZS_MagicSleep) || Npc_IsInState(Nov1340,ZS_MagicSleep) || Npc_IsInState(Nov1345,ZS_MagicSleep))
+	if ((Npc_IsInState(Nov1336,ZS_MagicSleep))
+	|| (Npc_IsInState(Nov1340,ZS_MagicSleep))
+	|| (Npc_IsInState(Nov1345,ZS_MagicSleep)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_BaalCadar_SleepSpell_Info()
@@ -165,7 +171,7 @@ func void DIA_BaalCadar_SleepSpell_Info()
 	};
 //	B_LogEntry(CH1_JoinPsi,"Baal Cadar thinks I'm a receptive disciple!");
 //	B_LogEntry(CH1_JoinPsi,"Baal Cadar hält mich für einen gelehrigen Schüler!");
-	B_LogEntry(CH1_JoinPsi,"Baal Cadar mě má za vnímavého učně! ");
+	B_LogEntry(CH1_JoinPsi,"Baal Cadar mě má za vnímavého učně!");
 	B_GiveXP(XP_ImpressBaalCadar);
 };
 
@@ -178,6 +184,7 @@ instance Gur_1208_BaalCadar_Teach(C_INFO)
 	npc = Gur_1208_BaalCadar;
 	condition = Gur_1208_BaalCadar_Teach_Condition;
 	information = Gur_1208_BaalCadar_Teach_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I would like to learn how to increase the power of my magic.";
 //	description = "Ich will lernen, die Kraft meiner Magie zu steigern.";
@@ -186,12 +193,15 @@ instance Gur_1208_BaalCadar_Teach(C_INFO)
 
 func int Gur_1208_BaalCadar_Teach_Condition()
 {
-	if (BaalCadar_Ansprechbar == TRUE)
-	|| (Npc_GetTrueGuild(other) != GIL_NONE)
+	if ((BaalCadar_Ansprechbar == TRUE)
+	|| (Npc_GetTrueGuild(other) != GIL_NONE))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void Gur_1208_BaalCadar_Teach_Info()
 {
 //	AI_Output(other,self,"Gur_1208_BaalCadar_Teach_Info_15_01"); //I would like to learn how to increase the power of my magic.
@@ -257,10 +267,12 @@ instance Gur_1208_BaalCadar_FIRSTTEST(C_INFO)
 
 func int Gur_1208_BaalCadar_FIRSTTEST_Condition()
 {
-	if C_NpcBelongsToPsiCamp(hero)
+	if (C_NpcBelongsToPsiCamp(hero))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Gur_1208_BaalCadar_FIRSTTEST_Info()
@@ -299,14 +311,16 @@ instance Gur_1208_BaalCadar_KREIS1(C_INFO)
 
 func int Gur_1208_BaalCadar_KREIS1_Condition()
 {
-	if (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE) == 0)
+	if ((Npc_GetTalentSkill (hero,NPC_TALENT_MAGE) == 0)
 	&& (Npc_KnowsInfo(hero,Gur_1208_BaalCadar_FIRSTTEST))
-	&& C_NpcBelongsToPsiCamp(hero)
+	&& (C_NpcBelongsToPsiCamp(hero)))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void Gur_1208_BaalCadar_KREIS1_Info()
 {
 //	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS1_Info_15_01"); //I am ready to enter the First Circle.
@@ -353,19 +367,21 @@ instance Gur_1208_BaalCadar_KREIS2(C_INFO)
 
 func int Gur_1208_BaalCadar_KREIS2_Condition()
 {
-	if (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE) == 1)
-	&& C_NpcBelongsToPsiCamp(hero)
+	if ((Npc_GetTalentSkill (hero,NPC_TALENT_MAGE) == 1)
+	&& (C_NpcBelongsToPsiCamp(hero)))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void Gur_1208_BaalCadar_KREIS2_Info()
 {
 //	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS2_Info_15_01"); //I am ready to enter the Second Circle.
 //	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS2_Info_15_01"); //Ich bin bereit für den zweiten Kreis.
 	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS2_Info_15_01"); //Jsem připraven vstoupit do druhého kruhu.
-	if (B_GiveSkill(other,NPC_TALENT_MAGE , 2,LPCOST_TALENT_MAGE_2))
+	if (B_GiveSkill(other,NPC_TALENT_MAGE, 2, LPCOST_TALENT_MAGE_2))
 	{
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS2_Info_02_02"); //Then listen and understand:
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS2_Info_02_02"); //Dann höre und begreife:
@@ -405,11 +421,13 @@ instance Gur_1208_BaalCadar_KREIS3(C_INFO)
 
 func int Gur_1208_BaalCadar_KREIS3_Condition()
 {
-	if (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE) == 2)
-	&& C_NpcBelongsToPsiCamp(hero)
+	if ((Npc_GetTalentSkill (hero,NPC_TALENT_MAGE) == 2)
+	&& (C_NpcBelongsToPsiCamp(hero)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Gur_1208_BaalCadar_KREIS3_Info()
@@ -417,7 +435,7 @@ func void Gur_1208_BaalCadar_KREIS3_Info()
 //	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS3_Info_15_01"); //I am ready to enter the Third Circle.
 //	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS3_Info_15_01"); //Ich bin bereit für den dritten Kreis.
 	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS3_Info_15_01"); //Jsem připraven vstoupit do třetího kruhu.
-	if (B_GiveSkill(other,NPC_TALENT_MAGE , 3, LPCOST_TALENT_MAGE_3))
+	if (B_GiveSkill(other,NPC_TALENT_MAGE, 3, LPCOST_TALENT_MAGE_3))
 	{
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS3_Info_02_02"); //Mark this:
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS3_Info_02_02"); //Achte das Wort:
@@ -456,11 +474,13 @@ instance Gur_1208_BaalCadar_KREIS4(C_INFO)
 
 func int Gur_1208_BaalCadar_KREIS4_Condition()
 {
-	if (Npc_GetTalentSkill (hero,NPC_TALENT_MAGE) == 3)
-	&& C_NpcBelongsToPsiCamp(hero)
+	if ((Npc_GetTalentSkill (hero,NPC_TALENT_MAGE) == 3)
+	&& (C_NpcBelongsToPsiCamp(hero)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Gur_1208_BaalCadar_KREIS4_Info()
@@ -468,7 +488,7 @@ func void Gur_1208_BaalCadar_KREIS4_Info()
 //	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS4_Info_15_01"); //I am ready to enter the Fourth Circle.
 //	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS4_Info_15_01"); //Ich bin bereit für den vierten Kreis.
 	AI_Output(other,self,"Gur_1208_BaalCadar_KREIS4_Info_15_01"); //Jsem připraven vstoupit do čtvrtého kruhu.
-	if (B_GiveSkill(other,NPC_TALENT_MAGE , 4, LPCOST_TALENT_MAGE_4))
+	if (B_GiveSkill(other,NPC_TALENT_MAGE, 4, LPCOST_TALENT_MAGE_4))
 	{
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_02"); //A long time has passed since the Camp was founded. Many things have changed.
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_02"); //Seit der Gründung des Lagers ist viel Zeit vergangen. Viel hat sich geändert.
@@ -487,7 +507,6 @@ func void Gur_1208_BaalCadar_KREIS4_Info()
 		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS4_Info_02_06"); //Teď víš všechno, co bratr potřebuje o kouzlech vědět. Byl jsi dobrý žák.
 		Gur_1208_BaalCadar_KREIS4.permanent = 0;
 	};
-
 };
 
 //---------------------------------------------------------
@@ -501,17 +520,19 @@ instance Gur_1208_BaalCadar_SELLSTUFF(C_INFO)
 	information = Gur_1208_BaalCadar_SELLSTUFF_Info;
 	important = 0;
 	permanent = 1;
-	description = DIALOG_TRADE;
 	trade = 1;
+	description = DIALOG_TRADE;
 };
 
 func int Gur_1208_BaalCadar_SELLSTUFF_Condition()
 {
-	if (BaalCadar_Ansprechbar == TRUE)
-	|| (Npc_GetTrueGuild(other) != GIL_NONE)
+	if ((BaalCadar_Ansprechbar == TRUE)
+	|| (Npc_GetTrueGuild(other) != GIL_NONE))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Gur_1208_BaalCadar_SELLSTUFF_Info()
@@ -528,4 +549,3 @@ func void Gur_1208_BaalCadar_SELLSTUFF_Info()
 //	AI_Output(other,self,"Gur_1208_BaalCadar_SELLSTUFF_Info_15_01"); //Ich möchte Schriften über Magie erwerben.
 	AI_Output(other,self,"Gur_1208_BaalCadar_SELLSTUFF_Info_15_01"); //Rád bych získal magické spisy.
 };
-

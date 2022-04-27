@@ -8,16 +8,19 @@ instance Info_GRD_275_PreExit(C_INFO)
 	nr = 999;
 	condition = Info_GRD_275_PreExit_Condition;
 	information = Info_GRD_275_PreExit_Info;
+	important = 0;
 	permanent = 0;
 	description = DIALOG_ENDE;
 };
 
 func int Info_GRD_275_PreExit_Condition()
 {
-	if ((Kapitel<=1))
+	if (Kapitel <= 1)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_GRD_275_PreExit_Info()
@@ -36,16 +39,20 @@ instance Info_GRD_275_Exit(C_INFO)
 	nr = 999;
 	condition = Info_GRD_275_Exit_Condition;
 	information = Info_GRD_275_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
 
 func int Info_GRD_275_Exit_Condition()
 {
-	if ((Kapitel>1)||Npc_KnowsInfo(hero,Info_GRD_275_PreExit))
+	if ((Kapitel > 1)
+	|| (Npc_KnowsInfo(hero,Info_GRD_275_PreExit)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_GRD_275_Exit_Info()
@@ -99,6 +106,7 @@ instance Info_GRD_275_Tips(C_INFO)
 	condition = Info_GRD_275_Tips_Condition;
 	information = Info_GRD_275_Tips_Info;
 	//#Needs_Attention zbytocny permanent dialog - to by som zrusil
+	important = 0;
 	permanent = 1;
 //	description = "Have you got any advice for me?";
 //	description = "Hast du irgendwelche Tipps für mich?";

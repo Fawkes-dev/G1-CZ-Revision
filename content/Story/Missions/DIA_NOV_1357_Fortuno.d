@@ -8,6 +8,7 @@ instance DIA_Fortuno_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_Fortuno_EXIT_Condition;
 	information = DIA_Fortuno_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,16 +33,18 @@ instance DIA_Fortuno_Greet(C_INFO)
 	nr = 1;
 	condition = DIA_Fortuno_Greet_Condition;
 	information = DIA_Fortuno_Greet_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Fortuno_Greet_Condition()
 {
-	if (Npc_GetDistToNpc(self,other)<=ZivilAnquatschDist)
+	if (Npc_GetDistToNpc(self,other) <= ZivilAnquatschDist)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Fortuno_Greet_Info()
@@ -63,6 +66,7 @@ instance DIA_Fortuno_GetGeschenk(C_INFO)
 	nr = 1;
 	condition = DIA_Fortuno_GetGeschenk_Condition;
 	information = DIA_Fortuno_GetGeschenk_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What have you got for me?";
 //	description = "Was hast du für mich?";
@@ -109,6 +113,7 @@ instance DIA_Fortuno_DailyRation(C_INFO)
 	nr = 3;
 	condition = DIA_Fortuno_DailyRation_Condition;
 	information = DIA_Fortuno_DailyRation_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I've come to collect my daily ration.";
 //	description = "Ich will mir meine tägliche Ration abholen.";
@@ -121,6 +126,8 @@ func int DIA_Fortuno_DailyRation_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Fortuno_DailyRation_Info()
@@ -128,7 +135,7 @@ func void DIA_Fortuno_DailyRation_Info()
 //	AI_Output(other,self,"DIA_Fortuno_DailyRation_15_00"); //I've come to collect my daily ration.
 //	AI_Output(other,self,"DIA_Fortuno_DailyRation_15_00"); //Ich will mir meine tägliche Ration abholen.
 	AI_Output(other,self,"DIA_Fortuno_DailyRation_15_00"); //Přišel jsem si vyzvednout svůj denní příděl.
-	if (Fortuno_RationDay!=Wld_GetDay())
+	if (Fortuno_RationDay != Wld_GetDay())
  	{
 // 		AI_Output(self,other,"DIA_Fortuno_DailyRation_05_01"); //Here, take it. Three of the Northern Dark - but don't smoke them all at once.
 // 		AI_Output(self,other,"DIA_Fortuno_DailyRation_05_01"); //Hier nimm. 3 Schwarzer Weiser - aber nicht alle auf einmal rauchen.
@@ -155,11 +162,12 @@ instance DIA_Fortuno_BuyJoints(C_INFO)
 	nr = 4;
 	condition = DIA_Fortuno_BuyJoints_Condition;
 	information = DIA_Fortuno_BuyJoints_Info;
+	important = 0;
 	permanent = 1;
+	Trade = 1;
 //	description = "I want to trade.";
 //	description = "Ich will handeln.";
 	description = "Chci obchodovat.";
-	Trade = 1;
 };
 
 func int DIA_Fortuno_BuyJoints_Condition()
@@ -168,6 +176,8 @@ func int DIA_Fortuno_BuyJoints_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Fortuno_BuyJoints_Info()
@@ -179,4 +189,3 @@ func void DIA_Fortuno_BuyJoints_Info()
 //	AI_Output(self,other,"DIA_Fortuno_BuyJoints_05_01"); //Was willst du haben? Oder willst du was verkaufen?
 	AI_Output(self,other,"DIA_Fortuno_BuyJoints_05_01"); //Co ode mě chceš? Nebo chceš něco prodat?
 };
-

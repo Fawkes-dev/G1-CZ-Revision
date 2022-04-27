@@ -13,13 +13,14 @@ instance Tpl_1436_Templer_Exit(C_INFO)
 
 func int Tpl_1436_Templer_Exit_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Tpl_1436_Templer_Exit_Info()
 {
 	AI_StopProcessInfos(self);
 };
+
 // ***************************** INFOS ****************************************//
 
 instance Tpl_1436_Templer_CRAWLER(C_INFO)
@@ -36,7 +37,7 @@ instance Tpl_1436_Templer_CRAWLER(C_INFO)
 
 func int Tpl_1436_Templer_CRAWLER_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Tpl_1436_Templer_CRAWLER_Info()
@@ -51,4 +52,3 @@ func void Tpl_1436_Templer_CRAWLER_Info()
 //	AI_Output(self,other,"Tpl_1436_Templer_CRAWLER_Info_13_03"); //Was wir aber wirklich wollen, ist das Sekret der Crawler. Aus dem Sekret der Minecrawler-Zangen braut unser Guru Cor Kalom magische Tränke.
 	AI_Output(self,other,"Tpl_1436_Templer_CRAWLER_Info_13_03"); //To, co opravdu chceme, je výměšek z čelistí důlních červů. Náš Guru Cor Kalom připravuje z výměšku magické lektvary.
 };
-

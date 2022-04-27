@@ -8,6 +8,7 @@ instance DIA_Aidan_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Aidan_Exit_Condition;
 	information = DIA_Aidan_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Aidan_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_Aidan_Hello_Condition;
 	information = DIA_Aidan_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What do you do here?";
 //	description = "Was machst du hier?";
@@ -74,6 +76,7 @@ instance Org_859_Aidan_Creatures(C_INFO)
 	nr = 1;
 	condition = Org_859_Aidan_Creatures_Condition;
 	information = Org_859_Aidan_Creatures_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I want to learn how to cut up animals.";
 //	description = "Ich will lernen, Tiere auszuschlachten.";
@@ -82,11 +85,13 @@ instance Org_859_Aidan_Creatures(C_INFO)
 
 func int Org_859_Aidan_Creatures_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Aidan_Hello))
-	&& ((Knows_GetTeeth == FALSE)||(Knows_GetFur == FALSE)||(Knows_GetClaws == FALSE)||(Knows_GetHide == FALSE))
+	if ((Npc_KnowsInfo(hero,DIA_Aidan_Hello))
+	&& ((Knows_GetTeeth == FALSE) || (Knows_GetFur == FALSE) || (Knows_GetClaws == FALSE) || (Knows_GetHide == FALSE)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_859_Aidan_Creatures_Info()
@@ -95,7 +100,7 @@ func void Org_859_Aidan_Creatures_Info()
 //	AI_Output(other,self,"Org_859_Aidan_Creatures_15_00"); //Ich will lernen, Tiere auszuschlachten.
 	AI_Output(other,self,"Org_859_Aidan_Creatures_15_00"); //Chci se naučit rozřezávat zvěř.
 
-	if ((Knows_GetTeeth == FALSE)||(Knows_GetFur == FALSE)||(Knows_GetClaws == FALSE)||(Knows_GetHide == FALSE))
+	if ((Knows_GetTeeth == FALSE) || (Knows_GetFur == FALSE) || (Knows_GetClaws == FALSE) || (Knows_GetHide == FALSE))
 	{
 //		AI_Output(self,other,"Org_859_Aidan_Creatures_13_01"); //What do you wanna know?
 //		AI_Output(self,other,"Org_859_Aidan_Creatures_13_01"); //Was willst du wissen?
@@ -148,7 +153,7 @@ func void Org_859_Aidan_Creatures_Zahn()
 //	AI_Output(other,self,"Org_859_Aidan_Creatures_Zahn_15_00"); //Wie komme ich an die Zähne?
 	AI_Output(other,self,"Org_859_Aidan_Creatures_Zahn_15_00"); //Jak dostanu zuby?
 
-	if (Npc_HasItems(other,itminugget)>=50)
+	if (Npc_HasItems(other,itminugget) >= 50)
 	{
 		if (other.lp >= 1)
 		{
@@ -195,7 +200,7 @@ func void Org_859_Aidan_Creatures_Fell()
 //	AI_Output(other,self,"Org_859_Aidan_Creatures_Fell_15_00"); //Wie kann ich den Viechern das Fell abziehen?
 	AI_Output(other,self,"Org_859_Aidan_Creatures_Fell_15_00"); //Jak dostanu kůži těch příšer?
 
-	if (Npc_HasItems(other,itminugget)>=100)
+	if (Npc_HasItems(other,itminugget) >= 100)
 	{
 		if (other.lp >= 1)
 		{
@@ -238,7 +243,7 @@ func void Org_859_Aidan_Creatures_Fell()
 
 func void Org_859_Aidan_Creatures_Kralle()
 {
-	if (Npc_HasItems(other,itminugget)>=50)
+	if (Npc_HasItems(other,itminugget) >= 50)
 	{
 		if (other.lp >= 1)
 		{
@@ -284,7 +289,7 @@ func void Org_859_Aidan_Creatures_Kralle()
 
 func void Org_859_Aidan_Creatures_Haut()
 {
-	if (Npc_HasItems(other,itminugget)>=100)
+	if (Npc_HasItems(other,itminugget) >= 100)
 	{
 		if (other.lp >= 1)
 		{

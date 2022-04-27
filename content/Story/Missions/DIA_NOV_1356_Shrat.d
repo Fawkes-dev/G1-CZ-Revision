@@ -33,6 +33,7 @@ instance DIA_Shrat_WhyHere(C_INFO)
 	nr = 1;
 	condition = DIA_Shrat_WhyHere_Condition;
 	information = DIA_Shrat_WhyHere_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What are you doing here?";
 //	description = "Was machst du denn hier?";
@@ -76,6 +77,7 @@ instance DIA_Shrat_JoinPSI(C_INFO)
 	nr = 1;
 	condition = DIA_Shrat_JoinPSI_Condition;
 	information = DIA_Shrat_JoinPSI_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I want to join the Brotherhood - can you help me?";
 //	description = "Ich will der Bruderschaft beitreten - kannst du mir helfen?";
@@ -88,6 +90,8 @@ func int DIA_Shrat_JoinPSI_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Shrat_JoinPSI_Info()
@@ -113,6 +117,7 @@ instance DIA_Shrat_ComeWithMe(C_INFO)
 	nr = 1;
 	condition = DIA_Shrat_ComeWithMe_Condition;
 	information = DIA_Shrat_ComeWithMe_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Let's move around together! Come with me!";
 //	description = "Lass uns zusammen losziehen! Komm mit!";
@@ -121,10 +126,13 @@ instance DIA_Shrat_ComeWithMe(C_INFO)
 
 func int DIA_Shrat_ComeWithMe_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Shrat_JoinPSI) && (self.aivar[AIV_PARTYMEMBER]==FALSE))
+	if ((Npc_KnowsInfo(hero,DIA_Shrat_JoinPSI))
+	&& (self.aivar[AIV_PARTYMEMBER] == FALSE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Shrat_ComeWithMe_Info()
@@ -150,6 +158,7 @@ instance DIA_Shrat_LeaveMe(C_INFO)
 	nr = 700;
 	condition = DIA_Shrat_LeaveMe_Condition;
 	information = DIA_Shrat_LeaveMe_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Our paths separate here - I'll go on on my own.";
 //	description = "Hier trennen sich unsere Wege - ich werde von hier aus alleine weiterziehen.";
@@ -158,10 +167,12 @@ instance DIA_Shrat_LeaveMe(C_INFO)
 
 func int DIA_Shrat_LeaveMe_Condition()
 {
-	if (self.aivar[AIV_PARTYMEMBER]==TRUE)
+	if (self.aivar[AIV_PARTYMEMBER] == TRUE)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Shrat_LeaveMe_Info()

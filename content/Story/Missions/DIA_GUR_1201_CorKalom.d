@@ -8,8 +8,8 @@ instance GUR_1201_CorKalom_FIRST(C_INFO)
 	nr = 1;
 	condition = GUR_1201_CorKalom_FIRST_Condition;
 	information = GUR_1201_CorKalom_FIRST_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int GUR_1201_CorKalom_FIRST_Condition()
@@ -18,6 +18,8 @@ func int GUR_1201_CorKalom_FIRST_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GUR_1201_CorKalom_FIRST_Info()
@@ -38,6 +40,7 @@ instance GUR_1201_CorKalom_WannaJoin(C_INFO)
 	nr = 1;
 	condition = GUR_1201_CorKalom_WannaJoin_Condition;
 	information = GUR_1201_CorKalom_WannaJoin_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I would like to join the Brotherhood.";
 //	description = "Ich will in die Bruderschaft aufgenommen werden.";
@@ -50,6 +53,8 @@ func int GUR_1201_CorKalom_WannaJoin_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GUR_1201_CorKalom_WannaJoin_Info()
@@ -85,6 +90,7 @@ instance GUR_1201_CorKalom_Recipe(C_INFO)
 	nr = 20;
 	condition = GUR_1201_CorKalom_Recipe_Condition;
 	information = GUR_1201_CorKalom_Recipe_Info;
+	important = 0;
 	permanent = 0;
 //	description = "One of the merchants from the Old Camp would like to have a recipe.";
 //	description = "Einer der Händler aus dem alten Lager will ein Rezept von dir haben.";
@@ -97,6 +103,8 @@ func int GUR_1201_CorKalom_Recipe_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GUR_1201_CorKalom_Recipe_Info()
@@ -123,6 +131,7 @@ instance GUR_1201_CorKalom_Experimente(C_INFO)
 	nr = 2;
 	condition = GUR_1201_CorKalom_Experimente_Condition;
 	information = GUR_1201_CorKalom_Experimente_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What kind of experiments do you do?";
 //	description = "Was machst du für Experimente?";
@@ -135,6 +144,8 @@ func int GUR_1201_CorKalom_Experimente_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GUR_1201_CorKalom_Experimente_Info()
@@ -157,6 +168,7 @@ instance GUR_1201_CorKalom_BRINGWEED(C_INFO)
 	nr = 2;
 	condition = GUR_1201_CorKalom_BRINGWEED_Condition;
 	information = GUR_1201_CorKalom_BRINGWEED_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I'm delivering the daily swampweed harvest!";
 //	description = "Ich bringe die tägliche Sumpfkrauternte!";
@@ -167,8 +179,10 @@ func int GUR_1201_CorKalom_BRINGWEED_Condition()
 {
 	if (BaalOrun_FetchWeed == LOG_RUNNING)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void GUR_1201_CorKalom_BRINGWEED_Info()
@@ -214,6 +228,7 @@ instance GUR_1201_CorKalom_Crawlerzangen(C_INFO)
 	nr = 800;
 	condition = GUR_1201_CorKalom_Crawlerzangen_Condition;
 	information = GUR_1201_CorKalom_Crawlerzangen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I have crawlers' mandibles for you...";
 //	description = "Ich habe Crawlerzangen für dich...";
@@ -222,10 +237,12 @@ instance GUR_1201_CorKalom_Crawlerzangen(C_INFO)
 
 func int GUR_1201_CorKalom_Crawlerzangen_Condition()
 {
-	if (Npc_HasItems(other,ItAt_Crawler_01)>0)
+	if (Npc_HasItems(other,ItAt_Crawler_01) > 0)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GUR_1201_CorKalom_Crawlerzangen_Info()
@@ -280,6 +297,7 @@ instance GUR_1201_CorKalom_JoinPSI(C_INFO)
 	nr = 1;
 	condition = GUR_1201_CorKalom_JoinPSI_Condition;
 	information = GUR_1201_CorKalom_JoinPSI_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I think I have convinced the Baals!";
 //	description = "Ich glaube, ich habe die Baals überzeugt!";
@@ -288,11 +306,13 @@ instance GUR_1201_CorKalom_JoinPSI(C_INFO)
 
 func int GUR_1201_CorKalom_JoinPSI_Condition()
 {
-	if (Npc_GetTrueGuild(hero) == GIL_NONE)
-	&& Npc_KnowsInfo(hero,GUR_1201_CorKalom_WannaJoin)
+	if ((Npc_GetTrueGuild(hero) == GIL_NONE)
+	&& (Npc_KnowsInfo(hero,GUR_1201_CorKalom_WannaJoin)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GUR_1201_CorKalom_JoinPSI_Info()
@@ -421,6 +441,7 @@ instance GUR_1201_CorKalom_JoinPSI2(C_INFO)
 	nr = 1;
 	condition = GUR_1201_CorKalom_JoinPSI2_Condition;
 	information = GUR_1201_CorKalom_JoinPSI2_Info;
+	important = 0;
 	permanent = 0;
 //	description = "That was it? No welcome, no nothing?";
 //	description = "Das war alles? Kein 'Herzlich Willkommen', kein gar nichts?";
@@ -433,6 +454,8 @@ func int GUR_1201_CorKalom_JoinPSI2_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GUR_1201_CorKalom_JoinPSI2_Info()
@@ -480,6 +503,7 @@ instance Info_Kalom_DrugMonopol(C_INFO)
 	npc = GUR_1201_CorKalom;
 	condition = Info_Kalom_DrugMonopol_Condition;
 	information = Info_Kalom_DrugMonopol_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Have YOU got another task for me?";
 //	description = "Hast DU noch eine Aufgabe für mich?";
@@ -488,10 +512,12 @@ instance Info_Kalom_DrugMonopol(C_INFO)
 
 func int Info_Kalom_DrugMonopol_Condition()
 {
-	if (Npc_GetTrueGuild(other)==GIL_NOV)
+	if (Npc_GetTrueGuild(other) == GIL_NOV)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Kalom_DrugMonopol_Info()
@@ -541,6 +567,7 @@ instance Info_Kalom_Success(C_INFO)
 	npc = GUR_1201_CorKalom;
 	condition = Info_Kalom_Success_Condition;
 	information = Info_Kalom_Success_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Regarding the weed production in the New Camp...";
 //	description = "Wegen der Krautherstellung im Neuen Lager...";
@@ -553,6 +580,8 @@ func int Info_Kalom_Success_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Kalom_Success_Info()
@@ -607,6 +636,7 @@ instance Info_Kalom_KrautboteBACK(C_INFO)
 	nr = 1;
 	condition = Info_Kalom_KrautboteBACK_Condition;
 	information = Info_Kalom_KrautboteBACK_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I've delivered the weed.";
 //	description = "Ich habe das Kraut abgeliefert.";
@@ -617,8 +647,10 @@ func int Info_Kalom_KrautboteBACK_Condition()
 {
 	if (Kalom_DeliveredWeed)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Kalom_KrautboteBACK_Info()
@@ -627,7 +659,7 @@ func void Info_Kalom_KrautboteBACK_Info()
 //	AI_Output(other,self,"Mis_1_Psi_Kalom_KrautboteBACK_15_00"); //Ich habe das Kraut abgeliefert.
 	AI_Output(other,self,"Mis_1_Psi_Kalom_KrautboteBACK_15_00"); //Doručil jsem tu drogu.
 
-	if (Npc_HasItems(hero,itminugget)>=500)
+	if (Npc_HasItems(hero,itminugget) >= 500)
 	{
 //		AI_Output(self,other,"Mis_1_Psi_Kalom_KrautboteBACK_10_01"); //Good. Get another task somewhere else.
 //		AI_Output(self,other,"Mis_1_Psi_Kalom_KrautboteBACK_10_01"); //Gut. Mach dich anderweitig nützlich.
@@ -643,6 +675,7 @@ func void Info_Kalom_KrautboteBACK_Info()
 
 		Info_Kalom_KrautboteBACK.permanent = 0;
 	}
+
 	else
 	{
 //		AI_Output(self,other,"Mis_1_Psi_Kalom_KrautboteBACK_10_02"); //Where's the 500 ore, boy? Make sure I get them real fast!
@@ -661,8 +694,8 @@ instance Info_CorKalom_BringFocus(C_INFO)
 	npc = GUR_1201_CorKalom;
 	condition = Info_CorKalom_BringFocus_Condition;
 	information = Info_CorKalom_BringFocus_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "Y'Berion sent me. I have the focus.";
 //	description = "Y'Berion schickt mich. Ich habe den Fokus.";
 	description = "Poslal mě Y´Berion. Mám to ohnisko.";
@@ -670,10 +703,13 @@ instance Info_CorKalom_BringFocus(C_INFO)
 
 func int Info_CorKalom_BringFocus_Condition()
 {
-	if (YBerion_BringFocus == LOG_SUCCESS) && (Npc_HasItems(hero,Focus_1 ))
+	if ((YBerion_BringFocus == LOG_SUCCESS)
+	&& (Npc_HasItems(hero,Focus_1)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_CorKalom_BringFocus_Info()
@@ -705,6 +741,7 @@ instance Info_CorKalom_BLUFF(C_INFO)
 	nr = 10;
 	condition = Info_CorKalom_BLUFF_Condition;
 	information = Info_CorKalom_BLUFF_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Y'Berion said you'd pay me if I brought you the focus!";
 //	description = "Y'Berion sagte mir, du würdest mich entlohnen";
@@ -713,11 +750,13 @@ instance Info_CorKalom_BLUFF(C_INFO)
 
 func int Info_CorKalom_BLUFF_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_CorKalom_BringFocus))
-	&& (CorKalom_BringMCQBalls != LOG_SUCCESS)
+	if ((Npc_KnowsInfo(hero,Info_CorKalom_BringFocus))
+	&& (CorKalom_BringMCQBalls != LOG_SUCCESS))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_CorKalom_BLUFF_Info()
@@ -753,7 +792,9 @@ func int GUR_1201_CorKalom_SACHE_Condition()
 		return 1;
 	};
 
+	return 0;
 };
+
 func void GUR_1201_CorKalom_SACHE_Info()
 {
 //	AI_Output(other,self,"GUR_1201_CorKalom_SACHE_Info_15_01"); //Secretion?
@@ -774,6 +815,7 @@ func void GUR_1201_CorKalom_SACHE_Info()
 //	Info_Addchoice (GUR_1201_CorKalom_SACHE,"Ja",GUR_1201_CorKalom_SACHE_JA);
 	Info_Addchoice (GUR_1201_CorKalom_SACHE,"Ano.",GUR_1201_CorKalom_SACHE_JA);
 };
+
 //------------------------------------------------------
 func void GUR_1201_CorKalom_SACHE_NEIN()
 {
@@ -791,6 +833,7 @@ func void GUR_1201_CorKalom_SACHE_NEIN()
 	AI_Output(self,other,"GUR_1201_CorKalom_SACHE_NEIN_10_04"); //Z tohoto výměšku připravuji elixír, který nás provádí po duchovní cestě ke Spáčovi.
 	Info_ClearChoices(GUR_1201_CorKalom_SACHE);
 };
+
 //------------------------------------------------------
 func void GUR_1201_CorKalom_SACHE_JA()
 {
@@ -802,6 +845,7 @@ func void GUR_1201_CorKalom_SACHE_JA()
 	AI_Output(self,other,"GUR_1201_CorKalom_SACHE_JA_10_02"); //Výborně!
 	Info_ClearChoices(GUR_1201_CorKalom_SACHE);
 };
+
 // ***************************** INFOS ****************************************//
 instance GUR_1201_CorKalom_VISION(C_INFO)
 {
@@ -822,7 +866,9 @@ func int GUR_1201_CorKalom_VISION_Condition()
 		return 1;
 	};
 
+	return 0;
 };
+
 func void GUR_1201_CorKalom_VISION_Info()
 {
 //	AI_Output(other,self,"GUR_1201_CorKalom_VISION_Info_15_01"); //Speak on!
@@ -856,6 +902,7 @@ func void GUR_1201_CorKalom_VISION_Info()
 };
 
 // ***************************** INFOS ****************************************//
+
 instance GUR_1201_CorKalom_NEST(C_INFO)
 {
 	npc = GUR_1201_CorKalom;
@@ -875,7 +922,9 @@ func int GUR_1201_CorKalom_NEST_Condition()
 		return 1;
 	};
 
+	return 0;
 };
+
 func void GUR_1201_CorKalom_NEST_Info()
 {
 //	AI_Output(other,self,"GUR_1201_CorKalom_NEST_Info_15_01"); //Have you never examined the minecrawlers? I mean, maybe there's another body part which contains more of the secretion.
@@ -908,12 +957,13 @@ func void GUR_1201_CorKalom_WEG_ACCEPT()
 };
 
 // ***************************** INFOS ****************************************//
+
 instance GUR_1201_CorKalom_WEG(C_INFO)
 {
 	npc = GUR_1201_CorKalom;
+	nr = 21;
 	condition = GUR_1201_CorKalom_WEG_Condition;
 	information = GUR_1201_CorKalom_WEG_Info;
-	nr = 21;
 	important = 0;
 	permanent = 0;
 //	description = "That sounds like a dark and sinister kind of search!";
@@ -923,10 +973,13 @@ instance GUR_1201_CorKalom_WEG(C_INFO)
 
 func int GUR_1201_CorKalom_WEG_Condition()
 {
-	if (Npc_KnowsInfo(hero,GUR_1201_CorKalom_NEST)) && !(Npc_KnowsInfo(hero,GUR_1201_CorKalom_RAT))
+	if ((Npc_KnowsInfo(hero,GUR_1201_CorKalom_NEST))
+	&& (!Npc_KnowsInfo(hero,GUR_1201_CorKalom_RAT)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GUR_1201_CorKalom_WEG_Info()
@@ -954,9 +1007,9 @@ func void GUR_1201_CorKalom_WEG_Info()
 instance GUR_1201_CorKalom_RAT(C_INFO)
 {
 	npc = GUR_1201_CorKalom;
+	nr = 20;
 	condition = GUR_1201_CorKalom_RAT_Condition;
 	information = GUR_1201_CorKalom_RAT_Info;
-	nr = 20;
 	important = 0;
 	permanent = 0;
 //	description = "Looks like this might become quite a bloody adventure!";
@@ -966,12 +1019,15 @@ instance GUR_1201_CorKalom_RAT(C_INFO)
 
 func int GUR_1201_CorKalom_RAT_Condition()
 {
-	if (Npc_KnowsInfo(hero,GUR_1201_CorKalom_NEST)) && !(Npc_KnowsInfo(hero,GUR_1201_CorKalom_WEG))
+	if ((Npc_KnowsInfo(hero,GUR_1201_CorKalom_NEST))
+	&& (!Npc_KnowsInfo(hero,GUR_1201_CorKalom_WEG)))
 	{
 		return 1;
 	};
 
+	return 0;
 };
+
 func void GUR_1201_CorKalom_RAT_Info()
 {
 //	AI_Output(other,self,"GUR_1201_CorKalom_RAT_Info_15_01"); //Looks like this might become quite a bloody adventure!
@@ -1006,10 +1062,12 @@ instance GUR_1201_CorKalom_RUN(C_INFO)
 func int GUR_1201_CorKalom_RUN_Condition()
 {
 	if ((CorKalom_BringMCQBalls == LOG_RUNNING)
-	&& (Npc_HasItems(hero,ItAt_Crawlerqueen)< 1))
+	&& (Npc_HasItems(hero,ItAt_Crawlerqueen) < 1))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GUR_1201_CorKalom_RUN_Info()
@@ -1021,7 +1079,7 @@ func void GUR_1201_CorKalom_RUN_Info()
 //	AI_Output(self,other,"GUR_1201_CorKalom_RUN_Info_10_02"); //In der Alten Mine.
 	AI_Output(self,other,"GUR_1201_CorKalom_RUN_Info_10_02"); //Ve Starém dole.
 
-	if !EnteredOldMine
+	if (!EnteredOldMine)
 	{
 //		AI_Output(other,self,"GUR_1201_CorKalom_RUN_Info_15_03"); //Where is the Old Mine?
 //		AI_Output(other,self,"GUR_1201_CorKalom_RUN_Info_15_03"); //Wo ist die Alte Mine?
@@ -1049,11 +1107,13 @@ instance GUR_1201_CorKalom_CRAWLER(C_INFO)
 
 func int GUR_1201_CorKalom_CRAWLER_Condition()
 {
-	if Npc_KnowsInfo(hero,GUR_1201_CorKalom_RUN)
-	&& (CorKalom_BringMCQBalls != LOG_SUCCESS)
+	if ((Npc_KnowsInfo(hero,GUR_1201_CorKalom_RUN))
+	&& (CorKalom_BringMCQBalls != LOG_SUCCESS))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GUR_1201_CorKalom_CRAWLER_Info()
@@ -1085,6 +1145,8 @@ func int GUR_1201_CorKalom_FIND_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void GUR_1201_CorKalom_FIND_Info()
@@ -1106,6 +1168,7 @@ instance Info_CorKalom_BringMCQBalls_Success(C_INFO)
 	npc = GUR_1201_CorKalom;
 	condition = Info_CorKalom_BringMCQBalls_Success_Condition;
 	information = Info_CorKalom_BringMCQBalls_Success_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I found eggs belonging to a crawler queen";
 //	description = "Ich habe Eier einer Crawler-Königin gefunden";
@@ -1118,7 +1181,10 @@ func int Info_CorKalom_BringMCQBalls_Success_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
+
 func void Info_CorKalom_BringMCQBalls_Success_Info()
 {
 //	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_15_01"); //I found eggs belonging to a crawler queen
@@ -1177,6 +1243,7 @@ func void Info_CorKalom_BringMCQBalls_Success_Info()
 //	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"Manatrank",Info_CorKalom_BringMCQBalls_Success_MANA);
 	Info_Addchoice(Info_CorKalom_BringMCQBalls_Success,"Letvar many.",Info_CorKalom_BringMCQBalls_Success_MANA);
 };
+
 func void Info_CorKalom_BringMCQBalls_Success_RUNE()
 {
 //	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_RUNE_15_01"); //A rune.
@@ -1188,8 +1255,8 @@ func void Info_CorKalom_BringMCQBalls_Success_RUNE()
 	CreateInvItem(self,ItArRuneLight);
 	B_GiveInvItems(self,hero,ItArRuneLight,1);
 	Info_ClearChoices(Info_CorKalom_BringMCQBalls_Success);
-
 };
+
 func void Info_CorKalom_BringMCQBalls_Success_WAFFE()
 {
 //	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_WAFFE_15_01"); //A weapon.
@@ -1202,6 +1269,7 @@ func void Info_CorKalom_BringMCQBalls_Success_WAFFE()
 	B_GiveInvItems(self,hero,ItMw_1H_Mace_War_03,1);
 	Info_ClearChoices(Info_CorKalom_BringMCQBalls_Success);
 };
+
 func void Info_CorKalom_BringMCQBalls_Success_HEAL()
 {
 //	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_HEAL_15_01"); //A healing potion.
@@ -1214,6 +1282,7 @@ func void Info_CorKalom_BringMCQBalls_Success_HEAL()
 	B_GiveInvItems(self,hero,ItFo_Potion_Health_Perma_01,1);
 	Info_ClearChoices(Info_CorKalom_BringMCQBalls_Success);
 };
+
 func void Info_CorKalom_BringMCQBalls_Success_ORE()
 {
 //	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_ORE_15_01"); //Ore.
@@ -1226,6 +1295,7 @@ func void Info_CorKalom_BringMCQBalls_Success_ORE()
 	B_GiveInvItems(self,hero,ItMinugget, 100);
 	Info_ClearChoices(Info_CorKalom_BringMCQBalls_Success);
 };
+
 func void Info_CorKalom_BringMCQBalls_Success_MANA()
 {
 //	AI_Output(other,self,"Mis_2_PSI_Kalom_BringMCQEggs_Success_MANA_15_01"); //Mana.
@@ -1247,6 +1317,7 @@ instance Info_CorKalom_BringBook(C_INFO)
 	npc = GUR_1201_CorKalom;
 	condition = Info_CorKalom_BringBook_Condition;
 	information = Info_CorKalom_BringBook_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Can we start invoking the Sleeper now?";
 //	description = "Kann nun die Anrufung des Schläfers beginnen?";
@@ -1255,11 +1326,14 @@ instance Info_CorKalom_BringBook(C_INFO)
 
 func int Info_CorKalom_BringBook_Condition()
 {
-	if ( CorKalom_BringMCQBalls == LOG_SUCCESS )
+	if (CorKalom_BringMCQBalls == LOG_SUCCESS)
 	{
 		return 1;
 	};
+
+	return 0;
 };
+
 func void Info_CorKalom_BringBook_Info()
 {
 //	AI_Output(other,self,"Info_CorKalom_BringBook_Info_15_01"); //Can we start invoking the Sleeper now?
@@ -1313,6 +1387,7 @@ func void Info_CorKalom_BringBook_Info()
 //	Info_Addchoice(Info_CorKalom_BringBook,"Wo finde ich Talas?",Info_CorKalom_BringBook_WHERE);
 	Info_Addchoice(Info_CorKalom_BringBook,"Kde najdu Talase?",Info_CorKalom_BringBook_WHERE);
 };
+
 func void Info_CorKalom_BringBook_BACK()
 {
 	Info_ClearChoices(Info_CorKalom_BringBook);
@@ -1327,6 +1402,7 @@ func void Info_CorKalom_BringBook_WHERE()
 //	AI_Output(self,other,"Info_CorKalom_BringBook_Where_10_02"); //Er versucht auf dem Vorplatz des Tempelbergs Leute zu finden, die ihm helfen.
 	AI_Output(self,other,"Info_CorKalom_BringBook_Where_10_02"); //Je na nádvoří u chrámu, kde se snaží najít lidi, kteří by mu pomohli.
 };
+
 func void Info_CorKalom_BringBook_WHO()
 {
 //	AI_Output(other,self,"Info_CorKalom_BringBook_Who_15_01"); //Who stole the almanac?
@@ -1336,6 +1412,7 @@ func void Info_CorKalom_BringBook_WHO()
 //	AI_Output(self,other,"Info_CorKalom_BringBook_Who_10_02"); //Talas hat berichtet, dass er von schwarzen Goblins überfallen wurde. Merkwürdig, aber nicht unmöglich.
 	AI_Output(self,other,"Info_CorKalom_BringBook_Who_10_02"); //Talas říkal, že mu ho ukradl černý goblin. Zní to podivně, ale není to nemožné.
 };
+
 func void Info_CorKalom_BringBook_EARN()
 {
 //	AI_Output(other,self,"Info_CorKalom_BringBook_Earn_15_01"); //What will I get for it?
@@ -1353,6 +1430,7 @@ instance Info_CorKalom_BringBook_Success(C_INFO)
 	npc = GUR_1201_CorKalom;
 	condition = Info_CorKalom_BringBook_Success_Condition;
 	information = Info_CorKalom_BringBook_Success_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I've found the book";
 //	description = "Ich hab' das Buch gefunden";
@@ -1361,12 +1439,15 @@ instance Info_CorKalom_BringBook_Success(C_INFO)
 
 func int Info_CorKalom_BringBook_Success_Condition()
 {
-	if (Npc_HasItems(Hero,ItWrFokusbuch)
-	&& (CorKalom_BringBook==LOG_RUNNING))
+	if ((Npc_HasItems(Hero,ItWrFokusbuch))
+	&& (CorKalom_BringBook == LOG_RUNNING))
 	{
-		return 1 ;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void Info_CorKalom_BringBook_Success_Info()
 {
 //	AI_Output(other,self,"Info_CorKalom_BringBook_Success_15_01"); //I've found the book
@@ -1408,6 +1489,7 @@ instance Info_CorKalom_Belohnung(C_INFO)
 	nr = 1;
 	condition = Info_CorKalom_Belohnung_Condition;
 	information = Info_CorKalom_Belohnung_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What about my payment?";
 //	description = "Wie sieht es mit einer Belohnung aus?";
@@ -1420,6 +1502,8 @@ func int Info_CorKalom_Belohnung_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_CorKalom_Belohnung_Info()
@@ -1441,8 +1525,8 @@ func void Info_CorKalom_Belohnung_Info()
 //	Info_Addchoice(Info_CorKalom_Belohnung,"Mana potion",Info_CorKalom_Belohnung_MANA);
 //	Info_Addchoice(Info_CorKalom_Belohnung,"Manatrank",Info_CorKalom_Belohnung_MANA);
 	Info_Addchoice(Info_CorKalom_Belohnung,"Lektvary many.",Info_CorKalom_Belohnung_MANA);
-
 };
+
 func void Info_CorKalom_Belohnung_SCROLL()
 {
 //	AI_Output(other,self,"Info_CorKalom_Belohnung_SCROLL_15_00");//Give me these spell scrolls.
@@ -1455,6 +1539,7 @@ func void Info_CorKalom_Belohnung_SCROLL()
 	B_GiveInvItems(self,hero,ItArScrollSleep,3);
 	Info_ClearChoices(Info_CorKalom_Belohnung);
 };
+
 func void Info_CorKalom_Belohnung_ORE()
 {
 //	AI_Output(other,self,"Info_CorKalom_Belohnung_ORE_15_00");//Give me ore.
@@ -1467,6 +1552,7 @@ func void Info_CorKalom_Belohnung_ORE()
 	B_GiveInvItems(self,hero,ItMinugget,300);
 	Info_ClearChoices(Info_CorKalom_Belohnung);
 };
+
 func void Info_CorKalom_Belohnung_MANA()
 {
 //	AI_Output(other,self,"Info_CorKalom_Belohnung_MANA_15_00");//Mana potions.
@@ -1510,4 +1596,3 @@ func void GUR_1201_CorKalom_Exit_Info()
 	AI_StopProcessInfos(self);
 };
 // *******************************************************************************************************
-

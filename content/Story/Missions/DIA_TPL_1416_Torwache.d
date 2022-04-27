@@ -8,6 +8,7 @@ instance DIA_Tpl_1416_Torwache_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Tpl_1416_Torwache_Exit_Condition;
 	information = DIA_Tpl_1416_Torwache_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Tpl_1416_Torwache_Life(C_INFO)
 	nr = 1;
 	condition = DIA_Tpl_1416_Torwache_Life_Condition;
 	information = DIA_Tpl_1416_Torwache_Life_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What's life like as one of the Brotherhood's guards?";
 //	description = "Wie ist das Leben hier als Wächter der Bruderschaft?";

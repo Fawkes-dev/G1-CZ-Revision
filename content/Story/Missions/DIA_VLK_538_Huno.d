@@ -8,6 +8,7 @@ instance DIA_Huno_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Huno_Exit_Condition;
 	information = DIA_Huno_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -25,14 +26,15 @@ func void DIA_Huno_Exit_Info()
 // **************************************************
 //	Info YouKnowYourJob
 // **************************************************
+
 instance DIA_Huno_YouKnowYourJob(C_INFO)
 {
 	npc = Vlk_538_Huno;
 	nr = 2;
 	condition = DIA_Huno_YouKnowYourJob_Condition;
 	information = DIA_Huno_YouKnowYourJob_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "It looks as if you knew what you were doing.";
 //	description = "Wie's aussieht, beherrschst du dein Handwerk.";
 	description = "Zdá se, že své práci rozumíš.";
@@ -40,7 +42,7 @@ instance DIA_Huno_YouKnowYourJob(C_INFO)
 
 func int DIA_Huno_YouKnowYourJob_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void DIA_Huno_YouKnowYourJob_Info()
@@ -59,14 +61,15 @@ func void DIA_Huno_YouKnowYourJob_Info()
 // **************************************************
 //	Info HowLong
 // **************************************************
+
 instance DIA_Huno_HowLong(C_INFO)
 {
 	npc = Vlk_538_Huno;
 	nr = 2;
 	condition = DIA_Huno_HowLong_Condition;
 	information = DIA_Huno_HowLong_Info;
-	permanent = 0;
 	important = 0;
+	permanent = 0;
 //	description = "How long does it take you to make one blade?";
 //	description = "Wie lange brauchst du für eine Klinge?";
 	description = "Jak dlouho ti trvá výroba jedné čepele?";
@@ -74,10 +77,12 @@ instance DIA_Huno_HowLong(C_INFO)
 
 func int DIA_Huno_HowLong_Condition()
 {
-	if Npc_KnowsInfo(hero,DIA_Huno_YouKnowYourJob)
+	if (Npc_KnowsInfo(hero,DIA_Huno_YouKnowYourJob))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Huno_HowLong_Info()
@@ -121,8 +126,8 @@ instance DIA_Huno_HowsYourBusiness(C_INFO)
 	nr = 2;
 	condition = DIA_Huno_HowsYourBusiness_Condition;
 	information = DIA_Huno_HowsYourBusiness_Info;
-	permanent = 1;
 	important = 0;
+	permanent = 1;
 //	description = "Well, smith, how's business?";
 //	description = "Na, Schmied, wie läuft das Geschäft?";
 	description = "Tak co, kováři, jak jdou obchody?";
@@ -130,10 +135,12 @@ instance DIA_Huno_HowsYourBusiness(C_INFO)
 
 func int DIA_Huno_HowsYourBusiness_Condition()
 {
-	if Npc_KnowsInfo(hero,DIA_Huno_YouKnowYourJob)
+	if (Npc_KnowsInfo(hero,DIA_Huno_YouKnowYourJob))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Huno_HowsYourBusiness_Info()
@@ -170,8 +177,8 @@ instance DIA_Huno_LEARNSMITH(C_INFO)
 	nr = 2;
 	condition = DIA_Huno_LEARNSMITH_Condition;
 	information = DIA_Huno_LEARNSMITH_Info;
-	permanent = 1;
 	important = 0;
+	permanent = 1;
 //	description = "I'd like to try working here as well.";
 //	description = "Ich würde mich selbst gern mal an deiner Schmiede versuchen.";
 	description = "Chtěl bych tu zkusit pracovat.";
@@ -179,10 +186,12 @@ instance DIA_Huno_LEARNSMITH(C_INFO)
 
 func int DIA_Huno_LEARNSMITH_Condition()
 {
-	if Npc_KnowsInfo(hero,DIA_Huno_YouKnowYourJob)
+	if (Npc_KnowsInfo(hero,DIA_Huno_YouKnowYourJob))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Huno_LEARNSMITH_Info()
@@ -222,26 +231,29 @@ func void DIA_Huno_LEARNSMITH_Info()
 // **************************************************
 //	Info BUYSMITH
 // **************************************************
+
 instance DIA_Huno_BUYSMITH(C_INFO)
 {
 	npc = Vlk_538_Huno;
 	nr = 2;
 	condition = DIA_Huno_BUYSMITH_Condition;
 	information = DIA_Huno_BUYSMITH_Info;
-	permanent = 1;
 	important = 0;
+	permanent = 1;
+	trade = 1;
 //	description = "I'd like to buy blacksmith equipment!";
 //	description = "Ich möchte Dinge fürs Schmieden kaufen!";
 	description = "Chtěl bych koupit kovářskou výbavu.";
-	trade = 1;
 };
 
 func int DIA_Huno_BUYSMITH_Condition()
 {
 	if (Huno_LearnSmith == TRUE)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Huno_BUYSMITH_Info()
@@ -255,4 +267,3 @@ func void DIA_Huno_BUYSMITH_Info()
 	if (Npc_HasItems(self,ItMiSwordBladeHot) < 5) { CreateInvItems(self,ItMiSwordBladeHot, 5); };
 	if (Npc_HasItems(self,ItMiSwordBlade ) < 5) { CreateInvItems(self,ItMiSwordBlade, 5); };
 };
-

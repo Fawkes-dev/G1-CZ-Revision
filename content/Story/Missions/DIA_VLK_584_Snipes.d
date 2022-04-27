@@ -29,6 +29,7 @@ func void VLK_584_Snipes_Exit_Info()
 };
 
 // ***************** Infos *****************************
+
 instance VLK_584_Snipes_DEAL(C_INFO)
 {
 	npc = VLK_584_Snipes;
@@ -65,7 +66,9 @@ func void VLK_584_Snipes_DEAL_Info()
 //	B_LogEntry(CH2_SnipesDeal,"Der Buddler Snipes hat mir 10 Erz angeboten, wenn ich es schaffe, den Gardisten Aaron von seiner Truhe wegzulocken!");
 	B_LogEntry(CH2_SnipesDeal,"Kopáč Snipes mi nabídl 10 magických nugetů za to, že odlákám strážce Aarona od jeho truhlice!");
 };
+
 // ***************** Infos *****************************
+
 instance VLK_584_Snipes_DEAL_RUN(C_INFO)
 {
 	npc = VLK_584_Snipes;
@@ -82,8 +85,10 @@ func int VLK_584_Snipes_DEAL_RUN_Condition()
 {
 	if (Snipes_deal == LOG_SUCCESS)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void VLK_584_Snipes_DEAL_RUN_Info()
@@ -107,7 +112,9 @@ func void VLK_584_Snipes_DEAL_RUN_Info()
 //	B_LogEntry(CH2_SnipesDeal,"Snipes hat mir für weitere 30 Erz den Schlüssel zu Aarons Truhe angeboten.");
 	B_LogEntry(CH2_SnipesDeal,"Snipes mi za dalších 30 nugetů nabídl klíč od Aaronovy truhlice.");
 };
+
 // ***************** Infos *****************************
+
 instance VLK_584_Snipes_DEAL_2(C_INFO)
 {
 	npc = VLK_584_Snipes;
@@ -122,16 +129,18 @@ instance VLK_584_Snipes_DEAL_2(C_INFO)
 
 func int VLK_584_Snipes_DEAL_2_Condition()
 {
-	if (Npc_KnowsInfo(hero,VLK_584_Snipes_DEAL_RUN))
-	&& (Npc_HasItems(self,ItKe_OM_02))
+	if ((Npc_KnowsInfo(hero,VLK_584_Snipes_DEAL_RUN))
+	&& (Npc_HasItems(self,ItKe_OM_02)))
 	{
-	return 1;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void VLK_584_Snipes_DEAL_2_Info()
 {
-	if (Npc_HasItems(hero,ItMinugget)  >= 30 )
+	if (Npc_HasItems(hero,ItMinugget) >= 30)
 	{
 //		AI_Output(other,self,"VLK_584_Snipes_DEAL_2_Info_15_01");//Give me the key.
 //		AI_Output(other,self,"VLK_584_Snipes_DEAL_2_Info_15_01");//Gib mir den Schlüssel.

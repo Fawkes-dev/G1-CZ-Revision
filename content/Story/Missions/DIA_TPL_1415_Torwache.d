@@ -8,6 +8,7 @@ instance DIA_Tpl_1415_Torwache_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Tpl_1415_Torwache_Exit_Condition;
 	information = DIA_Tpl_1415_Torwache_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,15 +33,15 @@ instance DIA_Tpl_1415_Torwache_First(C_INFO)
 	nr = 2;
 	condition = DIA_Tpl_1415_Torwache_First_Condition;
 	information = DIA_Tpl_1415_Torwache_First_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Tpl_1415_Torwache_First_Condition()
 {
 	if (Kapitel >= 2)
 	{
-		return FALSE;
+		return 0;
 	};
 
 	if (Npc_GetDistToWP(other,"PSI_START") > 800)
@@ -50,8 +51,10 @@ func int DIA_Tpl_1415_Torwache_First_Condition()
 
 	if (Npc_RefuseTalk(self) == FALSE)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Tpl_1415_Torwache_First_Info()
@@ -120,6 +123,7 @@ instance DIA_Tpl_1415_Torwache_Sit(C_INFO)
 	nr = 2;
 	condition = DIA_Tpl_1415_Torwache_Sit_Condition;
 	information = DIA_Tpl_1415_Torwache_Sit_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How are things in the Camp?";
 //	description = "Wie sieht's im Lager aus?";
@@ -154,14 +158,16 @@ instance Tpl_1415_Torwache_TEMPLERAUFNAHME(C_INFO)
 
 func int Tpl_1415_Torwache_TEMPLERAUFNAHME_Condition()
 {
-	if ((Npc_HasItems(hero,ItAt_Crawlerqueen) >= 1)
-	|| (CorKalom_BringMCQBalls == LOG_SUCCESS))
+	if (((Npc_HasItems(hero,ItAt_Crawlerqueen) >= 1) || (CorKalom_BringMCQBalls == LOG_SUCCESS))
 	&& (Npc_GetTrueGuild(hero) == GIL_NOV)
-	&& (Npc_GetDistToNpc(hero,self) < 1000)
+	&& (Npc_GetDistToNpc(hero,self) < 1000))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0
 };
+
 func void Tpl_1415_Torwache_TEMPLERAUFNAHME_Info()
 {
 	AI_GotoNpc(hero,self);
@@ -198,10 +204,12 @@ func int Tpl_1415_Templer_ROCK_Condition()
 {
 	if (Kapitel < 2)
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0
 };
+
 func void Tpl_1415_Templer_ROCK_Info()
 {
 //	AI_Output(other,self,"Tpl_1415_Templer_ROCK_Info_15_01"); //I need armor.
@@ -232,7 +240,7 @@ func void Tpl_1415_Templer_ROCK_BUY()
 //	AI_Output(other,self,"Tpl_1415_Templer_ROCK_BUY_15_01"); //Okay, give me the loincloth.
 //	AI_Output(other,self,"Tpl_1415_Templer_ROCK_BUY_15_01"); //Na schön, gib mir den Rock.
 	AI_Output(other,self,"Tpl_1415_Templer_ROCK_BUY_15_01"); //Dobře, dej mi tu bederní roušku.
-	if (Npc_HasItems(hero,ItMiNugget) <  VALUE_NOV_ARMOR_L)
+	if (Npc_HasItems(hero,ItMiNugget) < VALUE_NOV_ARMOR_L)
 	{
 //		AI_Output(self,other,"Tpl_1415_Templer_ROCK_BUY_13_02"); //Come back as soon as you have enough ore!
 //		AI_Output(self,other,"Tpl_1415_Templer_ROCK_BUY_13_02"); //Komm wieder, wenn du genug Erz hast!
@@ -248,6 +256,4 @@ func void Tpl_1415_Templer_ROCK_BUY()
 		B_GiveInvItems(self,hero,NOV_ARMOR_L,1);
 		Tpl_1415_Templer_ROCK.permanent = 0;
 	};
-
 };
-

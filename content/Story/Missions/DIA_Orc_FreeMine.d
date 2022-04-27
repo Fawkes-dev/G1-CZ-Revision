@@ -80,7 +80,7 @@ instance Info_FreemineOrc_INTRO(C_INFO)
 
 func int Info_FreemineOrc_INTRO_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Info_FreemineOrc_INTRO_Info()
@@ -109,8 +109,10 @@ func int Info_FreemineOrc_WASPASSIERT_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_FreemineOrc_INTRO))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_FreemineOrc_WASPASSIERT_Info()
@@ -151,8 +153,10 @@ func int Info_FreemineOrc_WASTUN_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_FreemineOrc_WASPASSIERT))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_FreemineOrc_WASTUN_Info()
@@ -191,12 +195,14 @@ instance Info_FreemineOrc_OFFER(C_INFO)
 
 func int Info_FreemineOrc_OFFER_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_FreemineOrc_WASTUN)
-	&& !Npc_KnowsInfo(hero,Info_FreemineOrc_GIVEPOTION)
-	&& !Npc_HasItems(hero,Orcmedicine)
+	if ((Npc_KnowsInfo(hero,Info_FreemineOrc_WASTUN))
+	&& (!Npc_KnowsInfo(hero,Info_FreemineOrc_GIVEPOTION))
+	&& (!Npc_HasItems(hero,Orcmedicine)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_FreemineOrc_OFFER_Info()
@@ -229,10 +235,12 @@ instance Info_FreemineOrc_CRAWLER(C_INFO)
 
 func int Info_FreemineOrc_CRAWLER_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_FreemineOrc_WASPASSIERT)
+	if (Npc_KnowsInfo(hero,Info_FreemineOrc_WASPASSIERT))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_FreemineOrc_CRAWLER_Info()
@@ -270,8 +278,10 @@ func int Info_FreemineOrc_TONGUE_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_FreemineOrc_INTRO))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_FreemineOrc_TONGUE_Info()
@@ -301,12 +311,14 @@ instance Info_FreemineOrc_SEARCHPOTION(C_INFO)
 
 func int Info_FreemineOrc_SEARCHPOTION_Condition()
 {
-	if  Npc_KnowsInfo(hero,Info_FreemineOrc_OFFER)
-	&& !Npc_KnowsInfo(hero,Info_FreemineOrc_GIVEPOTION)
-	&& !Npc_HasItems(hero,Orcmedicine)
+	if ((Npc_KnowsInfo(hero,Info_FreemineOrc_OFFER))
+	&& (!Npc_KnowsInfo(hero,Info_FreemineOrc_GIVEPOTION))
+	&& (!Npc_HasItems(hero,Orcmedicine)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_FreemineOrc_SearchPotion_Info()
@@ -344,10 +356,12 @@ instance Info_FreemineOrc_SUCHEULUMULU(C_INFO)
 
 func int Info_FreemineOrc_SUCHEULUMULU_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_FreemineOrc_INTRO)
+	if (Npc_KnowsInfo(hero,Info_FreemineOrc_INTRO))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_FreemineOrc_SUCHEULUMULU_Info()
@@ -395,11 +409,13 @@ instance Info_FreemineOrc_GIVEPOTION(C_INFO)
 
 func int Info_FreemineOrc_GIVEPOTION_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_FreemineOrc_WASTUN)
-	&& Npc_HasItems(hero,Orcmedicine)
+	if ((Npc_KnowsInfo(hero,Info_FreemineOrc_WASTUN))
+	&& (Npc_HasItems(hero,Orcmedicine)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_FreemineOrc_GIVEPOTION_Info()
@@ -437,7 +453,7 @@ func void Info_FreemineOrc_GIVEPOTION_Info()
 //	AI_Output(self,hero,"Info_FreemineOrc_GIVEPOTION_17_07"); //Fremder bringen, dann Tarrok machen Ulu-Mulu!
 	AI_Output(self,hero,"Info_FreemineOrc_GIVEPOTION_17_07"); //Cizinec to přinést, Tarrok pak udělat Ulu-Mulu!
 
-	if !Npc_KnowsInfo(hero,Info_FreemineOrc_OFFER)
+	if (!Npc_KnowsInfo(hero,Info_FreemineOrc_OFFER))
 	{
 		B_Story_FoundOrcSlave();
 	};
@@ -464,8 +480,10 @@ func int Info_FreemineOrc_FIREWARAN_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_FreemineOrc_GIVEPOTION))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_FreemineOrc_FIREWARAN_Info()
@@ -476,7 +494,6 @@ func void Info_FreemineOrc_FIREWARAN_Info()
 //	AI_Output(self,hero,"Info_FreemineOrc_FIREWARAN_17_02"); //Be tongue of fire! Be tongue of fire lizard!
 //	AI_Output(self,hero,"Info_FreemineOrc_FIREWARAN_17_02"); //Seien Flammenzunge! Seien Zunge von Feuerechse!
 	AI_Output(self,hero,"Info_FreemineOrc_FIREWARAN_17_02"); //Být ohnivý jazyk. Být jazyk ohnivé ještěrky!
-
 };
 
 //---------------------------------------------------------------------
@@ -496,12 +513,14 @@ instance Info_FreemineOrc_FIREWARAN2(C_INFO)
 
 func int Info_FreemineOrc_FIREWARAN2_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_FreemineOrc_FIREWARAN)
-	&& !Npc_HasItems(hero,ItAt_Waran_01)
-	&& !Npc_KnowsInfo(hero,Info_FreemineOrc_EVERYULUMULU))
+	if ((Npc_KnowsInfo(hero,Info_FreemineOrc_FIREWARAN))
+	&& (!Npc_HasItems(hero,ItAt_Waran_01))
+	&& (!Npc_KnowsInfo(hero,Info_FreemineOrc_EVERYULUMULU)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_FreemineOrc_FIREWARAN2_Info()
@@ -540,8 +559,10 @@ func int Info_FreemineOrc_SHADOWBEAST_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_FreemineOrc_GIVEPOTION))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_FreemineOrc_SHADOWBEAST_Info()
@@ -571,12 +592,14 @@ instance Info_FreemineOrc_SHADOWBEAST2(C_INFO)
 
 func int Info_FreemineOrc_SHADOWBEAST2_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_FreemineOrc_SHADOWBEAST)
-	&& !Npc_HasItems(hero,ItAt_Shadow_02)
-	&& !Npc_KnowsInfo(hero,Info_FreemineOrc_EVERYULUMULU))
+	if ((Npc_KnowsInfo(hero,Info_FreemineOrc_SHADOWBEAST))
+	&& (!Npc_HasItems(hero,ItAt_Shadow_02))
+	&& (!Npc_KnowsInfo(hero,Info_FreemineOrc_EVERYULUMULU)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_FreemineOrc_SHADOWBEAST2_Info()
@@ -615,8 +638,10 @@ func int Info_FreemineOrc_SWAMPSHARK_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_FreemineOrc_GIVEPOTION))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_FreemineOrc_SWAMPSHARK_Info()
@@ -646,12 +671,14 @@ instance Info_FreemineOrc_SWAMPSHARK2(C_INFO)
 
 func int Info_FreemineOrc_SWAMPSHARK2_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_FreemineOrc_SWAMPSHARK)
-	&& !Npc_HasItems(hero,ItAt_Swampshark_02)
-	&& !Npc_KnowsInfo(hero,Info_FreemineOrc_EVERYULUMULU))
+	if ((Npc_KnowsInfo(hero,Info_FreemineOrc_SWAMPSHARK))
+	&& (!Npc_HasItems(hero,ItAt_Swampshark_02))
+	&& (!Npc_KnowsInfo(hero,Info_FreemineOrc_EVERYULUMULU)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_FreemineOrc_SWAMPSHARK2_Info()
@@ -687,8 +714,10 @@ func int Info_FreemineOrc_TROLL_Condition()
 {
 	if (Npc_KnowsInfo(hero,Info_FreemineOrc_GIVEPOTION))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_FreemineOrc_TROLL_Info()
@@ -718,12 +747,14 @@ instance Info_FreemineOrc_TROLL2(C_INFO)
 
 func int Info_FreemineOrc_TROLL2_Condition()
 {
-	if (Npc_KnowsInfo(hero,Info_FreemineOrc_TROLL)
-	&& !Npc_HasItems(hero,ItAt_Troll_02)
-	&& !Npc_KnowsInfo(hero,Info_FreemineOrc_EVERYULUMULU))
+	if ((Npc_KnowsInfo(hero,Info_FreemineOrc_TROLL))
+	&& (!Npc_HasItems(hero,ItAt_Troll_02))
+	&& (!Npc_KnowsInfo(hero,Info_FreemineOrc_EVERYULUMULU)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_FreemineOrc_TROLL2_Info()
@@ -764,17 +795,22 @@ instance Info_FreemineOrc_LOOKINGULUMULU(C_INFO)
 func int Info_FreemineOrc_LOOKINGULUMULU_Condition()
 {
 	//#Needs_Attention - toto je nespravna podmienka - dialog je dostupny, len ak nema hrac jazyk ohnivej jasterky a ma vsetko ostatne
-	if (!Npc_HasItems(hero,ItAt_Waran_01)
-	&& Npc_HasItems(hero,ItAt_Shadow_02)
-	&& Npc_HasItems(hero,ItAt_Swampshark_02)
-	&& Npc_HasItems(hero,ItAt_Troll_02)
-	&& Npc_KnowsInfo(hero,Info_FreemineOrc_FIREWARAN2)
-	&& Npc_KnowsInfo(hero,Info_FreemineOrc_SHADOWBEAST2)
-	&& Npc_KnowsInfo(hero,Info_FreemineOrc_SWAMPSHARK2)
-	&& Npc_KnowsInfo(hero,Info_FreemineOrc_TROLL2))
+	//Bugfix GitHub issue #60 FreeMineOrc dialogue Info_FreemineOrc_LOOKINGULUMULU has incorrect condition.
+	if ((Npc_KnowsInfo(hero,Info_FreemineOrc_FIREWARAN2))
+	&& (Npc_KnowsInfo(hero,Info_FreemineOrc_SHADOWBEAST2))
+	&& (Npc_KnowsInfo(hero,Info_FreemineOrc_SWAMPSHARK2))
+	&& (Npc_KnowsInfo(hero,Info_FreemineOrc_TROLL2)))
 	{
-		return TRUE;
+		if ((!Npc_HasItems(hero,ItAt_Waran_01))
+		|| (!Npc_HasItems(hero,ItAt_Shadow_02))
+		|| (!Npc_HasItems(hero,ItAt_Swampshark_02))
+		|| (!Npc_HasItems(hero,ItAt_Troll_02)))
+		{
+			return 1;
+		};
 	};
+
+	return 0;
 };
 
 func void Info_FreemineOrc_LOOKINGULUMULU_Info()
@@ -807,13 +843,15 @@ instance Info_FreemineOrc_EVERYULUMULU(C_INFO)
 func int Info_FreemineOrc_EVERYULUMULU_Condition()
 {
 	if ((FreemineOrc_LookingUlumulu == LOG_RUNNING)
-	&& Npc_HasItems(hero,ItAt_Waran_01)
-	&& Npc_HasItems(hero,ItAt_Shadow_02)
-	&& Npc_HasItems(hero,ItAt_Swampshark_02)
-	&& Npc_HasItems(hero,ItAt_Troll_02))
+	&& (Npc_HasItems(hero,ItAt_Waran_01))
+	&& (Npc_HasItems(hero,ItAt_Shadow_02))
+	&& (Npc_HasItems(hero,ItAt_Swampshark_02))
+	&& (Npc_HasItems(hero,ItAt_Troll_02)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_FreemineOrc_EVERYULUMULU_Info()
@@ -841,4 +879,3 @@ func void Info_FreemineOrc_EVERYULUMULU_Info()
 
 	AI_StopProcessInfos(self);
 };
-

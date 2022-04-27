@@ -33,6 +33,7 @@ instance DIA_Harlok_FetchHarlok(C_INFO)
 	nr = 1;
 	condition = DIA_Harlok_FetchHarlok_Condition;
 	information = DIA_Harlok_FetchHarlok_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Ghorim sent me.";
 //	description = "Ghorim schickt mich.";
@@ -45,6 +46,8 @@ func int DIA_Harlok_FetchHarlok_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Harlok_FetchHarlok_Info()
@@ -105,6 +108,7 @@ instance DIA_Harlok_HarlokAgain(C_INFO)
 	nr = 1;
 	condition = DIA_Harlok_HarlokAgain_Condition;
 	information = DIA_Harlok_HarlokAgain_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I just wanted to remind you to take your pal's place now!";
 //	description = "Ich wollte dich nochmal dran erinnern, deinen Kumpel abzulösen!";
@@ -113,10 +117,13 @@ instance DIA_Harlok_HarlokAgain(C_INFO)
 
 func int DIA_Harlok_HarlokAgain_Condition()
 {
-	if ((self.aivar[AIV_WASDEFEATEDBYSC]==FALSE) && Npc_KnowsInfo(hero,DIA_Harlok_FetchHarlok))
+	if ((self.aivar[AIV_WASDEFEATEDBYSC] == FALSE)
+	&& (Npc_KnowsInfo(hero,DIA_Harlok_FetchHarlok)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Harlok_HarlokAgain_Info()
@@ -143,6 +150,7 @@ instance DIA_Harlok_SendHarlok(C_INFO)
 	nr = 1;
 	condition = DIA_Harlok_SendHarlok_Condition;
 	information = DIA_Harlok_SendHarlok_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Well, d'you feel like giving your pal a break now? ";
 //	description = "Hast du langsam Lust bekommen, deinen Freud abzulösen?";
@@ -151,10 +159,13 @@ instance DIA_Harlok_SendHarlok(C_INFO)
 
 func int DIA_Harlok_SendHarlok_Condition()
 {
-	if ((self.aivar[AIV_WASDEFEATEDBYSC]==TRUE) && Npc_KnowsInfo(hero,DIA_Harlok_FetchHarlok))
+	if ((self.aivar[AIV_WASDEFEATEDBYSC] == TRUE)
+	&& (Npc_KnowsInfo(hero,DIA_Harlok_FetchHarlok)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Harlok_SendHarlok_Info()
@@ -196,16 +207,19 @@ instance DIA_Harlok_Angry(C_INFO)
 	nr = 1;
 	condition = DIA_Harlok_Angry_Condition;
 	information = DIA_Harlok_Angry_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Harlok_Angry_Condition()
 {
-	if (Npc_IsInState(self,ZS_TALK) && (Ghorim_KickHarlok == LOG_SUCCESS))
+	if ((Npc_IsInState(self,ZS_TALK))
+	&& (Ghorim_KickHarlok == LOG_SUCCESS))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Harlok_Angry_Info()
@@ -216,4 +230,3 @@ func void DIA_Harlok_Angry_Info()
 
 	AI_StopProcessInfos(self);
 };
-

@@ -8,6 +8,7 @@ instance DIA_Bartholo_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Bartholo_Exit_Condition;
 	information = DIA_Bartholo_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance Info_Bartholo_HAllo(C_INFO)
 	nr = 4;
 	condition = Info_Bartholo_HAllo_Condition;
 	information = Info_Bartholo_HAllo_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Who are you?";
 //	description = "Wer bist du?";
@@ -72,14 +74,12 @@ instance Info_Bartholo_PERM(C_INFO)
 	nr = 4;
 	condition = Info_Bartholo_PERM_Condition;
 	information = Info_Bartholo_PERM_Info;
-	//#Needs_Attention toto obchodovanie nieje permanentne - takze po jednom obchodovani dialog zmizne.
-	//Chceme ale aby Bartholo obchodoval?
-	//Predava kluc od skladu ItKe_Storage_01 - zadarmo :-/
+	important = 0;
 	permanent = 0;
+	trade = 1;
 //	description = "I want to make a deal with you.";
 //	description = "Ich will mit dir handeln.";
 	description = "Chtěl bych s tebou obchodovat.";
-	trade = 1;
 };
 
 func int Info_Bartholo_PERM_Condition()
@@ -111,6 +111,7 @@ instance Info_Bartholo_Krautbote(C_INFO)
 	nr = 4;
 	condition = Info_Bartholo_Krautbote_Condition;
 	information = Info_Bartholo_Krautbote_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I have some weed here for Gomez. Cor Kalom sent it.";
 //	description = "Ich habe ne Ladung Kraut von Cor Kalom für Gomez.";
@@ -123,6 +124,8 @@ func int Info_Bartholo_Krautbote_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Bartholo_Krautbote_Info()
@@ -184,11 +187,14 @@ instance DIA_EBR_106_Bartholo_Wait4SC(C_INFO)
 
 func int DIA_EBR_106_Bartholo_Wait4SC_Condition()
 {
-	if ExploreSunkenTower
+	if (ExploreSunkenTower)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void DIA_EBR_106_Bartholo_Wait4SC_Info()
 {
 	AI_SetWalkmode(self,NPC_WALK);

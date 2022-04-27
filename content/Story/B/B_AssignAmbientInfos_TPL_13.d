@@ -12,6 +12,7 @@ instance Info_Tpl_13_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Tpl_13_EXIT_Condition;
 	information = Info_Tpl_13_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = "END";
 };
@@ -35,6 +36,7 @@ instance Info_Tpl_13_EinerVonEuchWerden(C_INFO) // E1
 	nr = 4;
 	condition = Info_Tpl_13_EinerVonEuchWerden_Condition;
 	information = Info_Tpl_13_EinerVonEuchWerden_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I want to become a templar like you.";
 //	description = "Ich will ein Templer werden - so wie du.";
@@ -79,6 +81,7 @@ instance Info_Tpl_13_WichtigePersonen(C_INFO)
 	nr = 3;
 	condition = Info_Tpl_13_WichtigePersonen_Condition;
 	information = Info_Tpl_13_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Who calls the shots around here?";
 //	description = "Wer hat hier das Sagen?";
@@ -109,6 +112,7 @@ instance Info_Tpl_13_DasLager(C_INFO)
 	nr = 2;
 	condition = Info_Tpl_13_DasLager_Condition;
 	information = Info_Tpl_13_DasLager_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I'd like to take a look inside the Sleeper's temple...";
 //	description = "Ich würde gerne mal in den Tempel des Schläfers gehen...";
@@ -141,6 +145,7 @@ instance Info_Tpl_13_DieLage(C_INFO) // E1
 	nr = 1;
 	condition = Info_Tpl_13_DieLage_Condition;
 	information = Info_Tpl_13_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How's it going?";
 //	description = "Wie läuft's?";

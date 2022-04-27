@@ -8,6 +8,7 @@ instance DIA_Rodriguez_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Rodriguez_Exit_Condition;
 	information = DIA_Rodriguez_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Rodriguez_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_Rodriguez_Hello_Condition;
 	information = DIA_Rodriguez_Hello_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I'm looking for the High Magician of the Circle of Fire!";
 //	description = "Ich suche den obersten Magier des Feuers!";
@@ -42,8 +44,10 @@ func int DIA_Rodriguez_Hello_Condition()
 {
 	if (Npc_GetTrueGuild(hero) != GIL_KDF)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Rodriguez_Hello_Info()

@@ -33,6 +33,7 @@ instance DIA_Wolf_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_Wolf_Hello_Condition;
 	information = DIA_Wolf_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Who are you?";
 //	description = "Wer bist du?";
@@ -68,16 +69,18 @@ instance DIA_Wolf_GreetORG(C_INFO)
 	nr = 1;
 	condition = DIA_Wolf_GreetORG_Condition;
 	information = DIA_Wolf_GreetORG_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Wolf_GreetORG_Condition()
 {
 	if (Npc_GetTrueGuild(hero) == GIL_ORG)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Wolf_GreetORG_Info()
@@ -97,9 +100,10 @@ instance Org_855_Wolf_TRADE(C_INFO)
 	nr = 800;
 	condition = Org_855_Wolf_TRADE_Condition;
 	information = Org_855_Wolf_TRADE_Info;
+	important = 0;
 	permanent = 1;
-	description = DIALOG_TRADE;
 	trade = 1;
+	description = DIALOG_TRADE;
 };
 
 func int Org_855_Wolf_TRADE_Condition()
@@ -115,7 +119,6 @@ func void Org_855_Wolf_TRADE_Info()
 //	AI_Output(self,other,"Org_855_Wolf_TRADE_09_01"); //I buy furs and skins from the hunters. If you get something like that, I'll buy it.
 //	AI_Output(self,other,"Org_855_Wolf_TRADE_09_01"); //Ich kaufe Felle und Häute von den Jägern. Wenn du an so was rankommst, kauf' ich dir die Sachen ab.
 	AI_Output(self,other,"Org_855_Wolf_TRADE_09_01"); //Nakupuju od lovců kožešiny a kůže. Jestli něco takového máš, koupím to.
-
 };
 
 //****************************************
@@ -128,6 +131,7 @@ instance Org_855_Wolf_WhereHunter(C_INFO)
 	nr = 900;
 	condition = Org_855_Wolf_WhereHunter_Condition;
 	information = Org_855_Wolf_WhereHunter_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How do I get furs and skins?";
 //	description = "Wie komme ich an Felle und Häute?";
@@ -162,6 +166,7 @@ instance DIA_Wolf_SellArmor(C_INFO)
 	nr = 700;
 	condition = DIA_Wolf_SellArmor_Condition;
 	information = DIA_Wolf_SellArmor_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I'm looking for better armor.";
 //	description = "Ich suche eine bessere Rüstung.";
@@ -175,6 +180,8 @@ func int DIA_Wolf_SellArmor_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Wolf_SellArmor_Info()
@@ -183,7 +190,7 @@ func void DIA_Wolf_SellArmor_Info()
 //	AI_Output(other,self,"DIA_Wolf_SellArmor_15_00"); //Ich suche eine bessere Rüstung.
 	AI_Output(other,self,"DIA_Wolf_SellArmor_15_00"); //Sháním lepší zbroj.
 
-	if ((Npc_GetTrueGuild(other)==GIL_ORG) || (Npc_GetTrueGuild(other)==GIL_SLD))
+	if ((Npc_GetTrueGuild(other) == GIL_ORG) || (Npc_GetTrueGuild(other) == GIL_SLD))
 	{
 //		AI_Output(self,other,"DIA_Wolf_SellArmor_09_01"); //Since you're one of us now, I can sell you one.
 //		AI_Output(self,other,"DIA_Wolf_SellArmor_09_01"); //Jetzt, wo du einer von uns bist, kann ich dir eine verkaufen.
@@ -213,7 +220,7 @@ func void DIA_Wolf_SellArmor_M()
 //	AI_Output(other,self,"DIA_Wolf_SellArmor_M_15_01"); //Ich möchte die mittlere Rüstung haben.
 	AI_Output(other,self,"DIA_Wolf_SellArmor_M_15_01"); //Chci střední zbroj.
 
-	if (Npc_HasItems(hero,ItMinugget)< VALUE_ORG_ARMOR_M)
+	if (Npc_HasItems(hero,ItMinugget) < VALUE_ORG_ARMOR_M)
 	{
 //		AI_Output(self,other,"DIA_Wolf_SellArmor_M_09_02"); //No ore, no armor.
 //		AI_Output(self,other,"DIA_Wolf_SellArmor_M_09_02"); //Ohne Erz gibt es auch keine Rüstung.
@@ -282,10 +289,12 @@ instance ORG_855_Wolf_TRAINOFFER(C_INFO)
 
 func int ORG_855_Wolf_TRAINOFFER_Condition()
 {
-	if( Npc_GetTalentSkill (hero,NPC_TALENT_BOW) != 2)
+	if (Npc_GetTalentSkill (hero,NPC_TALENT_BOW) != 2)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void ORG_855_Wolf_TRAINOFFER_Info()
@@ -326,13 +335,15 @@ instance ORG_855_Wolf_TRAIN(C_INFO)
 
 func int ORG_855_Wolf_TRAIN_Condition()
 {
-	if (Npc_KnowsInfo(hero,ORG_855_Wolf_TRAINOFFER))
-	&& (Npc_GetTalentSkill (hero,NPC_TALENT_BOW) == 0)
+	if ((Npc_KnowsInfo(hero,ORG_855_Wolf_TRAINOFFER))
+	&& (Npc_GetTalentSkill (hero,NPC_TALENT_BOW) == 0))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void ORG_855_Wolf_TRAIN_Info()
 {
 //	AI_Output(other,self,"ORG_855_Wolf_TRAIN_Info_15_01"); //Teach me how to use a bow.
@@ -340,7 +351,7 @@ func void ORG_855_Wolf_TRAIN_Info()
 	AI_Output(other,self,"ORG_855_Wolf_TRAIN_Info_15_01"); //Nauč mě zacházet s lukem.
 	if (Npc_HasItems(hero,ItMiNugget) >= 50)
 	{
-		if B_GiveSkill(hero,NPC_TALENT_BOW,1,LPCOST_TALENT_BOW_1)
+		if (B_GiveSkill(hero,NPC_TALENT_BOW,1,LPCOST_TALENT_BOW_1))
 		{
 //			AI_Output(self,other,"ORG_855_Wolf_TRAIN_Info_09_02"); //Your hits depend on your dexterity. The more dexterous you become, the more accurately your arrows will hit their targets.
 //			AI_Output(self,other,"ORG_855_Wolf_TRAIN_Info_09_02"); //Deine Geschicklichkeit ist das Maß für einen Treffer. Je geschickter du wirst, umso genauer werden deine Pfeile ihr Ziel treffen.
@@ -371,13 +382,15 @@ instance ORG_855_Wolf_TRAINAGAIN(C_INFO)
 
 func int ORG_855_Wolf_TRAINAGAIN_Condition()
 {
-	if (Npc_KnowsInfo(hero,ORG_855_Wolf_TRAINOFFER))
-	&& (Npc_GetTalentSkill (hero,NPC_TALENT_BOW) == 1)
+	if ((Npc_KnowsInfo(hero,ORG_855_Wolf_TRAINOFFER))
+	&& (Npc_GetTalentSkill (hero,NPC_TALENT_BOW) == 1))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void ORG_855_Wolf_TRAINAGAIN_Info()
 {
 //	AI_Output(other,self,"ORG_855_Wolf_TRAINAGAIN_Info_15_01"); //I want to improve my skill with the bow.
@@ -385,7 +398,7 @@ func void ORG_855_Wolf_TRAINAGAIN_Info()
 	AI_Output(other,self,"ORG_855_Wolf_TRAINAGAIN_Info_15_01"); //Chci se zlepšit v umění lukostřelby.
 	if (Npc_HasItems(hero,ItMiNugget) >= 50)
 	{
-		if B_GiveSkill(hero,NPC_TALENT_BOW,2,LPCOST_TALENT_BOW_2)
+		if (B_GiveSkill(hero,NPC_TALENT_BOW,2,LPCOST_TALENT_BOW_2))
 		{
 //			AI_Output(self,other,"ORG_855_Wolf_TRAINAGAIN_Info_09_02"); //You're a good hunter already. Now acquire the remaining knowledge.
 //			AI_Output(self,other,"ORG_855_Wolf_TRAINAGAIN_Info_09_02"); //Du bist jetzt schon ein guter Jäger. Erfahre nun das letzte Wissen.
@@ -404,15 +417,18 @@ func void ORG_855_Wolf_TRAINAGAIN_Info()
 		};
 	};
 };
+
 //---------------------------------------------------------------
 //	 					 DEX
 //---------------------------------------------------------------
+
 instance ORG_855_Wolf_Teach(C_INFO)
 {
 	npc = ORG_855_Wolf;
 	nr = 100;
 	condition = ORG_855_Wolf_Teach_Condition;
 	information = ORG_855_Wolf_Teach_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Can you teach me something?";
 //	description = "Kannst du mir was beibringen?";
@@ -423,8 +439,10 @@ func int ORG_855_Wolf_Teach_Condition()
 {
 	if (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void ORG_855_Wolf_Teach_Info()
@@ -438,11 +456,11 @@ func void ORG_855_Wolf_Teach_Info()
 
 	if (log_wolftrain == FALSE)
 	{
-	Log_CreateTopic(GE_TeacherNC,LOG_NOTE);
-//	B_LogEntry(GE_TeacherNC,"Wolf, the bandit, can show me how to improve my DEXTERITY.");
-//	B_LogEntry(GE_TeacherNC,"Wolf der Bandit, kann mir zeigen, wie ich mein GESCHICK verbessere.");
-	B_LogEntry(GE_TeacherNC,"Bandita Wolf mi může ukázat, jak si zlepšit OBRATNOST.");
-	log_wolftrain = TRUE;
+		Log_CreateTopic(GE_TeacherNC,LOG_NOTE);
+//		B_LogEntry(GE_TeacherNC,"Wolf, the bandit, can show me how to improve my DEXTERITY.");
+//		B_LogEntry(GE_TeacherNC,"Wolf der Bandit, kann mir zeigen, wie ich mein GESCHICK verbessere.");
+		B_LogEntry(GE_TeacherNC,"Bandita Wolf mi může ukázat, jak si zlepšit OBRATNOST.");
+		log_wolftrain = TRUE;
 	};
 
 	Info_ClearChoices(ORG_855_Wolf_Teach);
@@ -455,6 +473,7 @@ func void ORG_855_Wolf_Teach_BACK()
 {
 	Info_ClearChoices(ORG_855_Wolf_Teach);
 };
+
 func void ORG_855_Wolf_Teach_DEX_1()
 {
 	B_BuyAttributePoints(other,ATR_DEXTERITY, LPCOST_ATTRIBUTE_DEXTERITY);
@@ -498,10 +517,12 @@ instance Info_Wolf_GOOD(C_INFO)
 
 func int Info_Wolf_GOOD_Condition()
 {
-	if Gorn_GotoWolf
+	if (Gorn_GotoWolf)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Wolf_GOOD_Info()
@@ -540,10 +561,12 @@ instance Info_Wolf_SPEAK(C_INFO)
 
 func int Info_Wolf_SPEAK_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Wolf_GOOD)
+	if (Npc_KnowsInfo(hero,Info_Wolf_GOOD))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Wolf_SPEAK_Info()
@@ -591,10 +614,12 @@ instance Info_Wolf_SKIN(C_INFO)
 
 func int Info_Wolf_SKIN_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Wolf_SPEAK)
+	if (Npc_KnowsInfo(hero,Info_Wolf_SPEAK))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Wolf_SKIN_Info()
@@ -648,10 +673,12 @@ instance Info_Wolf_PROFIT(C_INFO)
 
 func int Info_Wolf_PROFIT_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Wolf_SPEAK)
+	if (Npc_KnowsInfo(hero,Info_Wolf_SPEAK))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Wolf_PROFIT_Info()
@@ -676,17 +703,19 @@ instance Info_Wolf_MCPLATESFEW(C_INFO)
 	permanent = 0;
 //	description = "I've gathered some of those minecrawler armor plates!";
 //	description = "Ich habe einige der Minecrawler-Panzerplatten eingesammelt!";
-	description = "Nasbíral jsem nějaké ty krunýře  důlních červů!";
+	description = "Nasbíral jsem nějaké ty krunýře důlních červů!";
 };
 
 func int Info_Wolf_MCPLATESFEW_Condition()
 {
-	if (Knows_GetMCPlates)
+	if ((Knows_GetMCPlates)
 	&& (Npc_HasItems(hero,ItAt_Crawler_02) > 0)
-	&& (Npc_HasItems(hero,ItAt_Crawler_02) < 15)
+	&& (Npc_HasItems(hero,ItAt_Crawler_02) < 15))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Wolf_MCPLATESFEW_Info()
@@ -719,11 +748,13 @@ instance Info_Wolf_MCPLATESENOUGH(C_INFO)
 
 func int Info_Wolf_MCPLATESENOUGH_Condition()
 {
-	if (Knows_GetMCPlates)
-	&& (Npc_HasItems(hero,ItAt_Crawler_02) >= 15)
+	if ((Knows_GetMCPlates)
+	&& (Npc_HasItems(hero,ItAt_Crawler_02) >= 15))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Wolf_MCPLATESENOUGH_Info()
@@ -772,11 +803,13 @@ instance Info_Wolf_ARMORINWORK(C_INFO)
 
 func int Info_Wolf_ARMORINWORK_Condition()
 {
-	if (MCPlatesDelivered == TRUE)
-	&& (FreemineOrc_LookingUlumulu != LOG_SUCCESS)
+	if ((MCPlatesDelivered == TRUE)
+	&& (FreemineOrc_LookingUlumulu != LOG_SUCCESS))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Wolf_ARMORINWORK_Info()
@@ -810,11 +843,13 @@ instance Info_Wolf_ARMORFINISHED(C_INFO)
 
 func int Info_Wolf_ARMORFINISHED_Condition()
 {
-	if (MCPlatesDelivered == TRUE)
-	&& (FreemineOrc_LookingUlumulu == LOG_SUCCESS)
+	if ((MCPlatesDelivered == TRUE)
+	&& (FreemineOrc_LookingUlumulu == LOG_SUCCESS))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Wolf_ARMORFINISHED_Info()
@@ -867,8 +902,9 @@ instance Org_855_Wolf_SELLBOW(C_INFO)
 
 func int Org_855_Wolf_SELLBOW_Condition()
 {
-	return TRUE;
+	return 1;
 };
+
 func void Org_855_Wolf_SELLBOW_Info()
 {
 //	AI_Output(other,self,"Org_855_Wolf_SELLBOW_Info_15_01"); //Where can I get a bow here?
@@ -881,6 +917,4 @@ func void Org_855_Wolf_SELLBOW_Info()
 //	B_LogEntry(GE_TraderNC,"Wolf, the rogue, trades BOWS.");
 //	B_LogEntry(GE_TraderNC,"Wolf, der Bandit, handelt mit BÖGEN.");
 	B_LogEntry(GE_TraderNC,"Bandita Wolf obchoduje s LUKY.");
-
 };
-

@@ -19,7 +19,7 @@ func int Info_GornFM_EXIT_Condition()
 
 func void Info_GornFM_EXIT_Info()
 {
-	if self.aivar[AIV_PARTYMEMBER]
+	if (self.aivar[AIV_PARTYMEMBER])
 	{
 //		AI_Output(self,other,"Info_GornFM_EXIT_09_01"); //Let's fight!
 //		AI_Output(self,other,"Info_GornFM_EXIT_09_01"); //Auf in den Kampf!
@@ -62,8 +62,10 @@ func int Info_GornFM_WAIT_Condition()
 {
 	if (self.aivar[AIV_PARTYMEMBER] == TRUE)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_GornFM_WAIT_Info()
@@ -98,8 +100,10 @@ func int Info_GornFM_FOLLOW_Condition()
 {
 	if (self.aivar[AIV_PARTYMEMBER] == FALSE)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_GornFM_FOLLOW_Info()
@@ -114,4 +118,3 @@ func void Info_GornFM_FOLLOW_Info()
 	self.aivar[AIV_PARTYMEMBER] = TRUE;
 	Npc_ExchangeRoutine(self,"follow");
 };
-

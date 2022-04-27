@@ -101,4 +101,3 @@ func void IEFan4_EXIT_Info()
 {
 	AI_StopProcessInfos(self);
 };
-

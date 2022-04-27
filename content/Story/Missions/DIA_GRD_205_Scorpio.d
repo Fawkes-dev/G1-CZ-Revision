@@ -8,6 +8,7 @@ instance DIA_Scorpio_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Scorpio_Exit_Condition;
 	information = DIA_Scorpio_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,17 +33,19 @@ instance DIA_Scorpio_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_Scorpio_Hello_Condition;
 	information = DIA_Scorpio_Hello_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Scorpio_Hello_Condition()
 {
-	if !C_NpcBelongsToOldcamp (other)
-	&& (Kapitel < 4)
+	if ((!C_NpcBelongsToOldcamp (other))
+	&& (Kapitel < 4))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Scorpio_Hello_Info()
@@ -136,6 +139,7 @@ instance DIA_Scorpio_REFUSETRAIN(C_INFO)
 	nr = 1;
 	condition = DIA_Scorpio_REFUSETRAIN_Condition;
 	information = DIA_Scorpio_REFUSETRAIN_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Can you teach me to fight?";
 //	description = "Kannst du mir beibringen zu kämpfen?";
@@ -151,6 +155,8 @@ func int DIA_Scorpio_REFUSETRAIN_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Scorpio_REFUSETRAIN_Info()
@@ -161,7 +167,6 @@ func void DIA_Scorpio_REFUSETRAIN_Info()
 //	AI_Output(self,other,"DIA_Scorpio_REFUSETRAIN_13_01"); //I only train guards. So until Thorus has made you one, you'll have to find someone else.
 //	AI_Output(self,other,"DIA_Scorpio_REFUSETRAIN_13_01"); //Ich unterrichte nur Gardisten. Bis Thorus dich nicht zum Gardisten gemacht hat, musst du dir jemand anderen suchen.
 	AI_Output(self,other,"DIA_Scorpio_REFUSETRAIN_13_01"); //Cvičím jenom stráže. Dokud tě Thorus nejmenuje strážcem, budeš si muset najít někoho jiného.
-
 };
 
 //*******************************
@@ -186,9 +191,12 @@ func int GRD_205_Scorpio_WELCOME_Condition()
 {
 	if (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void GRD_205_Scorpio_WELCOME_Info()
 {
 //	AI_Output(self,other,"GRD_205_Scorpio_WELCOME_Info_13_01"); //Joining us was the best choice you ever made!
@@ -215,14 +223,15 @@ instance GRD_205_Scorpio_CROSSBOW(C_INFO)
 
 func int GRD_205_Scorpio_CROSSBOW_Condition()
 {
-	if (Kapitel >= 4)
-	|| (Npc_GetTrueGuild(hero) == GIL_GRD)
-
+	if ((Kapitel >= 4)
+	|| (Npc_GetTrueGuild(hero) == GIL_GRD))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void GRD_205_Scorpio_CROSSBOW_Info()
 {
 //	AI_Output(other,self,"GRD_205_Scorpio_CROSSBOW_Info_15_01"); //Will you train me?
@@ -231,8 +240,8 @@ func void GRD_205_Scorpio_CROSSBOW_Info()
 //	AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW_Info_13_02"); //If you have enough ore, I'll teach you how to use a crossbow. Just pay me 200 ore.
 //	AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW_Info_13_02"); //Wenn du genug Erz hast, zeige ich dir den Umgang mit der Armbrust. Gib mir einfach 200 Erz.
 	AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW_Info_13_02"); //Pokud máš dost rudy, naučím tě, jak používat kuši. Zaplať mi 200 nugetů.
-	if (log_scorpiocrossbow == FALSE)
-	&& (Kapitel <= 4)
+	if ((log_scorpiocrossbow == FALSE)
+	&& (Kapitel <= 4))
 	{
 		Log_CreateTopic(GE_TeacherOC,LOG_NOTE);
 //		B_LogEntry(GE_TeacherOC,"Scorpio can teach me how to use a CROSSBOW.");
@@ -240,8 +249,8 @@ func void GRD_205_Scorpio_CROSSBOW_Info()
 		B_LogEntry(GE_TeacherOC,"Scorpio mě může naučit používat KUŠI.");
 		log_scorpiocrossbow = TRUE;
 	}
-	else if (log_scorpiocrossbow == FALSE)
-	&& (Kapitel > 4)
+	else if ((log_scorpiocrossbow == FALSE)
+	&& (Kapitel > 4))
 	{
 		Log_CreateTopic(GE_TeacherOW,LOG_NOTE);
 //		B_LogEntry(GE_TeacherOW,"Scorpio can teach me how to use a CROSSBOW.");
@@ -254,6 +263,7 @@ func void GRD_205_Scorpio_CROSSBOW_Info()
 	Info_Addchoice (GRD_205_Scorpio_CROSSBOW,DIALOG_BACK,GRD_205_Scorpio_CROSSBOW_BACK);
 
 };
+
 func void GRD_205_Scorpio_CROSSBOW_BACK()
 {
 	Info_ClearChoices(GRD_205_Scorpio_CROSSBOW);
@@ -264,7 +274,7 @@ func void GRD_205_Scorpio_CROSSBOW_OK()
 //	AI_Output(other,self,"GRD_205_Scorpio_CROSSBOW_OK_15_01"); //It's a deal. So show me how to handle a crossbow.
 //	AI_Output(other,self,"GRD_205_Scorpio_CROSSBOW_OK_15_01"); //Einverstanden. Zeig mir den Umgang mit der Armbrust.
 	AI_Output(other,self,"GRD_205_Scorpio_CROSSBOW_OK_15_01"); //Nauč mě ještě lépe zacházet s kuší.
-	if (Npc_HasItems(hero,ItMiNugget)>=200)
+	if (Npc_HasItems(hero,ItMiNugget) >= 200)
 	{
 		if (B_GiveSkill(other,NPC_TALENT_CROSSBOW,1,LPCOST_TALENT_CROSSBOW_1))
 		{
@@ -289,9 +299,9 @@ func void GRD_205_Scorpio_CROSSBOW_OK()
 	}
 	else
 	{
-//	 AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW_OK_13_07"); //TWO HUNDRED ORE, right here, in my hand. If you don't have enough ore, then get some!
-//	 AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW_OK_13_07"); //ZWEIHUNDERT ERZ. Jeder einzelne Brocken in meine Hand. Wenn du das Erz nicht hast, dann besorge es dir!
-	 AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW_OK_13_07"); //DVĚ STĚ nugetů pěkně sem, na ruku. Jestli nemáš dost rudy, tak si ji obstarej!
+//	 	AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW_OK_13_07"); //TWO HUNDRED ORE, right here, in my hand. If you don't have enough ore, then get some!
+//	 	AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW_OK_13_07"); //ZWEIHUNDERT ERZ. Jeder einzelne Brocken in meine Hand. Wenn du das Erz nicht hast, dann besorge es dir!
+		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW_OK_13_07"); //DVĚ STĚ nugetů pěkně sem, na ruku. Jestli nemáš dost rudy, tak si ji obstarej!
 	};
 };
 
@@ -315,10 +325,12 @@ func int GRD_205_Scorpio_CROSSBOW2_Condition()
 {
 	if (Npc_GetTalentSkill(hero,NPC_TALENT_CROSSBOW) == 1)
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void GRD_205_Scorpio_CROSSBOW2_Info()
 {
 //	AI_Output(other,self,"GRD_205_Scorpio_CROSSBOW2_Info_15_01"); //Show me more about how to handle a crossbow.
@@ -333,6 +345,7 @@ func void GRD_205_Scorpio_CROSSBOW2_Info()
 	Info_Addchoice (GRD_205_Scorpio_CROSSBOW2,DIALOG_BACK,GRD_205_Scorpio_CROSSBOW2_BACK);
 
 };
+
 func void GRD_205_Scorpio_CROSSBOW2_BACK()
 {
 	Info_ClearChoices(GRD_205_Scorpio_CROSSBOW);
@@ -343,36 +356,37 @@ func void GRD_205_Scorpio_CROSSBOW2_OK()
 //	AI_Output(other,self,"GRD_205_Scorpio_CROSSBOW2_OK_15_01"); //Let's start now.
 //	AI_Output(other,self,"GRD_205_Scorpio_CROSSBOW2_OK_15_01"); //Lass uns direkt anfangen.
 	AI_Output(other,self,"GRD_205_Scorpio_CROSSBOW2_OK_15_01"); //Tak začneme.
-	if (Npc_HasItems(hero,ItMiNugget)>=300)
+	if (Npc_HasItems(hero,ItMiNugget) >= 300)
 	{
 		if (B_GiveSkill(other,NPC_TALENT_CROSSBOW,2,LPCOST_TALENT_CROSSBOW_2))
 		{
-//		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_02"); //Right. Your shots'll be more accurate and straight if you bend your knees when firing.
-//		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_02"); //Gut. Du bekommst mehr Treffsicherheit und Ruhe, wenn du beim Schuss in die Knie gehst
-		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_02"); //Dobře. Pokud si při střelbě klekneš, budeš moci lépe zamířit a tvé střely budou přesnější.
-//		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_03"); //You'll have to learn to judge what speed your target's moving at.
-//		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_03"); //Lerne die Geschwindigkeit von beweglichen Zielen einzuschätzen.
-		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_03"); //Musíš se naučit odhadnout, jakou rychlostí se pohybuje tvůj protivník.
-//		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_04"); //Fire your bolt into the moving target's path to hit it and slow it down.
-//		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_04"); //Schieß in die Laufbahn des Zieles, dann wirst du es treffen und es dadurch auch in seiner Bewegung aufhalten.
-		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_04"); //Vystřel šipku do dráhy pohybujícího se cíle, abys jej zasáhl a zpomalil.
-//		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_05"); //If there's more than one target, don't waste any time. Nail 'em all down one after the other with calculated shots.
-//		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_05"); //Wenn du mehrere Ziele hast, dann verschwende keine Zeit, sondern nagel' alle Ziele mit gezielten Schüssen fest und strecke sie abwechselnd nieder.
-		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_05"); //Pokud máš více než jeden cíl, pak nesmíš plýtvat časem. Sundej je jednoho po druhém v naplánovaném pořadí.
-//		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_06"); //That's it, I've taught you all I know.
-//		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_06"); //Du hast jetzt alles gelernt, was ich dir beibringen kann.
-		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_06"); //Tak jsem tě naučil všechno, co umím.
-		B_GiveInvItems(hero,other,ItMiNugget,300);
-		GRD_205_Scorpio_CROSSBOW2.permanent = 0;
+//			AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_02"); //Right. Your shots'll be more accurate and straight if you bend your knees when firing.
+//			AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_02"); //Gut. Du bekommst mehr Treffsicherheit und Ruhe, wenn du beim Schuss in die Knie gehst
+			AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_02"); //Dobře. Pokud si při střelbě klekneš, budeš moci lépe zamířit a tvé střely budou přesnější.
+//			AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_03"); //You'll have to learn to judge what speed your target's moving at.
+//			AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_03"); //Lerne die Geschwindigkeit von beweglichen Zielen einzuschätzen.
+			AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_03"); //Musíš se naučit odhadnout, jakou rychlostí se pohybuje tvůj protivník.
+//			AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_04"); //Fire your bolt into the moving target's path to hit it and slow it down.
+//			AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_04"); //Schieß in die Laufbahn des Zieles, dann wirst du es treffen und es dadurch auch in seiner Bewegung aufhalten.
+			AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_04"); //Vystřel šipku do dráhy pohybujícího se cíle, abys jej zasáhl a zpomalil.
+//			AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_05"); //If there's more than one target, don't waste any time. Nail 'em all down one after the other with calculated shots.
+//			AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_05"); //Wenn du mehrere Ziele hast, dann verschwende keine Zeit, sondern nagel' alle Ziele mit gezielten Schüssen fest und strecke sie abwechselnd nieder.
+			AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_05"); //Pokud máš více než jeden cíl, pak nesmíš plýtvat časem. Sundej je jednoho po druhém v naplánovaném pořadí.
+//			AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_06"); //That's it, I've taught you all I know.
+//			AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_06"); //Du hast jetzt alles gelernt, was ich dir beibringen kann.
+			AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_06"); //Tak jsem tě naučil všechno, co umím.
+			B_GiveInvItems(hero,other,ItMiNugget,300);
+			GRD_205_Scorpio_CROSSBOW2.permanent = 0;
 		};
 	}
 	else
 	{
-//	 AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_07"); //See if you can get THREE HUNDRED ore from somewhere.
-//	 AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_07"); //Junge, sieh erst mal zu, dass du irgendwo DREIHUNDERT Erz auftreibst.
-	 AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_07"); //Uvidíme, jestli někde dokážeš sehnat TŘI STA nugetů.
+//		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_07"); //See if you can get THREE HUNDRED ore from somewhere.
+//		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_07"); //Junge, sieh erst mal zu, dass du irgendwo DREIHUNDERT Erz auftreibst.
+		AI_Output(self,other,"GRD_205_Scorpio_CROSSBOW2_OK_13_07"); //Uvidíme, jestli někde dokážeš sehnat TŘI STA nugetů.
 	};
 };
+
 /*------------------------------------------------------------------------
 Ab Kapitel 4 steht Scorpio draussen, damit der Spieler bei ihm noch lernen kann
 ------------------------------------------------------------------------*/
@@ -393,9 +407,12 @@ func int GRD_205_Scorpio_HeyPC_Condition()
 	if (kapitel >= 4)
 	&& (Npc_GetDistToNpc(hero,self) < 1000)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void GRD_205_Scorpio_HeyPC_Info()
 {
 //	AI_Output(self,other,"GRD_205_Scorpio_HeyPC_Info_13_01"); //Hey, no sweat, man. Come over here!
@@ -422,10 +439,12 @@ func int GRD_205_Scorpio_BANISHED_Condition()
 {
 	if (Npc_KnowsInfo(hero,GRD_205_Scorpio_HeyPC))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void GRD_205_Scorpio_BANISHED_Info()
 {
 //	AI_Output(other,self,"GRD_205_Scorpio_BANISHED_Info_15_01"); //You okay?
@@ -439,11 +458,11 @@ func void GRD_205_Scorpio_BANISHED_Info()
 	AI_Output(self,other,"GRD_205_Scorpio_BANISHED_Info_13_03"); //Ale vzal jsem s sebou pár pěkných kousků ze zbrojnice. Když budeš potřebovat nějakou zbraň, dej mi vědět.
 	if (Scorpio_Exile == FALSE)
 	{
-	Log_CreateTopic(GE_TraderOW,LOG_NOTE);
-//	B_LogEntry(GE_TraderOW,"Scorpio has left the Old Camp and is now staying with Cavalorn in the hunting hut between the Old and the New Camp.");
-//	B_LogEntry(GE_TraderOW,"Scorpio hat aufgrund der Situation das Alte Lager verlassen und hält sich nun in der Jagdhütte bei Cavalorn zwischen dem Alten und dem Neuen Lager auf.");
-	B_LogEntry(GE_TraderOW,"Scorpio se kvůli situaci ve Starém táboře přesunul do Cavalornovy lovecké chýše mezi Starým a Novým táborem.");
-	Scorpio_Exile = TRUE;
+		Log_CreateTopic(GE_TraderOW,LOG_NOTE);
+//		B_LogEntry(GE_TraderOW,"Scorpio has left the Old Camp and is now staying with Cavalorn in the hunting hut between the Old and the New Camp.");
+//		B_LogEntry(GE_TraderOW,"Scorpio hat aufgrund der Situation das Alte Lager verlassen und hält sich nun in der Jagdhütte bei Cavalorn zwischen dem Alten und dem Neuen Lager auf.");
+		B_LogEntry(GE_TraderOW,"Scorpio se kvůli situaci ve Starém táboře přesunul do Cavalornovy lovecké chýše mezi Starým a Novým táborem.");
+		Scorpio_Exile = TRUE;
 	};
 };
 
@@ -458,24 +477,25 @@ instance GRD_205_Scorpio_TRADE(C_INFO)
 	information = GRD_205_Scorpio_TRADE_Info;
 	important = 0;
 	permanent = 1;
+	trade = 1;
 //	description = "Show me what you have.";
 //	description = "Zeig mir deine Ware";
 	description = "Ukaž, co máš.";
-	trade = 1;
 };
 
 func int GRD_205_Scorpio_TRADE_Condition()
 {
-	if(Npc_KnowsInfo(hero,GRD_205_Scorpio_BANISHED))
+	if (Npc_KnowsInfo(hero,GRD_205_Scorpio_BANISHED))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void GRD_205_Scorpio_TRADE_Info()
 {
 //	AI_Output(other,self,"GRD_205_Scorpio_TRADE_Info_15_01"); //Show me what you have.
 //	AI_Output(other,self,"GRD_205_Scorpio_TRADE_Info_15_01"); //Zeig mir deine Ware.
 	AI_Output(other,self,"GRD_205_Scorpio_TRADE_Info_15_01"); //Ukaž, co máš.
-
 };

@@ -6,10 +6,9 @@ instance GUR_1212_MadCorKalom_Talk2SC(C_INFO)
 	important = 1;
 	permanent = 0;
 };
-
 func int GUR_1212_MadCorKalom_Talk2SC_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void GUR_1212_MadCorKalom_Talk2SC_Info()

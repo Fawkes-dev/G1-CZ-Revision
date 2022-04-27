@@ -18,7 +18,7 @@ func int VLK_585_Aleph_Exit_Condition()
 
 func void VLK_585_Aleph_Exit_Info()
 {
-	if !Npc_KnowsInfo(hero,GRD_261_Brandick_ALEPH)
+	if (!Npc_KnowsInfo(hero,GRD_261_Brandick_ALEPH))
 	{
 //		AI_Output(other,self,"VLK_585_Aleph_Exit_Info_15_01"); //Good luck!
 //		AI_Output(other,self,"VLK_585_Aleph_Exit_Info_15_01"); //Viel Glück noch.
@@ -29,10 +29,10 @@ func void VLK_585_Aleph_Exit_Info()
 	};
 
 	AI_StopProcessInfos(self);
-
 };
 
 // ***************** ALEPH IST EIN FAULPELZ *****************************
+
 instance VLK_585_Aleph_CLEVER(C_INFO)
 {
 	npc = VLK_585_Aleph;
@@ -53,6 +53,7 @@ func void VLK_585_Aleph_CLEVER_Info()
 //	AI_Output(self,other,"VLK_585_Aleph_CLEVER_Info_05_01"); //Hehehe, die Wachen erwischen mich nie!
 	AI_Output(self,other,"VLK_585_Aleph_CLEVER_Info_05_01"); //Hehehe, stráže mě nikdy nedostanou!
 };
+
 // ***************** ALEPH ERKLÄRT SEINE ARBEITSHALTUNG *****************************
 
 instance VLK_585_Aleph_GUARDS(C_INFO)
@@ -69,10 +70,12 @@ instance VLK_585_Aleph_GUARDS(C_INFO)
 
 func int VLK_585_Aleph_GUARDS_Condition()
 {
-	if Npc_KnowsInfo(hero,VLK_585_Aleph_CLEVER)
+	if (Npc_KnowsInfo(hero,VLK_585_Aleph_CLEVER))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void VLK_585_Aleph_GUARDS_Info()
@@ -100,6 +103,7 @@ func void VLK_585_Aleph_GUARDS_Info()
 	Npc_ExchangeRoutine(Brandick,"WATCH");
 	AI_ContinueRoutine(Brandick); // TEST!!!
 };
+
 // ***************** ALEPH BIETET INFO *****************************
 
 instance VLK_585_Aleph_INFO(C_INFO)
@@ -116,10 +120,13 @@ instance VLK_585_Aleph_INFO(C_INFO)
 
 func int VLK_585_Aleph_INFO_Condition()
 {
-	if (Npc_HasItems(hero,ItMinugget)) >= 10 && (Npc_KnowsInfo(hero,VLK_585_Aleph_GUARDS))
+	if ((Npc_HasItems(hero,ItMinugget) >= 10)
+	&& (Npc_KnowsInfo(hero,VLK_585_Aleph_GUARDS)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void VLK_585_Aleph_INFO_Info()
@@ -142,7 +149,9 @@ func void VLK_585_Aleph_INFO_Info()
 
 	B_GiveInvItems(hero,other,ItMiNugget,10);
 };
+
 // ***************** WIRD ALEPH ANGESCHWÄRZT IST ER SAUER*****************************
+
 instance VLK_585_Aleph_ANGRY(C_INFO)
 {
 	npc = VLK_585_Aleph;
@@ -158,6 +167,8 @@ func int VLK_585_Aleph_ANGRY_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void VLK_585_Aleph_ANGRY_Info()
@@ -169,7 +180,9 @@ func void VLK_585_Aleph_ANGRY_Info()
 	AI_StopProcessInfos(self);
 	Npc_SetTempAttitude(self,ATT_ANGRY);
 };
+
 //***************** LOCKPICKS*****************************
+
 instance VLK_585_Aleph_KEY(C_INFO)
 {
 	npc = VLK_585_Aleph;
@@ -177,16 +190,20 @@ instance VLK_585_Aleph_KEY(C_INFO)
 	information = VLK_585_Aleph_KEY_Info;
 	important = 0;
 	permanent = 0;
-//	description     = "Have you got any other useful information?";
-//	description     = "Hast du noch ein paar nützliche Informationen?";
-	description     = "Máš ještě nějaké užitečné informace?";
+//	description = "Have you got any other useful information?";
+//	description = "Hast du noch ein paar nützliche Informationen?";
+	description = "Máš ještě nějaké užitečné informace?";
 };
+
 func int VLK_585_Aleph_KEY_Condition()
 {
-	if ! (Npc_KnowsInfo(hero,GRD_261_Brandick_ALEPH)) && (Npc_KnowsInfo(hero,VLK_585_Aleph_INFO))
+	if ((!Npc_KnowsInfo(hero,GRD_261_Brandick_ALEPH))
+	&& (Npc_KnowsInfo(hero,VLK_585_Aleph_INFO)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void VLK_585_Aleph_KEY_Info()
@@ -200,6 +217,7 @@ func void VLK_585_Aleph_KEY_Info()
 };
 
 //***************** LOCKPICKS*****************************
+
 instance VLK_585_Aleph_GLEN(C_INFO)
 {
 	npc = VLK_585_Aleph;
@@ -207,16 +225,20 @@ instance VLK_585_Aleph_GLEN(C_INFO)
 	information = VLK_585_Aleph_GLEN_Info;
 	important = 0;
 	permanent = 0;
-//	description     = "(give 10 ore)";
-//	description     = "(10 Erz geben)";
-	description     = "Za tuhle rudu očekávám dobré informace! (10 nugetů)";
+//	description = "(give 10 ore)";
+//	description = "(10 Erz geben)";
+	description = "Za tuhle rudu očekávám dobré informace! (10 nugetů)";
 };
+
 func int VLK_585_Aleph_GLEN_Condition()
 {
-	if (Npc_HasItems(hero,ItMinugget)) >= 10 && (Npc_KnowsInfo(hero,VLK_585_Aleph_KEY))
+	if ((Npc_HasItems(hero,ItMinugget) >= 10)
+	&& (Npc_KnowsInfo(hero,VLK_585_Aleph_KEY)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void VLK_585_Aleph_GLEN_Info()
@@ -230,7 +252,9 @@ func void VLK_585_Aleph_GLEN_Info()
 
 	B_GiveInvItems(hero,self,ItMinugget,10);
 };
+
 //***************** LAGERSCHUPPENSCHLÜSSEL*****************************
+
 func void B_Aleph_StorageShedKey()
 {
 //	B_LogEntry(CH2_StorageShed,"Aleph sold me the key to the chests in the store shed!");
@@ -245,16 +269,20 @@ instance VLK_585_Aleph_SCHUPPEN(C_INFO)
 	information = VLK_585_Aleph_SCHUPPEN_Info;
 	important = 0;
 	permanent = 0;
-//	description     = "Do you know anything about the key to the chests in the storage shed??";
-//	description     = "Weißt du was über den Schlüssel für die Truhen im Lagerschuppen?";
-	description     = "Víš něco o klíči od těch truhel ve skladu?";
+//	description = "Do you know anything about the key to the chests in the storage shed??";
+//	description = "Weißt du was über den Schlüssel für die Truhen im Lagerschuppen?";
+	description = "Víš něco o klíči od těch truhel ve skladu?";
 };
+
 func int VLK_585_Aleph_SCHUPPEN_Condition()
 {
-	if (Npc_KnowsInfo(hero,GRD_271_ULBERT_DRUNK)) && ( !Npc_KnowsInfo(hero,GRD_261_Brandick_ALEPH))
+	if ((Npc_KnowsInfo(hero,GRD_271_ULBERT_DRUNK))
+	&& (!Npc_KnowsInfo(hero,GRD_261_Brandick_ALEPH)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void VLK_585_Aleph_SCHUPPEN_Info()
@@ -274,7 +302,7 @@ func void VLK_585_Aleph_SCHUPPEN_Info()
 
 	Info_ClearChoices(VLK_585_Aleph_SCHUPPEN);
 
-	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,DIALOG_BACK    ,VLK_585_Aleph_SCHUPPEN_Back);
+	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,DIALOG_BACK,VLK_585_Aleph_SCHUPPEN_Back);
 //	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,"Pay 50 ore.",VLK_585_Aleph_SCHUPPEN_50);
 //	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,"50 Erz zahlen",VLK_585_Aleph_SCHUPPEN_50);
 	Info_AddChoice(VLK_585_Aleph_SCHUPPEN,"50 nugetů by ti mělo víc než stačit!",VLK_585_Aleph_SCHUPPEN_50);
@@ -349,6 +377,7 @@ func void VLK_585_Aleph_SCHUPPEN_30()
 		VLK_585_Aleph_SCHUPPEN.permanent = 1;
 	};
 };
+
 func void VLK_585_Aleph_SCHUPPEN_15()
 {
 //	AI_Output(other,self,"VLK_585_Aleph_SCHUPPEN_15_15_01"); //Is 15 ore alright with you?
@@ -359,6 +388,7 @@ func void VLK_585_Aleph_SCHUPPEN_15()
 	AI_Output(self,other,"VLK_585_Aleph_SCHUPPEN_15_05_02"); //15 nugetů? Já o žádném klíči nic nevím!
 	VLK_585_Aleph_SCHUPPEN.permanent = 0;
 };
+
 func void VLK_585_Aleph_SCHUPPEN_Back()
 {
 	Info_ClearChoices(VLK_585_Aleph_SCHUPPEN);
@@ -380,10 +410,13 @@ instance VLK_585_Aleph_DIRTY(C_INFO)
 
 func int VLK_585_Aleph_DIRTY_Condition()
 {
-	if (Npc_KnowsInfo(hero,GRD_271_ULBERT_DRUNK)) && (Npc_KnowsInfo(hero,GRD_261_Brandick_ALEPH))
+	if ((Npc_KnowsInfo(hero,GRD_271_ULBERT_DRUNK))
+	&& (Npc_KnowsInfo(hero,GRD_261_Brandick_ALEPH)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void VLK_585_Aleph_DIRTY_Info()
@@ -402,7 +435,6 @@ func void VLK_585_Aleph_DIRTY_Info()
 	AI_Output(self,other,"VLK_585_Aleph_DIRTY_Info_05_04"); //Učíš se rychle. Chci 100 nugetů.
 
 	Info_ClearChoices(VLK_585_Aleph_DIRTY);
-
 //	Info_AddChoice(VLK_585_Aleph_DIRTY,"(Pay 100 ore)",VLK_585_Aleph_DIRTY_100);
 //	Info_AddChoice(VLK_585_Aleph_DIRTY,"(100 Erz zahlen)",VLK_585_Aleph_DIRTY_100);
 	Info_AddChoice(VLK_585_Aleph_DIRTY,"Dobrá, ty vyděrači. Tady je 100 nugetů.",VLK_585_Aleph_DIRTY_100);
@@ -410,9 +442,10 @@ func void VLK_585_Aleph_DIRTY_Info()
 //	Info_AddChoice(VLK_585_Aleph_DIRTY,"(Nicht zahlen)",VLK_585_Aleph_DIRTY_NO);
 	Info_AddChoice(VLK_585_Aleph_DIRTY,"Nemůžu vyhodit 100 nugetů!",VLK_585_Aleph_DIRTY_NO);
 };
+
 func void VLK_585_Aleph_DIRTY_100()
 {
-	if Npc_HasItems(hero,ItMinugget)>=100
+	if (Npc_HasItems(hero,ItMinugget) >= 100)
 	{
 //		AI_Output(other,self,"VLK_585_Aleph_DIRTY_100_Info_15_01"); //Alright, you crook. Here are 100 ore.
 //		AI_Output(other,self,"VLK_585_Aleph_DIRTY_100_Info_15_01"); //Na gut, du Halsabschneider. Hier sind deine 100 Erz.
@@ -435,6 +468,7 @@ func void VLK_585_Aleph_DIRTY_100()
 		VLK_585_Aleph_DIRTY.permanent = 1;
 	};
 };
+
 func void VLK_585_Aleph_DIRTY_NO()
 {
 //	AI_Output(other,self,"VLK_585_Aleph_DIRTY_NO_Info_15_01"); //I'm not gonna throw 100 ore at you!

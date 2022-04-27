@@ -8,6 +8,7 @@ instance Org_819_Drax_Exit(C_INFO)
 	nr = 999;
 	condition = Org_819_Drax_Exit_Condition;
 	information = Org_819_Drax_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance Org_819_Drax_HuntHere(C_INFO)
 	nr = 1;
 	condition = Org_819_Drax_HuntHere_Condition;
 	information = Org_819_Drax_HuntHere_Info;
+	important = 0;
 	permanent = 0;
 //	description = "You're hunting, aren't you?";
 //	description = "Ihr jagt hier - richtig?";
@@ -78,6 +80,7 @@ instance Org_819_Drax_Scavenger(C_INFO)
 	nr = 1;
 	condition = Org_819_Drax_Scavenger_Condition;
 	information = Org_819_Drax_Scavenger_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Here you are, take a beer and tell me about hunting.";
 //	description = "Hier, nimm ein Bier und erzähl mir was über's Jagen.";
@@ -86,15 +89,18 @@ instance Org_819_Drax_Scavenger(C_INFO)
 
 func int Org_819_Drax_Scavenger_Condition()
 {
-	if (Npc_KnowsInfo(hero,Org_819_Drax_HuntHere) && (drax_bierbekommen==FALSE))
+	if ((Npc_KnowsInfo(hero,Org_819_Drax_HuntHere))
+	&& (drax_bierbekommen == FALSE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_819_Drax_Scavenger_Info()
 {
-	if (Npc_HasItems(other,itfobeer)>0)
+	if (Npc_HasItems(other,itfobeer) > 0)
 	{
 		B_GiveInvItems(other,self,itfobeer,1);
 
@@ -151,6 +157,7 @@ instance Org_819_Drax_Creatures(C_INFO)
 	nr = 1;
 	condition = Org_819_Drax_Creatures_Condition;
 	information = Org_819_Drax_Creatures_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What else can you tell me about hunting?";
 //	description = "Was kannst du mir noch über die Jagd beibringen?";
@@ -159,11 +166,13 @@ instance Org_819_Drax_Creatures(C_INFO)
 
 func int Org_819_Drax_Creatures_Condition()
 {
-	if ( Drax_Lehrer_frei == TRUE )
-	&& ((Knows_GetTeeth == FALSE)||(Knows_GetFur == FALSE)||(Knows_GetClaws == FALSE)||(Knows_GetHide == FALSE))
+	if ((Drax_Lehrer_frei == TRUE)
+	&& ((Knows_GetTeeth == FALSE) || (Knows_GetFur == FALSE) || (Knows_GetClaws == FALSE) || (Knows_GetHide == FALSE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_819_Drax_Creatures_Info()
@@ -172,7 +181,7 @@ func void Org_819_Drax_Creatures_Info()
 //	AI_Output(other,self,"Org_819_Drax_Creatures_15_00"); //Was kannst du mir noch über die Jagd beibringen?
 	AI_Output(other,self,"Org_819_Drax_Creatures_15_00"); //Co mi ještě můžeš říci o lovu?
 
-	if ((Knows_GetTeeth == FALSE)||(Knows_GetFur == FALSE)||(Knows_GetClaws == FALSE)||(Knows_GetHide == FALSE))
+	if ((Knows_GetTeeth == FALSE) || (Knows_GetFur == FALSE) || (Knows_GetClaws == FALSE) || (Knows_GetHide == FALSE))
 	{
 //		AI_Output(self,other,"Org_819_Drax_Creatures_06_01"); //A lot - but it'll cost you more than a beer.
 //		AI_Output(self,other,"Org_819_Drax_Creatures_06_01"); //Ne ganze Menge - aber das wird dich mehr kosten als nur ein Bier.
@@ -252,7 +261,7 @@ func void Org_819_Drax_Creatures_Zahn()
 //	AI_Output(other,self,"Org_819_Drax_Creatures_Zahn_15_00"); //Wie komme ich an die Zähne?
 	AI_Output(other,self,"Org_819_Drax_Creatures_Zahn_15_00"); //Jak dostanu zuby?
 
-	if (Npc_HasItems(other,itminugget)>=50)
+	if (Npc_HasItems(other,itminugget) >= 50)
 	{
 		if (other.lp >= 1)
 		{
@@ -301,7 +310,7 @@ func void Org_819_Drax_Creatures_Fell()
 //	AI_Output(other,self,"Org_819_Drax_Creatures_Fell_15_00"); //Wie kann ich den Viechern das Fell abziehen?
 	AI_Output(other,self,"Org_819_Drax_Creatures_Fell_15_00"); //Jak dostanu kůži těch příšer?
 
-	if (Npc_HasItems(other,itminugget)>=100)
+	if (Npc_HasItems(other,itminugget) >= 100)
 	{
 		if (other.lp >= 1)
 		{
@@ -346,7 +355,7 @@ func void Org_819_Drax_Creatures_Fell()
 
 func void Org_819_Drax_Creatures_Kralle()
 {
-	if (Npc_HasItems(other,itminugget)>=50)
+	if (Npc_HasItems(other,itminugget) >= 50)
 	{
 		if (other.lp >= 1)
 		{
@@ -394,7 +403,7 @@ func void Org_819_Drax_Creatures_Kralle()
 
 func void Org_819_Drax_Creatures_Haut()
 {
-	if (Npc_HasItems(other,itminugget)>=100)
+	if (Npc_HasItems(other,itminugget) >= 100)
 	{
 		if (other.lp >= 1)
 		{

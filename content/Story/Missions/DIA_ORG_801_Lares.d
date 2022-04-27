@@ -8,6 +8,7 @@ instance ORG_801_Lares_Exit(C_INFO)
 	nr = 999;
 	condition = ORG_801_Lares_Exit_Condition;
 	information = ORG_801_Lares_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -34,23 +35,25 @@ instance ORG_801_Lares_YouHere(C_INFO)
 	nr = 1;
 	condition = ORG_801_Lares_YouHere_Condition;
 	information = ORG_801_Lares_YouHere_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int ORG_801_Lares_YouHere_Condition()
 {
 	var C_NPC Roscoe; Roscoe = Hlp_GetNpc(Org_840_Roscoe);
-	if ((Roscoe.aivar[AIV_PASSGATE]==FALSE))
+	if ((Roscoe.aivar[AIV_PASSGATE] == FALSE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void ORG_801_Lares_YouHere_Info()
 {
 	var C_NPC Roscoe; Roscoe = Hlp_GetNpc(Org_840_Roscoe);
-	if ((Npc_IsInState(Roscoe, ZS_MagicSleep)) || (Npc_GetTempAttitude(Roscoe,other)==ATT_FRIENDLY))
+	if ((Npc_IsInState(Roscoe, ZS_MagicSleep)) || (Npc_GetTempAttitude(Roscoe,other) == ATT_FRIENDLY))
 	{
 //		AI_Output(self,other,"ORG_801_Lares_YouHere_11_00"); //How did you get in here? What's up with Roscoe?
 //		AI_Output(self,other,"ORG_801_Lares_YouHere_11_00"); //Wie kommst du hier rein? Was ist mit Roscoe?
@@ -84,6 +87,7 @@ instance ORG_801_Lares_WannaJoin(C_INFO)
 	nr = 1;
 	condition = ORG_801_Lares_WannaJoin_Condition;
 	information = ORG_801_Lares_WannaJoin_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I want to join your gang.";
 //	description = "Ich will mich eurer Bande anschließen.";
@@ -92,11 +96,13 @@ instance ORG_801_Lares_WannaJoin(C_INFO)
 
 func int ORG_801_Lares_WannaJoin_Condition()
 {
-	if (Npc_GetTrueGuild(hero) == GIL_NONE)
-	&& (Kapitel < 2)
+	if ((Npc_GetTrueGuild(hero) == GIL_NONE)
+	&& (Kapitel < 2))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void ORG_801_Lares_WannaJoin_Info()
@@ -121,6 +127,7 @@ instance ORG_801_Lares_BringList(C_INFO)
 	nr = 2;
 	condition = ORG_801_Lares_BringList_Condition;
 	information = ORG_801_Lares_BringList_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I have the list of requirements for the Old Mine on me.";
 //	description = "Ich habe die Bedarfsliste der Alten Mine bei mir.";
@@ -129,10 +136,13 @@ instance ORG_801_Lares_BringList(C_INFO)
 
 func int ORG_801_Lares_BringList_Condition()
 {
-	if ((Npc_KnowsInfo(hero,ORG_801_Lares_WannaJoin)) && (Npc_HasItems(hero,TheList)))
+	if ((Npc_KnowsInfo(hero,ORG_801_Lares_WannaJoin))
+	&& (Npc_HasItems(hero,TheList)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void ORG_801_Lares_BringList_Info()
@@ -185,6 +195,7 @@ instance ORG_801_Lares_BringListBack(C_INFO)
 	nr = 2;
 	condition = ORG_801_Lares_BringListBack_Condition;
 	information = ORG_801_Lares_BringListBack_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I've given the list to Diego.";
 //	description = "Ich habe Diego die Liste übergeben.";
@@ -193,10 +204,13 @@ instance ORG_801_Lares_BringListBack(C_INFO)
 
 func int ORG_801_Lares_BringListBack_Condition()
 {
-	if ((Lares_BringListBack==LOG_RUNNING) && (Diego_BringList==LOG_SUCCESS))
+	if ((Lares_BringListBack == LOG_RUNNING)
+	&& (Diego_BringList == LOG_SUCCESS))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void ORG_801_Lares_BringListBack_Info()
@@ -228,6 +242,7 @@ instance ORG_801_Lares_BringListAnteil(C_INFO)
 	nr = 2;
 	condition = ORG_801_Lares_BringListAnteil_Condition;
 	information = ORG_801_Lares_BringListAnteil_Info;
+	important = 0;
 	permanent = 0;
 //	description = "They've already mugged the convoy? Where's my share?";
 //	description = "Sie haben den Konvoi schon überfallen? Was ist mein Anteil bei der Sache?";
@@ -236,10 +251,12 @@ instance ORG_801_Lares_BringListAnteil(C_INFO)
 
 func int ORG_801_Lares_BringListAnteil_Condition()
 {
-	if ((Npc_KnowsInfo(hero,ORG_801_Lares_BringListBack)))
+	if (Npc_KnowsInfo(hero,ORG_801_Lares_BringListBack))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void ORG_801_Lares_BringListAnteil_Info()
@@ -251,7 +268,7 @@ func void ORG_801_Lares_BringListAnteil_Info()
 //	AI_Output(self,other,"ORG_801_Lares_BringListAnteil_11_01"); //Geh zu Gorn. Er wird dir etwas geben.
 	AI_Output(self,other,"ORG_801_Lares_BringListAnteil_11_01"); //Běž za Gornem. Něco ti dá...
 	var C_NPC gorn; gorn = Hlp_GetNpc(PC_Fighter);
-	if (gorn.aivar[AIV_FINDABLE]==TRUE)
+	if (gorn.aivar[AIV_FINDABLE] == TRUE)
 	{
 //		AI_Output(other,self,"ORG_801_Lares_BringListAnteil_15_02"); //I know Gorn. He's no member of the gang. He's a mercenary who works for the mages.
 //		AI_Output(other,self,"ORG_801_Lares_BringListAnteil_15_02"); //Ich kenne Gorn. Er ist kein Mitglied der Bande. Er ist ein Söldner der Magier.
@@ -282,6 +299,7 @@ instance ORG_801_Lares_MordragSentMe(C_INFO)
 	nr = 2;
 	condition = ORG_801_Lares_MordragSentMe_Condition;
 	information = ORG_801_Lares_MordragSentMe_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Mordrag sent me. He gave me a ring for you.";
 //	description = "Mordrag schickt mich. Er hat mir einen Ring für dich gegeben.";
@@ -290,12 +308,14 @@ instance ORG_801_Lares_MordragSentMe(C_INFO)
 
 func int ORG_801_Lares_MordragSentMe_Condition()
 {
-	if Npc_KnowsInfo(hero,ORG_801_Lares_WannaJoin)
-	&& Npc_HasItems(hero,MordragsRing)
-	&& (Kapitel < 2)
+	if ((Npc_KnowsInfo(hero,ORG_801_Lares_WannaJoin))
+	&& (Npc_HasItems(hero,MordragsRing))
+	&& (Kapitel < 2))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void ORG_801_Lares_MordragSentMe_Info()
@@ -343,6 +363,7 @@ instance ORG_801_Lares_Vorbeigemogelt(C_INFO)
 	nr = 2;
 	condition = ORG_801_Lares_Vorbeigemogelt_Condition;
 	information = ORG_801_Lares_Vorbeigemogelt_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I did manage to get past your guards.";
 //	description = "Ich bin immerhin an deinen Wachen vorbeigekommen.";
@@ -351,10 +372,13 @@ instance ORG_801_Lares_Vorbeigemogelt(C_INFO)
 
 func int ORG_801_Lares_Vorbeigemogelt_Condition()
 {
-	if ((Npc_KnowsInfo(hero,ORG_801_Lares_WannaJoin)) && (Lares_vorbeigemogelt == TRUE))
+	if ((Npc_KnowsInfo(hero,ORG_801_Lares_WannaJoin))
+	&& (Lares_vorbeigemogelt == TRUE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void ORG_801_Lares_Vorbeigemogelt_Info()
@@ -381,6 +405,7 @@ instance ORG_801_Lares_GetKraut(C_INFO)
 	nr = 10;
 	condition = ORG_801_Lares_GetKraut_Condition;
 	information = ORG_801_Lares_GetKraut_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What else can I do?";
 //	description = "Was kann ich noch machen?";
@@ -389,10 +414,14 @@ instance ORG_801_Lares_GetKraut(C_INFO)
 
 func int ORG_801_Lares_GetKraut_Condition()
 {
-	if (Npc_KnowsInfo(hero,ORG_801_Lares_BringList) || Npc_KnowsInfo(hero,ORG_801_Lares_MordragSentMe) || Npc_KnowsInfo(hero,ORG_801_Lares_Vorbeigemogelt))
+	if ((Npc_KnowsInfo(hero,ORG_801_Lares_BringList))
+	|| (Npc_KnowsInfo(hero,ORG_801_Lares_MordragSentMe))
+	|| (Npc_KnowsInfo(hero,ORG_801_Lares_Vorbeigemogelt)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void ORG_801_Lares_GetKraut_Info()
@@ -404,7 +433,7 @@ func void ORG_801_Lares_GetKraut_Info()
 //	AI_Output(self,other,"ORG_801_Lares_GetKraut_11_01"); //Baal Isidro aus dem Sektenlager hat Kraut im Wert von mindestens 400 Erz bei sich. Ich will, dass du es ihm abnimmst. Egal, wie.
 	AI_Output(self,other,"ORG_801_Lares_GetKraut_11_01"); //Baal Isidro ze Sektovního tábora má u sebe drogu v ceně aspoň 400 nugetů. Chci ji od něj mít. Je mi jedno, jak to provedeš.
 
-	if ((BaalIsidro_DealerJob==LOG_RUNNING) || (BaalIsidro_DealerJob==LOG_SUCCESS))
+	if ((BaalIsidro_DealerJob == LOG_RUNNING) || (BaalIsidro_DealerJob == LOG_SUCCESS))
 	{
 //		AI_Output(other,self,"ORG_801_Lares_GetKraut_15_02"); //If you mean the massive heap of weed, I've already got it.
 //		AI_Output(other,self,"ORG_801_Lares_GetKraut_15_02"); //Wenn du den Riesenhaufen Kraut meinst, den hab' ich mir schon unter den Nagel gerissen
@@ -442,6 +471,7 @@ instance ORG_801_Lares_400Ore(C_INFO)
 	nr = 2;
 	condition = ORG_801_Lares_400Ore_Condition;
 	information = ORG_801_Lares_400Ore_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I have the 400 ore.";
 //	description = "Ich hab' die 400 Erz.";
@@ -450,10 +480,13 @@ instance ORG_801_Lares_400Ore(C_INFO)
 
 func int ORG_801_Lares_400Ore_Condition()
 {
-	if ((Lares_Get400Ore == LOG_RUNNING) && ((BaalIsidro_DealerJob==LOG_RUNNING)||(BaalIsidro_DealerJob==LOG_SUCCESS)))
+	if ((Lares_Get400Ore == LOG_RUNNING)
+	&& ((BaalIsidro_DealerJob == LOG_RUNNING) || (BaalIsidro_DealerJob == LOG_SUCCESS)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void ORG_801_Lares_400Ore_Info()
@@ -461,7 +494,7 @@ func void ORG_801_Lares_400Ore_Info()
 //	AI_Output(other,self,"ORG_801_Lares_400Ore_15_00"); //I have the 400 ore.
 //	AI_Output(other,self,"ORG_801_Lares_400Ore_15_00"); //Ich hab' die 400 Erz.
 	AI_Output(other,self,"ORG_801_Lares_400Ore_15_00"); //Mám těch 400 nugetů.
-	if (Npc_HasItems(other,itminugget)>=400)
+	if (Npc_HasItems(other,itminugget) >= 400)
 	{
 //		AI_Output(self,other,"ORG_801_Lares_400Ore_11_01"); //Good! Very good. I believe that should be sufficient now.
 //		AI_Output(self,other,"ORG_801_Lares_400Ore_11_01"); //Gut! Sehr gut. Ich denke, das reicht jetzt.
@@ -493,6 +526,7 @@ instance ORG_801_Lares_Reicht(C_INFO)
 	nr = 5;
 	condition = ORG_801_Lares_Reicht_Condition;
 	information = ORG_801_Lares_Reicht_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Is that enough for me to join you?";
 //	description = "Reicht das, um bei euch aufgenommen zu werden?";
@@ -501,13 +535,15 @@ instance ORG_801_Lares_Reicht(C_INFO)
 
 func int ORG_801_Lares_Reicht_Condition()
 {
-	if (Npc_KnowsInfo(hero,ORG_801_Lares_WannaJoin)
-	&& (Npc_KnowsInfo(hero,ORG_801_Lares_MordragSentMe) || Npc_KnowsInfo(hero,ORG_801_Lares_BringList))
-	&& (Npc_GetTrueGuild(other)==GIL_NONE) && (Kapitel <2))
-
+	if ((Npc_KnowsInfo(hero,ORG_801_Lares_WannaJoin))
+	&& ((Npc_KnowsInfo(hero,ORG_801_Lares_MordragSentMe)) || (Npc_KnowsInfo(hero,ORG_801_Lares_BringList)))
+	&& (Npc_GetTrueGuild(other) == GIL_NONE)
+	&& (Kapitel <2))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void ORG_801_Lares_Reicht_Info()
@@ -592,6 +628,7 @@ instance ORG_801_Lares_GotoKalom(C_INFO)
 	nr = 10;
 	condition = ORG_801_Lares_GotoKalom_Condition;
 	information = ORG_801_Lares_GotoKalom_Info;
+	important = 0;
 	permanent = 0;
 //	description = "And what am I supposed to do now?";
 //	description = "Und was soll ich jetzt machen?";
@@ -600,10 +637,12 @@ instance ORG_801_Lares_GotoKalom(C_INFO)
 
 func int ORG_801_Lares_GotoKalom_Condition()
 {
-	if (Npc_GetTrueGuild(other)==GIL_ORG )
+	if (Npc_GetTrueGuild(other) == GIL_ORG)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void ORG_801_Lares_GotoKalom_Info()
@@ -676,6 +715,7 @@ instance ORG_801_Lares_WhereLearn(C_INFO)
 	nr = 20;
 	condition = ORG_801_Lares_WhereLearn_Condition;
 	information = ORG_801_Lares_WhereLearn_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Where can I learn something?";
 //	description = "Wo kann ich hier was lernen?";
@@ -684,7 +724,7 @@ instance ORG_801_Lares_WhereLearn(C_INFO)
 
 func int ORG_801_Lares_WhereLearn_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void ORG_801_Lares_WhereLearn_Info()
@@ -710,6 +750,7 @@ instance ORG_801_Lares_Teach(C_INFO)
 	nr = 20;
 	condition = ORG_801_Lares_Teach_Condition;
 	information = ORG_801_Lares_Teach_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I want to better myself.";
 //	description = "Ich will mich verbessern";
@@ -720,9 +761,12 @@ func int ORG_801_Lares_Teach_Condition()
 {
 	if (Npc_KnowsInfo(hero,ORG_801_Lares_WhereLearn))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void ORG_801_Lares_Teach_Info()
 {
 //	AI_Output(other,self,"ORG_801_Lares_Teach_15_00"); //I want to better myself.
@@ -742,6 +786,7 @@ func void ORG_801_Lares_Teach_BACK()
 	Info_ClearChoices(ORG_801_Lares_Teach);
 };
 
+//TODO: remove repetitive code
 func void ORG_801_Lares_Teach_STR_1()
 {
 	B_BuyAttributePoints(other,ATR_STRENGTH, LPCOST_ATTRIBUTE_STRENGTH);

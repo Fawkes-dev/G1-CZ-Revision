@@ -41,7 +41,6 @@ func void SLEEPABIT_S1()
 //-------------------- Gar nicht schlafen -------------------------
 
 instance PC_NoSleep (c_Info)
-
 {
 	npc = PC_Hero;
 	nr = 999;

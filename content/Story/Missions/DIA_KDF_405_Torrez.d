@@ -8,6 +8,7 @@ instance DIA_Torrez_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Torrez_Exit_Condition;
 	information = DIA_Torrez_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -22,7 +23,7 @@ func void DIA_Torrez_Exit_Info()
 	AI_StopProcessInfos(self);
 	if (!Npc_HasItems(self,ItArRuneFirebolt))
 	{
-	CreateInvItem(self,ItArRuneFirebolt);
+		CreateInvItem(self,ItArRuneFirebolt);
 	};
 };
 
@@ -36,6 +37,7 @@ instance DIA_Torrez_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_Torrez_Hello_Condition;
 	information = DIA_Torrez_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I'm looking for the High Magician of the Circle of Fire!";
 //	description = "Ich suche den obersten Feuermagier!";
@@ -69,6 +71,7 @@ instance DIA_Torrez_Belohnung(C_INFO)
 	nr = 5;
 	condition = DIA_Torrez_Belohnung_Condition;
 	information = DIA_Torrez_Belohnung_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I've passed a letter on, and I'm to choose my own reward.";
 //	description = "Ich habe einen Brief übergeben und soll meine Belohnung selber wählen.";
@@ -77,10 +80,12 @@ instance DIA_Torrez_Belohnung(C_INFO)
 
 func int DIA_Torrez_Belohnung_Condition()
 {
-	if ((Npc_KnowsInfo(hero,DIA_Milten_ComesBack)) && (milten_HasLetter==TRUE))
+	if ((Npc_KnowsInfo(hero,DIA_Milten_ComesBack)) && (milten_HasLetter == TRUE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Torrez_Belohnung_Info()
@@ -172,6 +177,7 @@ instance DIA_Torrez_BriefTausch(C_INFO)
 	nr = 5;
 	condition = DIA_Torrez_BriefTausch_Condition;
 	information = DIA_Torrez_BriefTausch_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I have a letter for you! But I want my reward first!";
 //	description = "Ich habe einen Brief für euch! Aber ich will erst meine Belohnung sehen!";
@@ -180,10 +186,12 @@ instance DIA_Torrez_BriefTausch(C_INFO)
 
 func int DIA_Torrez_BriefTausch_Condition()
 {
-	if ((Npc_KnowsInfo(hero,DIA_Milten_ComesBack)) && (milten_HasLetter==FALSE))
+	if ((Npc_KnowsInfo(hero,DIA_Milten_ComesBack)) && (milten_HasLetter == FALSE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Torrez_BriefTausch_Info()
@@ -204,7 +212,7 @@ func void DIA_Torrez_BriefTausch_Info()
 //	AI_Output(other,self,"DIA_Torrez_BriefTausch_15_04"); //Hier ist er.
 	AI_Output(other,self,"DIA_Torrez_BriefTausch_15_04"); //Tady je.
 
-	if (Npc_HasItems(other,ItWr_Fire_Letter_01)>=1)
+	if (Npc_HasItems(other,ItWr_Fire_Letter_01) >= 1)
 	{
 //		AI_Output(self,other,"DIA_Torrez_BriefTausch_04_05"); //Your reward is a Ring of Strength. It's a rare artefact, and will be of great use to you.
 //		AI_Output(self,other,"DIA_Torrez_BriefTausch_04_05"); //Deine Belohnung ist ein Ring der Stärke. Es ist ein seltenes Artefakt und wird dir sicherlich sehr nützlich sein.
@@ -218,7 +226,7 @@ func void DIA_Torrez_BriefTausch_Info()
 		B_GiveInvItems(self,other,Staerkering,1);
 		B_GiveXP(XP_XardasLetter);
 	}
-	else if (Npc_HasItems(other,ItWr_Fire_Letter_02)>=1)
+	else if (Npc_HasItems(other,ItWr_Fire_Letter_02) >= 1)
 	{
 //		AI_Output(self,other,"DIA_Torrez_BriefTausch_04_07"); //The seal is broken.
 //		AI_Output(self,other,"DIA_Torrez_BriefTausch_04_07"); //Das Siegel ist gebrochen.
@@ -252,6 +260,7 @@ instance DIA_Torrez_PERM(C_INFO)
 	nr = 1;
 	condition = DIA_Torrez_PERM_Condition;
 	information = DIA_Torrez_PERM_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How's venturing in the magic arts?";
 //	description = "Was machen die magischen Künste?";
@@ -294,12 +303,15 @@ instance KDF_405_Torrez_BOOK(C_INFO)
 
 func int KDF_405_Torrez_BOOK_Condition()
 {
-	if    (Npc_KnowsInfo(hero,KDF_402_Corristo_ROBE))
-	&& (Npc_KnowsInfo(hero,KDF_403_Drago_RUNE))
+	if ((Npc_KnowsInfo(hero,KDF_402_Corristo_ROBE))
+	&& (Npc_KnowsInfo(hero,KDF_403_Drago_RUNE)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void KDF_405_Torrez_BOOK_Info()
 {
 //	AI_Output(self,other,"KDF_405_Torrez_BOOK_Info_04_01"); //For each of the Circles there is a book explaining it's magic. Study these books. Knowledge is power!
@@ -322,20 +334,22 @@ instance KDF_405_Torrez_SELLBOOKS(C_INFO)
 	information = KDF_405_Torrez_SELLBOOKS_Info;
 	important = 0;
 	permanent = 1;
+	trade = 1;
 //	description = "I want to acquire magic writings.";
 //	description = "Ich möchte Schriften über Magie erwerben";
 	description = "Rád bych získal magické spisy.";
-	trade = 1;
 };
 
 func int KDF_405_Torrez_SELLBOOKS_Condition()
+{
+	if (Npc_KnowsInfo(hero,KDF_405_Torrez_GREET))
 	{
-		if (Npc_KnowsInfo(hero,KDF_405_Torrez_GREET))
-		{
-			return TRUE;
-		};
-
+		return 1;
 	};
+
+	return 0;
+};
+
 func void KDF_405_Torrez_SELLBOOKS_Info()
 {
 //	AI_Output(other,self,"KDF_405_Torrez_SELLBOOKS_Info_15_01"); //I want to acquire magic writings.
@@ -359,9 +373,9 @@ instance KDF_405_Torrez_GREET(C_INFO)
 };
 
 func int KDF_405_Torrez_GREET_Condition()
-	{
-		return TRUE;
-	};
+{
+	return 1;
+};
 
 func void KDF_405_Torrez_GREET_Info()
 {
@@ -399,10 +413,12 @@ func int KDF_405_Torrez_MANA_Condition()
 {
 	if (Npc_KnowsInfo(hero,KDF_405_Torrez_GREET))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void KDF_405_Torrez_MANA_Info()
 {
 //	AI_Output(other,self,"KDF_405_Torrez_MANA_Info_15_01"); //I need more magic power.
@@ -421,6 +437,7 @@ func void KDF_405_Torrez_MANA_Info()
 //	Info_AddChoice(KDF_405_Torrez_MANA,"Mana um 1 steigern (Kosten 1 LP)",KDF_405_Torrez_MANA_MAN_1);
 	Info_AddChoice(KDF_405_Torrez_MANA,"Zvýšení many o 1 (cena 1 dovednostní bod)",KDF_405_Torrez_MANA_MAN_1);
 };
+
 func void KDF_405_Torrez_MANA_BACK()
 {
 	Info_ClearChoices(KDF_405_Torrez_MANA);
@@ -437,7 +454,6 @@ func void KDF_405_Torrez_MANA_MAN_1()
 //	Info_AddChoice(KDF_405_Torrez_MANA,"Increase mana by 1 (cost 1 skill point)",KDF_405_Torrez_MANA_MAN_1);
 //	Info_AddChoice(KDF_405_Torrez_MANA,"Mana um 1 steigern (Kosten 1 LP)",KDF_405_Torrez_MANA_MAN_1);
 	Info_AddChoice(KDF_405_Torrez_MANA,"Zvýšení many o 1 (cena 1 dovednostní bod)",KDF_405_Torrez_MANA_MAN_1);
-
 };
 
 func void KDF_405_Torrez_MANA_MAN_5()
@@ -451,8 +467,8 @@ func void KDF_405_Torrez_MANA_MAN_5()
 //	Info_AddChoice(KDF_405_Torrez_MANA,"Increase mana by 1 (cost 1 skill point)",KDF_405_Torrez_MANA_MAN_1);
 //	Info_AddChoice(KDF_405_Torrez_MANA,"Mana um 1 steigern (Kosten 1 LP)",KDF_405_Torrez_MANA_MAN_1);
 	Info_AddChoice(KDF_405_Torrez_MANA,"Zvýšení many o 1 (cena 1 dovednostní bod)",KDF_405_Torrez_MANA_MAN_1);
-
 };
+
 /*------------------------------------------------------------------------
 							Magier Werden?
 ------------------------------------------------------------------------*/
@@ -471,14 +487,16 @@ instance KDF_405_Torrez_WANNABEMAGE(C_INFO)
 
 func int KDF_405_Torrez_WANNABEMAGE_Condition()
 {
-	if (Npc_KnowsInfo(hero,KDF_405_Torrez_GREET))
+	if ((Npc_KnowsInfo(hero,KDF_405_Torrez_GREET))
 	&& (Npc_GetTrueGuild(hero) != GIL_KDF)
-	&& (!Npc_KnowsInfo(hero,KDF_402_Corristo_WANNBEKDF))
+	&& (!Npc_KnowsInfo(hero,KDF_402_Corristo_WANNBEKDF)))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void KDF_405_Torrez_WANNABEMAGE_Info()
 {
 //	AI_Output(other,self,"KDF_405_Torrez_WANNABEMAGE_Info_15_01"); //What do I have to do to become a magician?

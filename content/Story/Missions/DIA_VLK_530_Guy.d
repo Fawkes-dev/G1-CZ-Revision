@@ -8,6 +8,7 @@ instance DIA_Guy_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Guy_Exit_Condition;
 	information = DIA_Guy_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Guy_Hello(C_INFO)
 	nr = 2;
 	condition = DIA_Guy_Hello_Condition;
 	information = DIA_Guy_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Hello!";
 //	description = "Hallo!";
@@ -44,6 +46,8 @@ func int DIA_Guy_Hello_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Guy_Hello_Info()
@@ -81,6 +85,7 @@ instance DIA_Guy_AdOC(C_INFO)
 	nr = 2;
 	condition = DIA_Guy_AdOC_Condition;
 	information = DIA_Guy_AdOC_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What are the advantages of the Old Camp?";
 //	description = "Was sind die Vorteile des Alten Lagers?";
@@ -93,6 +98,8 @@ func int DIA_Guy_AdOC_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Guy_AdOC_Info()
@@ -174,6 +181,7 @@ instance DIA_Guy_AdNC(C_INFO)
 	nr = 3;
 	condition = DIA_Guy_AdNC_Condition;
 	information = DIA_Guy_AdNC_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What are the advantages of the New Camp?";
 //	description = "Was spricht für das Neue Lager?";
@@ -186,6 +194,8 @@ func int DIA_Guy_AdNC_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Guy_AdNC_Info()
@@ -218,6 +228,7 @@ instance DIA_Guy_AdST(C_INFO)
 	nr = 4;
 	condition = DIA_Guy_AdST_Condition;
 	information = DIA_Guy_AdST_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Why should I join the sect?";
 //	description = "Warum sollte ich mich der Sekte anschließen?";
@@ -230,6 +241,8 @@ func int DIA_Guy_AdST_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Guy_AdST_Info()
@@ -263,6 +276,7 @@ instance DIA_Guy_MyOwnHut(C_INFO)
 	nr = 10;
 	condition = DIA_Guy_MyOwnHut_Condition;
 	information = DIA_Guy_MyOwnHut_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Which of the huts can I take for myself?";
 //	description = "Welche von den Hütten kann ich für mich nehmen?";
@@ -275,6 +289,8 @@ func int DIA_Guy_MyOwnHut_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Guy_MyOwnHut_Info()

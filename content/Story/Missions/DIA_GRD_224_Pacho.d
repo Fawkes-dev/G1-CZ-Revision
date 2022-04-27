@@ -14,7 +14,7 @@ instance Info_Pacho_EXIT(C_INFO)
 
 func int Info_Pacho_EXIT_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Info_Pacho_EXIT_Info()
@@ -43,7 +43,7 @@ instance Info_Pacho_STOP(C_INFO)
 
 func int Info_Pacho_STOP_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Info_Pacho_STOP_Info()

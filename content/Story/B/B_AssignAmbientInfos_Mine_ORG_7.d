@@ -12,6 +12,7 @@ instance Info_Mine_Org_7_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Mine_Org_7_EXIT_Condition;
 	information = Info_Mine_Org_7_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = "END";
 };
@@ -35,6 +36,7 @@ instance Info_Mine_Org_7_Mine(C_INFO) // E1
 	nr = 1;
 	condition = Info_Mine_Org_7_Mine_Condition;
 	information = Info_Mine_Org_7_Mine_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Tell me something about this camp.";
 //	description = "Erzähl mir mal was über das Camp hier.";
@@ -66,6 +68,7 @@ instance Info_Mine_Org_7_WichtigePersonen(C_INFO)
 	nr = 1;
 	condition = Info_Mine_Org_7_WichtigePersonen_Condition;
 	information = Info_Mine_Org_7_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Who's in charge here then?";
 //	description = "Wer hat den hier das Kommando?";
@@ -100,6 +103,7 @@ instance Info_Mine_Org_7_DieLage(C_INFO) // E1
 	nr = 1;
 	condition = Info_Mine_Org_7_DieLage_Condition;
 	information = Info_Mine_Org_7_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How are you?";
 //	description = "Wie steht's?";

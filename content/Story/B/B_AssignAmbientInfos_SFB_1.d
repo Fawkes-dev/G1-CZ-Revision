@@ -11,6 +11,7 @@ instance Info_SFB_1_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_SFB_1_EXIT_Condition;
 	information = Info_SFB_1_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = "END";
 };
@@ -34,6 +35,7 @@ instance Info_SFB_1_EinerVonEuchWerden(C_INFO)
 	nr = 4;
 	condition = Info_SFB_1_EinerVonEuchWerden_Condition;
 	information = Info_SFB_1_EinerVonEuchWerden_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How do I join the league of scrapers?";
 //	description = "Wie kann ich dem Schürferbund beitreten?";
@@ -73,6 +75,7 @@ instance Info_SFB_1_WichtigePersonen(C_INFO)
 	nr = 3;
 	condition = Info_SFB_1_WichtigePersonen_Condition;
 	information = Info_SFB_1_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Who's in charge around here?";
 //	description = "Wer hat hier das Sagen?";
@@ -103,6 +106,7 @@ instance Info_SFB_1_DasLager(C_INFO)
 	nr = 2;
 	condition = Info_SFB_1_DasLager_Condition;
 	information = Info_SFB_1_DasLager_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What is this?";
 //	description = "Was ist das hier?";
@@ -136,6 +140,7 @@ instance Info_SFB_1_DieLage(C_INFO)
 	nr = 1;
 	condition = Info_SFB_1_DieLage_Condition;
 	information = Info_SFB_1_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How are you doing?";
 //	description = "Wie sieht's aus?";

@@ -8,6 +8,7 @@ instance DIA_ARTO_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_ARTO_EXIT_Condition;
 	information = DIA_ARTO_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_ARTO_Hello(C_INFO)
 	nr = 3;
 	condition = DIA_ARTO_Hello_Condition;
 	information = DIA_ARTO_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Who are you?";
 //	description = "Wer bist du?";
@@ -63,6 +65,7 @@ instance DIA_ARTO_What(C_INFO)
 	nr = 3;
 	condition = DIA_ARTO_What_Condition;
 	information = DIA_ARTO_What_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What do you do round here?";
 //	description = "Was machst du so?";
@@ -75,6 +78,8 @@ func int DIA_ARTO_What_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_ARTO_What_Info()
@@ -97,6 +102,7 @@ instance DIA_ARTO_PERM(C_INFO)
 	nr = 3;
 	condition = DIA_ARTO_PERM_Condition;
 	information = DIA_ARTO_PERM_Info;
+	important = 0;
 	permanent = 1;
 //	description = "You don't talk much, do you?";
 //	description = "Du redest nicht viel, was?";
@@ -109,6 +115,8 @@ func int DIA_ARTO_PERM_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_ARTO_PERM_Info()
@@ -120,4 +128,3 @@ func void DIA_ARTO_PERM_Info()
 //	AI_Output(self,other,"DIA_ARTO_PERM_13_01"); //Nein.
 	AI_Output(self,other,"DIA_ARTO_PERM_13_01"); //Moc ne.
 };
-

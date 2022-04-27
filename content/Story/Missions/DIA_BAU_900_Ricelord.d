@@ -8,6 +8,7 @@ instance DIA_Ricelord_EXIT(C_INFO)
 	nr = 999;
 	condition = DIA_Ricelord_EXIT_Condition;
 	information = DIA_Ricelord_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Ricelord_Hello(C_INFO)
 	nr = 1;
 	condition = DIA_Ricelord_Hello_Condition;
 	information = DIA_Ricelord_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "You take care of the rice fields, don't you?";
 //	description = "Du kümmerst dich um die Reisfelder, richtig?";
@@ -63,6 +65,7 @@ instance DIA_Ricelord_Arbeit(C_INFO)
 	nr = 1;
 	condition = DIA_Ricelord_Arbeit_Condition;
 	information = DIA_Ricelord_Arbeit_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Have you got work for me?";
 //	description = "Hast du Arbeit für mich?";
@@ -71,12 +74,14 @@ instance DIA_Ricelord_Arbeit(C_INFO)
 
 func int DIA_Ricelord_Arbeit_Condition()
 {
-	if Npc_KnowsInfo(hero,DIA_Ricelord_Hello)
-	&& !Npc_KnowsInfo(hero,DIA_Lefty_First)
-	&& (LeftyDead == False)
+	if ((Npc_KnowsInfo(hero,DIA_Ricelord_Hello))
+	&& (!Npc_KnowsInfo(hero,DIA_Lefty_First))
+	&& ((LeftyDead == False)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Ricelord_Arbeit_Info()
@@ -99,15 +104,20 @@ instance DIA_Ricelord_TRADE(C_INFO)
 	nr = 800;
 	condition = DIA_Ricelord_TRADE_Condition;
 	information = DIA_Ricelord_TRADE_Info;
+	important = 0;
 	permanent = 1;
+	trade = 1;
 //	description = "We could make a deal...";
 //	description = "Wir könnten handeln...";
 	description = "Můžeme uzavřít smlouvu.";
-	trade = 1;
 };
 
 func int DIA_Ricelord_TRADE_Condition()
 {
+//TODO: why is he not trading ?
+//Was there an intention do give him key ITKE_RB_01? His chest is locked with ITKE_RB_01, but it was never added neither to his inventory nor to the game. It does not exist.
+//- mob: 'CHEST', key: 'ITKE_RB_01', pickLockStr: 'LRLLLR', portalroom: 'RICEB02', pos: -47334 1982 12292 has an invalid key - item does not exist!
+
 // if (Npc_KnowsInfo(hero,DIA_Ricelord_Hello))
 // {
 // return 1;
@@ -133,6 +143,7 @@ instance DIA_Ricelord_LeftySentMe(C_INFO)
 	nr = 1;
 	condition = DIA_Ricelord_LeftySentMe_Condition;
 	information = DIA_Ricelord_LeftySentMe_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Lefty sent me.";
 //	description = "Lefty schickt mich.";
@@ -141,13 +152,15 @@ instance DIA_Ricelord_LeftySentMe(C_INFO)
 
 func int DIA_Ricelord_LeftySentMe_Condition()
 {
-	if Npc_KnowsInfo(hero,DIA_Ricelord_Hello)
+	if ((Npc_KnowsInfo(hero,DIA_Ricelord_Hello))
 	&& (Lefty_Mission == LOG_RUNNING)
 	&& (Ricelord_AskedForWater == FALSE)
-	&& (LeftyDead == False)
+	&& (LeftyDead == False))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Ricelord_LeftySentMe_Info()
@@ -171,6 +184,7 @@ instance DIA_Ricelord_GetWater(C_INFO)
 	nr = 1;
 	condition = DIA_Ricelord_GetWater_Condition;
 	information = DIA_Ricelord_GetWater_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I'm to bring the peasants some water.";
 //	description = "Ich soll den Bauern Wasser bringen.";
@@ -183,6 +197,8 @@ func int DIA_Ricelord_GetWater_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Ricelord_GetWater_Info()

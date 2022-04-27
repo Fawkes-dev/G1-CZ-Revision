@@ -12,6 +12,7 @@ instance Info_Org_6_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Org_6_EXIT_Condition;
 	information = Info_Org_6_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -35,6 +36,7 @@ instance Info_Org_6_EinerVonEuchWerden(C_INFO) // E1
 	nr = 4;
 	condition = Info_Org_6_EinerVonEuchWerden_Condition;
 	information = Info_Org_6_EinerVonEuchWerden_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I want to join you!";
 //	description = "Ich will bei euch mitmachen!";
@@ -79,6 +81,7 @@ instance Info_Org_6_WichtigePersonen(C_INFO)
 	nr = 3;
 	condition = Info_Org_6_WichtigePersonen_Condition;
 	information = Info_Org_6_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Who's the boss?";
 //	description = "Wer ist hier der Boss?";
@@ -119,6 +122,7 @@ instance Info_Org_6_DasLager(C_INFO)
 	nr = 2;
 	condition = Info_Org_6_DasLager_Condition;
 	information = Info_Org_6_DasLager_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Is there anything I should know about this place?";
 //	description = "Was muß ich über diesen Ort wissen?";
@@ -152,6 +156,7 @@ instance Info_Org_6_DieLage(C_INFO) // E1
 	nr = 1;
 	condition = Info_Org_6_DieLage_Condition;
 	information = Info_Org_6_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How are you?";
 //	description = "Wie steht's?";
@@ -185,6 +190,7 @@ instance Info_Org_6_Krautprobe(C_INFO) // E1
 	nr = 5;
 	condition = Info_Org_6_Krautprobe_Condition;
 	information = Info_Org_6_Krautprobe_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I have some swampweed here. D'you want some?";
 //	description = "Ich hab ein bißchen Sumpfkraut dabei. Willst du was?";

@@ -8,6 +8,7 @@ instance DIA_Grd_217_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Grd_217_Exit_Condition;
 	information = DIA_Grd_217_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Grd_217_First(C_INFO)
 	nr = 1;
 	condition = DIA_Grd_217_First_Condition;
 	information = DIA_Grd_217_First_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Hi!";
 //	description = "Hi!";

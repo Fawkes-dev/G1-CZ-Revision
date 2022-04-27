@@ -8,6 +8,7 @@ instance Info_GRD_276_Exit(C_INFO)
 	nr = 999;
 	condition = Info_GRD_276_Exit_Condition;
 	information = Info_GRD_276_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance Info_GRD_276_Tips(C_INFO)
 	nr = 1;
 	condition = Info_GRD_276_Tips_Condition;
 	information = Info_GRD_276_Tips_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Hi! I'm new here.";
 //	description = "Hi! Ich bin neu hier.";
@@ -44,7 +46,10 @@ func int Info_GRD_276_Tips_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
+
 func void Info_GRD_276_Tips_Info()
 {
 //	AI_Output(other,self,"Info_GRD_276_Tips_15_00"); //Hi! I'm new here.
@@ -78,6 +83,8 @@ func int Info_GRD_276_Bla_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_GRD_276_Bla_Info()

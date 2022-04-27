@@ -11,6 +11,7 @@ instance Info_Mine_Sld_8_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Mine_Sld_8_EXIT_Condition;
 	information = Info_Mine_Sld_8_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = "END";
 };
@@ -34,6 +35,7 @@ instance Info_Mine_Sld_8_EinerVonEuchWerden(C_INFO) // E1
 	nr = 4;
 	condition = Info_Mine_Sld_8_EinerVonEuchWerden_Condition;
 	information = Info_Mine_Sld_8_EinerVonEuchWerden_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How can I join this squad?";
 //	description = "Wie kann ich diesem Trupp hier beitreten?";
@@ -73,6 +75,7 @@ instance Info_Mine_Sld_8_WichtigePersonen(C_INFO)
 	nr = 3;
 	condition = Info_Mine_Sld_8_WichtigePersonen_Condition;
 	information = Info_Mine_Sld_8_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Who calls the shots around here?";
 //	description = "Wer hat hier das Sagen?";
@@ -106,6 +109,7 @@ instance Info_Mine_Sld_8_DasLager(C_INFO)
 	nr = 2;
 	condition = Info_Mine_Sld_8_DasLager_Condition;
 	information = Info_Mine_Sld_8_DasLager_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What goes on here in the Camp?";
 //	description = "Was gibt es hier im Camp?";
@@ -139,6 +143,7 @@ instance Info_Mine_Sld_8_DieLage(C_INFO) // E1
 	nr = 1;
 	condition = Info_Mine_Sld_8_DieLage_Condition;
 	information = Info_Mine_Sld_8_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Okay?";
 //	description = "Alles klar?";

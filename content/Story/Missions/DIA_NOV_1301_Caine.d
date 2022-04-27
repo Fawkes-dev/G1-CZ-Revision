@@ -33,6 +33,7 @@ instance DIA_Caine_Hallo(C_INFO)
 	nr = 1;
 	condition = DIA_Caine_Hallo_Condition;
 	information = DIA_Caine_Hallo_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Hi! I'm new here!";
 //	description = "Hi! Ich bin neu hier!";
@@ -98,6 +99,7 @@ instance DIA_Caine_WaysToKalom(C_INFO)
 	nr = 2;
 	condition = DIA_Caine_WaysToKalom_Condition;
 	information = DIA_Caine_WaysToKalom_Info;
+	important = 0;
 	permanent = 0;
 	description = "Ich würde gerne mit Cor Kalom reden - kannst du mir dabei helfen?";
 };
@@ -127,6 +129,7 @@ instance DIA_Caine_Alchemies(C_INFO)
 	nr = 2;
 	condition = DIA_Caine_Alchemies_Condition;
 	information = DIA_Caine_Alchemies_Info;
+	important = 0;
 	permanent = 0;
 	description = "Was für alchimistische Substanzen kann ich Kalom bringen?";
 };
@@ -158,6 +161,7 @@ instance DIA_Caine_Job(C_INFO)
 	nr = 2;
 	condition = DIA_Caine_Job_Condition;
 	information = DIA_Caine_Job_Info;
+	important = 0;
 	permanent = 0;
 //	description = "And what's your job?";
 //	description = "Und was tust du?";
@@ -195,6 +199,7 @@ instance DIA_Caine_WoSekret(C_INFO)
 	nr = 2;
 	condition = DIA_Caine_WoSekret_Condition;
 	information = DIA_Caine_WoSekret_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Where do I get the minecrawler secretion?";
 //	description = "Wo bekomme ich das Sekret der Minecrawler?";
@@ -207,6 +212,8 @@ func int DIA_Caine_WoSekret_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Caine_WoSekret_Info()
@@ -235,6 +242,7 @@ instance DIA_Caine_AddInfoKalom(C_INFO)
 	nr = 2;
 	condition = DIA_Caine_AddInfoKalom_Condition;
 	information = DIA_Caine_AddInfoKalom_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What more can you tell me about your master?";
 //	description = "Was kannst du mir noch über deinen Meister erzählen?";
@@ -247,6 +255,8 @@ func int DIA_Caine_AddInfoKalom_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Caine_AddInfoKalom_Info()
@@ -270,6 +280,7 @@ instance DIA_Caine_WieGuruSend(C_INFO)
 	nr = 2;
 	condition = DIA_Caine_WieGuruSend_Condition;
 	information = DIA_Caine_WieGuruSend_Info;
+	important = 0;
 	permanent = 0;
 	description = "Wie bringe ich einen Guru dazu, dass er mich zu Kalom schickt.";
 };
@@ -310,10 +321,12 @@ func int Nov_1301_Caine_CHEST_Condition()
 {
 	if (Dexter_GetKalomsRecipe == LOG_RUNNING)
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void Nov_1301_Caine_CHEST_Info()
 {
 //	AI_Output(other,self,"Nov_1301_Caine_CHEST_Info_15_01"); //How can I get Kalom's recipe?

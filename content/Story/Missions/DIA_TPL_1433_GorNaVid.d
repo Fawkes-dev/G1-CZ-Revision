@@ -40,11 +40,13 @@ instance Tpl_1433_GorNaVid_HEALTH(C_INFO)
 
 func int Tpl_1433_GorNaVid_HEALTH_Condition()
 {
-	if  Npc_KnowsInfo(hero,Grd_263_Asghan_OPEN)
-	&& !Npc_KnowsInfo(hero,Grd_263_Asghan_OPEN_NOW)
+	if ((Npc_KnowsInfo(hero,Grd_263_Asghan_OPEN))
+	&& (!Npc_KnowsInfo(hero,Grd_263_Asghan_OPEN_NOW)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Tpl_1433_GorNaVid_HEALTH_Info()
@@ -61,8 +63,8 @@ func void Tpl_1433_GorNaVid_HEALTH_Info()
 //	AI_Output(self,other,"Tpl_1433_GorNaVid_HEALTH_Info_13_04"); //When fighting crawlers it often costs a lot of blood. If you bring me a healing potion, you can count me in.
 //	AI_Output(self,other,"Tpl_1433_GorNaVid_HEALTH_Info_13_04"); //Der Kampf gegen Crawler kostet Blut. Wenn du mir einen Heiltrank bringst, bin ich dabei.
 	AI_Output(self,other,"Tpl_1433_GorNaVid_HEALTH_Info_13_04"); //Boj s důlními červy je krvavá záležitost. Když mi přineseš hojivý lektvar, můžeš se mnou počítat.
-
 };
+
 // ***************** Infos *****************************
 
 instance Tpl_1433_GorNaVid_IAN(C_INFO)
@@ -79,11 +81,13 @@ instance Tpl_1433_GorNaVid_IAN(C_INFO)
 
 func int Tpl_1433_GorNaVid_IAN_Condition()
 {
-	if (CorKalom_BringMCQBalls == LOG_RUNNING
-	&& !Npc_KnowsInfo(hero,Grd_263_Asghan_OPEN))
+	if ((CorKalom_BringMCQBalls == LOG_RUNNING)
+	&& (!Npc_KnowsInfo(hero,Grd_263_Asghan_OPEN)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Tpl_1433_GorNaVid_IAN_Info()
@@ -111,15 +115,19 @@ instance Tpl_1433_GorNaVid_HEALTH_SUC(C_INFO)
 
 func int Tpl_1433_GorNaVid_HEALTH_SUC_Condition()
 {
-	if (Npc_KnowsInfo(hero,Tpl_1433_GorNaVid_HEALTH )) &&
-		(Npc_HasItems(hero,Itfo_Potion_Health_01)  ||
-		 Npc_HasItems(hero,Itfo_Potion_Health_02)  ||
-		 Npc_HasItems(hero,Itfo_Potion_Health_03))
+	if (Npc_KnowsInfo(hero,Tpl_1433_GorNaVid_HEALTH))
 	{
-		return 1;
+		if ((Npc_HasItems(hero,Itfo_Potion_Health_01))
+		|| (Npc_HasItems(hero,Itfo_Potion_Health_02))
+		|| (Npc_HasItems(hero,Itfo_Potion_Health_03)))
+		{
+			return 1;
+		};
 	};
 
+	return 0;
 };
+
 func void Tpl_1433_GorNaVid_HEALTH_SUC_Info()
 {
 //	AI_Output(other,self,"Tpl_1433_GorNaVid_HEALTH_SUC_Info_15_01"); //Here, maybe that'll help.
@@ -132,15 +140,15 @@ func void Tpl_1433_GorNaVid_HEALTH_SUC_Info()
 //	AI_Output(other,self,"Tpl_1433_GorNaVid_HEALTH_SUC_Info_15_03"); //Ich werde dort sein.
 	AI_Output(other,self,"Tpl_1433_GorNaVid_HEALTH_SUC_Info_15_03"); //Budu tam.
 
-	if Npc_HasItems(hero,Itfo_Potion_Health_01)
+	if (Npc_HasItems(hero,Itfo_Potion_Health_01))
 	{
 		B_GiveInvItems(hero,self,Itfo_Potion_Health_01,1);
 	}
-	else if Npc_HasItems(hero,Itfo_Potion_Health_02)
+	else if (Npc_HasItems(hero,Itfo_Potion_Health_02))
 	{
 		B_GiveInvItems(hero,self,Itfo_Potion_Health_02,1);
 	}
-	else if Npc_HasItems(hero,Itfo_Potion_Health_03)
+	else if (Npc_HasItems(hero,Itfo_Potion_Health_03))
 	{
 	 	B_GiveInvItems(hero,self,Itfo_Potion_Health_03,1);
 	}
@@ -160,6 +168,7 @@ func void Tpl_1433_GorNaVid_HEALTH_SUC_Info()
 };
 
 //---------EIER GEFUNDEN------------------------------------------------------
+
 instance Tpl_1433_GorNavid_VICTORY(C_INFO)
 {
 	npc = Tpl_1433_GorNavid;
@@ -174,12 +183,14 @@ instance Tpl_1433_GorNavid_VICTORY(C_INFO)
 
 func int Tpl_1433_GorNavid_VICTORY_Condition()
 {
-	if Npc_HasItems(hero,ItAt_Crawlerqueen ) >= 1
+	if (Npc_HasItems(hero,ItAt_Crawlerqueen) >= 1)
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void Tpl_1433_GorNavid_VICTORY_Info()
 {
 //	AI_Output(other,self,"Tpl_1433_GorNavid_VICTORY_Info_15_01"); //I've found the nest of the queen!
@@ -192,4 +203,3 @@ func void Tpl_1433_GorNavid_VICTORY_Info()
 //	AI_Output(self,other,"Tpl_1433_GorNavid_VICTORY_Info_13_03"); //Möge der Schläfer auch weiterhin seine schützende Hand über dich halten!
 	AI_Output(self,other,"Tpl_1433_GorNavid_VICTORY_Info_13_03"); //Nechť nad tebou Spáč drží ochrannou ruku!
 };
-

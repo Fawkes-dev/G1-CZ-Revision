@@ -6,14 +6,16 @@ instance KDF_403_Drago_RUNE(C_INFO)
 	important = 1;
 	permanent = 0;
 };
-
 func int KDF_403_Drago_RUNE_Condition()
 {
 	if (Npc_KnowsInfo(hero,KDF_402_Corristo_ROBE))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void KDF_403_Drago_RUNE_Info()
 {
 //	AI_Output(self,other,"KDF_403_Drago_RUNE_Info_13_01"); //Take this rune, the gift of Innos. May it protect you on your path.
@@ -23,9 +25,11 @@ func void KDF_403_Drago_RUNE_Info()
 	B_GiveInvItems(self,other,ItArRuneFirebolt,1);
 	AI_StopProcessInfos(self);
 };
+
 //------------------------------------------------------------------
 //						EXIT
 //------------------------------------------------------------------
+
 instance KDF_403_Drago_Exit(C_INFO)
 {
 	npc = KDF_403_Drago;
@@ -39,7 +43,7 @@ instance KDF_403_Drago_Exit(C_INFO)
 
 func int KDF_403_Drago_Exit_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void KDF_403_Drago_Exit_Info()

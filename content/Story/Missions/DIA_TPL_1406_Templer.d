@@ -33,6 +33,7 @@ instance DIA_KalomsGuard_PERM(C_INFO)
 	nr = 1;
 	condition = DIA_KalomsGuard_PERM_Condition;
 	information = DIA_KalomsGuard_PERM_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I'm sure you won't mind my going in there...?";
 //	description = "Du hast doch nichts dagegen, wenn ich da reingehe?";
@@ -54,4 +55,3 @@ func void DIA_KalomsGuard_PERM_Info()
 	AI_Output(self,other,"DIA_KalomsGuard_PERM_13_01"); //Jestli budeš k mému mistrovi neuctivý, zabiju tě!
 	AI_StopProcessInfos(self);
 };
-

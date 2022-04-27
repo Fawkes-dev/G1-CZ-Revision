@@ -12,6 +12,7 @@ instance Info_Vlk_2_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Vlk_2_EXIT_Condition;
 	information = Info_Vlk_2_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = "END";
 };
@@ -35,6 +36,7 @@ instance Info_Vlk_2_EinerVonEuchWerden(C_INFO) // E1
 	nr = 4;
 	condition = Info_Vlk_2_EinerVonEuchWerden_Condition;
 	information = Info_Vlk_2_EinerVonEuchWerden_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I want to join you.";
 //	description = "Ich will bei euch mitmachen.";
@@ -68,6 +70,7 @@ instance Info_Vlk_2_WichtigePersonen(C_INFO)
 	nr = 3;
 	condition = Info_Vlk_2_WichtigePersonen_Condition;
 	information = Info_Vlk_2_WichtigePersonen_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Who calls the shots around here?";
 //	description = "Wer hat hier das Sagen?";
@@ -101,6 +104,7 @@ instance Info_Vlk_2_DasLager(C_INFO)
 	nr = 2;
 	condition = Info_Vlk_2_DasLager_Condition;
 	information = Info_Vlk_2_DasLager_Info;
+	important = 0;
 	permanent = 1;
 //	description = "I want to know more about the Camp.";
 //	description = "Ich will mehr über dieses Lager erfahren.";
@@ -131,6 +135,7 @@ instance Info_Vlk_2_DieLage(C_INFO) // E1
 	nr = 1;
 	condition = Info_Vlk_2_DieLage_Condition;
 	information = Info_Vlk_2_DieLage_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What's life like here?";
 //	description = "Wie ist das Leben hier?";

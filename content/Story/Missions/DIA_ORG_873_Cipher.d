@@ -15,7 +15,7 @@ instance Org_873_Cipher_Exit(C_INFO)
 
 func int Org_873_Cipher_Exit_Condition()
 {
-	return TRUE;
+	return 1;
 };
 
 func void Org_873_Cipher_Exit_Info()
@@ -33,6 +33,7 @@ instance Org_873_Cipher_Hello(C_INFO)
 	nr = 1;
 	condition = Org_873_Cipher_Hello_Condition;
 	information = Org_873_Cipher_Hello_Info;
+	important = 0;
 	permanent = 0;
 //	description = "How's things?";
 //	description = "Wie sieht's aus?";
@@ -45,6 +46,8 @@ func int Org_873_Cipher_Hello_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_873_Cipher_Hello_Info()
@@ -76,6 +79,7 @@ instance Org_873_Cipher_Fisk(C_INFO)
 	nr = 1;
 	condition = Org_873_Cipher_Fisk_Condition;
 	information = Org_873_Cipher_Fisk_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Fisk from the Old Camp is looking for a trade partner.";
 //	description = "Fisk aus dem Alten sucht nach einem Handelspartner.";
@@ -115,6 +119,7 @@ instance Org_873_Cipher_FromBalor(C_INFO)
 	nr = 1;
 	condition = Org_873_Cipher_FromBalor_Condition;
 	information = Org_873_Cipher_FromBalor_Info;
+	important = 0;
 	permanent = 1;
 //	description = "What have you got to offer?";
 //	description = "Was hast du anzubieten?";
@@ -127,6 +132,8 @@ func int Org_873_Cipher_FromBalor_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_873_Cipher_FromBalor_Info()
@@ -168,19 +175,22 @@ instance Org_873_Cipher_TRADE(C_INFO)
 	nr = 1;
 	condition = Org_873_Cipher_TRADE_Condition;
 	information = Org_873_Cipher_TRADE_Info;
+	important = 0;
 	permanent = 1;
+	trade = 1;
 //	description = "Let's make a deal.";
 //	description = "Lass uns handeln.";
 	description = "Uzavřeme obchod.";
-	trade = 1;
 };
 
 func int Org_873_Cipher_TRADE_Condition()
 {
-	if ( Cipher_Trade == TRUE)
+	if (Cipher_Trade == TRUE)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Org_873_Cipher_TRADE_Info()

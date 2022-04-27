@@ -45,8 +45,8 @@ instance DIA_Lester_Sakrileg(C_INFO)
 	nr = 1;
 	condition = DIA_Lester_Sakrileg_Condition;
 	information = DIA_Lester_Sakrileg_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Lester_Sakrileg_Condition()
@@ -55,6 +55,8 @@ func int DIA_Lester_Sakrileg_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Lester_Sakrileg_Info()
@@ -74,6 +76,7 @@ instance DIA_Lester_Hallo(C_INFO)
 	nr = 1;
 	condition = DIA_Lester_Hallo_Condition;
 	information = DIA_Lester_Hallo_Info;
+	important = 0;
 	permanent = 0;
 //	description = "Who are you?";
 //	description = "Wer bist du?";
@@ -84,8 +87,10 @@ func int DIA_Lester_Hallo_Condition()
 {
 	if (Kapitel < 3)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Lester_Hallo_Info()
@@ -114,6 +119,7 @@ instance DIA_Lester_WannaTalkToMaster(C_INFO) //E2
 	nr = 2;
 	condition = DIA_Lester_WannaTalkToMaster_Condition;
 	information = DIA_Lester_WannaTalkToMaster_Info;
+	important = 0;
 	permanent = 0;
 //	description = "But I want to talk to your master.";
 //	description = "Ich will aber mit deinem Meister reden.";
@@ -122,12 +128,14 @@ instance DIA_Lester_WannaTalkToMaster(C_INFO) //E2
 
 func int DIA_Lester_WannaTalkToMaster_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Lester_Hallo) || Npc_KnowsInfo(hero,DIA_Lester_Sakrileg))
+	if (((Npc_KnowsInfo(hero,DIA_Lester_Hallo)) || (Npc_KnowsInfo(hero,DIA_Lester_Sakrileg)))
 	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
-	&& (!Npc_KnowsInfo(hero,DIA_Lester_ShowHallo))
+	&& (!Npc_KnowsInfo(hero,DIA_Lester_ShowHallo)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Lester_WannaTalkToMaster_Info()
@@ -150,6 +158,7 @@ instance DIA_Lester_CampInfo(C_INFO) //E2
 	nr = 2;
 	condition = DIA_Lester_CampInfo_Condition;
 	information = DIA_Lester_CampInfo_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Tell me something about the Camp.";
 //	description = "Erzähl mir was über das Lager.";
@@ -158,11 +167,13 @@ instance DIA_Lester_CampInfo(C_INFO) //E2
 
 func int DIA_Lester_CampInfo_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Lester_Hallo))
-	&& (Kapitel < 3)
+	if ((Npc_KnowsInfo(hero,DIA_Lester_Hallo))
+	&& (Kapitel < 3))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Lester_CampInfo_Info()
@@ -186,6 +197,7 @@ func void DIA_Lester_CampInfo_Info()
 //	Info_Addchoice (DIA_Lester_CampInfo,"Was weißt du über das Kraut?",DIA_Lester_CampInfo_HERB);
 	Info_Addchoice (DIA_Lester_CampInfo,"Co víš o droze z bažin?",DIA_Lester_CampInfo_HERB);
 };
+
 func void DIA_Lester_CampInfo_BACK()
 {
 	Info_Clearchoices (DIA_Lester_CampInfo);
@@ -206,6 +218,7 @@ func void DIA_Lester_CampInfo_GIL()
 //	AI_Output(self,other,"DIA_Lester_CampInfo_GIL_05_03"); //Einige der Novizen werden als Gurus aufgenommen, aber dazu gehört eine viele Jahre lange Ausbildung.
 	AI_Output(self,other,"DIA_Lester_CampInfo_GIL_05_03"); //Někteří novici se smějí přidat ke Guru, ale aby jim to bylo povoleno, musejí dlouhá léta studovat.
 };
+
 func void DIA_Lester_CampInfo_SLEEPER()
 {
 //	AI_Output(other,self,"DIA_Lester_CampInfo_SLEEPER_15_00"); //What can you tell me about the Sleeper?
@@ -227,6 +240,7 @@ func void DIA_Lester_CampInfo_SLEEPER()
 //	AI_Output(self,other,"DIA_Lester_CampInfo_SLEEPER_05_05"); //Du kannst dir nicht vorstellen, was ich alles bereit bin zu glauben und zu machen, damit ich hier wieder raus komme!
 	AI_Output(self,other,"DIA_Lester_CampInfo_SLEEPER_05_05"); //Nedokážeš si představit, v co jsem ochotný věřit a co udělat, jen abych se odtud dostal pryč!
 };
+
 func void DIA_Lester_CampInfo_HERB()
 {
 //	AI_Output(other,self,"DIA_Lester_CampInfo_HERB_15_00"); //What do you know about the weed?
@@ -256,6 +270,7 @@ instance DIA_Lester_WannaJoin(C_INFO) //E2
 	nr = 2;
 	condition = DIA_Lester_WannaJoin_Condition;
 	information = DIA_Lester_WannaJoin_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I want to become a member of the Brotherhood!";
 //	description = "Ich will mich der Bruderschaft anschließen!";
@@ -264,11 +279,13 @@ instance DIA_Lester_WannaJoin(C_INFO) //E2
 
 func int DIA_Lester_WannaJoin_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Lester_Hallo))
-	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
+	if ((Npc_KnowsInfo(hero,DIA_Lester_Hallo))
+	&& (Npc_GetTrueGuild(hero) == GIL_NONE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Lester_WannaJoin_Info()
@@ -297,6 +314,7 @@ instance DIA_Lester_HowProofWorthy(C_INFO) //E2
 	nr = 2;
 	condition = DIA_Lester_HowProofWorthy_Condition;
 	information = DIA_Lester_HowProofWorthy_Info;
+	important = 0;
 	permanent = 0;
 //	description = "How's that supposed to work if none of the Gurus will talk to me?";
 //	description = "Wie soll das funktionieren, wenn keiner der Gurus mit mir redet?";
@@ -305,11 +323,13 @@ instance DIA_Lester_HowProofWorthy(C_INFO) //E2
 
 func int DIA_Lester_HowProofWorthy_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Lester_WannaJoin))
-	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
+	if ((Npc_KnowsInfo(hero,DIA_Lester_WannaJoin))
+	&& (Npc_GetTrueGuild(hero) == GIL_NONE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Lester_HowProofWorthy_Info()
@@ -347,6 +367,7 @@ instance DIA_Lester_WeitWeg(C_INFO) //E2
 	nr = 2;
 	condition = DIA_Lester_WeitWeg_Condition;
 	information = DIA_Lester_WeitWeg_Info;
+	important = 0;
 	permanent = 0;
 //	description = "How can I get your master to talk to me?";
 //	description = "Wie bringe ich deinen Meister dazu, mit mir zu reden?";
@@ -356,12 +377,14 @@ instance DIA_Lester_WeitWeg(C_INFO) //E2
 func int DIA_Lester_WeitWeg_Condition()
 {
 	var C_NPC namib; namib = Hlp_GetNpc(Gur_1204_BaalNamib);
-	if (Npc_GetDistToNpc(other,namib) > 1000)
-	&& (BaalNamib_Ansprechbar==FALSE)
-	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
+	if ((Npc_GetDistToNpc(other,namib) > 1000)
+	&& (BaalNamib_Ansprechbar == FALSE)
+	&& (Npc_GetTrueGuild(hero) == GIL_NONE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Lester_WeitWeg_Info()
@@ -411,20 +434,22 @@ instance DIA_Lester_ShowHallo(C_INFO) //E2
 	nr = 1;
 	condition = DIA_Lester_ShowHallo_Condition;
 	information = DIA_Lester_ShowHallo_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Lester_ShowHallo_Condition()
 {
 	var C_NPC namib; namib = Hlp_GetNpc(Gur_1204_BaalNamib);
-	if (Npc_GetDistToNpc(other,namib) < 500)
-	&& (BaalNamib_Ansprechbar==FALSE)
+	if ((Npc_GetDistToNpc(other,namib) < 500)
+	&& (BaalNamib_Ansprechbar == FALSE)
 	&& (Lester_Show == TRUE)
-	&& (Npc_GetTrueGuild(hero) == GIL_NONE)
+	&& (Npc_GetTrueGuild(hero) == GIL_NONE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Lester_ShowHallo_Info()
@@ -444,6 +469,7 @@ instance DIA_Lester_Show(C_INFO) //E2
 	nr = 1;
 	condition = DIA_Lester_Show_Condition;
 	information = DIA_Lester_Show_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I have renounced the old gods.";
 //	description = "Ich habe den alten Göttern abgeschworen.";
@@ -453,10 +479,14 @@ instance DIA_Lester_Show(C_INFO) //E2
 func int DIA_Lester_Show_Condition()
 {
 	var C_NPC namib; namib = Hlp_GetNpc(Gur_1204_BaalNamib);
-	if ((Npc_GetDistToNpc(other,namib) < 500) && (BaalNamib_Ansprechbar==FALSE) && (Lester_Show == TRUE))
+	if ((Npc_GetDistToNpc(other,namib) < 500)
+	&& (BaalNamib_Ansprechbar == FALSE)
+	&& (Lester_Show == TRUE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Lester_Show_Info()
@@ -495,6 +525,7 @@ instance DIA_Lester_GuideOffer(C_INFO) //E3
 	nr = 5;
 	condition = DIA_Lester_GuideOffer_Condition;
 	information = DIA_Lester_GuideOffer_Info;
+	important = 0;
 	permanent = 0;
 //	description = "How can I find my way around here in the Camp?";
 //	description = "Wie kann ich mich hier im Lager zurechtfinden?";
@@ -503,11 +534,13 @@ instance DIA_Lester_GuideOffer(C_INFO) //E3
 
 func int DIA_Lester_GuideOffer_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Lester_Hallo))
-	&& (Kapitel < 3)
+	if ((Npc_KnowsInfo(hero,DIA_Lester_Hallo))
+	&& (Kapitel < 3))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Lester_GuideOffer_Info()
@@ -539,13 +572,16 @@ instance PC_Psionic_SOON(C_INFO)
 
 func int PC_Psionic_SOON_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_Lester_GuideOffer))
+	if ((Npc_KnowsInfo(hero,DIA_Lester_GuideOffer))
 	&& (Kapitel < 3)
-	&& (LesterGuide >= 1)
+	&& (LesterGuide >= 1))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void PC_Psionic_SOON_Info()
 {
 //	AI_Output(other,self,"PC_Psionic_SOON_Info_15_01"); //Are we nearly there yet?
@@ -556,6 +592,7 @@ func void PC_Psionic_SOON_Info()
 	AI_Output(self,other,"PC_Psionic_SOON_Info_05_02"); //Když se mě přestaneš ptát, půjde to rychleji.
 	AI_StopProcessInfos(self);
 };
+
 //------ UNTERWEGS IM SUMPFLAGER UND ROUTE ÄNDERN ----------------
 instance PC_Psionic_CHANGE(C_INFO)
 {
@@ -571,13 +608,16 @@ instance PC_Psionic_CHANGE(C_INFO)
 
 func int PC_Psionic_CHANGE_Condition()
 {
-	if  Npc_KnowsInfo(hero,DIA_Lester_GuideOffer)
+	if ((Npc_KnowsInfo(hero,DIA_Lester_GuideOffer)
 	&& (Kapitel < 3)
-	&& (LesterGuide >= 1)
+	&& (LesterGuide >= 1))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void PC_Psionic_CHANGE_Info()
 {
 //	AI_Output(other,self,"PC_Psionic_CHANGE_Info_15_01"); //I've changed my mind.
@@ -589,7 +629,6 @@ func void PC_Psionic_CHANGE_Info()
 	AI_StopProcessInfos(self);
 	LesterGuide = 0;
 	Npc_ExchangeRoutine(self,"START");
-
 };
 
 //------------------FÜHRUNG DURCH DAS LAGER
@@ -608,14 +647,16 @@ instance PC_Psionic_GUIDEFIRST(C_INFO)
 
 func int PC_Psionic_GUIDEFIRST_Condition()
 {
-	if  Npc_KnowsInfo(hero,DIA_LESTER_GuideOffer)
+	if ((Npc_KnowsInfo(hero,DIA_LESTER_GuideOffer)
 	&& (Kapitel < 3)
-	&& (LesterGuide == 0)
+	&& (LesterGuide == 0))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void PC_Psionic_GUIDEFIRST_Info()
 {
 //	AI_Output(other,self,"PC_Psionic_GUIDEFIRST_Info_15_01"); //Show me the way...
@@ -641,7 +682,6 @@ func void PC_Psionic_GUIDEFIRST_Info()
 //	Info_Addchoice (PC_Psionic_GUIDEFIRST,"to the alchemy lab",PC_Psionic_GUIDEFIRST_HERB);
 //	Info_Addchoice (PC_Psionic_GUIDEFIRST,"zum Alchemielabor",PC_Psionic_GUIDEFIRST_HERB);
 	Info_Addchoice (PC_Psionic_GUIDEFIRST,"do alchymistické dílny.",PC_Psionic_GUIDEFIRST_HERB);
-
 };
 
 func void PC_Psionic_GUIDEFIRST_MAINGATE()
@@ -711,6 +751,7 @@ func void PC_Psionic_GUIDEFIRST_BACK()
 };
 
 // ***************************** Am Platz der Lehrer ****************************************//
+
 instance PC_Psionic_TRAIN(C_INFO)
 {
 	npc = PC_Psionic;
@@ -718,16 +759,16 @@ instance PC_Psionic_TRAIN(C_INFO)
 	information = PC_Psionic_TRAIN_Info;
 	important = 1;
 	permanent = 1;
-
 };
 func int PC_Psionic_TRAIN_Condition()
 {
-	if (Npc_GetDistToWP(self,"PSI_PATH_9_4") < 500 )
-	&& (LesterGuide == 3)
+	if ((Npc_GetDistToWP(self,"PSI_PATH_9_4") < 500)
+	&& (LesterGuide == 3))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
 
 func void PC_Psionic_TRAIN_Info()
@@ -748,6 +789,7 @@ func void PC_Psionic_TRAIN_Info()
 	TA_Stay     (00,00,00,55,"PSI_PATH_9_4");
 	TA_EndOverlay (self);
 };
+
 // ***************************** Am Tempelplatz ****************************************//
 instance PC_Psionic_TEMPEL(C_INFO)
 {
@@ -756,16 +798,17 @@ instance PC_Psionic_TEMPEL(C_INFO)
 	information = PC_Psionic_TEMPEL_Info;
 	important = 1;
 	permanent = 0;
-
 };
+
 func int PC_Psionic_TEMPEL_Condition()
 {
-	if (Npc_GetDistToWP(self,"PSI_TEMPLE_NOVIZE_PR") < 600 )
-	&& (LesterGuide == 2)
+	if ((Npc_GetDistToWP(self,"PSI_TEMPLE_NOVIZE_PR") < 600)
+	&& (LesterGuide == 2))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
 
 func void PC_Psionic_TEMPEL_Info()
@@ -781,8 +824,8 @@ func void PC_Psionic_TEMPEL_Info()
 	TA_BeginOverlay (self);
 	TA_Stay(00,00,01,00,"PSI_TEMPLE_NOVIZE_PR");
 	TA_EndOverlay (self);
-
 };
+
 // ***************************** An der Schmiede ****************************************//
 instance PC_Psionic_SMITH(C_INFO)
 {
@@ -791,16 +834,17 @@ instance PC_Psionic_SMITH(C_INFO)
 	information = PC_Psionic_SMITH_Info;
 	important = 1;
 	permanent = 0;
-
 };
+
 func int PC_Psionic_SMITH_Condition()
 {
-	if (Npc_GetDistToWP(self,"PSI_SMITH_IN") < 900 )
-	&& (LesterGuide == 1)
+	if ((Npc_GetDistToWP(self,"PSI_SMITH_IN") < 900)
+	&& (LesterGuide == 1))
 	{
 		return 1;
 	};
 
+	return 0;
 };
 
 func void PC_Psionic_SMITH_Info()
@@ -815,8 +859,8 @@ func void PC_Psionic_SMITH_Info()
 	TA_BeginOverlay (self);
 	TA_Stay(00,00,01,00,"PSI_SMITH_IN");
 	TA_EndOverlay (self);
-
 };
+
 // ***************************** Beim Krauthändler ****************************************//
 instance PC_Psionic_HERB(C_INFO)
 {
@@ -825,16 +869,19 @@ instance PC_Psionic_HERB(C_INFO)
 	information = PC_Psionic_HERB_Info;
 	important = 1;
 	permanent = 0;
-
 };
+
 func int PC_Psionic_HERB_Condition()
 {
-	if (Npc_GetDistToWP(self,"PSI_WALK_06") < 800 )
-	&& (LesterGuide == 4)
+	if ((Npc_GetDistToWP(self,"PSI_WALK_06") < 800)
+	&& (LesterGuide == 4))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void PC_Psionic_HERB_Info()
 {
 //	AI_Output(self,other,"PC_Psionic_HERB_Info_05_01"); //If you climb up this ladder you'll meet Kalom, the alchemist. Down here is Fortuno, the weed merchant.
@@ -878,12 +925,14 @@ instance PC_Psionic_SEND(C_INFO)// PC muss im ersten Kapitel schon mal mit Leste
 func int PC_Psionic_SEND_Condition()
 {
 	//SN: NICHT auf Kapitel 2 abfragen, Kapitelwechel geschieht erst unten zentral für alle SC-Gilden!!!
-	if (Npc_GetTrueGuild(hero) != GIL_NONE)
+	if ((Npc_GetTrueGuild(hero) != GIL_NONE)
 	&& (YBerion_BringFocus != LOG_RUNNING)
-	&& (YBerion_BringFocus != LOG_SUCCESS)
+	&& (YBerion_BringFocus != LOG_SUCCESS))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void PC_Psionic_SEND_Info()
@@ -934,12 +983,14 @@ instance PC_Psionic_BROTHERHOOD_TODO(C_INFO)
 
 func int PC_Psionic_BROTHERHOOD_TODO_Condition()
 {
-	if Npc_KnowsInfo(hero,PC_Psionic_SEND)
+	if (Npc_KnowsInfo(hero,PC_Psionic_SEND))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void PC_Psionic_BROTHERHOOD_TODO_Info()
 {
 //	AI_Output(other,self,"PC_Psionic_BROTHERHOOD_TODO_15_01"); //What's that got to do with me?
@@ -992,12 +1043,15 @@ instance PC_Psionic_FOLLOWME(C_INFO)
 
 func int PC_Psionic_FOLLOWME_Condition()
 {
-	if ( Npc_GetDistToWp (hero,"LOCATION_19_01") < 400 )
-	&& (Npc_GetDistToNpc(hero,PC_PSIONIC) <400)
+	if ((Npc_GetDistToWp (hero,"LOCATION_19_01") < 400)
+	&& (Npc_GetDistToNpc(hero,PC_PSIONIC) < 400))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void PC_Psionic_FOLLOWME_Info()
 {
 	AI_GotoNpc(self,hero);
@@ -1042,13 +1096,15 @@ instance PC_Psionic_GOLEM(C_INFO)
 
 func int PC_Psionic_GOLEM_Condition()
 {
-	if (Npc_KnowsInfo(hero,PC_Psionic_FOLLOWME))
-	&& (!Npc_KnowsInfo(hero,PC_Psionic_FINISH ))
+	if ((Npc_KnowsInfo(hero,PC_Psionic_FOLLOWME))
+	&& (!Npc_KnowsInfo(hero,PC_Psionic_FINISH)))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void PC_Psionic_GOLEM_Info()
 {
 //	AI_Output(other,self,"PC_Psionic_NORMAL_Info_15_01"); //How did you manage to get past that living mountain?
@@ -1060,6 +1116,7 @@ func void PC_Psionic_GOLEM_Info()
 };
 
 //------------GESCHICHTE WARUM LESTER ZUR BERGFESTUNG GEHT--------------------
+
 instance PC_Psionic_STORY(C_INFO)
 {
 	npc = PC_Psionic;
@@ -1074,13 +1131,14 @@ instance PC_Psionic_STORY(C_INFO)
 
 func int PC_Psionic_STORY_Condition()
 {
-	if Npc_KnowsInfo(hero,PC_Psionic_FOLLOWME)
-
+	if (Npc_KnowsInfo(hero,PC_Psionic_FOLLOWME))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void PC_Psionic_STORY_Info()
 {
 //	AI_Output(other,self,"PC_Psionic_STORY_Info_15_01"); //This document you're looking for... what is it?
@@ -1101,6 +1159,7 @@ func void PC_Psionic_STORY_Info()
 };
 
 // ***************************** INFOS ****************************************//
+
 instance PC_Psionic_COMEWITHME(C_INFO)
 {
 	npc = PC_Psionic;
@@ -1115,11 +1174,13 @@ instance PC_Psionic_COMEWITHME(C_INFO)
 
 func int PC_Psionic_COMEWITHME_Condition()
 {
-	if Npc_KnowsInfo(hero,PC_Psionic_STORY)
-	&& Npc_KnowsInfo(hero,PC_Psionic_GOLEM)
+	if ((Npc_KnowsInfo(hero,PC_Psionic_STORY))
+	&& (Npc_KnowsInfo(hero,PC_Psionic_GOLEM)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void PC_Psionic_COMEWITHME_Info()
@@ -1143,6 +1204,7 @@ func void PC_Psionic_COMEWITHME_Info()
 };
 
 //--------------------SPIELER KOMMT MIT LESTER ZUM FOKUSPLATZ-------------------
+
 instance PC_Psionic_FOKUSPLACE(C_INFO)
 {
 	npc = PC_Psionic;
@@ -1154,11 +1216,14 @@ instance PC_Psionic_FOKUSPLACE(C_INFO)
 
 func int PC_Psionic_FOKUSPLACE_Condition()
 {
-	if ( Npc_GetDistToWp (hero,"LOCATION_19_03_PATH_RUIN7") < 400 )
+	if (Npc_GetDistToWp (hero,"LOCATION_19_03_PATH_RUIN7") < 400)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void PC_Psionic_FOKUSPLACE_Info()
 {
 	AI_GotoNpc(self,hero);
@@ -1181,6 +1246,7 @@ func void PC_Psionic_FOKUSPLACE_Info()
 };
 
 // ---------SPIELER WILL ÜBER DIE BRÜCKE OHNE DEN AUFTRAG ERFÜLLT ZU HABEN--------
+
 instance PC_Psionic_COMEBACK(C_INFO)
 {
 	npc = PC_Psionic;
@@ -1192,13 +1258,16 @@ instance PC_Psionic_COMEBACK(C_INFO)
 
 func int PC_Psionic_COMEBACK_Condition()
 {
-	if ( Npc_GetDistToWp (hero,"PATH_TO_PLATEAU04_BRIDGE2" ) < 600 )
+	if ((Npc_GetDistToWp (hero,"PATH_TO_PLATEAU04_BRIDGE2") < 600)
 	&& (Npc_KnowsInfo(hero,PC_Psionic_FOLLOWME))
-	&& (!Npc_HasItems(hero,Focus_3))
+	&& (!Npc_HasItems(hero,Focus_3)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void PC_Psionic_COMEBACK_Info()
 {
 	AI_GotoNpc(self,hero);
@@ -1212,6 +1281,7 @@ func void PC_Psionic_COMEBACK_Info()
 };
 
 // -----SPIELER IST VERLETZT UND FRAGT NACH HILFE-------------------
+
 instance PC_Psionic_IAMHURT(C_INFO)
 {
 	npc = PC_Psionic;
@@ -1226,13 +1296,15 @@ instance PC_Psionic_IAMHURT(C_INFO)
 
 func int PC_Psionic_IAMHURT_Condition()
 {
-	if (hero.attribute[ATR_HITPOINTS] < (hero.attribute[ATR_HITPOINTS_MAX]/2))
-	&& (Npc_KnowsInfo(hero,PC_Psionic_FOLLOWME))
+	if ((Npc_KnowsInfo(hero,PC_Psionic_FOLLOWME))
+	&& (hero.attribute[ATR_HITPOINTS] < (hero.attribute[ATR_HITPOINTS_MAX]/2)))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void PC_Psionic_IAMHURT_Info()
 {
 //	AI_Output(other,self,"PC_Psionic_IAMHURT_Info_15_01"); //I'm injured. Can you help me?
@@ -1261,13 +1333,15 @@ instance PC_Psionic_URKUNDE(C_INFO)
 
 func int PC_Psionic_URKUNDE_Condition()
 {
-	if((Npc_HasItems(hero,ItWr_Urkunde_01 ))
-	&&(Npc_KnowsInfo(hero,PC_Psionic_STORY)))
+	if ((Npc_KnowsInfo(hero,PC_Psionic_STORY))
+	&& (Npc_HasItems(hero,ItWr_Urkunde_01)))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void PC_Psionic_URKUNDE_Info()
 {
 //	AI_Output(other,self,"PC_Psionic_URKUNDE_Info_15_01"); //I've found the document.
@@ -1307,13 +1381,15 @@ instance PC_Psionic_TIP(C_INFO)
 
 func int PC_Psionic_TIP_Condition()
 {
-	if (Npc_KnowsInfo(hero,PC_Psionic_URKUNDE))
-	&& ( ! Npc_HasItems(hero,Focus_3))
+	if ((Npc_KnowsInfo(hero,PC_Psionic_URKUNDE))
+	&& (!Npc_HasItems(hero,Focus_3)))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void PC_Psionic_TIP_Info()
 {
 //	AI_Output(other,self,"PC_Psionic_TIP_Info_15_01"); //How can I reach the focus?
@@ -1326,6 +1402,7 @@ func void PC_Psionic_TIP_Info()
 };
 
 // ---ALLES IN DER BERGFESTUNG ERLEDIGT ABER LESTER DIE URKUNDE NICHT GEGEBEN
+
 instance PC_Psionic_LEAVE(C_INFO)
 {
 	npc = PC_Psionic;
@@ -1337,13 +1414,16 @@ instance PC_Psionic_LEAVE(C_INFO)
 
 func int PC_Psionic_LEAVE_Condition()
 {
-	if ( ! Npc_HasItems(hero,Focus_3))
-	&& ( ! Npc_HasItems(self,ItWr_Urkunde_01))
-	&& ( Npc_GetDistToWp (hero,"PATH_TO_PLATEAU04_BRIDGE2") < 900 )
+	if ((!Npc_HasItems(hero,Focus_3))
+	&& (!Npc_HasItems(self,ItWr_Urkunde_01))
+	&& (Npc_GetDistToWp (hero,"PATH_TO_PLATEAU04_BRIDGE2") < 900))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void PC_Psionic_LEAVE_Info()
 {
 	AI_GotoNpc(self,hero);
@@ -1369,13 +1449,15 @@ instance PC_Psionic_BALKON(C_INFO)
 
 func int PC_Psionic_BALKON_Condition()
 {
-	if ( ! Npc_HasItems(self,ItWr_Urkunde_01))
-	&& ( Npc_GetDistToWp (hero,"LOCATION_19_03_PEMTAGRAM2") < 1000 )
-
+	if ((!Npc_HasItems(self,ItWr_Urkunde_01))
+	&& (Npc_GetDistToWp (hero,"LOCATION_19_03_PEMTAGRAM2") < 1000))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void PC_Psionic_BALKON_Info()
 {
 	AI_GotoNpc(self,hero);
@@ -1385,9 +1467,10 @@ func void PC_Psionic_BALKON_Info()
 
 	AI_StopProcessInfos(self);
 	Npc_ExchangeRoutine(self,"BALKON");
-
 };
+
 //---------------------------------------------------------------
+
 instance PC_Psionic_FINISH(C_INFO)
 {
 	npc = PC_Psionic;
@@ -1399,12 +1482,15 @@ instance PC_Psionic_FINISH(C_INFO)
 
 func int PC_Psionic_FINISH_Condition()
 {
-	if Npc_HasItems(hero,Focus_3)
-	&& Npc_KnowsInfo(hero,PC_Psionic_URKUNDE)
+	if ((Npc_KnowsInfo(hero,PC_Psionic_URKUNDE))
+	&& (Npc_HasItems(hero,Focus_3)))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void PC_Psionic_FINISH_Info()
 {
 //	AI_Output(self,other,"PC_Psionic_FINISH_Info_05_01"); //Now both of us have what we wanted. I'll stay here to read the old books.
@@ -1422,6 +1508,7 @@ func void PC_Psionic_FINISH_Info()
 	Npc_ExchangeRoutine(self,"BOOK");
 	AI_StopProcessInfos(self);
 };
+
 /*---------------------------------BALKON DER BERGFESTUNG
 ------------------------------------------------------------------------*/
 
@@ -1439,14 +1526,16 @@ instance PC_Psionic_CHESTCLOSED(C_INFO)
 
 func int PC_Psionic_CHESTCLOSED_Condition()
 {
-	if ( ! Npc_HasItems(hero,Focus_3))
-	&& ( ! Npc_HasItems(self,ItWr_Urkunde_01))
-	&& ( Npc_GetDistToWp(hero,"LOCATION_19_03_SECOND_ETAGE_BALCON") < 500)
+	if ((!Npc_HasItems(hero,Focus_3))
+	&& (!Npc_HasItems(self,ItWr_Urkunde_01))
+	&& (Npc_GetDistToWp(hero,"LOCATION_19_03_SECOND_ETAGE_BALCON") < 500))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void PC_Psionic_CHESTCLOSED_Info()
 {
 //	AI_Output(other,self,"PC_Psionic_CHESTCLOSED_Info_15_01"); //Have you found anything?
@@ -1466,6 +1555,7 @@ func void PC_Psionic_CHESTCLOSED_Info()
 	AI_Output(self,other,"PC_Psionic_CHESTCLOSED_Info_05_05"); //Už jsi hledal v knihovně?
 	AI_StopProcessInfos(self);
 };
+
 /*------------------------------------------------------------------------
 							COME WITH ME AGAIN
 ------------------------------------------------------------------------*/
@@ -1484,13 +1574,15 @@ instance PC_Psionic_COMEAGAIN(C_INFO)
 
 func int PC_Psionic_COMEAGAIN_Condition()
 {
-	if (Npc_KnowsInfo(hero,PC_Psionic_LEAVE))
-	&& ( ! Npc_HasItems(hero,Focus_3))
+	if ((Npc_KnowsInfo(hero,PC_Psionic_LEAVE))
+	&& (!Npc_HasItems(hero,Focus_3)))
 	{
-		return TRUE;
+		return 1;
 	};
 
+	return 0;
 };
+
 func void PC_Psionic_COMEAGAIN_Info()
 {
 //	AI_Output(other,self,"PC_Psionic_COMEAGAIN_Info_15_01"); //Let's sound out the fort together.
@@ -1523,10 +1615,12 @@ instance Info_Lester_DIEGOMILTEN(C_INFO)
 
 func int Info_Lester_DIEGOMILTEN_Condition()
 {
-	if Npc_KnowsInfo(hero,Info_Diego_OCFAVOR)
+	if (Npc_KnowsInfo(hero,Info_Diego_OCFAVOR))
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Lester_DIEGOMILTEN_Info()
@@ -1601,5 +1695,4 @@ func void Info_Lester_DIEGOMILTEN_Info()
 	};
 
 	AI_StopProcessInfos(self);
-
 };

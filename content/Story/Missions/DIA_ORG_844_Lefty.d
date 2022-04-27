@@ -8,6 +8,7 @@ instance DIA_Lefty_Exit(C_INFO)
 	nr = 999;
 	condition = DIA_Lefty_Exit_Condition;
 	information = DIA_Lefty_Exit_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -32,6 +33,7 @@ instance DIA_Lefty_FirstAtNight(C_INFO)
 	nr = 1;
 	condition = DIA_Lefty_FirstAtNight_Condition;
 	information = DIA_Lefty_FirstAtNight_Info;
+	important = 0;
 	permanent = 0;
 //	description = "What are you doing here?";
 //	description = "Was machst du hier?";
@@ -40,11 +42,13 @@ instance DIA_Lefty_FirstAtNight(C_INFO)
 
 func int DIA_Lefty_FirstAtNight_Condition()
 {
-	if (Wld_IsTime(19,00,08,00))
-	&& (!Npc_KnowsInfo(hero,DIA_Lefty_First))
+	if ((Wld_IsTime(19,00,08,00))
+	&& (!Npc_KnowsInfo(hero,DIA_Lefty_First)))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Lefty_FirstAtNight_Info()
@@ -74,17 +78,19 @@ instance DIA_Lefty_First(C_INFO)
 	nr = 1;
 	condition = DIA_Lefty_First_Condition;
 	information = DIA_Lefty_First_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int DIA_Lefty_First_Condition()
 {
-	if (Wld_IsTime(08,00,19,00))
-	&& (self.aivar[AIV_WASDEFEATEDBYSC]==FALSE)
+	if ((Wld_IsTime(08,00,19,00))
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Lefty_First_Info()
@@ -174,18 +180,20 @@ instance DIA_Lefty_WorkDay(C_INFO)
 	nr = 1;
 	condition = DIA_Lefty_WorkDay_Condition;
 	information = DIA_Lefty_WorkDay_Info;
-	permanent = 1;
 	important = 1;
+	permanent = 1;
 };
 
 func int DIA_Lefty_WorkDay_Condition()
 {
-	if (Wld_IsTime(08,00,19,00) || (Lefty_Mission == LOG_SUCCESS)) // wenn Wasser verteilt, dann auch abends am Lagerfeuer!
-	&& (self.aivar[AIV_WASDEFEATEDBYSC]==FALSE)
-	&& ((Lefty_WorkDay <= Wld_GetDay()-1) || (Lefty_Mission == LOG_SUCCESS)) // wenn Wasser verteilt, dann auch noch am selben Tag!
+	if (((Wld_IsTime(08,00,19,00)) || (Lefty_Mission == LOG_SUCCESS)) // wenn Wasser verteilt, dann auch abends am Lagerfeuer!
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE)
+	&& ((Lefty_WorkDay <= Wld_GetDay() - 1) || (Lefty_Mission == LOG_SUCCESS)) // wenn Wasser verteilt, dann auch noch am selben Tag!
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Lefty_WorkDay_Info()
@@ -240,7 +248,7 @@ func void DIA_Lefty_WorkDay_Info()
 		Lefty_WorkDay = B_SetDayTolerance();
 		Lefty_Mission = LOG_RUNNING;
 		An_Bauern_verteilt = 0;
-		if !CarriedWaterForLefty
+		if (!CarriedWaterForLefty)
 		{
 //			B_LogEntry(CH1_CarryWater,"I don't believe it. After I distributed the water everywhere, Lefty really wants me to do the water carrying every day. I think this idiot needs to be told a few things.");
 //			B_LogEntry(CH1_CarryWater,"Ich fasse es nicht. Nachdem ich das Wasser überall verteilt habe, will Lefty doch tatsächlich, dass ich nun jeden Tag den Wasserträger spiele. Ich glaube dieser Idiot muss mal seine Grenzen aufgezeigt bekommen.");
@@ -263,6 +271,7 @@ instance DIA_Lefty_NeverAgain(C_INFO)
 	nr = 1;
 	condition = DIA_Lefty_NeverAgain_Condition;
 	information = DIA_Lefty_NeverAgain_Info;
+	important = 0;
 	permanent = 1;
 //	description = "From now on you can carry the water yourself.";
 //	description = "Du kannst dein Wasser ab jetzt selbst bringen.";
@@ -271,10 +280,13 @@ instance DIA_Lefty_NeverAgain(C_INFO)
 
 func int DIA_Lefty_NeverAgain_Condition()
 {
-	if ((Lefty_Mission == LOG_RUNNING) && (self.aivar[AIV_WASDEFEATEDBYSC]==FALSE))
+	if ((Lefty_Mission == LOG_RUNNING)
+	&& (self.aivar[AIV_WASDEFEATEDBYSC] == FALSE))
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Lefty_NeverAgain_Info()
@@ -305,6 +317,7 @@ instance DIA_Lefty_PERM(C_INFO)
 	nr = 1;
 	condition = DIA_Lefty_PERM_Condition;
 	information = DIA_Lefty_PERM_Info;
+	important = 0;
 	permanent = 1;
 //	description = "How are you, my friend?";
 //	description = "Na, mein Freund?";
@@ -313,10 +326,12 @@ instance DIA_Lefty_PERM(C_INFO)
 
 func int DIA_Lefty_PERM_Condition()
 {
-	if (self.aivar[AIV_WASDEFEATEDBYSC]==TRUE)
+	if (self.aivar[AIV_WASDEFEATEDBYSC] == TRUE)
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void DIA_Lefty_PERM_Info()
@@ -328,7 +343,7 @@ func void DIA_Lefty_PERM_Info()
 //	AI_Output(self,other,"DIA_Lefty_PERM_07_01"); //Mann! Was willst du?
 	AI_Output(self,other,"DIA_Lefty_PERM_07_01"); //Ach, člověče! Co chceš?
 
-	if !LeftyWasBeaten
+	if (!LeftyWasBeaten)
 	{
 //		B_LogEntry(CH1_CarryWater,"I made it clear to Lefty that he'd better not annoy me with his water carrying theories. Some people only learn through pain.");
 //		B_LogEntry(CH1_CarryWater,"Ich habe Lefty endgültig klargemacht, dass er mich besser nicht mehr mit seiner Wasserträgerei behelligen sollte. Mache Leute lernen nur durch Schmerzen.");
@@ -348,7 +363,6 @@ func void DIA_Lefty_PERM_Info()
 //	Info_AddChoice(DIA_Lefty_PERM,"I've had a really bad day. I want to relieve my tension - hold still...",DIA_Lefty_PERM_AufsMaul);
 //	Info_AddChoice(DIA_Lefty_PERM,"Ich hatte nen schlechten Tag und suche einen Ausgleich... Halt mal still.",DIA_Lefty_PERM_AufsMaul);
 	Info_AddChoice(DIA_Lefty_PERM,"Měl jsem vážně zlej den. Radím ti, abys mě neprovokoval a zůstal raději zticha.",DIA_Lefty_PERM_AufsMaul);
-
 };
 
 func void DIA_Lefty_PERM_AufsMaul()
@@ -382,4 +396,3 @@ func void DIA_Lefty_PERM_Nothing()
 	AI_Output(other,self,"DIA_Lefty_PERM_Nothing_15_00"); //Jen jsem chtěl vědět, jak se máš.
 	AI_StopProcessInfos(self);
 };
-

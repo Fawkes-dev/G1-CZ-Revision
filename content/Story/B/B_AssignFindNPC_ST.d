@@ -7,6 +7,7 @@ instance Info_FindNPC_ST(C_INFO)
 	nr = 900;
 	condition = Info_FindNPC_ST_Condition;
 	information = Info_FindNPC_ST_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Where can I find ...";
 //	description = "Wo finde ich...";

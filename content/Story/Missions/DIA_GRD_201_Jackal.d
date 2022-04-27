@@ -8,6 +8,7 @@ instance Info_Jackal_EXIT(C_INFO)
 	nr = 999;
 	condition = Info_Jackal_EXIT_Condition;
 	information = Info_Jackal_EXIT_Info;
+	important = 0;
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
@@ -35,8 +36,8 @@ instance Info_Jackal_Hello(C_INFO)
 	nr = 3;
 	condition = Info_Jackal_Hello_Condition;
 	information = Info_Jackal_Hello_Info;
-	permanent = 0;
 	important = 1;
+	permanent = 0;
 };
 
 func int Info_Jackal_Hello_Condition()
@@ -45,7 +46,10 @@ func int Info_Jackal_Hello_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
+
 func void Info_Jackal_Hello_Info()
 {
 //	AI_Output(self,other,"Info_Jackal_Hello_07_00"); //Ah! A new face.
@@ -79,7 +83,7 @@ func void Info_Jackal_Hello_Pay()
 //	AI_Output(other,self,"Info_Jackal_Hello_Pay_15_00"); //Hier. 10 Erz. Und du hilfst mir, wenn ich Ärger habe.
 	AI_Output(other,self,"Info_Jackal_Hello_Pay_15_00"); //Tady. 10 nugetů. A jestli budu mít potíže, tak mi pomůžeš.
 
-	if (Npc_HasItems(other,itminugget)>=10)
+	if (Npc_HasItems(other,itminugget) >= 10)
 	{
 //		AI_Output(self,other,"Info_Jackal_Hello_Pay_07_01"); //You can count on me if I'm close by. You'll find me between the market place and the south gate.
 //		AI_Output(self,other,"Info_Jackal_Hello_Pay_07_01"); //Wenn ich in der Nähe bin, kannst du auf mich zählen. Du kannst mich jederzeit zischen dem Marktplatz und dem Südtor finden.
@@ -165,6 +169,7 @@ instance Info_Jackal_Schutz(C_INFO)
 	nr = 3;
 	condition = Info_Jackal_Schutz_Condition;
 	information = Info_Jackal_Schutz_Info;
+	important = 0;
 	permanent = 0;
 //	description = "I've been thinking about that protection money - here's your 10 ore.";
 //	description = "Ich hab' noch mal über das Schutzgeld nachgedacht - hier sind deine 10 Erz.";
@@ -179,11 +184,13 @@ func int Info_Jackal_Schutz_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Jackal_Schutz_Info()
 {
-	if (Npc_HasItems(other,itminugget)>=10)
+	if (Npc_HasItems(other,itminugget) >= 10)
 	{
 //		AI_Output(other,self,"Info_Jackal_Schutz_15_00"); //I've been thinking about that protection money - here's your 10 ore.
 //		AI_Output(other,self,"Info_Jackal_Schutz_15_00"); //Ich hab' noch mal über das Schutzgeld nachgedacht - hier sind deine 10 Erz.
@@ -213,6 +220,7 @@ instance Info_Jackal_PermPaid(C_INFO)
 	nr = 3;
 	condition = Info_Jackal_PermPaid_Condition;
 	information = Info_Jackal_PermPaid_Info;
+	important = 0;
 	permanent = 1;
 //	description = "Well, how's it going?";
 //	description = "Na, wie sieht's aus?";
@@ -225,6 +233,8 @@ func int Info_Jackal_PermPaid_Condition()
 	{
 		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Jackal_PermPaid_Info()
@@ -253,9 +263,12 @@ func int GRD_201_Jackal_WELCOME_Condition()
 {
 	if (Npc_GetTrueGuild(hero) == GIL_GRD)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
+
 func void GRD_201_Jackal_WELCOME_Info()
 {
 //	AI_Output(self,other,"GRD_201_Jackal_WELCOME_Info_07_01"); //You've worked your way up pretty fast! Well done, man!
@@ -279,25 +292,27 @@ instance Info_Jackal_PAYDAY(C_INFO)
 	npc = GRD_201_Jackal;
 	condition = Info_Jackal_PAYDAY_Condition;
 	information = Info_Jackal_PAYDAY_Info;
+	important = 1;
 	permanent = 0;
-	important   = 1;
 };
 
 func int Info_Jackal_PAYDAY_Condition()
 {
 	if (FMTaken)
 	{
-		return TRUE;
+		return 1;
 	};
+
+	return 0;
 };
 
 func void Info_Jackal_PAYDAY_Info()
 {
-	if C_NpcBelongsToNewCamp(hero)
+	if (C_NpcBelongsToNewCamp(hero))
 	{
-		if (oldHeroGuild == GIL_GRD)
+		if ((oldHeroGuild == GIL_GRD)
 		|| (oldHeroGuild == GIL_KDF)
-		|| (oldHeroGuild == GIL_STT)
+		|| (oldHeroGuild == GIL_STT))
 		{
 //			AI_Output(self,other,"Info_Jackal_PAYDAY_07_01"); //Hey, look at that! It's the traitor that switched camps!
 //			AI_Output(self,other,"Info_Jackal_PAYDAY_07_01"); //Sieh mal einer an. Der Verräter, der das Lager gewechselt hat!
@@ -327,7 +342,7 @@ func void Info_Jackal_PAYDAY_Info()
 		AI_Output(self,other,"Info_Jackal_PAYDAY_07_06"); //Byls mezi těmi blázny tak dlouho, že ti z toho změkl mozek!
 	};
 
-	if Jackal_ProtectionPaid
+	if (Jackal_ProtectionPaid)
 	{
 //		AI_Output(self,other,"Info_Jackal_PAYDAY_07_07"); //Even the protection money you paid me ain't gonna help you now.
 //		AI_Output(self,other,"Info_Jackal_PAYDAY_07_07"); //Da hilft dir auch nicht, dass du mir Schutzgeld bezahlt hast.
@@ -354,4 +369,3 @@ func void Info_Jackal_PAYDAY_Info()
 
 	B_Story_JackalFight();
 };
-

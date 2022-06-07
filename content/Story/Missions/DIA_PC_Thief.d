@@ -918,6 +918,7 @@ func void Info_Diego_Teach_BACK()
 	Info_ClearChoices(Info_Diego_Teach);
 };
 
+//TODO: remove repetitive code
 func void Info_Diego_Teach_STR_1()
 {
 	B_BuyAttributePoints(hero,ATR_STRENGTH, LPCOST_ATTRIBUTE_STRENGTH);
@@ -1045,6 +1046,7 @@ func void Info_Diego_BringList_Offer_Info()
 //	B_LogEntry(CH1_BringList,"Diego hat mich zur Alten Mine geschickt. Dort soll ich von einem Mann namens Ian eine Liste bekommen. Die Liste darf auf keinen Fall dem Neuen Lager in die Finger fallen.");
 	B_LogEntry(CH1_BringList,"Diego mě poslal do Starého dolu. Mám získat od chlapíka jménem Ian seznam. Tento seznam se nesmí dostat do rukou nikomu z Nového tábora.");
 
+	//TODO: why
 	VAR C_NPC Ian; Ian = Hlp_GetNpc(STT_301_IAN);
 	CreateInvItem(STT_301_IAN, TheList);
 };

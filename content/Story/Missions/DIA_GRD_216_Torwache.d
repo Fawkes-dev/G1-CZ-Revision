@@ -39,6 +39,7 @@ instance DIA_Grd_216_First(C_INFO)
 
 func int DIA_Grd_216_First_Condition()
 {
+	//TODO: why?
 	if (Npc_GetDistToWP(other,"OCR_NORTHGATE_ADVANCE") > 400) //NICHT von hinten!
 	{
 		Npc_SetRefuseTalk(self,30);

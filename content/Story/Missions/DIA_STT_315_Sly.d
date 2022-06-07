@@ -78,6 +78,7 @@ instance DIA_STT_315_LostNek(C_INFO)
 
 func int DIA_STT_315_LostNek_Condition()
 {
+	//TODO: this dialogue should be available only after DIA_STT_315_Sly was told
 	return 1;
 };
 

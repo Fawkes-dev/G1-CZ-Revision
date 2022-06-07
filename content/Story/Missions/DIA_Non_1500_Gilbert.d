@@ -78,6 +78,7 @@ instance DIA_Gilbert_Hallo(C_INFO)
 
 func int DIA_Gilbert_Hallo_Condition()
 {
+	//TODO: this dialogue should be available only after DIA_Gilbert_First was told
 	return 1;
 };
 

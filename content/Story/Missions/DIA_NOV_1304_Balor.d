@@ -304,6 +304,8 @@ func void DIA_Balor_RipOff_Info()
 //		AI_Output(self,other,"DIA_Balor_RipOff_01_02"); //I wanna see 50 ore - my usual advance payment.
 //		AI_Output(self,other,"DIA_Balor_RipOff_01_02"); //Ich will 50 Erz sehen - mein üblicher Vorschuss.
 		AI_Output(self,other,"DIA_Balor_RipOff_01_02"); //Chci 50 nugetů - moji obvyklou platbu.
+
+		//TODO: missing dialogues ...
 	}
 	else
 	{

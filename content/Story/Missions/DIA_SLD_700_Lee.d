@@ -686,6 +686,7 @@ func void Sld_700_Lee_Teach_BACK()
 	Info_ClearChoices(Sld_700_Lee_Teach);
 };
 
+//TODO: remove repetitive code
 func void Sld_700_Lee_Teach_STR_1()
 {
 	B_BuyAttributePoints(other,ATR_STRENGTH, LPCOST_ATTRIBUTE_STRENGTH);

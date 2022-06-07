@@ -79,6 +79,7 @@ instance DIA_Sld_702_PERM(C_INFO)
 
 func int DIA_Sld_702_PERM_Condition()
 {
+	//TODO: this dialogue should be available only after DIA_Sld_702_First was told
 	return 1;
 };
 

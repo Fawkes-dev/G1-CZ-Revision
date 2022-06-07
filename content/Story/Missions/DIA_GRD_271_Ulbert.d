@@ -122,6 +122,7 @@ func void GRD_271_ULBERT_DRINK_Info()
 //	AI_Output(self,other,"GRD_271_ULBERT_DRINK_Info_07_02"); //Danke.
 	AI_Output(self,other,"GRD_271_ULBERT_DRINK_Info_07_02"); //Díky.
 
+	//TODO: add options for drink selection
 	if (Npc_HasItems(hero,ItFobeer))
 	{
 		B_GiveInvItems(hero,self,ItFobeer,1);

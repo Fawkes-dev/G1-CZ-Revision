@@ -315,6 +315,7 @@ instance DIA_Gorn_TRADE(C_INFO)
 
 func int DIA_Gorn_TRADE_Condition()
 {
+	//TODO: ... do we want to allow trading?
 	//if (Npc_KnowsInfo(hero,DIA_Gorn_DuHehler))
 	//{
 		//return 1; //***Man darf NICHT seine Waffe weggkaufen oder so...
@@ -1519,7 +1520,7 @@ func void Info_Gorn_TAKEBACK_Info()
 	{
 //		AI_Output(self,hero,"Info_Gorn_TAKEBACK_09_08"); //Although you aren't one of us, you have done our camp a great service and proved your worth more than once.
 //		AI_Output(self,hero,"Info_Gorn_TAKEBACK_09_08"); //Obwohl du nicht zu uns gehörst, hast du unserem Lager schon große Dienste erwiesen und dich mehr als bewährt.
-		//#Needs_Attention: kvalita hmmm
+		//#Needs_Attention: kvalita hmmm, neprebasnime?
 		AI_Output(self,hero,"Info_Gorn_TAKEBACK_09_08"); //I když nejsi jedním z nás, vykonal jsi pro náš tábor velikou službu a vícekrát jsi dokázal svou kvalitu.
 //		AI_Output(self,hero,"Info_Gorn_TAKEBACK_09_09"); //We're offering you the chance of carrying out this mission!
 //		AI_Output(self,hero,"Info_Gorn_TAKEBACK_09_09"); //Wir bieten dir die Durchführung der Operation an!

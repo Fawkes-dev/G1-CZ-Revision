@@ -74,6 +74,7 @@ instance Org_818_Ratford_WhatGame(C_INFO)
 
 func int Org_818_Ratford_WhatGame_Condition()
 {
+	//TODO: this dialogue should be available only after Org_818_Ratford_WrongWay was told
 	return 1;
 };
 
@@ -112,6 +113,7 @@ instance Org_818_Ratford_WhyDangerous(C_INFO)
 
 func int Org_818_Ratford_WhyDangerous_Condition()
 {
+	//TODO: this dialogue should be available only after Org_818_Ratford_WrongWay was told
 	return 1;
 };
 
@@ -321,6 +323,7 @@ instance Org_818_Ratford_Thanks(C_INFO)
 
 func int Org_818_Ratford_Thanks_Condition()
 {
+	//TODO: this dialogue should be available only after Org_818_Ratford_WrongWay was told
 	return 1;
 };
 

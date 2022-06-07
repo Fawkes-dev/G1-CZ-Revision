@@ -163,6 +163,7 @@ func void GUR_1202_CorAngar_Teach_BACK()
 	Info_ClearChoices(GUR_1202_CorAngar_Teach);
 };
 
+//TODO: remove this repetitive code
 func void GUR_1202_CorAngar_Teach_STR_1()
 {
 	B_BuyAttributePoints(other,ATR_STRENGTH, LPCOST_ATTRIBUTE_STRENGTH);
@@ -273,6 +274,7 @@ func void GUR_1202_CorAngar_WANNABETPL_Info()
 		Log_CreateTopic(GE_BecomeTemplar,LOG_NOTE);
 //		B_LogEntry(GE_BecomeTemplar,"Today Cor Angar has appointed me a templar. Gor Na Toth will hand me over my new armor. He's usually at the training ground.");
 //		B_LogEntry(GE_BecomeTemplar,"Heute hat mich Cor Angar zu einem Templer ernannt. Gor Na Toth soll mir meine neue Rüstung überreichen. Er hält sich normalerweise am Übungsplatz auf.");
+		//#NEEDS_ATTENTION: Cor Kalom ... nope
 		B_LogEntry(GE_BecomeTemplar,"Dnes mě Cor Kalom pasoval na templáře. Gor Na Toth mi předá moji novou zbroj. Obvykle bývá na cvičišti.");
 		Log_CreateTopic(GE_TeacherPSI,LOG_NOTE);
 //		B_LogEntry(GE_TeacherPSI,"Cor Angar teaches STRENGTH, DEXTERITY and TWO-HANDED fighting. He'll only teach me the last once I'm a master of ONE-HANDED fighting. He's usually to be found at the templars' training ground on the second level of the catwalks.");

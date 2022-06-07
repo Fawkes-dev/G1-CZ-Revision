@@ -75,6 +75,7 @@ instance DIA_Fortuno_GetGeschenk(C_INFO)
 
 func int DIA_Fortuno_GetGeschenk_Condition()
 {
+	//TODO: this dialogue should be available only after DIA_Fortuno_Greet was told
 	return 1;
 };
 

@@ -209,6 +209,7 @@ instance DIA_Skip_VERPATZT(C_INFO)
 
 func int DIA_Skip_VERPATZT_Condition()
 {
+	//TODO: does it make sense for GIL_KDF?
 	if ((!((Npc_GetTrueGuild(other) == GIL_STT) || (Npc_GetTrueGuild(other) == GIL_GRD) || (Npc_GetTrueGuild(other) == GIL_KDF)))
 	&& ((Npc_KnowsInfo(hero,DIA_Skip_First)) && (Skip_TradeFree == FALSE)))
 	{

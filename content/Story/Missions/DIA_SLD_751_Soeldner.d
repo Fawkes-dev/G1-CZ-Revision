@@ -110,6 +110,7 @@ instance DIA_SLD_751_Soeldner_UMSEHEN(C_INFO)
 
 func int DIA_SLD_751_Soeldner_UMSEHEN_CONDITION()
 {
+	//TODO: dialogue should be available after DIA_SLD_751_Soeldner_INTRO
 	return 1;
 };
 
@@ -139,6 +140,7 @@ instance DIA_SLD_751_Soeldner_INMINE(C_INFO)
 
 func int DIA_SLD_751_Soeldner_INMINE_CONDITION()
 {
+	//TODO: dialogue should be available after DIA_SLD_751_Soeldner_INTRO
 	return 1;
 };
 

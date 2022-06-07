@@ -175,6 +175,7 @@ instance KDF_402_Corristo_KDFTEST(C_INFO)
 
 func int KDF_402_Corristo_KDFTEST_Condition()
 {
+	//#NEEDS_ATTENTION - player can join mages after he has already joined guards because none of these dialogues is checking whether he still belongs to GIL_STT !
 	if (Corristo_KDFAufnahme == 1)
 	{
 		return 1;
@@ -532,6 +533,8 @@ func void KDF_402_Corristo_MANA_BACK()
 {
 	Info_ClearChoices(KDF_402_Corristo_MANA);
 };
+
+//TODO: pointless code repetition
 
 func void KDF_402_Corristo_MANA_MAN_1()
 {

@@ -156,6 +156,7 @@ instance DIA_Mud_GetLost(C_INFO)
 
 func int DIA_Mud_GetLost_Condition()
 {
+	//TODO: this dialogue should be available only after DIA_Mud_FirstEXIT was told
 	return 1;
 };
 

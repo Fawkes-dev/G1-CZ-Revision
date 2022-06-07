@@ -84,6 +84,7 @@ instance Info_Bartholo_PERM(C_INFO)
 
 func int Info_Bartholo_PERM_Condition()
 {
+//TODO: dialogue unavailable ... because of key!?
 //SN: Problematisch, da Bartholo auch einen wichtigen Schlüssel hat!
 //	if (Npc_KnowsInfo(hero,Info_Bartholo_Hallo))
 //	{

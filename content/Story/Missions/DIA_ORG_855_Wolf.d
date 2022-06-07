@@ -469,6 +469,7 @@ func void ORG_855_Wolf_Teach_Info()
 	Info_AddChoice(ORG_855_Wolf_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),ORG_855_Wolf_Teach_DEX_1);
 };
 
+//TODO: replace repetitive code
 func void ORG_855_Wolf_Teach_BACK()
 {
 	Info_ClearChoices(ORG_855_Wolf_Teach);

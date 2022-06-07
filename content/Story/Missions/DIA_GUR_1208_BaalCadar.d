@@ -230,6 +230,7 @@ func void Gur_1208_BaalCadar_Teach_BACK()
 	Info_ClearChoices(Gur_1208_BaalCadar_Teach);
 };
 
+//TODO: remove repetitive code
 func void Gur_1208_BaalCadar_Teach_MAN_1()
 {
 	B_BuyAttributePoints(other,ATR_MANA_MAX, LPCOST_ATTRIBUTE_MANA);
@@ -345,6 +346,7 @@ func void Gur_1208_BaalCadar_KREIS1_Info()
 		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS1_Info_02_06"); //V okamžiku, kdy vyslyšeli Spáčovo poselství, se zrodil první kruh. Magie run je k dispozici každému, kdo následuje Spáče.
 		Gur_1208_BaalCadar_KREIS1.permanent = 0;
 	};
+	//TODO: why?
 	AI_StopProcessInfos(self);
 
 };
@@ -400,6 +402,8 @@ func void Gur_1208_BaalCadar_KREIS2_Info()
 		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS2_Info_02_06"); //Tak se zrodil druhý kruh.
 		Gur_1208_BaalCadar_KREIS2.permanent = 0;
 	};
+
+	//TODO: why?
 	AI_StopProcessInfos(self);
 };
 
@@ -453,6 +457,8 @@ func void Gur_1208_BaalCadar_KREIS3_Info()
 //		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS3_Info_02_06"); //Dadurch wurde der dritte Kreis vollendet.
 		AI_Output(self,other,"Gur_1208_BaalCadar_KREIS3_Info_02_06"); //Tak byl dovršen třetí kruh.
 	};
+
+	//TODO: why?
 	AI_StopProcessInfos(self);
 };
 

@@ -140,6 +140,7 @@ func void DIA_Grd_215_Torwache_First_Pay()
 //		AI_Output(self,other,"DIA_Grd_215_Torwache_First_Pay_06_01"); //Get along in then.
 //		AI_Output(self,other,"DIA_Grd_215_Torwache_First_Pay_06_01"); //Dann mal immer rein mit dir.
 		AI_Output(self,other,"DIA_Grd_215_Torwache_First_Pay_06_01"); //Pak pojď dál.
+		//TODO: why CreateInvItems
 		B_GiveInvItems(other,self,itminugget,10);CreateInvItems(self,itminugget,10);
 	}
 	else

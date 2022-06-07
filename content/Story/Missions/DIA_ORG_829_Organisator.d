@@ -90,6 +90,7 @@ func void Info_ORG_829_OfferJoint_Info()
 //	AI_Output(other,self,"Info_ORG_829_OfferJoint_15_00"); //Ich hab' Sumpfkraut dabei - willst du was?
 	AI_Output(other,self,"Info_ORG_829_OfferJoint_15_00"); //Mám drogu z bažin - chceš trochu?
 
+	//TODO: add choice to select which one will be given
 	if ((Npc_HasItems(other,ItMiJoint_1) > 0) || (Npc_HasItems(other,ItMiJoint_2) > 0) || (Npc_HasItems(other,ItMiJoint_3) > 0))
 	{
 		if (Npc_HasItems(other,ItMiJoint_1))

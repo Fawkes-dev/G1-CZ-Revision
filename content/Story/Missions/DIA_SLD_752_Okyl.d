@@ -73,6 +73,7 @@ instance DIA_SLD_752_OKYL_UMSEHEN(C_INFO)
 
 func int DIA_SLD_752_OKYL_UMSEHEN_CONDITION()
 {
+	//TODO: dialogue should be available after DIA_SLD_752_OKYL_INTRO
 	return 1;
 };
 
@@ -102,6 +103,7 @@ instance DIA_SLD_752_OKYL_WERBISTDU(C_INFO)
 
 func int DIA_SLD_752_OKYL_WERBISTDU_CONDITION()
 {
+	//TODO: dialogue should be available after DIA_SLD_752_OKYL_INTRO
 	return 1;
 };
 

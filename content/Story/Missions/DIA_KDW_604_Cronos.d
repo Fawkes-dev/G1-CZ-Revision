@@ -699,6 +699,7 @@ func void KDW_604_Cronos_MANA_BACK()
 	Info_ClearChoices(KDW_604_Cronos_MANA);
 };
 
+//TODO: remove repetitive code
 func void KDW_604_Cronos_MANA_MAN_1()
 {
 	B_BuyAttributePoints(other,ATR_MANA_MAX, LPCOST_ATTRIBUTE_MANA);

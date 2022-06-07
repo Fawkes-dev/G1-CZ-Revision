@@ -78,6 +78,7 @@ instance Org_804_Organisator_WayTo(C_INFO)
 
 func int Org_804_Organisator_WayTo_Condition()
 {
+	//TODO: should be available only if Org_804_Organisator_Greet was told
 	return 1;
 };
 

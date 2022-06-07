@@ -549,6 +549,7 @@ func void Info_Kalom_DrugMonopol_Info()
 //	B_LogEntry(CH1_DrugMonopol,"Cor Kalom will, dass ich eine konkurrierende Krautproduktion einiger Leute im Neuen Lager unterbinde. Ich hab' keine Ahnung, wo genau ich anfangen soll zu suchen, aber ich sollte VOR dem Neuen Lager anfangen.");
 	B_LogEntry(CH1_DrugMonopol,"Cor Kalom chce, abych zastavil konkurenční produkci drogy v Novém táboře. Nevím přesně kde mám hledat, ale snad bych mohl začít PŘED Novým táborem.");
 
+	//TODO: why?
 	var C_NPC Renyu;
 	Renyu = Hlp_GetNpc(ORG_860_Renyu);
 	Renyu.aivar[AIV_WASDEFEATEDBYSC] = FALSE;
@@ -950,6 +951,7 @@ func void GUR_1201_CorKalom_WEG_ACCEPT()
 //	B_LogEntry(CH2_MCEggs,"Der Guru Cor Kalom hat mich beauftragt in der Alten Mine nach einer Quelle für Minecrawlersekret zu suchen. Bisher wurden dafür die Zangen dieser Monster benutzt, doch ich soll etwas anderes, besonderes finden, aus dem man ein besonders starkes Sekret herstellen könnte");
 	B_LogEntry(CH2_MCEggs,"Guru Cor Kalom mě požádal, abych našel jiný zdroj výměšku důlních červů ve Starém dole. Doposud se používaly čelisti těch oblud a já mám objevit jiný zdroj, který obsahuje silnější výměšek.");
 
+	//TODO: not required
 	if (PresseTourJanuar2001)
 	{
 		CreateInvItems(hero,ItAt_Crawlerqueen, 3);

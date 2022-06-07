@@ -82,6 +82,7 @@ instance DIA_Jeremiah_PERM(C_INFO)
 
 func int DIA_Jeremiah_PERM_Condition()
 {
+	//TODO: should we restrict it by dialog above ? DIA_Jeremiah_Hallo
 	return 1;
 };
 

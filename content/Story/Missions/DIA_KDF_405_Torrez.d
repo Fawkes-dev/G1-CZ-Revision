@@ -419,6 +419,7 @@ func int KDF_405_Torrez_MANA_Condition()
 	return 0;
 };
 
+//TODO: replace with B_BuildLearnString
 func void KDF_405_Torrez_MANA_Info()
 {
 //	AI_Output(other,self,"KDF_405_Torrez_MANA_Info_15_01"); //I need more magic power.

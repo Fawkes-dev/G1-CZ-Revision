@@ -73,6 +73,7 @@ instance DIA_Kyle_Problem(C_INFO)
 
 func int DIA_Kyle_Problem_Condition()
 {
+	//TODO: this dialogue should be available only after DIA_Kyle_HutRage was told
 	return 1;
 };
 

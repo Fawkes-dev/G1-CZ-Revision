@@ -136,6 +136,7 @@ func void DIA_Org_876_Bribe_10Erz()
 //		AI_Output(self,other,"DIA_Org_876_Bribe_10Erz_06_01"); //10 Ore? For that I'll allow you to try again.
 //		AI_Output(self,other,"DIA_Org_876_Bribe_10Erz_06_01"); //10 Erz?  Dafür werde ich dir erlauben, es noch mal zu versuchen.
 		AI_Output(self,other,"DIA_Org_876_Bribe_10Erz_06_01"); //10 nugetů? Za to ti dovolím to zkusit znovu.
+		//TODO: shouldn't ore be given to NPC here?
 	}
 	else
 	{
@@ -336,6 +337,7 @@ func void DIA_Org_876_GibKraut_Info()
 //	AI_Output(other,self,"DIA_Org_876_GibKraut_15_00"); //Ich habe ein paar Krautstengel bei mir - hier, nimm einen.
 	AI_Output(other,self,"DIA_Org_876_GibKraut_15_00"); //Mám s sebou pár lodyh - tady, vezmi si jednu.
 
+	//TODO: add choices for item selection
 	if ((Npc_HasItems(other,ItMiJoint_1) > 0) || (Npc_HasItems(other,ItMiJoint_2) > 0) || (Npc_HasItems(other,ItMiJoint_3) > 0))
 	{
 		if (Npc_HasItems(other,ItMiJoint_1))

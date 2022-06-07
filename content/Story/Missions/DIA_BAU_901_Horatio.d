@@ -431,6 +431,7 @@ func void DIA_Horatio_ThoughtSTR_Info()
 //	Info_AddChoice(DIA_Horatio_ThoughtSTR,"Nein.",DIA_Horatio_ThoughtSTR_NoIdea);
 	Info_AddChoice(DIA_Horatio_ThoughtSTR,"Ne.",DIA_Horatio_ThoughtSTR_NoIdea);
 
+	//TODO: Ricelord variable is not used for anything - was there an intention to update aivar AIV_FINDABLE?
 	var C_NPC ricelord; ricelord = Hlp_GetNpc(Bau_900_Ricelord);
 	if Npc_KnowsInfo(hero,DIA_Jeremiah_Horatio)
 	{

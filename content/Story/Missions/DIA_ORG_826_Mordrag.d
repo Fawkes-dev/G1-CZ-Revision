@@ -83,6 +83,7 @@ instance Org_826_Mordrag_Trade(C_INFO)
 
 func int Org_826_Mordrag_Trade_Condition()
 {
+	//TODO: this dialogue should be available only after Org_826_Mordrag_Greet was told
 	return 1;
 };
 

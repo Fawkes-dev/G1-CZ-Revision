@@ -140,6 +140,7 @@ func void Tpl_1433_GorNaVid_HEALTH_SUC_Info()
 //	AI_Output(other,self,"Tpl_1433_GorNaVid_HEALTH_SUC_Info_15_03"); //Ich werde dort sein.
 	AI_Output(other,self,"Tpl_1433_GorNaVid_HEALTH_SUC_Info_15_03"); //Budu tam.
 
+	//TODO: add choice to select from potions
 	if (Npc_HasItems(hero,Itfo_Potion_Health_01))
 	{
 		B_GiveInvItems(hero,self,Itfo_Potion_Health_01,1);

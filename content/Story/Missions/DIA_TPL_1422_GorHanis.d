@@ -74,6 +74,7 @@ instance Info_GorHanis_Arena(C_INFO)
 
 func int Info_GorHanis_Arena_Condition()
 {
+	//TODO: not really an issue NPC parameter is irrelevant ... however should have been used with other not self
 	if (Npc_KnowsInfo(self,Info_GorHanis_What))
 	{
 		return 1;
@@ -114,6 +115,7 @@ instance Info_GorHanis_Sleeper(C_INFO)
 
 func int Info_GorHanis_Sleeper_Condition()
 {
+	//TODO: not really an issue NPC parameter is irrelevant ... however should have been used with other not self
 	if (Npc_KnowsInfo(self,Info_GorHanis_What))
 	{
 		return 1;
@@ -160,6 +162,7 @@ instance Info_GorHanis_Summoning(C_INFO)
 
 func int Info_GorHanis_Summoning_Condition()
 {
+	//TODO: not really an issue NPC parameter is irrelevant ... however should have been used with other not self
 	if (Npc_KnowsInfo(self,Info_GorHanis_Sleeper))
 	{
 		return 1;

@@ -13,6 +13,7 @@ func int NOV_1319_Novize_CALLSLEEPER_Condition()
 	var C_NPC Novize; Novize  = Hlp_GetNpc(NOV_1319_Novize);
 	var C_NPC Kalom; Kalom  = Hlp_GetNpc(GUR_1201_CorKalom);
 
+	//TODO: check this out
 	if ((CorKalom_BringBook == LOG_SUCCESS)
 
 	&& (Npc_GetDistToWP(Novize, "PSI_TEMPLE_COURT_2") < 1000)

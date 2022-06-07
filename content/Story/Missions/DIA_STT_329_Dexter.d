@@ -73,6 +73,7 @@ instance DIA_Dexter_Kraut(C_INFO)
 
 func int DIA_Dexter_Kraut_Condition()
 {
+	//TODO: this dialogue should be available only after DIA_Sld_702_First was told
 	return 1;
 };
 
@@ -108,6 +109,7 @@ instance DIA_Dexter_Trade(C_INFO)
 
 func int DIA_Dexter_Trade_Condition()
 {
+	//TODO: this dialogue should be available only after DIA_Sld_702_First was told
 	return 1;
 };
 
@@ -152,6 +154,7 @@ instance DIA_Dexter_JoinOC(C_INFO)
 
 func int DIA_Dexter_JoinOC_Condition()
 {
+	//TODO: this dialogue should be available only after DIA_Sld_702_First was told
 	if (Npc_GetTrueGuild(hero) == GIL_NONE)
 	{
 		return 1;

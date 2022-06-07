@@ -237,6 +237,7 @@ func void DIA_BaalIsidro_Drink_Info()
 //		AI_Output(self,other,"DIA_BaalIsidro_Drink_03_01"); //Danke, Mann. Ich trinke auf dein Wohl!
 		AI_Output(self,other,"DIA_BaalIsidro_Drink_03_01"); //Díky, člověče. Připíjím na tvoje zdraví!
 
+		//TODO: add option to choose which drink you offer to NPC
 		if (Npc_HasItems(other,ItFoBooze))
 		{
 			B_GiveInvItems(other,self,ItFoBooze,1);

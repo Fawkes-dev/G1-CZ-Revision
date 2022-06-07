@@ -381,6 +381,7 @@ func void TPL_1402_GorNaToth_Teach_Info()
 	};
 };
 
+//TODO: remove repetitive code
 func void TPL_1402_GorNaToth_Teach_BACK()
 {
 	Info_ClearChoices(TPL_1402_GorNaToth_Teach);

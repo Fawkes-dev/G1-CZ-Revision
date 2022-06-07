@@ -1041,6 +1041,7 @@ func void GRD_200_Thorus_GARDIST_Info()
 		AI_StopProcessInfos(self);
 		B_PrintGuildCondition(10);
 	}
+	//TODO: pointless condition
 	else if (hero.level >= 10)
 	{
 //		AI_Output(self,other,"GRD_200_Thorus_GARDIST_Info_09_05"); //I'm giving you a chance. What do you say?
@@ -1259,6 +1260,7 @@ func void GRD_200_Thorus_Teach_BACK()
 	Info_ClearChoices(GRD_200_Thorus_Teach);
 };
 
+//TODO: pointless code repetition
 func void GRD_200_Thorus_Teach_STR_1()
 {
 	B_BuyAttributePoints(other,ATR_STRENGTH,LPCOST_ATTRIBUTE_STRENGTH);

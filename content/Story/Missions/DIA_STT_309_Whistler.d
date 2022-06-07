@@ -146,6 +146,7 @@ func void DIA_Whistler_Favour_Ok()
 //	B_LogEntry(CH1_JoinOC,"Whistler unterstützt mich, wenn ich ihm bei Fisk auf dem Marktplatz ein Schwert kaufe. Er hat mir 100 Erz gegeben.");
 	B_LogEntry(CH1_JoinOC,"Whistler mě podpoří, když mu na tržišti u Fiska koupím meč. Dal mi na něj 100 nugetů.");
 
+	//TODO: why
 	var C_NPC fisk; fisk = Hlp_GetNpc(Stt_311_Fisk);
 
 	CreateInvItems(self,itminugget, 100);

@@ -456,6 +456,9 @@ func void GRD_205_Scorpio_BANISHED_Info()
 //	AI_Output(self,other,"GRD_205_Scorpio_BANISHED_Info_13_03"); //But I've taken some pretty good stuff from the arsenal. If you need a weapon, just let me know.
 //	AI_Output(self,other,"GRD_205_Scorpio_BANISHED_Info_13_03"); //Aber ich habe mir ein paar gute Stücke aus der Waffenkammer mitgenommen. Wenn du eine Waffe brauchst, sag mir Bescheid.
 	AI_Output(self,other,"GRD_205_Scorpio_BANISHED_Info_13_03"); //Ale vzal jsem s sebou pár pěkných kousků ze zbrojnice. Když budeš potřebovat nějakou zbraň, dej mi vědět.
+
+	//TODO: kind of pointless, since this is not permanent dialogue ...
+	//Same note is added via B_Story_FMTaken though - so that's maybe why?
 	if (Scorpio_Exile == FALSE)
 	{
 		Log_CreateTopic(GE_TraderOW,LOG_NOTE);

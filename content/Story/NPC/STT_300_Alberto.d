@@ -60,7 +60,8 @@ instance STT_300_Alberto (Npc_Default)
 func void Rtn_Start_300()
 {
 	TA_Stay (00,00,18,00,"OM_203");
-	TA_Stay (18,03,00,00,"OM_203");
-
+	//[BugFix]: incomplete daily routine
+	//TA_Stay (18,03,00,00,"OM_203");
+	TA_Stay (18,00,00,00,"OM_203");
 };
 

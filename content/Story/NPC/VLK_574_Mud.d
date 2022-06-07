@@ -48,7 +48,9 @@ instance VLK_574_Mud (Npc_Default)
 func void Rtn_start_574()
 {
 	TA_Sleep (23,00,06,00,"OCR_HUT_13");
-	TA_SitAround (23,00,06,00,"OCR_OUTSIDE_HUT_13");
+	//[BugFix]: incomplete daily routine
+	//TA_SitAround (23,00,06,00,"OCR_OUTSIDE_HUT_13");
+	TA_SitAround (06,00,23,00,"OCR_OUTSIDE_HUT_13");
 };
 
 func void Rtn_Follow_574()

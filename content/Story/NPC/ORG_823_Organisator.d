@@ -59,7 +59,9 @@ func void Rtn_start_823()
 {
 	TA_Sleep (00,00,07,30,"NC_HUT21_IN");
 	TA_SitAround (07,30,10,00,"NC_HUT21_OUT");
-	TA_Cook (10,00,10,00,"NC_HUT21_OUT");
+	//[BugFix]: incomplete daily routine
+	//TA_Cook (10,00,10,00,"NC_HUT21_OUT");
+	TA_Cook (10,00,20,00,"NC_HUT21_OUT");
 	TA_SitAround (20,00,00,00,"NC_HUT21_OUT");
 };
 

@@ -47,7 +47,9 @@ instance VLK_531_Buddler (Npc_Default)
 
 func void Rtn_start_531()
 {
-	TA_Sleep (23,00,08,00,"OCR_HUT_42");
-	TA_Smalltalk (08,00,22,00,"OCR_TO_HUT_51_SMALLTALK");
+	//[BugFix]: incomplete daily routine
+	//TA_Sleep (23,00,08,00,"OCR_HUT_42");
+	TA_Sleep (22,00,08,00,"OCR_HUT_42");
+	TA_Smalltalk (08,00,22,00,"OCR_TO_HUT_51_SMALLTALK"); //with VLK_553_Buddler
 };
 

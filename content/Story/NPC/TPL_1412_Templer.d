@@ -46,5 +46,7 @@ instance TPL_1412_Templer (Npc_Default)
 func void Rtn_start_1412()
 {
 	TA_Sleep (00,05,06,05,"PSI_15_HUT_IN");
-	TA_PracticeSword (16,05,00,05,"PSI_TRAINING_1");
+	//[BugFix]: incomplete daily routine
+	//TA_PracticeSword (16,05,00,05,"PSI_TRAINING_1");
+	TA_PracticeSword (06,05,00,05,"PSI_TRAINING_1");
 };

@@ -48,10 +48,12 @@ instance Stt_318_Schatten (Npc_Default)
 
 func void Rtn_start_318()
 {
-	TA_Sleep     (23,00,07,00,"OCR_HUT_60");
+	TA_Sleep (23,00,07,00,"OCR_HUT_60");
 	TA_Boss (07,00,07,30,"OCR_OUTSIDE_HUT_60");
 	TA_StandAround (07,30,15,00,"OCR_CAMPFIRE_F_1");
-	TA_RepairHut (15,00,17,00,"OCR_OUTSIDE_HUT_60");
+	//[BugFix]: incomplete daily routine
+	//TA_RepairHut (15,00,17,00,"OCR_OUTSIDE_HUT_60");
+	TA_RepairHut (15,00,17,25,"OCR_OUTSIDE_HUT_60");
 	TA_StandAround (17,25,23,00,"OCR_CAMPFIRE_F_2");
 };
 

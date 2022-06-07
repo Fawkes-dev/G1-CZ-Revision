@@ -55,6 +55,8 @@ func void Rtn_start_527()
 	TA_Boss (07,00,07,30,"OCR_OUTSIDE_HUT_77");
 	TA_WashSelf (07,30,08,30,"OCR_LAKE_1");
 	TA_StandAround  (08,30,18,00,"OCR_OUTSIDE_HUT_77");
-	TA_SitCampfire (18,00,23,00,"OCR_OUTSIDE_HUT_77");
+	//[BugFix]: incomplete daily routine
+	//TA_SitCampfire (18,00,23,00,"OCR_OUTSIDE_HUT_77");
+	TA_SitCampfire (18,00,23,15,"OCR_OUTSIDE_HUT_77");
 };
 

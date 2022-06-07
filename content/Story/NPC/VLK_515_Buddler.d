@@ -47,7 +47,9 @@ instance VLK_515_Buddler (Npc_Default)
 
 func void Rtn_start_515()
 {
-	TA_Sleep (23,00,06,15,"OCR_HUT_23");
+	//[BugFix]: incomplete daily routine
+	//TA_Sleep (23,00,06,15,"OCR_HUT_23");
+	TA_Sleep (23,00,08,00,"OCR_HUT_23");
 	TA_Smalltalk (08,00,17,00,"OCR_OUTSIDE_HUT_24"); //mit Vlk 513
 	TA_SitAround (17,00,19,00,"OCR_HUT_23");
 	TA_ArenaSpectator (19,00,23,00,"OCR_ARENA_06");

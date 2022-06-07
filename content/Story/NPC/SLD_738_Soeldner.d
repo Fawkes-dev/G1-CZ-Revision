@@ -8,7 +8,9 @@ instance SLD_738_Soeldner (Npc_Default)
 	level = 16;
 
 	voice = 8;
-	id = 728;
+	//[Bugfix]: incorrect NPC ID (already used!)
+	//id = 728;
+	id = 738;
 
 	//-------- abilities --------
 	attribute[ATR_STRENGTH] = 75;

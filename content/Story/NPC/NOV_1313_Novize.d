@@ -7,7 +7,9 @@ instance NOV_1313_Novize (Npc_Default)
 	level = 3;
 
 	voice = 2;
-	id = 1310;
+	//[Bugfix]: incorrect NPC ID (already used!)
+	//id = 1310;
+	id = 1313;
 
 	//-------- abilities --------
 	attribute[ATR_STRENGTH] = 10;

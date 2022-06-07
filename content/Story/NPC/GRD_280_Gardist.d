@@ -8,7 +8,9 @@ instance GRD_280_Gardist (Npc_Default)
 	guild = GIL_GRD;
 	level = 20;
 	voice = 6;
-	id = 230;
+	//[Bugfix]: incorrect NPC ID (already used!)
+	//id = 230;
+	id = 280;
 
 	//-------- abilities --------
 	attribute[ATR_STRENGTH] = 70;

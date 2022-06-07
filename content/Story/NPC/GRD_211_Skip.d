@@ -48,7 +48,9 @@ instance GRD_211_Skip (Npc_Default)
 
 func void Rtn_start_211()
 {
-	TA_Sleep (00,00,07,00,"OCC_MERCS_UPPER_LEFT_ROOM_BED4");
+	//[BugFix]: overlapping daily routines
+	//TA_Sleep (00,00,07,00,"OCC_MERCS_UPPER_LEFT_ROOM_BED4");
+	TA_Sleep (01,00,07,00,"OCC_MERCS_UPPER_LEFT_ROOM_BED4");
 	TA_Stand (07,00,23,00,"OCC_STABLE_BACK");
 	TA_StandAround (23,00,01,00,"OCC_WELL_RIGHT_MOVEMENT");
 };

@@ -52,7 +52,9 @@ func void Rtn_start_205()
 {
 	TA_Boss (07,25,20,00,"OCC_CENTER_4");
 	TA_Smalltalk (20,00,01,00,"OCC_STABLE_ENTRANCE_INSERT"); //mit Stone
-	TA_Sleep (20,00,07,25,"OCC_MERCS_UPPER_RIGHT_ROOM_BED4");
+	//[BugFix]: overlapping daily routines
+	//TA_Sleep (20,00,07,25,"OCC_MERCS_UPPER_RIGHT_ROOM_BED4");
+	TA_Sleep (01,00,07,25,"OCC_MERCS_UPPER_RIGHT_ROOM_BED4");
 };
 /*
 func void Rtn_OT_205()

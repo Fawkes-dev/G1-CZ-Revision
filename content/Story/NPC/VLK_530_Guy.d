@@ -50,7 +50,9 @@ func void Rtn_start_530()
 	TA_Sleep (23,00,07,00,"OCR_HUT_25");
 	TA_SitAround (07,00,08,00,"OCR_OUTSIDE_HUT_25");
 	TA_Smalltalk (08,00,17,00,"OCR_OUTSIDE_HUT_27"); //mit Stt 306
-	TA_SitAround (17,00,19,05,"OCR_OUTSIDE_ARENA_BENCH_2");
+	//[BugFix]: typo, waypoint OCR_OUTSIDE_ARENA_BENCH_2 does not exist!
+	//TA_SitAround (17,00,19,05,"OCR_OUTSIDE_ARENA_BENCH_2");
+	TA_SitAround (17,00,19,05,"OCR_OUTSIDE_ARENA_BENCH2");
 	TA_ArenaSpectator(19,05,23,00,"OCR_ARENA_07");
 };
 

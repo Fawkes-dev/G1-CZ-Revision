@@ -54,9 +54,12 @@ func void Rtn_start_573()
 {
 	TA_Sleep (22,30,06,00,"OCR_HUT_76");
 	TA_SitAround (06,00,07,00,"OCR_OUTSIDE_HUT_76");
-	TA_StandAround  (07,00,11,00,"OCR_OUSIDE_HUT_77_INSERT");
+	//[BugFix]: typo, waypoint OCR_OUSIDE_HUT_77_INSERT does not exist!
+	//TA_StandAround (07,00,11,00,"OCR_OUSIDE_HUT_77_INSERT");
+	TA_StandAround (07,00,11,00,"OCR_OUTSIDE_HUT_77_INSERT");
 	TA_WashSelf (11,00,11,30,"OCR_LAKE_4");
 	TA_RepairHut (11,30,12,00,"OCR_OUTSIDE_HUT_76");
 	TA_Boss (12,00,18,00,"OCR_HUT_76");
-	TA_SitCampfire (18,00,22,30,"OCR_OUSIDE_HUT_77_INSERT");
+	//TA_SitCampfire (18,00,22,30,"OCR_OUSIDE_HUT_77_INSERT");
+	TA_SitCampfire (18,00,22,30,"OCR_OUTSIDE_HUT_77_INSERT");
 };

@@ -59,7 +59,10 @@ instance SLD_725_Soeldner (Npc_Default)
 
 func void Rtn_start_725() //Vor Ezhaufen
 {
-	TA_GuardPassage (23,00,07,00,"NC_PATH40_GUARD1");
-	TA_GuardPassage (07,00,23,00,"NC_PATH40_GUARD1");
+	//TA_GuardPassage (23,00,07,00,"NC_PATH40_GUARD1");
+	//TA_GuardPassage (07,00,23,00,"NC_PATH40_GUARD1");
+	//[BugFix]: typo, waypoint NC_PATH40_GUARD1 does not exist!
+	TA_GuardPassage (23,00,07,00,"NC_PATH40_GUARD");
+	TA_GuardPassage (07,00,23,00,"NC_PATH40_GUARD");
 };
 

@@ -58,6 +58,10 @@ func void NPC_SmithingRoutine_1316 (var int startHour, var int startMin, var str
 
 func void Rtn_start_1316()
 {
+	//TODO: there is nothing to sit on next to this NPC anyway ... so TA_SitAround for **5** minutes does not make any sense
+	//NPC is working 24h a day ...
+	//There is an unused hut PSI_26_HUT_IN - where NPC could stay
+	
 	//[BugFix]: overlapping daily routines
 	//TA_Smith_Fire (08,00,08,10,"PSI_SMITH_01");
 	//TA_Smith_Anvil (08,10,08,20,"PSI_SMITH_01");

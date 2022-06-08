@@ -43,45 +43,45 @@ So in der Tasche
 ----------------
 ItAt_Meatbug_01 //Meatbug Körper (Essen) (Item-Instanz in Food.d)
 ItFoMuttonRaw //Scavenger 2 Bollen OK
-					//Molerats 2 Bollen OK
-					//Shadowbeast 4 Bollen OK
+//Molerats 2 Bollen OK
+//Shadowbeast 4 Bollen OK
 
 ItAt_Bloodfly_01 //Bloodfly Flügel OK
 
-Durch Jäger freigeschaltet (noch nicht verteilt)
+Durch Jäger freigeschaltet(noch nicht verteilt)
 --------------------------
 ItAt_Teeth_01 //Wolf 2 Zähne OK
-					//Schwarzer Wolf 2 Zähne OK
-					//Snapper 10 Zähne OK
-					//Orcbiter 2 Zähne OK
-					//Shadowbeast 4 Zähne OK
-					//Bloodhound 4 Zähne OK
+//Schwarzer Wolf 2 Zähne OK
+//Snapper 10 Zähne OK
+//Orcbiter 2 Zähne OK
+//Shadowbeast 4 Zähne OK
+//Bloodhound 4 Zähne OK
 //--------------------------------------------------------------
 ItAt_Claws_01 //Waran 4 Klauen OK
-					//Feuerechse 4 Klauen OK
-					//Snapper 3 Klauen OK
-					//Razor 3 Klauen OK
-					//Beisser 2 Klauen OK
+//Feuerechse 4 Klauen OK
+//Snapper 3 Klauen OK
+//Razor 3 Klauen OK
+//Beisser 2 Klauen OK
 ItAt_Lurker_01 //Lurker 2 Klauen OK
 //--------------------------------------------------------------
-ItAt_Wolf_01 //Wolf  Wolfsfell OK
-ItAt_Wolf_02 //Orkhund  Orkhundfell OK
+ItAt_Wolf_01 //Wolf Wolfsfell OK
+ItAt_Wolf_02 //Orkhund Orkhundfell OK
 ItAt_Shadow_01 //Shadowbeast Shadowbeast-Fell OK
 ItAt_Troll_01 //Troll Trollfell OK
 //--------------------------------------------------------------
 ItAt_Swampshark_01 //Sumpfhai Haut des Sumpfhais OK
 ItAt_Lurker_02 //Lurker Haut des Lurkers OK
 
-Durch Templer / Kalom freigeschaltet (noch nicht verteilt)
+Durch Templer / Kalom freigeschaltet(noch nicht verteilt)
 ------------------------------------
-ItAt_Crawler_01 //Crawler  Zangen OK
+ItAt_Crawler_01 //Crawler Zangen OK
 ItAt_Bloodfly_02 //Bloodfly Stachel OK
 
 Durch ORG_855_Wolf freigeschaltet
 ------------------------
 ItAt_Crawler_02 //Crawler Panzerplatten OK
 
-Durch Ulu-Mulu freigeschaltet
+Durch Ulu - Mulu freigeschaltet
 -----------------------------
 ItAt_Waran_01 //Feuerechse Flammenzunge OK
 ItAt_Swampshark_02 //Sumpfhai Zähne des Sumpfhais OK
@@ -90,7 +90,7 @@ ItAt_Troll_02 //Troll Hauer OK
 */
 
 /******************************************************************************************/
-instance ItAt_Teeth_01 (C_Item)
+instance ItAt_Teeth_01(C_Item)
 {
 	name = "Teeth";
 
@@ -107,7 +107,7 @@ instance ItAt_Teeth_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItAt_Wolf_01 (C_Item)
+instance ItAt_Wolf_01(C_Item)
 {
 	name = "Wolfskin";
 
@@ -122,8 +122,9 @@ instance ItAt_Wolf_01 (C_Item)
 	description = name;
 	TEXT[4] = NAME_Value; COUNT[4] = Value_Wolfsfell;
 };
+
 /******************************************************************************************/
-instance ItAt_Wolf_02 (C_Item)
+instance ItAt_Wolf_02(C_Item)
 {
 	name = "Skin of an Orc Dog";
 
@@ -138,8 +139,9 @@ instance ItAt_Wolf_02 (C_Item)
 	description = name;
 	TEXT[4] = NAME_Value; COUNT[4] = Value_Orkhundfell;
 };
+
 /******************************************************************************************/
-instance ItAt_Waran_01 (C_Item)
+instance ItAt_Waran_01(C_Item)
 {
 	name = "Tongue of Fire";
 
@@ -154,8 +156,9 @@ instance ItAt_Waran_01 (C_Item)
 	description = name;
 	TEXT[4] = NAME_Value; COUNT[4] = Value_Feuerzunge;
 };
+
 /******************************************************************************************/
-instance ItAt_Claws_01 (C_Item)
+instance ItAt_Claws_01(C_Item)
 {
 	name = "Claws";
 
@@ -170,13 +173,14 @@ instance ItAt_Claws_01 (C_Item)
 	description = name;
 	TEXT[4] = NAME_Value; COUNT[4] = Value_Krallen;
 };
+
 /******************************************************************************************/
-instance ItAt_Crawler_02 (C_Item)
+instance ItAt_Crawler_02(C_Item)
 {
 	name = "Armor Plate";
 
 	mainflag = ITEM_KAT_NONE;
-	flags = ITEM_MULTI|ITEM_MISSION;
+	flags = ITEM_MULTI | ITEM_MISSION;
 
 	value = Value_Panzerplatte;
 
@@ -188,7 +192,7 @@ instance ItAt_Crawler_02 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItAt_Crawler_01 (C_Item)
+instance ItAt_Crawler_01(C_Item)
 {
 	name = "Mandibles of a Crawler";
 
@@ -205,7 +209,7 @@ instance ItAt_Crawler_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItAt_Shadow_01 (C_Item)
+instance ItAt_Shadow_01(C_Item)
 {
 	name = "Skin";
 
@@ -222,7 +226,7 @@ instance ItAt_Shadow_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItAt_Shadow_02 (C_Item)
+instance ItAt_Shadow_02(C_Item)
 {
 	name = "Horn";
 
@@ -239,7 +243,7 @@ instance ItAt_Shadow_02 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItAt_Lurker_01 (C_Item)
+instance ItAt_Lurker_01(C_Item)
 {
 	name = "Lurker's Claws";
 
@@ -256,7 +260,7 @@ instance ItAt_Lurker_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItAt_Lurker_02 (C_Item)
+instance ItAt_Lurker_02(C_Item)
 {
 	name = "Lurker's Skin";
 
@@ -273,7 +277,7 @@ instance ItAt_Lurker_02 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItAt_Troll_02 (C_Item)
+instance ItAt_Troll_02(C_Item)
 {
 	name = "Troll Tusk";
 
@@ -290,7 +294,7 @@ instance ItAt_Troll_02 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItAt_Troll_01 (C_Item)
+instance ItAt_Troll_01(C_Item)
 {
 	name = "Troll Skin";
 
@@ -305,8 +309,9 @@ instance ItAt_Troll_01 (C_Item)
 	description = name;
 	TEXT[4] = NAME_Value; COUNT[4] = Value_Trollfell;
 };
+
 /******************************************************************************************/
-instance ItAt_Swampshark_01 (C_Item)
+instance ItAt_Swampshark_01(C_Item)
 {
 	name = "Skin of a Swampshark";
 
@@ -321,8 +326,9 @@ instance ItAt_Swampshark_01 (C_Item)
 	description = name;
 	TEXT[4] = NAME_Value; COUNT[4] = Value_Sumpfhaihaut;
 };
+
 /******************************************************************************************/
-instance ItAt_Swampshark_02 (C_Item)
+instance ItAt_Swampshark_02(C_Item)
 {
 	name = "Teeth of a Swampshark";
 
@@ -337,8 +343,9 @@ instance ItAt_Swampshark_02 (C_Item)
 	description = name;
 	TEXT[4] = NAME_Value; COUNT[4] = Value_Sumpfhaizähne;
 };
+
 /******************************************************************************************/
-instance ItAt_Bloodfly_01 (C_Item)
+instance ItAt_Bloodfly_01(C_Item)
 {
 	name = "Wings";
 
@@ -353,8 +360,9 @@ instance ItAt_Bloodfly_01 (C_Item)
 	description = name;
 	TEXT[4] = NAME_Value; COUNT[4] = Value_Flügel;
 };
+
 /******************************************************************************************/
-instance ItAt_Bloodfly_02 (C_Item)
+instance ItAt_Bloodfly_02(C_Item)
 {
 	name = "Bloodfly Sting";
 
@@ -371,7 +379,7 @@ instance ItAt_Bloodfly_02 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItAt_StoneGolem_01 (C_Item)
+instance ItAt_StoneGolem_01(C_Item)
 {
 	name = "Heart of a Stone Golem";
 
@@ -393,7 +401,7 @@ instance ItAt_StoneGolem_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItAt_FireGolem_01 (C_Item)
+instance ItAt_FireGolem_01(C_Item)
 {
 	name = "Heart of a Fire Golem";
 
@@ -415,7 +423,7 @@ instance ItAt_FireGolem_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItAt_IceGolem_01 (C_Item)
+instance ItAt_IceGolem_01(C_Item)
 {
 	name = "Heart of an Ice Golem";
 
@@ -437,7 +445,7 @@ instance ItAt_IceGolem_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItAt_IceGolem_02 (C_Item)
+instance ItAt_IceGolem_02(C_Item)
 {
 	name = "Piece of an Ice Golem";
 
@@ -446,8 +454,8 @@ instance ItAt_IceGolem_02 (C_Item)
 	spell = SPL_THUNDERBOLT;
 
 	value = Value_Eistueck;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = 500;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = 500;
 
 	visual = "ItAt_IceGolem_01.3DS";
 	material = MAT_STONE;

@@ -1,4 +1,4 @@
-instance VLK_583_Glen (Npc_Default)
+instance VLK_583_Glen(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -21,33 +21,31 @@ instance VLK_583_Glen (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Tired.mds");
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Tired.mds");
 	//				body mesh, head mesh, hairmesh, face-tex, hair-tex, skin
-	Mdl_SetVisualBody(self,"hum_body_Naked0",2,1,"Hum_Head_Thief", 73,  4, VLK_ARMOR_M);
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 2, 1, "Hum_Head_Thief", 73, 4, VLK_ARMOR_M);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
 	//-------- Talents --------
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,1);
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 1);
 
 	//-------- inventory --------
 
-	CreateInvItems(self,ItKeLockpick,20);
+	CreateInvItems(self, ItKeLockpick, 20);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_583;
 
 	//------------ //MISSIONs-------------------
-
 };
 
 func void Rtn_start_583()
 {
-	TA_PickOre (00,00,12,00,"OM_PICKORE_01A");
-	TA_PickOre (12,00,24,00,"OM_PICKORE_01A");
+	TA_PickOre(00, 00, 12, 00, "OM_PICKORE_01A");
+	TA_PickOre(12, 00, 24, 00, "OM_PICKORE_01A");
 };
-

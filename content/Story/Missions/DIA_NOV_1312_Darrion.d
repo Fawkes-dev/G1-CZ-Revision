@@ -85,7 +85,7 @@ func int DIA_Darrion_Trade_Condition()
 {
 	if (Npc_KnowsInfo(hero,DIA_Darrion_Hello))
 	{
-		return 1;;
+		return 1;
 	};
 
 	return 0;

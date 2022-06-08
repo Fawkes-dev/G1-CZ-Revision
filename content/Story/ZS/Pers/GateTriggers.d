@@ -1,6 +1,6 @@
 func int On_OCC_GATE_Trigger()
 {
-	PrintDebugNpc (PD_TA_CHECK,"On_OCC_GATE_Trigger");
+	PrintDebugNpc(PD_TA_CHECK, "On_OCC_GATE_Trigger");
 
 	var C_Npc wache;
 	wache = Hlp_GetNpc(Grd_213_Torwache);
@@ -12,7 +12,7 @@ func int On_OCC_GATE_Trigger()
 
 func int On_OCR_NORTHGATE_Trigger()
 {
-	PrintDebugNpc (PD_TA_CHECK,"On_OCR_NORTHGATE_Trigger");
+	PrintDebugNpc(PD_TA_CHECK, "On_OCR_NORTHGATE_Trigger");
 	var C_Npc wache;
 	wache = Hlp_GetNpc(Grd_216_Torwache);
 	wache.aivar[AIV_Trigger3] = 1;
@@ -23,7 +23,7 @@ func int On_OCR_NORTHGATE_Trigger()
 
 func int On_OCR_MAINGATE_Trigger()
 {
-	PrintDebugNpc (PD_TA_CHECK,"On_OCR_MAINGATE_Trigger");
+	PrintDebugNpc(PD_TA_CHECK, "On_OCR_MAINGATE_Trigger");
 
 	var C_Npc wache;
 	wache = Hlp_GetNpc(Grd_215_Torwache);
@@ -35,7 +35,7 @@ func int On_OCR_MAINGATE_Trigger()
 
 func int On_OCC_BARONSDOOR_Trigger()
 {
-	PrintDebugNpc (PD_TA_CHECK,"On_OCC_BARONSDOOR_Trigger");
+	PrintDebugNpc(PD_TA_CHECK, "On_OCC_BARONSDOOR_Trigger");
 
 	var C_Npc wache;
 	wache = Hlp_GetNpc(Grd_218_Gardist);
@@ -47,7 +47,7 @@ func int On_OCC_BARONSDOOR_Trigger()
 
 func int ON_PSI_LABDOOR_TRIGGER()
 {
-	PrintDebugNpc (PD_TA_CHECK,"ON_PSI_LABDOOR_TRIGGER");
+	PrintDebugNpc(PD_TA_CHECK, "ON_PSI_LABDOOR_TRIGGER");
 
 	var C_Npc wache;
 	wache = Hlp_GetNpc(TPL_1406_Templer);
@@ -56,7 +56,7 @@ func int ON_PSI_LABDOOR_TRIGGER()
 
 func int ON_PSI_TEMPLE_GATE_TRIGGER()
 {
-	PrintDebugNpc (PD_TA_CHECK,"ON_PSI_TEMPLE_GATE_TRIGGER");
+	PrintDebugNpc(PD_TA_CHECK, "ON_PSI_TEMPLE_GATE_TRIGGER");
 
 	var C_Npc wache;
 	wache = Hlp_GetNpc(TPL_1413_Templer);
@@ -74,7 +74,7 @@ func int ON_PSI_TEMPLE_GATE_TRIGGER()
 
 func int ON_NC_MAGERAMP_TRIGGER()
 {
-	PrintDebugNpc (PD_TA_CHECK,"ON_NC_MAGERAMP_TRIGGER");
+	PrintDebugNpc(PD_TA_CHECK, "ON_NC_MAGERAMP_TRIGGER");
 
 //### Wachwechsel berücksichtigen!
 	var C_Npc wache;
@@ -87,7 +87,7 @@ func int ON_NC_MAGERAMP_TRIGGER()
 
 func int ON_NC_MAGECAVE_TRIGGER()
 {
-	PrintDebugNpc (PD_TA_CHECK,"ON_NC_MAGECAVE_TRIGGER");
+	PrintDebugNpc(PD_TA_CHECK, "ON_NC_MAGECAVE_TRIGGER");
 
 	var C_Npc wache;
 	wache = Hlp_GetNpc(SLD_725_Soeldner);
@@ -100,5 +100,5 @@ func int ON_NC_MAGECAVE_TRIGGER()
 func int ON_NC_GATE_TRIGGER()
 {
 //### Tor wird bisher noch nicht bewacht
-	PrintDebugNpc (PD_TA_CHECK,"ON_NC_GATE_TRIGGER");
+	PrintDebugNpc(PD_TA_CHECK, "ON_NC_GATE_TRIGGER");
 };

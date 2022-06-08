@@ -1,6 +1,6 @@
 // Nur für Kap.6 benutzen
 
-instance GUR_1212_MadCorKalom (Npc_Default)
+instance GUR_1212_MadCorKalom(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -30,24 +30,24 @@ instance GUR_1212_MadCorKalom (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Mage.mds");
-	//			body mesh     ,bdytex,skin,head mesh     ,headtex,teethtex,ruestung
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 1, 0 ,"Hum_Head_Psionic", 19,  0, GUR_ARMOR_H);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Mage.mds");
+	//			body mesh ,bdytex,skin,head mesh ,headtex,teethtex,ruestung
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 1, 0, "Hum_Head_Psionic", 19, 0, GUR_ARMOR_H);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
 	//-------- Talente -------
-	Npc_SetTalentSkill(self,NPC_TALENT_MAGE, 6);
+	Npc_SetTalentSkill(self, NPC_TALENT_MAGE, 6);
 
 	//-------- inventory --------
-	EquipItem(self,Kaloms_Schwert);
-	CreateInvItems(self,ItArRunePyrokinesis,1);
+	EquipItem(self, Kaloms_Schwert);
+	CreateInvItems(self, ItArRunePyrokinesis, 1);
 //	CreateInvItem(self,ItArRuneSleep);
 
 	//-------------AI-------------
-	senses = SENSE_SEE|SENSE_HEAR|SENSE_SMELL;
+	senses = SENSE_SEE | SENSE_HEAR | SENSE_SMELL;
 	senses_range = 2000;
 	daily_routine = Rtn_OT_1212;
 	fight_tactic = FAI_HUMAN_MAGE;
@@ -55,12 +55,12 @@ instance GUR_1212_MadCorKalom (Npc_Default)
 
 func void Rtn_start_1212()
 {
-	TA_Stay  (15,00,22,00,"TPL_408");
-  	TA_Stay  (22,00,15,00,"TPL_408");
+	TA_Stay(15, 00, 22, 00, "TPL_408");
+	TA_Stay(22, 00, 15, 00, "TPL_408");
 };
 
 func void Rtn_OT_1212()
 {
-	TA_InterceptMadCorKalom (15,00,22,00,"TPL_390");
-  	TA_InterceptMadCorKalom (22,00,15,00,"TPL_390");
+	TA_InterceptMadCorKalom(15, 00, 22, 00, "TPL_390");
+	TA_InterceptMadCorKalom(22, 00, 15, 00, "TPL_390");
 };

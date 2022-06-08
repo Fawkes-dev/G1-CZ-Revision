@@ -1,8 +1,8 @@
 /*************************************************************************
-** Orc SLAVE Prototype **
+** Orc SLAVE prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_OrcSlave(C_Npc)
+prototype Mst_Default_OrcSlave(C_Npc)
 {
 	name = "Orc Slave";
 	guild = GIL_ORCSLAVE;
@@ -51,33 +51,33 @@ PROTOTYPE Mst_Default_OrcSlave(C_Npc)
 
 	//aivar[AIV_MM_RestStart] = OnlyRoutine;
 };
+
 //-------------------------------------------------------------
 
 func void Set_OrcSlave_Visuals()
 {
-	Mdl_SetVisual(self,"Orc.mds");
+	Mdl_SetVisual(self, "Orc.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Orc_BodySlave",DEFAULT, DEFAULT, "Orc_HeadSlave",DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Orc_BodySlave", DEFAULT, DEFAULT, "Orc_HeadSlave", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Orc Slave   **
+** Orc Slave **
 *************************************************************************/
 
 // in den Instanz-Scripten bitte NUR die Werte eintragen, die vom Prototyp abweichen sollen!
 
-instance OrcSlave (Mst_Default_OrcSlave)
+instance OrcSlave(Mst_Default_OrcSlave)
 {
 	guild = GIL_ORCSLAVE;
 
 	Set_OrcSlave_Visuals();
-
 };
 
 /*************************************************************************
-** Tanzender Ork   **
+** Tanzender Ork **
 *************************************************************************/
-instance OrcPeasantDance (Mst_Default_OrcSlave)
+instance OrcPeasantDance(Mst_Default_OrcSlave)
 {
 	//-------- general data --------
 	guild = GIL_ORCWARRIOR;
@@ -87,17 +87,16 @@ instance OrcPeasantDance (Mst_Default_OrcSlave)
 	Set_OrcSlave_Visuals();
 
 	//-------- inventory --------
-	CreateInvItem(self,ItMw2hOrcSword01);
+	CreateInvItem(self, ItMw2hOrcSword01);
 
 	//-------- ai --------
 	start_aistate = ZS_Orc_Dance;
-
 };
 
 /*************************************************************************
-** Trommelnder Ork   **
+** Trommelnder Ork **
 *************************************************************************/
-instance OrcPeasantDrum (Mst_Default_OrcSlave)
+instance OrcPeasantDrum(Mst_Default_OrcSlave)
 {
 	//-------- general data --------
 	guild = GIL_ORCWARRIOR;
@@ -107,10 +106,8 @@ instance OrcPeasantDrum (Mst_Default_OrcSlave)
 	Set_OrcSlave_Visuals();
 
 	//-------- inventory --------
-	CreateInvItem(self,ItMw2hOrcSword01);
+	CreateInvItem(self, ItMw2hOrcSword01);
 
 	//-------- ai --------
 	start_aistate = ZS_Orc_Drum;
-
 };
-

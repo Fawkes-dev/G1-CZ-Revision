@@ -11,9 +11,9 @@ instance SH(NPC_DEFAULT)
 
 	//-------- visuals --------
 	// 						animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	//						Body-Mesh Body-Tex Skin-Color Head-MMS    Head-Tex Teeth-Tex Armor-Tex
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 4, 1, "Hum_Head_Pony", 9, 0, -1);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	//						Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex Armor-Tex
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 4, 1, "Hum_Head_Pony", 9, 0, -1);
 
 	//-------- ai ----------
 	start_aistate = ZS_SH_Hangaround;
@@ -21,19 +21,19 @@ instance SH(NPC_DEFAULT)
 
 func void ZS_SH_Hangaround()
 {
-	PrintDebugNpc (PD_ZS_FRAME, "ZS_SH_Hangaround");
+	PrintDebugNpc(PD_ZS_FRAME, "ZS_SH_Hangaround");
 
-	Npc_PercEnable  (self,PERC_ASSESSTALK, B_AssessTalk);
+	Npc_PercEnable(self, PERC_ASSESSTALK, B_AssessTalk);
 };
 
 func void ZS_SH_Hangaround_Loop()
 {
-	PrintDebugNpc (PD_ZS_LOOP, "ZS_SH_Hangaround_Loop");
+	PrintDebugNpc(PD_ZS_LOOP, "ZS_SH_Hangaround_Loop");
 };
 
 func void ZS_SH_Hangaround_End()
 {
-	PrintDebugNpc (PD_ZS_FRAME, "ZS_SH_Hangaround_End");
+	PrintDebugNpc(PD_ZS_FRAME, "ZS_SH_Hangaround_End");
 };
 
 //***************************************************************************
@@ -86,12 +86,12 @@ func void StoryHelper_INFO2_Info()
 {
 	Info_ClearChoices(StoryHelper_INFO2);
 
-	Info_AddChoice(StoryHelper_INFO2, "ZURÜCK"                 , StoryHelper_BACK2);
-	Info_AddChoice(StoryHelper_INFO2, "II:  Vorbereitung für die Beschwörung" , StoryHelper_PrepareRitual);
-	Info_AddChoice(StoryHelper_INFO2, "II:  Hole den Almanach" , StoryHelper_CorKalom_BringBook_RUNNING);
-	Info_AddChoice(StoryHelper_INFO2, "II:  Hole die MCQ-Eier" , StoryHelper_CorKalom_BringMCQBalls_RUNNING);
-	Info_AddChoice(StoryHelper_INFO2, "II:  Bringe Fokus zu Cor Kalom" , StoryHelper_YBerion_BringFocus_SUCCESS);
-	Info_AddChoice(StoryHelper_INFO2, "II:  Kapitelanfang" , StoryHelper_Chapter2Start);
+	Info_AddChoice(StoryHelper_INFO2, "ZURÜCK", StoryHelper_BACK2);
+	Info_AddChoice(StoryHelper_INFO2, "II:  Vorbereitung für die Beschwörung", StoryHelper_PrepareRitual);
+	Info_AddChoice(StoryHelper_INFO2, "II:  Hole den Almanach", StoryHelper_CorKalom_BringBook_RUNNING);
+	Info_AddChoice(StoryHelper_INFO2, "II:  Hole die MCQ-Eier", StoryHelper_CorKalom_BringMCQBalls_RUNNING);
+	Info_AddChoice(StoryHelper_INFO2, "II:  Bringe Fokus zu Cor Kalom", StoryHelper_YBerion_BringFocus_SUCCESS);
+	Info_AddChoice(StoryHelper_INFO2, "II:  Kapitelanfang", StoryHelper_Chapter2Start);
 };
 
 //---------------------------------------------------------------------
@@ -102,7 +102,7 @@ func void StoryHelper_Chapter2Start()
 	//-------- was davor geschah --------
 
 	//-------- was neu geschieht --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 
 	//-------- Menü --------
 	Info_ClearChoices(StoryHelper_INFO2);
@@ -115,10 +115,10 @@ func void StoryHelper_Chapter2Start()
 func void StoryHelper_YBerion_BringFocus_SUCCESS()
 {
 	//-------- was davor geschah --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 
 	//-------- was neu geschieht --------
-	CreateInvItem(hero,Focus_1);
+	CreateInvItem(hero, Focus_1);
 	YBerion_BringFocus = LOG_SUCCESS;
 
 	//-------- Menü --------
@@ -132,7 +132,7 @@ func void StoryHelper_YBerion_BringFocus_SUCCESS()
 func void StoryHelper_CorKalom_BringMCQBalls_RUNNING()
 {
 	//-------- was davor geschah --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 	YBerion_BringFocus = LOG_SUCCESS;
 
 	//-------- was neu geschieht --------
@@ -150,7 +150,7 @@ func void StoryHelper_CorKalom_BringMCQBalls_RUNNING()
 func void StoryHelper_CorKalom_BringBook_RUNNING()
 {
 	//-------- was davor geschah --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 	YBerion_BringFocus = LOG_SUCCESS;
 
 	//-------- was neu geschieht --------
@@ -168,7 +168,7 @@ func void StoryHelper_CorKalom_BringBook_RUNNING()
 func void StoryHelper_PrepareRitual()
 {
 	//-------- was davor geschah --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 	YBerion_BringFocus = LOG_SUCCESS;
 	CorKalom_BringMCQBalls = LOG_SUCCESS;
 
@@ -213,11 +213,11 @@ func void StoryHelper_INFO3_Info()
 {
 	Info_ClearChoices(StoryHelper_INFO3);
 
-	Info_AddChoice(StoryHelper_INFO3, DIALOG_BACK , StoryHelper_BACK3);
-	Info_AddChoice(StoryHelper_INFO3, "III: Saturas  - 4 Foki holen" , StoryHelper_SaturasBringFoci_RUNNING);
-	Info_AddChoice(StoryHelper_INFO3, "III: CorAngar - zum NC gehen" , StoryHelper_CorAngar_SendToNC);
-	Info_AddChoice(StoryHelper_INFO3, "III: BaalLukor - besiegt" , StoryHelper_BaalLukor_DEFEAT);
-	Info_AddChoice(StoryHelper_INFO3, "III: Bereit für den Ork-Friedhof" , StoryHelper_OrcGraveyard);
+	Info_AddChoice(StoryHelper_INFO3, DIALOG_BACK, StoryHelper_BACK3);
+	Info_AddChoice(StoryHelper_INFO3, "III: Saturas  - 4 Foki holen", StoryHelper_SaturasBringFoci_RUNNING);
+	Info_AddChoice(StoryHelper_INFO3, "III: CorAngar - zum NC gehen", StoryHelper_CorAngar_SendToNC);
+	Info_AddChoice(StoryHelper_INFO3, "III: BaalLukor - besiegt", StoryHelper_BaalLukor_DEFEAT);
+	Info_AddChoice(StoryHelper_INFO3, "III: Bereit für den Ork-Friedhof", StoryHelper_OrcGraveyard);
 };
 
 //---------------------------------------------------------------------
@@ -226,11 +226,11 @@ func void StoryHelper_INFO3_Info()
 func void StoryHelper_OrcGraveyard()
 {
 	//-------- was davor geschah --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 	B_Story_PrepareRitual();
 
 	//-------- was neu geschieht --------
-	B_Kapitelwechsel (3);
+	B_Kapitelwechsel(3);
 	B_Story_GotoOrcGraveyard();
 
 	//-------- Menü --------
@@ -244,9 +244,9 @@ func void StoryHelper_OrcGraveyard()
 func void StoryHelper_BaalLukor_DEFEAT()
 {
 	//-------- was davor geschah --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 	B_Story_PrepareRitual();
-	B_Kapitelwechsel (3);
+	B_Kapitelwechsel(3);
 	B_Story_GotoOrcGraveyard();
 
 	//-------- was neu geschieht --------
@@ -263,15 +263,15 @@ func void StoryHelper_BaalLukor_DEFEAT()
 func void StoryHelper_CorAngar_SendToNC()
 {
 	//-------- was davor geschah --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 	B_Story_PrepareRitual();
-	B_Kapitelwechsel (3);
+	B_Kapitelwechsel(3);
 	B_Story_GotoOrcGraveyard();
 
 	//-------- was neu geschieht --------
 	B_Story_BackFromOrcGraveyard();
-	CreateInvItem(hero,focus_1);
-	CreateInvItem(hero,ItWrFokusbuch);
+	CreateInvItem(hero, focus_1);
+	CreateInvItem(hero, ItWrFokusbuch);
 	B_Story_SentToNC();
 
 	//-------- Menü --------
@@ -280,14 +280,14 @@ func void StoryHelper_CorAngar_SendToNC()
 };
 
 //---------------------------------------------------------------------
-//	Saturas  - 4 Foki holen
+//	Saturas - 4 Foki holen
 //---------------------------------------------------------------------
 func void StoryHelper_SaturasBringFoci_RUNNING()
 {
 	//-------- was davor geschah --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 	B_Story_PrepareRitual();
-	B_Kapitelwechsel (3);
+	B_Kapitelwechsel(3);
 	B_Story_GotoOrcGraveyard();
 	B_Story_BackFromOrcGraveyard();
 	B_Story_SentToNC();
@@ -332,25 +332,25 @@ func void StoryHelper_INFO4_Info()
 {
 	Info_ClearChoices(StoryHelper_INFO4);
 
-	Info_AddChoice(StoryHelper_INFO4, "ZURÜCK" , StoryHelper_BACK4);
-	Info_AddChoice(StoryHelper_INFO4, "IV:  Suche Teile für Ulu-Mulu" , StoryHelper_SearchForUluMulu);
-	Info_AddChoice(StoryHelper_INFO4, "IV:  Bereit für Angriff auf die Freie Mine" , StoryHelper_AttackFreeMine);
-	Info_AddChoice(StoryHelper_INFO4, "IV:  Xardas  - Finde Ork Schamanen" , StoryHelper_XardasFindOrcShaman);
-	Info_AddChoice(StoryHelper_INFO4, "IV:  Xardas  - Erste Begegnung" , StoryHelper_XardasIntro);
-	Info_AddChoice(StoryHelper_INFO4, "IV:  Saturas - Finde Xardas" , StoryHelper_SaturasFindXardas);
-	Info_AddChoice(StoryHelper_INFO4, "IV:  Diego   - Freie Mine wurde überfallen" , StoryHelper_FreeMineAmbush);
-	Info_AddChoice(StoryHelper_INFO4, "IV:  Saturas - Feuermagier holen" , StoryHelper_SaturasBringFoci_SUCCESS);
+	Info_AddChoice(StoryHelper_INFO4, "ZURÜCK", StoryHelper_BACK4);
+	Info_AddChoice(StoryHelper_INFO4, "IV:  Suche Teile für Ulu-Mulu", StoryHelper_SearchForUluMulu);
+	Info_AddChoice(StoryHelper_INFO4, "IV:  Bereit für Angriff auf die Freie Mine", StoryHelper_AttackFreeMine);
+	Info_AddChoice(StoryHelper_INFO4, "IV:  Xardas  - Finde Ork Schamanen", StoryHelper_XardasFindOrcShaman);
+	Info_AddChoice(StoryHelper_INFO4, "IV:  Xardas  - Erste Begegnung", StoryHelper_XardasIntro);
+	Info_AddChoice(StoryHelper_INFO4, "IV:  Saturas - Finde Xardas", StoryHelper_SaturasFindXardas);
+	Info_AddChoice(StoryHelper_INFO4, "IV:  Diego   - Freie Mine wurde überfallen", StoryHelper_FreeMineAmbush);
+	Info_AddChoice(StoryHelper_INFO4, "IV:  Saturas - Feuermagier holen", StoryHelper_SaturasBringFoci_SUCCESS);
 };
 
 //---------------------------------------------------------------------
-//	Saturas  - Feuermagier holen
+//	Saturas - Feuermagier holen
 //---------------------------------------------------------------------
 func void StoryHelper_SaturasBringFoci_SUCCESS()
 {
 	//-------- was davor geschah --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 	B_Story_PrepareRitual();
-	B_Kapitelwechsel (3);
+	B_Kapitelwechsel(3);
 	B_Story_GotoOrcGraveyard();
 	B_Story_BackFromOrcGraveyard();
 	B_Story_SentToNC();
@@ -358,7 +358,7 @@ func void StoryHelper_SaturasBringFoci_SUCCESS()
 
 	//-------- was neu geschieht --------
 	B_Story_BroughtFoci();
-	B_KapitelWechsel (4);
+	B_KapitelWechsel(4);
 
 	//-------- Menü --------
 	Info_ClearChoices(StoryHelper_INFO4);
@@ -371,15 +371,15 @@ func void StoryHelper_SaturasBringFoci_SUCCESS()
 func void StoryHelper_FreeMineAmbush()
 {
 	//-------- was davor geschah --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 	B_Story_PrepareRitual();
-	B_Kapitelwechsel (3);
+	B_Kapitelwechsel(3);
 	B_Story_GotoOrcGraveyard();
 	B_Story_BackFromOrcGraveyard();
 	B_Story_SentToNC();
 	B_Story_BringFoci();
 	B_Story_BroughtFoci();
-	B_KapitelWechsel (4);
+	B_KapitelWechsel(4);
 
 	//-------- was neu geschieht --------
 	B_Story_FMTaken();
@@ -395,15 +395,15 @@ func void StoryHelper_FreeMineAmbush()
 func void StoryHelper_SaturasFindXardas()
 {
 	//-------- was davor geschah --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 	B_Story_PrepareRitual();
-	B_Kapitelwechsel (3);
+	B_Kapitelwechsel(3);
 	B_Story_GotoOrcGraveyard();
 	B_Story_BackFromOrcGraveyard();
 	B_Story_SentToNC();
 	B_Story_BringFoci();
 	B_Story_BroughtFoci();
-	B_KapitelWechsel (4);
+	B_KapitelWechsel(4);
 	B_Story_FMTaken();
 
 	//-------- was neu geschieht --------
@@ -421,15 +421,15 @@ func void StoryHelper_SaturasFindXardas()
 func void StoryHelper_XardasIntro()
 {
 	//-------- was davor geschah --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 	B_Story_PrepareRitual();
-	B_Kapitelwechsel (3);
+	B_Kapitelwechsel(3);
 	B_Story_GotoOrcGraveyard();
 	B_Story_BackFromOrcGraveyard();
 	B_Story_SentToNC();
 	B_Story_BringFoci();
 	B_Story_BroughtFoci();
-	B_KapitelWechsel (4);
+	B_KapitelWechsel(4);
 	B_Story_FMTaken();
 	B_Story_CordsPost();
 	B_Story_FindXardas();
@@ -448,15 +448,15 @@ func void StoryHelper_XardasIntro()
 func void StoryHelper_XardasFindOrcShaman()
 {
 	//-------- was davor geschah --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 	B_Story_PrepareRitual();
-	B_Kapitelwechsel (3);
+	B_Kapitelwechsel(3);
 	B_Story_GotoOrcGraveyard();
 	B_Story_BackFromOrcGraveyard();
 	B_Story_SentToNC();
 	B_Story_BringFoci();
 	B_Story_BroughtFoci();
-	B_KapitelWechsel (4);
+	B_KapitelWechsel(4);
 	B_Story_FMTaken();
 	B_Story_CordsPost();
 	B_Story_FindXardas();
@@ -476,15 +476,15 @@ func void StoryHelper_XardasFindOrcShaman()
 func void StoryHelper_AttackFreeMine()
 {
 	//-------- was davor geschah --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 	B_Story_PrepareRitual();
-	B_Kapitelwechsel (3);
+	B_Kapitelwechsel(3);
 	B_Story_GotoOrcGraveyard();
 	B_Story_BackFromOrcGraveyard();
 	B_Story_SentToNC();
 	B_Story_BringFoci();
 	B_Story_BroughtFoci();
-	B_KapitelWechsel (4);
+	B_KapitelWechsel(4);
 	B_Story_FMTaken();
 	B_Story_CordsPost();
 	B_Story_FindXardas();
@@ -507,15 +507,15 @@ func void StoryHelper_AttackFreeMine()
 func void StoryHelper_SearchForUluMulu()
 {
 	//-------- was davor geschah --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 	B_Story_PrepareRitual();
-	B_Kapitelwechsel (3);
+	B_Kapitelwechsel(3);
 	B_Story_GotoOrcGraveyard();
 	B_Story_BackFromOrcGraveyard();
 	B_Story_SentToNC();
 	B_Story_BringFoci();
 	B_Story_BroughtFoci();
-	B_KapitelWechsel (4);
+	B_KapitelWechsel(4);
 	B_Story_FMTaken();
 	B_Story_CordsPost();
 	B_Story_FindXardas();
@@ -571,12 +571,12 @@ func void StoryHelper_INFO5_Info()
 {
 	Info_ClearChoices(StoryHelper_INFO5);
 
-	Info_AddChoice(StoryHelper_INFO5, "ZURÜCK" , StoryHelper_BACK5);
-	Info_AddChoice(StoryHelper_INFO5, "V:  URIZIEL ist aufgeladen" , StoryHelper_UrizielLoaded);
-	Info_AddChoice(StoryHelper_INFO5, "V:  Bereit für das Laden von URIZIEL" , StoryHelper_LoadUriziel);
-	Info_AddChoice(StoryHelper_INFO5, "V:  Erforsche den versunkenen Turm" , StoryHelper_ExploreSunkenTower);
-	Info_AddChoice(StoryHelper_INFO5, "V:  Uriziel gefunden" , StoryHelper_FoundUriziel);
-	Info_AddChoice(StoryHelper_INFO5, "V:  Bereit für die Ork-Stadt" , StoryHelper_ReadyForOrcCity);
+	Info_AddChoice(StoryHelper_INFO5, "ZURÜCK", StoryHelper_BACK5);
+	Info_AddChoice(StoryHelper_INFO5, "V:  URIZIEL ist aufgeladen", StoryHelper_UrizielLoaded);
+	Info_AddChoice(StoryHelper_INFO5, "V:  Bereit für das Laden von URIZIEL", StoryHelper_LoadUriziel);
+	Info_AddChoice(StoryHelper_INFO5, "V:  Erforsche den versunkenen Turm", StoryHelper_ExploreSunkenTower);
+	Info_AddChoice(StoryHelper_INFO5, "V:  Uriziel gefunden", StoryHelper_FoundUriziel);
+	Info_AddChoice(StoryHelper_INFO5, "V:  Bereit für die Ork-Stadt", StoryHelper_ReadyForOrcCity);
 };
 
 //---------------------------------------------------------------------
@@ -585,15 +585,15 @@ func void StoryHelper_INFO5_Info()
 func void StoryHelper_ReadyForOrcCity()
 {
 	//-------- was davor geschah --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 	B_Story_PrepareRitual();
-	B_Kapitelwechsel (3);
+	B_Kapitelwechsel(3);
 	B_Story_GotoOrcGraveyard();
 	B_Story_BackFromOrcGraveyard();
 	B_Story_SentToNC();
 	B_Story_BringFoci();
 	B_Story_BroughtFoci();
-	B_KapitelWechsel (4);
+	B_KapitelWechsel(4);
 	B_Story_FMTaken();
 	B_Story_CordsPost();
 	B_Story_FindXardas();
@@ -612,8 +612,8 @@ func void StoryHelper_ReadyForOrcCity()
 
 	//-------- was neu geschieht --------
 	B_Story_GotUluMulu();
-	B_Kapitelwechsel (5);
-	CreateInvItem(hero,CRW_ARMOR_H);
+	B_Kapitelwechsel(5);
+	CreateInvItem(hero, CRW_ARMOR_H);
 
 	//-------- Menü --------
 	Info_ClearChoices(StoryHelper_INFO5);
@@ -626,15 +626,15 @@ func void StoryHelper_ReadyForOrcCity()
 func void StoryHelper_FoundUriziel()
 {
 	//-------- was davor geschah --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 	B_Story_PrepareRitual();
-	B_Kapitelwechsel (3);
+	B_Kapitelwechsel(3);
 	B_Story_GotoOrcGraveyard();
 	B_Story_BackFromOrcGraveyard();
 	B_Story_SentToNC();
 	B_Story_BringFoci();
 	B_Story_BroughtFoci();
-	B_KapitelWechsel (4);
+	B_KapitelWechsel(4);
 	B_Story_FMTaken();
 	B_Story_CordsPost();
 	B_Story_FindXardas();
@@ -651,8 +651,8 @@ func void StoryHelper_FoundUriziel()
 	B_Story_CuredOrc();
 	B_Story_LeftFM();
 	B_Story_GotUluMulu();
-	B_Kapitelwechsel (5);
-	CreateInvItem(hero,CRW_ARMOR_H);
+	B_Kapitelwechsel(5);
+	CreateInvItem(hero, CRW_ARMOR_H);
 
 	//-------- was neu geschieht --------
 	EnteredTemple = TRUE;
@@ -671,15 +671,15 @@ func void StoryHelper_FoundUriziel()
 func void StoryHelper_ExploreSunkenTower()
 {
 	//-------- was davor geschah --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 	B_Story_PrepareRitual();
-	B_Kapitelwechsel (3);
+	B_Kapitelwechsel(3);
 	B_Story_GotoOrcGraveyard();
 	B_Story_BackFromOrcGraveyard();
 	B_Story_SentToNC();
 	B_Story_BringFoci();
 	B_Story_BroughtFoci();
-	B_KapitelWechsel (4);
+	B_KapitelWechsel(4);
 	B_Story_FMTaken();
 	B_Story_CordsPost();
 	B_Story_FindXardas();
@@ -696,8 +696,8 @@ func void StoryHelper_ExploreSunkenTower()
 	B_Story_CuredOrc();
 	B_Story_LeftFM();
 	B_Story_GotUluMulu();
-	B_Kapitelwechsel (5);
-	CreateInvItem(hero,CRW_ARMOR_H);
+	B_Kapitelwechsel(5);
+	CreateInvItem(hero, CRW_ARMOR_H);
 	EnteredTemple = TRUE;
 	B_Story_FoundUriziel();
 	B_Story_EncounteredHighPriest();
@@ -717,15 +717,15 @@ func void StoryHelper_ExploreSunkenTower()
 func void StoryHelper_LoadUriziel()
 {
 	//-------- was davor geschah --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 	B_Story_PrepareRitual();
-	B_Kapitelwechsel (3);
+	B_Kapitelwechsel(3);
 	B_Story_GotoOrcGraveyard();
 	B_Story_BackFromOrcGraveyard();
 	B_Story_SentToNC();
 	B_Story_BringFoci();
 	B_Story_BroughtFoci();
-	B_KapitelWechsel (4);
+	B_KapitelWechsel(4);
 	B_Story_FMTaken();
 	B_Story_CordsPost();
 	B_Story_FindXardas();
@@ -742,8 +742,8 @@ func void StoryHelper_LoadUriziel()
 	B_Story_CuredOrc();
 	B_Story_LeftFM();
 	B_Story_GotUluMulu();
-	B_Kapitelwechsel (5);
-	CreateInvItem(hero,CRW_ARMOR_H);
+	B_Kapitelwechsel(5);
+	CreateInvItem(hero, CRW_ARMOR_H);
 	EnteredTemple = TRUE;
 	B_Story_FoundUriziel();
 	B_Story_EncounteredHighPriest();
@@ -751,8 +751,8 @@ func void StoryHelper_LoadUriziel()
 	B_Story_ExploreSunkenTower();
 
 	//-------- was neu geschieht --------
-	CreateInvItem(hero,ORE_ARMOR_M);
-	CreateInvItem(hero,ItArRuneTeleport1); // zu den Feuermagiern
+	CreateInvItem(hero, ORE_ARMOR_M);
+	CreateInvItem(hero, ItArRuneTeleport1); // zu den Feuermagiern
 	B_Story_LoadSword();
 
 	//-------- Menü --------
@@ -766,15 +766,15 @@ func void StoryHelper_LoadUriziel()
 func void StoryHelper_UrizielLoaded()
 {
 	//-------- was davor geschah --------
-	B_Kapitelwechsel (2);
+	B_Kapitelwechsel(2);
 	B_Story_PrepareRitual();
-	B_Kapitelwechsel (3);
+	B_Kapitelwechsel(3);
 	B_Story_GotoOrcGraveyard();
 	B_Story_BackFromOrcGraveyard();
 	B_Story_SentToNC();
 	B_Story_BringFoci();
 	B_Story_BroughtFoci();
-	B_KapitelWechsel (4);
+	B_KapitelWechsel(4);
 	B_Story_FMTaken();
 	B_Story_CordsPost();
 	B_Story_FindXardas();
@@ -790,19 +790,19 @@ func void StoryHelper_UrizielLoaded()
 	B_Story_FoundOrcSlave();
 	B_Story_CuredOrc();
 	B_Story_GotUluMulu();
-	B_Kapitelwechsel (5);
-	CreateInvItem(hero,CRW_ARMOR_H);
+	B_Kapitelwechsel(5);
+	CreateInvItem(hero, CRW_ARMOR_H);
 	EnteredTemple = TRUE;
 	B_Story_FoundUriziel();
 	B_Story_EncounteredHighPriest();
 	B_Story_ShowedUrizielToXardas();
 	B_Story_ExploreSunkenTower();
-	CreateInvItem(hero,ORE_ARMOR_M);
-	CreateInvItem(hero,ItArRuneTeleport1); // zu den Feuermagiern
+	CreateInvItem(hero, ORE_ARMOR_M);
+	CreateInvItem(hero, ItArRuneTeleport1); // zu den Feuermagiern
 	B_Story_LoadSword();
 
 	//-------- was neu geschieht --------
-	B_Kapitelwechsel (6);
+	B_Kapitelwechsel(6);
 	B_Story_UrizielLoaded();
 
 	//-------- Menü --------
@@ -815,4 +815,3 @@ func void StoryHelper_BACK5()
 {
 	Info_ClearChoices(StoryHelper_INFO5);
 };
-

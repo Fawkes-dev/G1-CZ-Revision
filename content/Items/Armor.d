@@ -1,5 +1,5 @@
 /*******************************************************************************************
-** Rüstungswert-Multiplikator                                            **
+** Rüstungswert - Multiplikator **
 *******************************************************************************************/
 const int ARMOR_VALUE_MULTIPLIER = 30; // wird mit Schutzwert gegen EDGE-Schaden multipliziert
 
@@ -38,7 +38,7 @@ const int VALUE_VLK_ARMOR_M = 500;
 const int VALUE_SFB_ARMOR_L = 250;
 
 /*******************************************************************************************
-** OldCamp                                               **
+** OldCamp **
 *******************************************************************************************/
 
 /******************************************************************************************/
@@ -174,7 +174,7 @@ instance STT_ARMOR_H(C_Item)
 };
 
 /******************************************************************************************/
-// Gardisten                                                    **
+// Gardisten **
 
 instance GRD_ARMOR_L(C_Item)
 {
@@ -272,7 +272,7 @@ instance GRD_ARMOR_H(C_Item)
 };
 
 /******************************************************************************************/
-// Erz-Barone                                                    **
+// Erz-Barone **
 
 instance EBR_ARMOR_M(C_Item)
 {
@@ -323,7 +323,7 @@ instance EBR_ARMOR_H(C_Item)
 	value = protection [PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
 
 	wear = WEAR_TORSO;
-  	ownerGuild = GIL_EBR;
+	ownerGuild = GIL_EBR;
 
 	owner = EBR_100_GOMEZ;
 	visual = "ebrh.3ds";
@@ -374,7 +374,7 @@ instance EBR_ARMOR_H2(C_Item)
 };
 
 /*******************************************************************************************
-** NewCamp                                             **
+** NewCamp **
 *******************************************************************************************/
 
 /******************************************************************************************/
@@ -606,7 +606,7 @@ instance SLD_ARMOR_H(C_Item)
 };
 
 /*******************************************************************************************
-** PsiCamp                                                    **
+** PsiCamp **
 *******************************************************************************************/
 
 /******************************************************************************************/
@@ -854,9 +854,9 @@ instance GUR_ARMOR_H(C_Item)
 	protection [PROT_MAGIC] = 4;
 	wear = WEAR_TORSO;
 
- 	value = protection [PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
+	value = protection [PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
 
-   ownerGuild = GIL_GUR;
+	ownerGuild = GIL_GUR;
 	visual = "gurh.3ds";
 	visual_change = "Hum_GURS_ARMOR.asc";
 	visual_skin = 0;
@@ -872,7 +872,7 @@ instance GUR_ARMOR_H(C_Item)
 };
 
 /*******************************************************************************************
-** MAGIER                                                   **
+** MAGIER **
 *******************************************************************************************/
 
 /******************************************************************************************/
@@ -892,7 +892,7 @@ instance KDF_ARMOR_L(C_Item)
 	protection [PROT_MAGIC] = 5;
 	wear = WEAR_TORSO;
 
- 	value = VALUE_KDF_ARMOR_L;
+	value = VALUE_KDF_ARMOR_L;
 
 	visual = "kdfl.3ds";
 	visual_change = "Hum_KDFL_ARMOR.asc";
@@ -1022,7 +1022,7 @@ instance DMB_ARMOR_M(C_Item)
 
 	wear = WEAR_TORSO;
 
- 	value = protection [PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
+	value = protection [PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
 
 	ownerGuild = GIL_DMB;
 
@@ -1041,7 +1041,7 @@ instance DMB_ARMOR_M(C_Item)
 };
 
 /*******************************************************************************************
-** Spezial-Rüstungen                                                                     **
+** Spezial - Rüstungen **
 *******************************************************************************************/
 
 // FIXME: hier fehlen noch die Visuals für die Erz-Rüstungen und das INV-Item für die CRAWLERPLATTEN-RÜSTUNG
@@ -1142,9 +1142,9 @@ instance ORE_ARMOR_H(C_Item)
 };
 
 /*******************************************************************************************
-** Der Richter                                                                       **
+** Der Richter **
 *******************************************************************************************/
-instance LAW_ARMOR (C_Item)
+instance LAW_ARMOR(C_Item)
 {
 	name = "Judge's Robe";
 
@@ -1177,7 +1177,7 @@ instance LAW_ARMOR (C_Item)
 };
 
 /*******************************************************************************************
-** Wache für Intro-Cutscene                                                          **
+** Wache für Intro - Cutscene **
 *******************************************************************************************/
 instance GRD_ARMOR_I(C_Item)
 {
@@ -1214,7 +1214,7 @@ instance GRD_ARMOR_I(C_Item)
 /*******************************************************************************************
 ** Nackte Babes
 *******************************************************************************************/
-instance BAB_ARMOR_NUDE (C_Item)
+instance BAB_ARMOR_NUDE(C_Item)
 {
 	name = "Nude Babe";
 	mainflag = ITEM_KAT_ARMOR;
@@ -1236,7 +1236,7 @@ instance BAB_ARMOR_NUDE (C_Item)
 };
 
 /******************************************************************************************/
-instance BAB_ARMOR_BIKINI (C_Item)
+instance BAB_ARMOR_BIKINI(C_Item)
 {
 	name = "Bikini Babe";
 	mainflag = ITEM_KAT_ARMOR;
@@ -1256,4 +1256,5 @@ instance BAB_ARMOR_BIKINI (C_Item)
 	visual_skin = 1;
 	material = MAT_LEATHER;
 };
+
 /******************************************************************************************/

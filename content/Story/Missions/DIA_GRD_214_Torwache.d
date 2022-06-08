@@ -49,13 +49,13 @@ func void DIA_Grd_214_Torwache_job_Info()
 {
 //	AI_Output(other,self,"DIA_Grd_214_Torwache_job_15_00"); //What do you do all day?
 //	AI_Output(other,self,"DIA_Grd_214_Torwache_job_15_00"); //Was machst du hier?
-	AI_Output(other,self,"DIA_Grd_214_Torwache_job_15_00"); //Co tady děláš?
+	AI_Output(other, self, "DIA_Grd_214_Torwache_job_15_00"); //Co tady děláš?
 //	AI_Output(self,other,"DIA_Grd_214_Torwache_job_07_01"); //I make sure no-one gets in if Gomez don't want 'em to.
 //	AI_Output(self,other,"DIA_Grd_214_Torwache_job_07_01"); //Ich passe auf, dass hier keiner reinkommt, der von Gomez nicht erwünscht ist.
-	AI_Output(self,other,"DIA_Grd_214_Torwache_job_07_01"); //Dávám pozor, aby se dovnitř nedostal nikdo, koho tam Gomez nechce.
+	AI_Output(self, other, "DIA_Grd_214_Torwache_job_07_01"); //Dávám pozor, aby se dovnitř nedostal nikdo, koho tam Gomez nechce.
 //	AI_Output(self,other,"DIA_Grd_214_Torwache_job_07_02"); //So don't make trouble when you're inside, or you won't be going nowhere.
 //	AI_Output(self,other,"DIA_Grd_214_Torwache_job_07_02"); //Also mach keinen Ärger, wenn du drin bist, sonst bist du das letzte Mal hier gewesen.
-	AI_Output(self,other,"DIA_Grd_214_Torwache_job_07_02"); //Když budeš uvnitř, nedělej problémy, jinak jsi tu byl naposledy.
+	AI_Output(self, other, "DIA_Grd_214_Torwache_job_07_02"); //Když budeš uvnitř, nedělej problémy, jinak jsi tu byl naposledy.
 };
 
 //-----------------------------------------------------------------
@@ -72,9 +72,9 @@ instance Grd_214_Torwache_SEETHORUS(C_INFO)
 
 func int Grd_214_Torwache_SEETHORUS_Condition()
 {
-	if ((!Npc_KnowsInfo(hero,GRD_216_TORWACHE_SEETHORUS))
-	&& ((CorKalom_BringMCQBalls == LOG_SUCCESS) || (Npc_HasItems(hero,ItAt_Crawlerqueen) >= 3))
-	&& (!Npc_KnowsInfo(hero,GRD_200_Thorus_GARDIST))
+	if ((!Npc_KnowsInfo(hero, GRD_216_TORWACHE_SEETHORUS))
+	&& ((CorKalom_BringMCQBalls == LOG_SUCCESS) || (Npc_HasItems(hero, ItAt_Crawlerqueen) >= 3))
+	&& (!Npc_KnowsInfo(hero, GRD_200_Thorus_GARDIST))
 	&& (Npc_GetTrueGuild(hero) == GIL_STT))
 	{
 		return 1;
@@ -87,13 +87,13 @@ func void Grd_214_Torwache_SEETHORUS_Info()
 {
 //	AI_Output(self,other,"Grd_214_Torwache_SEETHORUS_Info_07_01"); //Hey, I'm glad you're here. Thorus wants to see you!
 //	AI_Output(self,other,"Grd_214_Torwache_SEETHORUS_Info_07_01"); //Hey, gut dass du da bist. Thorus will dich sprechen!
-	AI_Output(self,other,"Grd_214_Torwache_SEETHORUS_Info_07_01"); //Hej, dobře že jsi tady. Thorus s tebou chce mluvit!
+	AI_Output(self, other, "Grd_214_Torwache_SEETHORUS_Info_07_01"); //Hej, dobře že jsi tady. Thorus s tebou chce mluvit!
 //	AI_Output(other,self,"Grd_214_Torwache_SEETHORUS_Info_15_02"); //What does he want?
 //	AI_Output(other,self,"Grd_214_Torwache_SEETHORUS_Info_15_02"); //Was will er denn?
-	AI_Output(other,self,"Grd_214_Torwache_SEETHORUS_Info_15_02"); //Co chce?
+	AI_Output(other, self, "Grd_214_Torwache_SEETHORUS_Info_15_02"); //Co chce?
 //	AI_Output(self,other,"Grd_214_Torwache_SEETHORUS_Info_07_03"); //I'm sure he'll tell you soon enough.
 //	AI_Output(self,other,"Grd_214_Torwache_SEETHORUS_Info_07_03"); //Das wird er dir schon selber sagen.
-	AI_Output(self,other,"Grd_214_Torwache_SEETHORUS_Info_07_03"); //Určitě ti to brzy sám řekne.
+	AI_Output(self, other, "Grd_214_Torwache_SEETHORUS_Info_07_03"); //Určitě ti to brzy sám řekne.
 };
 
 //-----------------------------------------------------------------
@@ -110,9 +110,9 @@ instance Grd_214_Torwache_NODUSTY(C_INFO)
 
 func int Grd_214_Torwache_NODUSTY_Condition()
 {
-	var C_NPC Dusty; Dusty = Hlp_GetNpc(Vlk_524_Dusty);
+	var C_Npc Dusty; Dusty = Hlp_GetNpc(Vlk_524_Dusty);
 	if ((Dusty.aivar[AIV_PARTYMEMBER] == TRUE)
-	&& (Npc_GetDistToNpc(hero,dusty) < 2000))
+	&& (Npc_GetDistToNpc(hero, dusty) < 2000))
 	{
 		return 1;
 	};
@@ -124,20 +124,20 @@ func void Grd_214_Torwache_NODUSTY_Info()
 {
 //	AI_Output(self,other,"Grd_214_Torwache_NODUSTY_Info_07_01"); //HEY, YOU!!! You wouldn't be trying to smuggle Dusty out o' here, would you?
 //	AI_Output(self,other,"Grd_214_Torwache_NODUSTY_Info_07_01"); //HEY DU!!! Versuchst wohl Dusty hier herauszuschmuggeln, was?
-	AI_Output(self,other,"Grd_214_Torwache_NODUSTY_Info_07_01"); //HEJ, TY!!! Nepokoušíš se odtud propašovat Dustyho, že ne?
+	AI_Output(self, other, "Grd_214_Torwache_NODUSTY_Info_07_01"); //HEJ, TY!!! Nepokoušíš se odtud propašovat Dustyho, že ne?
 //	AI_Output(other,self,"Grd_214_Torwache_NODUSTY_Info_15_02"); //We just wanted...
 //	AI_Output(other,self,"Grd_214_Torwache_NODUSTY_Info_15_02"); //Wir wollen doch nur...
-	AI_Output(other,self,"Grd_214_Torwache_NODUSTY_Info_15_02"); //Chceme přece jen...
+	AI_Output(other, self, "Grd_214_Torwache_NODUSTY_Info_15_02"); //Chceme přece jen...
 //	AI_Output(self,other,"Grd_214_Torwache_NODUSTY_Info_07_03"); //You won't be wanting anymore soon!
 //	AI_Output(self,other,"Grd_214_Torwache_NODUSTY_Info_07_03"); //Du willst gleich gar nichts mehr!
-	AI_Output(self,other,"Grd_214_Torwache_NODUSTY_Info_07_03"); //Zanedlouho nebudete už chtít nic!
+	AI_Output(self, other, "Grd_214_Torwache_NODUSTY_Info_07_03"); //Zanedlouho nebudete už chtít nic!
 
 	AI_StopProcessInfos(self);
-	Npc_SetTarget(self,other);
-	AI_StartState(self,ZS_Attack,1,"");
+	Npc_SetTarget(self, other);
+	AI_StartState(self, ZS_Attack, 1, "");
 
-	B_ExchangeRoutine(Vlk_524_Dusty,"start");
-	var C_NPC dusty; dusty = Hlp_GetNpc(Vlk_524_Dusty);
+	B_ExchangeRoutine(Vlk_524_Dusty, "start");
+	var C_Npc dusty; dusty = Hlp_GetNpc(Vlk_524_Dusty);
 	dusty.aivar[AIV_PARTYMEMBER] = FALSE;
 	dusty.flags = 0; // Immortal löschen
 };

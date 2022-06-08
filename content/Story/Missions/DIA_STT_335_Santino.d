@@ -43,8 +43,8 @@ func void STT_335_Santino_BUY_Info()
 {
 //	AI_Output(other,self,"STT_335_Santino_BUY_Info_15_01"); //Can I trade things with you?
 //	AI_Output(other,self,"STT_335_Santino_BUY_Info_15_01"); //Bei dir kann ich tauschen?
-	AI_Output(other,self,"STT_335_Santino_BUY_Info_15_01"); //Můžu s tebou obchodovat?
+	AI_Output(other, self, "STT_335_Santino_BUY_Info_15_01"); //Můžu s tebou obchodovat?
 //	AI_Output(self,other,"STT_335_Santino_BUY_Info_07_02"); //I have everything you need. What I don't have is no use to you anyway.
 //	AI_Output(self,other,"STT_335_Santino_BUY_Info_07_02"); //Ich habe alles, was du brauchst. Was ich nicht habe, willst du auch nicht.
-	AI_Output(self,other,"STT_335_Santino_BUY_Info_07_02"); //Mám všechno, co potřebuješ. A to, co nemám, taky nechceš.
+	AI_Output(self, other, "STT_335_Santino_BUY_Info_07_02"); //Mám všechno, co potřebuješ. A to, co nemám, taky nechceš.
 };

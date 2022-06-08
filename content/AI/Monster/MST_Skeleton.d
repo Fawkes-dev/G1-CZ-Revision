@@ -1,8 +1,8 @@
 /*************************************************************************
-** Skeleton Prototype **
+** Skeleton prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_Skeleton(C_Npc)
+prototype Mst_Default_Skeleton(C_Npc)
 {
 	name = "Skeleton";
 	guild = GIL_SKELETON;
@@ -51,62 +51,66 @@ PROTOTYPE Mst_Default_Skeleton(C_Npc)
 
 	//aivar[AIV_MM_RestStart] = OnlyRoutine;
 };
+
 //-------------------------------------------------------------
 func void Set_Skeleton_Visuals()
 {
-	Mdl_SetVisual(self,"HumanS.mds");
-	Mdl_ApplyOverlayMds(self,"humans_skeleton.mds");
+	Mdl_SetVisual(self, "HumanS.mds");
+	Mdl_ApplyOverlayMDS(self, "humans_skeleton.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Ske_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Ske_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
+
 //-------------------------------------------------------------
 func void Set_SkeletonWarrior_Visuals()
 {
-	Mdl_SetVisual(self,"HumanS.mds");
-	Mdl_ApplyOverlayMds(self,"humans_skeleton.mds");
+	Mdl_SetVisual(self, "HumanS.mds");
+	Mdl_ApplyOverlayMDS(self, "humans_skeleton.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Ske_Body3", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Ske_Body3", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
+
 //-------------------------------------------------------------
 func void Set_SkeletonScout_Visuals()
 {
-	Mdl_SetVisual(self,"HumanS.mds");
-	Mdl_ApplyOverlayMds(self,"humans_skeleton.mds");
+	Mdl_SetVisual(self, "HumanS.mds");
+	Mdl_ApplyOverlayMDS(self, "humans_skeleton.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Ske_Body2", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Ske_Body2", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
+
 //-------------------------------------------------------------
 func void Set_SkeletonMage_Visuals()
 {
-	Mdl_SetVisual(self,"HumanS.mds");
-	Mdl_ApplyOverlayMds(self,"humans_skeleton.mds");
-	Mdl_ApplyOverlayMds(self,"humans_skeleton_fly.mds");
+	Mdl_SetVisual(self, "HumanS.mds");
+	Mdl_ApplyOverlayMDS(self, "humans_skeleton.mds");
+	Mdl_ApplyOverlayMDS(self, "humans_skeleton_fly.mds");
 
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Ske_Fly_Body", 01, DEFAULT, "", 01,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Ske_Fly_Body", 01, DEFAULT, "", 01, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Skeleton    **
+** Skeleton **
 *************************************************************************/
 
-instance Skeleton (Mst_Default_Skeleton)
+instance Skeleton(Mst_Default_Skeleton)
 {
 	aivar[AIV_MM_REAL_ID] = ID_SKELETON;
 	Set_Skeleton_Visuals();
-	Npc_SetToFightMode (self,ItMw_1H_Sword_Old_01);
+	Npc_SetToFightMode(self, ItMw_1H_Sword_Old_01);
 	attribute[ATR_STRENGTH] = attribute[ATR_STRENGTH] + 10; //SN: da Waffe nicht zum Schaden addiert wird!
 };
 
 /*************************************************************************
-** SkeletonSH - für die Gruft unter den Stonehenge (SH) **
+** SkeletonSH - für die Gruft unter den Stonehenge(SH) **
 *************************************************************************/
 
-instance SkeletonSH (Mst_Default_Skeleton)
+instance SkeletonSH(Mst_Default_Skeleton)
 {
 	aivar[AIV_MM_REAL_ID] = ID_SKELETON;
 	Set_Skeleton_Visuals();
-	Npc_SetToFightMode (self,ItMw_1H_Axe_Old_01);
+	Npc_SetToFightMode(self, ItMw_1H_Axe_Old_01);
 
 	attribute[ATR_STRENGTH] = attribute[ATR_STRENGTH] + 10; //SN: da Waffe nicht zum Schaden addiert wird!
 
@@ -122,28 +126,27 @@ instance SkeletonSH (Mst_Default_Skeleton)
 	aivar[AIV_MM_DrohTime] = 0;
 	aivar[AIV_MM_FollowTime] = 5;
 	aivar[AIV_MM_FollowInWater] = FALSE;
-
 };
 
 /*************************************************************************
-** Skeleton   Scout **
+** Skeleton Scout **
 *************************************************************************/
 
-instance SkeletonScout (Mst_Default_Skeleton)
+instance SkeletonScout(Mst_Default_Skeleton)
 {
 	name = "Skeleton Scout";
 	aivar[AIV_MM_REAL_ID] = ID_SKELETONSCOUT;
 	Set_SkeletonScout_Visuals();
-	Npc_SetToFightMode (self,ItMw_1H_Scythe_01);
+	Npc_SetToFightMode(self, ItMw_1H_Scythe_01);
 
 	attribute[ATR_STRENGTH] = attribute[ATR_STRENGTH] + 10; //SN: da Waffe nicht zum Schaden addiert wird!
 };
 
 /*************************************************************************
-** Skeleton  Warrior **
+** Skeleton Warrior **
 *************************************************************************/
 
-instance SkeletonWarrior (Mst_Default_Skeleton)
+instance SkeletonWarrior(Mst_Default_Skeleton)
 {
 	name = "Skeleton Warrior";
 	Set_SkeletonWarrior_Visuals();
@@ -151,15 +154,15 @@ instance SkeletonWarrior (Mst_Default_Skeleton)
 	attribute [ATR_STRENGTH] = 120;
 	aivar [AIV_MM_REAL_ID] = ID_SKELETONWARRIOR;
 
-	Npc_SetToFightMode (self,ItMw_1H_Axe_Old_01);
+	Npc_SetToFightMode(self, ItMw_1H_Axe_Old_01);
 	attribute[ATR_STRENGTH] = attribute[ATR_STRENGTH] + 10; //SN: da Waffe nicht zum Schaden addiert wird!
 };
 
 /*************************************************************************
-** Skeleton   Mage **
+** Skeleton Mage **
 *************************************************************************/
 
-instance SkeletonMage (Mst_Default_Skeleton)
+instance SkeletonMage(Mst_Default_Skeleton)
 {
 	aivar[AIV_MM_REAL_ID] = ID_SKELETONMAGE;
 	Set_SkeletonMage_Visuals();
@@ -176,16 +179,15 @@ instance SkeletonMage (Mst_Default_Skeleton)
 
 	fight_tactic = FAI_HUMAN_MAGE;
 
-	CreateInvItem(self,ItArRuneThunderbolt);
-	CreateInvItems(self,ItArScrollSummonSkeletons, 5);
-
+	CreateInvItem(self, ItArRuneThunderbolt);
+	CreateInvItems(self, ItArScrollSummonSkeletons, 5);
 };
 
 /*************************************************************************
-** Skeleton   Mage im Nebelturm **
+** Skeleton Mage im Nebelturm **
 *************************************************************************/
 
-instance SkeletonMage_fogtower (Mst_Default_Skeleton)
+instance SkeletonMage_fogtower(Mst_Default_Skeleton)
 {
 	aivar[AIV_MM_REAL_ID] = ID_SKELETONMAGE;
 	Set_SkeletonMage_Visuals();
@@ -202,23 +204,23 @@ instance SkeletonMage_fogtower (Mst_Default_Skeleton)
 
 	fight_tactic = FAI_HUMAN_MAGE;
 
-	CreateInvItem(self,ItArRuneThunderbolt);
-	CreateInvItems(self,ItArScrollSummonSkeletons, 5);
-	CreateInvItem(self,theriddle1);
+	CreateInvItem(self, ItArRuneThunderbolt);
+	CreateInvItems(self, ItArScrollSummonSkeletons, 5);
+	CreateInvItem(self, theriddle1);
 };
 
 /*************************************************************************
-** Summoned Skeleton    **
+** Summoned Skeleton **
 *************************************************************************/
 
-instance SummonedByPC_Skeleton (Mst_Default_Skeleton)
+instance SummonedByPC_Skeleton(Mst_Default_Skeleton)
 {
 	aivar[AIV_MM_REAL_ID] = ID_SKELETON;
 //-----------------------------------------
 	Set_Skeleton_Visuals();
 
 //-----------------------------------------
-	Npc_SetToFightMode (self,ItMw_1H_Sword_Old_01);
+	Npc_SetToFightMode(self, ItMw_1H_Sword_Old_01);
 	attribute[ATR_STRENGTH] = attribute[ATR_STRENGTH] + 10; //SN: da Waffe nicht zum Schaden addiert wird!
 	senses = SENSE_HEAR | SENSE_SEE;
 	start_aistate = ZS_MM_SummonedByPC;
@@ -227,12 +229,12 @@ instance SummonedByPC_Skeleton (Mst_Default_Skeleton)
 	self.aivar[AIV_MM_PARTYMEMBER] = TRUE;
 };
 
-instance SummonedByNPC_Skeleton (Mst_Default_Skeleton)
+instance SummonedByNPC_Skeleton(Mst_Default_Skeleton)
 {
 	aivar[AIV_MM_REAL_ID] = ID_SKELETON;
 //-----------------------------------------
 	Set_Skeleton_Visuals();
-	Npc_SetToFightMode (self,ItMw_1H_Sword_Old_01);
+	Npc_SetToFightMode(self, ItMw_1H_Sword_Old_01);
 	attribute[ATR_STRENGTH] = attribute[ATR_STRENGTH] + 10; //SN: da Waffe nicht zum Schaden addiert wird!
 //-----------------------------------------
 	start_aistate = ZS_MM_Summoned;
@@ -242,7 +244,7 @@ instance SummonedByNPC_Skeleton (Mst_Default_Skeleton)
 ** Summoned Skeleton Warrior **
 *************************************************************************/
 
-instance SummonedByPC_SkeletonWarrior (Mst_Default_Skeleton)
+instance SummonedByPC_SkeletonWarrior(Mst_Default_Skeleton)
 {
 	name = "Skeleton Warrior";
 	level = 30;
@@ -253,7 +255,7 @@ instance SummonedByPC_SkeletonWarrior (Mst_Default_Skeleton)
 	Set_SkeletonWarrior_Visuals();
 
 //------------------------------------------
-	Npc_SetToFightMode (self,ItMw_1H_Axe_Old_01);
+	Npc_SetToFightMode(self, ItMw_1H_Axe_Old_01);
 	attribute[ATR_STRENGTH] = attribute[ATR_STRENGTH] + 10; //SN: da Waffe nicht zum Schaden addiert wird!
 	start_aistate = ZS_MM_SummonedByPC;
 	self.aivar[AIV_MM_DistToMaster] = 300;
@@ -261,7 +263,7 @@ instance SummonedByPC_SkeletonWarrior (Mst_Default_Skeleton)
 	self.aivar[AIV_MM_PARTYMEMBER] = TRUE;
 };
 
-instance SummonedByNPC_SkeletonWarrior (Mst_Default_Skeleton)
+instance SummonedByNPC_SkeletonWarrior(Mst_Default_Skeleton)
 {
 	name = "Skeleton Warrior";
 	level = 30;
@@ -269,9 +271,8 @@ instance SummonedByNPC_SkeletonWarrior (Mst_Default_Skeleton)
 	aivar[AIV_MM_REAL_ID] = ID_SKELETONWARRIOR;
 //------------------------------------------
 	Set_SkeletonWarrior_Visuals();
-	Npc_SetToFightMode (self,ItMw_1H_Axe_Old_01);
+	Npc_SetToFightMode(self, ItMw_1H_Axe_Old_01);
 	attribute[ATR_STRENGTH] = attribute[ATR_STRENGTH] + 10; //SN: da Waffe nicht zum Schaden addiert wird!
 //------------------------------------------
 	start_aistate = ZS_MM_Summoned;
 };
-

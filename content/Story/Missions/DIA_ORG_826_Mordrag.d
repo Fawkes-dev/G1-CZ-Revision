@@ -627,7 +627,7 @@ func int Org_826_Mordrag_GotoKalomNOW_Condition()
 	if ((Npc_GetTrueGuild(other) == GIL_ORG)
 	&& (Npc_KnowsInfo(hero,ORG_801_Lares_GotoKalom)))
 	{
-		return 1;;
+		return 1;
 	};
 
 	return 0;

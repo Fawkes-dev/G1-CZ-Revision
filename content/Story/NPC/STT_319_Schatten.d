@@ -1,4 +1,4 @@
-instance STT_319_Schatten (Npc_Default)
+instance STT_319_Schatten(Npc_Default)
 {
 	//-------- primary data --------
 	name = NAME_Schatten;
@@ -19,26 +19,26 @@ instance STT_319_Schatten (Npc_Default)
 
 	//-------- visuals --------
 	// 			animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Relaxed.mds");
-	//			body mesh     ,bdytex,skin,head mesh     ,headtex,teethtex,ruestung
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 0, 1,"Hum_Head_Thief", 57,  2, STT_ARMOR_M);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Relaxed.mds");
+	//			body mesh ,bdytex,skin,head mesh ,headtex,teethtex,ruestung
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 0, 1, "Hum_Head_Thief", 57, 2, STT_ARMOR_M);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
 	//-------- Talente --------
 
 	////Npc_SetTalentSkill(self,NPC_TALENT_BOW,1);
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,1);
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 1);
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1H_Sword_Short_03);
-	EquipItem(self,ItRw_Bow_Small_04);
-	CreateInvItems(self,ItAmArrow, 14);
+	EquipItem(self, ItMw_1H_Sword_Short_03);
+	EquipItem(self, ItRw_Bow_Small_04);
+	CreateInvItems(self, ItAmArrow, 14);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_319;
@@ -46,8 +46,7 @@ instance STT_319_Schatten (Npc_Default)
 
 func void Rtn_start_319()
 {
-	TA_Sleep (22,30,06,30,"OCR_HUT_9");
-	TA_SitAround (06,30,10,30,"OCR_OUTSIDE_HUT_9");
-	TA_StandAround (10,30,22,30,"OCR_OUTSIDE_HUT_9");
+	TA_Sleep(22, 30, 06, 30, "OCR_HUT_9");
+	TA_SitAround(06, 30, 10, 30, "OCR_OUTSIDE_HUT_9");
+	TA_StandAround(10, 30, 22, 30, "OCR_OUTSIDE_HUT_9");
 };
-

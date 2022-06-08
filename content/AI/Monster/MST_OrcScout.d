@@ -1,12 +1,12 @@
 /*************************************************************************
-** Orc SCOUT Prototype **
+** Orc SCOUT prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_OrcScout(C_Npc)
+prototype Mst_Default_OrcScout(C_Npc)
 {
 	name = "Orc Hunter";
 	guild = GIL_ORCSCOUT;
-	npctype = NPCTYPE_GUARD;
+	npctype = NpcType_Guard;
 	voice = 17;
 	level = 20;
 //----------------------------------------------------------
@@ -53,32 +53,33 @@ PROTOTYPE Mst_Default_OrcScout(C_Npc)
 //-------------------------------------------------------------
 	start_aistate = ZS_GuardPatrol;
 };
+
 //-------------------------------------------------------------
 func void Set_OrcScout_Visuals()
 {
-	Mdl_SetVisual(self,"Orc.mds");
+	Mdl_SetVisual(self, "Orc.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Orc_BodyScout",DEFAULT, DEFAULT, "Orc_HeadWarrior", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Orc_BodyScout", DEFAULT, DEFAULT, "Orc_HeadWarrior", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Orc Scout    **
+** Orc Scout **
 *************************************************************************/
 
 // in den Instanz-Scripten bitte NUR die Werte eintragen, die vom Prototyp abweichen sollen!
 
-instance OrcScout (Mst_Default_OrcScout)
+instance OrcScout(Mst_Default_OrcScout)
 {
 	Set_OrcScout_Visuals();
-	EquipItem(self,ItMw2hOrcSword01);
+	EquipItem(self, ItMw2hOrcSword01);
 	//EquipItem(self,ItRw_Crossbow_01);
 	//CreateInvItems(self,ItAmBolt, 30);
 };
 
 /*************************************************************************
-** Orc_City - Essender Ork   **
+** Orc_City - Essender Ork **
 *************************************************************************/
-instance OrcPeasantEatAndDrink (Mst_Default_OrcScout)
+instance OrcPeasantEatAndDrink(Mst_Default_OrcScout)
 {
 	//-------- general data --------
 	guild = GIL_ORCSCOUT;
@@ -88,20 +89,19 @@ instance OrcPeasantEatAndDrink (Mst_Default_OrcScout)
 	Set_OrcScout_Visuals();
 
 	//-------- inventory --------
-	CreateInvItem(self,ItMw2hOrcSword01);
+	CreateInvItem(self, ItMw2hOrcSword01);
 
 	//-------- ai --------
 	start_aistate = ZS_Orc_EatAndDrink;
-
 };
 
 /*************************************************************************
-** Graveyard Orc Scout    **
+** Graveyard Orc Scout **
 *************************************************************************/
 
 // in den Instanz-Scripten bitte NUR die Werte eintragen, die vom Prototyp abweichen sollen!
 
-instance OrcScoutGYD (Mst_Default_OrcScout)
+instance OrcScoutGYD(Mst_Default_OrcScout)
 {
 	name = "Orc Scout";
 	level = 18;
@@ -115,9 +115,8 @@ instance OrcScoutGYD (Mst_Default_OrcScout)
 	aivar[AIV_MM_FollowTime] = 10;
 
 	start_aistate = ZS_MM_AllScheduler; // Monster-AI
-	self.aivar[AIV_MM_RoamStart]= OnlyRoutine;
+	self.aivar[AIV_MM_RoamStart] = OnlyRoutine;
 
 	Set_OrcScout_Visuals();
-	EquipItem(self,ItMw2hOrcSword01);
+	EquipItem(self, ItMw2hOrcSword01);
 };
-

@@ -1,8 +1,8 @@
 /*************************************************************************
-** Zombie Prototype **
+** Zombie prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_Zombie(C_Npc)
+prototype Mst_Default_Zombie(C_Npc)
 {
 	name = "Zombie";
 	guild = GIL_ZOMBIE;
@@ -51,72 +51,76 @@ PROTOTYPE Mst_Default_Zombie(C_Npc)
 
 	aivar[AIV_MM_RestStart] = OnlyRoutine;
 };
+
 //-------------------------------------------------------------
 // Zwei Hautfarben mit jeweils zwei Gesichtstexturen
 //-------------------------------------------------------------
 func void Set_Zombie_Visuals()
 {
-	Mdl_SetVisual(self,"Zombie.mds");
+	Mdl_SetVisual(self, "Zombie.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Zom_Body", 0, 0, "Zom_Head", 0,  3, -1);
+	Mdl_SetVisualBody(self, "Zom_Body", 0, 0, "Zom_Head", 0, 3, -1);
 };
+
 //-------------------------------------------------------------
 func void Set_Zombie2_Visuals()
 {
-	Mdl_SetVisual(self,"Zombie.mds");
+	Mdl_SetVisual(self, "Zombie.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Zom_Body", 0, 0, "Zom_Head", 1,  3, -1);
+	Mdl_SetVisualBody(self, "Zom_Body", 0, 0, "Zom_Head", 1, 3, -1);
 };
+
 //-------------------------------------------------------------
 func void Set_Zombie3_Visuals()
 {
-	Mdl_SetVisual(self,"Zombie.mds");
+	Mdl_SetVisual(self, "Zombie.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Zom_Body", 0, 1, "Zom_Head", 0,  3, -1);
+	Mdl_SetVisualBody(self, "Zom_Body", 0, 1, "Zom_Head", 0, 3, -1);
 };
+
 //-------------------------------------------------------------
 func void Set_Zombie4_Visuals()
 {
-	Mdl_SetVisual(self,"Zombie.mds");
+	Mdl_SetVisual(self, "Zombie.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Zom_Body", 0, 1, "Zom_Head", 1,  3, -1);
+	Mdl_SetVisualBody(self, "Zom_Body", 0, 1, "Zom_Head", 1, 3, -1);
 };
 
 /*************************************************************************
-** Zombie    **
+** Zombie **
 *************************************************************************/
 
-instance Zombie (Mst_Default_Zombie)
+instance Zombie(Mst_Default_Zombie)
 {
 	Set_Zombie_Visuals();
 	Npc_SetToFistMode(self);
 };
 
 /*************************************************************************
-** Zombie2   **
+** Zombie2 **
 *************************************************************************/
 
-instance Zombie2 (Mst_Default_Zombie)
+instance Zombie2(Mst_Default_Zombie)
 {
 	Set_Zombie2_Visuals();
 	Npc_SetToFistMode(self);
 };
 
 /*************************************************************************
-** Zombie3   **
+** Zombie3 **
 *************************************************************************/
 
-instance Zombie3 (Mst_Default_Zombie)
+instance Zombie3(Mst_Default_Zombie)
 {
 	Set_Zombie3_Visuals();
 	Npc_SetToFistMode(self);
 };
 
 /*************************************************************************
-** Zombie4   **
+** Zombie4 **
 *************************************************************************/
 
-instance Zombie4 (Mst_Default_Zombie)
+instance Zombie4(Mst_Default_Zombie)
 {
 	Set_Zombie4_Visuals();
 	Npc_SetToFistMode(self);
@@ -126,7 +130,7 @@ instance Zombie4 (Mst_Default_Zombie)
 ** ZombieOrkHunter **
 *************************************************************************/
 // SN: Endgegner vor Fokus 5 unter dem Steinkreis (Ende Kapitel 3)
-instance ZombieTheKeeper (Mst_Default_Zombie)
+instance ZombieTheKeeper(Mst_Default_Zombie)
 {
 	name = "The Guardian";
 	level = 150; // für XP!
@@ -150,6 +154,6 @@ instance ZombieTheKeeper (Mst_Default_Zombie)
 	aivar[AIV_MM_FollowTime] = 10;
 	aivar[AIV_MM_FollowInWater] = FALSE;
 
-	CreateInvItem(self,ItMi_OrcTalisman);
-	CreateInvItem(self,ItKe_Focus5);
+	CreateInvItem(self, ItMi_OrcTalisman);
+	CreateInvItem(self, ItKe_Focus5);
 };

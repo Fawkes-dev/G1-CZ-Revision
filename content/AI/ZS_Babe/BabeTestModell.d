@@ -1,4 +1,4 @@
-prototype TestBabe (C_NPC)
+prototype TestBabe(C_NPC)
 {
 	name = "Babe";
 	guild = GIL_NONE;
@@ -17,12 +17,12 @@ prototype TestBabe (C_NPC)
 	protection [PROT_MAGIC] = 5;
 
 	attribute[ATR_HITPOINTS_MAX] = 5;
-	attribute[ATR_HITPOINTS]  = 5;
+	attribute[ATR_HITPOINTS] = 5;
 
 	// talents = 0;
 
 	//-------- senses --------
-	senses = SENSE_HEAR | SENSE_SEE ;
+	senses = SENSE_HEAR | SENSE_SEE;
 	senses_range = 4000;
 
 	//Npc_LearnTalent (self,TAL_SNEAK);
@@ -33,17 +33,16 @@ prototype TestBabe (C_NPC)
 	//Npc_LearnTalent (self,TAL_HEAL);
 	//Npc_LearnTalent (self,TAL_MANA);
 	//Npc_LearnTalent (self,TAL_IRONWILL);
-
 };
 
-instance ABabeTestmodell (TestBabe)
+instance ABabeTestmodell(TestBabe)
 {
 	//-------- primary data --------
 
 	name = "ATestmodell";
 	guild = GIL_NONE;
 	level = 10;
-	voice = 11;//4
+	voice = 11; //4
 	id = 3001;
 
 	//-------- abilities --------
@@ -56,14 +55,14 @@ instance ABabeTestmodell (TestBabe)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"BABE.MDS");
+	Mdl_SetVisual(self, "BABE.MDS");
 	//				body mesh, head mesh, hairmesh, face-tex, hair-tex, skin
-	Mdl_SetVisualBody(self,"Bab_body_Naked0",DEFAULT, DEFAULT ,"Bab_Head_Hair1", DEFAULT ,  DEFAULT,-1);
+	Mdl_SetVisualBody(self, "Bab_body_Naked0", DEFAULT, DEFAULT, "Bab_Head_Hair1", DEFAULT, DEFAULT, -1);
 
 	//Npc_LearnFightTalent (self,TAL_1H_SWORD2);
 	//Npc_LearnTalent (self,TAL_MUSHROOMS);
 
-	Npc_SetAttitude(self,ATT_HOSTILE);
+	Npc_SetAttitude(self, ATT_HOSTILE);
 
 	//-------- inventory --------
 

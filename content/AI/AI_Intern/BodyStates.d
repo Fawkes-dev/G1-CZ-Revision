@@ -57,9 +57,9 @@ const int BS_MOD_CONTROLLED = 2048;
 const int BS_MOD_TRANSFORMED = 4096;
 
 // Mobsi-Schema-Namen, hier möglichen BodyState zugeordnet
-CONST STRING MOB_SIT = "BENCH,CHAIR,GROUND,THRONE";
-CONST STRING MOB_LIE = "BED,BEDHIGH,BEDLOW";
-CONST STRING MOB_CLIMB = "CLIMB,LADDER,RANKE";
-CONST STRING MOB_NOTINTERRUPTABLE = "BARRELO,DOOR,HERB,IDOL,LEVER,LOVEBED,PAN,SECRETDOOR,SMOKE,TOUCHPLATE,TURNSWITCH,VWHEEL";
+const string MOB_SIT = "BENCH,CHAIR,GROUND,THRONE";
+const string MOB_LIE = "BED,BEDHIGH,BEDLOW";
+const string MOB_CLIMB = "CLIMB,LADDER,RANKE";
+const string MOB_NOTINTERRUPTABLE = "BARRELO,DOOR,HERB,IDOL,LEVER,LOVEBED,PAN,SECRETDOOR,SMOKE,TOUCHPLATE,TURNSWITCH,VWHEEL";
 // alle Mobs, die hier nicht sind, sind interruptable: Backpack, Bellow, Book, Bsanvil, Bscool, Bsfire, Bssharp, Cauldron,Chestbig,Chestsmall,Drum,Fireplace, Grave,LAB,
 // Ore, Pillar, Priestgrave, Repair, Ropeway, Sportal,STOMPER,STONEMILL

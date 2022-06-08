@@ -1,8 +1,8 @@
 /*************************************************************************
-** Scavenger Prototype **
+** Scavenger prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_Scavenger(C_Npc)
+prototype Mst_Default_Scavenger(C_Npc)
 {
 	name = "Scavenger";
 	guild = GIL_SCAVENGER;
@@ -51,36 +51,37 @@ PROTOTYPE Mst_Default_Scavenger(C_Npc)
 
 	aivar[AIV_MM_SleepStart] = 22;
 	aivar[AIV_MM_SleepEnd] = 6;
-	aivar[AIV_MM_EatGroundStart]= 6;
+	aivar[AIV_MM_EatGroundStart] = 6;
 	aivar[AIV_MM_EatGroundEnd] = 22;
 };
+
 //---------------------------------------------------------
 func void Set_Scavenger_Visuals()
 {
-	Mdl_SetVisual(self,"Scavenger.mds");
+	Mdl_SetVisual(self, "Scavenger.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Sca_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Sca_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Scavenger    **
+** Scavenger **
 *************************************************************************/
 
 // in den Instanz-Scripten bitte NUR die Werte eintragen, die vom Prototyp abweichen sollen!
 
-instance Scavenger (Mst_Default_Scavenger)
+instance Scavenger(Mst_Default_Scavenger)
 {
 	Set_Scavenger_Visuals();
 	Npc_SetToFistMode(self);
 
-	CreateInvItems(self,ItFoMuttonRaw, 2);
+	CreateInvItems(self, ItFoMuttonRaw, 2);
 };
 
 /*************************************************************************
-** junger Scavenger (für Spielstart)  **
+** junger Scavenger(für Spielstart) **
 *************************************************************************/
 
-instance YScavenger (Mst_Default_Scavenger)
+instance YScavenger(Mst_Default_Scavenger)
 {
 	name = "Juvenile Scavenger";
 	level = 4;
@@ -98,10 +99,9 @@ instance YScavenger (Mst_Default_Scavenger)
 	fight_tactic = FAI_MONSTER_COWARD;
 
 	Set_Scavenger_Visuals();
-	Mdl_SetModelScale(self,0.9, 0.9, 0.9);
+	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
 
 	Npc_SetToFistMode(self);
 
-	CreateInvItems(self,ItFoMuttonRaw,1);
+	CreateInvItems(self, ItFoMuttonRaw, 1);
 };
-

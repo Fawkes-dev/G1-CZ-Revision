@@ -1,4 +1,4 @@
-instance VLK_511_Herek (Npc_Default)
+instance VLK_511_Herek(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -21,40 +21,39 @@ instance VLK_511_Herek (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Tired.mds");
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Tired.mds");
 	//				body mesh, head mesh, 70hairmesh, face-tex, hair-tex, skin
-	Mdl_SetVisualBody(self,"hum_body_Naked0",2,1,"Hum_Head_Pony", 105,  3, VLK_ARMOR_L);
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 2, 1, "Hum_Head_Pony", 105, 3, VLK_ARMOR_L);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
-		self.aivar[AIV_IMPORTANT] = TRUE;
+	self.aivar[AIV_IMPORTANT] = TRUE;
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
-	//-------- Talents  --------
+	//-------- Talents --------
 
 	////Npc_SetTalentSkill(self,NPC_TALENT_1H,1);
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1h_Nailmace_01);
-	CreateInvItem(self,ItMwPickaxe);
-	CreateInvItem(self,ItMi_Stuff_Barbknife_01);
-	CreateInvItems(self,ItMinugget,4);
-	CreateInvItem(self,ItLsTorch);
+	EquipItem(self, ItMw_1h_Nailmace_01);
+	CreateInvItem(self, ItMwPickaxe);
+	CreateInvItem(self, ItMi_Stuff_Barbknife_01);
+	CreateInvItems(self, ItMinugget, 4);
+	CreateInvItem(self, ItLsTorch);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_511;
-	};
+};
 
 func void Rtn_start_511()
 {
-	TA_Sleep (22,00,07,00,"OCR_HUT_62");
-	TA_Boss (07,00,08,00,"OCR_OUTSIDE_HUT_62");
-	TA_Smalltalk (08,00,12,00,"OCR_OUTSIDE_HUT_63_SMALLTALK");
-	TA_Smith_Sharp (12,00,17,00,"OCR_OUTSIDE_HUT_63_SMALLTALK");
-	TA_SitAround    (17,00,22,00,"OCR_OUTSIDE_HUT_62");
+	TA_Sleep(22, 00, 07, 00, "OCR_HUT_62");
+	TA_Boss(07, 00, 08, 00, "OCR_OUTSIDE_HUT_62");
+	TA_Smalltalk(08, 00, 12, 00, "OCR_OUTSIDE_HUT_63_SMALLTALK");
+	TA_Smith_Sharp(12, 00, 17, 00, "OCR_OUTSIDE_HUT_63_SMALLTALK");
+	TA_SitAround(17, 00, 22, 00, "OCR_OUTSIDE_HUT_62");
 };
-

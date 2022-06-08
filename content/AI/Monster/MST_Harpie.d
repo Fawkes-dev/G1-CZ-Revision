@@ -1,8 +1,8 @@
 /*************************************************************************
-** Bloodfly Prototype **
+** Bloodfly prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_Harpie(C_Npc)
+prototype Mst_Default_Harpie(C_Npc)
 {
 	name = "Harpy";
 	guild = GIL_DEMON;
@@ -51,21 +51,21 @@ PROTOTYPE Mst_Default_Harpie(C_Npc)
 
 	aivar[AIV_MM_RestStart] = OnlyRoutine;
 };
+
 //---------------------------------------------------------------
 func void Set_Harpie_Visuals()
 {
-	Mdl_SetVisual(self,"Harpie.mds");
+	Mdl_SetVisual(self, "Harpie.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Har_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Har_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Harpie    **
+** Harpie **
 *************************************************************************/
 
-instance Harpie (Mst_Default_Harpie)
+instance Harpie(Mst_Default_Harpie)
 {
 	Set_Harpie_Visuals();
 	Npc_SetToFistMode(self);
-
 };

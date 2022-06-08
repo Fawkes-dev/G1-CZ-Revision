@@ -5,11 +5,10 @@
 // SPL_SENDSTOP = 3; // Beende Zauber ohne Effekt
 // SPL_NEXTLEVEL = 4; // setze den Spruch auf den nächsten Level
 
-func int Spell_Logic_Firebolt (var int manaInvested)
+func int Spell_Logic_Firebolt(var int manaInvested)
 {
-	PrintDebugNpc (PD_MAGIC, "Spell_Logic_Firebolt");
+	PrintDebugNpc(PD_MAGIC, "Spell_Logic_Firebolt");
 
-	if ( manaInvested >= SPL_SENDCAST_FIREBOLT ) { return SPL_SENDCAST; };
-
+	if (manaInvested >= SPL_SENDCAST_FIREBOLT) { return SPL_SENDCAST; };
 	return SPL_RECEIVEINVEST;
 };

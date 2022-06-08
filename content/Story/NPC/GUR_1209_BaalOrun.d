@@ -1,4 +1,4 @@
-instance GUR_1209_BaalOrun (Npc_Default)
+instance GUR_1209_BaalOrun(Npc_Default)
 {
 	//-------- primary data --------
 	name = "Baal Orun";
@@ -19,20 +19,20 @@ instance GUR_1209_BaalOrun (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Mage.mds");
-	//			body mesh     ,bdytex,skin,head mesh     ,headtex,teethtex,ruestung
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 1, 1 ,"Hum_Head_Psionic", 20,  1, GUR_ARMOR_M);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Mage.mds");
+	//			body mesh ,bdytex,skin,head mesh ,headtex,teethtex,ruestung
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 1, 1, "Hum_Head_Psionic", 20, 1, GUR_ARMOR_M);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,-1);
+	Mdl_SetModelFatness(self, -1);
 
 	//-------- Talente --------
-	Npc_SetTalentSkill(self,NPC_TALENT_MAGE, 6);
+	Npc_SetTalentSkill(self, NPC_TALENT_MAGE, 6);
 
 	//-------- inventory --------
 
-	EquipItem(self,Oruns_Keule);
+	EquipItem(self, Oruns_Keule);
 	////CreateInvItems(self,ItMiJoint, 5);
 
 	//-------------Daily Routine-------------
@@ -42,6 +42,6 @@ instance GUR_1209_BaalOrun (Npc_Default)
 
 func void Rtn_start_1209()
 {
-	TA_Boss (07,00,00,00,"PSI_PATH_2_6");
-	TA_Sleep (00,00,07,00,"PSI_TREE_IN");
+	TA_Boss(07, 00, 00, 00, "PSI_PATH_2_6");
+	TA_Sleep(00, 00, 07, 00, "PSI_TREE_IN");
 };

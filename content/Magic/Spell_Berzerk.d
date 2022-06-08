@@ -5,19 +5,19 @@
 // SPL_SENDSTOP = 3; // Beende Zauber ohne Effekt
 // SPL_NEXTLEVEL = 4; // setze den Spruch auf den nächsten Level
 
-func int Spell_Logic_Berzerk (var int manaInvested)
+func int Spell_Logic_Berzerk(var int manaInvested)
 {
-	PrintDebugNpc (PD_MAGIC, "Spell_Logic_Berzerk");
+	PrintDebugNpc(PD_MAGIC, "Spell_Logic_Berzerk");
 
 	// Immunität für SLEEPER, DEMON, SKELETONS, ZOMBIES, GOLEM
 	if ((other.guild == GIL_SLF) ||
-			(other.guild == GIL_TROLL) ||
-			(other.guild == GIL_DEMON) ||
-			(other.guild == GIL_GOLEM) ||
-			(other.guild == GIL_SKELETON) ||
-			(other.guild == GIL_ZOMBIE))
+	(other.guild == GIL_TROLL) ||
+	(other.guild == GIL_DEMON) ||
+	(other.guild == GIL_GOLEM) ||
+	(other.guild == GIL_SKELETON) ||
+	(other.guild == GIL_ZOMBIE))
 	{
-		PrintDebugNpc (PD_MAGIC, "...Ziel immun!");
+		PrintDebugNpc(PD_MAGIC, "...Ziel immun!");
 
 		return SPL_SENDSTOP;
 	}
@@ -25,7 +25,7 @@ func int Spell_Logic_Berzerk (var int manaInvested)
 	{
 		if (manaInvested >= SPL_SENDCAST_BERZERK)
 		{
-			Npc_SendSinglePerc (self,other,PERC_ASSESSMAGIC);
+			Npc_SendSinglePerc(self, other, PERC_ASSESSMAGIC);
 
 			return SPL_SENDCAST;
 		}

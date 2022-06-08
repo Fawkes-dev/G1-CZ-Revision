@@ -1,12 +1,12 @@
 /*************************************************************************
-** Orc WARRIOR Prototype **
+** Orc WARRIOR prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_OrcWarrior(C_Npc)
+prototype Mst_Default_OrcWarrior(C_Npc)
 {
 	name = "Orc Warrior";
 	guild = GIL_ORCWARRIOR;
-	npctype = NPCTYPE_GUARD;
+	npctype = NpcType_Guard;
 	voice = 17;
 	level = 25;
 //----------------------------------------------------------
@@ -51,18 +51,19 @@ PROTOTYPE Mst_Default_OrcWarrior(C_Npc)
 //-------------------------------------------------------------
 	start_aistate = ZS_Guard;
 };
+
 //-------------------------------------------------------------
 func void Set_OrcWarrior_Visuals()
 {
-	Mdl_SetVisual(self,"Orc.mds");
+	Mdl_SetVisual(self, "Orc.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Orc_BodyWarrior",DEFAULT, DEFAULT, "Orc_HeadWarrior", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Orc_BodyWarrior", DEFAULT, DEFAULT, "Orc_HeadWarrior", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Orc Warrior 1 - Fighter    **
+** Orc Warrior 1 - Fighter **
 *************************************************************************/
-instance OrcWarrior1 (Mst_Default_OrcWarrior)
+instance OrcWarrior1(Mst_Default_OrcWarrior)
 {
 	//-------- general --------
 	name = "Orc Fighter";
@@ -83,13 +84,13 @@ instance OrcWarrior1 (Mst_Default_OrcWarrior)
 	protection [PROT_FIRE] = 30;
 
 	//-------- inventory --------
-	EquipItem(self,ItMw2hOrcaxe01);
+	EquipItem(self, ItMw2hOrcaxe01);
 };
 
 /*************************************************************************
-** Orc Warrior 2 - Warrior    **
+** Orc Warrior 2 - Warrior **
 *************************************************************************/
-instance OrcWarrior2 (Mst_Default_OrcWarrior)
+instance OrcWarrior2(Mst_Default_OrcWarrior)
 {
 	//-------- general --------
 	name = "Orc Warrior";
@@ -110,13 +111,13 @@ instance OrcWarrior2 (Mst_Default_OrcWarrior)
 	protection [PROT_FIRE] = 35;
 
 	//-------- inventory --------
-	EquipItem(self,ItMw2hOrcaxe02);
+	EquipItem(self, ItMw2hOrcaxe02);
 };
 
 /*************************************************************************
-** Orc Warrior 3 - Clan    **
+** Orc Warrior 3 - Clan **
 *************************************************************************/
-instance OrcWarrior3 (Mst_Default_OrcWarrior)
+instance OrcWarrior3(Mst_Default_OrcWarrior)
 {
 	//-------- general --------
 	name = "Orc Clan Warrior";
@@ -137,13 +138,13 @@ instance OrcWarrior3 (Mst_Default_OrcWarrior)
 	protection [PROT_FIRE] = 40;
 
 	//-------- inventory --------
-	EquipItem(self,ItMw2hOrcaxe03);
+	EquipItem(self, ItMw2hOrcaxe03);
 };
 
 /*************************************************************************
 ** Orc Warrior 4 - Tempelkrieger **
 *************************************************************************/
-instance OrcWarrior4 (Mst_Default_OrcWarrior)
+instance OrcWarrior4(Mst_Default_OrcWarrior)
 {
 	//-------- general --------
 	name = "Orc Temple Warrior";
@@ -164,6 +165,5 @@ instance OrcWarrior4 (Mst_Default_OrcWarrior)
 	protection [PROT_FIRE] = 45;
 
 	//-------- inventory --------
-	EquipItem(self,ItMw2hOrcaxe04);
+	EquipItem(self, ItMw2hOrcaxe04);
 };
-

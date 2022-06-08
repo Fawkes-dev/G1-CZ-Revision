@@ -1,4 +1,4 @@
-instance Org_845_Schlaeger (Npc_Default)
+instance Org_845_Schlaeger(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -21,45 +21,43 @@ instance Org_845_Schlaeger (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Relaxed.mds");
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Relaxed.mds");
 	//				body mesh, head mesh, hairmesh, face-tex, hair-tex, skin
-	Mdl_SetVisualBody(self,"hum_body_Naked0",0, 2,"Hum_Head_FatBald", 10, 1, ORG_ARMOR_L);
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 0, 2, "Hum_Head_FatBald", 10, 1, ORG_ARMOR_L);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_STRONG;
 
 	//-------- Talente --------
 
-	Npc_SetTalentSkill(self,NPC_TALENT_BOW,1);
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,1);
+	Npc_SetTalentSkill(self, NPC_TALENT_BOW, 1);
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 1);
 
-	Npc_SetTalentSkill(self,NPC_TALENT_SNEAK,1);
+	Npc_SetTalentSkill(self, NPC_TALENT_SNEAK, 1);
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1H_Mace_01);
-	CreateInvItems(self,ItKeLockpick,1);
-	CreateInvItems(self,ItMiNugget, 12);
-	CreateInvItems(self,ItFoRice,10);
-	CreateInvItems(self,ItFoBooze, 3);
-	CreateInvItems(self,ItLsTorch,1);
-	CreateInvItems(self,ItFo_Potion_Health_01,1);
-	CreateInvItem(self,ItMi_Stuff_Plate_01);
-	CreateInvItem(self,ItMi_Stuff_Cup_01);
-	CreateInvItem(self,ItAt_Claws_01);
+	EquipItem(self, ItMw_1H_Mace_01);
+	CreateInvItems(self, ItKeLockpick, 1);
+	CreateInvItems(self, ItMiNugget, 12);
+	CreateInvItems(self, ItFoRice, 10);
+	CreateInvItems(self, ItFoBooze, 3);
+	CreateInvItems(self, ItLsTorch, 1);
+	CreateInvItems(self, ItFo_Potion_Health_01, 1);
+	CreateInvItem(self, ItMi_Stuff_Plate_01);
+	CreateInvItem(self, ItMi_Stuff_Cup_01);
+	CreateInvItem(self, ItAt_Claws_01);
 
 	//-------------Daily Routine-------------
 
 	daily_routine = Rtn_start_845;
-
 };
 
 func void Rtn_start_845()
 {
-	TA_Stand (08,10,20,20,"NC_PATH69");
-	TA_SitCampfire (20,20,08,10,"NC_PATH53");
+	TA_Stand(08, 10, 20, 20, "NC_PATH69");
+	TA_SitCampfire(20, 20, 08, 10, "NC_PATH53");
 };
-

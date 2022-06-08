@@ -5,13 +5,13 @@
 // SPL_SENDSTOP = 3; // Beende Zauber ohne Effekt
 // SPL_NEXTLEVEL = 4; // setze den Spruch auf den nächsten Level
 
-func int Spell_Logic_Charm (var int manaInvested)
+func int Spell_Logic_Charm(var int manaInvested)
 {
-	PrintDebugNpc (PD_MAGIC, "Spell_Logic_Charm");
+	PrintDebugNpc(PD_MAGIC, "Spell_Logic_Charm");
 
 	if (manaInvested >= SPL_SENDCAST_CHARM)
 	{
-		Npc_SendSinglePerc (self,other,PERC_ASSESSMAGIC);
+		Npc_SendSinglePerc(self, other, PERC_ASSESSMAGIC);
 		return SPL_SENDCAST;
 	};
 

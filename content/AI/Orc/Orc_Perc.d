@@ -3,17 +3,16 @@
 
 func void OrcSlavePerc()
 {
-	Npc_PercEnable(self,PERC_ASSESSDAMAGE, ZS_OrcSlave_AssessDamage);
-	Npc_PercEnable(self,PERC_OBSERVEINTRUDER, B_OrcSlave_Quicklook);
-	Npc_PercEnable(self,PERC_DRAWWEAPON, B_OrcSlave_Quicklook);
-	Npc_PercEnable(self,PERC_ASSESSSURPRISE, B_OrcSlave_Quicklook);
-
+	Npc_PercEnable(self, PERC_ASSESSDAMAGE, ZS_OrcSlave_AssessDamage);
+	Npc_PercEnable(self, PERC_OBSERVEINTRUDER, B_OrcSlave_Quicklook);
+	Npc_PercEnable(self, PERC_DRAWWEAPON, B_OrcSlave_Quicklook);
+	Npc_PercEnable(self, PERC_ASSESSSURPRISE, B_OrcSlave_Quicklook);
 };
 
 func void OrcDefaultPerc()
 {
 	//der olle Sklave tut fast nix
-	if ( self.guild == GIL_ORCSLAVE )
+	if (self.guild == GIL_ORCSLAVE)
 	{
 		OrcSlavePerc();
 		return;
@@ -28,7 +27,7 @@ func void OrcDefaultPerc()
 func void OrcDefaultPercDoing()
 {
 	//der olle Sklave tut fast nix
-	if ( self.guild == GIL_ORCSLAVE )
+	if (self.guild == GIL_ORCSLAVE)
 	{
 		OrcSlavePerc();
 		return;
@@ -48,7 +47,7 @@ func void OrcDefaultPercDoing()
 func void OrcDeepSleepPerc()
 {
 	//der olle Sklave tut fast nix
-	if ( self.guild == GIL_ORCSLAVE )
+	if (self.guild == GIL_ORCSLAVE)
 	{
 		OrcSlavePerc();
 		return;
@@ -68,7 +67,7 @@ func void OrcDeepSleepPerc()
 func void OrcLightSleepPerc()
 {
 	//der olle Sklave tut fast nix
-	if ( self.guild == GIL_ORCSLAVE )
+	if (self.guild == GIL_ORCSLAVE)
 	{
 		OrcSlavePerc();
 		return;

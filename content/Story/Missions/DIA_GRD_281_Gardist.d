@@ -43,7 +43,7 @@ instance DIA_Grd_281_GuardGate(C_INFO)
 
 func int DIA_Grd_281_GuardGate_Condition()
 {
-	if (!C_NpcBelongsToNewcamp (other))
+	if (!C_NpcBelongsToNewcamp(other))
 	{
 		return 1;
 	};
@@ -55,9 +55,9 @@ func void DIA_Grd_281_GuardGate_Info()
 {
 //	AI_Output(other,self,"DIA_Grd_281_GuardGate_15_00"); //How's it going?
 //	AI_Output(other,self,"DIA_Grd_281_GuardGate_15_00"); //Wie steht's?
-	AI_Output(other,self,"DIA_Grd_281_GuardGate_15_00"); //Jak to jde?
+	AI_Output(other, self, "DIA_Grd_281_GuardGate_15_00"); //Jak to jde?
 //	AI_Output(self,other,"DIA_Grd_281_GuardGate_07_01"); //Good. None of the rogues from the New Camp are to be seen anywhere!
 //	AI_Output(self,other,"DIA_Grd_281_GuardGate_07_01"); //Gut. Weit und breit keiner von den Banditen aus dem Neuen Lager zu sehen!
-	AI_Output(self,other,"DIA_Grd_281_GuardGate_07_01"); //Dobře. Široko daleko žádný bandita z Nového tábora!
+	AI_Output(self, other, "DIA_Grd_281_GuardGate_07_01"); //Dobře. Široko daleko žádný bandita z Nového tábora!
 	AI_StopProcessInfos(self);
 };

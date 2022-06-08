@@ -1,8 +1,8 @@
 /*************************************************************************
-** Molerat Prototype **
+** Molerat prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_Molerat(C_Npc)
+prototype Mst_Default_Molerat(C_Npc)
 {
 	name = "Molerat";
 	guild = GIL_MOLERAT;
@@ -51,31 +51,32 @@ PROTOTYPE Mst_Default_Molerat(C_Npc)
 	start_aistate = ZS_MM_AllScheduler;
 	aivar[AIV_MM_RoamStart] = OnlyRoutine;
 };
+
 //------------------------------------------------------------
 func void Set_Molerat_Visuals()
 {
-	Mdl_SetVisual(self,"Molerat.mds");
+	Mdl_SetVisual(self, "Molerat.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Mol_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Mol_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Molerat    **
+** Molerat **
 *************************************************************************/
 
-instance Molerat (Mst_Default_Molerat)
+instance Molerat(Mst_Default_Molerat)
 {
 	Set_Molerat_Visuals();
 	Npc_SetToFistMode(self);
 
-	CreateInvItems(self,ItFoMuttonRaw, 2);
+	CreateInvItems(self, ItFoMuttonRaw, 2);
 };
 
 /*************************************************************************
-** junge Molerat   (für Spielstart) **
+** junge Molerat(für Spielstart) **
 *************************************************************************/
 
-instance YMolerat (Mst_Default_Molerat)
+instance YMolerat(Mst_Default_Molerat)
 {
 	name = "Juvenile Molerat";
 	level = 4;
@@ -93,9 +94,9 @@ instance YMolerat (Mst_Default_Molerat)
 	fight_tactic = FAI_MONSTER_COWARD;
 
 	Set_Molerat_Visuals();
-	Mdl_SetModelScale(self,0.9, 0.9, 0.9);
+	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
 
 	Npc_SetToFistMode(self);
 
-	CreateInvItems(self,ItFoMuttonRaw,1);
+	CreateInvItems(self, ItFoMuttonRaw, 1);
 };

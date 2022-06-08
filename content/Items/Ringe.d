@@ -1,5 +1,5 @@
 //Ringe//
-	instance Schutzring_Feuer1(C_Item)
+instance Schutzring_Feuer1(C_Item)
 {
 	name = NAME_Ring;
 
@@ -29,18 +29,18 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Schutzring_Feuer1()
-	{
-		self.protection [PROT_FIRE] += 3;
-	};
+func void Equip_Schutzring_Feuer1()
+{
+	self.protection [PROT_FIRE] += 3;
+};
 
-	func void UnEquip_Schutzring_Feuer1()
-	{
+func void UnEquip_Schutzring_Feuer1()
+{
 	self.protection [PROT_FIRE] -= 3;
-	};
+};
 
 /******************************************************************************************/
-	instance Schutzring_Feuer2(C_Item)
+instance Schutzring_Feuer2(C_Item)
 {
 	name = NAME_Ring;
 
@@ -70,18 +70,18 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Schutzring_Feuer2()
-	{
+func void Equip_Schutzring_Feuer2()
+{
 	self.protection [PROT_FIRE] += 5;
-	};
+};
 
-	func void UnEquip_Schutzring_Feuer2()
-	{
+func void UnEquip_Schutzring_Feuer2()
+{
 	self.protection [PROT_FIRE] -= 5;
-	};
+};
 
 /******************************************************************************************/
-	instance Schutzring_Geschosse1(C_Item)
+instance Schutzring_Geschosse1(C_Item)
 {
 	name = NAME_Ring;
 
@@ -111,18 +111,18 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Schutzring_Geschosse1()
-	{
+func void Equip_Schutzring_Geschosse1()
+{
 	self.protection [PROT_POINT] += 5;
-	};
+};
 
-	func void UnEquip_Schutzring_Geschosse1()
-	{
+func void UnEquip_Schutzring_Geschosse1()
+{
 	self.protection [PROT_POINT] -= 5;
-	};
+};
 
 /******************************************************************************************/
-	instance Schutzring_Geschosse2(C_Item)
+instance Schutzring_Geschosse2(C_Item)
 {
 	name = NAME_Ring;
 
@@ -152,18 +152,18 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Schutzring_Geschosse2()
-	{
+func void Equip_Schutzring_Geschosse2()
+{
 	self.protection [PROT_POINT] += 10;
-	};
+};
 
-	func void UnEquip_Schutzring_Geschosse2()
-	{
+func void UnEquip_Schutzring_Geschosse2()
+{
 	self.protection [PROT_POINT] -= 10;
-	};
+};
 
 /******************************************************************************************/
-	instance Schutzring_Waffen1(C_Item)
+instance Schutzring_Waffen1(C_Item)
 {
 	name = NAME_Ring;
 
@@ -193,20 +193,20 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Schutzring_Waffen1()
-	{
+func void Equip_Schutzring_Waffen1()
+{
 	self.protection [PROT_EDGE] += 5;
 	self.protection [PROT_BLUNT] += 5;
-	};
+};
 
-	func void UnEquip_Schutzring_Waffen1()
-	{
+func void UnEquip_Schutzring_Waffen1()
+{
 	self.protection [PROT_EDGE] -= 5;
 	self.protection [PROT_BLUNT] -= 5;
-	};
+};
 
 /******************************************************************************************/
-	instance Schutzring_Waffen2(C_Item)
+instance Schutzring_Waffen2(C_Item)
 {
 	name = NAME_Ring;
 
@@ -236,20 +236,20 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Schutzring_Waffen2()
-	{
+func void Equip_Schutzring_Waffen2()
+{
 	self.protection [PROT_EDGE] += 10;
 	self.protection [PROT_BLUNT] += 10;
-	};
+};
 
-	func void UnEquip_Schutzring_Waffen2()
-	{
+func void UnEquip_Schutzring_Waffen2()
+{
 	self.protection [PROT_EDGE] -= 10;
 	self.protection [PROT_BLUNT] -= 10;
-	};
+};
 
 /******************************************************************************************/
-	instance Schutzring_Magie1(C_ITEM)
+instance Schutzring_Magie1(C_ITEM)
 {
 	name = "Ring ";
 
@@ -279,18 +279,18 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Schutzring_Magie1()
-	{
+func void Equip_Schutzring_Magie1()
+{
 	self.protection [PROT_MAGIC] += 1;
-	};
+};
 
-	func void UnEquip_Schutzring_Magie1()
-	{
+func void UnEquip_Schutzring_Magie1()
+{
 	self.protection [PROT_MAGIC] -= 1;
-	};
+};
 
 /******************************************************************************************/
-	instance Schutzring_Magie2(C_ITEM)
+instance Schutzring_Magie2(C_ITEM)
 {
 	name = NAME_Ring;
 
@@ -320,20 +320,20 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Schutzring_Magie2()
-	{
+func void Equip_Schutzring_Magie2()
+{
 	self.protection [PROT_EDGE] += 3;
 	self.protection [PROT_BLUNT] += 3;
-	};
+};
 
-	func void UnEquip_Schutzring_Magie2()
-	{
+func void UnEquip_Schutzring_Magie2()
+{
 	self.protection [PROT_EDGE] -= 3;
 	self.protection [PROT_BLUNT] -= 3;
-	};
+};
 
 /******************************************************************************************/
-	instance Schutzring_Magie1_Fire1(C_ITEM)
+instance Schutzring_Magie1_Fire1(C_ITEM)
 {
 	name = NAME_Ring;
 
@@ -363,20 +363,20 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Schutzring_Magie1_Fire1()
-	{
+func void Equip_Schutzring_Magie1_Fire1()
+{
 	self.protection [PROT_MAGIC] += 1;
 	self.protection [PROT_FIRE] += 3;
-	};
+};
 
-	func void UnEquip_Schutzring_Magie1_Fire1()
-	{
+func void UnEquip_Schutzring_Magie1_Fire1()
+{
 	self.protection [PROT_MAGIC] -= 1;
 	self.protection [PROT_FIRE] -= 3;
-	};
+};
 
 /******************************************************************************************/
-	instance Schutzring_Magie2_Fire2(C_ITEM)
+instance Schutzring_Magie2_Fire2(C_ITEM)
 {
 	name = NAME_Ring;
 
@@ -406,20 +406,20 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Schutzring_Magie2_Fire2()
-	{
+func void Equip_Schutzring_Magie2_Fire2()
+{
 	self.protection [PROT_MAGIC] += 3;
 	self.protection [PROT_FIRE] += 5;
-	};
+};
 
-	func void UnEquip_Schutzring_Magie2_Fire2()
-	{
+func void UnEquip_Schutzring_Magie2_Fire2()
+{
 	self.protection [PROT_MAGIC] -= 3;
 	self.protection [PROT_FIRE] -= 5;
-	};
+};
 
 /******************************************************************************************/
-	instance Schutzring_Geschosse1_Waffen1(C_ITEM)
+instance Schutzring_Geschosse1_Waffen1(C_ITEM)
 {
 	name = NAME_Ring;
 
@@ -449,22 +449,22 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Schutzring_Geschosse1_Waffen1()
-	{
+func void Equip_Schutzring_Geschosse1_Waffen1()
+{
 	self.protection [PROT_EDGE] += 5;
 	self.protection [PROT_BLUNT] += 5;
 	self.protection [PROT_POINT] += 5;
-	};
+};
 
-	func void UnEquip_Schutzring_Geschosse1_Waffen1()
-	{
+func void UnEquip_Schutzring_Geschosse1_Waffen1()
+{
 	self.protection [PROT_EDGE] -= 5;
 	self.protection [PROT_BLUNT] -= 5;
 	self.protection [PROT_POINT] -= 5;
-	};
+};
 
 /******************************************************************************************/
-	instance Schutzring_Geschosse2_Waffen2(C_ITEM)
+instance Schutzring_Geschosse2_Waffen2(C_ITEM)
 {
 	name = NAME_Ring;
 
@@ -494,22 +494,22 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Schutzring_Geschosse2_Waffen2()
-	{
+func void Equip_Schutzring_Geschosse2_Waffen2()
+{
 	self.protection [PROT_EDGE] += 10;
 	self.protection [PROT_BLUNT] += 10;
 	self.protection [PROT_POINT] += 10;
-	};
+};
 
-	func void UnEquip_Schutzring_Geschosse2_Waffen2()
-	{
+func void UnEquip_Schutzring_Geschosse2_Waffen2()
+{
 	self.protection [PROT_EDGE] -= 10;
 	self.protection [PROT_BLUNT] -= 10;
 	self.protection [PROT_POINT] -= 10;
-	};
+};
 
 /******************************************************************************************/
-	instance Schutzring_Total1(C_ITEM)
+instance Schutzring_Total1(C_ITEM)
 {
 	name = NAME_Ring;
 
@@ -539,26 +539,26 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Schutzring_Total1()
-	{
+func void Equip_Schutzring_Total1()
+{
 	self.protection [PROT_EDGE] += 5;
 	self.protection [PROT_BLUNT] += 5;
 	self.protection [PROT_POINT] += 5;
- 	self.protection [PROT_FIRE]     += 3;
-	self.protection [PROT_MAGIC]    += 1;
-	};
+	self.protection [PROT_FIRE] += 3;
+	self.protection [PROT_MAGIC] += 1;
+};
 
-	func void UnEquip_Schutzring_Total1()
-	{
+func void UnEquip_Schutzring_Total1()
+{
 	self.protection [PROT_EDGE] -= 5;
 	self.protection [PROT_BLUNT] -= 5;
 	self.protection [PROT_POINT] -= 5;
- 	self.protection [PROT_FIRE]      -= 3;
-	self.protection [PROT_MAGIC]     -= 1;
-	};
+	self.protection [PROT_FIRE] -= 3;
+	self.protection [PROT_MAGIC] -= 1;
+};
 
 /******************************************************************************************/
-	instance Schutzring_Total2(C_ITEM)
+instance Schutzring_Total2(C_ITEM)
 {
 	name = NAME_Ring;
 
@@ -588,26 +588,26 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Schutzring_Total2()
-	{
+func void Equip_Schutzring_Total2()
+{
 	self.protection [PROT_EDGE] += 10;
 	self.protection [PROT_BLUNT] += 10;
 	self.protection [PROT_POINT] += 10;
- 	self.protection [PROT_FIRE]     += 5;
-	self.protection [PROT_MAGIC]    += 3;
-	};
+	self.protection [PROT_FIRE] += 5;
+	self.protection [PROT_MAGIC] += 3;
+};
 
-	func void UnEquip_Schutzring_Total2()
-	{
+func void UnEquip_Schutzring_Total2()
+{
 	self.protection [PROT_EDGE] -= 10;
 	self.protection [PROT_BLUNT] -= 10;
 	self.protection [PROT_POINT] -= 10;
- 	self.protection [PROT_FIRE]     -= 5;
-	self.protection [PROT_MAGIC]    -= 3;
-	};
+	self.protection [PROT_FIRE] -= 5;
+	self.protection [PROT_MAGIC] -= 3;
+};
 
 /******************************************************************************************/
-		instance Ring_des_Geschicks(C_Item)
+instance Ring_des_Geschicks(C_Item)
 {
 	name = NAME_Ring;
 
@@ -637,18 +637,18 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Ring_des_Geschicks()
-	{
-		Npc_ChangeAttribute(self,ATR_DEXTERITY,5);
-	};
+func void Equip_Ring_des_Geschicks()
+{
+	Npc_ChangeAttribute(self, ATR_DEXTERITY, 5);
+};
 
-	func void UnEquip_Ring_des_Geschicks()
-	{
-		Npc_ChangeAttribute(self,ATR_DEXTERITY,-5);
-	};
+func void UnEquip_Ring_des_Geschicks()
+{
+	Npc_ChangeAttribute(self, ATR_DEXTERITY, -5);
+};
 
 /******************************************************************************************/
-	instance Ring_des_Geschicks2(C_Item)
+instance Ring_des_Geschicks2(C_Item)
 {
 	name = NAME_Ring;
 
@@ -678,18 +678,18 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Ring_des_Geschicks2()
-	{
-		Npc_ChangeAttribute(self,ATR_DEXTERITY,10);
-	};
+func void Equip_Ring_des_Geschicks2()
+{
+	Npc_ChangeAttribute(self, ATR_DEXTERITY, 10);
+};
 
-	func void UnEquip_Ring_des_Geschicks2()
-	{
-		Npc_ChangeAttribute(self,ATR_DEXTERITY,-10);
-	};
+func void UnEquip_Ring_des_Geschicks2()
+{
+	Npc_ChangeAttribute(self, ATR_DEXTERITY, -10);
+};
 
 /******************************************************************************************/
-		instance Ring_des_Lebens(C_Item)
+instance Ring_des_Lebens(C_Item)
 {
 	name = NAME_Ring;
 
@@ -719,27 +719,27 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Ring_des_Lebens()
-	{
-		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + 10;
-		self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] + 10;
-	};
+func void Equip_Ring_des_Lebens()
+{
+	self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + 10;
+	self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] + 10;
+};
 
-	func void UnEquip_Ring_des_Lebens()
+func void UnEquip_Ring_des_Lebens()
+{
+	self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] - 10;
+	if (self.attribute [ATR_HITPOINTS] > 11)
 	{
-		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] - 10;
-		if self.attribute [ATR_HITPOINTS]> 11
-		{
-			self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] - 10;
-		}
-		else
-		{
-			self.attribute[ATR_HITPOINTS] = 2;
-		};
+		self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] - 10;
+	}
+	else
+	{
+		self.attribute[ATR_HITPOINTS] = 2;
 	};
+};
 
 /******************************************************************************************/
-	instance Ring_des_Lebens2(C_Item)
+instance Ring_des_Lebens2(C_Item)
 {
 	name = NAME_Ring;
 
@@ -768,28 +768,28 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Ring_des_Lebens2()
-	{
-		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + 20;
-		self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] + 20;
-	};
+func void Equip_Ring_des_Lebens2()
+{
+	self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + 20;
+	self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] + 20;
+};
 
-	func void UnEquip_Ring_des_Lebens2()
-	{
-		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] - 20;
+func void UnEquip_Ring_des_Lebens2()
+{
+	self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] - 20;
 
-		if self.attribute [ATR_HITPOINTS]> 21
-		{
-			self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] - 20;
-		}
-		else
-		{
-			self.attribute[ATR_HITPOINTS] = 2;
-		};
+	if (self.attribute [ATR_HITPOINTS] > 21)
+	{
+		self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] - 20;
+	}
+	else
+	{
+		self.attribute[ATR_HITPOINTS] = 2;
 	};
+};
 
 /******************************************************************************************/
-	instance Staerkering(C_Item)
+instance Staerkering(C_Item)
 {
 	name = NAME_Ring;
 
@@ -819,18 +819,18 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Staerkering()
-	{
-		Npc_ChangeAttribute(self,ATR_STRENGTH,5);
-	};
+func void Equip_Staerkering()
+{
+	Npc_ChangeAttribute(self, ATR_STRENGTH, 5);
+};
 
-	func void UnEquip_Staerkering()
-	{
-		Npc_ChangeAttribute(self,ATR_STRENGTH,-5);
-	};
+func void UnEquip_Staerkering()
+{
+	Npc_ChangeAttribute(self, ATR_STRENGTH, -5);
+};
 
 /******************************************************************************************/
-	instance Staerkering2(C_Item)
+instance Staerkering2(C_Item)
 {
 	name = NAME_Ring;
 
@@ -861,18 +861,18 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Staerkering2()
-	{
-		Npc_ChangeAttribute(self,ATR_STRENGTH,10);
-	};
+func void Equip_Staerkering2()
+{
+	Npc_ChangeAttribute(self, ATR_STRENGTH, 10);
+};
 
-	func void UnEquip_Staerkering2()
-	{
-		Npc_ChangeAttribute(self,ATR_STRENGTH, -10);
-	};
+func void UnEquip_Staerkering2()
+{
+	Npc_ChangeAttribute(self, ATR_STRENGTH, -10);
+};
 
 /******************************************************************************************/
-	instance Ring_der_Magie(C_Item)
+instance Ring_der_Magie(C_Item)
 {
 	name = NAME_Ring;
 
@@ -902,20 +902,20 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Ring_der_Magie()
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] + 10;
-		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] + 10;
-	};
+func void Equip_Ring_der_Magie()
+{
+	self.attribute[ATR_MANA] = self.attribute[ATR_MANA] + 10;
+	self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] + 10;
+};
 
-	func void UnEquip_Ring_der_Magie()
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - 10;
-		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - 10;
-	};
+func void UnEquip_Ring_der_Magie()
+{
+	self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - 10;
+	self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - 10;
+};
 
 /******************************************************************************************/
-		instance Ring_der_Erleuchtung(C_Item)
+instance Ring_der_Erleuchtung(C_Item)
 {
 	name = NAME_Ring;
 
@@ -945,34 +945,32 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Ring_der_Erleuchtung()
+func void Equip_Ring_der_Erleuchtung()
+{
+	self.attribute[ATR_MANA] = self.attribute[ATR_MANA] + 15;
+	self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] + 15;
+	self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] + 15;
+	self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + 15;
+};
+
+func void UnEquip_Ring_der_Erleuchtung()
+{
+	self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - 15;
+	self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - 15;
+	self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] - 15;
+
+	if (self.attribute [ATR_HITPOINTS] > 16)
 	{
-
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] + 15;
-		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] + 15;
-		self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] + 15;
-		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + 15;
-
-	};
-
-	func void UnEquip_Ring_der_Erleuchtung()
+		self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] - 15;
+	}
+	else
 	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - 15;
-		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - 15;
-		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] - 15;
-
-		if (self.attribute [ATR_HITPOINTS] > 16)
-		{
-			self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] - 15;
-		}
-		else
-		{
-			self.attribute [ATR_HITPOINTS] = 2;
-		};
+		self.attribute [ATR_HITPOINTS] = 2;
 	};
+};
 
 /******************************************************************************************/
-	instance Machtring(C_Item)
+instance Machtring(C_Item)
 {
 	name = NAME_Ring;
 
@@ -1002,15 +1000,14 @@
 	COUNT[5] = value;
 };
 
-	func void Equip_Machtring()
-	{
-		Npc_ChangeAttribute(self,ATR_STRENGTH, 4);
-		Npc_ChangeAttribute(self,ATR_DEXTERITY, 4);
-	};
+func void Equip_Machtring()
+{
+	Npc_ChangeAttribute(self, ATR_STRENGTH, 4);
+	Npc_ChangeAttribute(self, ATR_DEXTERITY, 4);
+};
 
-	func void UnEquip_Machtring()
-	{
-		Npc_ChangeAttribute(self,ATR_STRENGTH,- 4);
-		Npc_ChangeAttribute(self,ATR_DEXTERITY, -4);
-	};
-
+func void UnEquip_Machtring()
+{
+	Npc_ChangeAttribute(self, ATR_STRENGTH, - 4);
+	Npc_ChangeAttribute(self, ATR_DEXTERITY, -4);
+};

@@ -6,9 +6,10 @@ instance KDF_403_Drago_RUNE(C_INFO)
 	important = 1;
 	permanent = 0;
 };
+
 func int KDF_403_Drago_RUNE_Condition()
 {
-	if (Npc_KnowsInfo(hero,KDF_402_Corristo_ROBE))
+	if (Npc_KnowsInfo(hero, KDF_402_Corristo_ROBE))
 	{
 		return 1;
 	};
@@ -20,9 +21,9 @@ func void KDF_403_Drago_RUNE_Info()
 {
 //	AI_Output(self,other,"KDF_403_Drago_RUNE_Info_13_01"); //Take this rune, the gift of Innos. May it protect you on your path.
 //	AI_Output(self,other,"KDF_403_Drago_RUNE_Info_13_01"); //Nimm diese Rune als Geschenk von Innos. Sie schütze dich auf deinem Weg.
-	AI_Output(self,other,"KDF_403_Drago_RUNE_Info_13_01"); //Vezmi si tuto runu, dar od Innose. Kéž tě ochraňuje na tvé cestě.
-	CreateInvItem(self,ItArRuneFirebolt);
-	B_GiveInvItems(self,other,ItArRuneFirebolt,1);
+	AI_Output(self, other, "KDF_403_Drago_RUNE_Info_13_01"); //Vezmi si tuto runu, dar od Innose. Kéž tě ochraňuje na tvé cestě.
+	CreateInvItem(self, ItArRuneFirebolt);
+	B_GiveInvItems(self, other, ItArRuneFirebolt, 1);
 	AI_StopProcessInfos(self);
 };
 

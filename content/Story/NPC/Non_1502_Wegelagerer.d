@@ -1,5 +1,4 @@
-instance Non_1502_Wegelagerer (Npc_Default)
-
+instance Non_1502_Wegelagerer(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -22,33 +21,33 @@ instance Non_1502_Wegelagerer (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
+	Mdl_SetVisual(self, "HUMANS.MDS");
 	//							Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 2, 3, "Hum_Head_Thief", 5,  2, -1);
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 2, 3, "Hum_Head_Thief", 5, 2, -1);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_STRONG;
 
-	//-------- Talents  --------
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,1);
+	//-------- Talents --------
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 1);
 
 	//-------- inventory --------
-	EquipItem(self,ItMw_1H_Sword_Old_01);
-	CreateInvItems(self,ItFo_Potion_Health_01, 2);
-	CreateInvItems(self,ItMiNugget, 43);
-	CreateInvItems(self,ItFoBeer, 3);
+	EquipItem(self, ItMw_1H_Sword_Old_01);
+	CreateInvItems(self, ItFo_Potion_Health_01, 2);
+	CreateInvItems(self, ItMiNugget, 43);
+	CreateInvItems(self, ItFoBeer, 3);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_1502;
-	};
+};
 
 func void Rtn_start_1502()
 {
 	// Angreifen bei Sichtung
-	Npc_SetPermAttitude(self,ATT_HOSTILE);
+	Npc_SetPermAttitude(self, ATT_HOSTILE);
 
-	TA_SitCampfire (22,00,06,00,"SPAWN_TALL_PATH_BANDITOS2_03");
-	TA_Smalltalk (06,00,22,00,"SPAWN_TALL_PATH_BANDITOS2_02_04");
+	TA_SitCampfire(22, 00, 06, 00, "SPAWN_TALL_PATH_BANDITOS2_03");
+	TA_Smalltalk(06, 00, 22, 00, "SPAWN_TALL_PATH_BANDITOS2_02_04");
 };

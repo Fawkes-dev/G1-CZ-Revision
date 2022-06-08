@@ -49,9 +49,9 @@ func void Org_825_Organisator_PERM_Info()
 {
 //	AI_Output(other,self,"Org_825_Organisator_PERM_15_00"); //What are you guarding?
 //	AI_Output(other,self,"Org_825_Organisator_PERM_15_00"); //Was bewacht ihr hier?
-	AI_Output(other,self,"Org_825_Organisator_PERM_15_00"); //Co tady střežíte?
+	AI_Output(other, self, "Org_825_Organisator_PERM_15_00"); //Co tady střežíte?
 //	AI_Output(self,other,"Org_825_Organisator_PERM_07_01"); //We make sure none of Lee's or Gomez' people come too close to Lares.
 //	AI_Output(self,other,"Org_825_Organisator_PERM_07_01"); //Wir passen auf, dass keiner von Lees oder Gomez' Leuten Lares zu nahe kommt.
-	AI_Output(self,other,"Org_825_Organisator_PERM_07_01"); //Dáváme pozor, aby se Leeovi ani Gomezovi lidi nedostali příliš blízko k Laresovi.
+	AI_Output(self, other, "Org_825_Organisator_PERM_07_01"); //Dáváme pozor, aby se Leeovi ani Gomezovi lidi nedostali příliš blízko k Laresovi.
 	AI_StopProcessInfos(self);
 };

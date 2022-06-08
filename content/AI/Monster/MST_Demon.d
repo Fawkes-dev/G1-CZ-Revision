@@ -1,8 +1,8 @@
 /*************************************************************************
-** Demon Prototype **
+** Demon prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_Demon(C_Npc)
+prototype Mst_Default_Demon(C_Npc)
 {
 	name = "Fire Demon";
 	guild = GIL_DEMON;
@@ -53,29 +53,30 @@ PROTOTYPE Mst_Default_Demon(C_Npc)
 
 	//aivar[AIV_MM_RestStart] = OnlyRoutine;
 };
+
 //-------------------------------------------------------------
 func void Set_Demon_Visuals()
 {
-	Mdl_SetVisual(self,"Demon.mds");
+	Mdl_SetVisual(self, "Demon.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Dem_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Dem_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Demon    **
+** Demon **
 *************************************************************************/
 
-instance Demon (Mst_Default_Demon)
+instance Demon(Mst_Default_Demon)
 {
 	Set_Demon_Visuals();
 	Npc_SetToFistMode(self);
 };
 
 /*************************************************************************
-** Summoned Demon  **
+** Summoned Demon **
 *************************************************************************/
 
-instance SummonedByPC_Demon (Mst_Default_Demon)
+instance SummonedByPC_Demon(Mst_Default_Demon)
 {
 	Set_Demon_Visuals();
 
@@ -84,10 +85,10 @@ instance SummonedByPC_Demon (Mst_Default_Demon)
 	start_aistate = ZS_MM_SummonedByPC;
 	self.aivar[AIV_MM_DistToMaster] = 400;
 	self.aivar[AIV_MM_TimeLooseHP] = 1;
-	self.aivar[AIV_MM_PARTYMEMBER]  = TRUE;
+	self.aivar[AIV_MM_PARTYMEMBER] = TRUE;
 };
 
-instance SummonedByNPC_Demon (Mst_Default_Demon)
+instance SummonedByNPC_Demon(Mst_Default_Demon)
 {
 	Set_Demon_Visuals();
 	Npc_SetToFistMode(self);
@@ -96,13 +97,13 @@ instance SummonedByNPC_Demon (Mst_Default_Demon)
 };
 
 /*************************************************************************
-** Xardas' zahmer Dämon    **
+** Xardas' zahmer Dämon **
 *************************************************************************/
 
-instance XardasDemon (Mst_Default_Demon)
+instance XardasDemon(Mst_Default_Demon)
 {
 	flags = NPC_FLAG_IMMORTAL;
-	npctype = NPCTYPE_FRIEND;
+	npctype = NpcType_Friend;
 	guild = GIL_DEMON;
 
 	aivar[AIV_MM_REAL_ID] = ID_DEMON;
@@ -114,10 +115,10 @@ instance XardasDemon (Mst_Default_Demon)
 };
 
 /*************************************************************************
-** OTDemon    **
+** OTDemon **
 *************************************************************************/
 
-instance OTDemon (Mst_Default_Demon)
+instance OTDemon(Mst_Default_Demon)
 {
 	name = "Lesser Demon";
 	guild = GIL_DEMON;
@@ -145,4 +146,3 @@ instance OTDemon (Mst_Default_Demon)
 	Set_Demon_Visuals();
 	Npc_SetToFistMode(self);
 };
-

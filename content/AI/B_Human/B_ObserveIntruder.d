@@ -21,45 +21,45 @@
 //////////////////////////////////////////////////////////////////////////
 func void B_ObserveIntruder()
 {
-	PrintDebugNpc (PD_ZS_FRAME, "B_ObserveIntruder");
+	PrintDebugNpc(PD_ZS_FRAME, "B_ObserveIntruder");
 
 	//-------- SC im Dialog ? --------
 	if (other.aivar[AIV_INVINCIBLE])
 	{
-		PrintDebugNpc (PD_ZS_CHECK, "...SC im Dialog!");
+		PrintDebugNpc(PD_ZS_CHECK, "...SC im Dialog!");
 		return;
 	};
 
 	//-------- NPC_TYPE_FRIENDLY ? --------
-	if (self.Npctype == NPCTYPE_FRIEND)
+	if (self.Npctype == NpcType_Friend)
 	{
-		PrintDebugNpc (PD_ZS_CHECK, "...freundlich gesinnt!");
+		PrintDebugNpc(PD_ZS_CHECK, "...freundlich gesinnt!");
 		return;
 	};
 
 	//-------- NSC ist Durchgangswache ? --------
-	if (Npc_IsInState(self,ZS_GuardPassage))
+	if (Npc_IsInState(self, ZS_GuardPassage))
 	{
-		PrintDebugNpc (PD_ZS_CHECK, "...NSC ist Durchgangswache!");
+		PrintDebugNpc(PD_ZS_CHECK, "...NSC ist Durchgangswache!");
 		return;
 	};
 
 	//-------- Eindringling ein MENSCH ? --------
 	if (C_NpcIsHuman(other))
 	{
-		PrintDebugNpc (PD_ZS_CHECK, "...Eindringling ist Mensch!");
+		PrintDebugNpc(PD_ZS_CHECK, "...Eindringling ist Mensch!");
 
-		if (Npc_GetAttitude(self,other) == ATT_HOSTILE)
+		if (Npc_GetAttitude(self, other) == ATT_HOSTILE)
 		{
 			B_FullStop(self);
 			B_AssessEnemy();
 			return;
 		};
 
-		if ((Npc_GetAttitude(self,other) != ATT_FRIENDLY) && (Npc_CanSeeNpc(self,other) || !C_BodyStateContains(other,BS_SNEAK)))
+		if ((Npc_GetAttitude(self, other) != ATT_FRIENDLY) && (Npc_CanSeeNpc(self, other) || !C_BodyStateContains(other, BS_SNEAK)))
 		{
-			PrintDebugNpc (PD_ZS_CHECK, "...SC ist Mensch und nicht FRIENDLY!");
-			AI_StartState(self,ZS_ObserveIntruder, 1, "");
+			PrintDebugNpc(PD_ZS_CHECK, "...SC ist Mensch und nicht FRIENDLY!");
+			AI_StartState(self, ZS_ObserveIntruder, 1, "");
 			return;
 		};
 	}
@@ -67,13 +67,12 @@ func void B_ObserveIntruder()
 	//-------- Eindringling ist ein MONSTER ! --------
 	else
 	{
-		PrintDebugNpc (PD_ZS_CHECK, "...Eindringling ist Monster!");
+		PrintDebugNpc(PD_ZS_CHECK, "...Eindringling ist Monster!");
 
-		if (C_NpcIsDangerousMonster(self,other))
+		if (C_NpcIsDangerousMonster(self, other))
 		{
 			B_FullStop(self);
-			AI_StartState(self,ZS_AssessMonster, 0, "");
+			AI_StartState(self, ZS_AssessMonster, 0, "");
 		};
 	};
 };
-

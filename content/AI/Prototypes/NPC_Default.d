@@ -2,7 +2,7 @@
 // Neuer NSC
 // ****************
 
-prototype Npc_Default (C_NPC)
+prototype Npc_Default(C_NPC)
 {
 	//-------- abilities --------
 	attribute [ATR_STRENGTH] = 5;
@@ -22,14 +22,13 @@ prototype Npc_Default (C_NPC)
 	// Hier noch die Spells anmelden , für ausgrauen (CreateSpell)
 
 	//-------- senses --------
-	senses = SENSE_HEAR | SENSE_SEE ;
+	senses = SENSE_HEAR | SENSE_SEE;
 	senses_range = 2000; //SN: am 30.11.00 von 15m auf 20m erhöht (WICHTIG für Profilings!)
 
-	Npc_SetTalentValue (self,NPC_TALENT_1H, 0);
-	Npc_SetTalentValue (self,NPC_TALENT_2H, 0);
-	Npc_SetTalentValue (self,NPC_TALENT_BOW, 0);
-	Npc_SetTalentValue (self,NPC_TALENT_CROSSBOW, 0);
-	Npc_SetTalentValue (self,NPC_TALENT_PICKLOCK, 90);
-	Npc_SetTalentValue (self,NPC_TALENT_PICKPOCKET, 90);
+	Npc_SetTalentValue(self, NPC_TALENT_1H, 0);
+	Npc_SetTalentValue(self, NPC_TALENT_2H, 0);
+	Npc_SetTalentValue(self, NPC_TALENT_BOW, 0);
+	Npc_SetTalentValue(self, NPC_TALENT_CROSSBOW, 0);
+	Npc_SetTalentValue(self, NPC_TALENT_PICKLOCK, 90);
+	Npc_SetTalentValue(self, NPC_TALENT_PICKPOCKET, 90);
 };
-

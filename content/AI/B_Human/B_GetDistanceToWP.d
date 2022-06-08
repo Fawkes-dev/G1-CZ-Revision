@@ -1,4 +1,4 @@
-func int B_GetDistanceToWP (var C_NPC slf, var string wp)
+func int B_GetDistanceToWP(var C_Npc slf, var string wp)
 {
 	var int Dist;
 

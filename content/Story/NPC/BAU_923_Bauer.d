@@ -1,4 +1,4 @@
-instance BAU_923_Bauer (Npc_Default)
+instance BAU_923_Bauer(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -14,18 +14,18 @@ instance BAU_923_Bauer (Npc_Default)
 	attribute[ATR_DEXTERITY] = 11;
 	attribute[ATR_MANA_MAX] = 0;
 	attribute[ATR_MANA] = 0;
-	attribute[ATR_HITPOINTS_MAX]= 76;
+	attribute[ATR_HITPOINTS_MAX] = 76;
 	attribute[ATR_HITPOINTS] = 76;
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Tired.mds");
-	//			body mesh     ,bdytex,skin,head mesh     ,headtex,teethtex,ruestung
-	Mdl_SetVisualBody(self,"hum_body_Naked0",3,1,"Hum_Head_Bald", 5, 2,-1);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Tired.mds");
+	//			body mesh ,bdytex,skin,head mesh ,headtex,teethtex,ruestung
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 3, 1, "Hum_Head_Bald", 5, 2, -1);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
@@ -33,19 +33,17 @@ instance BAU_923_Bauer (Npc_Default)
 
 	//-------- inventory --------
 
-		CreateInvItems(self,ItFoRice,3);
-		EquipItem(self,ItMw_1H_Scythe_01);
+	CreateInvItems(self, ItFoRice, 3);
+	EquipItem(self, ItMw_1H_Scythe_01);
 
 	//-------------Daily Routine-------------
 
 	daily_routine = Rtn_start_923;
-
 };
 
 func void Rtn_start_923()
 {
-	TA_SitCampfire  (20,05,07,05,"NC_PATH_PEASANT_OUTSIDE20"); //CF1
-	TA_WashSelf (07,05,07,23,"NC_PATH_PEASANT_OUTSIDE8_WASH");
-	TA_PickRice (07,23,20,05,"NC_PATH83_MOVEMENT");
+	TA_SitCampfire(20, 05, 07, 05, "NC_PATH_PEASANT_OUTSIDE20"); //CF1
+	TA_WashSelf(07, 05, 07, 23, "NC_PATH_PEASANT_OUTSIDE8_WASH");
+	TA_PickRice(07, 23, 20, 05, "NC_PATH83_MOVEMENT");
 };
-

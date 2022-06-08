@@ -1,8 +1,8 @@
 /*************************************************************************
-** Razor Prototype (Anims wie Snapper) **
+** Razor prototype(Anims wie Snapper) **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_Razor(C_Npc)
+prototype Mst_Default_Razor(C_Npc)
 {
 	name = "Razor";
 	guild = GIL_SNAPPER;
@@ -51,21 +51,22 @@ PROTOTYPE Mst_Default_Razor(C_Npc)
 
 	aivar[AIV_MM_RestStart] = OnlyRoutine;
 };
+
 //-------------------------------------------------------------
 func void Set_Razor_Visuals()
 {
-	Mdl_SetVisual(self,"Snapper.mds");
+	Mdl_SetVisual(self, "Snapper.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Raz_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Raz_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Razor    **
+** Razor **
 *************************************************************************/
 
 // in den Instanz-Scripten bitte NUR die Werte eintragen, die vom Prototyp abweichen sollen!
 
-instance Razor (Mst_Default_Razor)
+instance Razor(Mst_Default_Razor)
 {
 	Set_Razor_Visuals();
 	Npc_SetToFistMode(self);

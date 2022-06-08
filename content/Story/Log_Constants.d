@@ -8,8 +8,8 @@
 //
 //#############################################################################################
 
-const string  Baloros_Waffe = "Baloros Weapon";
-const string  theriddle_log = "The Stranger";
+const string Baloros_Waffe = "Baloros Weapon";
+const string theriddle_log = "The Stranger";
 //---------------------------------------------------------------------
 //	Gildenaufnahme/Wechsel
 //---------------------------------------------------------------------
@@ -39,19 +39,19 @@ const string GE_AnimalTrophies = "Exploitation of the Prey";
 //---------------------------------------------------------------------
 // Aufnahme Altes Lager
 const string CH1_MordragKO = "Thorus' Quest";
-const string CH1_JoinOC     = "Admission to the Old Camp";
+const string CH1_JoinOC = "Admission to the Old Camp";
 const string CH1_SnafsRecipe = "Snaf's Recipe";
 const string CH1_LostNek = "Vanished Guard";
 const string CH1_FiskNewDealer = "New Fence for Fisk";
 const string CH1_KalomsRecipe = "Recipe of the Sect";
-const string CH1_BringList     = "Test of Faith";
-const string CH1_GoToPsi     = "The Big Thing of the Brotherhood";
+const string CH1_BringList = "Test of Faith";
+const string CH1_GoToPsi = "The Big Thing of the Brotherhood";
 //Aufnahme Neues Lager
-const string CH1_JoinNC             = "Admission to the New Camp";
+const string CH1_JoinNC = "Admission to the New Camp";
 const string CH1_CarryWater = "Water Carrier for Lefty";
-const string CH1_DamLurker           = "Lurker at the Dam";
-const string CH1_SpreadJoints        = "Canvassing of Customers";
-const string CH1_DealerJob           = "The Weed Merchant";
+const string CH1_DamLurker = "Lurker at the Dam";
+const string CH1_SpreadJoints = "Canvassing of Customers";
+const string CH1_DealerJob = "The Weed Merchant";
 const string CH1_ShrikesHut = "Shrike's Hut";
 const string CH1_HoratiosTeachings = "Horatio the Peasant";
 const string CH1_GotoPsiCamp = "The Big Thing of the Brotherhood";

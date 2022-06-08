@@ -1,4 +1,4 @@
-instance Focus_Normal (C_Focus)
+instance Focus_Normal(C_Focus)
 {
 	// NSCs
 	npc_longrange = 500.0; // Nur im Normalmodus gueltig -- Horst:Nein auch im Melee modus wichtig!!Bei Fragen bitte an mich wenden
@@ -24,14 +24,14 @@ instance Focus_Normal (C_Focus)
 	mob_prio = 0; // neu -- Mike
 };
 
-instance Focus_Melee (C_Focus)
+instance Focus_Melee(C_Focus)
 {
 	// NSCs
-	//npc_longrange = 600.0;         // FINGER WEG DA!!!  -- Horst
+	//npc_longrange = 600.0; // FINGER WEG DA!!! -- Horst
 
 	npc_range1 = 0.0;
 	npc_range2 = 500.0;
-	npc_azi = 45.0; //    - geändert von 30 auf 45 -- Mike
+	npc_azi = 45.0; // - geändert von 30 auf 45 -- Mike
 	npc_elevup = 45.0;
 	npc_elevdo = -60.0;
 	npc_prio = 1; // NPCs(1) before MOBs(0)
@@ -48,7 +48,7 @@ instance Focus_Melee (C_Focus)
 	mob_prio = -1; // MOBs(0) after NPCs(1)
 };
 
-instance Focus_Ranged (C_Focus)
+instance Focus_Ranged(C_Focus)
 {
 	// NSCs
 	npc_range1 = 0.0;
@@ -73,7 +73,7 @@ instance Focus_Ranged (C_Focus)
 	mob_prio = -1;
 };
 
-instance Focus_Throw_Item (C_Focus)
+instance Focus_Throw_Item(C_Focus)
 {
 	// NSCs
 	npc_range1 = 300.0;
@@ -95,7 +95,7 @@ instance Focus_Throw_Item (C_Focus)
 	mob_elevdo = -45.0;
 };
 
-instance Focus_Throw_Mob (C_Focus)
+instance Focus_Throw_Mob(C_Focus)
 {
 	// NSCs
 	npc_range1 = 50.0;
@@ -141,7 +141,7 @@ instance Focus_Magic(C_Focus)
 	mob_azi = 180.0;
 	mob_elevup = 90.0;
 	mob_elevdo = -90.0;
-	mob_prio = 0;*/
+	mob_prio = 0; */
 
 	npc_range1 = 0.0;
 	npc_range2 = 3000.0;
@@ -163,5 +163,4 @@ instance Focus_Magic(C_Focus)
 	mob_elevup = 45.0;
 	mob_elevdo = -45.0;
 	mob_prio = 0;
-
 };

@@ -1,8 +1,8 @@
 /*************************************************************************
-** Wolf Prototype **
+** Wolf prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_Wolf(C_Npc)
+prototype Mst_Default_Wolf(C_Npc)
 {
 	name = "Wolf";
 	guild = GIL_WOLF;
@@ -51,19 +51,20 @@ PROTOTYPE Mst_Default_Wolf(C_Npc)
 
 	aivar[AIV_MM_RoamStart] = OnlyRoutine;
 };
+
 //-----------------------------------------------------------
 func void Set_Wolf_Visuals()
 {
-	Mdl_SetVisual(self,"Wolf.mds");
+	Mdl_SetVisual(self, "Wolf.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Wol_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Wol_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Wolf    **
+** Wolf **
 *************************************************************************/
 
-instance Wolf (Mst_Default_Wolf)
+instance Wolf(Mst_Default_Wolf)
 {
 	Set_Wolf_Visuals();
 	Npc_SetToFistMode(self);

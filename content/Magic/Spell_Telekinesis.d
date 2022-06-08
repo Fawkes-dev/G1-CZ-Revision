@@ -7,7 +7,7 @@
 
 func int Spell_Logic_Telekinesis(var int manaInvested)
 {
-	PrintDebugNpc (PD_MAGIC, "Spell_Logic_Telekinesis");
+	PrintDebugNpc(PD_MAGIC, "Spell_Logic_Telekinesis");
 
 	// Bei diesen 3: Standardverhalten: Kann ohne Obergrenze investiert werden.// Logik vom Programm
 	// Windfaust

@@ -44,10 +44,10 @@ instance Info_Mine_Sld_11_EinerVonEuchWerden(C_INFO) // E1
 
 func int Info_Mine_Sld_11_EinerVonEuchWerden_Condition()
 {
-	if (Npc_GetTrueGuild(other)!=GIL_SLD)
-	&& (Npc_GetTrueGuild(other)!=GIL_KDW)
-	&& (!C_NpcBelongsToOldCamp (other))
-	&& (!C_NpcBelongsToPsiCamp (other))
+	if ((Npc_GetTrueGuild(other) != GIL_SLD)
+	&& (Npc_GetTrueGuild(other) != GIL_KDW)
+	&& (!C_NpcBelongsToOldCamp(other))
+	&& (!C_NpcBelongsToPsiCamp(other)))
 	{
 		return TRUE;
 	};
@@ -57,13 +57,13 @@ func void Info_Mine_Sld_11_EinerVonEuchWerden_Info()
 {
 //	AI_Output(other,self,"Info_Mine_Sld_11_EinerVonEuchWerden_15_00"); //How do I join you?
 //	AI_Output(other,self,"Info_Mine_Sld_11_EinerVonEuchWerden_15_00"); //Wie kann ich bei euch mitmachen?
-	AI_Output(other,self,"Info_Mine_Sld_11_EinerVonEuchWerden_15_00"); //Jak se můžu dát k vám?
-//	AI_Output(self,other,"Info_Mine_Sld_11_EinerVonEuchWerden_011_01"); //If you wanna be one of us, you have to earn yourself a reputation.
+	AI_Output(other, self, "Info_Mine_Sld_11_EinerVonEuchWerden_15_00"); //Jak se můžu dát k vám?
+//	AI_Output(self,other,"Info_Mine_Sld_11_EinerVonEuchWerden_011_01"); //if you wanna be one of us, you have to earn yourself a reputation.
 //	AI_Output(self,other,"Info_Mine_Sld_11_EinerVonEuchWerden_011_01"); //Um hier mitzumachen, musst du erst einen Namen haben.
-	AI_Output(self,other,"Info_Mine_Sld_11_EinerVonEuchWerden_011_01"); //Když chceš být jedním z nás, musíš si vysloužit uznání.
+	AI_Output(self, other, "Info_Mine_Sld_11_EinerVonEuchWerden_011_01"); //Když chceš být jedním z nás, musíš si vysloužit uznání.
 //	AI_Output(self,other,"Info_Mine_Sld_11_EinerVonEuchWerden_011_02"); //Go and prove your worth elsewhere, then maybe you'll be allowed to serve in the Hollow.
 //	AI_Output(self,other,"Info_Mine_Sld_11_EinerVonEuchWerden_011_02"); //Beweise dich erst einmal woanders, dann darfst du auch im Kessel Dienst tun.
-	AI_Output(self,other,"Info_Mine_Sld_11_EinerVonEuchWerden_011_02"); //Běž a dělej, jak nejlíp umíš, a pak ti dovolí sloužit v Kotlině.
+	AI_Output(self, other, "Info_Mine_Sld_11_EinerVonEuchWerden_011_02"); //Běž a dělej, jak nejlíp umíš, a pak ti dovolí sloužit v Kotlině.
 };
 
 // *************************************************************************
@@ -91,13 +91,13 @@ func void Info_Mine_Sld_11_WichtigePersonen_Info()
 {
 //	AI_Output(other,self,"Info_Mine_Sld_11_WichtigePersonen_15_00"); //Who gives the orders here?
 //	AI_Output(other,self,"Info_Mine_Sld_11_WichtigePersonen_15_00"); //Wer erteilt hier die Befehle?
-	AI_Output(other,self,"Info_Mine_Sld_11_WichtigePersonen_15_00"); //Kdo tady dává rozkazy?
+	AI_Output(other, self, "Info_Mine_Sld_11_WichtigePersonen_15_00"); //Kdo tady dává rozkazy?
 //	AI_Output(self,other,"Info_Mine_Sld_11_WichtigePersonen_011_01"); //Here in the Hollow, everyone does what Okyl says. He knows all the bigshots in the Camp.
 //	AI_Output(self,other,"Info_Mine_Sld_11_WichtigePersonen_011_01"); //Hier im Kessel läuft alles über Okyl. Er steht mit den wichtigen Leuten im Lager im Kontakt.
-	AI_Output(self,other,"Info_Mine_Sld_11_WichtigePersonen_011_01"); //Tady dělá každý to, co řekne Okyl. Zná tady v táboře všechny.
+	AI_Output(self, other, "Info_Mine_Sld_11_WichtigePersonen_011_01"); //Tady dělá každý to, co řekne Okyl. Zná tady v táboře všechny.
 //	AI_Output(self,other,"Info_Mine_Sld_11_WichtigePersonen_011_02"); //So if you do anything stupid, the water mages in the New Camp will know about it.
 //	AI_Output(self,other,"Info_Mine_Sld_11_WichtigePersonen_011_02"); //Also wenn du hier Mist baust, werden auch die Wassermagier im Neuen Lager davon erfahren.
-	AI_Output(self,other,"Info_Mine_Sld_11_WichtigePersonen_011_02"); //Takže jestli provedeš něco hloupého, mágové Vody v Novém táboře se o tom dovědí.
+	AI_Output(self, other, "Info_Mine_Sld_11_WichtigePersonen_011_02"); //Takže jestli provedeš něco hloupého, mágové Vody v Novém táboře se o tom dovědí.
 };
 
 // *************************************************************************
@@ -125,13 +125,13 @@ func void Info_Mine_Sld_11_DasLager_Info()
 {
 //	AI_Output(other,self,"Info_Mine_Sld_11_DasLager_15_00"); //Anything special go on here?
 //	AI_Output(other,self,"Info_Mine_Sld_11_DasLager_15_00"); //Gibt's hier irgendwas besonderes?
-	AI_Output(other,self,"Info_Mine_Sld_11_DasLager_15_00"); //A nic zvláštního se tu neděje?
+	AI_Output(other, self, "Info_Mine_Sld_11_DasLager_15_00"); //A nic zvláštního se tu neděje?
 //	AI_Output(self,other,"Info_Mine_Sld_11_DasLager_011_01"); //Nothing but a hell of a lot of trouble if you try anything foolish.
 //	AI_Output(self,other,"Info_Mine_Sld_11_DasLager_011_01"); //Hier gibt's nichts außer ´ne ganze Menge Ärger, wenn man uns dumm kommt.
-	AI_Output(self,other,"Info_Mine_Sld_11_DasLager_011_01"); //Nic než pekelné problémy, pokud něco hloupého provedeš.
+	AI_Output(self, other, "Info_Mine_Sld_11_DasLager_011_01"); //Nic než pekelné problémy, pokud něco hloupého provedeš.
 //	AI_Output(self,other,"Info_Mine_Sld_11_DasLager_011_02"); //Oh yeah, and more trouble if you try to get in the mine or the gatehouse without permission.
 //	AI_Output(self,other,"Info_Mine_Sld_11_DasLager_011_02"); //Ach ja, wer versucht ohne Genehmigung in die Mine oder ins Torhaus zu kommen, bekommt auch Ärger.
-	AI_Output(self,other,"Info_Mine_Sld_11_DasLager_011_02"); //Jo, další problémy, pokud se pokusíš dostat do dolu nebo přes bránu bez povolení.
+	AI_Output(self, other, "Info_Mine_Sld_11_DasLager_011_02"); //Jo, další problémy, pokud se pokusíš dostat do dolu nebo přes bránu bez povolení.
 };
 
 // *************************************************************************
@@ -159,16 +159,16 @@ func void Info_Mine_Sld_11_DieLage_Info()
 {
 //	AI_Output(other,self,"Info_Mine_Sld_11_DieLage_15_00"); //How's it going?
 //	AI_Output(other,self,"Info_Mine_Sld_11_DieLage_15_00"); //Wie sieht's aus?
-	AI_Output(other,self,"Info_Mine_Sld_11_DieLage_15_00"); //Jak to jde?
+	AI_Output(other, self, "Info_Mine_Sld_11_DieLage_15_00"); //Jak to jde?
 //	AI_Output(self,other,"Info_Mine_Sld_11_DieLage_011_01"); //It's quiet. A bit too quiet for my liking.
 //	AI_Output(self,other,"Info_Mine_Sld_11_DieLage_011_01"); //Ruhig, für meinen Geschmack etwas zu ruhig.
-	AI_Output(self,other,"Info_Mine_Sld_11_DieLage_011_01"); //Je klid. Až moc klid na můj vkus.
+	AI_Output(self, other, "Info_Mine_Sld_11_DieLage_011_01"); //Je klid. Až moc klid na můj vkus.
 };
 
 // *************************************************************************
 // -------------------------------------------------------------------------
 
-func void B_AssignAmbientInfos_Mine_Sld_11(var c_NPC slf)
+func void B_AssignAmbientInfos_Mine_Sld_11(var C_Npc slf)
 {
 	//B_AssignFindNpcInfos(slf);
 

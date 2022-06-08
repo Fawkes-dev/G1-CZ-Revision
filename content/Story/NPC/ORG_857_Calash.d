@@ -1,4 +1,4 @@
-instance ORG_857_Calash (Npc_Default)
+instance ORG_857_Calash(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -21,32 +21,32 @@ instance ORG_857_Calash (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Relaxed.mds");
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Relaxed.mds");
 	//	body mesh, head mesh, hairmesh, face-tex, hair-tex, skin
-	Mdl_SetVisualBody(self,"hum_body_Naked0",0, 2,"Hum_Head_Pony", 8,  1, ORG_ARMOR_M);
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 0, 2, "Hum_Head_Pony", 8, 1, ORG_ARMOR_M);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_STRONG;
 
 	//-------- Talente --------
 
-	Npc_SetTalentSkill(self,NPC_TALENT_BOW,1);
-	Npc_SetTalentSkill(self,NPC_TALENT_2H,1);
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,1);
+	Npc_SetTalentSkill(self, NPC_TALENT_BOW, 1);
+	Npc_SetTalentSkill(self, NPC_TALENT_2H, 1);
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 1);
 
 	//-------- inventory --------
 
-	CreateInvItem(self,ItFoRice);
-	CreateInvItem(self,ItFoLoaf);
-	CreateInvItems(self,ItMiNugget, 5);
-	CreateInvItem(self,ItFoBooze);
-	CreateInvItem(self,ItKeLockpick);
-	EquipItem(self,ItMw_1H_Mace_War_01);
-	EquipItem(self,ItRw_Bow_Long_01);
-	CreateInvItems(self,ItAmArrow, 10);
+	CreateInvItem(self, ItFoRice);
+	CreateInvItem(self, ItFoLoaf);
+	CreateInvItems(self, ItMiNugget, 5);
+	CreateInvItem(self, ItFoBooze);
+	CreateInvItem(self, ItKeLockpick);
+	EquipItem(self, ItMw_1H_Mace_War_01);
+	EquipItem(self, ItRw_Bow_Long_01);
+	CreateInvItems(self, ItAmArrow, 10);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_prestart_857;
@@ -54,19 +54,18 @@ instance ORG_857_Calash (Npc_Default)
 
 func void Rtn_prestart_857()
 {
- 	TA_Position (00,00,12,00,"OM_85");
-	TA_Position (12,00,24,00,"OM_85");
+	TA_Position(00, 00, 12, 00, "OM_85");
+	TA_Position(12, 00, 24, 00, "OM_85");
 };
 
 func void Rtn_start_857()
 {
-	TA_Position (00,00,12,00,"OM_85");
-	TA_Position (12,00,24,00,"OM_85");
+	TA_Position(00, 00, 12, 00, "OM_85");
+	TA_Position(12, 00, 24, 00, "OM_85");
 };
 
 func void Rtn_OMFull_857()
 {
-	TA_Position (00,00,12,00,"OM_85");
-	TA_Position (12,00,24,00,"OM_85");
+	TA_Position(00, 00, 12, 00, "OM_85");
+	TA_Position(12, 00, 24, 00, "OM_85");
 };
-

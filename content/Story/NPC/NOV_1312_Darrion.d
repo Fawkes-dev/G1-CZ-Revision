@@ -1,4 +1,4 @@
-instance NOV_1312_Darrion (Npc_Default)
+instance NOV_1312_Darrion(Npc_Default)
 {
 	//-------- primary data --------
 	name = "Darrion";
@@ -19,36 +19,35 @@ instance NOV_1312_Darrion (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Mage.mds");
-	//			body mesh     ,bdytex,skin,head mesh     ,headtex,teethtex,ruestung
-	Mdl_SetVisualBody(self,"hum_body_Naked0",1, 2 ,"Hum_Head_Bald", 6 ,  0, NOV_ARMOR_M);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Mage.mds");
+	//			body mesh ,bdytex,skin,head mesh ,headtex,teethtex,ruestung
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 1, 2, "Hum_Head_Bald", 6, 0, NOV_ARMOR_M);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,-1);
+	Mdl_SetModelFatness(self, -1);
 
 	fight_tactic = FAI_HUMAN_STRONG;
 
 	//-------- Talente --------
 
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,1);
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 1);
 
 	//-------- inventory --------
 
-		B_Give_DarrionChapter1Weapons();
+	B_Give_DarrionChapter1Weapons();
 
-	EquipItem(self,ItMw_1H_Axe_Old_01);
+	EquipItem(self, ItMw_1H_Axe_Old_01);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_1312;
 
 	//------------- //MISSIONs-------------
-
 };
 
 //TODO: do we want to use a single function for all NPCs (at the moment each NPC will have unique routine to be less intrusive)
 //'Universal' smithing routine - full on work for 1 hour
-func void NPC_SmithingRoutine_1312 (var int startHour, var int startMin, var string wp) {
+func void NPC_SmithingRoutine_1312(var int startHour, var int startMin, var string wp) {
 	TA_Smith_Fire(startHour, startMin + 00, startHour + 0, startMin + 10, wp);
 	TA_Smith_Anvil(startHour, startMin + 10, startHour + 0, startMin + 20, wp);
 	TA_Smith_Fire(startHour, startMin + 20, startHour + 0, startMin + 30, wp);
@@ -62,7 +61,7 @@ func void Rtn_start_1312()
 	//TODO: there is nothing to sit on next to this NPC anyway ... so TA_SitAround for **5** minutes does not make any sense
 	//NPC is working 24h a day ...
 	//There is an unused hut PSI_26_HUT_IN - where NPC could stay
-	
+
 	//TA_Smith_Fire (08,10,08,20,"PSI_SMITH_03");
 	//TA_Smith_Anvil (08,20,08,30,"PSI_SMITH_03");
 	//TA_Smith_Fire (08,30,08,40,"PSI_SMITH_03");
@@ -256,30 +255,30 @@ func void Rtn_start_1312()
 	//TA_SitAround (08,05,08,10,"PSI_SMITH_03");
 
 	//Use 'universal' smithing routine - full on smithing for 1 hour
-	NPC_SmithingRoutine_1312 (08, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (09, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (10, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (11, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (12, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (13, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (14, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (15, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (16, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (17, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (18, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (19, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (20, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (21, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (22, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (23, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (00, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (01, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (02, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (03, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (04, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (05, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (06, 00, "PSI_SMITH_03");
-	NPC_SmithingRoutine_1312 (07, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(08, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(09, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(10, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(11, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(12, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(13, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(14, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(15, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(16, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(17, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(18, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(19, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(20, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(21, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(22, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(23, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(00, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(01, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(02, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(03, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(04, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(05, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(06, 00, "PSI_SMITH_03");
+	NPC_SmithingRoutine_1312(07, 00, "PSI_SMITH_03");
 };
 
 func void Rtn_PrepareRitual_1312()

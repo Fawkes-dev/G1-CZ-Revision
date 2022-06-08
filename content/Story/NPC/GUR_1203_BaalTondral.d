@@ -1,4 +1,4 @@
-instance GUR_1203_BaalTondral (Npc_Default)
+instance GUR_1203_BaalTondral(Npc_Default)
 {
 	//-------- primary data --------
 	name = "Baal Tondral";
@@ -20,19 +20,19 @@ instance GUR_1203_BaalTondral (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Mage.mds");
-	//			body mesh     ,bdytex,skin,head mesh     ,headtex,teethtex,ruestung
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 1,1 ,"Hum_Head_Psionic", 24,  2, GUR_ARMOR_M);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Mage.mds");
+	//			body mesh ,bdytex,skin,head mesh ,headtex,teethtex,ruestung
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 1, 1, "Hum_Head_Psionic", 24, 2, GUR_ARMOR_M);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,-1);
+	Mdl_SetModelFatness(self, -1);
 
 	//-------- Talente --------
-	Npc_SetTalentSkill(self,NPC_TALENT_MAGE, 6);
+	Npc_SetTalentSkill(self, NPC_TALENT_MAGE, 6);
 
 	//-------- inventory --------
-	CreateInvItem(self,ItArRuneWindfist);
+	CreateInvItem(self, ItArRuneWindfist);
 
 	fight_tactic = FAI_HUMAN_MAGE;
 
@@ -42,7 +42,6 @@ instance GUR_1203_BaalTondral (Npc_Default)
 
 func void Rtn_start_1203()
 {
-	TA_Sleep (23,00,07,45,"PSI_28_HUT_IN");
-	TA_Teaching (07,45,23,00,"PSI_PLATFORM_TEACHER");
+	TA_Sleep(23, 00, 07, 45, "PSI_28_HUT_IN");
+	TA_Teaching(07, 45, 23, 00, "PSI_PLATFORM_TEACHER");
 };
-

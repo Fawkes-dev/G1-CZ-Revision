@@ -15,49 +15,49 @@
 //////////////////////////////////////////////////////////////////////////
 func void B_AssessCaster()
 {
-	PrintDebugNpc (PD_ZS_FRAME, "B_AssessCaster");
+	PrintDebugNpc(PD_ZS_FRAME, "B_AssessCaster");
 	PrintGlobals(PD_ZS_CHECK);
 
 	//-------- Reaktion nur auf Spieler! --------
 	if (!Npc_IsPlayer(other))
 	{
-		PrintDebugNpc (PD_ZS_CHECK, "...Zauberer NICHT der Spieler!");
+		PrintDebugNpc(PD_ZS_CHECK, "...Zauberer NICHT der Spieler!");
 		return;
 	};
 
 	//-------- Freunde ignorieren das Zaubern ! --------
-	if (C_NpcTypeIsFriend(self,other) || (Npc_GetAttitude(self,other)==ATT_FRIENDLY))
+	if (C_NpcTypeIsFriend(self, other) || (Npc_GetAttitude(self, other) == ATT_FRIENDLY))
 	{
-		PrintDebugNpc (PD_ZS_CHECK, "...NSC ist NPCTYPE_FRIEND oder ATT_FRIENDLY!");
+		PrintDebugNpc(PD_ZS_CHECK, "...NSC ist NpcType_Friend oder ATT_FRIENDLY!");
 		return;
 	};
 
 	//-------- Zauberkategorie untersuchen ! --------
-	if (Npc_GetActiveSpellCat(other) == SPELL_BAD  )
+	if (Npc_GetActiveSpellCat(other) == SPELL_BAD)
 	{
-		PrintDebugNpc (PD_ZS_CHECK, "...böser Zauber!");
+		PrintDebugNpc(PD_ZS_CHECK, "...böser Zauber!");
 
 		B_FullStop(self);
-		Npc_PercDisable (self,PERC_ASSESSCASTER);
-		AI_StartState(self,ZS_AssessFighter, 0, "");
+		Npc_PercDisable(self, PERC_ASSESSCASTER);
+		AI_StartState(self, ZS_AssessFighter, 0, "");
 	}
-	else if (Npc_GetAttitude(self,other) == ATT_HOSTILE)
+	else if (Npc_GetAttitude(self, other) == ATT_HOSTILE)
 	{
-		PrintDebugNpc (PD_ZS_CHECK, "...böser Zauberer!");
+		PrintDebugNpc(PD_ZS_CHECK, "...böser Zauberer!");
 
 		B_FullStop(self);
-		AI_StartState(self,ZS_AssessEnemy, 0, ""); //WICHTIG: kein B_AssessEnemy !!!
+		AI_StartState(self, ZS_AssessEnemy, 0, ""); //WICHTIG: kein B_AssessEnemy !!!
 	}
-	else if (Npc_IsInState(self,ZS_GuardPassage) || Npc_WasInState(self,ZS_GuardPassage))
-	&& ((Npc_GetActiveSpell(other) == SPL_SLEEP) || (Npc_GetActiveSpell(other) == SPL_CHARM))
+	else if ((Npc_IsInState(self, ZS_GuardPassage) || Npc_WasInState(self, ZS_GuardPassage))
+	&& ((Npc_GetActiveSpell(other) == SPL_SLEEP) || (Npc_GetActiveSpell(other) == SPL_CHARM)))
 	{
-		PrintDebugNpc (PD_ZS_CHECK, "...Schlaf-/Charmezauber von Durchgangswache gesehen!");
+		PrintDebugNpc(PD_ZS_CHECK, "...Schlaf-/Charmezauber von Durchgangswache gesehen!");
 
 		B_FullStop(self);
-		AI_StartState(self,ZS_AssessEnemy, 0, ""); //WICHTIG: kein B_AssessEnemy !!!
+		AI_StartState(self, ZS_AssessEnemy, 0, ""); //WICHTIG: kein B_AssessEnemy !!!
 	}
 	else
 	{
-		PrintDebugNpc (PD_ZS_CHECK, "...neutraler Zauber");
+		PrintDebugNpc(PD_ZS_CHECK, "...neutraler Zauber");
 	};
 };

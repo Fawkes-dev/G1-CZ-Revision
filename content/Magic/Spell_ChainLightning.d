@@ -7,7 +7,7 @@
 
 func int Spell_Logic_ChainLightning(var int manaInvested)
 {
-	PrintDebugNpc (PD_MAGIC, "Spell_Logic_ChainLightning");
+	PrintDebugNpc(PD_MAGIC, "Spell_Logic_ChainLightning");
 
 	// Bei diesen 3: Standardverhalten: Kann ohne Obergrenze investiert werden.// Logik vom Programm
 	// Windfaust

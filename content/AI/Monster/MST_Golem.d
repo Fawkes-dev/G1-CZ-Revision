@@ -1,8 +1,8 @@
 /*************************************************************************
-** Golem Prototype **
+** Golem prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_Golem(C_Npc)
+prototype Mst_Default_Golem(C_Npc)
 {
 	name = "Golem";
 	guild = GIL_GOLEM;
@@ -51,50 +51,53 @@ PROTOTYPE Mst_Default_Golem(C_Npc)
 
 	aivar[AIV_MM_RestStart] = OnlyRoutine;
 };
+
 //-------------------------------------------------------------
 func void Set_StoneGolem_Visuals()
 {
-	Mdl_SetVisual(self,"Golem.mds");
+	Mdl_SetVisual(self, "Golem.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Gol_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Gol_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
+
 //-------------------------------------------------------------
 func void Set_FireGolem_Visuals()
 {
-	Mdl_SetVisual(self,"Golem.mds");
-	Mdl_ApplyOverlayMds(self,"Golem_Firegolem.mds");
+	Mdl_SetVisual(self, "Golem.mds");
+	Mdl_ApplyOverlayMDS(self, "Golem_Firegolem.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Gol_Fire_Body",DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Gol_Fire_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
+
 //-------------------------------------------------------------
 func void Set_IceGolem_Visuals()
 {
-	Mdl_SetVisual(self,"Golem.mds");
-	Mdl_ApplyOverlayMds(self,"Golem_Icegolem.mds");
+	Mdl_SetVisual(self, "Golem.mds");
+	Mdl_ApplyOverlayMDS(self, "Golem_Icegolem.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Gol_Ice_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Gol_Ice_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Stone Golem   **
+** Stone Golem **
 *************************************************************************/
 
-instance StoneGolem (Mst_Default_Golem)
+instance StoneGolem(Mst_Default_Golem)
 {
 	name = "Stone Golem";
 	aivar[AIV_MM_REAL_ID] = ID_STONEGOLEM;
 	protection [PROT_BLUNT] = 75;
 //--------------------------------------------
 	Set_StoneGolem_Visuals();
-	CreateInvItem(self,ItAt_StoneGolem_01);
-	Npc_SetToFistMode (self);
+	CreateInvItem(self, ItAt_StoneGolem_01);
+	Npc_SetToFistMode(self);
 };
 
 /*************************************************************************
-** Summoned Stone Golem    **
+** Summoned Stone Golem **
 *************************************************************************/
 
-instance SummonedByPC_StoneGolem (Mst_Default_Golem)
+instance SummonedByPC_StoneGolem(Mst_Default_Golem)
 {
 	//-------- general --------
 	name = "Golem";
@@ -113,10 +116,10 @@ instance SummonedByPC_StoneGolem (Mst_Default_Golem)
 	start_aistate = ZS_MM_SummonedByPC;
 	self.aivar[AIV_MM_DistToMaster] = 400;
 	self.aivar[AIV_MM_TimeLooseHP] = 2;
-	self.aivar[AIV_MM_PARTYMEMBER]  = TRUE;
+	self.aivar[AIV_MM_PARTYMEMBER] = TRUE;
 };
 
-instance SummonedByNPC_StoneGolem (Mst_Default_Golem)
+instance SummonedByNPC_StoneGolem(Mst_Default_Golem)
 {
 	//-------- general --------
 	name = "Stone Golem";
@@ -134,9 +137,9 @@ instance SummonedByNPC_StoneGolem (Mst_Default_Golem)
 };
 
 /*************************************************************************
-** Fire Golem   **
+** Fire Golem **
 *************************************************************************/
-instance FireGolem (Mst_Default_Golem)
+instance FireGolem(Mst_Default_Golem)
 {
 	//-------- general --------
 	name = "Fire Golem";
@@ -149,20 +152,20 @@ instance FireGolem (Mst_Default_Golem)
 	//-------- attributes --------
 	attribute [ATR_STRENGTH] = 50; // da Feuerschaden
 	protection [PROT_MAGIC] = 0; // betrifft im wesentlichen die Blitz- und Eiszauber
-	attribute [ATR_HITPOINTS_MAX] = 150;// da er nur durch Blitz- und Eiszauber verwundbar ist, muß dieser Wert hier sehr viel niedriger sein
+	attribute [ATR_HITPOINTS_MAX] = 150; // da er nur durch Blitz- und Eiszauber verwundbar ist, muß dieser Wert hier sehr viel niedriger sein
 	attribute [ATR_HITPOINTS] = 150;
 	damagetype = DAM_FIRE;
 
 	//-------- inventory --------
-	CreateInvItem(self,ItAt_FireGolem_01);
+	CreateInvItem(self, ItAt_FireGolem_01);
 
 	//-------- ai --------
 };
 
 /*************************************************************************
-** Ice Golem   **
+** Ice Golem **
 *************************************************************************/
-instance IceGolem (Mst_Default_Golem)
+instance IceGolem(Mst_Default_Golem)
 {
 	//-------- general --------
 	name = "Ice Golem";
@@ -181,19 +184,19 @@ instance IceGolem (Mst_Default_Golem)
 	damagetype = DAM_BLUNT;
 
 	//-------- inventory --------
-	CreateInvItem(self,ItAt_IceGolem_01);
-	CreateInvItem(self,ItAt_IceGolem_02);
+	CreateInvItem(self, ItAt_IceGolem_01);
+	CreateInvItem(self, ItAt_IceGolem_02);
 
 	//-------- ai --------
 	fight_tactic = FAI_HUMAN_MAGE; // damit der Golem eine "Icecube"-Attack einsetzen kann
 };
 
 /*************************************************************************
-** Bridge Golem   **
+** Bridge Golem **
 *************************************************************************/
 // bewacht die Brücke zur Bergfestung
 // Hinweis im Spiel: sollte mit Keulenwaffen bezwungen werden!
-instance BridgeGolem (Mst_Default_Golem)
+instance BridgeGolem(Mst_Default_Golem)
 {
 	//-------- general --------
 	name = "Bridge Golem";

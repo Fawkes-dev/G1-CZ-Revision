@@ -1,8 +1,8 @@
 /*************************************************************************
-** Sleeper Prototype **
+** Sleeper prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_Sleeper(C_Npc)
+prototype Mst_Default_Sleeper(C_Npc)
 {
 	name = "The Sleeper";
 	guild = GIL_SLF;
@@ -51,18 +51,19 @@ PROTOTYPE Mst_Default_Sleeper(C_Npc)
 
 	//aivar[AIV_MM_RestStart] = OnlyRoutine;
 };
+
 //-------------------------------------------------------------
 func void Set_Sleeper_Visuals()
 {
-	Mdl_SetVisual(self,"Sleeper.mds");
+	Mdl_SetVisual(self, "Sleeper.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Sle_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Sle_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Sleeper    **
+** Sleeper **
 *************************************************************************/
-instance Sleeper (Mst_Default_Sleeper)
+instance Sleeper(Mst_Default_Sleeper)
 {
 	Set_Sleeper_Visuals();
 	Npc_SetToFistMode(self);
@@ -70,6 +71,6 @@ instance Sleeper (Mst_Default_Sleeper)
 
 func void Rtn_start_Sleeper()
 {
-	TA_Sleeper (24,00,06,00,"TPL_395");
-  	TA_Sleeper (06,00,24,00,"TPL_395");
+	TA_Sleeper(24, 00, 06, 00, "TPL_395");
+	TA_Sleeper(06, 00, 24, 00, "TPL_395");
 };

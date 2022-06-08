@@ -54,9 +54,9 @@ func void DIA_Rodriguez_Hello_Info()
 {
 //	AI_Output(other,self,"DIA_Rodriguez_Hello_15_00"); //I'm looking for the High Magician of the Circle of Fire!
 //	AI_Output(other,self,"DIA_Rodriguez_Hello_15_00"); //Ich suche den obersten Magier des Feuers!
-	AI_Output(other,self,"DIA_Rodriguez_Hello_15_00"); //Hledám Nejvyššího mága Ohnivého kruhu.
+	AI_Output(other, self, "DIA_Rodriguez_Hello_15_00"); //Hledám Nejvyššího mága Ohnivého kruhu.
 //	AI_Output(self,other,"DIA_Rodriguez_Hello_12_01"); //Just go to Milten. He deals with gofers like you.
 //	AI_Output(self,other,"DIA_Rodriguez_Hello_12_01"); //Geh zu Milten. Der gibt sich mit Laufburschen wie dir ab.
-	AI_Output(self,other,"DIA_Rodriguez_Hello_12_01"); //Jdi k Miltenovi. Ten se zabývá poslíčky, jako jsi ty.
+	AI_Output(self, other, "DIA_Rodriguez_Hello_12_01"); //Jdi k Miltenovi. Ten se zabývá poslíčky, jako jsi ty.
 	AI_StopProcessInfos(self);
 };

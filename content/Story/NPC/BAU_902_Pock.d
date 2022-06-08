@@ -1,4 +1,4 @@
-instance BAU_902_Pock (Npc_Default)
+instance BAU_902_Pock(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -19,25 +19,25 @@ instance BAU_902_Pock (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Tired.mds");
-	//			body mesh     ,bdytex,skin,head mesh     ,headtex,teethtex,ruestung
-	Mdl_SetVisualBody(self,"hum_body_Naked0",2,1,"Hum_Head_Pony", 3,  2,-1);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Tired.mds");
+	//			body mesh ,bdytex,skin,head mesh ,headtex,teethtex,ruestung
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 2, 1, "Hum_Head_Pony", 3, 2, -1);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 	fight_tactic = FAI_HUMAN_COWARD;
 
 	//-------- Talente --------
 
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,1);
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 1);
 
 	//-------- inventory --------
 
-		CreateInvItems(self,ItFoRice,6);
-		CreateInvItem(self,ItMi_Stuff_Plate_01);
-		CreateInvItem(self,ItFoBooze);
-		EquipItem(self,ItMw_1H_Scythe_01);
+	CreateInvItems(self, ItFoRice, 6);
+	CreateInvItem(self, ItMi_Stuff_Plate_01);
+	CreateInvItem(self, ItFoBooze);
+	EquipItem(self, ItMw_1H_Scythe_01);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_902;
@@ -45,7 +45,6 @@ instance BAU_902_Pock (Npc_Default)
 
 func void Rtn_start_902()
 {
-	TA_Sleep     (20,15,07,15,"NC_PATH_PEASANT_OUTSIDE2"); //CF2
-	TA_PickRice (07,15,20,15,"NC_PATH54_02");
+	TA_Sleep(20, 15, 07, 15, "NC_PATH_PEASANT_OUTSIDE2"); //CF2
+	TA_PickRice(07, 15, 20, 15, "NC_PATH54_02");
 };
-

@@ -1,8 +1,8 @@
 /*************************************************************************
-** Troll Prototype **
+** Troll prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_Troll(C_Npc)
+prototype Mst_Default_Troll(C_Npc)
 {
 	name = "Troll";
 	guild = GIL_TROLL;
@@ -51,29 +51,30 @@ PROTOTYPE Mst_Default_Troll(C_Npc)
 
 	aivar[AIV_MM_RestStart] = OnlyRoutine;
 };
+
 //-------------------------------------------------------------
 
 func void Set_Troll_Visuals()
 {
-	Mdl_SetVisual(self,"Troll.mds");
+	Mdl_SetVisual(self, "Troll.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Tro_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Tro_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Troll    **
+** Troll **
 *************************************************************************/
-instance Troll (Mst_Default_Troll)
+instance Troll(Mst_Default_Troll)
 {
 	Set_Troll_Visuals();
 	Npc_SetToFistMode(self);
 };
 
 /*************************************************************************
-** junger Troll    **
+** junger Troll **
 *************************************************************************/
 
-instance YoungTroll (Mst_Default_Troll)
+instance YoungTroll(Mst_Default_Troll)
 {
 	//-------- general data --------
 	name = "Juvenile Troll";
@@ -84,7 +85,7 @@ instance YoungTroll (Mst_Default_Troll)
 
 	//-------- visuals --------
 	Set_Troll_Visuals();
-	Mdl_SetModelScale(self,0.7, 0.7, 0.7);
+	Mdl_SetModelScale(self, 0.7, 0.7, 0.7);
 
 	//-------- attributes --------
 	attribute [ATR_STRENGTH] = 120;

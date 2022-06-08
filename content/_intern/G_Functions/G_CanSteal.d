@@ -1,12 +1,12 @@
 /*************************************************************************
- *  G_CanSteal
+ * G_CanSteal
  *************************************************************************
  * PRCONDITIONS: self : Burgler
- *  other : Victim
+ * other : Victim
  *************************************************************************/
 func int G_CanSteal()
 {
-	if (( other.npcType != NPCTYPE_FRIEND ) && ( other.npcType != NpcType_Main ))
+	if ((other.npcType != NpcType_Friend) && (other.npcType != NpcType_Main))
 	{
 		return TRUE;
 	}

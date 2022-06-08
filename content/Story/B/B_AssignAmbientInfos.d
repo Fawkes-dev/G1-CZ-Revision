@@ -1,6 +1,6 @@
-func void B_AssignAmbientInfos(var c_NPC amb_self)
+func void B_AssignAmbientInfos(var C_Npc amb_self)
 {
-	if ((amb_self.npctype==NPCTYPE_AMBIENT)||(amb_self.npctype==NPCTYPE_GUARD)) //Alle Ambient-NPCs in den Lagern
+	if ((amb_self.npctype == NPCTYPE_AMBIENT) || (amb_self.npctype == NpcType_Guard)) //Alle Ambient-NPCs in den Lagern
 	{
 		if (amb_self.guild == GIL_VLK)
 		{
@@ -135,7 +135,7 @@ func void B_AssignAmbientInfos(var c_NPC amb_self)
 		};
 	};
 
-	if ((amb_self.npctype==NPCTYPE_MINE_AMBIENT)||(amb_self.npctype==NPCTYPE_MINE_GUARD)) //Alle Ambient-NPCs in den Minen
+	if ((amb_self.npctype == NpcType_Mine_Ambient) || (amb_self.npctype == NpcType_Mine_Guard)) //Alle Ambient-NPCs in den Minen
 	{
 		if (amb_self.guild == GIL_VLK)
 		{

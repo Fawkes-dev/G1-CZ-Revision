@@ -1,9 +1,9 @@
 /*******************************************************************************************
-**  Feuermagier  (Runensteine  und Scrolls)   **
+** Feuermagier(Runensteine und Scrolls) **
 *******************************************************************************************/
 
 // Light (Scrolls und Runen)
-instance ItArRuneLight (C_Item)
+instance ItArRuneLight(C_Item)
 {
 	name = NAME_Rune;
 
@@ -27,7 +27,7 @@ instance ItArRuneLight (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollLight (C_Item)
+instance ItArScrollLight(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -40,8 +40,8 @@ instance ItArScrollLight (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_LIGHT;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_LIGHT;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_LIGHT;
 
 	description = "Light";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -55,7 +55,7 @@ instance ItArScrollLight (C_Item)
 /*******************************************************************************************/
 // Firebolt alias MagicMissile (Scrolls und Runen)
 
-instance ItArRuneFirebolt (C_Item)
+instance ItArRuneFirebolt(C_Item)
 {
 	name = NAME_Rune;
 
@@ -79,7 +79,7 @@ instance ItArRuneFirebolt (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollFirebolt (C_Item)
+instance ItArScrollFirebolt(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -92,8 +92,8 @@ instance ItArScrollFirebolt (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_FIREBOLT;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_FIREBOLT;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_FIREBOLT;
 
 	description = "Fire Bolt";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -107,7 +107,7 @@ instance ItArScrollFirebolt (C_Item)
 /*******************************************************************************************/
 // Fireball (Scrolls und Runen)
 
-instance ItArRuneFireball (C_Item)
+instance ItArRuneFireball(C_Item)
 {
 	name = NAME_Rune;
 
@@ -125,13 +125,13 @@ instance ItArRuneFireball (C_Item)
 	description = "Fireball";
 	TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
 	TEXT [1] = NAME_ManakostenMax; COUNT [1] = SPL_SENDCAST_FIREBALL;
-	TEXT [2] = ConcatStrings(NAME_Dam_Fire,NAME_PerMana); COUNT [2] = SPL_DAMAGE_FIREBALL;
+	TEXT [2] = ConcatStrings(NAME_Dam_Fire, NAME_PerMana); COUNT [2] = SPL_DAMAGE_FIREBALL;
 	//TEXT [3] = ""; COUNT [3] = ;
 	TEXT [4] = NAME_Spell_Load;
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollFireball (C_Item)
+instance ItArScrollFireball(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -144,13 +144,13 @@ instance ItArScrollFireball (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_FIREBALL;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_FIREBALL;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_FIREBALL;
 
 	description = "Fireball";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
 	TEXT [1] = NAME_ManakostenMax; COUNT [1] = SPL_SENDCAST_FIREBALL;
-	TEXT [2] = ConcatStrings(NAME_Dam_Fire,NAME_PerMana); COUNT [2] = SPL_DAMAGE_FIREBALL;
+	TEXT [2] = ConcatStrings(NAME_Dam_Fire, NAME_PerMana); COUNT [2] = SPL_DAMAGE_FIREBALL;
 	//TEXT [3] = ""; COUNT [3] = ;
 	TEXT [4] = NAME_Spell_Load;
 	TEXT [5] = NAME_Value; COUNT [5] = value;
@@ -159,7 +159,7 @@ instance ItArScrollFireball (C_Item)
 /*******************************************************************************************/
 // Firestorm (Scrolls und Runen)
 
-instance ItArRuneFirestorm (C_Item)
+instance ItArRuneFirestorm(C_Item)
 {
 	name = NAME_Rune;
 
@@ -177,13 +177,13 @@ instance ItArRuneFirestorm (C_Item)
 	description = "Storm of Fire";
 	TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
 	TEXT [1] = NAME_ManakostenMax; COUNT [1] = SPL_SENDCAST_FIRESTORM;
-	TEXT [2] = ConcatStrings(NAME_Dam_Fire,NAME_PerMana); COUNT [2] = SPL_DAMAGE_FIRESTORM;
+	TEXT [2] = ConcatStrings(NAME_Dam_Fire, NAME_PerMana); COUNT [2] = SPL_DAMAGE_FIRESTORM;
 	//TEXT [3] = ""; COUNT [3] = ;
 	TEXT [4] = NAME_Spell_Load;
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollFirestorm (C_Item)
+instance ItArScrollFirestorm(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -196,13 +196,13 @@ instance ItArScrollFirestorm (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_FIRESTORM;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_FIRESTORM;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_FIRESTORM;
 
 	description = "Storm of Fire";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
 	TEXT [1] = NAME_ManakostenMax; COUNT [1] = SPL_SENDCAST_FIRESTORM;
-	TEXT [2] = ConcatStrings(NAME_Dam_Fire,NAME_PerMana); COUNT [2] = SPL_DAMAGE_FIRESTORM;
+	TEXT [2] = ConcatStrings(NAME_Dam_Fire, NAME_PerMana); COUNT [2] = SPL_DAMAGE_FIRESTORM;
 	//TEXT [3] = ""; COUNT [3] = ;
 	TEXT [4] = NAME_Spell_Load;
 	TEXT [5] = NAME_Value; COUNT [5] = value;
@@ -211,7 +211,7 @@ instance ItArScrollFirestorm (C_Item)
 /*******************************************************************************************/
 // FireRain (Scrolls und Runen)
 
-instance ItArRuneFireRain (C_Item)
+instance ItArRuneFireRain(C_Item)
 {
 	name = NAME_Rune;
 
@@ -235,7 +235,7 @@ instance ItArRuneFireRain (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollFireRain (C_Item)
+instance ItArScrollFireRain(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -248,8 +248,8 @@ instance ItArScrollFireRain (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_FIRERAIN;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_FIRERAIN;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_FIRERAIN;
 
 	description = "Rain of Fire";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -263,7 +263,7 @@ instance ItArScrollFireRain (C_Item)
 /*******************************************************************************************/
 // Teleport1 (Scrolls und Runen)
 
-instance ItArRuneTeleport1 (C_Item)
+instance ItArRuneTeleport1(C_Item)
 {
 	name = NAME_Rune;
 
@@ -274,14 +274,14 @@ instance ItArRuneTeleport1 (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_TELEPORT1;
-//mag_circle = 4;   //SN: Teleport-Spells müssen auch ohne Circle sprechbar sein!
+//mag_circle = 4; //SN: Teleport-Spells müssen auch ohne Circle sprechbar sein!
 
 	description = "Teleport to the Magicians of Fire";
 	TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
 	TEXT [1] = NAME_Manakosten; COUNT [1] = SPL_SENDCAST_TELEPORT;
 };
 
-instance ItArScrollTeleport1 (C_Item)
+instance ItArScrollTeleport1(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -292,8 +292,8 @@ instance ItArScrollTeleport1 (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_TELEPORT1;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_TELEPORT;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_TELEPORT;
 
 	description = "Teleport to the Magicians of Fire";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -303,7 +303,7 @@ instance ItArScrollTeleport1 (C_Item)
 /*******************************************************************************************/
 // Teleport2 (Scrolls und Runen)
 
-instance ItArRuneTeleport2 (C_Item)
+instance ItArRuneTeleport2(C_Item)
 {
 	name = NAME_Rune;
 
@@ -314,14 +314,14 @@ instance ItArRuneTeleport2 (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_TELEPORT2;
-//mag_circle = 4;   //SN: Teleport-Spells müssen auch ohne Circle sprechbar sein!
+//mag_circle = 4; //SN: Teleport-Spells müssen auch ohne Circle sprechbar sein!
 
 	description = "Teleport to the Magicians of Water";
 	TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
 	TEXT [1] = NAME_Manakosten; COUNT [1] = SPL_SENDCAST_TELEPORT;
 };
 
-instance ItArScrollTeleport2 (C_Item)
+instance ItArScrollTeleport2(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -332,8 +332,8 @@ instance ItArScrollTeleport2 (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_TELEPORT2;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_TELEPORT;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_TELEPORT;
 
 	description = "Teleport to the Magicians of Water";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -343,7 +343,7 @@ instance ItArScrollTeleport2 (C_Item)
 /*******************************************************************************************/
 // Teleport3 (Scrolls und Runen)
 
-instance ItArRuneTeleport3 (C_Item)
+instance ItArRuneTeleport3(C_Item)
 {
 	name = NAME_Rune;
 
@@ -354,14 +354,14 @@ instance ItArRuneTeleport3 (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_TELEPORT3;
-	//mag_circle = 4;   //SN: Teleport-Spells müssen auch ohne Circle sprechbar sein!
+	//mag_circle = 4; //SN: Teleport-Spells müssen auch ohne Circle sprechbar sein!
 
 	description = "Teleport to the Necromancer"; //blaue Rune
 	TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
 	TEXT [1] = NAME_Manakosten; COUNT [1] = SPL_SENDCAST_TELEPORT;
 };
 
-instance ItArScrollTeleport3 (C_Item)
+instance ItArScrollTeleport3(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -372,8 +372,8 @@ instance ItArScrollTeleport3 (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_TELEPORT3;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_TELEPORT;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_TELEPORT;
 
 	description = "Teleport to the Necromancer";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -383,7 +383,7 @@ instance ItArScrollTeleport3 (C_Item)
 /*******************************************************************************************/
 // Teleport4 (nur Scrolls)
 
-instance ItArScrollTeleport4 (C_Item)
+instance ItArScrollTeleport4(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -394,8 +394,8 @@ instance ItArScrollTeleport4 (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_TELEPORT4;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_TELEPORT;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_TELEPORT;
 
 	description = "Orc teleport spell";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = 0;
@@ -405,7 +405,7 @@ instance ItArScrollTeleport4 (C_Item)
 /*******************************************************************************************/
 // Teleport5 (Scrolls und Runen)
 
-instance ItArRuneTeleport5 (C_Item)
+instance ItArRuneTeleport5(C_Item)
 {
 	name = NAME_Rune;
 
@@ -416,14 +416,14 @@ instance ItArRuneTeleport5 (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_TELEPORT5;
-//mag_circle = 4;   //SN: Teleport-Spells müssen auch ohne Circle sprechbar sein!
+//mag_circle = 4; //SN: Teleport-Spells müssen auch ohne Circle sprechbar sein!
 
 	description = "Teleport to the Swamp Camp"; //lila Rune
 	TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
 	TEXT [1] = NAME_Manakosten; COUNT [1] = SPL_SENDCAST_TELEPORT;
 };
 
-instance ItArScrollTeleport5 (C_Item)
+instance ItArScrollTeleport5(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -434,8 +434,8 @@ instance ItArScrollTeleport5 (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_TELEPORT5;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_TELEPORT;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_TELEPORT;
 
 	description = "Teleport to the Swamp Camp";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -443,12 +443,12 @@ instance ItArScrollTeleport5 (C_Item)
 };
 
 /*******************************************************************************************
-**  Wassermagier  (Runensteine  und Scrolls)   **
+** Wassermagier(Runensteine und Scrolls) **
 *******************************************************************************************/
 
 // Heal (Scrolls und Runen)
 
-instance ItArRuneHeal (C_Item)
+instance ItArRuneHeal(C_Item)
 {
 	name = NAME_Rune;
 
@@ -472,7 +472,7 @@ instance ItArRuneHeal (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollHeal (C_Item)
+instance ItArScrollHeal(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -485,8 +485,8 @@ instance ItArScrollHeal (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_HEAL;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_HEALING_HP_PER_MP;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_HEALING_HP_PER_MP;
 
 	description = "Healing";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -501,7 +501,7 @@ instance ItArScrollHeal (C_Item)
 
 // Verwandlung (nur Scrolls)
 
-instance ItArScrollTrfBloodfly (C_Item)
+instance ItArScrollTrfBloodfly(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -513,9 +513,9 @@ instance ItArScrollTrfBloodfly (C_Item)
 	visual = "ItAr_Scroll_01.3DS";
 	material = MAT_STONE;
 
-	spell     = SPL_TRF_BLOODFLY;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_TRF_BLOODFLY;
+	spell = SPL_TRF_BLOODFLY;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_TRF_BLOODFLY;
 
 	description = "Transform into Bloodfly";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -526,7 +526,7 @@ instance ItArScrollTrfBloodfly (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollTrfCrawler (C_Item)
+instance ItArScrollTrfCrawler(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -539,8 +539,8 @@ instance ItArScrollTrfCrawler (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_TRF_CRAWLER;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_TRF_CRAWLER;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_TRF_CRAWLER;
 
 	description = "Transform into Minecrawler";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -551,7 +551,7 @@ instance ItArScrollTrfCrawler (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollTrfLurker (C_Item)
+instance ItArScrollTrfLurker(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -564,8 +564,8 @@ instance ItArScrollTrfLurker (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_TRF_LURKER;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_TRF_LURKER;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_TRF_LURKER;
 
 	description = "Transform into Lurker";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -576,7 +576,7 @@ instance ItArScrollTrfLurker (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollTrfMeatbug (C_Item)
+instance ItArScrollTrfMeatbug(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -589,8 +589,8 @@ instance ItArScrollTrfMeatbug (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_TRF_MEATBUG;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_TRF_MEATBUG;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_TRF_MEATBUG;
 
 	description = "Transform into Meatbug";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -601,7 +601,7 @@ instance ItArScrollTrfMeatbug (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollTrfMolerat (C_Item)
+instance ItArScrollTrfMolerat(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -614,8 +614,8 @@ instance ItArScrollTrfMolerat (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_TRF_MOLERAT;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_TRF_MOLERAT;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_TRF_MOLERAT;
 
 	description = "Transform into Molerat";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -626,7 +626,7 @@ instance ItArScrollTrfMolerat (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollTrfOrcdog (C_Item)
+instance ItArScrollTrfOrcdog(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -639,8 +639,8 @@ instance ItArScrollTrfOrcdog (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_TRF_ORCDOG;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_TRF_ORCDOG;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_TRF_ORCDOG;
 
 	description = "Transform into Orc Dog";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -651,7 +651,7 @@ instance ItArScrollTrfOrcdog (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollTrfScavenger (C_Item)
+instance ItArScrollTrfScavenger(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -664,8 +664,8 @@ instance ItArScrollTrfScavenger (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_TRF_SCAVENGER;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_TRF_SCAVENGER;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_TRF_SCAVENGER;
 
 	description = "Transform into Scavenger";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -676,7 +676,7 @@ instance ItArScrollTrfScavenger (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollTrfShadowbeast (C_Item)
+instance ItArScrollTrfShadowbeast(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -689,8 +689,8 @@ instance ItArScrollTrfShadowbeast (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_TRF_SHADOWBEAST;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_TRF_SHADOWBEAST;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_TRF_SHADOWBEAST;
 
 	description = "Transform into Shadowbeast";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -701,7 +701,7 @@ instance ItArScrollTrfShadowbeast (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollTrfSnapper (C_Item)
+instance ItArScrollTrfSnapper(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -714,8 +714,8 @@ instance ItArScrollTrfSnapper (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_TRF_SNAPPER;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_TRF_SNAPPER;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_TRF_SNAPPER;
 
 	description = "Transform into Snapper";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -726,7 +726,7 @@ instance ItArScrollTrfSnapper (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollTrfWaran (C_Item)
+instance ItArScrollTrfWaran(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -739,8 +739,8 @@ instance ItArScrollTrfWaran (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_TRF_WARAN;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_TRF_WARAN;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_TRF_WARAN;
 
 	description = "Transform into Lizard";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -751,7 +751,7 @@ instance ItArScrollTrfWaran (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollTrfWolf (C_Item)
+instance ItArScrollTrfWolf(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -764,8 +764,8 @@ instance ItArScrollTrfWolf (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_TRF_WOLF;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_TRF_WOLF;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_TRF_WOLF;
 
 	description = "Transform into Wolf";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -779,7 +779,7 @@ instance ItArScrollTrfWolf (C_Item)
 /*******************************************************************************************/
 // Chain-Lightning (Scrolls und Runen)
 
-instance ItArRuneChainLightning (C_Item)
+instance ItArRuneChainLightning(C_Item)
 {
 	name = NAME_Rune;
 
@@ -803,7 +803,7 @@ instance ItArRuneChainLightning (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollChainLightning (C_Item)
+instance ItArScrollChainLightning(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -830,7 +830,7 @@ instance ItArScrollChainLightning (C_Item)
 /*******************************************************************************************/
 // Thunderbolt (Scrolls und Runen)
 
-instance ItArRuneThunderbolt (C_Item)
+instance ItArRuneThunderbolt(C_Item)
 {
 	name = NAME_Rune;
 
@@ -855,7 +855,7 @@ instance ItArRuneThunderbolt (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollThunderbolt (C_Item)
+instance ItArScrollThunderbolt(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -868,8 +868,8 @@ instance ItArScrollThunderbolt (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_THUNDERBOLT;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_THUNDERBOLT;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_THUNDERBOLT;
 
 	description = "Ice Bolt";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -883,7 +883,7 @@ instance ItArScrollThunderbolt (C_Item)
 /*******************************************************************************************/
 // Thunderball (Scrolls und Runen)
 
-instance ItArRuneThunderball (C_Item)
+instance ItArRuneThunderball(C_Item)
 {
 	name = NAME_Rune;
 
@@ -901,13 +901,13 @@ instance ItArRuneThunderball (C_Item)
 	description = "Ball Lightning";
 	TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
 	TEXT [1] = NAME_ManakostenMax; COUNT [1] = SPL_SENDCAST_THUNDERBALL;
-	TEXT [2] = ConcatStrings(NAME_Dam_Magic,NAME_PerMana); COUNT [2] = SPL_DAMAGE_THUNDERBALL;
+	TEXT [2] = ConcatStrings(NAME_Dam_Magic, NAME_PerMana); COUNT [2] = SPL_DAMAGE_THUNDERBALL;
 	//TEXT [3] = ""; COUNT [3] = ;
 	TEXT [4] = NAME_Spell_Load;
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollThunderball (C_Item)
+instance ItArScrollThunderball(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -920,13 +920,13 @@ instance ItArScrollThunderball (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_THUNDERBALL;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_THUNDERBALL;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_THUNDERBALL;
 
 	description = "Ball Lightning";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
 	TEXT [1] = NAME_ManakostenMax; COUNT [1] = SPL_SENDCAST_THUNDERBALL;
-	TEXT [2] = ConcatStrings(NAME_Dam_Magic,NAME_PerMana); COUNT [2] = SPL_DAMAGE_THUNDERBALL;
+	TEXT [2] = ConcatStrings(NAME_Dam_Magic, NAME_PerMana); COUNT [2] = SPL_DAMAGE_THUNDERBALL;
 	//TEXT [3] = ""; COUNT [3] = ;
 	TEXT [4] = NAME_Spell_Load;
 	TEXT [5] = NAME_Value; COUNT [5] = value;
@@ -935,7 +935,7 @@ instance ItArScrollThunderball (C_Item)
 /*******************************************************************************************/
 // IceCube (Scrolls und Runen)
 
-instance ItArRuneIceCube (C_Item)
+instance ItArRuneIceCube(C_Item)
 {
 	name = NAME_Rune;
 
@@ -959,7 +959,7 @@ instance ItArRuneIceCube (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollIceCube (C_Item)
+instance ItArScrollIceCube(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -972,8 +972,8 @@ instance ItArScrollIceCube (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_ICECUBE;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_ICECUBE;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_ICECUBE;
 
 	description = "Ice Block";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -987,7 +987,7 @@ instance ItArScrollIceCube (C_Item)
 /*******************************************************************************************/
 // IceWave (Scrolls und Runen)
 
-instance ItArRuneIceWave (C_Item)
+instance ItArRuneIceWave(C_Item)
 {
 	name = NAME_Rune;
 
@@ -1011,7 +1011,7 @@ instance ItArRuneIceWave (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollIceWave (C_Item)
+instance ItArScrollIceWave(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -1024,8 +1024,8 @@ instance ItArScrollIceWave (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_ICEWAVE;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_ICEWAVE;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_ICEWAVE;
 
 	description = "Wave of Ice";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -1037,12 +1037,12 @@ instance ItArScrollIceWave (C_Item)
 };
 
 /*******************************************************************************************
-**  Dämonenbeschwörer  (Runensteine  und Scrolls)   **
+** Dämonenbeschwörer(Runensteine und Scrolls) **
 *******************************************************************************************/
 
 // Summon Demon (Scrolls)
 
-instance ItArScrollSummonDemon (C_Item)
+instance ItArScrollSummonDemon(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -1055,8 +1055,8 @@ instance ItArScrollSummonDemon (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_SUMMONDEMON;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_SUMMONDEMON;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_SUMMONDEMON;
 
 	description = "Summon Demon";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -1070,7 +1070,7 @@ instance ItArScrollSummonDemon (C_Item)
 /*******************************************************************************************/
 // Summon Skeletons (Scrolls)
 
-instance ItArScrollSummonSkeletons (C_Item)
+instance ItArScrollSummonSkeletons(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -1083,8 +1083,8 @@ instance ItArScrollSummonSkeletons (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_SUMMONSKELETON;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_SUMMONSKELETON;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_SUMMONSKELETON;
 
 	description = "Summon Skeletons";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -1098,7 +1098,7 @@ instance ItArScrollSummonSkeletons (C_Item)
 /*******************************************************************************************/
 // Summon Golem (Scrolls)
 
-instance ItArScrollSummonGolem (C_Item)
+instance ItArScrollSummonGolem(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -1111,8 +1111,8 @@ instance ItArScrollSummonGolem (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_SUMMONGOLEM;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_SUMMONGOLEM;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_SUMMONGOLEM;
 
 	description = "Summon Golem";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -1126,7 +1126,7 @@ instance ItArScrollSummonGolem (C_Item)
 /*******************************************************************************************/
 // Army of Darkness (Scrolls)
 
-instance ItArScrollArmyOfDarkness (C_Item)
+instance ItArScrollArmyOfDarkness(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -1139,8 +1139,8 @@ instance ItArScrollArmyOfDarkness (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_ARMYOFDARKNESS;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_ARMYOFDARKNESS;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_ARMYOFDARKNESS;
 
 	description = "Army of Darkness";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -1154,7 +1154,7 @@ instance ItArScrollArmyOfDarkness (C_Item)
 /*******************************************************************************************/
 // Destroy Undead (Scrolls und Runen)
 
-instance ItArRuneDestroyUndead (C_Item)
+instance ItArRuneDestroyUndead(C_Item)
 {
 	name = NAME_Rune;
 
@@ -1178,7 +1178,7 @@ instance ItArRuneDestroyUndead (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollDestroyUndead (C_Item)
+instance ItArScrollDestroyUndead(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -1191,8 +1191,8 @@ instance ItArScrollDestroyUndead (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_DESTROYUNDEAD;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_DESTROYUNDEAD;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_DESTROYUNDEAD;
 
 	description = "Death to the Undead";
 	TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -1204,12 +1204,12 @@ instance ItArScrollDestroyUndead (C_Item)
 };
 
 /*******************************************************************************************
-**  PSI-Sprüche (Runen und Scrolls)   **
+** PSI - Sprüche(Runen und Scrolls) **
 *******************************************************************************************/
 
 // Windfist (Scrolls und Runen)
 
-instance ItArRuneWindfist (C_Item)
+instance ItArRuneWindfist(C_Item)
 {
 	name = NAME_Rune;
 
@@ -1227,13 +1227,13 @@ instance ItArRuneWindfist (C_Item)
 	description = "Fist of Wind";
 	TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
 	TEXT [1] = NAME_ManakostenMax; COUNT [1] = SPL_SENDCAST_WINDFIST;
-	TEXT [2] = ConcatStrings(NAME_Dam_Fly,NAME_PerMana); COUNT [2] = SPL_DAMAGE_WINDFIST;
+	TEXT [2] = ConcatStrings(NAME_Dam_Fly, NAME_PerMana); COUNT [2] = SPL_DAMAGE_WINDFIST;
 	//TEXT [3] = ""; COUNT [3] = ;
 	TEXT [4] = NAME_Spell_Load;
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollWindfist (C_Item)
+instance ItArScrollWindfist(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -1246,13 +1246,13 @@ instance ItArScrollWindfist (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_WINDFIST;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_WINDFIST;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_WINDFIST;
 
 	description = "Fist of Wind";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
 	TEXT [1] = NAME_ManakostenMax; COUNT [1] = SPL_SENDCAST_WINDFIST;
-	TEXT [2] = ConcatStrings(NAME_Dam_Fly,NAME_PerMana); COUNT [2] = SPL_DAMAGE_WINDFIST;
+	TEXT [2] = ConcatStrings(NAME_Dam_Fly, NAME_PerMana); COUNT [2] = SPL_DAMAGE_WINDFIST;
 	//TEXT [3] = ""; COUNT [3] = ;
 	TEXT [4] = NAME_Spell_Load;
 	TEXT [5] = NAME_Value; COUNT [5] = value;
@@ -1261,7 +1261,7 @@ instance ItArScrollWindfist (C_Item)
 /*******************************************************************************************/
 // Stormfist (Scrolls und Runen)
 
-instance ItArRuneStormfist (C_Item)
+instance ItArRuneStormfist(C_Item)
 {
 	name = NAME_Rune;
 
@@ -1279,13 +1279,13 @@ instance ItArRuneStormfist (C_Item)
 	description = "Storm Fist";
 	TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
 	TEXT [1] = NAME_ManakostenMax; COUNT [1] = SPL_SENDCAST_STORMFIST;
-	TEXT [2] = ConcatStrings(NAME_Dam_Fly,NAME_PerMana); COUNT [2] = SPL_DAMAGE_STORMFIST;
+	TEXT [2] = ConcatStrings(NAME_Dam_Fly, NAME_PerMana); COUNT [2] = SPL_DAMAGE_STORMFIST;
 	//TEXT [3] = ""; COUNT [3] = ;
 	TEXT [4] = NAME_Spell_Load;
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollStormfist (C_Item)
+instance ItArScrollStormfist(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -1298,13 +1298,13 @@ instance ItArScrollStormfist (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_STORMFIST;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_STORMFIST;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_STORMFIST;
 
 	description = "Storm Fist";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
 	TEXT [1] = NAME_ManakostenMax; COUNT [1] = SPL_SENDCAST_STORMFIST;
-	TEXT [2] = ConcatStrings(NAME_Dam_Fly,NAME_PerMana); COUNT [2] = SPL_DAMAGE_STORMFIST;
+	TEXT [2] = ConcatStrings(NAME_Dam_Fly, NAME_PerMana); COUNT [2] = SPL_DAMAGE_STORMFIST;
 	//TEXT [3] = ""; COUNT [3] = ;
 	TEXT [4] = NAME_Spell_Load;
 	TEXT [5] = NAME_Value; COUNT [5] = value;
@@ -1313,7 +1313,7 @@ instance ItArScrollStormfist (C_Item)
 /*******************************************************************************************/
 // Telekinesis (Scrolls und Runen)
 
-instance ItArRuneTelekinesis (C_Item)
+instance ItArRuneTelekinesis(C_Item)
 {
 	name = NAME_Rune;
 
@@ -1335,10 +1335,9 @@ instance ItArRuneTelekinesis (C_Item)
 	//TEXT [3] = ""; COUNT [3] = ;
 	TEXT [4] = NAME_Spell_Invest;
 	TEXT [5] = NAME_Value; COUNT [5] = value;
-
 };
 
-instance ItArScrollTelekinesis (C_Item)
+instance ItArScrollTelekinesis(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -1351,8 +1350,8 @@ instance ItArScrollTelekinesis (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_TELEKINESIS;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = 10;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = 10;
 
 	description = "Telekinesis";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -1366,7 +1365,7 @@ instance ItArScrollTelekinesis (C_Item)
 /*******************************************************************************************/
 // Charm (Scrolls und Runen)
 
-instance ItArRuneCharm (C_Item)
+instance ItArRuneCharm(C_Item)
 {
 	name = NAME_Rune;
 
@@ -1390,7 +1389,7 @@ instance ItArRuneCharm (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollCharm (C_Item)
+instance ItArScrollCharm(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -1403,8 +1402,8 @@ instance ItArScrollCharm (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_CHARM;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_CHARM;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_CHARM;
 
 	description = "Charm";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -1418,7 +1417,7 @@ instance ItArScrollCharm (C_Item)
 /*******************************************************************************************/
 // Sleep (Scrolls)
 
-instance ItArRuneSleep (C_Item)
+instance ItArRuneSleep(C_Item)
 {
 	name = NAME_Rune;
 
@@ -1442,7 +1441,7 @@ instance ItArRuneSleep (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollSleep (C_Item)
+instance ItArScrollSleep(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -1455,8 +1454,8 @@ instance ItArScrollSleep (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_SLEEP;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_SLEEP;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_SLEEP;
 
 	description = "Sleep";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -1470,7 +1469,7 @@ instance ItArScrollSleep (C_Item)
 /*******************************************************************************************/
 // Pyrokinesis (Scrolls und Runen)
 
-instance ItArRunePyrokinesis (C_Item)
+instance ItArRunePyrokinesis(C_Item)
 {
 	name = NAME_Rune;
 
@@ -1494,7 +1493,7 @@ instance ItArRunePyrokinesis (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollPyrokinesis (C_Item)
+instance ItArScrollPyrokinesis(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -1507,8 +1506,8 @@ instance ItArScrollPyrokinesis (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_PYROKINESIS;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = 10;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = 10;
 
 	description = "Pyrokinesis";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -1522,7 +1521,7 @@ instance ItArScrollPyrokinesis (C_Item)
 /*******************************************************************************************/
 // Control (Scrolls und Runen)
 
-instance ItArRuneControl (C_Item)
+instance ItArRuneControl(C_Item)
 {
 	name = NAME_Rune;
 
@@ -1546,7 +1545,7 @@ instance ItArRuneControl (C_Item)
 	TEXT [5] = NAME_Value; COUNT [5] = value;
 };
 
-instance ItArScrollControl (C_Item)
+instance ItArScrollControl(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -1559,8 +1558,8 @@ instance ItArScrollControl (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_CONTROL;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = 30;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = 30;
 
 	description = "Control";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -1574,7 +1573,7 @@ instance ItArScrollControl (C_Item)
 /*******************************************************************************************/
 // Fear (nur Scrolls )
 
-instance ItArScrollFear (C_Item)
+instance ItArScrollFear(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -1587,8 +1586,8 @@ instance ItArScrollFear (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_FEAR;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_FEAR;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_FEAR;
 
 	description = "Fear";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -1602,7 +1601,7 @@ instance ItArScrollFear (C_Item)
 /******************************************************************************************/
 // Berzerk (nur Scrolls )
 
-instance ItArScrollBerzerk (C_Item)
+instance ItArScrollBerzerk(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -1615,8 +1614,8 @@ instance ItArScrollBerzerk (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_BERZERK;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_BERZERK;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_BERZERK;
 
 	description = "Rage";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;
@@ -1630,7 +1629,7 @@ instance ItArScrollBerzerk (C_Item)
 /*******************************************************************************************/
 // Breath of Death (nur Rune )
 
-instance ItArRuneBreathOfDeath (C_Item)
+instance ItArRuneBreathOfDeath(C_Item)
 {
 	name = NAME_Rune;
 
@@ -1657,7 +1656,7 @@ instance ItArRuneBreathOfDeath (C_Item)
 /*******************************************************************************************/
 // Shrink (nur Scrolls )
 
-instance ItArScrollShrink (C_Item)
+instance ItArScrollShrink(C_Item)
 {
 	name = NAME_Spruchrolle;
 
@@ -1670,8 +1669,8 @@ instance ItArScrollShrink (C_Item)
 	material = MAT_STONE;
 
 	spell = SPL_SHRINK;
-	cond_atr[2]   = ATR_MANA_MAX;
-	cond_value[2]  = SPL_SENDCAST_SHRINK;
+	cond_atr[2] = ATR_MANA_MAX;
+	cond_value[2] = SPL_SENDCAST_SHRINK;
 
 	description = "Shrink Monster";
 	//TEXT [0] = NAME_Mag_Circle; COUNT [0] = mag_circle;

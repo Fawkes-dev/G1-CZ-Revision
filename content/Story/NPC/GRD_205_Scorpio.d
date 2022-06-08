@@ -1,4 +1,4 @@
-instance Grd_205_Scorpio (Npc_Default)
+instance Grd_205_Scorpio(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -14,35 +14,35 @@ instance Grd_205_Scorpio (Npc_Default)
 	attribute[ATR_DEXTERITY] = 50;
 	attribute[ATR_MANA_MAX] = 0;
 	attribute[ATR_MANA] = 0;
-	attribute[ATR_HITPOINTS_MAX]= 220;
+	attribute[ATR_HITPOINTS_MAX] = 220;
 	attribute[ATR_HITPOINTS] = 220;
 
 	//-------- visuals --------
 	// 			animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Militia.mds");
-	//			body mesh     ,bdytex,skin,head mesh     ,headtex,teethtex,ruestung
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 0, 1,"Hum_Head_Fighter", 18, 2, GRD_ARMOR_M);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Militia.mds");
+	//			body mesh ,bdytex,skin,head mesh ,headtex,teethtex,ruestung
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 0, 1, "Hum_Head_Fighter", 18, 2, GRD_ARMOR_M);
 
 	B_Scale(self);
-		Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
-		self.aivar[AIV_IMPORTANT] = TRUE;
+	self.aivar[AIV_IMPORTANT] = TRUE;
 
-		fight_tactic = FAI_HUMAN_STRONG;
+	fight_tactic = FAI_HUMAN_STRONG;
 
 	//-------- Talente --------
 
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,2);
-	Npc_SetTalentSkill(self,NPC_TALENT_2H,1);
-	Npc_SetTalentSkill(self,NPC_TALENT_CROSSBOW,1);
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 2);
+	Npc_SetTalentSkill(self, NPC_TALENT_2H, 1);
+	Npc_SetTalentSkill(self, NPC_TALENT_CROSSBOW, 1);
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1H_Sword_03);
+	EquipItem(self, ItMw_1H_Sword_03);
 
-	CreateInvItems(self,ItMiNugget,200);
-	CreateInvItems(self,ItFo_Potion_Health_02,5);
+	CreateInvItems(self, ItMiNugget, 200);
+	CreateInvItems(self, ItFo_Potion_Health_02, 5);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_205;
@@ -50,21 +50,23 @@ instance Grd_205_Scorpio (Npc_Default)
 
 func void Rtn_start_205()
 {
-	TA_Boss (07,25,20,00,"OCC_CENTER_4");
-	TA_Smalltalk (20,00,01,00,"OCC_STABLE_ENTRANCE_INSERT"); //mit Stone
+	TA_Boss(07, 25, 20, 00, "OCC_CENTER_4");
+	TA_Smalltalk(20, 00, 01, 00, "OCC_STABLE_ENTRANCE_INSERT"); //mit Stone
 	//[BugFix]: overlapping daily routines
 	//TA_Sleep (20,00,07,25,"OCC_MERCS_UPPER_RIGHT_ROOM_BED4");
-	TA_Sleep (01,00,07,25,"OCC_MERCS_UPPER_RIGHT_ROOM_BED4");
+	TA_Sleep(01, 00, 07, 25, "OCC_MERCS_UPPER_RIGHT_ROOM_BED4");
 };
+
 /*
 func void Rtn_OT_205()
 {
-	TA_Guard (07,00,20,00,"OCC_WELL_FRONT");
-	TA_Guard (20,00,07,00,"OCC_WELL_FRONT");
+	TA_Guard(07, 00, 20, 00, "OCC_WELL_FRONT");
+	TA_Guard(20, 00, 07, 00, "OCC_WELL_FRONT");
 };
+
 */
 func void Rtn_Bannished_205()
 {
-	TA_Stay (07,00,20,00,"OW_CAVALORN_01");
-	TA_Stay (20,00,07,00,"OW_CAVALORN_01");
+	TA_Stay(07, 00, 20, 00, "OW_CAVALORN_01");
+	TA_Stay(20, 00, 07, 00, "OW_CAVALORN_01");
 };

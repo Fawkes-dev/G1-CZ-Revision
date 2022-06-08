@@ -1,20 +1,20 @@
 func void ZS_OrcSlave_AssessDamage()
 {
-	PrintDebugNpc( PD_ORC_FRAME, "ZS_OrcSlave_AssessDamage: Weglaufen ");
+	PrintDebugNpc(PD_ORC_FRAME, "ZS_OrcSlave_AssessDamage: Weglaufen ");
 
-	AI_TurnToNpc(self,other);
+	AI_TurnToNpc(self, other);
 	AI_Dodge(self);
-	AI_PlayAni(self,"T_FRIGHTENED");
+	AI_PlayAni(self, "T_FRIGHTENED");
 
 	//festlegen, vor wem gefluechtet werden soll
-	Npc_SetTarget(self,other);
+	Npc_SetTarget(self, other);
 };
 
 func int ZS_OrcSlave_AssessDamage_Loop()
 {
-	PrintDebugNpc( PD_ORC_FRAME, "ZS_OrcSlave_AssessDamage_Loop: Weglaufen ");
+	PrintDebugNpc(PD_ORC_FRAME, "ZS_OrcSlave_AssessDamage_Loop: Weglaufen ");
 
-	if (Npc_GetDistToNpc(self,other ) > 1200 )
+	if (Npc_GetDistToNpc(self, other) > 1200)
 	{
 		//schluss jetzt mit weglaufen
 		return 1;
@@ -26,7 +26,7 @@ func int ZS_OrcSlave_AssessDamage_Loop()
 
 func void ZS_OrcSlave_AssessDamage_End()
 {
-	PrintDebugNpc( PD_ORC_FRAME, "ZS_OrcSlave_AssessDamage_End");
+	PrintDebugNpc(PD_ORC_FRAME, "ZS_OrcSlave_AssessDamage_End");
 
 	Npc_ClearAIQueue(self);
 	AI_StandUp(self);

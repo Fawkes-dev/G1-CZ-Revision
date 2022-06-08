@@ -1,6 +1,7 @@
 func void ExternalsTest()
 {
 };
+
 //func void ExternalsTest()
 //{
 //	Print ( "ExternalsTest");
@@ -15,7 +16,7 @@ func void ExternalsTest()
 //	Mdl_SetModelScale (self,1.5, 1.5, 1.5);
 //	Mdl_SetModelFatness(self,0.75);
 //
-//	Mdl_ApplyOverlayMds(self,"HumanS_WalkA2.MDS");
+//	Mdl_ApplyOverlayMDS(self,"HumanS_WalkA2.MDS");
 //
 //	Wld_InsertNpc ( Sld1_Testmodell, "WP_MOBSIROOM");
 //
@@ -60,7 +61,7 @@ func void ExternalsTest()
 //	};
 //
 //	Npc_GiveItem (self,ItFoBooze, other);
-//	if (HLP_ISITEM (item,2HandSld1))
+//	if (Hlp_IsItem (item,2HandSld1))
 //	{
 //		PrintDebug ("2HandSld1 ist 2HandSld1");
 //	};
@@ -98,7 +99,7 @@ func void ExternalsTest()
 //	};
 //
 //	// *******************************************************************************************
-//	// ***                                     PLAYER                                          ***
+//	// *** PLAYER ***
 //	// *******************************************************************************************
 //
 //	if (!Npc_IsPlayer(other))
@@ -115,9 +116,9 @@ func void ExternalsTest()
 //		PrintDebug ("Wld_DetectPlayer");
 //	};
 //
-//	var C_Npc hlp_getnpc;
-//	hlp_getnpc = Hlp_GetNpc(Sld1_Testmodell);
-//	if (hlp_getnpc  == other)
+//	var C_Npc Hlp_GetNpc;
+//	Hlp_GetNpc = Hlp_GetNpc(Sld1_Testmodell);
+//	if (Hlp_GetNpc == other)
 //	{
 //		PrintDebug ("Hlp_GetNpc Sld1_Testmodell detected");
 //	};
@@ -138,13 +139,13 @@ func void ExternalsTest()
 //	AI_PointAtNpc (self,other);
 //	AI_StopPointAt (self);
 //
-//	var int hlp_random;
-//	hlp_random = HLP_RANDOM (3);
-//	if ( hlp_random == 1)
+//	var int Hlp_Random;
+//	Hlp_Random = Hlp_Random (3);
+//	if ( Hlp_Random == 1)
 //	{
 //		PrintDebug ( "HLP_RANDOM = 1");
 //	}
-//	else if ( hlp_random == 2)
+//	else if ( Hlp_Random == 2)
 //	{
 //		PrintDebug ( "HLP_RANDOM = 2");
 //	}
@@ -176,7 +177,7 @@ func void ExternalsTest()
 //		PrintDebug ( "Wld_IsTime = True");
 //	};
 //
-//	AI_SetWalkmode(self,NPC_RUN);
+//	AI_SetWalkMode(self,NPC_RUN);
 //
 //	AI_GotoWP (self,"WP_CAULDRON");
 //
@@ -267,7 +268,7 @@ func void ExternalsTest()
 //		PrintDebug ( "Npc_CheckInfo");
 //	};
 //
-//	if (NPC_GiveInfo (self,1))
+//	if (Npc_GiveInfo (self,1))
 //	{
 //		PrintDebug ("Npc_GiveInfo");
 //	};
@@ -310,7 +311,7 @@ func void ExternalsTest()
 //	};
 //
 //	// *******************************************************************************************
-//	// ***                                       TALENTE                                       ***
+//	// *** TALENTE ***
 //	// *******************************************************************************************
 //
 // 	if (Npc_HasTalent (self,TAL_SNEAK))
@@ -338,7 +339,7 @@ func void ExternalsTest()
 // 	};
 //
 //	// *******************************************************************************************
-//	// ***                                      ATTRIBUTE                                      ***
+//	// *** ATTRIBUTE ***
 //	// *******************************************************************************************
 //
 //	var int attribute;
@@ -359,7 +360,7 @@ func void ExternalsTest()
 //		PrintDebug ("Npc_CanSeeNpcFreeLOS");
 //	};
 //	// *******************************************************************************************
-//	// ***                             GILDEN / ATTITUEDEN / KENNE SC                          ***
+//	// *** GILDEN / ATTITUEDEN / KENNE SC ***
 //	// *******************************************************************************************
 //
 //	if (Npc_GetTrueGuild(self) == GIL_SLD )
@@ -433,14 +434,14 @@ func void ExternalsTest()
 //	};
 //
 //	// ------------------------------------------ TRUHEN -----------------------------------------
-//// 	Mob_CreateItems (var STRING mobName, ItFoBeer,1);
+//// 	Mob_CreateItems (var string mobName, ItFoBeer,1);
 //
 //  	if (Mob_HasItems ("OC_CRATE_LARGE", ItFoBeer ) >0)
 //  	{
 //  		PrintDebug ( "Mob_CreateItems + Mob_HasItems klappen");
 //  	};
 //	// *******************************************************************************************
-//	// ***                                        TA / ZS                                     ***
+//	// *** TA / ZS ***
 //	// *******************************************************************************************
 //
 //	// -------------------------------------------------------------------------------------------
@@ -464,24 +465,24 @@ func void ExternalsTest()
 //	Wld_SetMobRoutine (16, 05, "FIREPLACE", 1) ;
 //
 //	// ---------------------------------------------- ZS -----------------------------------------
-//	AI_StartState(self,ZS_ExternalsTest1, 0,  "WP_SMOKE") ;
+//	AI_StartState(self,ZS_ExternalsTest1, 0, "WP_SMOKE") ;
 //
 //   AI_SetNpcsToState (self,ZS_Sleep, 10000) ;
 //
 //	// *******************************************************************************************
-//	// ***                                     DIALOGE                                         ***
+//	// *** DIALOGE ***
 //	// *******************************************************************************************
 //
 //	AI_Output(self,other,"Testmission_Offer01" ) ;
 //
 //	AI_OutputSVM (self,other,"Svm_4_Thanks") ;
-//	//func void AI_WaitTillEnd (VAR C_NPCself,VAR C_NPC other) {};
+//	//func void AI_WaitTillEnd (VAR C_NPCself,var C_Npc other) {};
 //
 //	Npc_SetRefuseTalk (self,100);
 //// -------------------------------------------------------------------------------------------
-// 	AI_ASK (self,ExternalsTestJa, ExternalsTestNo ) ;
+// 	AI_Ask (self,ExternalsTestJa, ExternalsTestNo ) ;
 //
-//	//func void AI_WaitForQuestion (VAR C_NPCself,VAR FUNC scriptFunc) { }; Wird über die Loops in ZS_Talk gemacht
+//	//func void AI_WaitForQuestion (VAR C_NPCself,var func scriptFunc) { }; Wird über die Loops in ZS_Talk gemacht
 //
 //};
 //
@@ -507,11 +508,11 @@ func void ExternalsTest()
 //func int ZS_ExternalsTest1_Loop()
 //{
 //	// *******************************************************************************************
-//	// ***                                   WAHRNEHMUNGEN                                     ***
+//	// *** WAHRNEHMUNGEN ***
 //	// *******************************************************************************************
 //
 //	Npc_PercEnable (self,PERC_ASSESSOTHERSDAMAGE, ExternalsTestPrint);
-//	Npc_PercEnable  (self,PERC_ASSESSTHEFT , B_AssessTheft);
+//	Npc_PercEnable (self,PERC_ASSESSTHEFT , B_AssessTheft);
 //	Perc_SetRange ( PERC_ASSESSOTHERSDAMAGE, 1000);
 //	Npc_PercEnable (self,PERC_ASSESSTALK, ZS_Talk);
 //	Npc_PercDisable (self,PERC_ASSESSTALK);
@@ -533,7 +534,7 @@ func void ExternalsTest()
 //		return 1;
 //	};
 //
-//	//func void Npc_SetPercTime (VAR C_NPCself,VAR FLOAT seconds) { }; // keine Ahnung wie ich das testen soll
+//	//func void Npc_SetPercTime (VAR C_NPCself,var float seconds) { }; // keine Ahnung wie ich das testen soll
 //
 //
 //};
@@ -575,4 +576,3 @@ func void ExternalsTest()
 //	};
 //};
 //
-

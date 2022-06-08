@@ -68,11 +68,11 @@ instance ItFo_Potion_Mana_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_ManaEssenz;
 };
 
-	func void UseManaPotion()
-	{
-		PrintDebugNpc (PD_ITEM_MOBSI, "UseManaPotion");
-		Npc_ChangeAttribute(self,ATR_MANA, Mana_Essenz);
-	};
+func void UseManaPotion()
+{
+	PrintDebugNpc(PD_ITEM_MOBSI, "UseManaPotion");
+	Npc_ChangeAttribute(self, ATR_MANA, Mana_Essenz);
+};
 
 /******************************************************************************************/
 instance ItFo_Potion_Mana_02(C_Item)
@@ -94,11 +94,11 @@ instance ItFo_Potion_Mana_02(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_ManaExtrakt;
 };
 
-	func void UseMana2Potion()
-	{
-		PrintDebugNpc (PD_ITEM_MOBSI, "UseMana2Potion");
-		Npc_ChangeAttribute(self,ATR_MANA, Mana_Extrakt);
-	};
+func void UseMana2Potion()
+{
+	PrintDebugNpc(PD_ITEM_MOBSI, "UseMana2Potion");
+	Npc_ChangeAttribute(self, ATR_MANA, Mana_Extrakt);
+};
 
 /******************************************************************************************/
 instance ItFo_Potion_Mana_03(C_Item)
@@ -120,11 +120,11 @@ instance ItFo_Potion_Mana_03(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_ManaElixier;
 };
 
-	func void UseMana3Potion()
-	{
-		PrintDebugNpc (PD_ITEM_MOBSI, "UseMana3Potion");
-		Npc_ChangeAttribute(self,ATR_MANA, Mana_Elixier);
-	};
+func void UseMana3Potion()
+{
+	PrintDebugNpc(PD_ITEM_MOBSI, "UseMana3Potion");
+	Npc_ChangeAttribute(self, ATR_MANA, Mana_Elixier);
+};
 
 /******************************************************************************************/
 // MANA ELIXIERE BRUDERSCHAFT//
@@ -148,11 +148,11 @@ instance ItFo_Potion_Elixier(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Elixier1;
 };
 
-	func void UseElixier()
-	{
- 		PrintDebugNpc (PD_ITEM_MOBSI, "UseElixier");
-		Npc_ChangeAttribute(self,ATR_MANA, Mana_Elixier1);
-	};
+func void UseElixier()
+{
+	PrintDebugNpc(PD_ITEM_MOBSI, "UseElixier");
+	Npc_ChangeAttribute(self, ATR_MANA, Mana_Elixier1);
+};
 
 /******************************************************************************************/
 //	HEILTRÄNKE //
@@ -176,11 +176,11 @@ instance ItFo_Potion_Health_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_HpEssenz;
 };
 
-	func void UseHealthPotion()
-	{
-		PrintDebugNpc (PD_ITEM_MOBSI, "UseHealthPotion");
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Essenz);
-	};
+func void UseHealthPotion()
+{
+	PrintDebugNpc(PD_ITEM_MOBSI, "UseHealthPotion");
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Essenz);
+};
 
 /******************************************************************************************/
 instance ItFo_Potion_Health_02(C_Item)
@@ -202,11 +202,11 @@ instance ItFo_Potion_Health_02(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_HpExtrakt;
 };
 
-	func void UseHealth2Potion()
-	{
-		PrintDebugNpc (PD_ITEM_MOBSI, "UseHealthPotion");
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Extrakt);
-	};
+func void UseHealth2Potion()
+{
+	PrintDebugNpc(PD_ITEM_MOBSI, "UseHealthPotion");
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Extrakt);
+};
 
 /******************************************************************************************/
 instance ItFo_Potion_Health_03(C_Item)
@@ -228,11 +228,11 @@ instance ItFo_Potion_Health_03(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_HpElixier;
 };
 
-	func void UseHealth3Potion()
-	{
-		PrintDebugNpc (PD_ITEM_MOBSI, "UseHealthPotion");
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Elixier);
-	};
+func void UseHealth3Potion()
+{
+	PrintDebugNpc(PD_ITEM_MOBSI, "UseHealthPotion");
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Elixier);
+};
 
 /******************************************************************************************/
 // TRÄNKE FÜR PERMANENTE ATTRIBUT-ÄNDERUNGEN!
@@ -259,10 +259,10 @@ instance ItFo_Potion_Elixier_Egg(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_ElixierEgg;
 };
 
-	func void UseEggElixier()
-	{
- 		B_RaiseAttribute (ATR_MANA_MAX, ManaMax_ElixierEgg);
-	};
+func void UseEggElixier()
+{
+	B_RaiseAttribute(ATR_MANA_MAX, ManaMax_ElixierEgg);
+};
 
 /******************************************************************************************/
 //STRENGTH
@@ -286,10 +286,10 @@ instance ItFo_Potion_Strength_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_StrEssenz;
 };
 
-	func void UseStrengthPotion()
-	{
- 		B_RaiseAttribute (ATR_STRENGTH, STR_Essenz);
-	};
+func void UseStrengthPotion()
+{
+	B_RaiseAttribute(ATR_STRENGTH, STR_Essenz);
+};
 
 /******************************************************************************************/
 instance ItFo_Potion_Strength_02(C_Item)
@@ -311,10 +311,10 @@ instance ItFo_Potion_Strength_02(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_StrExtrakt;
 };
 
-	func void UseStrength2Potion()
-	{
-		B_RaiseAttribute (ATR_STRENGTH, STR_Extrakt);
-	};
+func void UseStrength2Potion()
+{
+	B_RaiseAttribute(ATR_STRENGTH, STR_Extrakt);
+};
 
 /******************************************************************************************/
 instance ItFo_Potion_Strength_03(C_Item)
@@ -336,10 +336,10 @@ instance ItFo_Potion_Strength_03(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_StrElixier;
 };
 
-	func void UseStrength3Potion()
-	{
-		B_RaiseAttribute (ATR_STRENGTH, STR_Elixier);
-	};
+func void UseStrength3Potion()
+{
+	B_RaiseAttribute(ATR_STRENGTH, STR_Elixier);
+};
 
 /******************************************************************************************/
 //	DEXTERITY
@@ -363,10 +363,10 @@ instance ItFo_Potion_Dex_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_DexEssenz;
 };
 
-	func void UseDexPotion()
-	{
-		B_RaiseAttribute (ATR_DEXTERITY, DEX_Essenz);
-	};
+func void UseDexPotion()
+{
+	B_RaiseAttribute(ATR_DEXTERITY, DEX_Essenz);
+};
 
 /******************************************************************************************/
 instance ItFo_Potion_Dex_02(C_Item)
@@ -388,10 +388,10 @@ instance ItFo_Potion_Dex_02(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_DexExtrakt;
 };
 
-	func void UseDex2Potion()
-	{
-		B_RaiseAttribute (ATR_DEXTERITY, DEX_Extrakt);
-	};
+func void UseDex2Potion()
+{
+	B_RaiseAttribute(ATR_DEXTERITY, DEX_Extrakt);
+};
 
 /******************************************************************************************/
 instance ItFo_Potion_Dex_03(C_Item)
@@ -413,10 +413,10 @@ instance ItFo_Potion_Dex_03(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_DexElixier;
 };
 
-	func void UseDex3Potion()
-	{
-		B_RaiseAttribute (ATR_DEXTERITY, DEX_Elixier);
-	};
+func void UseDex3Potion()
+{
+	B_RaiseAttribute(ATR_DEXTERITY, DEX_Elixier);
+};
 
 /******************************************************************************************/
 // STRENGTH & DEX
@@ -441,15 +441,15 @@ instance ItFo_Potion_Master_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_StrDex_Macht;
 };
 
-	func void UseMasterPotion()
-	{
-		Npc_ChangeAttribute(self,ATR_STRENGTH, StrDex_Macht);
-		Npc_ChangeAttribute(self,ATR_DEXTERITY, StrDex_Macht);
+func void UseMasterPotion()
+{
+	Npc_ChangeAttribute(self, ATR_STRENGTH, StrDex_Macht);
+	Npc_ChangeAttribute(self, ATR_DEXTERITY, StrDex_Macht);
 
-		var string msg;
-		msg = ConcatStrings(NAME_RaiseStrDex , IntToString(StrDex_Macht));
-		PrintScreen(msg, -1,-1,"FONT_OLD_20_WHITE.TGA",_TIME_MESSAGE_RAISEATTRIBUTE);
-	};
+	var string msg;
+	msg = ConcatStrings(NAME_RaiseStrDex, IntToString(StrDex_Macht));
+	PrintScreen(msg, -1, -1, "FONT_OLD_20_WHITE.TGA", _TIME_MESSAGE_RAISEATTRIBUTE);
+};
 
 /******************************************************************************************/
 instance ItFo_Potion_Master_02(C_Item)
@@ -472,15 +472,15 @@ instance ItFo_Potion_Master_02(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_StrDex_Herrschaft;
 };
 
-	func void UseMaster2Potion()
-	{
-		Npc_ChangeAttribute(self,ATR_STRENGTH, StrDex_Herrschaft);
-		Npc_ChangeAttribute(self,ATR_DEXTERITY, StrDex_Herrschaft);
+func void UseMaster2Potion()
+{
+	Npc_ChangeAttribute(self, ATR_STRENGTH, StrDex_Herrschaft);
+	Npc_ChangeAttribute(self, ATR_DEXTERITY, StrDex_Herrschaft);
 
-		var string msg;
-		msg = ConcatStrings(NAME_RaiseStrDex , IntToString(StrDex_Herrschaft));
-		PrintScreen(msg, -1,-1,"FONT_OLD_20_WHITE.TGA",_TIME_MESSAGE_RAISEATTRIBUTE);
-	};
+	var string msg;
+	msg = ConcatStrings(NAME_RaiseStrDex, IntToString(StrDex_Herrschaft));
+	PrintScreen(msg, -1, -1, "FONT_OLD_20_WHITE.TGA", _TIME_MESSAGE_RAISEATTRIBUTE);
+};
 
 /******************************************************************************************/
 // Hitpoints
@@ -504,10 +504,10 @@ instance ItFo_Potion_Health_Perma_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_HpMaxEssenz;
 };
 
-	func void UseLifePotion()
-	{
-		B_RaiseAttribute (ATR_HITPOINTS_MAX, HPMax_Essenz);
-	};
+func void UseLifePotion()
+{
+	B_RaiseAttribute(ATR_HITPOINTS_MAX, HPMax_Essenz);
+};
 
 /******************************************************************************************/
 instance ItFo_Potion_Health_Perma_02(C_Item)
@@ -529,10 +529,10 @@ instance ItFo_Potion_Health_Perma_02(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_HpMaxExtrakt;
 };
 
-	func void UseLife2Potion()
-	{
-		B_RaiseAttribute (ATR_HITPOINTS_MAX, HPMax_Extrakt);
-	};
+func void UseLife2Potion()
+{
+	B_RaiseAttribute(ATR_HITPOINTS_MAX, HPMax_Extrakt);
+};
 
 /******************************************************************************************/
 instance ItFo_Potion_Health_Perma_03(C_Item)
@@ -554,10 +554,10 @@ instance ItFo_Potion_Health_Perma_03(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_HpMaxElixier;
 };
 
-	func void UseLife3Potion()
-	{
-		B_RaiseAttribute (ATR_HITPOINTS_MAX, HPMax_Elixier);
-	};
+func void UseLife3Potion()
+{
+	B_RaiseAttribute(ATR_HITPOINTS_MAX, HPMax_Elixier);
+};
 
 /******************************************************************************************/
 // MANA
@@ -581,11 +581,11 @@ instance ItFo_Potion_Mana_Perma_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_ManaMaxEssenz;
 };
 
-	func void UseNectarPotion()
-	{
-		B_RaiseAttribute (ATR_MANA_MAX, ManaMax_Essenz);
-		PrintDebugNpc (PD_ITEM_MOBSI, "Ich trinke Magie");
-	};
+func void UseNectarPotion()
+{
+	B_RaiseAttribute(ATR_MANA_MAX, ManaMax_Essenz);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich trinke Magie");
+};
 
 /******************************************************************************************/
 instance ItFo_Potion_Mana_Perma_02(C_Item)
@@ -607,11 +607,11 @@ instance ItFo_Potion_Mana_Perma_02(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_ManaMaxExtrakt;
 };
 
-	func void UseNectar2Potion()
-	{
-		B_RaiseAttribute (ATR_MANA_MAX, ManaMax_Extrakt);
-		PrintDebugNpc (PD_ITEM_MOBSI, "Ich trinke Magie");
-	};
+func void UseNectar2Potion()
+{
+	B_RaiseAttribute(ATR_MANA_MAX, ManaMax_Extrakt);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich trinke Magie");
+};
 
 /******************************************************************************************/
 instance ItFo_Potion_Mana_Perma_03(C_Item)
@@ -633,14 +633,14 @@ instance ItFo_Potion_Mana_Perma_03(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_ManaMaxElixier;
 };
 
-	func void UseNectar3Potion()
-	{
-		B_RaiseAttribute (ATR_MANA_MAX, ManaMax_Elixier);
-		PrintDebugNpc (PD_ITEM_MOBSI, "Ich trinke Magie");
-	};
+func void UseNectar3Potion()
+{
+	B_RaiseAttribute(ATR_MANA_MAX, ManaMax_Elixier);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich trinke Magie");
+};
 
 /******************************************************************************************/
-//	SPEED-POTIONS       //
+//	SPEED-POTIONS //
 /******************************************************************************************/
 instance ItFo_Potion_Haste_01(C_Item)
 {
@@ -658,15 +658,15 @@ instance ItFo_Potion_Haste_01(C_Item)
 
 	description = "Potion of Swiftness";
 	TEXT[1] = "Enables the player to short term sprints.";
-	TEXT[3] = NAME_Duration; COUNT[3] = Time_Haste1/60000;
+	TEXT[3] = NAME_Duration; COUNT[3] = Time_Haste1 / 60000;
 	TEXT[5] = NAME_Value; COUNT[5] = value;
 };
 
-	func void UseHastePotion()
-	{
-		Mdl_ApplyOverlayMDSTimed (self,"HUMANS_SPRINT.MDS", Time_Haste1);
-		PrintDebugNpc (PD_ITEM_MOBSI, "jetzt bin ich schnell");
-	};
+func void UseHastePotion()
+{
+	Mdl_ApplyOverlayMDSTimed(self, "HUMANS_SPRINT.MDS", Time_Haste1);
+	PrintDebugNpc(PD_ITEM_MOBSI, "jetzt bin ich schnell");
+};
 
 /******************************************************************************************/
 instance ItFo_Potion_Haste_02(C_Item)
@@ -685,15 +685,15 @@ instance ItFo_Potion_Haste_02(C_Item)
 
 	description = "Potion of Velocity";
 	TEXT[1] = "Allows the player to sprint.";
-	TEXT[3] = NAME_Duration; COUNT[3] = Time_Haste2/60000;
+	TEXT[3] = NAME_Duration; COUNT[3] = Time_Haste2 / 60000;
 	TEXT[5] = NAME_Value; COUNT[5] = value;
 };
 
-	func void UseHastePotion2()
-	{
-		Mdl_ApplyOverlayMDSTimed (self,"HUMANS_SPRINT.MDS", Time_Haste2);
-		PrintDebugNpc (PD_ITEM_MOBSI, "jetzt bin ich schnell");
-	};
+func void UseHastePotion2()
+{
+	Mdl_ApplyOverlayMDSTimed(self, "HUMANS_SPRINT.MDS", Time_Haste2);
+	PrintDebugNpc(PD_ITEM_MOBSI, "jetzt bin ich schnell");
+};
 
 /******************************************************************************************/
 instance ItFo_Potion_Haste_03(C_Item)
@@ -712,12 +712,12 @@ instance ItFo_Potion_Haste_03(C_Item)
 
 	description = "Potion of Haste";
 	TEXT[1] = "Enables the player to sprint longer.";
-	TEXT[3] = NAME_Duration; COUNT[3] = Time_Haste3/60000;
+	TEXT[3] = NAME_Duration; COUNT[3] = Time_Haste3 / 60000;
 	TEXT[5] = NAME_Value; COUNT[5] = value;
 };
 
-	func void UseHastePotion3()
-	{
-		Mdl_ApplyOverlayMDSTimed (self,"HUMANS_SPRINT.MDS", Time_Haste3);
-		PrintDebugNpc (PD_ITEM_MOBSI, "jetzt bin ich schnell");
-	};
+func void UseHastePotion3()
+{
+	Mdl_ApplyOverlayMDSTimed(self, "HUMANS_SPRINT.MDS", Time_Haste3);
+	PrintDebugNpc(PD_ITEM_MOBSI, "jetzt bin ich schnell");
+};

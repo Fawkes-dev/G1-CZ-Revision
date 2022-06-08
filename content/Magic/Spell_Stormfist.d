@@ -5,17 +5,15 @@
 // SPL_SENDSTOP = 3; // Beende Zauber ohne Effekt
 // SPL_NEXTLEVEL = 4; // setze den Spruch auf den nächsten Level
 
-func int Spell_Logic_Stormfist (var int manaInvested)
+func int Spell_Logic_Stormfist(var int manaInvested)
 {
-	PrintDebugNpc (PD_MAGIC, "Spell_Logic_Stormfist");
+	PrintDebugNpc(PD_MAGIC, "Spell_Logic_Stormfist");
 
-	if (manaInvested ==(SPL_SENDCAST_STORMFIST*3)/10)
-	|| (manaInvested ==(SPL_SENDCAST_STORMFIST*5)/10)
-	|| (manaInvested ==(SPL_SENDCAST_STORMFIST*8)/10)
+	if ((manaInvested == (SPL_SENDCAST_STORMFIST * 3) / 10)
+	|| (manaInvested == (SPL_SENDCAST_STORMFIST * 5) / 10)
+	|| (manaInvested == (SPL_SENDCAST_STORMFIST * 8) / 10))
 	{ return SPL_NEXTLEVEL; };
-
 	if (manaInvested >= SPL_SENDCAST_STORMFIST)
 	{ return SPL_SENDCAST; };
-
-return SPL_RECEIVEINVEST;
+	return SPL_RECEIVEINVEST;
 };

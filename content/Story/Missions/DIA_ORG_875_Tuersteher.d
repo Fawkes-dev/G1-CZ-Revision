@@ -49,11 +49,11 @@ func void DIA_Org_875_PERM_Info()
 {
 //	AI_Output(other,self,"DIA_Org_875_PERM_15_00"); //You only let in rogues and scrapers?
 //	AI_Output(other,self,"DIA_Org_875_PERM_15_00"); //Ihr lasst hier nur Banditen und Schürfer rein?
-	AI_Output(other,self,"DIA_Org_875_PERM_15_00"); //Pouštíte dovnitř jenom bandity a rudaře?
+	AI_Output(other, self, "DIA_Org_875_PERM_15_00"); //Pouštíte dovnitř jenom bandity a rudaře?
 //	AI_Output(self,other,"DIA_Org_875_PERM_13_01"); //We don't mind the sect brothers either.
 //	AI_Output(self,other,"DIA_Org_875_PERM_13_01"); //Gegen die Brüder aus der Sekte haben wir auch nichts.
-	AI_Output(self,other,"DIA_Org_875_PERM_13_01"); //Proti sektářským bratrům také nic nemáme.
+	AI_Output(self, other, "DIA_Org_875_PERM_13_01"); //Proti sektářským bratrům také nic nemáme.
 //	AI_Output(self,other,"DIA_Org_875_PERM_13_02"); //But apart from that, nobody gets in here.
 //	AI_Output(self,other,"DIA_Org_875_PERM_13_02"); //Aber sonst kommt uns hier keiner rein.
-	AI_Output(self,other,"DIA_Org_875_PERM_13_02"); //Ale kromě nich sem už nikdo nepřijde.
+	AI_Output(self, other, "DIA_Org_875_PERM_13_02"); //Ale kromě nich sem už nikdo nepřijde.
 };

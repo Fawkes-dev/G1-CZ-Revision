@@ -5,16 +5,16 @@
 // SPL_SENDSTOP = 3; // Beende Zauber ohne Effekt
 // SPL_NEXTLEVEL = 4; // setze den Spruch auf den nächsten Level
 
-func int Spell_Logic_Shrink (var int manaInvested)
+func int Spell_Logic_Shrink(var int manaInvested)
 {
-	PrintDebugNpc (PD_MAGIC, "Spell_Logic_Shrink");
+	PrintDebugNpc(PD_MAGIC, "Spell_Logic_Shrink");
 
-	if (C_NpcIsMonster(other) && (other.aivar[AIV_MM_ShrinkState]==0)) // nur auf bisher ungeschrumpfte Monster!
+	if (C_NpcIsMonster(other) && (other.aivar[AIV_MM_ShrinkState] == 0)) // nur auf bisher ungeschrumpfte Monster!
 	{
-		PrintDebugNpc (PD_MAGIC, "...Ziel ist Monster!");
-		if ( manaInvested >= SPL_SENDCAST_SHRINK )
+		PrintDebugNpc(PD_MAGIC, "...Ziel ist Monster!");
+		if (manaInvested >= SPL_SENDCAST_SHRINK)
 		{
-			Npc_SendSinglePerc (self,other,PERC_ASSESSMAGIC);
+			Npc_SendSinglePerc(self, other, PERC_ASSESSMAGIC);
 			return SPL_SENDCAST;
 		};
 
@@ -24,7 +24,7 @@ func int Spell_Logic_Shrink (var int manaInvested)
 	}
 	else
 	{
-		PrintDebugNpc (PD_MAGIC, "...Ziel ist KEIN Monster!");
+		PrintDebugNpc(PD_MAGIC, "...Ziel ist KEIN Monster!");
 		return SPL_SENDSTOP;
 	};
 };

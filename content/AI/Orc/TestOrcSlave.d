@@ -1,4 +1,4 @@
-prototype ORCSLAVE_TESTTYPE( C_NPC )
+prototype ORCSLAVE_TESTTYPE(C_NPC)
 {
 	//	primary data
 	name = "OrcSlave Prototype";
@@ -21,7 +21,7 @@ prototype ORCSLAVE_TESTTYPE( C_NPC )
 	attribute[ATR_HITPOINTS] = 90;
 
 	// 	senses
-	senses = SENSE_HEAR | SENSE_SEE ;
+	senses = SENSE_HEAR | SENSE_SEE;
 	senses_range = 2000;
 
 	//Npc_LearnTalent (self,TAL_SNEAK);
@@ -32,11 +32,10 @@ prototype ORCSLAVE_TESTTYPE( C_NPC )
 	//Npc_LearnTalent (self,TAL_HEAL);
 	//Npc_LearnTalent (self,TAL_MANA);
 	//Npc_LearnTalent (self,TAL_IRONWILL);
-
 };
 
 //##########################################
-instance Slave0( ORCSLAVE_TESTTYPE )
+instance Slave0(ORCSLAVE_TESTTYPE)
 {
 	// 	primary data
 
@@ -55,8 +54,8 @@ instance Slave0( ORCSLAVE_TESTTYPE )
 
 	//-------- visuals --------
 
-	Mdl_SetVisual(self,"orc.mds");
-	Mdl_SetVisualBody(self,"Orc_BodyWarrior",DEFAULT,DEFAULT,"Orc_Head", DEFAULT,  DEFAULT,-1);
+	Mdl_SetVisual(self, "orc.mds");
+	Mdl_SetVisualBody(self, "Orc_BodyWarrior", DEFAULT, DEFAULT, "Orc_Head", DEFAULT, DEFAULT, -1);
 
 	B_Scale(self);
 
@@ -65,11 +64,10 @@ instance Slave0( ORCSLAVE_TESTTYPE )
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_OrcSlaveA;
-
 };
 
 //##########################################
-instance Slave1( ORCSLAVE_TESTTYPE )
+instance Slave1(ORCSLAVE_TESTTYPE)
 {
 	// 	primary data
 
@@ -88,8 +86,8 @@ instance Slave1( ORCSLAVE_TESTTYPE )
 
 	//-------- visuals --------
 
-	Mdl_SetVisual(self,"orc.mds");
-	Mdl_SetVisualBody(self,"Orc_BodyWarrior",DEFAULT,DEFAULT,"Orc_Head", DEFAULT,  DEFAULT,-1);
+	Mdl_SetVisual(self, "orc.mds");
+	Mdl_SetVisualBody(self, "Orc_BodyWarrior", DEFAULT, DEFAULT, "Orc_Head", DEFAULT, DEFAULT, -1);
 
 	B_Scale(self);
 
@@ -98,11 +96,10 @@ instance Slave1( ORCSLAVE_TESTTYPE )
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_OrcSlaveB;
-
 };
 
 //##########################################
-instance Slave2( ORCSLAVE_TESTTYPE )
+instance Slave2(ORCSLAVE_TESTTYPE)
 {
 	// 	primary data
 
@@ -121,8 +118,8 @@ instance Slave2( ORCSLAVE_TESTTYPE )
 
 	//-------- visuals --------
 
-	Mdl_SetVisual(self,"orc.mds");
-	Mdl_SetVisualBody(self,"Orc_BodyWarrior",DEFAULT,DEFAULT,"Orc_Head", DEFAULT,  DEFAULT,-1);
+	Mdl_SetVisual(self, "orc.mds");
+	Mdl_SetVisualBody(self, "Orc_BodyWarrior", DEFAULT, DEFAULT, "Orc_Head", DEFAULT, DEFAULT, -1);
 
 	B_Scale(self);
 
@@ -131,31 +128,28 @@ instance Slave2( ORCSLAVE_TESTTYPE )
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_OrcSlaveA;
-
 };
 
 func void Rtn_OrcSlaveA()
 {
 	OrcSlavePerc();
 
-	TA_Orc_SitOnFloor ( 22,30, 05,00, "ORC_WAY_SIT_01");
-	TA_Orc_Stonemill ( 05,00, 12,00, "ORC_WAY_09");
-	TA_Orc_Eat ( 12,00, 12,30, "ORC_WAY_09");
-	TA_Orc_Stonemill ( 12,30, 20,00, "ORC_WAY_09");
-	TA_Orc_Eat ( 20,00, 20,30, "ORC_WAY_09");
-	TA_Orc_Stonemill ( 20,30, 22,30, "ORC_WAY_09");
-
+	TA_Orc_SitOnFloor(22, 30, 05, 00, "ORC_WAY_SIT_01");
+	TA_Orc_Stonemill(05, 00, 12, 00, "ORC_WAY_09");
+	TA_Orc_Eat(12, 00, 12, 30, "ORC_WAY_09");
+	TA_Orc_Stonemill(12, 30, 20, 00, "ORC_WAY_09");
+	TA_Orc_Eat(20, 00, 20, 30, "ORC_WAY_09");
+	TA_Orc_Stonemill(20, 30, 22, 30, "ORC_WAY_09");
 };
 
 func void Rtn_OrcSlaveB()
 {
 	OrcSlavePerc();
 
-	TA_Orc_SitOnFloor ( 22,30, 05,00, "ORC_WAY_LISTEN_01");
-	TA_Orc_Stomper ( 05,00, 12,00, "ORC_WAY_08");
-	TA_Orc_Eat ( 12,00, 12,30, "ORC_WAY_08");
-	TA_Orc_Stomper ( 12,30, 20,00, "ORC_WAY_08");
-	TA_Orc_Eat ( 20,00, 20,30, "ORC_WAY_08");
-	TA_Orc_Stomper ( 20,30, 22,30, "ORC_WAY_08");
-
+	TA_Orc_SitOnFloor(22, 30, 05, 00, "ORC_WAY_LISTEN_01");
+	TA_Orc_Stomper(05, 00, 12, 00, "ORC_WAY_08");
+	TA_Orc_Eat(12, 00, 12, 30, "ORC_WAY_08");
+	TA_Orc_Stomper(12, 30, 20, 00, "ORC_WAY_08");
+	TA_Orc_Eat(20, 00, 20, 30, "ORC_WAY_08");
+	TA_Orc_Stomper(20, 30, 22, 30, "ORC_WAY_08");
 };

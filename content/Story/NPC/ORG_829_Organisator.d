@@ -1,4 +1,4 @@
-instance Org_829_Organisator (Npc_Default)
+instance Org_829_Organisator(Npc_Default)
 //###Frei Mine-Waypoints eintragen
 {
 	//-------- primary data --------
@@ -22,44 +22,42 @@ instance Org_829_Organisator (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-//	Mdl_ApplyOverlayMds(self,"Humans_Relaxed.mds");
+	Mdl_SetVisual(self, "HUMANS.MDS");
+//	Mdl_ApplyOverlayMDS(self,"Humans_Relaxed.mds");
 	//				body mesh, head mesh, hairmesh, face-tex, hair-tex, skin
-	Mdl_SetVisualBody(self,"hum_body_Naked0",0, 0,"Hum_Head_FatBald", 13, 1,ORG_ARMOR_L);
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 0, 0, "Hum_Head_FatBald", 13, 1, ORG_ARMOR_L);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_STRONG;
 
 	//-------- Talente --------
 
-	Npc_SetTalentSkill(self,NPC_TALENT_BOW,1);
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,1);
+	Npc_SetTalentSkill(self, NPC_TALENT_BOW, 1);
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 1);
 
-	Npc_SetTalentSkill(self,NPC_TALENT_SNEAK,1);
+	Npc_SetTalentSkill(self, NPC_TALENT_SNEAK, 1);
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1H_Mace_01);
-	CreateInvItems(self,ItKeLockpick,1);
-	CreateInvItems(self,ItMiNugget, 9);
-	CreateInvItems(self,ItFoRice,8);
-	CreateInvItems(self,ItFoBooze, 2);
-	CreateInvItems(self,ItLsTorch, 2);
-	CreateInvItems(self,ItFo_Potion_Health_01,1);
-	CreateInvItem(self,ItMi_Stuff_Cup_01);
-	CreateInvItem(self,ItAt_Teeth_01);
+	EquipItem(self, ItMw_1H_Mace_01);
+	CreateInvItems(self, ItKeLockpick, 1);
+	CreateInvItems(self, ItMiNugget, 9);
+	CreateInvItems(self, ItFoRice, 8);
+	CreateInvItems(self, ItFoBooze, 2);
+	CreateInvItems(self, ItLsTorch, 2);
+	CreateInvItems(self, ItFo_Potion_Health_01, 1);
+	CreateInvItem(self, ItMi_Stuff_Cup_01);
+	CreateInvItem(self, ItAt_Teeth_01);
 
 	//-------------Daily Routine-------------
 
 	daily_routine = Rtn_start_829;
-
 };
 
 func void Rtn_start_829()
 {
-	TA_GuardPassage (08,00,20,00,"OW_PATH_07_21_GUARD_RIGHT");
-	TA_GuardPassage (20,00,08,00,"OW_PATH_07_21_GUARD_RIGHT");
+	TA_GuardPassage(08, 00, 20, 00, "OW_PATH_07_21_GUARD_RIGHT");
+	TA_GuardPassage(20, 00, 08, 00, "OW_PATH_07_21_GUARD_RIGHT");
 };
-

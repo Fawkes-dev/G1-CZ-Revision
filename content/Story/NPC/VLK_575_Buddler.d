@@ -1,4 +1,4 @@
-instance VLK_575_Buddler (Npc_Default)
+instance VLK_575_Buddler(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -21,13 +21,13 @@ instance VLK_575_Buddler (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Tired.mds");
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Tired.mds");
 	//				body mesh, head mesh, hairmesh, face-tex, hair-tex, skin
-	Mdl_SetVisualBody(self,"hum_body_Naked0",3,1,"Hum_Head_Bald", 70,  1, -1);
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 3, 1, "Hum_Head_Bald", 70, 1, -1);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
@@ -35,20 +35,19 @@ instance VLK_575_Buddler (Npc_Default)
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1h_Club_01);
-	CreateInvItem(self,ItFoApple);
+	EquipItem(self, ItMw_1h_Club_01);
+	CreateInvItem(self, ItFoApple);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_575;
-	};
+};
 
 func void Rtn_start_575()
 {
 	//[BugFix]: incomplete daily routine
 	//TA_Sleep (22,45,06,30,"OCR_HUT_66");
-	TA_Sleep (22,45,07,00,"OCR_HUT_66");
-	TA_StandAround  (07,00,12,00,"OCR_OUTSIDE_HUT_66");
-	TA_Smalltalk (12,00,17,00,"OCR_OUTSIDE_HUT_66");
-	TA_SitCampfire (17,00,22,45,"OCR_OUTSIDE_HUT_66");
+	TA_Sleep(22, 45, 07, 00, "OCR_HUT_66");
+	TA_StandAround(07, 00, 12, 00, "OCR_OUTSIDE_HUT_66");
+	TA_Smalltalk(12, 00, 17, 00, "OCR_OUTSIDE_HUT_66");
+	TA_SitCampfire(17, 00, 22, 45, "OCR_OUTSIDE_HUT_66");
 };
-

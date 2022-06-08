@@ -5,9 +5,9 @@
 // SPL_SENDSTOP = 3; // Beende Zauber ohne Effekt
 // SPL_NEXTLEVEL = 4; // setze den Spruch auf den nächsten Level
 
-func int Spell_Logic_Firerain (var int manaInvested)
+func int Spell_Logic_Firerain(var int manaInvested)
 {
-	PrintDebugNpc (PD_MAGIC, "Spell_Logic_Firerain");
+	PrintDebugNpc(PD_MAGIC, "Spell_Logic_Firerain");
 
 	// KR:brauche ich, damit InvestierPFX abgespielt wird
 	if (manaInvested == 0)
@@ -17,6 +17,5 @@ func int Spell_Logic_Firerain (var int manaInvested)
 
 	if (manaInvested >= SPL_SENDCAST_FIRERAIN)
 	{ return SPL_SENDCAST; };
-
 	return SPL_RECEIVEINVEST;
 };

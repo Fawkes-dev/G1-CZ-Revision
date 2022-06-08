@@ -11,9 +11,9 @@ instance Orc_2001_Sklave(Npc_Default)
 	level = 3;
 	flags = 0;
 	voice = 17;
-	ID   = 2001;
+	ID = 2001;
 
-		//--------- abilities --------
+	//--------- abilities --------
 	attribute[ATR_STRENGTH] = 90;
 	attribute[ATR_DEXTERITY] = 20;
 
@@ -29,8 +29,8 @@ instance Orc_2001_Sklave(Npc_Default)
 //	talents = 0;
 
 	//-------- visuals --------
-	Mdl_SetVisual(self,"orc.mds");
-	Mdl_SetVisualBody(self,"Orc_BodySlave",DEFAULT,DEFAULT,"Orc_HeadSlave", DEFAULT,  DEFAULT,-1);
+	Mdl_SetVisual(self, "orc.mds");
+	Mdl_SetVisualBody(self, "Orc_BodySlave", DEFAULT, DEFAULT, "Orc_HeadSlave", DEFAULT, DEFAULT, -1);
 
 	//-------- ai --------
 //	start_aistate = ZS_Orc_Stomper;//SN: wegen Überarbeitung Ork-AI entfernt
@@ -44,15 +44,16 @@ instance Orc_2001_Sklave(Npc_Default)
 
 func void rtn_Nothing_2001()
 {
-	TA_Orc_SitOnFloor  (00,00,12,00,"OM_CAVE3_15");
-	TA_Orc_SitOnFloor  (12,00,00,00,"OM_CAVE3_15");
+	TA_Orc_SitOnFloor(00, 00, 12, 00, "OM_CAVE3_15");
+	TA_Orc_SitOnFloor(12, 00, 00, 00, "OM_CAVE3_15");
 };
 
 func void rtn_Stomper_2001()
 {
-	TA_Orc_Stomper (00,00,12,00,"OM_CAVE3_15");
-	TA_Orc_Stomper (12,00,00,00,"OM_CAVE3_15");
+	TA_Orc_Stomper(00, 00, 12, 00, "OM_CAVE3_15");
+	TA_Orc_Stomper(12, 00, 00, 00, "OM_CAVE3_15");
 };
+
 //*********************************************************************************************************//
 instance Orc_2002_Sklave(Npc_Default)
 {
@@ -64,9 +65,9 @@ instance Orc_2002_Sklave(Npc_Default)
 	level = 3;
 	flags = 0;
 	voice = 17;
-	ID   = 2002;
+	ID = 2002;
 
-		//--------- abilities --------
+	//--------- abilities --------
 	attribute[ATR_STRENGTH] = 85;
 	attribute[ATR_DEXTERITY] = 20;
 
@@ -82,8 +83,8 @@ instance Orc_2002_Sklave(Npc_Default)
 //	talents = 0;
 
 	//-------- visuals --------
-	Mdl_SetVisual(self,"orc.mds");
-	Mdl_SetVisualBody(self,"Orc_BodySlave",DEFAULT,DEFAULT,"Orc_HeadSlave", DEFAULT,  DEFAULT,-1);
+	Mdl_SetVisual(self, "orc.mds");
+	Mdl_SetVisualBody(self, "Orc_BodySlave", DEFAULT, DEFAULT, "Orc_HeadSlave", DEFAULT, DEFAULT, -1);
 
 	//-------- ai --------
 //	start_aistate = ZS_Orc_Stomper;//SN: wegen Überarbeitung Ork-AI entfernt
@@ -97,7 +98,6 @@ instance Orc_2002_Sklave(Npc_Default)
 
 func void rtn_stonemill_2002()
 {
-	TA_Orc_Stonemill (00,00,12,00,"OM_CAVE1_BELLOWS");
-	TA_Orc_Stonemill (12,00,00,00,"OM_CAVE1_BELLOWS");
+	TA_Orc_Stonemill(00, 00, 12, 00, "OM_CAVE1_BELLOWS");
+	TA_Orc_Stonemill(12, 00, 00, 00, "OM_CAVE1_BELLOWS");
 };
-

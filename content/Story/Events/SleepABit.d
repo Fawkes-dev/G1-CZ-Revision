@@ -2,45 +2,45 @@
 // 		PC_Sleep
 //****************************
 
-func void PC_Sleep (var int t)
+func void PC_Sleep(var int t)
 {
 	AI_StopProcessInfos(self); // [SK] ->muss hier stehen um das update zu gewährleisten
-	self.aivar[AIV_INVINCIBLE]=FALSE;
-	if (Wld_IsTime(00,00,t,00))
+	self.aivar[AIV_INVINCIBLE] = FALSE;
+	if (Wld_IsTime(00, 00, t, 00))
 	{
-		Wld_SetTime (t,00);
+		Wld_SetTime(t, 00);
 	}
 	else
 	{
 		t = t + 24;
-		Wld_SetTime (t,00);
+		Wld_SetTime(t, 00);
 	};
 
-	PrintScreen("You slept well and feel better", -1,-1,"font_old_20_white.tga",3);
+	PrintScreen("You slept well and feel better", -1, -1, "font_old_20_white.tga", 3);
 	hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
 	hero.attribute[ATR_MANA] = hero.attribute[ATR_MANA_MAX];
 
 	//-------- AssessEnterRoom-Wahrnehmung versenden --------
 	PrintGlobals(PD_ITEM_MOBSI);
-	Npc_SendPassivePerc (hero,PERC_ASSESSENTERROOM, NULL, hero); //...damit der Spieler dieses Feature nicht zum Hütteplündern ausnutzt!
+	Npc_SendPassivePerc(hero, PERC_ASSESSENTERROOM, NULL, hero); //...damit der Spieler dieses Feature nicht zum Hütteplündern ausnutzt!
 };
 
 func void SLEEPABIT_S1()
 {
-	var C_NPC her; her = Hlp_GetNpc(PC_Hero);
-	var C_NPC rock; rock = Hlp_GetNpc(PC_Rockefeller);
+	var C_Npc her; her = Hlp_GetNpc(PC_Hero);
+	var C_Npc rock; rock = Hlp_GetNpc(PC_Rockefeller);
 
 	//***ALT** if (Hlp_GetInstanceID (self)== Hlp_GetInstanceID (Hero)) // MH: geändert, damit kontrollierte NSCs nicht schlafen können!
-	if ((Hlp_GetInstanceID(self)==Hlp_GetInstanceID(her))||(Hlp_GetInstanceID(self)==Hlp_GetInstanceID(rock)))
+	if ((Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her)) || (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(rock)))
 	{
-		self.aivar[AIV_INVINCIBLE]=TRUE;
-		Ai_ProcessInfos (her);
+		self.aivar[AIV_INVINCIBLE] = TRUE;
+		AI_ProcessInfos(her);
 	};
 };
 
 //-------------------- Gar nicht schlafen -------------------------
 
-instance PC_NoSleep (c_Info)
+instance PC_NoSleep(c_Info)
 {
 	npc = PC_Hero;
 	nr = 999;
@@ -53,14 +53,13 @@ instance PC_NoSleep (c_Info)
 
 func int PC_NoSleep_Condition()
 {
-		return 1;
+	return 1;
 };
 
 func void PC_NoSleep_Info()
 {
 	AI_StopProcessInfos(self);
-	self.aivar[AIV_INVINCIBLE]=FALSE;
-
+	self.aivar[AIV_INVINCIBLE] = FALSE;
 };
 
 //---------------------- morgens --------------------------------------
@@ -77,12 +76,12 @@ instance PC_SleepTime_Morning(C_INFO)
 
 func int PC_SleepTime_Morning_Condition()
 {
-		return 1;
+	return 1;
 };
 
 func void PC_SleepTime_Morning_Info()
 {
-	PC_Sleep (8); // SN: geändert, da um 7 Uhr noch keiner der NSCs wach ist!
+	PC_Sleep(8); // SN: geändert, da um 7 Uhr noch keiner der NSCs wach ist!
 };
 
 //--------------------- mittags -----------------------------------------
@@ -99,12 +98,12 @@ instance PC_SleepTime_Noon(C_INFO)
 
 func int PC_SleepTime_Noon_Condition()
 {
-		return 1;
+	return 1;
 };
 
 func void PC_SleepTime_Noon_Info()
 {
-	PC_Sleep (12);
+	PC_Sleep(12);
 };
 
 //---------------------- abend --------------------------------------
@@ -121,12 +120,12 @@ instance PC_SleepTime_Evening(C_INFO)
 
 func int PC_SleepTime_Evening_Condition()
 {
-		return 1;
+	return 1;
 };
 
 func void PC_SleepTime_Evening_Info()
 {
-	PC_Sleep (19);
+	PC_Sleep(19);
 };
 
 //------------------------ nacht -----------------------------------------
@@ -143,11 +142,10 @@ instance PC_SleepTime_Midnight(C_INFO)
 
 func int PC_SleepTime_Midnight_Condition()
 {
-		return 1;
+	return 1;
 };
 
 func void PC_SleepTime_Midnight_Info()
 {
-	PC_Sleep (0);
+	PC_Sleep(0);
 };
-

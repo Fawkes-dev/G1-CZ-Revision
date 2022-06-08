@@ -8,6 +8,7 @@ instance Info_Orc_17_EXIT(C_INFO)
 	permanent = 1;
 	description = DIALOG_ENDE;
 };
+
 func int Info_Orc_17_EXIT_Condition()
 {
 	return 1;
@@ -18,7 +19,7 @@ func void Info_Orc_17_EXIT_Info()
 	AI_StopProcessInfos(self);
 };
 
-func void B_AssignAmbientInfos_Orc_17(var c_NPC slf)
+func void B_AssignAmbientInfos_Orc_17(var C_Npc slf)
 {
 	Info_Orc_17_EXIT.npc = Hlp_GetInstanceID(slf);
 };

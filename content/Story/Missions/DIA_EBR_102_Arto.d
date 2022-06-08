@@ -49,10 +49,10 @@ func void DIA_ARTO_Hello_Info()
 {
 //	AI_Output(other,self,"DIA_ARTO_Hello_15_00"); //Who are you?
 //	AI_Output(other,self,"DIA_ARTO_Hello_15_00"); //Wer bist du?
-	AI_Output(other,self,"DIA_ARTO_Hello_15_00"); //Kdo jsi?
+	AI_Output(other, self, "DIA_ARTO_Hello_15_00"); //Kdo jsi?
 //	AI_Output(self,other,"DIA_ARTO_Hello_13_01"); //I'm Arto.
 //	AI_Output(self,other,"DIA_ARTO_Hello_13_01"); //Ich bin Arto.
-	AI_Output(self,other,"DIA_ARTO_Hello_13_01"); //Jsem Arto.
+	AI_Output(self, other, "DIA_ARTO_Hello_13_01"); //Jsem Arto.
 };
 
 // ************************************************************
@@ -74,7 +74,7 @@ instance DIA_ARTO_What(C_INFO)
 
 func int DIA_ARTO_What_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_ARTO_Hello))
+	if (Npc_KnowsInfo(hero, DIA_ARTO_Hello))
 	{
 		return 1;
 	};
@@ -86,10 +86,10 @@ func void DIA_ARTO_What_Info()
 {
 //	AI_Output(other,self,"DIA_ARTO_What_15_00"); //What do you do around here?
 //	AI_Output(other,self,"DIA_ARTO_What_15_00"); //Was machst du so?
-	AI_Output(other,self,"DIA_ARTO_What_15_00"); //Co tady děláš?
+	AI_Output(other, self, "DIA_ARTO_What_15_00"); //Co tady děláš?
 //	AI_Output(self,other,"DIA_ARTO_What_13_01"); //I'm Gomez' bodyguard.
 //	AI_Output(self,other,"DIA_ARTO_What_13_01"); //Ich bin Gomez' Leibwächter.
-	AI_Output(self,other,"DIA_ARTO_What_13_01"); //Jsem Gomezův osobní strážce.
+	AI_Output(self, other, "DIA_ARTO_What_13_01"); //Jsem Gomezův osobní strážce.
 };
 
 // ************************************************************
@@ -111,7 +111,7 @@ instance DIA_ARTO_PERM(C_INFO)
 
 func int DIA_ARTO_PERM_Condition()
 {
-	if (Npc_KnowsInfo(hero,DIA_ARTO_What))
+	if (Npc_KnowsInfo(hero, DIA_ARTO_What))
 	{
 		return 1;
 	};
@@ -123,8 +123,8 @@ func void DIA_ARTO_PERM_Info()
 {
 //	AI_Output(other,self,"DIA_ARTO_PERM_15_00"); //You don't talk much, do you?
 //	AI_Output(other,self,"DIA_ARTO_PERM_15_00"); //Du redest nicht viel, was?
-	AI_Output(other,self,"DIA_ARTO_PERM_15_00"); //Ty toho moc nenamluvíš, co?
+	AI_Output(other, self, "DIA_ARTO_PERM_15_00"); //Ty toho moc nenamluvíš, co?
 //	AI_Output(self,other,"DIA_ARTO_PERM_13_01"); //Nope.
 //	AI_Output(self,other,"DIA_ARTO_PERM_13_01"); //Nein.
-	AI_Output(self,other,"DIA_ARTO_PERM_13_01"); //Moc ne.
+	AI_Output(self, other, "DIA_ARTO_PERM_13_01"); //Moc ne.
 };

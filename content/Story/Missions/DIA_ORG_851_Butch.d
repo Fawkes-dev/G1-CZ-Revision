@@ -49,9 +49,9 @@ func void DIA_Butch_Hello_Info()
 {
 //	AI_Output(other,self,"DIA_Butch_Hello_15_00"); //Hi. Who are you?
 //	AI_Output(other,self,"DIA_Butch_Hello_15_00"); //Hi. Wer bist du?
-	AI_Output(other,self,"DIA_Butch_Hello_15_00"); //Zdar! Kdo jsi?
+	AI_Output(other, self, "DIA_Butch_Hello_15_00"); //Zdar! Kdo jsi?
 //	AI_Output(self,other,"DIA_Butch_Hello_13_01"); //It's none of your business! I don't like your mug!
 //	AI_Output(self,other,"DIA_Butch_Hello_13_01"); //Das geht dich einen Dreck an! Deine Fresse gefällt mir nicht!
-	AI_Output(self,other,"DIA_Butch_Hello_13_01"); //Po tom ti nic není! Nelíbí se mi tvůj ciferník!
+	AI_Output(self, other, "DIA_Butch_Hello_13_01"); //Po tom ti nic není! Nelíbí se mi tvůj ciferník!
 	AI_StopProcessInfos(self);
 };

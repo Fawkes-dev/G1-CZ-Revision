@@ -1,4 +1,4 @@
-instance NOV_1331_BaalTaran (Npc_Default)
+instance NOV_1331_BaalTaran(Npc_Default)
 {
 	//-------- primary data --------
 	name = "Baal Taran";
@@ -19,28 +19,28 @@ instance NOV_1331_BaalTaran (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Mage.mds");
-	//			body mesh     ,bdytex,skin,head mesh     ,headtex,teethtex,ruestung
-	Mdl_SetVisualBody(self,"hum_body_Naked0",1, 1 ,"Hum_Head_FatBald", 29 ,  2, NOV_ARMOR_M);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Mage.mds");
+	//			body mesh ,bdytex,skin,head mesh ,headtex,teethtex,ruestung
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 1, 1, "Hum_Head_FatBald", 29, 2, NOV_ARMOR_M);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,-1);
+	Mdl_SetModelFatness(self, -1);
 
 	fight_tactic = FAI_HUMAN_STRONG;
 
 	//-------- Talente --------
 
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,1);
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 1);
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1H_Axe_Old_01);
-	CreateInvItems(self,ItMiNugget, 15);
-	CreateInvItems(self,ItFoRice, 5);
-	CreateInvItems(self,ItFoBooze, 3);
-	CreateInvItems(self,ItMiJoint_1, 13);
-	CreateInvItem(self,ItMi_Stuff_OldCoin_02);
+	EquipItem(self, ItMw_1H_Axe_Old_01);
+	CreateInvItems(self, ItMiNugget, 15);
+	CreateInvItems(self, ItFoRice, 5);
+	CreateInvItems(self, ItFoBooze, 3);
+	CreateInvItems(self, ItMiJoint_1, 13);
+	CreateInvItem(self, ItMi_Stuff_OldCoin_02);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_1331;
@@ -48,6 +48,6 @@ instance NOV_1331_BaalTaran (Npc_Default)
 
 func void Rtn_start_1331()
 {
-	TA_Smalltalk (00,00,08,00,"OCR_TO_HUT_6");
-	TA_StandAround (08,00,00,00,"OCR_OUTSIDE_HUT_77_INSERT");
+	TA_Smalltalk(00, 00, 08, 00, "OCR_TO_HUT_6");
+	TA_StandAround(08, 00, 00, 00, "OCR_OUTSIDE_HUT_77_INSERT");
 };

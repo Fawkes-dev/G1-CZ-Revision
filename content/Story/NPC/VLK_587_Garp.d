@@ -1,4 +1,4 @@
-instance VLK_587_Garp (Npc_Default)
+instance VLK_587_Garp(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -21,28 +21,28 @@ instance VLK_587_Garp (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Tired.mds");
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Tired.mds");
 	//				body mesh, head mesh, hairmesh, face-tex, hair-tex, skin
-	Mdl_SetVisualBody(self,"hum_body_Naked0",3,1,"Hum_Head_Bald", 72,  4, VLK_ARMOR_L);
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 3, 1, "Hum_Head_Bald", 72, 4, VLK_ARMOR_L);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
-		self.aivar[AIV_IMPORTANT] = TRUE;
+	self.aivar[AIV_IMPORTANT] = TRUE;
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
-	//-------- Talents  --------
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,1);
+	//-------- Talents --------
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 1);
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1h_Nailmace_01);
-	CreateInvItem(self,ItMwPickaxe);
-	CreateInvItem(self,ItFoLoaf);
-	CreateInvItem(self,ItFoBeer);
-	CreateInvItem(self,ItLsTorch);
+	EquipItem(self, ItMw_1h_Nailmace_01);
+	CreateInvItem(self, ItMwPickaxe);
+	CreateInvItem(self, ItFoLoaf);
+	CreateInvItem(self, ItFoBeer);
+	CreateInvItem(self, ItLsTorch);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_587;
@@ -50,7 +50,6 @@ instance VLK_587_Garp (Npc_Default)
 
 func void Rtn_start_587()
 {
-	TA_PickOre     (08,00,18,00,"OM_PICKORE_11");
-	TA_PickOre     (18,00,08,00,"OM_PICKORE_11");
+	TA_PickOre(08, 00, 18, 00, "OM_PICKORE_11");
+	TA_PickOre(18, 00, 08, 00, "OM_PICKORE_11");
 };
-

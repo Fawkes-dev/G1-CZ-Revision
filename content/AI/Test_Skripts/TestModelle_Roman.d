@@ -4,7 +4,7 @@
 ** =================== **
 ** **
 ** Enthält **
-** - Allround-Testmodell **
+** - Allround - Testmodell **
 ** **
 *************************************************************************/
 
@@ -35,20 +35,20 @@ instance ItWrLevelMap(C_Item)
 	on_state[0] = UseLevelMap;
 };
 
-	func void UseLevelMap()
-	{
-		var int nDocID;
+func void UseLevelMap()
+{
+	var int nDocID;
 
-		nDocID = Doc_CreateMap()   ; // DocManager
-					Doc_SetPages(nDocID,  1);
-					Doc_SetPage(nDocID,  0, "Map_X.TGA"    ,1);  //  1 -> DO NOT SCALE
-		//			Doc_SetPage(nDocID,  0, "BOOK_LEFT.TGA"  , 0);  //  0 -> DO NOT SCALE
-		//			Doc_SetPage(nDocID,  1, "BOOK_RIGHT.TGA" , 0);
-  					Doc_SetFont(nDocID, -1, "FONT_OLD_20_WHITE.TGA"); // -1 -> all pages
-					Doc_SetMargins(nDocID, -1, 10, 10, 10, 10,1);  //  0 -> margins are in pixels
-					Doc_PrintLine(nDocID, -1, "Level Map");
-					Doc_Show(nDocID);
-	};
+	nDocID = Doc_CreateMap(); // DocManager
+	Doc_SetPages(nDocID, 1);
+	Doc_SetPage(nDocID, 0, "Map_X.TGA", 1); // 1 -> DO NOT SCALE
+	//			Doc_SetPage(nDocID, 0, "BOOK_LEFT.TGA" , 0); // 0 -> DO NOT SCALE
+	//			Doc_SetPage(nDocID, 1, "BOOK_RIGHT.TGA" , 0);
+	Doc_SetFont(nDocID, -1, "FONT_OLD_20_WHITE.TGA"); // -1 -> all pages
+	Doc_SetMargins(nDocID, -1, 10, 10, 10, 10, 1); // 0 -> margins are in pixels
+	Doc_PrintLine(nDocID, -1, "Level Map");
+	Doc_Show(nDocID);
+};
 
 //########################################################################
 //##
@@ -71,29 +71,29 @@ instance ItWrBookOfTales(C_Item)
 	on_state[0] = UseBookOfTales;
 };
 
-	func void UseBookOfTales()
-	{
-		var int nDocID;
+func void UseBookOfTales()
+{
+	var int nDocID;
 
-		nDocID = Doc_Create()   ; // DocManager
-					Doc_SetPages(nDocID,  2);
-					Doc_SetPage(nDocID,  0, "BOOK_LEFT.TGA"  , 0);  //  0 -> DO NOT SCALE
-					Doc_SetPage(nDocID,  1, "BOOK_RIGHT.TGA" , 0);
-  					Doc_SetFont(nDocID, -1, "FONT_OLD_10_WHITE.TGA"); // -1 -> all pages
-					Doc_SetMargins(nDocID, -1, 10, 10, 10, 10,1);  //  0 -> margins are in pixels
-					Doc_PrintLine(nDocID, -1, "HEADER");
-					Doc_PrintLine(nDocID, -1, "");
-					Doc_PrintLines(nDocID,  0, "One line on the left");
-					Doc_PrintLines(nDocID,  1, "One line on the right");
-					Doc_Show(nDocID);
-	};
+	nDocID = Doc_Create(); // DocManager
+	Doc_SetPages(nDocID, 2);
+	Doc_SetPage(nDocID, 0, "BOOK_LEFT.TGA", 0); // 0 -> DO NOT SCALE
+	Doc_SetPage(nDocID, 1, "BOOK_RIGHT.TGA", 0);
+	Doc_SetFont(nDocID, -1, "FONT_OLD_10_WHITE.TGA"); // -1 -> all pages
+	Doc_SetMargins(nDocID, -1, 10, 10, 10, 10, 1); // 0 -> margins are in pixels
+	Doc_PrintLine(nDocID, -1, "HEADER");
+	Doc_PrintLine(nDocID, -1, "");
+	Doc_PrintLines(nDocID, 0, "One line on the left");
+	Doc_PrintLines(nDocID, 1, "One line on the right");
+	Doc_Show(nDocID);
+};
 
 //########################################################################
 //##
 //## ITEM: Legendary Burning Short Sword
 //##
 //########################################################################
-instance ItMw1hSwordBurning (C_Item)
+instance ItMw1hSwordBurning(C_Item)
 {
 	//----------------------------------------------------------------
 	//---------------------------------------------------- DESCRIPTION
@@ -112,20 +112,20 @@ instance ItMw1hSwordBurning (C_Item)
 	//----------------------------------------------------- ATTRIBUTES
 	//----------------------------------------------------------------
 	DAMAGETYPE = DAM_EDGE | DAM_FIRE | DAM_MAGIC;
-	DAMAGETOTAL  = 191;
+	DAMAGETOTAL = 191;
 	VALUE = 20000;
 
-	DAMAGE[ DAM_INDEX_EDGE ] = 1  ;
+	DAMAGE[ DAM_INDEX_EDGE ] = 1;
 	DAMAGE[ DAM_INDEX_FIRE ] = 120;
-	DAMAGE[ DAM_INDEX_MAGIC] = 70 ;
+	DAMAGE[ DAM_INDEX_MAGIC] = 70;
 
 	//----------------------------------------------------------------
 	//---------------------------------------------------- DESCRIPTION
 	//----------------------------------------------------------------
-	DESCRIPTION = "Legendary Short Sword of Burning"  ;
-	TEXT [1] = "This is a fucking good sword for"   ;
-	TEXT [2] = "killing all fucking creatures who"   ;
-	TEXT [3] = "trying to fuck with you!"              ;
+	DESCRIPTION = "Legendary Short Sword of Burning";
+	TEXT [1] = "This is a fucking good sword for";
+	TEXT [2] = "killing all fucking creatures who";
+	TEXT [3] = "trying to fuck with you!";
 	TEXT [5] = "Damage";
 	COUNT [5] = DAMAGETOTAL;
 };
@@ -135,7 +135,7 @@ instance ItMw1hSwordBurning (C_Item)
 //## ITEM: Legendary Burning Sword (2h)
 //##
 //########################################################################
-instance ItMw2hSwordBurning (C_Item)
+instance ItMw2hSwordBurning(C_Item)
 {
 	//----------------------------------------------------------------
 	//---------------------------------------------------- DESCRIPTION
@@ -160,10 +160,10 @@ instance ItMw2hSwordBurning (C_Item)
 	//----------------------------------------------------------------
 	//---------------------------------------------------- DESCRIPTION
 	//----------------------------------------------------------------
-	DESCRIPTION = "Legendary Heavy Sword of Burning"  ;
-	TEXT [1] = "Nothing restists the burning touch"   ;
-	TEXT [2] = "of this legendary shword that was"   ;
-	TEXT [3] = "already believe to be lost forever"    ;
+	DESCRIPTION = "Legendary Heavy Sword of Burning";
+	TEXT [1] = "Nothing restists the burning touch";
+	TEXT [2] = "of this legendary shword that was";
+	TEXT [3] = "already believe to be lost forever";
 	TEXT [5] = "Damage";
 	COUNT [5] = DAMAGETOTAL;
 };
@@ -173,7 +173,7 @@ instance ItMw2hSwordBurning (C_Item)
 //## ITEM: Legendary Burning War Bow
 //##
 //########################################################################
-instance ItRwWarBowBurning (C_Item)
+instance ItRwWarBowBurning(C_Item)
 {
 	//----------------------------------------------------------------
 	//---------------------------------------------------- DESCRIPTION
@@ -197,15 +197,15 @@ instance ItRwWarBowBurning (C_Item)
 
 	DAMAGE[ DAM_INDEX_POINT] = 75;
 	DAMAGE[ DAM_INDEX_FIRE ] = 75;
-	DAMAGE[ DAM_INDEX_FLY  ] = 50;
+	DAMAGE[ DAM_INDEX_FLY ] = 50;
 
 	//----------------------------------------------------------------
 	//---------------------------------------------------- DESCRIPTION
 	//----------------------------------------------------------------
-	DESCRIPTION = "Legendary War Bow of Burning"  ;
-	TEXT [1] = "Carved in the ancient times before"   ;
-	TEXT [2] = "the creation of mankind, this bow is" ;
-	TEXT [3] = "the mightiest ranged weapon ever"    ;
+	DESCRIPTION = "Legendary War Bow of Burning";
+	TEXT [1] = "Carved in the ancient times before";
+	TEXT [2] = "the creation of mankind, this bow is";
+	TEXT [3] = "the mightiest ranged weapon ever";
 	TEXT [5] = "Damage";
 	COUNT [5] = DAMAGETOTAL;
 };
@@ -215,7 +215,7 @@ instance ItRwWarBowBurning (C_Item)
 //## ITEM: Legendary Mithril Robe
 //##
 //########################################################################
-instance ItArRobeMithril (C_Item)
+instance ItArRobeMithril(C_Item)
 {
 	name = "Ledengary mithril robe";
 
@@ -253,14 +253,14 @@ instance ItArRobeMithril (C_Item)
 //##
 //########################################################################
 
-instance PC_Roman (NPC_DEFAULT)
+instance PC_Roman(NPC_DEFAULT)
 {
 	//----------------------------------------------------------------
 	//------------------------------------------------- IDENTIFIACTION
 	//----------------------------------------------------------------
 
-	NAME  = "Roman der Romulaner";
-	ID    = 9995;
+	NAME = "Roman der Romulaner";
+	ID = 9995;
 	GUILD = GIL_NONE;
 	VOICE = 11;
 
@@ -287,25 +287,25 @@ instance PC_Roman (NPC_DEFAULT)
 	//----------------------------------------------------- APPEARANCE
 	//----------------------------------------------------------------
 
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_SetVisualBody(self,"HUM_BODY_NAKED0",
-								0,
-								0,
-								"Hum_Head_Fighter",
-								1,
-								2,
-								ItArRobeMithril);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_SetVisualBody(self, "HUM_BODY_NAKED0",
+	0,
+	0,
+	"Hum_Head_Fighter",
+	1,
+	2,
+	ItArRobeMithril);
 
 	//----------------------------------------------------------------
 	//------------------------------------------------------ ABITILIES
 	//----------------------------------------------------------------
 
 /* Npc_LearnFightTalent (self,TAL_1H_AXE3);
-	Npc_LearnFightTalent (self,TAL_2H_AXE3);
-	Npc_LearnFightTalent (self,TAL_1H_SWORD3);
-	Npc_LearnFightTalent (self,TAL_2H_SWORD3);
-	Npc_LearnFightTalent (self,TAL_BOW3);
-	Npc_LearnFightTalent (self,TAL_CROSSBOW3);
+	Npc_LearnFightTalent(self, TAL_2H_AXE3);
+	Npc_LearnFightTalent(self, TAL_1H_SWORD3);
+	Npc_LearnFightTalent(self, TAL_2H_SWORD3);
+	Npc_LearnFightTalent(self, TAL_BOW3);
+	Npc_LearnFightTalent(self, TAL_CROSSBOW3);
 */
 // 	FLAGS = NPC_FLAG_IMMORTAL;
 // 	FIGHT_TACTIC = FAI_Strong;
@@ -315,9 +315,9 @@ instance PC_Roman (NPC_DEFAULT)
 	//----------------------------------------------------------------
 
 	//------------------------------------------- WEAPONS
-	EquipItem(self,ItRwWarBowBurning);
-	EquipItem(self,ItMw1hSwordBurning);
-	EquipItem(self,ItMw2hSwordBurning);
+	EquipItem(self, ItRwWarBowBurning);
+	EquipItem(self, ItMw1hSwordBurning);
+	EquipItem(self, ItMw2hSwordBurning);
 
 	//---------------------------------------------- AMMO
 	//CreateInvItems(self,ItAmArrow, 50);
@@ -328,13 +328,13 @@ instance PC_Roman (NPC_DEFAULT)
 	//--------------------------------------------- FOOD
 	//CreateInvItems(self,ItFoApple , 10);
 	//CreateInvItems(self,ItFoCheese, 10);
-	//CreateInvItems(self,ItFoLoaf  , 10);
-	//CreateInvItems(self,ItFoBeer  , 100);
-	//CreateInvItems(self,ItFoWine  , 10);
+	//CreateInvItems(self,ItFoLoaf , 10);
+	//CreateInvItems(self,ItFoBeer , 100);
+	//CreateInvItems(self,ItFoWine , 10);
 
 	//--------------------------------------------- MISC
 	//CreateInvItems(self,ItMiNugget, 50);
-	CreateInvItem(self,ItWrLevelMap);
+	CreateInvItem(self, ItWrLevelMap);
 
 	//----------------------------------------------------------------
 	//------------------------------------------------------------- AI
@@ -349,14 +349,14 @@ instance PC_Roman (NPC_DEFAULT)
 //##
 //########################################################################
 
-instance Allround_Testmodell (NPC_DEFAULT)
+instance Allround_Testmodell(NPC_DEFAULT)
 {
 	//----------------------------------------------------------------
 	//------------------------------------------------- IDENTIFIACTION
 	//----------------------------------------------------------------
 
-	NAME  = "Allrounder";
-	ID    = 9999;
+	NAME = "Allrounder";
+	ID = 9999;
 	GUILD = GIL_NONE; //GIL_NONE;
 	VOICE = 11;
 
@@ -375,141 +375,141 @@ instance Allround_Testmodell (NPC_DEFAULT)
 	ATTRIBUTE[ ATR_STRENGTH ] = 250;
 	ATTRIBUTE[ ATR_DEXTERITY ] = 250;
 
-	LEVEL   = 250;
+	LEVEL = 250;
 
 	//----------------------------------------------------------------
 	//----------------------------------------------------- APPEARANCE
 	//----------------------------------------------------------------
 
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_SetVisualBody(self,"HUM_BODY_NAKED0",
-								0,
-								0,
-								"Hum_Head_Fighter",
-								1,
-								2,
-								GRD_ARMOR_H);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_SetVisualBody(self, "HUM_BODY_NAKED0",
+	0,
+	0,
+	"Hum_Head_Fighter",
+	1,
+	2,
+	GRD_ARMOR_H);
 
 	//----------------------------------------------------------------
 	//------------------------------------------------------ ABITILIES
 	//----------------------------------------------------------------
 
-	Npc_SetTalentSkill(self,NPC_TALENT_ACROBAT  , 3); Npc_SetTalentValue(self,NPC_TALENT_ACROBAT , 100);
-	Npc_SetTalentSkill(self,NPC_TALENT_PICKLOCK  , 3); Npc_SetTalentValue(self,NPC_TALENT_PICKLOCK   ,   0);
-	Npc_SetTalentSkill(self,NPC_TALENT_PICKPOCKET, 3); Npc_SetTalentValue(self,NPC_TALENT_PICKPOCKET ,   0);
-	Npc_SetTalentSkill(self,NPC_TALENT_SNEAK  , 3);
-	Npc_SetTalentSkill(self,NPC_TALENT_1H  , 3);
-	Npc_SetTalentSkill(self,NPC_TALENT_2H  , 3);
-	Npc_SetTalentSkill(self,NPC_TALENT_BOW  , 3);
-	Npc_SetTalentSkill(self,NPC_TALENT_CROSSBOW  , 3);
-	Npc_SetTalentSkill(self,NPC_TALENT_MAGE   , 8);
-	Npc_SetTalentSkill(self,NPC_TALENT_FIREMASTER, 3);
+	Npc_SetTalentSkill(self, NPC_TALENT_ACROBAT, 3); Npc_SetTalentValue(self, NPC_TALENT_ACROBAT, 100);
+	Npc_SetTalentSkill(self, NPC_TALENT_PICKLOCK, 3); Npc_SetTalentValue(self, NPC_TALENT_PICKLOCK, 0);
+	Npc_SetTalentSkill(self, NPC_TALENT_PICKPOCKET, 3); Npc_SetTalentValue(self, NPC_TALENT_PICKPOCKET, 0);
+	Npc_SetTalentSkill(self, NPC_TALENT_SNEAK, 3);
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 3);
+	Npc_SetTalentSkill(self, NPC_TALENT_2H, 3);
+	Npc_SetTalentSkill(self, NPC_TALENT_BOW, 3);
+	Npc_SetTalentSkill(self, NPC_TALENT_CROSSBOW, 3);
+	Npc_SetTalentSkill(self, NPC_TALENT_MAGE, 8);
+	Npc_SetTalentSkill(self, NPC_TALENT_FIREMASTER, 3);
 
 	FLAGS = NPC_FLAG_IMMORTAL;
-  	FIGHT_TACTIC = FAI_HUMAN_STRONG;
+	FIGHT_TACTIC = FAI_HUMAN_STRONG;
 
 	//----------------------------------------------------------------
 	//------------------------------------------------------ INVENTORY
 	//----------------------------------------------------------------
 
 	//---------------------------------------------------------------- ARMOR
-	CreateInvItem(self,ItArRobeMithril);
+	CreateInvItem(self, ItArRobeMithril);
 
 	//---------------------------------------------------------------- WEAPONS
 	//EquipItem(self,ItRwWarBowBurning);
 	//EquipItem(self,ItMw1hSwordBurning);
 	//EquipItem(self,ItMw2hSwordBurning);
-	EquipItem(self,ItMw_2H_Sword_Heavy_01);
+	EquipItem(self, ItMw_2H_Sword_Heavy_01);
 
 	//---------------------------------------------------------------- AMMO
-	CreateInvItems(self,ItAmArrow , 50);
+	CreateInvItems(self, ItAmArrow, 50);
 
 	//---------------------------------------------------------------- MAGIC
-	CreateInvItem(self,ItArRuneLight);
-	CreateInvItem(self,ItArRuneFirebolt);
-	CreateInvItem(self,ItArRuneFireball);
-	CreateInvItem(self,ItArRuneFirestorm);
-	CreateInvItem(self,ItArRuneFireRain);
-	CreateInvItem(self,ItArRuneTeleport1);
-	CreateInvItem(self,ItArRuneTeleport2);
-	CreateInvItem(self,ItArRuneTeleport3);
-	CreateInvItem(self,ItArRuneTeleport5);
-	CreateInvItem(self,ItArRuneHeal);
-	CreateInvItem(self,ItArRuneChainLightning);
-	CreateInvItem(self,ItArRuneThunderbolt);
-	CreateInvItem(self,ItArRuneThunderball);
-	CreateInvItem(self,ItArRuneIceCube);
-	CreateInvItem(self,ItArRuneIceWave);
-	CreateInvItem(self,ItArRuneDestroyUndead);
-	CreateInvItem(self,ItArRuneWindfist);
-	CreateInvItem(self,ItArRuneStormfist);
-	CreateInvItem(self,ItArRuneTelekinesis);
-	CreateInvItem(self,ItArRuneCharm);
-	CreateInvItem(self,ItArRuneSleep);
-	CreateInvItem(self,ItArRunePyrokinesis);
-	CreateInvItem(self,ItArRuneControl);
+	CreateInvItem(self, ItArRuneLight);
+	CreateInvItem(self, ItArRuneFirebolt);
+	CreateInvItem(self, ItArRuneFireball);
+	CreateInvItem(self, ItArRuneFirestorm);
+	CreateInvItem(self, ItArRuneFireRain);
+	CreateInvItem(self, ItArRuneTeleport1);
+	CreateInvItem(self, ItArRuneTeleport2);
+	CreateInvItem(self, ItArRuneTeleport3);
+	CreateInvItem(self, ItArRuneTeleport5);
+	CreateInvItem(self, ItArRuneHeal);
+	CreateInvItem(self, ItArRuneChainLightning);
+	CreateInvItem(self, ItArRuneThunderbolt);
+	CreateInvItem(self, ItArRuneThunderball);
+	CreateInvItem(self, ItArRuneIceCube);
+	CreateInvItem(self, ItArRuneIceWave);
+	CreateInvItem(self, ItArRuneDestroyUndead);
+	CreateInvItem(self, ItArRuneWindfist);
+	CreateInvItem(self, ItArRuneStormfist);
+	CreateInvItem(self, ItArRuneTelekinesis);
+	CreateInvItem(self, ItArRuneCharm);
+	CreateInvItem(self, ItArRuneSleep);
+	CreateInvItem(self, ItArRunePyrokinesis);
+	CreateInvItem(self, ItArRuneControl);
 
-	CreateInvItem(self,ItArScrollLight);
-	CreateInvItem(self,ItArScrollFirebolt);
-	CreateInvItem(self,ItArScrollFireball);
-	CreateInvItem(self,ItArScrollFirestorm);
-	CreateInvItem(self,ItArScrollFireRain);
-	CreateInvItem(self,ItArScrollTeleport1);
-	CreateInvItem(self,ItArScrollTeleport2);
-	CreateInvItem(self,ItArScrollTeleport3);
-	CreateInvItem(self,ItArScrollTeleport4);
-	CreateInvItem(self,ItArScrollTeleport5);
-	CreateInvItem(self,ItArScrollHeal);
-	CreateInvItem(self,ItArScrollTrfBloodfly);
-	CreateInvItem(self,ItArScrollTrfCrawler);
-	CreateInvItem(self,ItArScrollTrfLurker);
-	CreateInvItem(self,ItArScrollTrfMeatbug);
-	CreateInvItem(self,ItArScrollTrfMolerat);
-	CreateInvItem(self,ItArScrollTrfOrcdog);
-	CreateInvItem(self,ItArScrollTrfScavenger);
-	CreateInvItem(self,ItArScrollTrfShadowbeast);
-	CreateInvItem(self,ItArScrollTrfSnapper);
-	CreateInvItem(self,ItArScrollTrfWaran);
-	CreateInvItem(self,ItArScrollTrfWolf);
-	CreateInvItem(self,ItArScrollChainLightning);
-	CreateInvItem(self,ItArScrollThunderbolt);
-	CreateInvItem(self,ItArScrollThunderball);
-	CreateInvItem(self,ItArScrollIceCube);
-	CreateInvItem(self,ItArScrollIceWave);
-	CreateInvItem(self,ItArScrollSummonDemon);
-	CreateInvItem(self,ItArScrollSummonSkeletons);
-	CreateInvItem(self,ItArScrollSummonGolem);
-	CreateInvItem(self,ItArScrollArmyOfDarkness);
-	CreateInvItem(self,ItArScrollDestroyUndead);
-	CreateInvItem(self,ItArScrollWindfist);
-	CreateInvItem(self,ItArScrollStormfist);
-	CreateInvItem(self,ItArScrollTelekinesis);
-	CreateInvItem(self,ItArScrollCharm);
-	CreateInvItem(self,ItArScrollSleep);
-	CreateInvItem(self,ItArScrollPyrokinesis);
-	CreateInvItem(self,ItArScrollControl);
-	CreateInvItem(self,ItArScrollFear);
-	CreateInvItem(self,ItArScrollBerzerk);
-	CreateInvItem(self,ItArScrollShrink);
+	CreateInvItem(self, ItArScrollLight);
+	CreateInvItem(self, ItArScrollFirebolt);
+	CreateInvItem(self, ItArScrollFireball);
+	CreateInvItem(self, ItArScrollFirestorm);
+	CreateInvItem(self, ItArScrollFireRain);
+	CreateInvItem(self, ItArScrollTeleport1);
+	CreateInvItem(self, ItArScrollTeleport2);
+	CreateInvItem(self, ItArScrollTeleport3);
+	CreateInvItem(self, ItArScrollTeleport4);
+	CreateInvItem(self, ItArScrollTeleport5);
+	CreateInvItem(self, ItArScrollHeal);
+	CreateInvItem(self, ItArScrollTrfBloodfly);
+	CreateInvItem(self, ItArScrollTrfCrawler);
+	CreateInvItem(self, ItArScrollTrfLurker);
+	CreateInvItem(self, ItArScrollTrfMeatbug);
+	CreateInvItem(self, ItArScrollTrfMolerat);
+	CreateInvItem(self, ItArScrollTrfOrcdog);
+	CreateInvItem(self, ItArScrollTrfScavenger);
+	CreateInvItem(self, ItArScrollTrfShadowbeast);
+	CreateInvItem(self, ItArScrollTrfSnapper);
+	CreateInvItem(self, ItArScrollTrfWaran);
+	CreateInvItem(self, ItArScrollTrfWolf);
+	CreateInvItem(self, ItArScrollChainLightning);
+	CreateInvItem(self, ItArScrollThunderbolt);
+	CreateInvItem(self, ItArScrollThunderball);
+	CreateInvItem(self, ItArScrollIceCube);
+	CreateInvItem(self, ItArScrollIceWave);
+	CreateInvItem(self, ItArScrollSummonDemon);
+	CreateInvItem(self, ItArScrollSummonSkeletons);
+	CreateInvItem(self, ItArScrollSummonGolem);
+	CreateInvItem(self, ItArScrollArmyOfDarkness);
+	CreateInvItem(self, ItArScrollDestroyUndead);
+	CreateInvItem(self, ItArScrollWindfist);
+	CreateInvItem(self, ItArScrollStormfist);
+	CreateInvItem(self, ItArScrollTelekinesis);
+	CreateInvItem(self, ItArScrollCharm);
+	CreateInvItem(self, ItArScrollSleep);
+	CreateInvItem(self, ItArScrollPyrokinesis);
+	CreateInvItem(self, ItArScrollControl);
+	CreateInvItem(self, ItArScrollFear);
+	CreateInvItem(self, ItArScrollBerzerk);
+	CreateInvItem(self, ItArScrollShrink);
 
 	//---------------------------------------------------------------- FOOD
-	CreateInvItems(self,ItFoApple , 10);
-	CreateInvItems(self,ItFoCheese , 10);
-	CreateInvItems(self,ItFoLoaf  , 10);
-	CreateInvItems(self,ItFoBeer  , 10);
-	CreateInvItems(self,ItFoWine  , 10);
+	CreateInvItems(self, ItFoApple, 10);
+	CreateInvItems(self, ItFoCheese, 10);
+	CreateInvItems(self, ItFoLoaf, 10);
+	CreateInvItems(self, ItFoBeer, 10);
+	CreateInvItems(self, ItFoWine, 10);
 
 	//---------------------------------------------------------------- DOCS
-	CreateInvItem(self,ItWrLevelMap);
-	CreateInvItem(self,ItWrBookOfTales);
+	CreateInvItem(self, ItWrLevelMap);
+	CreateInvItem(self, ItWrBookOfTales);
 
 	//----------------------------------------------------------------
 	//------------------------------------------------------------- AI
 	//----------------------------------------------------------------
 
 	//--------------------------------------- HABBITS
-	Npc_SetPermAttitude(self,ATT_HOSTILE);
-	Npc_SetAttitude(self,ATT_HOSTILE);
+	Npc_SetPermAttitude(self, ATT_HOSTILE);
+	Npc_SetAttitude(self, ATT_HOSTILE);
 
 	START_AISTATE = ZS_TestEmpty;
 //	DAILY_ROUTINE = DailyRoute_Test_Empty;
@@ -521,7 +521,7 @@ instance Allround_Testmodell (NPC_DEFAULT)
 
 //########################################################################
 //##
-//##       FUNCTIONS
+//## FUNCTIONS
 //##
 //########################################################################
 
@@ -531,18 +531,19 @@ instance Allround_Testmodell (NPC_DEFAULT)
 //##
 //########################################################################
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 /*func void B_SetCutScenePerceptions()
 {
 	PrintScreen("B_SetCutScenePerceptions ...", -1, 50, "FONT_OLD_20_WHITE.TGA", 10);
 };
+
 */
 
 //########################################################################
 //##
-//##       ZUSTAENDE
+//## ZUSTAENDE
 //##
 //########################################################################
 
@@ -552,34 +553,34 @@ instance Allround_Testmodell (NPC_DEFAULT)
 //##
 //########################################################################
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestEmpty()
 {
-//	Npc_PercEnable  (self,PERC_ASSESSTALK     , B_AssessTalk);
-//	Npc_PercEnable  (self,PERC_ASSESSGIVENITEM, ZS_AssessGivenItem);
-	Npc_PercEnable  (self,PERC_ASSESSTALK     , ZS_TestFinishMove);
+//	Npc_PercEnable (self,PERC_ASSESSTALK , B_AssessTalk);
+//	Npc_PercEnable (self,PERC_ASSESSGIVENITEM, ZS_AssessGivenItem);
+	Npc_PercEnable(self, PERC_ASSESSTALK, ZS_TestFinishMove);
 
 	//
 	//	LOOK AT PLAYER
 	//
-	PrintScreen("Looking at player ..." , -1, 50, "FONT_OLD_20_WHITE.TGA", 2);
+	PrintScreen("Looking at player ...", -1, 50, "FONT_OLD_20_WHITE.TGA", 2);
 
-	AI_LookAtNpc(self,hero);
+	AI_LookAtNpc(self, hero);
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func void ZS_TestEmpty_Loop()
 {
 //	AI_QuickLook(self,hero);
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestEmpty_End()
 {
 };
@@ -590,32 +591,32 @@ func void ZS_TestEmpty_End()
 //##
 //########################################################################
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestSmoke()
 {
-	B_ChooseJoint (self);
-	AI_UseMob (self,"SMOKE",1);
+	B_ChooseJoint(self);
+	AI_UseMob(self, "SMOKE", 1);
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func int ZS_TestSmoke_Loop()
 {
-	AI_Wait(self,1);
+	AI_Wait(self, 1);
 
 	return 1;
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestSmoke_End()
 {
-	AI_UseMob (self,"SMOKE",  -1);
-	AI_UseItemToState (self,ItMiJoint_1, -1);
+	AI_UseMob(self, "SMOKE", -1);
+	AI_UseItemToState(self, ItMiJoint_1, -1);
 };
 
 //########################################################################
@@ -625,30 +626,30 @@ func void ZS_TestSmoke_End()
 //########################################################################
 
 var int m_nGuild;
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestGuild()
 {
-	if ( m_nGuild == 0    ) { m_nGuild = GIL_NONE; }
-	else if ( m_nGuild == GIL_NONE ) { m_nGuild = GIL_GRD ; }
-	else if ( m_nGuild == GIL_GRD  ) { m_nGuild = GIL_VLK ; }
-	else if ( m_nGuild == GIL_VLK  ) { m_nGuild = GIL_NONE; };
+	if (m_nGuild == 0) { m_nGuild = GIL_NONE; }
 
-	Npc_SetTrueGuild(hero,m_nGuild);
+	else if (m_nGuild == GIL_NONE) { m_nGuild = GIL_GRD; }
+	else if (m_nGuild == GIL_GRD) { m_nGuild = GIL_VLK; }
+	else if (m_nGuild == GIL_VLK) { m_nGuild = GIL_NONE; };
+	Npc_SetTrueGuild(hero, m_nGuild);
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func int ZS_TestGuild_Loop()
 {
 	return 1;
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestGuild_End()
 {
 };
@@ -659,25 +660,25 @@ func void ZS_TestGuild_End()
 //##
 //########################################################################
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestInfos()
 {
 	AI_ProcessInfos(self);
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func int ZS_TestInfos_Loop()
 {
 	return 1;
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestInfos_End()
 {
 };
@@ -689,30 +690,31 @@ func void ZS_TestInfos_End()
 //##
 //########################################################################
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestTimedMDS()
 {
 	PrintScreen("Applying druken overlay for 5000 ticks ...", -1, -1, "FONT_OLD_20_WHITE.TGA", 3);
 
-	Mdl_ApplyOverlayMDSTimed(self,"HUMANS_DRUNKEN.MDS", 5000);
+	Mdl_ApplyOverlayMDSTimed(self, "HUMANS_DRUNKEN.MDS", 5000);
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func int ZS_TestTimedMDS_Loop()
 {
 	return 1;
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestTimedMDS_End()
 {
 };
+
 */
 
 //########################################################################
@@ -723,9 +725,9 @@ func void ZS_TestTimedMDS_End()
 
 var int g_nMana;
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestSpell()
 {
 	//
@@ -735,12 +737,12 @@ func void ZS_TestSpell()
 
 	g_nMana = g_nMana + 1;
 
-	if ( g_nMana > 50 )
+	if (g_nMana > 50)
 	{
 		g_nMana = 25;
 	};
 
-	if ( g_nMana < 25 )
+	if (g_nMana < 25)
 	{
 		g_nMana = 25;
 	};
@@ -748,24 +750,24 @@ func void ZS_TestSpell()
 	//
 	//	ACTIVATE SPELL
 	//
-	if ( Npc_HasSpell(self,g_nSpell ))
+	if (Npc_HasSpell(self, g_nSpell))
 	{
 		PrintScreen("Readying spell ...", -1, 40, "FONT_OLD_20_WHITE.TGA", 3);
-		AI_ReadySpell(self,SPL_FIREBALL, g_nMana);
+		AI_ReadySpell(self, SPL_FIREBALL, g_nMana);
 	};
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func int ZS_TestSpell_Loop()
 {
 	return 1;
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestSpell_End()
 {
 };
@@ -778,21 +780,21 @@ func void ZS_TestSpell_End()
 
 var int g_nSpell;
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestMagic()
 {
 	//
 	//	ACTIVATE SPELL
 	//
 	PrintScreen("Unreadying spell ...", -1, 30, "FONT_OLD_20_WHITE.TGA", 3);
-	AI_UnreadySpell (self);
+	AI_UnreadySpell(self);
 
-	if ( Npc_HasSpell(self,g_nSpell ))
+	if (Npc_HasSpell(self, g_nSpell))
 	{
 		PrintScreen("Readying spell ...", -1, 40, "FONT_OLD_20_WHITE.TGA", 3);
-		AI_ReadySpell(self,g_nSpell, 50);
+		AI_ReadySpell(self, g_nSpell, 50);
 	}
 	else
 	{
@@ -804,23 +806,23 @@ func void ZS_TestMagic()
 	//
 	g_nSpell = g_nSpell + 1;
 
-	if ( g_nSpell > SPL_DESTROYUNDEAD )
+	if (g_nSpell > SPL_DESTROYUNDEAD)
 	{
 		g_nSpell = SPL_LIGHT;
 	};
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func int ZS_TestMagic_Loop()
 {
 	return 1;
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestMagic_End()
 {
 };
@@ -832,32 +834,32 @@ func void ZS_TestMagic_End()
 //##
 //########################################################################
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestDefend()
 {
 	PrintScreen("Readying weapon ...", -1, 30, "FONT_OLD_20_WHITE.TGA", 3);
 
 	AI_StandUp(self);
-	AI_EquipBestMeleeWeapon (self);
-	AI_ReadyMeleeWeapon (self);
+	AI_EquipBestMeleeWeapon(self);
+	AI_ReadyMeleeWeapon(self);
 
 	PrintScreen("Defending self ...", -1, 40, "FONT_OLD_20_WHITE.TGA", 3);
-	AI_Defend (self);
+	AI_Defend(self);
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func int ZS_TestDefend_Loop()
 {
 	return 1;
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestDefend_End()
 {
 };
@@ -868,30 +870,31 @@ func void ZS_TestDefend_End()
 //##
 //########################################################################
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestDamage()
 {
 	PrintScreen("Got damage ...", -1, 30, "FONT_OLD_20_WHITE.TGA", 3);
 
-	AI_StartState(self,ZS_TestDefend, 0, "  ");
+	AI_StartState(self, ZS_TestDefend, 0, "  ");
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func int ZS_TestDamage_Loop()
 {
 	return 1;
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestDamage_End()
 {
 };
+
 */
 
 //########################################################################
@@ -900,15 +903,15 @@ func void ZS_TestDamage_End()
 //##
 //########################################################################
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestPatrol()
 {
 	//
 	//	MOVEMOB WAHRNEHMUNG ABFANGEN
 	//
-	Npc_PercEnable(self,PERC_MOVEMOB, ZS_TestMoveMob);
+	Npc_PercEnable(self, PERC_MOVEMOB, ZS_TestMoveMob);
 
 	//
 	//	VOR DIE TUER TELEPORTIEREN
@@ -918,20 +921,20 @@ func void ZS_TestPatrol()
 	//
 	//	UND DURCHGEHEN
 	//
-	AI_GotoWP(self,"WP_OUT");
+	AI_GotoWP(self, "WP_OUT");
 	AI_AlignToFP(self);
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func void ZS_TestPatrol_Loop()
 {
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestPatrol_End()
 {
 };
@@ -942,9 +945,9 @@ func void ZS_TestPatrol_End()
 //##
 //########################################################################
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestMoveMob()
 {
 	PrintScreen("Stopping ...", -1, 30, "FONT_OLD_20_WHITE.TGA", 3);
@@ -954,32 +957,30 @@ func void ZS_TestMoveMob()
 	//
 	Npc_ClearAIQueue(self);
 	AI_StandUp(self);
-
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func void ZS_TestMoveMob_Loop()
 {
 	//
 	//	TUER OFFEN ?
 	//
-	if ( ! Npc_IsWayBlocked(self))
+	if (!Npc_IsWayBlocked(self))
 	{
-
 		PrintScreen("Way is free now ...", -1, 40, "FONT_OLD_20_WHITE.TGA", 3);
 
 		//
 		//	DANN MAL LOS
 		//
-		AI_StartState(self,ZS_TestPatrol, 0, "  ");
+		AI_StartState(self, ZS_TestPatrol, 0, "  ");
 	};
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestMoveMob_End()
 {
 };
@@ -992,11 +993,11 @@ func void ZS_TestMoveMob_End()
 //########################################################################
 
 var int g_nWaypoint;
-var string  g_strWaypoint;
+var string g_strWaypoint;
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestTeleport()
 {
 	//
@@ -1008,13 +1009,12 @@ func void ZS_TestTeleport()
 	//	CHOOSE NEXT WAYPOINT
 	//
 	g_nWaypoint = g_nWaypoint + 1;
-	if ( g_nWaypoint > 15 ) { g_nWaypoint = 0; };
-
+	if (g_nWaypoint > 15) { g_nWaypoint = 0; };
 	//
 	//	COMPOSE WAYPOINT STRING
 	//
 	g_strWaypoint = "WP_INDOOR_";
-	g_strWaypoint = ConcatStrings(g_strWaypoint, IntToString( g_nWaypoint ));
+	g_strWaypoint = ConcatStrings(g_strWaypoint, IntToString(g_nWaypoint));
 
 	//
 	//	GIVE SOME INFO
@@ -1030,20 +1030,20 @@ func void ZS_TestTeleport()
 	//	ACTUALLY GO THERE
 	//
 //	AI_GotoWP(self,g_strWaypoint);
-	AI_Teleport(self,g_strWaypoint);
+	AI_Teleport(self, g_strWaypoint);
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func int ZS_TestTeleport_Loop()
 {
 	return 1;
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestTeleport_End()
 {
 };
@@ -1054,14 +1054,14 @@ func void ZS_TestTeleport_End()
 //##
 //########################################################################
 
-	var string strMessage;
+var string strMessage;
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestAttitude()
 {
-	var c_npc npcOther;
+	var C_Npc npcOther;
 	npcOther = Hlp_GetNpc(Allround_Testmodell);
 
 	strMessage = "";
@@ -1071,29 +1071,31 @@ func void ZS_TestAttitude()
 	strMessage = ConcatStrings(strMessage, " = ");
 
 	var int nAttitude;
-	nAttitude = Wld_GetGuildAttitude( self.guild, npcOther.guild);
+	nAttitude = Wld_GetGuildAttitude(self.guild, npcOther.guild);
 
-	if ( nAttitude == ATT_FRIENDLY ) { ConcatStrings(strMessage, "FRIENDLY"); }
-	else if ( nAttitude == ATT_HOSTILE  ) { ConcatStrings(strMessage, "HOSTILE"); }
-	else if ( nAttitude == ATT_NEUTRAL  ) { ConcatStrings(strMessage, "NEUTRAL"); }
-	else if ( nAttitude == ATT_ANGRY  ) { ConcatStrings(strMessage, "ANGRY"); }
+	if (nAttitude == ATT_FRIENDLY) { ConcatStrings(strMessage, "FRIENDLY"); }
+
+	else if (nAttitude == ATT_HOSTILE) { ConcatStrings(strMessage, "HOSTILE"); }
+	else if (nAttitude == ATT_NEUTRAL) { ConcatStrings(strMessage, "NEUTRAL"); }
+	else if (nAttitude == ATT_ANGRY) { ConcatStrings(strMessage, "ANGRY"); }
 	else { ConcatStrings(strMessage, "INVALID"); };
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func void ZS_TestAttitude_Loop()
 {
-	PrintScreen(strMessage, -1, -1, "FONT_OLD_20_WHITE.TGA",1);
+	PrintScreen(strMessage, -1, -1, "FONT_OLD_20_WHITE.TGA", 1);
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestAttitude_End()
 {
 };
+
 */
 
 //########################################################################
@@ -1102,9 +1104,9 @@ func void ZS_TestAttitude_End()
 //##
 //########################################################################
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestDraw()
 {
 	//
@@ -1114,34 +1116,34 @@ func void ZS_TestDraw()
 
 	AI_StandUp(self);
 	AI_EquipBestRangedWeapon(self);
-	AI_ReadyRangedWeapon (self);
+	AI_ReadyRangedWeapon(self);
 
 	//
 	//	AIM AT PLAYER
 	//
 	PrintScreen("Aiming at player ...", -1, 60, "FONT_OLD_20_WHITE.TGA", 2);
 
-	AI_AimAt(self,hero);
+	AI_AimAt(self, hero);
 
 	//
 	//	... NEXT TIME SOMEONE TALKS TO ME, I WILL SHOOT ...
 	//
 	PrintScreen("Next time I will shoot ...", -1, 70, "FONT_OLD_20_WHITE.TGA", 2);
 
-	Npc_PercEnable  (self,PERC_ASSESSTALK, ZS_TestShoot);
+	Npc_PercEnable(self, PERC_ASSESSTALK, ZS_TestShoot);
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func void ZS_TestDraw_Loop()
 {
 	//	Waiting for shot
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestDraw_End()
 {
 };
@@ -1152,9 +1154,9 @@ func void ZS_TestDraw_End()
 //##
 //########################################################################
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestShoot()
 {
 	//
@@ -1162,7 +1164,7 @@ func void ZS_TestShoot()
 	//
 	PrintScreen("Shooting at player ...", -1, 50, "FONT_OLD_20_WHITE.TGA", 2);
 
-	AI_ShootAt(self,hero);
+	AI_ShootAt(self, hero);
 
 	//
 	//	STAND UP
@@ -1181,20 +1183,20 @@ func void ZS_TestShoot()
 	//
 	//	RE-START ORIGINAL STATE
 	//
-	AI_StartState(self,ZS_TestEmpty, 0, "  ");
+	AI_StartState(self, ZS_TestEmpty, 0, "  ");
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func int ZS_TestShoot_Loop()
 {
 	return 1;
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestShoot_End()
 {
 };
@@ -1205,9 +1207,9 @@ func void ZS_TestShoot_End()
 //##
 //########################################################################
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestFinishMove()
 {
 	//	INFO
@@ -1215,19 +1217,19 @@ func void ZS_TestFinishMove()
 
 	//	ARM
 	AI_StandUp(self);
-	AI_EquipBestMeleeWeapon (self);
-	AI_ReadyMeleeWeapon (self);
-	Npc_SetAttitude(self,ATT_HOSTILE);
+	AI_EquipBestMeleeWeapon(self);
+	AI_ReadyMeleeWeapon(self);
+	Npc_SetAttitude(self, ATT_HOSTILE);
 
 	//
 	//	SET TARGET
 	//
-	Npc_SetTarget(self,hero);
+	Npc_SetTarget(self, hero);
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func void ZS_TestFinishMove_Loop()
 {
 	//
@@ -1237,32 +1239,32 @@ func void ZS_TestFinishMove_Loop()
 
 	AI_Attack(self);
 
-	if (Npc_IsInState(hero,ZS_UNCONSCIOUS ))
+	if (Npc_IsInState(hero, ZS_UNCONSCIOUS))
 	{
 		//
 		// FINISH MOVE
 		//
 		PrintScreen("Finishing hero ...", -1, 30, "FONT_OLD_20_WHITE.TGA", 2);
 
-		AI_FinishingMove(self,hero);
+		AI_FinishingMove(self, hero);
 
 		//
 		//	STAND UP
 		//
 		AI_StandUp(self);
-		AI_RemoveWeapon (self);
-		Npc_SetAttitude(self,ATT_NEUTRAL);
+		AI_RemoveWeapon(self);
+		Npc_SetAttitude(self, ATT_NEUTRAL);
 
 		//
 		//	START FORMER STATE
 		//
-		AI_StartState(self,ZS_TestEmpty, 0, "  ");
+		AI_StartState(self, ZS_TestEmpty, 0, "  ");
 	};
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestFinishMove_End()
 {
 };
@@ -1274,34 +1276,33 @@ func void ZS_TestFinishMove_End()
 //##
 //########################################################################
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestUse()
 {
 	//	SPIELER WAHRNEHMEN
 	//
-	Npc_PerceiveAll(self) ;
-	if ( ! Wld_DetectPlayer(self)) { return; };
-
+	Npc_PerceiveAll(self);
+	if (!Wld_DetectPlayer(self)) { return; };
 	//
 	//	GEH ZUM BETT
 	//
-	AI_GotoWP(self,"WP_INDOOR_14");
-	AI_UseMob(self,"BEDHIGH",1);
+	AI_GotoWP(self, "WP_INDOOR_14");
+	AI_UseMob(self, "BEDHIGH", 1);
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func int ZS_TestUse_Loop()
 {
 	return 1;
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestUse_End()
 {
 };
@@ -1312,31 +1313,30 @@ func void ZS_TestUse_End()
 //##
 //########################################################################
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestTalk()
 {
 	//	SPIELER WAHRNEHMEN
 	//
-	Npc_PerceiveAll(self) ;
-	if ( ! Wld_DetectPlayer(self)) { return; };
-
+	Npc_PerceiveAll(self);
+	if (!Wld_DetectPlayer(self)) { return; };
 	//
 	//	LABER
 	//
-	AI_Output(self ,other,"Sit_1_OW_Diego_Gamestart_11_00"); //Ich bin Diego. Ich kümmere mich um die Neuen.
-	AI_Output(other,self ,"Sit_1_OW_Diego_Gamestart_20_01"); //Wo sind all die anderen?
+	AI_Output(self, other, "Sit_1_OW_Diego_Gamestart_11_00"); //Ich bin Diego. Ich kümmere mich um die Neuen.
+	AI_Output(other, self, "Sit_1_OW_Diego_Gamestart_20_01"); //Wo sind all die anderen?
 
 	//
 	//	SCREEN OUTPUT
 	//
 
 	//	X-CENTERED
-	PrintScreen("There is urest in the forest"   , -1, 10, "FONT_OLD_10_WHITE.TGA", 5);
-	PrintScreen("There is trouble with the trees" , -1, 15, "FONT_OLD_10_WHITE.TGA", 6);
+	PrintScreen("There is urest in the forest", -1, 10, "FONT_OLD_10_WHITE.TGA", 5);
+	PrintScreen("There is trouble with the trees", -1, 15, "FONT_OLD_10_WHITE.TGA", 6);
 	PrintScreen("For the maples want more sunlight", -1, 20, "FONT_OLD_10_WHITE.TGA", 7);
-	PrintScreen("And the oaks ignore their please" , -1, 25, "FONT_OLD_10_WHITE.TGA", 8);
+	PrintScreen("And the oaks ignore their please", -1, 25, "FONT_OLD_10_WHITE.TGA", 8);
 
 	//	Y-CENTERED
 	PrintScreen("10%", 10, -1, "FONT_OLD_10_WHITE.TGA", 5);
@@ -1350,25 +1350,25 @@ func void ZS_TestTalk()
 	PrintScreen("90%", 90, -1, "FONT_OLD_10_WHITE.TGA", 5);
 
 	//	X/Y-CENTERED
-	PrintScreen("THE   TREES" , -1, -1, "FONT_OLD_20_WHITE.TGA", 10);
+	PrintScreen("THE   TREES", -1, -1, "FONT_OLD_20_WHITE.TGA", 10);
 
 	//
 	//	KOTZ-SCENE
 	//
-	AI_PlayCutscene(self,"GeneralG");
+	AI_PlayCutscene(self, "GeneralG");
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func int ZS_TestTalk_Loop()
 {
 	return 1;
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestTalk_End()
 {
 };
@@ -1379,26 +1379,25 @@ func void ZS_TestTalk_End()
 //##
 //########################################################################
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestFlee()
 {
 	//
 	//	SPIELER WAHRNEHMEN
 	//
-	Npc_PerceiveAll(self) ;
-	if ( ! Wld_DetectPlayer(self)) { return; };
-
+	Npc_PerceiveAll(self);
+	if (!Wld_DetectPlayer(self)) { return; };
 	//
 	//	SPIELER IST GEGNER
 	//
-	Npc_SetTarget(self,other);
+	Npc_SetTarget(self, other);
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func int ZS_TestFlee_Loop()
 {
 	//
@@ -1406,13 +1405,12 @@ func int ZS_TestFlee_Loop()
 	//
 	AI_Flee(self);
 
-	return (Npc_GetDistToNpc(self,other ) > 500);
-
+	return(Npc_GetDistToNpc(self, other) > 500);
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestFlee_End()
 {
 };
@@ -1423,68 +1421,67 @@ func void ZS_TestFlee_End()
 //##
 //########################################################################
 
-func void MoveItem( var int nAmount, var int nSlot )
+func void MoveItem(var int nAmount, var int nSlot)
 {
 	//
 	//	GIBT ES WAS ZU TRANSFERIEREN ?
 	//
-	if ( nAmount )
+	if (nAmount)
 	{
 		//
 		//	LOKALE HILFS-VARIABLEN
 		//
-		var int nItem  ;
+		var int nItem;
 		var string strAmount;
 
 		//
 		//	ON-SCREEN FEEDBACK
 		//
-		strAmount = ConcatStrings("Weapon Slot ", IntToString( nSlot   ));
-		strAmount = ConcatStrings(strAmount  , ": ");
-		strAmount = ConcatStrings(strAmount  , IntToString( nAmount ));
-		Print( strAmount);
+		strAmount = ConcatStrings("Weapon Slot ", IntToString(nSlot));
+		strAmount = ConcatStrings(strAmount, ": ");
+		strAmount = ConcatStrings(strAmount, IntToString(nAmount));
+		Print(strAmount);
 
 		//
 		//	EIGENTLICHER TRANSFER
 		//
-		nItem = Hlp_GetInstanceID( item);
-		Npc_RemoveInvItems(self , nItem, nAmount);
+		nItem = Hlp_GetInstanceID(item);
+		Npc_RemoveInvItems(self, nItem, nAmount);
 		//CreateInvItems(other,nItem, nAmount);
 	};
 };
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestPlunder()
 {
 	//
 	//	SPIELER WAHRNEHMEN
 	//
-	Npc_PerceiveAll(self) ;
-	if ( ! Wld_DetectPlayer(self)) { return; };
-
+	Npc_PerceiveAll(self);
+	if (!Wld_DetectPlayer(self)) { return; };
 	//
 	//	SICH SELBST "DURCHSUCHEN"
 	//
-	var int nSlot  ;
+	var int nSlot;
 
-	nSlot = 1; MoveItem( Npc_GetInvItemBySlot(self,INV_WEAPON, nSlot ), nSlot);
-	nSlot = 2; MoveItem( Npc_GetInvItemBySlot(self,INV_WEAPON, nSlot ), nSlot);
-	nSlot = 3; MoveItem( Npc_GetInvItemBySlot(self,INV_WEAPON, nSlot ), nSlot);
-	nSlot = 4; MoveItem( Npc_GetInvItemBySlot(self,INV_WEAPON, nSlot ), nSlot);
+	nSlot = 1; MoveItem(Npc_GetInvItemBySlot(self, INV_WEAPON, nSlot), nSlot);
+	nSlot = 2; MoveItem(Npc_GetInvItemBySlot(self, INV_WEAPON, nSlot), nSlot);
+	nSlot = 3; MoveItem(Npc_GetInvItemBySlot(self, INV_WEAPON, nSlot), nSlot);
+	nSlot = 4; MoveItem(Npc_GetInvItemBySlot(self, INV_WEAPON, nSlot), nSlot);
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func void ZS_TestPlunder_Loop()
 {
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestPlunder_End()
 {
 };
@@ -1495,24 +1492,24 @@ func void ZS_TestPlunder_End()
 //##
 //########################################################################
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestGoto()
 {
-	AI_GotoFP(self,"FP");
+	AI_GotoFP(self, "FP");
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func void ZS_TestGoto_Loop()
 {
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestGoto_End()
 {
 };
@@ -1523,41 +1520,42 @@ func void ZS_TestGoto_End()
 //##
 //########################################################################
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestEatApple()
 {
 //	B_ChooseApple(self);
 
 	self.aivar[AIV_ITEMSTATUS] = TA_IT_APPLE;
 
-	if (!Npc_HasItems(self,ItFoApple))
+	if (!Npc_HasItems(self, ItFoApple))
 	{
 		//CreateInvItem(self,ItFoApple);
 	};
-	AI_UseItemToState (self,ItFoApple,  0);
-	AI_UseItemToState (self,ItFoApple,  1);
-	AI_UseItemToState (self,ItFoApple,  2);
-	AI_UseItemToState (self,ItFoApple,  3);
-	AI_UseItemToState (self,ItFoApple,  4);
-	AI_UseItemToState (self,ItFoApple,  5);
-	AI_UseItemToState (self,ItFoApple, -1);
 
-	self.aivar[AIV_ITEMFREQ]=1;
+	AI_UseItemToState(self, ItFoApple, 0);
+	AI_UseItemToState(self, ItFoApple, 1);
+	AI_UseItemToState(self, ItFoApple, 2);
+	AI_UseItemToState(self, ItFoApple, 3);
+	AI_UseItemToState(self, ItFoApple, 4);
+	AI_UseItemToState(self, ItFoApple, 5);
+	AI_UseItemToState(self, ItFoApple, -1);
+
+	self.aivar[AIV_ITEMFREQ] = 1;
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func int ZS_TestEatApple_Loop()
 {
 	return 1;
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestEatApple_End()
 {
 };
@@ -1570,46 +1568,46 @@ func void ZS_TestEatApple_End()
 
 var int nTargetShoot;
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestShootAt()
 {
 	//
 	//	SELECT ENEMY
 	//
-	var c_npc npcEnemy;
+	var C_Npc npcEnemy;
 
-	if ( nTargetShoot == 0 )
+	if (nTargetShoot == 0)
 	{
-		Print( "Shooting @: ROCKEFELLER");
+		Print("Shooting @: ROCKEFELLER");
 		npcEnemy = Hlp_GetNpc(PC_Rockefeller);
 	}
-	else if ( nTargetShoot == 1 )
+	else if (nTargetShoot == 1)
 	{
-		Print( "Shooting @: SLD1_Testmodell");
+		Print("Shooting @: SLD1_Testmodell");
 		npcEnemy = Hlp_GetNpc(SLD1_Testmodell);
 	}
-	else if ( nTargetShoot == 2 )
+	else if (nTargetShoot == 2)
 	{
-		Print( "Shooting @: Nobody");
+		Print("Shooting @: Nobody");
 	};
 
-	AI_ShootAt(self,npcEnemy);
-	AI_ShootAt(self,0);
+	AI_ShootAt(self, npcEnemy);
+	AI_ShootAt(self, 0);
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func int ZS_TestShootAt_Loop()
 {
 	return 1;
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestShootAt_End()
 {
 };
@@ -1622,37 +1620,37 @@ func void ZS_TestShootAt_End()
 
 var int nTargetAim;
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestAimAt()
 {
 	//
 	//	SELECT ENEMY
 	//
-	var c_npc npcEnemy;
+	var C_Npc npcEnemy;
 
-	if ( nTargetAim == 0 )
+	if (nTargetAim == 0)
 	{
-		Print( "Aiming @: ROCKEFELLER");
+		Print("Aiming @: ROCKEFELLER");
 		npcEnemy = Hlp_GetNpc(PC_Rockefeller);
 
-		nTargetAim  = 1;
+		nTargetAim = 1;
 		nTargetShoot = 0;
 	}
-	else if ( nTargetAim == 1 )
+	else if (nTargetAim == 1)
 	{
-		Print( "Aiming @: SLD1_Testmodell");
+		Print("Aiming @: SLD1_Testmodell");
 		npcEnemy = Hlp_GetNpc(SLD1_Testmodell);
 
-		nTargetAim  = 2;
+		nTargetAim = 2;
 		nTargetShoot = 1;
 	}
-	else if ( nTargetAim == 2 )
+	else if (nTargetAim == 2)
 	{
-		Print( "Aiming @: Nobody");
+		Print("Aiming @: Nobody");
 
-		nTargetAim   = 0;
+		nTargetAim = 0;
 		nTargetShoot = 2;
 	};
 
@@ -1662,24 +1660,24 @@ func void ZS_TestAimAt()
 	//				  A) TARGET IS LOST
 	//				  B) AI_ShootAt() IS CALLED
 	//				  C) AI_AimStop() IS CALLED
-	//				  D) AI_AimAt()   IS CALLED again
+	//				  D) AI_AimAt() IS CALLED again
 	//
 
 	AI_ReadyRangedWeapon(self);
 //	AI_AimAt(self,npcEnemy);
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func int ZS_TestAimAt_Loop()
 {
 	return 1;
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestAimAt_End()
 {
 };
@@ -1690,45 +1688,47 @@ func void ZS_TestAimAt_End()
 //##
 //########################################################################
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestSwitchArmor()
 {
 	//
 	//	WHAT DO I WEAR ?
 	//
 	var c_item itArmor;
-	itArmor = Npc_GetEquippedArmor (self);
+	itArmor = Npc_GetEquippedArmor(self);
 
 	//
 	//	WE AIN'T GOIN' OUT LIKE THIS ...
 	//
-	if ( ! Hlp_IsValidItem( itArmor ))
+	if (!Hlp_IsValidItem(itArmor))
 	{
-		AI_EquipArmor (self,GRD_ARMOR_H); // put on guard's armor :-(
+		AI_EquipArmor(self, GRD_ARMOR_H); // put on guard's armor :-(
 	};
-	if ( Hlp_GetInstanceID( itArmor ) == Hlp_GetInstanceID( GRD_ARMOR_H ))
+
+	if (Hlp_GetInstanceID(itArmor) == Hlp_GetInstanceID(GRD_ARMOR_H))
 	{
-		AI_EquipArmor (self,ItArRobeMithril); // put on the legendary mithril robe :-)
+		AI_EquipArmor(self, ItArRobeMithril); // put on the legendary mithril robe :-)
 	};
-	if ( Hlp_GetInstanceID( itArmor ) == Hlp_GetInstanceID( ItArRobeMithril ))
+
+	if (Hlp_GetInstanceID(itArmor) == Hlp_GetInstanceID(ItArRobeMithril))
 	{
 		AI_UnequipArmor(self); // i don't need that stuff
 	};
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func int ZS_TestSwitchArmor_Loop()
 {
 	return 1;
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestSwitchArmor_End()
 {
 };
@@ -1739,26 +1739,26 @@ func void ZS_TestSwitchArmor_End()
 //##
 //########################################################################
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestBestArmor()
 {
 	AI_UnequipArmor(self);
 	AI_EquipBestArmor(self);
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func int ZS_TestBestArmor_Loop()
 {
 	return 1;
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestBestArmor_End()
 {
 };
@@ -1769,93 +1769,93 @@ func void ZS_TestBestArmor_End()
 //##
 //########################################################################
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------------- ENTRY
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
 func void ZS_TestObstacle()
 {
-	Npc_PercEnable  (self,PERC_ASSESSCALL , ZS_TestObstacle_Call);
-	Npc_PercEnable  (self,PERC_MOVENPC , ZS_TestObstacle_Talk);
+	Npc_PercEnable(self, PERC_ASSESSCALL, ZS_TestObstacle_Call);
+	Npc_PercEnable(self, PERC_MOVENPC, ZS_TestObstacle_Talk);
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- LOOP
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
 func void ZS_TestObstacle_Loop()
 {
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------------- EXIT
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
 func void ZS_TestObstacle_End()
 {
 };
 
-	//////////////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
 
-		//----------------------------------------------------------------
-		//---------------------------------------------------------- ENTRY
-		//----------------------------------------------------------------
-	func void ZS_TestObstacle_Call()
-	{
-		Print( "I AM BEING CALLED");
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
+func void ZS_TestObstacle_Call()
+{
+	Print("I AM BEING CALLED");
 
-		AI_SetWalkmode(self,NPC_WALK);
-		AI_GotoNpc(self,other);
-	};
+	AI_SetWalkMode(self, NPC_WALK);
+	AI_GotoNpc(self, other);
+};
 
-		//----------------------------------------------------------------
-		//----------------------------------------------------------- LOOP
-		//----------------------------------------------------------------
-	func int ZS_TestObstacle_Call_Loop()
-	{
-		return 1;
-	};
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
+func int ZS_TestObstacle_Call_Loop()
+{
+	return 1;
+};
 
-		//----------------------------------------------------------------
-		//----------------------------------------------------------- EXIT
-		//----------------------------------------------------------------
-	func void ZS_TestObstacle_Call_End()
-	{
-	};
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
+func void ZS_TestObstacle_Call_End()
+{
+};
 
-	//////////////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
 
-		//----------------------------------------------------------------
-		//---------------------------------------------------------- ENTRY
-		//----------------------------------------------------------------
-	func void ZS_TestObstacle_Talk()
-	{
-		Print( "THERE'S AN OBSTACLE IN MY WAY");
+//----------------------------------------------------------------
+//---------------------------------------------------------- ENTRY
+//----------------------------------------------------------------
+func void ZS_TestObstacle_Talk()
+{
+	Print("THERE'S AN OBSTACLE IN MY WAY");
 
-		AI_StandUp(self);
-	};
+	AI_StandUp(self);
+};
 
-		//----------------------------------------------------------------
-		//----------------------------------------------------------- LOOP
-		//----------------------------------------------------------------
-	func int ZS_TestObstacle_Talk_Loop()
-	{
-		return 1;
-	};
+//----------------------------------------------------------------
+//----------------------------------------------------------- LOOP
+//----------------------------------------------------------------
+func int ZS_TestObstacle_Talk_Loop()
+{
+	return 1;
+};
 
-		//----------------------------------------------------------------
-		//----------------------------------------------------------- EXIT
-		//----------------------------------------------------------------
-	func void ZS_TestObstacle_Talk_End()
-	{
-	};
+//----------------------------------------------------------------
+//----------------------------------------------------------- EXIT
+//----------------------------------------------------------------
+func void ZS_TestObstacle_Talk_End()
+{
+};
 
 */
 
 //########################################################################
 //##
-//##     TAGESABLAEUFE
+//## TAGESABLAEUFE
 //##
 //########################################################################
 
@@ -1871,7 +1871,7 @@ func void DailyRoute_Test_Empty()
 
 //########################################################################
 //##
-//##      MISSIONEN
+//## MISSIONEN
 //##
 //########################################################################
 
@@ -1881,12 +1881,12 @@ func void DailyRoute_Test_Empty()
 //##
 //########################################################################
 
-instance Mission_Test_Empty (C_MISSION)
+instance Mission_Test_Empty(C_MISSION)
 {
 	//----------------------------------------------------------------
 	//---------------------------------------------------- DESCRIPTION
 	//----------------------------------------------------------------
-	Name  = "Mission_Test_Empty";
+	Name = "Mission_Test_Empty";
 	Description = "Mission_Test_Empty";
 	Important = 1;
 
@@ -1910,12 +1910,11 @@ instance Mission_Test_Empty (C_MISSION)
 	//--------------------------------------------------- RUNNING LOOP
 	//----------------------------------------------------------------
 	Running = Mis_Run_TE;
-
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------- CONDITIONS
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------- CONDITIONS
+//----------------------------------------------------------------
 
 func int Mis_Con_Off_TE()
 {
@@ -1937,40 +1936,41 @@ func int Mis_Con_Obs_TE()
 	return 0;
 };
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------- ACTIVATIONS
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------- ACTIVATIONS
+//----------------------------------------------------------------
 
 func void Mis_Off_TE()
 {
-	AI_AskText(self,NOFUNC, NOFUNC, "Yes", "No");
+	AI_AskText(self, NOFUNC, NOFUNC, "Yes", "No");
 //	Mis_SetStatus( Mission_Test_Empty, MIS_RUNNING);
 };
 
 func void Mis_Suc_TE()
 {
-	Print( "Empty Mission succeeded");
+	Print("Empty Mission succeeded");
 //	Mis_SetStatus( Mission_Test_Empty, MIS_SUCCESS);
 };
 
 func void Mis_Fai_TE()
 {
-	Print( "Empty Mission failed");
+	Print("Empty Mission failed");
 //	Mis_SetStatus( Mission_Test_Empty, MIS_FAILED);
 };
 
 func void Mis_Obs_TE()
 {
-	Print( "Empty Mission became obsolete");
+	Print("Empty Mission became obsolete");
 //	Mis_SetStatus( Mission_Test_Empty, MIS_FAILED);
 };
-	//----------------------------------------------------------------
-	//--------------------------------------------------- RUNNING LOOP
-	//----------------------------------------------------------------
+
+//----------------------------------------------------------------
+//--------------------------------------------------- RUNNING LOOP
+//----------------------------------------------------------------
 
 func void Mis_Run_TE()
 {
-	Print( "Empty Mission is running");
+	Print("Empty Mission is running");
 };
 
 //########################################################################
@@ -1979,12 +1979,12 @@ func void Mis_Run_TE()
 //##
 //########################################################################
 
-instance Mission_Test_Default (C_MISSION)
+instance Mission_Test_Default(C_MISSION)
 {
 	//----------------------------------------------------------------
 	//---------------------------------------------------- DESCRIPTION
 	//----------------------------------------------------------------
-	Name  = "Mission_Test_Default";
+	Name = "Mission_Test_Default";
 	Description = "Mission_Test_Default";
 	Important = 1;
 
@@ -2008,12 +2008,11 @@ instance Mission_Test_Default (C_MISSION)
 	//--------------------------------------------------- RUNNING LOOP
 	//----------------------------------------------------------------
 	Running = Mis_Run_TD;
-
 };
 
-	//----------------------------------------------------------------
-	//----------------------------------------------------- CONDITIONS
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//----------------------------------------------------- CONDITIONS
+//----------------------------------------------------------------
 
 func int Mis_Con_Off_TD()
 {
@@ -2035,40 +2034,41 @@ func int Mis_Con_Obs_TD()
 	return 0;
 };
 
-	//----------------------------------------------------------------
-	//---------------------------------------------------- ACTIVATIONS
-	//----------------------------------------------------------------
+//----------------------------------------------------------------
+//---------------------------------------------------- ACTIVATIONS
+//----------------------------------------------------------------
 
 func void Mis_Off_TD()
 {
-	AI_AskText(self,NOFUNC, NOFUNC, "Yep", "Nope");
+	AI_AskText(self, NOFUNC, NOFUNC, "Yep", "Nope");
 // 	Mis_SetStatus( Mission_Test_Default, MIS_RUNNING);
 };
 
 func void Mis_Suc_TD()
 {
-	Print( "Default Mission succeeded");
+	Print("Default Mission succeeded");
 //	Mis_SetStatus( Mission_Test_Default, MIS_SUCCESS);
 };
 
 func void Mis_Fai_TD()
 {
-	Print( "Default Mission failed");
+	Print("Default Mission failed");
 //	Mis_SetStatus( Mission_Test_Default, MIS_FAILED);
 };
 
 func void Mis_Obs_TD()
 {
-	Print( "Default Mission became obsolete");
+	Print("Default Mission became obsolete");
 //	Mis_SetStatus( Mission_Test_Default, MIS_FAILED);
 };
-	//----------------------------------------------------------------
-	//--------------------------------------------------- RUNNING LOOP
-	//----------------------------------------------------------------
+
+//----------------------------------------------------------------
+//--------------------------------------------------- RUNNING LOOP
+//----------------------------------------------------------------
 
 func void Mis_Run_TD()
 {
-	Print( "Default Mission is running");
+	Print("Default Mission is running");
 };
 
 //########################################################################
@@ -2077,13 +2077,13 @@ func void Mis_Run_TD()
 //##
 //########################################################################
 
-instance Trade_Test (C_ITEMREACT)
+instance Trade_Test(C_ITEMREACT)
 {
 	npc = Allround_Testmodell;
 	trade_item = ItFoApple;
 	trade_amount = 10;
 	requested_item = ItFoBeer;
-	requested_amount= 2;
+	requested_amount = 2;
 	reaction = Trade_Test_Check;
 };
 
@@ -2091,27 +2091,26 @@ func int Trade_Test_Check()
 {
 	var string strTradeAmount;
 	strTradeAmount = "Trade amount : ";
-	strTradeAmount = ConcatStrings(strTradeAmount, IntToString( Trade_Test.trade_amount ));
+	strTradeAmount = ConcatStrings(strTradeAmount, IntToString(Trade_Test.trade_amount));
 
 	var string strTradeItem;
 	strTradeItem = "Trade item : ";
-	strTradeItem = ConcatStrings(strTradeItem, IntToString( Trade_Test.trade_item ));
+	strTradeItem = ConcatStrings(strTradeItem, IntToString(Trade_Test.trade_item));
 
 	var string strRequestedAmount;
 	strRequestedAmount = "Requested amount : ";
-	strRequestedAmount = ConcatStrings(strRequestedAmount, IntToString( Trade_Test.requested_amount ));
+	strRequestedAmount = ConcatStrings(strRequestedAmount, IntToString(Trade_Test.requested_amount));
 
 	var string strRequestedItem;
 	strRequestedItem = "Requested item : ";
-	strRequestedItem = ConcatStrings(strRequestedItem, IntToString( Trade_Test.requested_item ));
+	strRequestedItem = ConcatStrings(strRequestedItem, IntToString(Trade_Test.requested_item));
 
-	PrintScreen(strTradeAmount , 10, 20, "FONT_OLD_20_WHITE.TGA", 3);
-	PrintScreen(strTradeItem , 10, 30, "FONT_OLD_20_WHITE.TGA", 3);
-	PrintScreen(strRequestedAmount , 10, 40, "FONT_OLD_20_WHITE.TGA", 3);
-	PrintScreen(strRequestedItem , 10, 50, "FONT_OLD_20_WHITE.TGA", 3);
+	PrintScreen(strTradeAmount, 10, 20, "FONT_OLD_20_WHITE.TGA", 3);
+	PrintScreen(strTradeItem, 10, 30, "FONT_OLD_20_WHITE.TGA", 3);
+	PrintScreen(strRequestedAmount, 10, 40, "FONT_OLD_20_WHITE.TGA", 3);
+	PrintScreen(strRequestedItem, 10, 50, "FONT_OLD_20_WHITE.TGA", 3);
 
-	if ( Trade_Test.requested_amount == 2 ) { return 1; };
-
+	if (Trade_Test.requested_amount == 2) { return 1; };
 	return 0;
 };
 
@@ -2304,10 +2303,10 @@ func void Info_Test_Procedure_Choice()
 	PrintScreen("Info_Test_Procedure_Choice()", -1, 50, "FONT_OLD_20_WHITE.TGA", 10);
 
 	Info_ClearChoices(Info_Test_Choice);
-	Info_AddChoice(Info_Test_Choice, "Yes" , Info_Test_Procedure_Choice_Yes);
-	Info_AddChoice(Info_Test_Choice, "No" , Info_Test_Procedure_Choice_No);
+	Info_AddChoice(Info_Test_Choice, "Yes", Info_Test_Procedure_Choice_Yes);
+	Info_AddChoice(Info_Test_Choice, "No", Info_Test_Procedure_Choice_No);
 	Info_AddChoice(Info_Test_Choice, "Don't know", Info_Test_Procedure_Choice_Unsure);
-	Info_AddChoice(Info_Test_Choice, "Exit" , Info_Test_Procedure_Choice_Exit);
+	Info_AddChoice(Info_Test_Choice, "Exit", Info_Test_Procedure_Choice_Exit);
 };
 
 func void Info_Test_Procedure_Choice_Yes()
@@ -2323,9 +2322,9 @@ func void Info_Test_Procedure_Choice_No()
 func void Info_Test_Procedure_Choice_Unsure()
 {
 	Info_ClearChoices(Info_Test_Choice);
-	Info_AddChoice(Info_Test_Choice, "Yes" , Info_Test_Procedure_Choice_Yes);
-	Info_AddChoice(Info_Test_Choice, "No" , Info_Test_Procedure_Choice_No);
-	Info_AddChoice(Info_Test_Choice, "Exit" , Info_Test_Procedure_Choice_Exit);
+	Info_AddChoice(Info_Test_Choice, "Yes", Info_Test_Procedure_Choice_Yes);
+	Info_AddChoice(Info_Test_Choice, "No", Info_Test_Procedure_Choice_No);
+	Info_AddChoice(Info_Test_Choice, "Exit", Info_Test_Procedure_Choice_Exit);
 };
 
 func void Info_Test_Procedure_Choice_Exit()
@@ -2360,10 +2359,10 @@ func void Info_Test_Procedure_Permanent_Choice()
 	PrintScreen("Info_Test_Procedure_Permanent_Choice()", -1, 50, "FONT_OLD_20_WHITE.TGA", 10);
 
 	Info_ClearChoices(Info_Test_Permanent_Choice);
-	Info_AddChoice(Info_Test_Permanent_Choice, "Ok" , Info_Test_Procedure_Permanent_Choice_Yes);
-	Info_AddChoice(Info_Test_Permanent_Choice, "Fuck you" , Info_Test_Procedure_Permanent_Choice_No);
-	Info_AddChoice(Info_Test_Permanent_Choice, "Hmm..." , Info_Test_Procedure_Permanent_Choice_Unsure);
-	Info_AddChoice(Info_Test_Permanent_Choice, "(Leave)" , Info_Test_Procedure_Permanent_Choice_Exit);
+	Info_AddChoice(Info_Test_Permanent_Choice, "Ok", Info_Test_Procedure_Permanent_Choice_Yes);
+	Info_AddChoice(Info_Test_Permanent_Choice, "Fuck you", Info_Test_Procedure_Permanent_Choice_No);
+	Info_AddChoice(Info_Test_Permanent_Choice, "Hmm...", Info_Test_Procedure_Permanent_Choice_Unsure);
+	Info_AddChoice(Info_Test_Permanent_Choice, "(Leave)", Info_Test_Procedure_Permanent_Choice_Exit);
 };
 
 func void Info_Test_Procedure_Permanent_Choice_Yes()
@@ -2413,10 +2412,10 @@ func void Info_Test_Procedure_Permanent_Important_Choice()
 	PrintScreen("Info_Test_Procedure_Permanent_Important_Choice()", -1, 50, "FONT_OLD_20_WHITE.TGA", 10);
 
 	Info_ClearChoices(Info_Test_Permanent_Important_Choice);
-	Info_AddChoice(Info_Test_Permanent_Important_Choice, "Yes" , Info_Test_Procedure_Permanent_Important_Choice_Yes);
-	Info_AddChoice(Info_Test_Permanent_Important_Choice, "No" , Info_Test_Procedure_Permanent_Important_Choice_No);
-	Info_AddChoice(Info_Test_Permanent_Important_Choice, "Don't know" , Info_Test_Procedure_Permanent_Important_Choice_Unsure);
-	Info_AddChoice(Info_Test_Permanent_Important_Choice, "Bye" , Info_Test_Procedure_Permanent_Important_Choice_Exit);
+	Info_AddChoice(Info_Test_Permanent_Important_Choice, "Yes", Info_Test_Procedure_Permanent_Important_Choice_Yes);
+	Info_AddChoice(Info_Test_Permanent_Important_Choice, "No", Info_Test_Procedure_Permanent_Important_Choice_No);
+	Info_AddChoice(Info_Test_Permanent_Important_Choice, "Don't know", Info_Test_Procedure_Permanent_Important_Choice_Unsure);
+	Info_AddChoice(Info_Test_Permanent_Important_Choice, "Bye", Info_Test_Procedure_Permanent_Important_Choice_Exit);
 };
 
 func void Info_Test_Procedure_Permanent_Important_Choice_Yes()

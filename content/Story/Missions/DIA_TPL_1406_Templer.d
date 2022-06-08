@@ -49,9 +49,9 @@ func void DIA_KalomsGuard_PERM_Info()
 {
 //	AI_Output(other,self,"DIA_KalomsGuard_PERM_15_00"); //I'm sure you won't mind me going in there...?
 //	AI_Output(other,self,"DIA_KalomsGuard_PERM_15_00"); //Du hast doch nichts dagegen, wenn ich da reingehe?
-	AI_Output(other,self,"DIA_KalomsGuard_PERM_15_00"); //Jistě nemáš nic proti tomu, abych šel dál?
-//	AI_Output(self,other,"DIA_KalomsGuard_PERM_13_01"); //If you're disrespectful to my master, I'll kill you.
+	AI_Output(other, self, "DIA_KalomsGuard_PERM_15_00"); //Jistě nemáš nic proti tomu, abych šel dál?
+//	AI_Output(self,other,"DIA_KalomsGuard_PERM_13_01"); //if you're disrespectful to my master, I'll kill you.
 //	AI_Output(self,other,"DIA_KalomsGuard_PERM_13_01"); //Wenn du meinem Meister keinen Respekt entgegen bringst, werde ich dich töten.
-	AI_Output(self,other,"DIA_KalomsGuard_PERM_13_01"); //Jestli budeš k mému mistrovi neuctivý, zabiju tě!
+	AI_Output(self, other, "DIA_KalomsGuard_PERM_13_01"); //Jestli budeš k mému mistrovi neuctivý, zabiju tě!
 	AI_StopProcessInfos(self);
 };

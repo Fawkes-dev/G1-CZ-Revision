@@ -1,9 +1,9 @@
-instance CS_Richter (Npc_Default)
+instance CS_Richter(Npc_Default)
 {
 	//-------- primary data --------
 
 	name = "Judge";
-	npctype     = NpcType_Main;
+	npctype = NpcType_Main;
 	guild = GIL_None;
 	level = 5;
 	voice = 13;
@@ -15,20 +15,20 @@ instance CS_Richter (Npc_Default)
 	attribute[ATR_DEXTERITY] = 30;
 	attribute[ATR_MANA_MAX] = 0;
 	attribute[ATR_MANA] = 0;
-	attribute[ATR_HITPOINTS_MAX]= 100;
+	attribute[ATR_HITPOINTS_MAX] = 100;
 	attribute[ATR_HITPOINTS] = 100;
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Mage.MDS");
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Mage.MDS");
 	//				body mesh, head mesh, hairmesh, face-tex, hair-tex, skin
-	Mdl_SetVisualBody(self,"hum_body_Naked0",0,1,"Hum_Head_Bald", 89,  1, LAW_ARMOR);
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 0, 1, "Hum_Head_Bald", 89, 1, LAW_ARMOR);
 
 //  Spezialrobe heisst : LAW_ARMOR
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
@@ -44,7 +44,5 @@ instance CS_Richter (Npc_Default)
 
 func void Rtn_start_3022()
 {
-TA_Position (00,00,24,00,"WP_INTRO_WI01");
-
+	TA_Position(00, 00, 24, 00, "WP_INTRO_WI01");
 };
-

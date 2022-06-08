@@ -1,8 +1,8 @@
-instance TPL_1409_Templer (Npc_Default)
+instance TPL_1409_Templer(Npc_Default)
 {
 	//-------- primary data --------
 	name = Name_Templer;
-	npctype = NPCTYPE_GUARD;
+	npctype = NpcType_Guard;
 	guild = GIL_TPL;
 	level = 17;
 	flags = 0;
@@ -20,25 +20,25 @@ instance TPL_1409_Templer (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Mage.mds");
-	//			body mesh     ,bdytex,skin,head mesh     ,headtex,teethtex,ruestung
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 1, 1 ,"Hum_Head_Bald", 65,  1, TPL_ARMOR_M);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Mage.mds");
+	//			body mesh ,bdytex,skin,head mesh ,headtex,teethtex,ruestung
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 1, 1, "Hum_Head_Bald", 65, 1, TPL_ARMOR_M);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,-1);
+	Mdl_SetModelFatness(self, -1);
 
 	fight_tactic = FAI_HUMAN_STRONG;
 
 	//-------- Talente --------
 
-	Npc_SetTalentSkill(self,NPC_TALENT_2H,1);
+	Npc_SetTalentSkill(self, NPC_TALENT_2H, 1);
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_2H_Sword_Light_01);
-	CreateInvItem(self,ItFoSoup);
-	CreateInvItem(self,ItMiJoint_1);
+	EquipItem(self, ItMw_2H_Sword_Light_01);
+	CreateInvItem(self, ItFoSoup);
+	CreateInvItem(self, ItMiJoint_1);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_1409;
@@ -46,7 +46,6 @@ instance TPL_1409_Templer (Npc_Default)
 
 func void Rtn_start_1409()
 {
-	TA_SmallTalk (00,00,08,00,"PSI_SMITH_TALK");
-	TA_SmallTalk (08,00,24,00,"PSI_SMITH_TALK");
+	TA_SmallTalk(00, 00, 08, 00, "PSI_SMITH_TALK");
+	TA_SmallTalk(08, 00, 24, 00, "PSI_SMITH_TALK");
 };
-

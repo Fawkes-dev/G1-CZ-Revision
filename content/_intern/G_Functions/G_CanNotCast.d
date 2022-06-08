@@ -1,22 +1,22 @@
 /*************************************************************************
- *  G_CanNotCast
+ * G_CanNotCast
  *************************************************************************
  * PRCONDITIONS: self : The NPC that cannot equipt the item
- *  item : The item that cannot be equipped
+ * item : The item that cannot be equipped
  *************************************************************************/
-func void G_CanNotCast( var int bIsPlayer, var int nCircleNeeded, var int nCirclePossessed )
+func void G_CanNotCast(var int bIsPlayer, var int nCircleNeeded, var int nCirclePossessed)
 {
 	//
 	//	COMPOSE MESSAGE
 	//
-	var int nDifference  ;
-	var string  strDifference;
-	var string strMessage  ;
+	var int nDifference;
+	var string strDifference;
+	var string strMessage;
 
 	nDifference = nCircleNeeded - nCirclePossessed;
-	strDifference = IntToString( nDifference);
+	strDifference = IntToString(nDifference);
 
-	if ( bIsPlayer )
+	if (bIsPlayer)
 	{
 		strMessage = _STR_CANNOTUSE_PRE_PLAYER;
 	}

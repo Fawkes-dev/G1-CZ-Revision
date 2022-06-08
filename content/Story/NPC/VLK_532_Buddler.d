@@ -1,4 +1,4 @@
-instance VLK_532_Buddler (Npc_Default)
+instance VLK_532_Buddler(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -21,25 +21,25 @@ instance VLK_532_Buddler (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Tired.mds");
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Tired.mds");
 	//				body mesh, head mesh, hairmesh, face-tex, hair-tex, skin
-	Mdl_SetVisualBody(self,"hum_body_Naked0",2,1,"Hum_Head_Psionic", 74,  3, VLK_ARMOR_L);
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 2, 1, "Hum_Head_Psionic", 74, 3, VLK_ARMOR_L);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
-	//-------- Talents  --------
+	//-------- Talents --------
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1h_Nailmace_01);
-	CreateInvItem(self,ItMwPickaxe);
-	CreateInvItem(self,ItFoLoaf);
-	CreateInvItem(self,ItFoBeer);
-	CreateInvItem(self,ItLsTorch);
+	EquipItem(self, ItMw_1h_Nailmace_01);
+	CreateInvItem(self, ItMwPickaxe);
+	CreateInvItem(self, ItFoLoaf);
+	CreateInvItem(self, ItFoBeer);
+	CreateInvItem(self, ItLsTorch);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_532;
@@ -47,9 +47,8 @@ instance VLK_532_Buddler (Npc_Default)
 
 func void Rtn_start_532()
 {
-	TA_Sleep (23,00,07,30,"OCR_HUT_39");
-	TA_StandAround (07,30,16,00,"OCR_CAMPFIRE_H_2");
-	TA_SitAround (16,00,17,00,"OCR_HUT_39");
-	TA_SitCampfire (17,00,23,00,"OCR_CAMPFIRE_H_2");
+	TA_Sleep(23, 00, 07, 30, "OCR_HUT_39");
+	TA_StandAround(07, 30, 16, 00, "OCR_CAMPFIRE_H_2");
+	TA_SitAround(16, 00, 17, 00, "OCR_HUT_39");
+	TA_SitCampfire(17, 00, 23, 00, "OCR_CAMPFIRE_H_2");
 };
-

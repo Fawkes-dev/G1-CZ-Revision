@@ -1,4 +1,4 @@
-instance VLK_586_Grimes (Npc_Default)
+instance VLK_586_Grimes(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -21,23 +21,23 @@ instance VLK_586_Grimes (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Tired.mds");
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Tired.mds");
 	//				body mesh, head mesh, hairmesh, face-tex, hair-tex, skin
-	Mdl_SetVisualBody(self,"hum_body_Naked0",3,1,"Hum_Head_Thief", 110, 2, -1);
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 3, 1, "Hum_Head_Thief", 110, 2, -1);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
 	//-------- Talents --------
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,1);
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 1);
 
 	//-------- inventory --------
 
-	CreateInvItem(self,ItFo_Potion_Water_01);
-	EquipItem(self,ItMwPickaxe);
+	CreateInvItem(self, ItFo_Potion_Water_01);
+	EquipItem(self, ItMwPickaxe);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_Start_586;
@@ -45,8 +45,7 @@ instance VLK_586_Grimes (Npc_Default)
 
 func void Rtn_Start_586()
 {
-	TA_PickOre   (08,00,18,00,"OM_PICKORE_02");
-	TA_RoastScavenger(18,00,23,00,"OM_CAVE1_48");
-	TA_SitAround  (23,00,08,00,"OM_CAVE1_48");
+	TA_PickOre(08, 00, 18, 00, "OM_PICKORE_02");
+	TA_RoastScavenger(18, 00, 23, 00, "OM_CAVE1_48");
+	TA_SitAround(23, 00, 08, 00, "OM_CAVE1_48");
 };
-

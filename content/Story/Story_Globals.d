@@ -45,14 +45,14 @@ var int Thorus_MordragMageMessenger;
 // **************************************************
 //					Whistlers Schwert
 // **************************************************
-	var int Fisk_SCknows110;
-	var int Fisk_ForgetSword;
-	var int Fisk_SwordSold;
+var int Fisk_SCknows110;
+var int Fisk_ForgetSword;
+var int Fisk_SwordSold;
 // **************************************************
 // **************************************************
 //					GotoNewcamp Mordrag
 // **************************************************
-	var int Mordrag_GotoNC_Day;
+var int Mordrag_GotoNC_Day;
 // **************************************************
 
 var int EnteredOldMine;
@@ -74,7 +74,7 @@ var int Joru_Tips_Mage;
 var int BaalNamib_Ansprechbar;
 var int BaalNamib_Sakrileg;
 var int BaalOrun_FetchWeed;
-var INT Kalom_DrugMonopol;
+var int Kalom_DrugMonopol;
 var int Stooges_Fled;
 var int idiots_deal;
 
@@ -100,29 +100,29 @@ var int CorAngar_FindHerb;
 var int Fortuno_HasYBerionHerbs; // TRUE oder FALSE
 var int Yberion_dead;
 var int BaalLukor_BringParchment;
-		// 0: keine Hälfte gefunden
-		// 1: die erste Hälfte gefunden
-		// 2: die zweite Hälfte gefunden
-		// 3: beide Hälften gefunden
-		// 4: Kampf gegen BaalLukor
+// 0: keine Hälfte gefunden
+// 1: die erste Hälfte gefunden
+// 2: die zweite Hälfte gefunden
+// 3: beide Hälften gefunden
+// 4: Kampf gegen BaalLukor
 var int CorAngar_SendToNC;
-		// FALSE oder TRUE
+// FALSE oder TRUE
 var int Saturas_BringFoci;
-		// 0: Auftrag nicht vergeben
-		// 1: Auftrag vergeben, Almanach und 1 Fokus abgeliefert
-		// 2: 2 Fokus abgeliefert
-		// 3: 3 Foki abgeliefert
-		// 4: 4 Foki abgeliefert
-		// 5: 5 Foki abgeliefert
+// 0: Auftrag nicht vergeben
+// 1: Auftrag vergeben, Almanach und 1 Fokus abgeliefert
+// 2: 2 Fokus abgeliefert
+// 3: 3 Foki abgeliefert
+// 4: 4 Foki abgeliefert
+// 5: 5 Foki abgeliefert
 var int MonasteryRuin_GateOpen;
-		// TRUE oder FALSE
+// TRUE oder FALSE
 
 var int Troll_Wheel;
-		//für Wheel in der Trollschlucht
-		// 0: Auftrag nicht vergeben
-		// 1: 1x vom Spieler angepackt
-		// 2: Winde von Diego repariert
-		// 3: Winde geöffnet
+//für Wheel in der Trollschlucht
+// 0: Auftrag nicht vergeben
+// 1: 1x vom Spieler angepackt
+// 2: Winde von Diego repariert
+// 3: Winde geöffnet
 //---------------------------------------------------------------------
 //	KAPITEL 4
 //---------------------------------------------------------------------
@@ -133,11 +133,11 @@ var int FMTaken;
 var int Lee_freeminereport;
 var int FindXardas;
 var int FindGolemHearts;
-	// 0: Auftrag nicht vergeben
-	// 1: Auftrag vergeben
-	// 2: ein Herz abgeliefert
-	// 3: zwei Herzen abgeliefert
-	// 4: drei Herzen abgeliefert
+// 0: Auftrag nicht vergeben
+// 1: Auftrag vergeben
+// 2: ein Herz abgeliefert
+// 3: zwei Herzen abgeliefert
+// 4: drei Herzen abgeliefert
 var int FindOrcShaman; //LOG_RUNNING oder LOG_SUCCESS
 var int UrShak_SpokeOfUluMulu; //TRUE oder FALSE
 var int FriendOfUrShak; //TRUE oder FALSE
@@ -173,21 +173,21 @@ var int KnowStone; //TRUE oder FALSE
 //	KAPITEL 1
 //---------------------------------------------------------------------
 // Altes LagerAufnahme
-const int XP_DiegoBringlist   = 750;
+const int XP_DiegoBringlist = 750;
 const int XP_Fingerstrain = 100;
-const int   XP_Whistlerssword = 200;
+const int XP_Whistlerssword = 200;
 const int XP_kirgovictory = 150;
 const int XP_Kharimlost = 50;
 const int XP_kharimvictory = 200;
 const int XP_Snafcook = 100;
 const int XP_Slysearchfornek = 250;
 const int XP_Thorusmordragko = 250;
-const int XP_Thorusmordragdead= 300;
+const int XP_Thorusmordragdead = 300;
 const int XP_fiskdealer = 300;
 const int XP_BecomeShadow = 1000;
 const int XP_DexterKalom = 350;
 
-const int  XP_GilbertFound = 100;
+const int XP_GilbertFound = 100;
 const int XP_XardasLetter = 200;
 const int XP_XardasLetterOPEN = 100;
 
@@ -226,7 +226,7 @@ const int XP_CronosLetter = 200;
 const int XP_CheatedIntoLaresHut = 250;
 const int XP_GiveRingToLares = 250;
 const int XP_GiveListToLares = 250;
-const int XP_ReportListDeliveryToLares= 750;
+const int XP_ReportListDeliveryToLares = 750;
 
 const int XP_DistributedWeedForKagan = 200;
 const int XP_BaalIsidroSpendDrink = 100;
@@ -336,10 +336,10 @@ const int LPCOST_TALENT_PICKPOCKET_1 = 10;
 const int LPCOST_TALENT_PICKPOCKET_2 = 20;
 /*-------------------------------------------------------------------------
 
-						LOG EINTRAGS VARIABLEN
-( da die Logeinträge nicht einfach so in permanenten Infos stehen dürfen!)
+LOG EINTRAGS VARIABLEN
+(da die Logeinträge nicht einfach so in permanenten Infos stehen dürfen !)
 
---------------------------------------------------------------------------*/
+-------------------------------------------------------------------------- */
 var int log_gornatothfight;
 var int log_gornatothtrain;
 var int log_wolftrain;

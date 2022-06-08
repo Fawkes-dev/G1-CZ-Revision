@@ -1,36 +1,37 @@
 /*************************************************************************
- *  G_CanNotUse
+ * G_CanNotUse
  *************************************************************************
  * PRCONDITIONS: self : The NPC that cannot equipt the item
- *  item : The item that cannot be equipped
+ * item : The item that cannot be equipped
  *************************************************************************/
-func void G_CanNotUse( var int bIsPlayer, var int nAttribute, var int nValue )
+func void G_CanNotUse(var int bIsPlayer, var int nAttribute, var int nValue)
 {
 	//
 	//	DETERMINE ATTIBUTE
 	//
-	var int nAttributeValue ;
-	var string  strAttribute ;
+	var int nAttributeValue;
+	var string strAttribute;
 
-	if ( nAttribute == ATR_HITPOINTS  ) { strAttribute = _STR_ATTRIBUTE_HITPOINTS ; nAttributeValue = self.attribute[ ATR_HITPOINTS  ]; }
-	else if ( nAttribute == ATR_HITPOINTS_MAX  ) { strAttribute = _STR_ATTRIBUTE_HITPOINTS_MAX ; nAttributeValue = self.attribute[ ATR_HITPOINTS_MAX  ]; }
-	else if ( nAttribute == ATR_MANA  ) { strAttribute = _STR_ATTRIBUTE_MANA ; nAttributeValue = self.attribute[ ATR_MANA  ]; }
-	else if ( nAttribute == ATR_MANA_MAX  ) { strAttribute = _STR_ATTRIBUTE_MANA_MAX ; nAttributeValue = self.attribute[ ATR_MANA_MAX  ]; }
-	else if ( nAttribute == ATR_STRENGTH  ) { strAttribute = _STR_ATTRIBUTE_STRENGTH ; nAttributeValue = self.attribute[ ATR_STRENGTH  ]; }
-	else if ( nAttribute == ATR_DEXTERITY  ) { strAttribute = _STR_ATTRIBUTE_DEXTERITY ; nAttributeValue = self.attribute[ ATR_DEXTERITY  ]; }
-	else { strAttribute = _STR_INVALID ; nAttributeValue = 0   ; };
+	if (nAttribute == ATR_HITPOINTS) { strAttribute = _STR_ATTRIBUTE_HITPOINTS; nAttributeValue = self.attribute[ ATR_HITPOINTS ]; }
+
+	else if (nAttribute == ATR_HITPOINTS_MAX) { strAttribute = _STR_ATTRIBUTE_HITPOINTS_MAX; nAttributeValue = self.attribute[ ATR_HITPOINTS_MAX ]; }
+	else if (nAttribute == ATR_MANA) { strAttribute = _STR_ATTRIBUTE_MANA; nAttributeValue = self.attribute[ ATR_MANA ]; }
+	else if (nAttribute == ATR_MANA_MAX) { strAttribute = _STR_ATTRIBUTE_MANA_MAX; nAttributeValue = self.attribute[ ATR_MANA_MAX ]; }
+	else if (nAttribute == ATR_STRENGTH) { strAttribute = _STR_ATTRIBUTE_STRENGTH; nAttributeValue = self.attribute[ ATR_STRENGTH ]; }
+	else if (nAttribute == ATR_DEXTERITY) { strAttribute = _STR_ATTRIBUTE_DEXTERITY; nAttributeValue = self.attribute[ ATR_DEXTERITY ]; }
+	else { strAttribute = _STR_INVALID; nAttributeValue = 0; };
 
 	//
 	//	COMPOSE MESSAGE
 	//
-	var int nDifference  ;
-	var string  strDifference;
-	var string strMessage  ;
+	var int nDifference;
+	var string strDifference;
+	var string strMessage;
 
 	nDifference = nValue - nAttributeValue;
-	strDifference = IntToString( nDifference);
+	strDifference = IntToString(nDifference);
 
-	if ( bIsPlayer )
+	if (bIsPlayer)
 	{
 		strMessage = _STR_CANNOTUSE_PRE_PLAYER;
 	}
@@ -51,7 +52,7 @@ func void G_CanNotUse( var int bIsPlayer, var int nAttribute, var int nValue )
 	//
 	//	PRINT MESSAGE
 	//
-	if ( bIsPlayer )
+	if (bIsPlayer)
 	{
 		G_PrintScreen(strMessage);
 	};

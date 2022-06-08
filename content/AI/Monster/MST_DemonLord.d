@@ -1,8 +1,8 @@
 /*************************************************************************
-** Demon LORD Prototype **
+** Demon LORD prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_DemonLord(C_Npc)
+prototype Mst_Default_DemonLord(C_Npc)
 {
 	name = "Demon Lord";
 	guild = GIL_DEMON;
@@ -51,19 +51,20 @@ PROTOTYPE Mst_Default_DemonLord(C_Npc)
 
 	//aivar[AIV_MM_RestStart] = OnlyRoutine;
 };
+
 //-------------------------------------------------------------
 func void Set_DemonLord_Visuals()
 {
-	Mdl_SetVisual(self,"Demon.mds");
+	Mdl_SetVisual(self, "Demon.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Dem2_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Dem2_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** DemonLord    **
+** DemonLord **
 *************************************************************************/
 
-instance DemonLord (Mst_Default_DemonLord)
+instance DemonLord(Mst_Default_DemonLord)
 {
 	Set_DemonLord_Visuals();
 	Npc_SetToFistMode(self);

@@ -1,4 +1,4 @@
-instance TPL_1422_GorHanis (Npc_Default)
+instance TPL_1422_GorHanis(Npc_Default)
 {
 	//-------- primary data --------
 	name = "Gor Hanis";
@@ -19,26 +19,26 @@ instance TPL_1422_GorHanis (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Militia.mds");
-	//			body mesh     ,bdytex,skin,head mesh     ,headtex,teethtex,ruestung
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 1, 1,"Hum_Head_Bald", 66,  1, TPL_ARMOR_L);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Militia.mds");
+	//			body mesh ,bdytex,skin,head mesh ,headtex,teethtex,ruestung
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 1, 1, "Hum_Head_Bald", 66, 1, TPL_ARMOR_L);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,-1);
+	Mdl_SetModelFatness(self, -1);
 
 	fight_tactic = FAI_HUMAN_MASTER;
 
 	//-------- Talente --------
 
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,2);
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 2);
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1H_Sword_01);
-	CreateInvItem(self,ItFoSoup);
-	CreateInvItem(self,ItMiJoint_1);
-	CreateInvItem(self,ItMi_Stuff_OldCoin_02);
+	EquipItem(self, ItMw_1H_Sword_01);
+	CreateInvItem(self, ItFoSoup);
+	CreateInvItem(self, ItMiJoint_1);
+	CreateInvItem(self, ItMi_Stuff_OldCoin_02);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_1422;
@@ -46,10 +46,9 @@ instance TPL_1422_GorHanis (Npc_Default)
 
 func void Rtn_start_1422()
 {
-	TA_Sleep (23,45,07,45,"OCR_HUT_32");
-	TA_StandAround  (07,45,10,05,"OCR_CAMPFIRE_I_1");
-	TA_Smalltalk (10,05,16,00,"OCR_SMALLTALK_A_OC_ARENA");
-	TA_PracticeSword(16,00,17,15,"OCR_ARENABATTLE");
-	TA_SitCampfire (17,15,23,45,"OCR_CAMPFIRE_I_1");
+	TA_Sleep(23, 45, 07, 45, "OCR_HUT_32");
+	TA_StandAround(07, 45, 10, 05, "OCR_CAMPFIRE_I_1");
+	TA_Smalltalk(10, 05, 16, 00, "OCR_SMALLTALK_A_OC_ARENA");
+	TA_PracticeSword(16, 00, 17, 15, "OCR_ARENABATTLE");
+	TA_SitCampfire(17, 15, 23, 45, "OCR_CAMPFIRE_I_1");
 };
-

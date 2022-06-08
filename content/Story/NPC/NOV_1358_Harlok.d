@@ -1,4 +1,4 @@
-instance NOV_1358_Harlok (Npc_Default)
+instance NOV_1358_Harlok(Npc_Default)
 {
 	//-------- primary data --------
 	name = "Harlok";
@@ -19,13 +19,13 @@ instance NOV_1358_Harlok (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Relaxed.mds");
-	//			body mesh     ,bdytex,skin,head mesh     ,headtex,teethtex,ruestung
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 1, 1,"Hum_Head_Bald", 28,  1, NOV_ARMOR_L);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Relaxed.mds");
+	//			body mesh ,bdytex,skin,head mesh ,headtex,teethtex,ruestung
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 1, 1, "Hum_Head_Bald", 28, 1, NOV_ARMOR_L);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_STRONG;
 
@@ -33,7 +33,7 @@ instance NOV_1358_Harlok (Npc_Default)
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1H_Hatchet_01);
+	EquipItem(self, ItMw_1H_Hatchet_01);
 	//CreateInvItem(self,ItFoSoup);
 	//CreateInvItem(self,ItMiJoint);
 
@@ -43,12 +43,12 @@ instance NOV_1358_Harlok (Npc_Default)
 
 func void Rtn_PreStart_1358()
 {
-	TA_Smoke (08,00,20,00,"PSI_31_HUT_EX");
-	TA_Smoke (20,00,08,00,"PSI_31_HUT_EX");
+	TA_Smoke(08, 00, 20, 00, "PSI_31_HUT_EX");
+	TA_Smoke(20, 00, 08, 00, "PSI_31_HUT_EX");
 };
 
 func void Rtn_Start_1358()
 {
-	TA_HerbAlchemy (06,55,23,55,"PSI_HERB_PLACE_1");
-	TA_HerbAlchemy (23,55,06,55,"PSI_HERB_PLACE_1");
+	TA_HerbAlchemy(06, 55, 23, 55, "PSI_HERB_PLACE_1");
+	TA_HerbAlchemy(23, 55, 06, 55, "PSI_HERB_PLACE_1");
 };

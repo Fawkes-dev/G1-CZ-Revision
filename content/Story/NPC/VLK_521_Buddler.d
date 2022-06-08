@@ -1,4 +1,4 @@
-instance VLK_521_Buddler (Npc_Default)
+instance VLK_521_Buddler(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -21,21 +21,21 @@ instance VLK_521_Buddler (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Tired.mds");
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Tired.mds");
 	//				body mesh, head mesh, hairmesh, face-tex, hair-tex, skin
-	Mdl_SetVisualBody(self,"hum_body_Naked0",2,1,"Hum_Head_Thief", 67,  1, -1);
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 2, 1, "Hum_Head_Thief", 67, 1, -1);
 
-		B_Scale(self);
-		Mdl_SetModelFatness(self,0);
+	B_Scale(self);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_COWARD;
-  	//-------- Talents --------
+	//-------- Talents --------
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1h_Club_01);
-	CreateInvItem(self,ItFoApple);
+	EquipItem(self, ItMw_1h_Club_01);
+	CreateInvItem(self, ItFoApple);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_521;
@@ -43,10 +43,9 @@ instance VLK_521_Buddler (Npc_Default)
 
 func void Rtn_start_521() //Marktplatz Playtune
 {
-	TA_Sleep (22,30,07,00,"OCR_HUT_45");
-	TA_Smalltalk (07,00,11,00,"OCR_OUTSIDE_HUT_47_SMALT2");
-	TA_RepairHut (11,00,13,00,"OCR_OUTSIDE_HUT_45");
-	TA_Smalltalk (13,00,16,00,"OCR_OUTSIDE_HUT_47_SMALT2");
-	TA_PlayTune (16,00,22,30,"OCR_OUTSIDE_HUT_48");
+	TA_Sleep(22, 30, 07, 00, "OCR_HUT_45");
+	TA_Smalltalk(07, 00, 11, 00, "OCR_OUTSIDE_HUT_47_SMALT2");
+	TA_RepairHut(11, 00, 13, 00, "OCR_OUTSIDE_HUT_45");
+	TA_Smalltalk(13, 00, 16, 00, "OCR_OUTSIDE_HUT_47_SMALT2");
+	TA_PlayTune(16, 00, 22, 30, "OCR_OUTSIDE_HUT_48");
 };
-

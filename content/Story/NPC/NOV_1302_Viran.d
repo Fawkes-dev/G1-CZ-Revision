@@ -1,8 +1,8 @@
-instance NOV_1302_Viran (Npc_Default)
+instance NOV_1302_Viran(Npc_Default)
 {
 	//-------- primary data --------
 	name = "Viran";
-	Npctype  = NpcType_Main;
+	Npctype = NpcType_Main;
 	guild = GIL_NOV;
 	level = 15;
 
@@ -19,13 +19,13 @@ instance NOV_1302_Viran (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Mage.mds");
-	//			body mesh     ,bdytex,skin,head mesh     ,headtex,teethtex,ruestung
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 1, 1,"Hum_Head_Bald", 26,  3, NOV_ARMOR_L);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Mage.mds");
+	//			body mesh ,bdytex,skin,head mesh ,headtex,teethtex,ruestung
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 1, 1, "Hum_Head_Bald", 26, 3, NOV_ARMOR_L);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,-1);
+	Mdl_SetModelFatness(self, -1);
 
 	fight_tactic = FAI_HUMAN_STRONG;
 
@@ -33,19 +33,18 @@ instance NOV_1302_Viran (Npc_Default)
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1H_Hatchet_01);
-	CreateInvItems(self,ItMi_Plants_Swampherb_01, 50);
-	CreateInvItems(self,ItMiNugget, 5);
-	CreateInvItems(self,ItFoRice, 2);
-	CreateInvItems(self,ItFoBooze, 6);
+	EquipItem(self, ItMw_1H_Hatchet_01);
+	CreateInvItems(self, ItMi_Plants_Swampherb_01, 50);
+	CreateInvItems(self, ItMiNugget, 5);
+	CreateInvItems(self, ItFoRice, 2);
+	CreateInvItems(self, ItFoBooze, 6);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_1302;
-
 };
 
 func void Rtn_start_1302() //Sumpfkraut-Sammler-Chef
 {
-	TA_Boss (07,00,19,00,"PATH_TAKE_HERB_2_1");
-	TA_Boss (19,00,07,00,"PATH_TAKE_HERB_2_1");
+	TA_Boss(07, 00, 19, 00, "PATH_TAKE_HERB_2_1");
+	TA_Boss(19, 00, 07, 00, "PATH_TAKE_HERB_2_1");
 };

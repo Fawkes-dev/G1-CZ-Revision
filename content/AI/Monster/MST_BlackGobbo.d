@@ -1,8 +1,8 @@
 /*************************************************************************
-** BlackGobbo Prototype **
+** BlackGobbo prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_BlackGobbo(C_NPC)
+prototype Mst_Default_BlackGobbo(C_NPC)
 {
 	name = "Black Goblin";
 	guild = GIL_GOBBO;
@@ -51,36 +51,38 @@ PROTOTYPE Mst_Default_BlackGobbo(C_NPC)
 
 	aivar[AIV_MM_RestStart] = OnlyRoutine;
 };
+
 //------------------------------------------------------------------
 func void Set_BlackGobbo_Visuals()
 {
-	Mdl_SetVisual(self,"Gobbo.mds");
+	Mdl_SetVisual(self, "Gobbo.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Gob_Body", 1, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Gob_Body", 1, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Black Gobbo Mace   **
+** Black Gobbo Mace **
 *************************************************************************/
 
-instance BlackGobboMace (Mst_Default_BlackGobbo)
+instance BlackGobboMace(Mst_Default_BlackGobbo)
 {
 	Set_BlackGobbo_Visuals();
-	Npc_SetToFightMode (self,ItMw_1H_Nailmace_01);
+	Npc_SetToFightMode(self, ItMw_1H_Nailmace_01);
 	attribute[ATR_STRENGTH] = attribute [ATR_STRENGTH] + 35; // da technisch im Faustkampf
 };
+
 /*************************************************************************
-** Black Gobbo Warrior   **
+** Black Gobbo Warrior **
 *************************************************************************/
 
-instance BlackGobboWarrior (Mst_Default_BlackGobbo)
+instance BlackGobboWarrior(Mst_Default_BlackGobbo)
 {
 	level = 15;
 
 	Set_BlackGobbo_Visuals();
-	Npc_SetToFightMode (self,ItMw_1H_Mace_01);
+	Npc_SetToFightMode(self, ItMw_1H_Mace_01);
 
-	attribute [ATR_STRENGTH] = 60+30; //da Gobbos technisch im Faustkampf
+	attribute [ATR_STRENGTH] = 60 + 30; //da Gobbos technisch im Faustkampf
 
 	attribute [ATR_HITPOINTS_MAX] = 105;
 	attribute [ATR_HITPOINTS] = 105;
@@ -89,5 +91,4 @@ instance BlackGobboWarrior (Mst_Default_BlackGobbo)
 	protection [PROT_EDGE] = 50;
 
 	name = "Goblin Warrior";
-
 };

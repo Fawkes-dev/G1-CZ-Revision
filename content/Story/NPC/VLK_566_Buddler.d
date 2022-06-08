@@ -1,9 +1,9 @@
-instance VLK_566_Buddler (Npc_Default)
+instance VLK_566_Buddler(Npc_Default)
 {
 	//-------- primary data --------
 
 	name = Name_Buddler;
-	npctype = npctype_mine_ambient;
+	npctype = NpcType_Mine_Ambient;
 	guild = GIL_VLK;
 	level = 4;
 
@@ -21,31 +21,30 @@ instance VLK_566_Buddler (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Tired.mds");
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Tired.mds");
 	//				body mesh, head mesh, hairmesh, face-tex, hair-tex, skin
-	Mdl_SetVisualBody(self,"hum_body_Naked0",3,2,"Hum_Head_Psionic", 0,  1, VLK_ARMOR_L);
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 3, 2, "Hum_Head_Psionic", 0, 1, VLK_ARMOR_L);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
-	//-------- Talents  --------
+	//-------- Talents --------
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1h_Nailmace_01);
-	CreateInvItem(self,ItFoBeer);
-	CreateInvItem(self,ItLsTorch);
+	EquipItem(self, ItMw_1h_Nailmace_01);
+	CreateInvItem(self, ItFoBeer);
+	CreateInvItem(self, ItLsTorch);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_566;
-	};
+};
 
 func void Rtn_start_566()
 {
-	TA_PickOre (23,00,06,00,"OM_CAVE3_04B");
-	TA_PickOre (06,00,23,00,"OM_CAVE3_04B");
+	TA_PickOre(23, 00, 06, 00, "OM_CAVE3_04B");
+	TA_PickOre(06, 00, 23, 00, "OM_CAVE3_04B");
 };
-

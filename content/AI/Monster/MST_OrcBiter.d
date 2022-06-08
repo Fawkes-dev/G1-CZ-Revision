@@ -1,8 +1,8 @@
 /*************************************************************************
-** OrcBiter Prototype **
+** OrcBiter prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_OrcBiter(C_Npc)
+prototype Mst_Default_OrcBiter(C_Npc)
 {
 	name = "Biter";
 	guild = GIL_ORCDOG;
@@ -51,23 +51,24 @@ PROTOTYPE Mst_Default_OrcBiter(C_Npc)
 
 	aivar[AIV_MM_RestStart] = OnlyRoutine;
 };
+
 //-------------------------------------------------------------
 func void Set_OrcBiter_Visuals()
 {
-	Mdl_SetVisual(self,"Scavenger.mds");
-	Mdl_ApplyOverlayMds(self,"Orcbiter.mds"); // eigener Run-Loop
+	Mdl_SetVisual(self, "Scavenger.mds");
+	Mdl_ApplyOverlayMDS(self, "Orcbiter.mds"); // eigener Run-Loop
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Sc2_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Sc2_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** OrcBiter    **
+** OrcBiter **
 *************************************************************************/
 
-instance OrcBiter (Mst_Default_OrcBiter)
+instance OrcBiter(Mst_Default_OrcBiter)
 {
 	Set_OrcBiter_Visuals();
 	Npc_SetToFistMode(self);
 
-	CreateInvItems(self,ItFoMuttonRaw, 2);
+	CreateInvItems(self, ItFoMuttonRaw, 2);
 };

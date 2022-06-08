@@ -1,9 +1,9 @@
 /*************************************************************************
- *  G_PickLock
+ * G_PickLock
  *************************************************************************
  * PRCONDITIONS: self : Player
  *************************************************************************/
-func void G_PickLock( var int bSuccess, var int bBrokenOpen  )
+func void G_PickLock(var int bSuccess, var int bBrokenOpen)
 {
 	var string strSoundFX;
 	var string strMessage;
@@ -12,9 +12,9 @@ func void G_PickLock( var int bSuccess, var int bBrokenOpen  )
 	strSoundFX = _STR_INVALID;
 	strMessage = _STR_INVALID;
 
-	if ( bSuccess)
+	if (bSuccess)
 	{
-		if ( bBrokenOpen )
+		if (bBrokenOpen)
 		{
 			strSoundFX = _STR_SOUND_PICKLOCK_UNLOCK;
 			strMessage = _STR_MESSAGE_PICKLOCK_UNLOCK;
@@ -29,7 +29,7 @@ func void G_PickLock( var int bSuccess, var int bBrokenOpen  )
 	}
 	else
 	{
-		if ( bBrokenOpen )
+		if (bBrokenOpen)
 		{
 			strSoundFX = _STR_SOUND_PICKLOCK_BROKEN;
 			strMessage = _STR_MESSAGE_PICKLOCK_BROKEN;
@@ -46,7 +46,7 @@ func void G_PickLock( var int bSuccess, var int bBrokenOpen  )
 	//
 	//	PLAY APPROPRIATE SOUND
 	//
-	Snd_Play3d(self,strSoundFX);
+	Snd_Play3D(self, strSoundFX);
 
 	//
 	//	PRINT THE MESSAGE

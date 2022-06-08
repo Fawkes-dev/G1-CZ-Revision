@@ -1,4 +1,4 @@
-instance TPL_1406_Templer (Npc_Default)
+instance TPL_1406_Templer(Npc_Default)
 {
 	//-------- primary data --------
 	name = "Kalom's Bodyguard";
@@ -19,24 +19,24 @@ instance TPL_1406_Templer (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Mage.mds");
-	//			body mesh     ,bdytex,skin,head mesh     ,headtex,teethtex,ruestung
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 1, 1 ,"Hum_Head_Bald", 63,  2, TPL_ARMOR_H);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Mage.mds");
+	//			body mesh ,bdytex,skin,head mesh ,headtex,teethtex,ruestung
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 1, 1, "Hum_Head_Bald", 63, 2, TPL_ARMOR_H);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_MASTER;
 
 	//-------- Talente --------
 
-	Npc_SetTalentSkill(self,NPC_TALENT_2H,2);
+	Npc_SetTalentSkill(self, NPC_TALENT_2H, 2);
 
 	//-------- inventory --------
-	EquipItem(self,ItMw_2H_Sword_Light_02);
-	CreateInvItem(self,ItFoSoup);
-	CreateInvItem(self,ItMiJoint_1);
+	EquipItem(self, ItMw_2H_Sword_Light_02);
+	CreateInvItem(self, ItFoSoup);
+	CreateInvItem(self, ItMiJoint_1);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_1406;
@@ -44,6 +44,6 @@ instance TPL_1406_Templer (Npc_Default)
 
 func void Rtn_start_1406() //Kaloms Wache
 {
-	TA_GuardPassage (09,00,21,00,"PSI_LABOR_GUARD_1");
-	TA_GuardPassage (21,00,09,00,"PSI_LABOR_GUARD_1");
+	TA_GuardPassage(09, 00, 21, 00, "PSI_LABOR_GUARD_1");
+	TA_GuardPassage(21, 00, 09, 00, "PSI_LABOR_GUARD_1");
 };

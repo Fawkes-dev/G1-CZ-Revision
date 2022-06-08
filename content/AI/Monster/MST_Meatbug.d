@@ -1,8 +1,8 @@
 /*************************************************************************
-** Meatbug Prototype **
+** Meatbug prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_Meatbug(C_Npc)
+prototype Mst_Default_Meatbug(C_Npc)
 {
 	name = "Meatbug";
 	guild = GIL_MEATBUG;
@@ -38,23 +38,23 @@ PROTOTYPE Mst_Default_Meatbug(C_Npc)
 
 	aivar[AIV_MM_WuselStart] = OnlyRoutine;
 };
+
 //-------------------------------------------------------
 func void Set_Meatbug_Visuals()
 {
-	Mdl_SetVisual(self,"Meatbug.mds");
+	Mdl_SetVisual(self, "Meatbug.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Mbg_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
-
+	Mdl_SetVisualBody(self, "Mbg_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Meatbug    **
+** Meatbug **
 *************************************************************************/
 
-instance Meatbug (Mst_Default_Meatbug)
+instance Meatbug(Mst_Default_Meatbug)
 {
 	Set_Meatbug_Visuals();
-	//Npc_SetToFistMode(self);  //SN: damit der Kleine keine unnötigen PERC_ASSESSFIGHTER auslöst!
+	//Npc_SetToFistMode(self); //SN: damit der Kleine keine unnötigen PERC_ASSESSFIGHTER auslöst!
 
-	CreateInvItems(self,ItAt_Meatbug_01,1);
+	CreateInvItems(self, ItAt_Meatbug_01, 1);
 };

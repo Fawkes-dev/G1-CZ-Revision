@@ -1,8 +1,8 @@
 /*************************************************************************
-** Minecrawler WARRIOR Prototype **
+** Minecrawler WARRIOR prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_MinecrawlerWarrior(C_Npc)
+prototype Mst_Default_MinecrawlerWarrior(C_Npc)
 {
 	name = "Minecrawler Warrior";
 	guild = GIL_MINECRAWLER;
@@ -51,19 +51,20 @@ PROTOTYPE Mst_Default_MinecrawlerWarrior(C_Npc)
 
 	aivar[AIV_MM_WuselStart] = OnlyRoutine;
 };
+
 //---------------------------------------------------
 func void Set_MinecrawlerWarrior_Visuals()
 {
-	Mdl_SetVisual(self,"Crawler.mds");
+	Mdl_SetVisual(self, "Crawler.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Cr2_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Cr2_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** MinecrawlerWarrior    **
+** MinecrawlerWarrior **
 *************************************************************************/
 
-instance MinecrawlerWarrior (Mst_Default_MinecrawlerWarrior)
+instance MinecrawlerWarrior(Mst_Default_MinecrawlerWarrior)
 {
 	Set_MinecrawlerWarrior_Visuals();
 	Npc_SetToFistMode(self);
@@ -104,4 +105,3 @@ instance OTMinecrawler(Mst_Default_MinecrawlerWarrior)
 //	damage [DAM_INDEX_FLY] = 0;
 //	damage [DAM_INDEX_MAGIC] = 0;
 };
-

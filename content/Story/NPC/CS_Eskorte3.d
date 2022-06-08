@@ -1,4 +1,4 @@
-instance CS_Eskorte3 (Npc_Default)
+instance CS_Eskorte3(Npc_Default)
 {
 	//-------- primary data --------
 	name = "Eskorte3";
@@ -6,7 +6,7 @@ instance CS_Eskorte3 (Npc_Default)
 	guild = GIL_GRD;
 	level = 5;
 	flags = 0;
-	voice = 11;//9;
+	voice = 11; //9;
 	id = 3027;
 
 	//-------- abilities --------
@@ -19,22 +19,22 @@ instance CS_Eskorte3 (Npc_Default)
 
 	//-------- visuals --------
 	// 			animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Militia.MDS");
-	//			body mesh     ,bdytex,skin,head mesh     ,headtex,teethtex,ruestung
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 0, 1,"Hum_Head_Fighter", 18, 2, GRD_ARMOR_I);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Militia.MDS");
+	//			body mesh ,bdytex,skin,head mesh ,headtex,teethtex,ruestung
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 0, 1, "Hum_Head_Fighter", 18, 2, GRD_ARMOR_I);
 
 	B_Scale(self);
-		Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
-		fight_tactic = FAI_HUMAN_STRONG;
+	fight_tactic = FAI_HUMAN_STRONG;
 
 	//-------- Talente --------
 
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,2);
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,2);
-	Npc_SetTalentSkill(self,NPC_TALENT_2H,1);
-	Npc_SetTalentSkill(self,NPC_TALENT_CROSSBOW,1);
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 2);
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 2);
+	Npc_SetTalentSkill(self, NPC_TALENT_2H, 1);
+	Npc_SetTalentSkill(self, NPC_TALENT_CROSSBOW, 1);
 
 	//-------- inventory --------
 
@@ -48,7 +48,5 @@ instance CS_Eskorte3 (Npc_Default)
 
 func void Rtn_start_3027()
 {
-TA_Position (00,00,24,00,"WP_INTRO05");
-
+	TA_Position(00, 00, 24, 00, "WP_INTRO05");
 };
-

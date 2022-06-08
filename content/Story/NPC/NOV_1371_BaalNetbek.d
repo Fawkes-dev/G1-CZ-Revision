@@ -1,4 +1,4 @@
-instance NOV_1371_BaalNetbek (Npc_Default)
+instance NOV_1371_BaalNetbek(Npc_Default)
 {
 	//-------- primary data --------
 	name = "Baal Netbek";
@@ -19,13 +19,13 @@ instance NOV_1371_BaalNetbek (Npc_Default)
 	attribute[ATR_HITPOINTS] = 76;
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Relaxed.mds");
-	//			body mesh     ,bdytex,skin,head mesh     ,headtex,teethtex,ruestung
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 1, 1,"Hum_Head_Fatbald", 101,  1, NOV_ARMOR_L);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Relaxed.mds");
+	//			body mesh ,bdytex,skin,head mesh ,headtex,teethtex,ruestung
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 1, 1, "Hum_Head_Fatbald", 101, 1, NOV_ARMOR_L);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,3);
+	Mdl_SetModelFatness(self, 3);
 
 	fight_tactic = FAI_HUMAN_STRONG;
 
@@ -33,16 +33,14 @@ instance NOV_1371_BaalNetbek (Npc_Default)
 
 	//-------- inventory --------
 
-	CreateInvItem(self,ItMw_1H_Hatchet_01);
+	CreateInvItem(self, ItMw_1H_Hatchet_01);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_1371;
-
 };
 
 func void Rtn_start_1371()
 {
-	TA_Stay (24,00,06,00,"PATH_TAKE_HERB_08");
-  	TA_Stay (06,00,24,00,"PATH_TAKE_HERB_08");
+	TA_Stay(24, 00, 06, 00, "PATH_TAKE_HERB_08");
+	TA_Stay(06, 00, 24, 00, "PATH_TAKE_HERB_08");
 };
-

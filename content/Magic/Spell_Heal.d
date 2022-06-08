@@ -7,13 +7,14 @@
 
 func int Spell_Logic_Heal(var int manaInvested)
 {
-	PrintDebugNpc (PD_MAGIC, "Spell_Logic_Heal");
+	PrintDebugNpc(PD_MAGIC, "Spell_Logic_Heal");
 
 	if (self.attribute[ATR_HITPOINTS] < self.attribute[ATR_HITPOINTS_MAX])
 	{
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, +SPL_HEALING_HP_PER_MP);
+		Npc_ChangeAttribute(self, ATR_HITPOINTS, + SPL_HEALING_HP_PER_MP);
 		return SPL_NEXTLEVEL;
 	};
+
 	// Kein weiteres Invest mehr möglich -> Der Kerl ist geheilt.
 	return SPL_SENDSTOP;
 };

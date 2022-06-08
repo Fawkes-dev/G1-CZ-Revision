@@ -1,8 +1,8 @@
 /*************************************************************************
-** Fire Waran Prototype  **
+** Fire Waran prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_FireWaran(C_Npc)
+prototype Mst_Default_FireWaran(C_Npc)
 {
 	name = "Fire Lizard";
 	guild = GIL_WARAN;
@@ -51,21 +51,22 @@ PROTOTYPE Mst_Default_FireWaran(C_Npc)
 
 	aivar[AIV_MM_RoamStart] = OnlyRoutine;
 };
+
 //---------------------------------------------------
 func void Set_FireWaran_Visuals()
 {
-	Mdl_SetVisual(self,"Waran.mds");
-	Mdl_ApplyOverlayMds(self,"Firewaran.mds");
+	Mdl_SetVisual(self, "Waran.mds");
+	Mdl_ApplyOverlayMDS(self, "Firewaran.mds");
 
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"War_Fire_Body",DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "War_Fire_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Fire Waran    **
+** Fire Waran **
 *************************************************************************/
 
-instance FireWaran (Mst_Default_FireWaran)
+instance FireWaran(Mst_Default_FireWaran)
 {
 	Set_FireWaran_Visuals();
 	Npc_SetToFistMode(self);

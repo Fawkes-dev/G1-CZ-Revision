@@ -23,15 +23,15 @@
 //////////////////////////////////////////////////////////////////////////
 func void ZS_ReactToDamage()
 {
-	PrintDebugNpc (PD_ZS_FRAME, "ZS_ReactToDamage");
+	PrintDebugNpc(PD_ZS_FRAME, "ZS_ReactToDamage");
 	PrintGlobals(PD_ZS_CHECK);
 	C_ZSInit();
 
-	Npc_PercEnable (self,PERC_ASSESSMAGIC , B_AssessMagic);
-	Npc_PercEnable (self,PERC_ASSESSMURDER , B_CombatAssessMurder);
-	Npc_PercEnable (self,PERC_ASSESSDEFEAT , B_CombatAssessDefeat);
+	Npc_PercEnable(self, PERC_ASSESSMAGIC, B_AssessMagic);
+	Npc_PercEnable(self, PERC_ASSESSMURDER, B_CombatAssessMurder);
+	Npc_PercEnable(self, PERC_ASSESSDEFEAT, B_CombatAssessDefeat);
 
-	B_WhirlAround (self,other);
+	B_WhirlAround(self, other);
 
 	//-------- spezielle Reaktionen im Kampf --------
 	if (self.aivar[AIV_SPECIALCOMBATDAMAGEREACTION])
@@ -40,7 +40,7 @@ func void ZS_ReactToDamage()
 	};
 
 	//-------- Merken ob Schaden durch Fernkampfwaffe/Magie verursacht wurde --------
-	if (Npc_IsInFightMode(other,FMODE_FAR) || Npc_IsInFightMode(other,FMODE_MAGIC))
+	if (Npc_IsInFightMode(other, FMODE_FAR) || Npc_IsInFightMode(other, FMODE_MAGIC))
 	{
 		self.aivar[AIV_LASTHITBYRANGEDWEAPON] = TRUE;
 	}
@@ -56,34 +56,34 @@ func void ZS_ReactToDamage()
 		{
 			self.aivar[AIV_BEENATTACKED] = 1;
 
-			if ((Npc_GetTempAttitude(self,other)==ATT_FRIENDLY) || (self.npctype==NPCTYPE_FRIEND))
+			if ((Npc_GetTempAttitude(self, other) == ATT_FRIENDLY) || (self.npctype == NpcType_Friend))
 			{
-				PrintDebugNpc (PD_ZS_CHECK, "...NSC FRIENDLY zum Angreifer");
-				C_LookAtNpc (self,other);
-				B_Say (self,other,"WHATAREYOUDOING");
-				Npc_SetTempAttitude(self,ATT_ANGRY);
+				PrintDebugNpc(PD_ZS_CHECK, "...NSC FRIENDLY zum Angreifer");
+				C_LookAtNpc(self, other);
+				B_Say(self, other, "WHATAREYOUDOING");
+				Npc_SetTempAttitude(self, ATT_ANGRY);
 				AI_ContinueRoutine(self);
 				return;
 			}
 			else
 			{
-				PrintDebugNpc (PD_ZS_CHECK, "...NSC nicht FRIENDLY zum Angreifer!");
+				PrintDebugNpc(PD_ZS_CHECK, "...NSC nicht FRIENDLY zum Angreifer!");
 
-				if (Npc_GetPermAttitude(self,other) != ATT_HOSTILE)
+				if (Npc_GetPermAttitude(self, other) != ATT_HOSTILE)
 				{
-					Npc_SetPermAttitude(self,ATT_ANGRY);
+					Npc_SetPermAttitude(self, ATT_ANGRY);
 				};
-				Npc_SetTempAttitude(self,ATT_HOSTILE);
+
+				Npc_SetTempAttitude(self, ATT_HOSTILE);
 			};
 		};
 
-		AI_StartState(self,ZS_AssessEnemy, 0, "");
+		AI_StartState(self, ZS_AssessEnemy, 0, "");
 	}
 
 	//-------- Angreifer ist Monster ! --------
 	else
 	{
-		AI_StartState(self,ZS_AssessMonster, 0, "");
+		AI_StartState(self, ZS_AssessMonster, 0, "");
 	};
 };
-

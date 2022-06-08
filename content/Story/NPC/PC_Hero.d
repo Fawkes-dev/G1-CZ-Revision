@@ -1,5 +1,4 @@
 instance PC_Hero(NPC_DEFAULT)
-
 {
 	//-------- primary data --------
 	name = "Me";
@@ -20,17 +19,17 @@ instance PC_Hero(NPC_DEFAULT)
 	attribute[ATR_DEXTERITY] = 10;
 	attribute[ATR_MANA_MAX] = 5;
 	attribute[ATR_MANA] = 5;
-	attribute[ATR_HITPOINTS_MAX]= 40;
+	attribute[ATR_HITPOINTS_MAX] = 40;
 	attribute[ATR_HITPOINTS] = 40;
 
 	//-------- visuals --------
 	// 						animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	//						Body-Mesh Body-Tex Skin-Color Head-MMS    Head-Tex Teeth-Tex Armor-Tex
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 4, 1, "Hum_Head_Pony", 9, 0, -1);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	//						Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex Armor-Tex
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 4, 1, "Hum_Head_Pony", 9, 0, -1);
 
 	//-------------------------
-	CreateInvItem(self,ItWr_Fire_Letter_01);
+	CreateInvItem(self, ItWr_Fire_Letter_01);
 };
 
 // ***************************************************************************
@@ -38,7 +37,6 @@ instance PC_Hero(NPC_DEFAULT)
 // ***************************************************************************
 
 instance PC_Hero_L2(NPC_DEFAULT)
-
 {
 	//-------- primary data --------
 	name = "Me";
@@ -59,14 +57,14 @@ instance PC_Hero_L2(NPC_DEFAULT)
 	attribute[ATR_DEXTERITY] = 10;
 	attribute[ATR_MANA_MAX] = 5;
 	attribute[ATR_MANA] = 5;
-	attribute[ATR_HITPOINTS_MAX]= 64;
+	attribute[ATR_HITPOINTS_MAX] = 64;
 	attribute[ATR_HITPOINTS] = 64;
 
 	//-------- visuals --------
 	// 						animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	//						Body-Mesh Body-Tex Skin-Color Head-MMS    Head-Tex Teeth-Tex Armor-Tex
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 4, 1, "Hum_Head_Pony", 9, 0, VLK_ARMOR_L);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	//						Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex Armor-Tex
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 4, 1, "Hum_Head_Pony", 9, 0, VLK_ARMOR_L);
 
 	//-------- talents --------
 	//Npc_SetTalentSkill(self,NPC_TALENT_PICKPOCKET,1);Npc_SetTalentValue(self,NPC_TALENT_PICKPOCKET,60);
@@ -81,10 +79,10 @@ instance PC_Hero_L2(NPC_DEFAULT)
 	//Npc_SetTalentSkill(self,NPC_TALENT_CROSSBOW,1);
 
 	//-------- inventory --------
-	EquipItem(self,HeroSword20);
-	CreateInvItems(self,ItAmArrow, 50);
-	EquipItem(self,HeroSword13);
-	EquipItem(self,HeroBow13);
+	EquipItem(self, HeroSword20);
+	CreateInvItems(self, ItAmArrow, 50);
+	EquipItem(self, HeroSword13);
+	EquipItem(self, HeroBow13);
 };
 
 // ***************************************************************************
@@ -92,7 +90,6 @@ instance PC_Hero_L2(NPC_DEFAULT)
 // ***************************************************************************
 
 instance PC_Hero_L5(NPC_DEFAULT)
-
 {
 	//-------- primary data --------
 	name = "Me";
@@ -106,21 +103,21 @@ instance PC_Hero_L5(NPC_DEFAULT)
 	exp = 7500;
 	exp_next = 10500;
 	lp = 0;
-		//------------------------------
+	//------------------------------
 
 	//--------- abilities --------
 	attribute[ATR_STRENGTH] = 25;
 	attribute[ATR_DEXTERITY] = 10;
 	attribute[ATR_MANA_MAX] = 5;
 	attribute[ATR_MANA] = 5;
-	attribute[ATR_HITPOINTS_MAX]= 100;
+	attribute[ATR_HITPOINTS_MAX] = 100;
 	attribute[ATR_HITPOINTS] = 100;
 
 	//-------- visuals --------
 	// 						animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	//						Body-Mesh Body-Tex Skin-Color Head-MMS    Head-Tex Teeth-Tex Armor-Tex
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 4, 1, "Hum_Head_Pony", 9, 0, -1);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	//						Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex Armor-Tex
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 4, 1, "Hum_Head_Pony", 9, 0, -1);
 
 	//-------- talents --------
 	//Npc_SetTalentSkill(self,NPC_TALENT_PICKPOCKET,1);Npc_SetTalentValue(self,NPC_TALENT_PICKPOCKET,60);
@@ -135,9 +132,9 @@ instance PC_Hero_L5(NPC_DEFAULT)
 	//Npc_SetTalentSkill(self,NPC_TALENT_CROSSBOW,1);
 
 	//-------- inventory --------
-	EquipItem(self,HeroSword25);
-	EquipItem(self,HeroBow13);
-	CreateInvItems(self,ItAmArrow, 50);
+	EquipItem(self, HeroSword25);
+	EquipItem(self, HeroBow13);
+	CreateInvItems(self, ItAmArrow, 50);
 };
 
 // ***************************************************************************
@@ -157,28 +154,28 @@ instance PC_Hero_L7(NPC_DEFAULT)
 	exp = 14000;
 	exp_next = 18000;
 	lp = 0;
-		//------------------------------
+	//------------------------------
 
 	//--------- abilities --------
 	attribute[ATR_STRENGTH] = 45;
 	attribute[ATR_DEXTERITY] = 35;
 	attribute[ATR_MANA_MAX] = 20;
 	attribute[ATR_MANA] = 20;
-	attribute[ATR_HITPOINTS_MAX]= 160;
+	attribute[ATR_HITPOINTS_MAX] = 160;
 	attribute[ATR_HITPOINTS] = 160;
 
 	//-------- visuals --------
 	// 						animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	//						Body-Mesh Body-Tex Skin-Color Head-MMS    Head-Tex Teeth-Tex Armor-Tex
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 4, 1, "Hum_Head_Pony", 9, 0, ORG_ARMOR_H);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	//						Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex Armor-Tex
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 4, 1, "Hum_Head_Pony", 9, 0, ORG_ARMOR_H);
 
 	//-------- talents --------
 	//Npc_SetTalentSkill(self,NPC_TALENT_PICKPOCKET,1);Npc_SetTalentValue(self,NPC_TALENT_PICKPOCKET,60);
 	//Npc_SetTalentSkill(self,NPC_TALENT_SNEAK,1);
-	Npc_SetTalentSkill(self,NPC_TALENT_PICKLOCK,1);Npc_SetTalentValue(self,NPC_TALENT_PICKLOCK,60);
+	Npc_SetTalentSkill(self, NPC_TALENT_PICKLOCK, 1);Npc_SetTalentValue(self, NPC_TALENT_PICKLOCK, 60);
 
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,1);
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 1);
 	//Npc_SetTalentSkill(self,NPC_TALENT_1H,1);
 	//Npc_SetTalentSkill(self,NPC_TALENT_2H,1);
 	//Npc_SetTalentSkill(self,NPC_TALENT_2H,1);
@@ -186,15 +183,15 @@ instance PC_Hero_L7(NPC_DEFAULT)
 	//Npc_SetTalentSkill(self,NPC_TALENT_CROSSBOW,1);
 
 	//-------- inventory --------
-	EquipItem(self,ItMw_1H_Sword_05);
-	EquipItem(self,ItRw_Bow_Small_04);
-	CreateInvItems(self,ItAmArrow, 100);
-	CreateInvItems(self,ItMiNugget, 50);
-	CreateInvItem(self,ItWrWorldmap);
-	CreateInvItems(self,ItKeLockpick, 30);
-	CreateInvItems(self,ItLsTorch, 20);
-	CreateInvItems(self,ItFo_Potion_Health_03, 20);
-	CreateInvItems(self,ItFo_Potion_Mana_03, 20);
+	EquipItem(self, ItMw_1H_Sword_05);
+	EquipItem(self, ItRw_Bow_Small_04);
+	CreateInvItems(self, ItAmArrow, 100);
+	CreateInvItems(self, ItMiNugget, 50);
+	CreateInvItem(self, ItWrWorldmap);
+	CreateInvItems(self, ItKeLockpick, 30);
+	CreateInvItems(self, ItLsTorch, 20);
+	CreateInvItems(self, ItFo_Potion_Health_03, 20);
+	CreateInvItems(self, ItFo_Potion_Mana_03, 20);
 };
 
 // ***************************************************************************
@@ -214,41 +211,41 @@ instance PC_Hero_L11(NPC_DEFAULT)
 	exp = 33000;
 	exp_next = 39000;
 	lp = 0;
-		//------------------------------
+	//------------------------------
 
 	//--------- abilities --------
 	attribute[ATR_STRENGTH] = 60;
 	attribute[ATR_DEXTERITY] = 45;
 	attribute[ATR_MANA_MAX] = 50;
 	attribute[ATR_MANA] = 50;
-	attribute[ATR_HITPOINTS_MAX]= 220;
+	attribute[ATR_HITPOINTS_MAX] = 220;
 	attribute[ATR_HITPOINTS] = 220;
 
 	//-------- visuals --------
 	// 						animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	//						Body-Mesh Body-Tex Skin-Color Head-MMS    Head-Tex Teeth-Tex Armor-Tex
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 4, 1, "Hum_Head_Pony", 9, 0, SLD_ARMOR_H);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	//						Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex Armor-Tex
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 4, 1, "Hum_Head_Pony", 9, 0, SLD_ARMOR_H);
 
 	//-------- talents --------
 	//Npc_SetTalentSkill(self,NPC_TALENT_PICKPOCKET,1);Npc_SetTalentValue(self,NPC_TALENT_PICKPOCKET,60);
 	//Npc_SetTalentSkill(self,NPC_TALENT_SNEAK,1);
-	Npc_SetTalentSkill(self,NPC_TALENT_PICKLOCK,1);Npc_SetTalentValue(self,NPC_TALENT_PICKLOCK,60);
+	Npc_SetTalentSkill(self, NPC_TALENT_PICKLOCK, 1);Npc_SetTalentValue(self, NPC_TALENT_PICKLOCK, 60);
 
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,2);
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 2);
 	//Npc_SetTalentSkill(self,NPC_TALENT_1H,1);
 	//Npc_SetTalentSkill(self,NPC_TALENT_2H,1);
 	//Npc_SetTalentSkill(self,NPC_TALENT_2H,1);
-	Npc_SetTalentSkill(self,NPC_TALENT_BOW,1);
+	Npc_SetTalentSkill(self, NPC_TALENT_BOW, 1);
 	//Npc_SetTalentSkill(self,NPC_TALENT_CROSSBOW,1);
 
 	//-------- inventory --------
-	EquipItem(self,ItMw_1H_Sword_Long_05);
-	EquipItem(self,ItRw_Bow_Long_02);
-	CreateInvItems(self,ItAmArrow, 100);
-	CreateInvItems(self,ItMiNugget, 400);
-	CreateInvItems(self,ItKeLockpick, 30);
-	CreateInvItems(self,ItLsTorch, 20);
+	EquipItem(self, ItMw_1H_Sword_Long_05);
+	EquipItem(self, ItRw_Bow_Long_02);
+	CreateInvItems(self, ItAmArrow, 100);
+	CreateInvItems(self, ItMiNugget, 400);
+	CreateInvItems(self, ItKeLockpick, 30);
+	CreateInvItems(self, ItLsTorch, 20);
 };
 
 // ***************************************************************************
@@ -268,50 +265,50 @@ instance PC_Hero_L13(NPC_DEFAULT)
 	exp = 45500;
 	exp_next = 52500;
 	lp = 0;
-		//------------------------------
+	//------------------------------
 
 	//--------- abilities --------
 	attribute[ATR_STRENGTH] = 65;
 	attribute[ATR_DEXTERITY] = 50;
 	attribute[ATR_MANA_MAX] = 50;
 	attribute[ATR_MANA] = 50;
-	attribute[ATR_HITPOINTS_MAX]= 250;
+	attribute[ATR_HITPOINTS_MAX] = 250;
 	attribute[ATR_HITPOINTS] = 250;
 
 	//-------- visuals --------
 	// 						animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	//						Body-Mesh Body-Tex Skin-Color Head-MMS    Head-Tex Teeth-Tex Armor-Tex
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 4, 1, "Hum_Head_Pony", 9, 0, SLD_ARMOR_H);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	//						Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex Armor-Tex
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 4, 1, "Hum_Head_Pony", 9, 0, SLD_ARMOR_H);
 
 	//-------- talents --------
-	Npc_SetTalentSkill(self,NPC_TALENT_PICKPOCKET,1);Npc_SetTalentValue(self,NPC_TALENT_PICKPOCKET,60);
-	Npc_SetTalentSkill(self,NPC_TALENT_SNEAK,1);
-	Npc_SetTalentSkill(self,NPC_TALENT_PICKLOCK,1);Npc_SetTalentValue(self,NPC_TALENT_PICKLOCK,60);
+	Npc_SetTalentSkill(self, NPC_TALENT_PICKPOCKET, 1);Npc_SetTalentValue(self, NPC_TALENT_PICKPOCKET, 60);
+	Npc_SetTalentSkill(self, NPC_TALENT_SNEAK, 1);
+	Npc_SetTalentSkill(self, NPC_TALENT_PICKLOCK, 1);Npc_SetTalentValue(self, NPC_TALENT_PICKLOCK, 60);
 
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,2);
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 2);
 	//Npc_SetTalentSkill(self,NPC_TALENT_1H,1);
 	//Npc_SetTalentSkill(self,NPC_TALENT_2H,1);
 	//Npc_SetTalentSkill(self,NPC_TALENT_2H,1);
-	Npc_SetTalentSkill(self,NPC_TALENT_BOW,1);
+	Npc_SetTalentSkill(self, NPC_TALENT_BOW, 1);
 	//Npc_SetTalentSkill(self,NPC_TALENT_CROSSBOW,1);
 
 	//-------- inventory --------
-	EquipItem(self,ItMw_1H_Sword_Broad_01);
-	EquipItem(self,ItRw_Bow_Long_04);
-	CreateInvItems(self,ItAmArrow, 100);
-	CreateInvItems(self,ItMiNugget, 400);
-	CreateInvItems(self,ItKeLockpick, 50);
-	CreateInvItems(self,ItLsTorch, 20);
+	EquipItem(self, ItMw_1H_Sword_Broad_01);
+	EquipItem(self, ItRw_Bow_Long_04);
+	CreateInvItems(self, ItAmArrow, 100);
+	CreateInvItems(self, ItMiNugget, 400);
+	CreateInvItems(self, ItKeLockpick, 50);
+	CreateInvItems(self, ItLsTorch, 20);
 };
 
 // ***************************************************************************
 // Testwaffen
 // ***************************************************************************
 
-instance HeroSword13 (C_Item)
+instance HeroSword13(C_Item)
 {
-	name = "Worn-out sword";//Rostiges Schwert
+	name = "Worn-out sword"; //Rostiges Schwert
 
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
@@ -321,14 +318,14 @@ instance HeroSword13 (C_Item)
 
 	damage = 13;
 	damagetype = DAM_EDGE;
-	range    = 100;
+	range = 100;
 
 	visual = "ItMw1hSwordold01.3DS";
 };
 
-instance HeroSword20 (C_Item)
+instance HeroSword20(C_Item)
 {
-	name = "Sword";//Schwert
+	name = "Sword"; //Schwert
 
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
@@ -338,14 +335,14 @@ instance HeroSword20 (C_Item)
 
 	damage = 20;
 	damagetype = DAM_EDGE;
-	range    = 100;
+	range = 100;
 
 	visual = "ItMw1hSword01.3DS";
 };
 
-instance HeroSword25 (C_Item)
+instance HeroSword25(C_Item)
 {
-	name = "Sword";//Schwert
+	name = "Sword"; //Schwert
 
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
@@ -355,14 +352,14 @@ instance HeroSword25 (C_Item)
 
 	damage = 25;
 	damagetype = DAM_EDGE;
-	range    = 100;
+	range = 100;
 
 	visual = "ItMw1hSword01.3DS";
 };
 
-instance HeroBow13 (C_Item)
+instance HeroBow13(C_Item)
 {
-	name = "Longbow";//Langbogen
+	name = "Longbow"; //Langbogen
 
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
@@ -397,8 +394,8 @@ instance XP_Map(C_Item)
 
 func void Use_XP_Map()
 {
-	CreateInvItems(self,ItMiNugget,1000);
+	CreateInvItems(self, ItMiNugget, 1000);
 	hero.lp = hero.lp + 20;
 
-	PrintScreen("+1000 Erz", -1,40,"font_10_book.tga",10);
+	PrintScreen("+1000 Erz", -1, 40, "font_10_book.tga", 10);
 };

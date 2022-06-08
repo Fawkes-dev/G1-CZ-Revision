@@ -111,12 +111,12 @@ func void UseFocimap()
 {
 	var int nDocID;
 
-	nDocID = Doc_CreateMap()   ; // DocManager
-				Doc_SetLevel ( nDocID, "WORLD.ZEN");
-				Doc_SetPages(nDocID,1);
-				Doc_SetPage(nDocID, 0, "Map_World_Foki.tga",1);  //  1 -> DO NOT SCALE
+	nDocID = Doc_CreateMap(); // DocManager
+	Doc_SetLevel(nDocID, "WORLD.ZEN");
+	Doc_SetPages(nDocID, 1);
+	Doc_SetPage(nDocID, 0, "Map_World_Foki.tga", 1); // 1 -> DO NOT SCALE
 
-				Doc_Show(nDocID);
+	Doc_Show(nDocID);
 };
 
 //---------------------------------------------------------------------
@@ -148,21 +148,21 @@ func void UseTroll()
 {
 	var int nDocID;
 
-	nDocID = Doc_Create()   ;
-				Doc_SetPages(nDocID,  1);
-				Doc_SetPage(nDocID,  0, "letters.TGA"  , 0);
-				Doc_SetMargins(nDocID, -1, 50, 50, 50, 50,1);
-				Doc_SetFont(nDocID, -1, "font_15_book.tga");
-				Doc_PrintLine(nDocID,  0,"Day 169");
-				Doc_SetFont(nDocID, -1, "font_10_book.tga");
-				Doc_PrintLine(nDocID,  0, "");
-				Doc_PrintLine(nDocID,  0, "");
-				Doc_PrintLines(nDocID,  0,"Today I'll make it. I know it. The gods will be with me. I've tried everything to kill a troll. The strongest steel had no effect, arrows just bounced off as if his skin were made of stone.");
-				Doc_PrintLine(nDocID,  0, "");
-				Doc_PrintLines(nDocID,  0,"Now I'll use this magic scroll the merchant in Khorinis sold me. It cost me 50 pieces of gold, but with the profit I'll make with these trophies, I'll be rich.");
-				Doc_PrintLine(nDocID,  0, "");
-				Doc_PrintLines(nDocID,  0,"Today I'll kill a troll.");
-				Doc_Show(nDocID);
+	nDocID = Doc_Create();
+	Doc_SetPages(nDocID, 1);
+	Doc_SetPage(nDocID, 0, "letters.TGA", 0);
+	Doc_SetMargins(nDocID, -1, 50, 50, 50, 50, 1);
+	Doc_SetFont(nDocID, -1, "font_15_book.tga");
+	Doc_PrintLine(nDocID, 0, "Day 169");
+	Doc_SetFont(nDocID, -1, "font_10_book.tga");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "Today I'll make it. I know it. The gods will be with me. I've tried everything to kill a troll. The strongest steel had no effect, arrows just bounced off as if his skin were made of stone.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "Now I'll use this magic scroll the merchant in Khorinis sold me. It cost me 50 pieces of gold, but with the profit I'll make with these trophies, I'll be rich.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "Today I'll kill a troll.");
+	Doc_Show(nDocID);
 };
 
 //---------------------------------------------------------------------
@@ -238,17 +238,17 @@ func void UseUrkunde()
 {
 	var int nDocID;
 
-	nDocID = Doc_Create()   ;
-				Doc_SetPages(nDocID,  1);
-				Doc_SetPage(nDocID,  0, "letters.TGA"  , 0);
-				Doc_SetMargins(nDocID, -1, 50, 50, 50, 50,1);
-				Doc_SetFont(nDocID, -1, "font_15_book.tga");
-				Doc_PrintLine(nDocID,  0,"Certificate");
-				Doc_SetFont(nDocID, -1, "font_10_book.tga");
-				Doc_PrintLine(nDocID,  0, "");
-				Doc_PrintLine(nDocID,  0, "");
-				Doc_PrintLines(nDocID,  0,"I, Bergmar, Burgrave of the Western Field and presiding judge over the lands of my Lord of Tymorisin, the region surrounding Khorinis, ... hereby declare ... that I ... surrender and sell ... to the holder of this document ... and to the house of Innos the fief of the mountain fort (along with further tenths of my revenue and the mines contained therein) for 400 units of gold.");
-				Doc_Show(nDocID);
+	nDocID = Doc_Create();
+	Doc_SetPages(nDocID, 1);
+	Doc_SetPage(nDocID, 0, "letters.TGA", 0);
+	Doc_SetMargins(nDocID, -1, 50, 50, 50, 50, 1);
+	Doc_SetFont(nDocID, -1, "font_15_book.tga");
+	Doc_PrintLine(nDocID, 0, "Certificate");
+	Doc_SetFont(nDocID, -1, "font_10_book.tga");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "I, Bergmar, Burgrave of the Western Field and presiding judge over the lands of my Lord of Tymorisin, the region surrounding Khorinis, ... hereby declare ... that I ... surrender and sell ... to the holder of this document ... and to the house of Innos the fief of the mountain fort (along with further tenths of my revenue and the mines contained therein) for 400 units of gold.");
+	Doc_Show(nDocID);
 };
 
 //---------------------------------------------------------------------
@@ -349,7 +349,7 @@ instance ItMi_OrcTalisman(C_Item)
 	name = "Orc Talisman";
 
 	mainflag = ITEM_KAT_MAGIC;
-	flags = ITEM_AMULET|ITEM_MISSION;
+	flags = ITEM_AMULET | ITEM_MISSION;
 
 	value = 1000;
 
@@ -370,7 +370,7 @@ instance ItMi_OrcTalisman(C_Item)
 
 func void Equip_OrcTalisman()
 {
- 	self.protection [PROT_FIRE] += 20;
+	self.protection [PROT_FIRE] += 20;
 };
 
 func void UnEquip_OrcTalisman()
@@ -419,4 +419,3 @@ instance Focus_5(C_Item)
 	TEXT[1] = "One of the five focus stones which were used";
 	TEXT[2] = "to create the Magic Barrier.";
 };
-

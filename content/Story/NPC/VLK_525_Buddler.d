@@ -1,9 +1,9 @@
-instance VLK_525_Buddler (Npc_Default)
+instance VLK_525_Buddler(Npc_Default)
 {
 	//-------- primary data --------
 
 	name = Name_Buddler;
-	npctype = npctype_mine_ambient;
+	npctype = NpcType_Mine_Ambient;
 	guild = GIL_VLK;
 	level = 2;
 
@@ -20,28 +20,27 @@ instance VLK_525_Buddler (Npc_Default)
 	attribute[ATR_HITPOINTS] = 64;
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Tired.mds");
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Tired.mds");
 	//				body mesh, head mesh, hairmesh, face-tex, hair-tex, skin
-	Mdl_SetVisualBody(self,"hum_body_Naked0",3,1,"Hum_Head_Psionic", 69,  3, -1);
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 3, 1, "Hum_Head_Psionic", 69, 3, -1);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
 	//-------- Talents --------
 
 	//-------- inventory --------
-	CreateInvItem(self,ItFoApple);
+	CreateInvItem(self, ItFoApple);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_525;
-	};
+};
 
 func void Rtn_start_525()
 {
-	TA_PickOre (00,00,12,00,"OM_PICKORE_13");
-	TA_PickOre (12,00,24,00,"OM_PICKORE_13");
+	TA_PickOre(00, 00, 12, 00, "OM_PICKORE_13");
+	TA_PickOre(12, 00, 24, 00, "OM_PICKORE_13");
 };
-

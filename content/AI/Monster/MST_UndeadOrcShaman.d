@@ -1,8 +1,8 @@
 /*************************************************************************
-** Undead Orc Shaman Prototype **
+** Undead Orc Shaman prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_UndeadOrcShaman (C_Npc)
+prototype Mst_Default_UndeadOrcShaman(C_Npc)
 {
 	name = "High Priest";
 	guild = GIL_UNDEADORC;
@@ -51,24 +51,23 @@ PROTOTYPE Mst_Default_UndeadOrcShaman (C_Npc)
 
 	aivar[AIV_MM_RestStart] = OnlyRoutine;
 };
+
 //-------------------------------------------------------------
 func void Set_UndeadOrcShaman_Visuals()
 {
-	Mdl_SetVisual(self,"Orc.mds");
+	Mdl_SetVisual(self, "Orc.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"UOS_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "UOS_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Undead Orc Shaman  **
+** Undead Orc Shaman **
 *************************************************************************/
 
-instance UndeadOrcShaman (Mst_Default_UndeadOrcShaman)
+instance UndeadOrcShaman(Mst_Default_UndeadOrcShaman)
 {
 	Set_UndeadOrcShaman_Visuals();
-	EquipItem(self,ItRwUdOrcstaff); // für Magiemodus
-	CreateInvItem(self,ItArRuneBreathOfDeath);
-	CreateInvItems(self,ItArScrollSummonGolem, 20);
-
+	EquipItem(self, ItRwUdOrcstaff); // für Magiemodus
+	CreateInvItem(self, ItArRuneBreathOfDeath);
+	CreateInvItems(self, ItArScrollSummonGolem, 20);
 };
-

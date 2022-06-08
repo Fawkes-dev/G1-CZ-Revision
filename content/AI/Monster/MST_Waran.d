@@ -1,8 +1,8 @@
 /*************************************************************************
-** Waran Prototype **
+** Waran prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_Waran(C_Npc)
+prototype Mst_Default_Waran(C_Npc)
 {
 	name = "Lizard";
 	guild = GIL_WARAN;
@@ -51,22 +51,21 @@ PROTOTYPE Mst_Default_Waran(C_Npc)
 
 	aivar[AIV_MM_RoamStart] = OnlyRoutine;
 };
+
 //---------------------------------------------------
 func void Set_Waran_Visuals()
 {
-	Mdl_SetVisual(self,"Waran.mds");
+	Mdl_SetVisual(self, "Waran.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"War_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "War_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Waran    **
+** Waran **
 *************************************************************************/
 
-instance Waran (Mst_Default_Waran)
+instance Waran(Mst_Default_Waran)
 {
 	Set_Waran_Visuals();
 	Npc_SetToFistMode(self);
-
 };
-

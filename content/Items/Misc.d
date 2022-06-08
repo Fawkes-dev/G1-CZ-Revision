@@ -7,10 +7,10 @@
 const int Value_MobsiItem = 3;
 
 // mit 80% kann bei einem kompletten Durchgang ca. 10 Erz verdient werden
-const int Value_SwordBlade = (Value_1H_Sword_01 *8)/10; // 80% des Fertigen Schwerts
-const int Value_SwordBladeHot = (Value_SwordBlade *8)/10; // 80% der geschliffenen Klinge
-const int Value_SwordRawHot = (Value_SwordBladeHot*8)/10; // 80% der geschmiedeten Klinge
-const int Value_SwordRaw = (Value_SwordRawHot *8)/10; // 80% des erhitzen Rohstahls
+const int Value_SwordBlade = (Value_1H_Sword_01 * 8) / 10; // 80% des Fertigen Schwerts
+const int Value_SwordBladeHot = (Value_SwordBlade * 8) / 10; // 80% der geschliffenen Klinge
+const int Value_SwordRawHot = (Value_SwordBladeHot * 8) / 10; // 80% der geschmiedeten Klinge
+const int Value_SwordRaw = (Value_SwordRawHot * 8) / 10; // 80% des erhitzen Rohstahls
 
 const int Value_Dietrich = 10;
 const int Value_Schlüssel = 3;
@@ -20,13 +20,13 @@ const int Value_Joint2 = 15;
 const int Value_Joint3 = 20;
 const int Value_Laute = 10;
 
-const int Value_Erzbrocken = 1;// UNBEDINGT SO LASSEN!!! M.F.
+const int Value_Erzbrocken = 1; // UNBEDINGT SO LASSEN!!! M.F.
 const int Value_Fackel = 2;
 
 const int Value_Sumpfkraut = 8;
 const int Value_Pfeife = 10;
-const int Value_Rasiermesser = 5;// EX 25 NIEDRIGER WERT WEIL ES VIEL DAVON GIBT!!!
-const int Value_Münze = 0;// BITTE AUF 0 LASSEN, DAFÜR IST SIE DA, FÜR SONST NIX!!!!! M.F.
+const int Value_Rasiermesser = 5; // EX 25 NIEDRIGER WERT WEIL ES VIEL DAVON GIBT!!!
+const int Value_Münze = 0; // BITTE AUF 0 LASSEN, DAFÜR IST SIE DA, FÜR SONST NIX!!!!! M.F.
 const int Value_Schüssel = 4;
 const int Value_Kerzenständer = 10;
 const int Value_Becher = 4;
@@ -47,12 +47,12 @@ const int Value_Moleratfett = 5;
 const int Value_Alcohol = 18;
 
 /*******************************************************************************************
-** Items für Mobsi-Benutzung                     **
+** Items für Mobsi - Benutzung **
 *******************************************************************************************/
 
 /******************************************************************************************/
 //	Dietrich
-instance ItKeLockpick (C_Item)
+instance ItKeLockpick(C_Item)
 {
 	name = "Picklock";
 
@@ -158,7 +158,7 @@ instance ItKeCavalorn01(C_Item)
 
 /******************************************************************************************/
 // Krautstampfen
-instance ItMiStomper (C_Item)
+instance ItMiStomper(C_Item)
 {
 	name = "Weed Masher";
 
@@ -176,7 +176,7 @@ instance ItMiStomper (C_Item)
 
 /******************************************************************************************/
 // Reparieren
-instance ItMiHammer (C_Item)
+instance ItMiHammer(C_Item)
 {
 	name = "Hammer";
 
@@ -194,7 +194,7 @@ instance ItMiHammer (C_Item)
 
 /******************************************************************************************/
 // im Topf rühren
-instance ItMiScoop (C_Item)
+instance ItMiScoop(C_Item)
 {
 	name = "Wooden Spoon";
 
@@ -230,9 +230,9 @@ instance ItMiFlask(C_Item)
 };
 
 /******************************************************************************************/
-//	Items für Schmiede         **
+//	Items für Schmiede **
 
-instance ItMiSwordraw (C_Item)
+instance ItMiSwordraw(C_Item)
 {
 	name = "Raw Steel";
 
@@ -249,7 +249,7 @@ instance ItMiSwordraw (C_Item)
 };
 
 /******************************************************************************************/
-instance ItMiSwordrawhot (C_Item)
+instance ItMiSwordrawhot(C_Item)
 {
 	name = "Glowing Steel";
 
@@ -266,7 +266,7 @@ instance ItMiSwordrawhot (C_Item)
 };
 
 /******************************************************************************************/
-instance ItMiSwordbladehot (C_Item)
+instance ItMiSwordbladehot(C_Item)
 {
 	name = "Glowing Blade";
 
@@ -283,7 +283,7 @@ instance ItMiSwordbladehot (C_Item)
 };
 
 /******************************************************************************************/
-instance ItMiSwordblade (C_Item)
+instance ItMiSwordblade(C_Item)
 {
 	name = "Blade";
 
@@ -300,7 +300,7 @@ instance ItMiSwordblade (C_Item)
 };
 
 /*******************************************************************************************
-** Items für Item-Interaktionen (ohne Mobsi benutzbar)                    **
+** Items für Item - Interaktionen(ohne Mobsi benutzbar) **
 *******************************************************************************************/
 
 // für Feuerspucker
@@ -309,7 +309,7 @@ instance ItLsTorchFirespit(C_Item)
 	name = "Torch";
 
 	mainflag = ITEM_KAT_NONE;
-	flags = ITEM_BURN|ITEM_TORCH;
+	flags = ITEM_BURN | ITEM_TORCH;
 
 	value = Value_MobsiItem;
 
@@ -324,7 +324,7 @@ instance ItLsTorchFirespit(C_Item)
 
 /******************************************************************************************/
 // zum Rumklimpern
-instance ItMiLute (C_Item)
+instance ItMiLute(C_Item)
 {
 	name = "Lute";
 
@@ -340,10 +340,11 @@ instance ItMiLute (C_Item)
 	description = name;
 	TEXT[4] = NAME_Value; COUNT[4] = value;
 };
+
 func void UseLute()
 {
-	if (Play_Lute == FALSE)
-	&& Npc_IsPlayer(self)
+	if ((Play_Lute == FALSE)
+	&& Npc_IsPlayer(self))
 	{
 		B_GiveXP(10);
 		Play_Lute = TRUE;
@@ -406,15 +407,17 @@ instance ItMiJoint_1(C_Item)
 	description = name;
 	TEXT[4] = NAME_Value; COUNT[4] = value;
 };
+
 func void UseItMiJoint_1()
 {
-	if (Firstjoint == FALSE)
-	&& Npc_IsPlayer(self)
+	if ((Firstjoint == FALSE)
+	&& Npc_IsPlayer(self))
 	{
 		B_GiveXP(5);
 		Firstjoint = TRUE;
 	};
 };
+
 /******************************************************************************************/
 instance ItMiJoint_2(C_Item)
 {
@@ -433,15 +436,17 @@ instance ItMiJoint_2(C_Item)
 	description = name;
 	TEXT[4] = NAME_Value; COUNT[4] = value;
 };
+
 func void UseItMiJoint_2()
 {
-	if (Secondjoint == FALSE)
-	&& Npc_IsPlayer(self)
+	if ((Secondjoint == FALSE)
+	&& Npc_IsPlayer(self))
 	{
 		B_GiveXP(10);
 		Secondjoint = TRUE;
 	};
 };
+
 /******************************************************************************************/
 instance ItMiJoint_3(C_Item)
 {
@@ -460,13 +465,14 @@ instance ItMiJoint_3(C_Item)
 	description = name;
 	TEXT[4] = NAME_Value; COUNT[4] = value;
 };
+
 func void UseItMiJoint_3()
 {
-	if (Thirdjoint == FALSE)
-	&& Npc_IsPlayer(self)
+	if ((Thirdjoint == FALSE)
+	&& Npc_IsPlayer(self))
 	{
-		Npc_ChangeAttribute(self,ATR_MANA_MAX,2);
-		PrintScreen("Mana +2", -1,-1,"FONT_OLD_20_WHITE.TGA",3);
+		Npc_ChangeAttribute(self, ATR_MANA_MAX, 2);
+		PrintScreen("Mana +2", -1, -1, "FONT_OLD_20_WHITE.TGA", 3);
 		Thirdjoint = TRUE;
 	};
 };
@@ -489,14 +495,14 @@ instance ItMiNugget(C_Item)
 };
 
 /******************************************************************************************/
-//	Fackel                   **
+//	Fackel **
 
 instance ItLsTorch(C_Item)
 {
 	name = "Torch";
 
 	mainflag = ITEM_KAT_NONE;
-	flags = ITEM_BURN|ITEM_TORCH|ITEM_MULTI;
+	flags = ITEM_BURN | ITEM_TORCH | ITEM_MULTI;
 
 	value = Value_Fackel;
 
@@ -505,7 +511,6 @@ instance ItLsTorch(C_Item)
 
 	description = name;
 	TEXT[4] = NAME_Value; COUNT[4] = value;
-
 };
 
 /******************************************************************************************/
@@ -514,7 +519,7 @@ instance ItLsTorchburning(C_Item)
 	name = "Burning Torch";
 
 	mainflag = ITEM_KAT_NONE;
-	flags = ITEM_BURN|ITEM_TORCH;
+	flags = ITEM_BURN | ITEM_TORCH;
 
 	value = 0;
 
@@ -531,7 +536,7 @@ instance ItLsTorchburned(C_Item)
 	name = "Torch";
 
 	mainflag = ITEM_KAT_NONE;
-	flags = ITEM_BURN|ITEM_TORCH|ITEM_MULTI;
+	flags = ITEM_BURN | ITEM_TORCH | ITEM_MULTI;
 
 	value = 0;
 
@@ -564,7 +569,7 @@ instance ItMi_Plants_Swampherb_01(C_Item)
 };
 
 /******************************************************************************************/
-instance ItMi_Stuff_Pipe_01 (C_Item)
+instance ItMi_Stuff_Pipe_01(C_Item)
 {
 	name = "Pipe";
 
@@ -581,7 +586,7 @@ instance ItMi_Stuff_Pipe_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItMi_Stuff_Barbknife_01 (C_Item)
+instance ItMi_Stuff_Barbknife_01(C_Item)
 {
 	name = "Razor";
 
@@ -598,7 +603,7 @@ instance ItMi_Stuff_Barbknife_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItMi_Stuff_OldCoin_01 (C_Item)
+instance ItMi_Stuff_OldCoin_01(C_Item)
 {
 	name = "Coin";
 
@@ -615,12 +620,12 @@ instance ItMi_Stuff_OldCoin_01 (C_Item)
 };
 
 //	Münze mit Mission Flag um tote liegenzulassen
-instance ItMi_Stuff_OldCoin_02 (C_Item)
+instance ItMi_Stuff_OldCoin_02(C_Item)
 {
 	name = "Coin";
 
 	mainflag = ITEM_KAT_NONE;
-	flags = ITEM_MULTI|ITEM_MISSION;
+	flags = ITEM_MULTI | ITEM_MISSION;
 
 	value = Value_Münze;
 
@@ -632,7 +637,7 @@ instance ItMi_Stuff_OldCoin_02 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItMi_Stuff_Plate_01 (C_Item)
+instance ItMi_Stuff_Plate_01(C_Item)
 {
 	name = "Plate";
 
@@ -649,7 +654,7 @@ instance ItMi_Stuff_Plate_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItMi_Stuff_Candel_01 (C_Item)
+instance ItMi_Stuff_Candel_01(C_Item)
 {
 	name = "Candlestick";
 
@@ -666,7 +671,7 @@ instance ItMi_Stuff_Candel_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItMi_Stuff_Cup_01 (C_Item)
+instance ItMi_Stuff_Cup_01(C_Item)
 {
 	name = "Tumbler";
 
@@ -683,7 +688,7 @@ instance ItMi_Stuff_Cup_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItMi_Stuff_Cup_02 (C_Item)
+instance ItMi_Stuff_Cup_02(C_Item)
 {
 	name = "Goblet";
 
@@ -700,7 +705,7 @@ instance ItMi_Stuff_Cup_02 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItMi_Stuff_Silverware_01 (C_Item)
+instance ItMi_Stuff_Silverware_01(C_Item)
 {
 	name = "Cutlery";
 
@@ -717,7 +722,7 @@ instance ItMi_Stuff_Silverware_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItMi_Stuff_Pan_01 (C_Item)
+instance ItMi_Stuff_Pan_01(C_Item)
 {
 	name = "Pan";
 
@@ -734,7 +739,7 @@ instance ItMi_Stuff_Pan_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItMi_Stuff_Mug_01 (C_Item)
+instance ItMi_Stuff_Mug_01(C_Item)
 {
 	name = "Jug";
 
@@ -751,7 +756,7 @@ instance ItMi_Stuff_Mug_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItMi_Stuff_Amphore_01 (C_Item)
+instance ItMi_Stuff_Amphore_01(C_Item)
 {
 	name = "Amphora";
 
@@ -768,7 +773,7 @@ instance ItMi_Stuff_Amphore_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItMi_Stuff_Idol_Ogront_01 (C_Item)
+instance ItMi_Stuff_Idol_Ogront_01(C_Item)
 {
 	name = "Statue";
 
@@ -787,7 +792,7 @@ instance ItMi_Stuff_Idol_Ogront_01 (C_Item)
 /******************************************************************************************/
 //ALCHIMIE//
 /******************************************************************************************/
-instance ItMi_Alchemy_Sulphur_01 (C_Item)
+instance ItMi_Alchemy_Sulphur_01(C_Item)
 {
 	name = "Sulfur";
 
@@ -804,7 +809,7 @@ instance ItMi_Alchemy_Sulphur_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItMi_Alchemy_Quicksilver_01 (C_Item)
+instance ItMi_Alchemy_Quicksilver_01(C_Item)
 {
 	name = "Mercury";
 
@@ -821,7 +826,7 @@ instance ItMi_Alchemy_Quicksilver_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItMi_Alchemy_Salt_01 (C_Item)
+instance ItMi_Alchemy_Salt_01(C_Item)
 {
 	name = "Salt";
 
@@ -838,7 +843,7 @@ instance ItMi_Alchemy_Salt_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItMi_Alchemy_Syrianoil_01 (C_Item)
+instance ItMi_Alchemy_Syrianoil_01(C_Item)
 {
 	name = "Syrianic Oil";
 
@@ -855,7 +860,7 @@ instance ItMi_Alchemy_Syrianoil_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItMi_Alchemy_Moleratlubric_01 (C_Item)
+instance ItMi_Alchemy_Moleratlubric_01(C_Item)
 {
 	name = "Molerat Grease";
 
@@ -872,7 +877,7 @@ instance ItMi_Alchemy_Moleratlubric_01 (C_Item)
 };
 
 /******************************************************************************************/
-instance ItMi_Alchemy_Alcohol_01 (C_Item)
+instance ItMi_Alchemy_Alcohol_01(C_Item)
 {
 	name = "Pure Alcohol";
 
@@ -889,12 +894,12 @@ instance ItMi_Alchemy_Alcohol_01 (C_Item)
 };
 
 /*******************************************************************************************
-** Musikinstrumente InExtremo          **
+** Musikinstrumente InExtremo **
 *******************************************************************************************/
 
 // Werden nicht gebraucht, wenn den Jungs die Instrumente in der Hand "kleben"!
 /*
-instance ItMiLuteIE (C_Item)
+instance ItMiLuteIE(C_Item)
 {
 	name = "Laute";
 
@@ -924,7 +929,7 @@ instance ItMiBluepipe(C_Item)
 	TEXT[4] = NAME_Value; COUNT[4] = Value_Schlüssel;
 };
 
-instance ItMiYellowpipe (C_Item)
+instance ItMiYellowpipe(C_Item)
 {
 	name = "Dudelsack";
 
@@ -939,7 +944,7 @@ instance ItMiYellowpipe (C_Item)
 	TEXT[4] = NAME_Value; COUNT[4] = Value_Schlüssel;
 };
 
-instance ItMiDrumscheit (C_Item)
+instance ItMiDrumscheit(C_Item)
 {
 	name = "Drumscheit";
 
@@ -954,7 +959,7 @@ instance ItMiDrumscheit (C_Item)
 	TEXT[4] = NAME_Value; COUNT[4] = Value_Schlüssel;
 };
 
-instance ItMiDrumstick (C_Item)
+instance ItMiDrumstick(C_Item)
 {
 	name = "Trommelstöcke";
 
@@ -969,7 +974,7 @@ instance ItMiDrumstick (C_Item)
 	TEXT[4] = NAME_Value; COUNT[4] = Value_Schlüssel;
 };
 
-instance ItMiCello (C_Item)
+instance ItMiCello(C_Item)
 {
 	name = "Cello";
 
@@ -984,7 +989,7 @@ instance ItMiCello (C_Item)
 	TEXT[4] = NAME_Value; COUNT[4] = Value_Schlüssel;
 };
 
-instance ItMiCellobow (C_Item)
+instance ItMiCellobow(C_Item)
 {
 	name = "Cello Bogen";
 
@@ -999,7 +1004,7 @@ instance ItMiCellobow (C_Item)
 	TEXT[4] = NAME_Value; COUNT[4] = Value_Schlüssel;
 };
 
-instance ItMiHarp (C_Item)
+instance ItMiHarp(C_Item)
 {
 	name = "Harfe";
 

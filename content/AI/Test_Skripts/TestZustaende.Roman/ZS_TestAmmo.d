@@ -1,18 +1,18 @@
 func void ZS_TestAmmo()
 {
-	Print( "Arming");
+	Print("Arming");
 	AI_EquipBestRangedWeapon(self);
-	AI_ReadyRangedWeapon (self);
+	AI_ReadyRangedWeapon(self);
 };
 
 func void ZS_TestAmmo_Loop()
 {
-	Print( "Targeting");
-	var C_NPC enemy;
+	Print("Targeting");
+	var C_Npc enemy;
 	enemy = Hlp_GetNpc(SLD3_Testmodell);
-	Npc_SetTarget(self,enemy);
+	Npc_SetTarget(self, enemy);
 
-	Print( "Attacking");
+	Print("Attacking");
 	AI_Attack(self);
 };
 

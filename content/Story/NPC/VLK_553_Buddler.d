@@ -1,4 +1,4 @@
-instance VLK_553_Buddler (Npc_Default)
+instance VLK_553_Buddler(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -21,33 +21,31 @@ instance VLK_553_Buddler (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Tired.mds");
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Tired.mds");
 	//				body mesh, head mesh, hairmesh, face-tex, hair-tex, skin
-	Mdl_SetVisualBody(self,"hum_body_Naked0",2,1,"Hum_Head_FatBald", 67,  4,VLK_ARMOR_L);
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 2, 1, "Hum_Head_FatBald", 67, 4, VLK_ARMOR_L);
 
-		B_Scale(self);
-		Mdl_SetModelFatness(self,0);
+	B_Scale(self);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
-	//-------- Talents  --------
+	//-------- Talents --------
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1h_Nailmace_01);
-	CreateInvItem(self,ItMwPickaxe);
-	CreateInvItem(self,ItLsTorch);
+	EquipItem(self, ItMw_1h_Nailmace_01);
+	CreateInvItem(self, ItMwPickaxe);
+	CreateInvItem(self, ItLsTorch);
 
 	//-------------Daily Routine-------------
 
 	daily_routine = Rtn_start_553;
-
 };
 
 func void Rtn_start_553()
 {
-	TA_Sleep (22,00,08,00,"OCR_HUT_51");
-	TA_Smalltalk (08,00,22,00,"OCR_TO_HUT_51_SMALLTALK");
+	TA_Sleep(22, 00, 08, 00, "OCR_HUT_51");
+	TA_Smalltalk(08, 00, 22, 00, "OCR_TO_HUT_51_SMALLTALK");
 };
-

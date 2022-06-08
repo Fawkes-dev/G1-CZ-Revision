@@ -5,14 +5,12 @@
 // SPL_SENDSTOP = 3; // Beende Zauber ohne Effekt
 // SPL_NEXTLEVEL = 4; // setze den Spruch auf den nächsten Level
 
-func int Spell_Logic_Massdeath (var int manaInvested)
+func int Spell_Logic_Massdeath(var int manaInvested)
 {
-	PrintDebugNpc (PD_MAGIC, "Spell_Logic_Massdeath");
+	PrintDebugNpc(PD_MAGIC, "Spell_Logic_Massdeath");
 
 	// KR: Ich brauche diese Zeile, damit der Investiereffekt (Funken aus der Hand des Casters) gespielt wird.
 	if (manaInvested == 0) { return SPL_NEXTLEVEL; };
-
 	if (manaInvested >= SPL_SENDCAST_MASSDEATH) { return SPL_SENDCAST; };
-
 	return SPL_RECEIVEINVEST;
 };

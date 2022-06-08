@@ -2,56 +2,56 @@
 // Mobsi-Fokusnamen
 // *****************************************************************************************
 
-CONST STRING MOBNAME_BACKPACK_1 = "";
-CONST STRING MOBNAME_CRATE = "Box";
-CONST STRING MOBNAME_CHEST = "Chest";
-CONST STRING MOBNAME_BED = "Bed";
-CONST STRING MOBNAME_DOOR = "Door";
-CONST STRING MOBNAME_CAMP = "";
-CONST STRING MOBNAME_TORCH = "";
-CONST STRING MOBNAME_TORCHHOLDER = "";
-CONST STRING MOBNAME_BARBQ_SCAV = "";
-CONST STRING MOBNAME_BARRELO_OC = "";
-CONST STRING MOBNAME_BENCH = "";
-CONST STRING MOBNAME_ANVIL = "Anvil";
-CONST STRING MOBNAME_BUCKET = "Water Bucket";
-CONST STRING MOBNAME_FORGE = "Smith's Fire";
-CONST STRING MOBNAME_GRINDSTONE = "Grindstone";
-CONST STRING MOBNAME_WHEEL = "Winch";
-CONST STRING MOBNAME_LAB = "";
-CONST STRING MOBNAME_BOOK = "";
-CONST STRING MOBNAME_CHAIR = "";
-CONST STRING MOBNAME_CAULDRON = "Kettle";
-CONST STRING MOBNAME_THRONE = "";
-CONST STRING MOBNAME_PAN = "Pan";
-CONST STRING MOBNAME_REPAIR = "";
-CONST STRING MOBNAME_WATERPIPE = "Water Pipe";
-CONST STRING MOBNAME_LADDER = "Ladder";
-CONST STRING MOBNAME_SWITCH = "Switch";
-CONST STRING MOBNAME_BARONSTHRONE = "";
-CONST STRING MOBNAME_ORE = "Ore Nugget";
-CONST STRING MOBNAME_ROPEWAY = "";
-CONST STRING MOBNAME_STOMPER = "";
-CONST STRING MOBNAME_BELLOW = "Bellows";
-CONST STRING MOBNAME_STONEMILL = "";
-CONST STRING MOBNAME_ORC_MUMMY = "Mummy";
-CONST STRING MOBNAME_PILLAR = "Column";
-CONST STRING MOBNAME_BASKET_RICE = "";
-CONST STRING MOBNAME_DRUM = "";
-CONST STRING MOBNAME_GROUND_SLOT = "n/a";
-CONST STRING MOBNAME_HERB_PSI = "Weed Masher";
-CONST STRING MOBNAME_IDOL = "Figurine";
-CONST STRING MOBNAME_LEAN_WALL = "";
-CONST STRING MOBNAME_ORCDRUM = "";
-CONST STRING MOBNAME_TARGETSTONE = "Target";
-CONST STRING MOBNAME_SHRINE = "Heart Shrine of the Orcs";
-CONST STRING MOBNAME_SWORDSTONE = "Strange Shrine";
+const string MOBNAME_BACKPACK_1 = "";
+const string MOBNAME_CRATE = "Box";
+const string MOBNAME_CHEST = "Chest";
+const string MOBNAME_BED = "Bed";
+const string MOBNAME_DOOR = "Door";
+const string MOBNAME_CAMP = "";
+const string MOBNAME_TORCH = "";
+const string MOBNAME_TORCHHOLDER = "";
+const string MOBNAME_BARBQ_SCAV = "";
+const string MOBNAME_BARRELO_OC = "";
+const string MOBNAME_BENCH = "";
+const string MOBNAME_ANVIL = "Anvil";
+const string MOBNAME_BUCKET = "Water Bucket";
+const string MOBNAME_FORGE = "Smith's Fire";
+const string MOBNAME_GRINDSTONE = "Grindstone";
+const string MOBNAME_WHEEL = "Winch";
+const string MOBNAME_LAB = "";
+const string MOBNAME_BOOK = "";
+const string MOBNAME_CHAIR = "";
+const string MOBNAME_CAULDRON = "Kettle";
+const string MOBNAME_THRONE = "";
+const string MOBNAME_PAN = "Pan";
+const string MOBNAME_REPAIR = "";
+const string MOBNAME_WATERPIPE = "Water Pipe";
+const string MOBNAME_LADDER = "Ladder";
+const string MOBNAME_SWITCH = "Switch";
+const string MOBNAME_BARONSTHRONE = "";
+const string MOBNAME_ORE = "Ore Nugget";
+const string MOBNAME_ROPEWAY = "";
+const string MOBNAME_STOMPER = "";
+const string MOBNAME_BELLOW = "Bellows";
+const string MOBNAME_STONEMILL = "";
+const string MOBNAME_ORC_MUMMY = "Mummy";
+const string MOBNAME_PILLAR = "Column";
+const string MOBNAME_BASKET_RICE = "";
+const string MOBNAME_DRUM = "";
+const string MOBNAME_GROUND_SLOT = "n/a";
+const string MOBNAME_HERB_PSI = "Weed Masher";
+const string MOBNAME_IDOL = "Figurine";
+const string MOBNAME_LEAN_WALL = "";
+const string MOBNAME_ORCDRUM = "";
+const string MOBNAME_TARGETSTONE = "Target";
+const string MOBNAME_SHRINE = "Heart Shrine of the Orcs";
+const string MOBNAME_SWORDSTONE = "Strange Shrine";
 
 // *****************************************************************************************
 // Gildennamen
 // *****************************************************************************************
 
-CONST STRING TXT_GUILDS [GIL_MAX] = {
+const string TXT_GUILDS [GIL_MAX] = {
 // - Charakterblatt (Text der Spielergilde)
 // - Debuganzeige (Taste "G")
 	"(none)",
@@ -123,14 +123,14 @@ const string TXT_ATTRIBUTE_DESC [ATR_INDEX_MAX] = {
 
 Die Reihenfolge der jeweiligen Texte könnt ihr der Konstantenreihenfolge aus
 der "constants.d" entnehmen, die hier auch mit dranhaengt und fuer
-fehlerfreies (Test-)parsen benötigt wird.
+fehlerfreies(Test - ) parsen benötigt wird.
 */
 
 // *****************************************************************************************
 // Zauberspruchnamen
 // *****************************************************************************************
 
-CONST STRING TXT_SPELLS [MAX_SPELL] = {
+const string TXT_SPELLS [MAX_SPELL] = {
 	"Light", // SPL_LIGHT = 0;
 	"Fireball", // SPL_FIREBALL = 1;
 	"n/a", // SPL_TRANSFORM = 2;
@@ -190,10 +190,10 @@ CONST STRING TXT_SPELLS [MAX_SPELL] = {
 	"New3", // SPL_NEW3 = 19;
 	"New4", // SPL_NEW4 = 20;
 	"New5" // SPL_NEW5 = 21;
- };
+};
 
 /* SN: wird laut Bert nicht mehr benötigt. Ich kommentier es erst mal eine Version lang aus
-CONST STRING TXT_SPELLS_DESC [MAX_SPELL] = {
+const string TXT_SPELLS_DESC [MAX_SPELL] = {
 // FIXME: wo werden die benutzt?
 	"LichtDescr", // SPL_LIGHT = 0;
 	"FeuerballDescr", // SPL_FIREBALL = 1;
@@ -255,13 +255,14 @@ CONST STRING TXT_SPELLS_DESC [MAX_SPELL] = {
 	"New4Descr", // SPL_NEW4 = 20;
 	"New5Descr" // SPL_NEW5 = 21;
 };
+
 */
 
 // *****************************************************************************************
 // Kampf-Talente
 // *****************************************************************************************
 
-CONST STRING TXT_TALENTS [NPC_TALENT_MAX] =
+const string TXT_TALENTS [NPC_TALENT_MAX] =
 {
 	"",
 	"One-handed Sword",
@@ -278,7 +279,7 @@ CONST STRING TXT_TALENTS [NPC_TALENT_MAX] =
 };
 
 /* SN: wird laut Bert nicht mehr benötigt. Ich kommentier es erst mal eine Version lang aus
-CONST STRING TXT_TALENTS_DESC [NPC_TALENT_MAX] =
+const string TXT_TALENTS_DESC [NPC_TALENT_MAX] =
 // FIXME: wo werden die benutzt?
 {
 	"",
@@ -294,29 +295,30 @@ CONST STRING TXT_TALENTS_DESC [NPC_TALENT_MAX] =
 	"NPC_TALENT_FIREMASTER",
 	"NPC_TALENT_ACROBAT"
 };
+
 */
 
-CONST STRING TXT_TALENTS_SKILLS [NPC_TALENT_MAX] =
+const string TXT_TALENTS_SKILLS [NPC_TALENT_MAX] =
 {
 	"",
 	"unskilled|trained|master", //NPC_TALENT_1H
-	"unskilled|trained|master",                       //NPC_TALENT_2H
-	"unskilled|trained|master",                       //NPC_TALENT_BOW
-	"unskilled|trained|master",                       //NPC_TALENT_CROSSBOW
-	"unskilled|trained|master",                       //NPC_TALENT_PICKLOCK
-	"unskilled|trained|master",                       //NPC_TALENT_PICKPOCKET
+	"unskilled|trained|master", //NPC_TALENT_2H
+	"unskilled|trained|master", //NPC_TALENT_BOW
+	"unskilled|trained|master", //NPC_TALENT_CROSSBOW
+	"unskilled|trained|master", //NPC_TALENT_PICKLOCK
+	"unskilled|trained|master", //NPC_TALENT_PICKPOCKET
 	"no|Circle 1|Circle 2|Circle 3|Circle 4|Circle 5|Circle 6", //NPC_TALENT_MAGE
-	"No|Yes",                                              //NPC_TALENT_SNEAK
-	"|",                                              //NPC_TALENT_REGENERATE
-	"|",                                              //NPC_TALENT_FIREMASTER
-	"No|Yes"                                               //NPC_TALENT_ACROBAT
+	"No|Yes", //NPC_TALENT_SNEAK
+	"|", //NPC_TALENT_REGENERATE
+	"|", //NPC_TALENT_FIREMASTER
+	"No|Yes" //NPC_TALENT_ACROBAT
 };
 
 // *****************************************************************************************
 // Inventory-Kategorien
 // *****************************************************************************************
 
-CONST STRING TXT_INV_CAT [INV_CAT_MAX] = {
+const string TXT_INV_CAT [INV_CAT_MAX] = {
 	"",
 	"Weapons",
 	"Armor",
@@ -332,22 +334,22 @@ CONST STRING TXT_INV_CAT [INV_CAT_MAX] = {
 // Fokusnamen der Ambient-NSCs
 // ***************************************************************************************
 
-CONST STRING NAME_Buddler = "Digger";
-CONST STRING NAME_Schatten = "Shadow";
-CONST STRING NAME_ConvoiTraeger = "Convoy Carrier";
-CONST STRING NAME_ConvoiWache = "Convoy Guard";
-CONST STRING NAME_Torwache = "Gate Guard";
-CONST STRING NAME_Brueckenwache = "Bridge Guard";
-CONST STRING NAME_Gardist = "Guard";
-CONST STRING NAME_Bauer = "Peasant";
-CONST STRING NAME_Schlaeger = "Thug";
-CONST STRING NAME_Schuerfer = "Scraper";
-CONST STRING NAME_Organisator = "Rogue";
-CONST STRING NAME_Soeldner = "Mercenary";
-CONST STRING NAME_Novize = "Novice";
-CONST STRING NAME_Templer = "Templar";
-CONST STRING NAME_Raeuber = "Thug";
-CONST STRING NAME_Tuersteher = "Bouncer";
+const string NAME_Buddler = "Digger";
+const string NAME_Schatten = "Shadow";
+const string NAME_ConvoiTraeger = "Convoy Carrier";
+const string NAME_ConvoiWache = "Convoy Guard";
+const string NAME_Torwache = "Gate Guard";
+const string NAME_Brueckenwache = "Bridge Guard";
+const string NAME_Gardist = "Guard";
+const string NAME_Bauer = "Peasant";
+const string NAME_Schlaeger = "Thug";
+const string NAME_Schuerfer = "Scraper";
+const string NAME_Organisator = "Rogue";
+const string NAME_Soeldner = "Mercenary";
+const string NAME_Novize = "Novice";
+const string NAME_Templer = "Templar";
+const string NAME_Raeuber = "Thug";
+const string NAME_Tuersteher = "Bouncer";
 
 const string NAME_MadNovice = "Obsessed Novice";
 const string NAME_MadTemplar = "Fanatic Templar";
@@ -357,8 +359,8 @@ const string NAME_MadTemplar2 = "Apocalyptic Templar";
 // DIALOG OPTIONEN
 // *************************************************************
 
-CONST STRING DIALOG_ENDE = "END";
-CONST STRING DIALOG_BACK = "BACK";
+const string DIALOG_ENDE = "END";
+const string DIALOG_BACK = "BACK";
 const string DIALOG_TRADE = "(Trade)";
 
 // *************************************************************
@@ -436,25 +438,25 @@ const string NAME_NewLogEntry = "New Journal Entry";
 //***************************************************************************************
 // Stringkonstanten aus den G_FUNCTIONS
 //***************************************************************************************
-const string _STR_INVALID = "(Unknown)-" ;
+const string _STR_INVALID = "(Unknown)-";
 
-const string _STR_ATTRIBUTE_HITPOINTS = "Life" ;
-const string _STR_ATTRIBUTE_HITPOINTS_MAX = "Maximum Life" ;
-const string _STR_ATTRIBUTE_MANA = "Mana" ;
-const string _STR_ATTRIBUTE_MANA_MAX = "Maximum Mana" ;
-const string _STR_ATTRIBUTE_STRENGTH = "Strength" ;
-const string _STR_ATTRIBUTE_DEXTERITY = "Dexterity" ;
-const string _STR_ATTRIBUTE_MAGIC_CIRCLE = "Magic Spell" ;
+const string _STR_ATTRIBUTE_HITPOINTS = "Life";
+const string _STR_ATTRIBUTE_HITPOINTS_MAX = "Maximum Life";
+const string _STR_ATTRIBUTE_MANA = "Mana";
+const string _STR_ATTRIBUTE_MANA_MAX = "Maximum Mana";
+const string _STR_ATTRIBUTE_STRENGTH = "Strength";
+const string _STR_ATTRIBUTE_DEXTERITY = "Dexterity";
+const string _STR_ATTRIBUTE_MAGIC_CIRCLE = "Magic Spell";
 
 // Bildschirmausgabe, falls der Spieler eine Waffe anlegen will, für die ihm Attributspunkte fehlen
-const string _STR_CANNOTUSE_PRE_PLAYER = "You're short of " ;
-const string _STR_CANNOTUSE_POINTS = " points" ;
-const string _STR_CANNOTUSE_LEVELS     = " levels" ;
-const string _STR_CANNOTUSE_POST = " to use this item." ;
+const string _STR_CANNOTUSE_PRE_PLAYER = "You're short of ";
+const string _STR_CANNOTUSE_POINTS = " points";
+const string _STR_CANNOTUSE_LEVELS = " levels";
+const string _STR_CANNOTUSE_POST = " to use this item.";
 
 // Bildschirmausgabe, falls ein NSC zu wenig Attributspunkte, für das Anlegen von Waffen hat (nur Debugzwecke!)
-const string _STR_CANNOTUSE_PRE_NPC = " (" ;
-const string _STR_CANNOTUSE_POST_NPC = ") are missing " ;
+const string _STR_CANNOTUSE_PRE_NPC = " (";
+const string _STR_CANNOTUSE_POST_NPC = ") are missing ";
 
 // Bidschrimausgabe zum Thema Schloß öffnen/knacken
 const string _STR_MESSAGE_INTERACT_NO_KEY = "No picklock or key.";
@@ -464,20 +466,20 @@ const string _STR_MESSAGE_PICKLOCK_FAILURE = "Shit... and all over again.";
 const string _STR_MESSAGE_PICKLOCK_BROKEN = "The picklock has broken.";
 
 // Bidschrimausgabe zum Thema Hebel/Winden
-const string _STR_MESSAGE_OCLEVER_STUCKS = "The lever doesn't move at all." ;
-const string _STR_MESSAGE_OCLEVER_MOVES = "The statuette moves the lever." ;
-const string _STR_MESSAGE_WHEEL_STUCKS = "The winch is jammed." ;
+const string _STR_MESSAGE_OCLEVER_STUCKS = "The lever doesn't move at all.";
+const string _STR_MESSAGE_OCLEVER_MOVES = "The statuette moves the lever.";
+const string _STR_MESSAGE_WHEEL_STUCKS = "The winch is jammed.";
 
 // Bidschrimausgabe beim storybedingten Transfer von Items
-const string _STR_MESSAGE_ITEM_GIVEN = " Item given!" ; //SPACE davor wichtig, weil Trennzeichen
-const string _STR_MESSAGE_ITEMS_GIVEN = " Items given!" ;
-const string _STR_MESSAGE_ORE_GIVEN = " Ore given!" ;
-const string _STR_MESSAGE_ITEM_TAKEN = " Item received!" ;
-const string _STR_MESSAGE_ITEMS_TAKEN = " Items received!" ;
-const string _STR_MESSAGE_ORE_TAKEN = " Ore received!" ;
+const string _STR_MESSAGE_ITEM_GIVEN = " Item given!"; //SPACE davor wichtig, weil Trennzeichen
+const string _STR_MESSAGE_ITEMS_GIVEN = " Items given!";
+const string _STR_MESSAGE_ORE_GIVEN = " Ore given!";
+const string _STR_MESSAGE_ITEM_TAKEN = " Item received!";
+const string _STR_MESSAGE_ITEMS_TAKEN = " Items received!";
+const string _STR_MESSAGE_ORE_TAKEN = " Ore received!";
 
 // Bidschrimausgabe fürs Tausch-Fenster
-const string _STR_MESSAGE_TRADE_FAILURE = "The value of your goods is not high enough." ;
+const string _STR_MESSAGE_TRADE_FAILURE = "The value of your goods is not high enough.";
 
 // GILDENAUFNAHMEBEDINGUNG (für die Funktion "B_PrintGuildCondition()" )
 const string _STR_MESSAGE_Joincamp = "Condition for admission: Level ";
@@ -599,6 +601,6 @@ const string MENU_TEXT_NEEDS_RESTART = "Some readjustments will only be activate
 
 //	TRADE MANAGER
 //
-const string STR_INFO_TRADE_ACCEPT = "Accept" ;
-const string STR_INFO_TRADE_RESET = "Refuse" ;
-const string STR_INFO_TRADE_EXIT = "BACK" ;
+const string STR_INFO_TRADE_ACCEPT = "Accept";
+const string STR_INFO_TRADE_RESET = "Refuse";
+const string STR_INFO_TRADE_EXIT = "BACK";

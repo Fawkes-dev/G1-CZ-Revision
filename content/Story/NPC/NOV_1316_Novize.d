@@ -1,8 +1,8 @@
-instance NOV_1316_Novize (Npc_Default)
+instance NOV_1316_Novize(Npc_Default)
 {
 	//-------- primary data --------
 	name = Name_Novize;
-	Npctype  = Npctype_Ambient;
+	Npctype = Npctype_Ambient;
 	guild = GIL_NOV;
 	level = 3;
 
@@ -19,13 +19,13 @@ instance NOV_1316_Novize (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Relaxed.mds");
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Relaxed.mds");
 	//				body mesh, head mesh, hairmesh, face-tex, hair-tex, skin
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 1, 1 ,"Hum_Head_Bald", 32 ,  1, NOV_ARMOR_L);
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 1, 1, "Hum_Head_Bald", 32, 1, NOV_ARMOR_L);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,-1);
+	Mdl_SetModelFatness(self, -1);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
@@ -33,7 +33,7 @@ instance NOV_1316_Novize (Npc_Default)
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1H_Hatchet_01);
+	EquipItem(self, ItMw_1H_Hatchet_01);
 	//CreateInvItem(self,ItFoSoup);
 	//CreateInvItem(self,ItMiJoint);
 
@@ -42,12 +42,11 @@ instance NOV_1316_Novize (Npc_Default)
 	daily_routine = Rtn_start_1316;
 
 	//------------ //MISSIONs-------------------
-
 };
 
 //TODO: do we want to use a single function for all NPCs (at the moment each NPC will have unique routine to be less intrusive)
 //'Universal' smithing routine - full on work for 1 hour
-func void NPC_SmithingRoutine_1316 (var int startHour, var int startMin, var string wp) {
+func void NPC_SmithingRoutine_1316(var int startHour, var int startMin, var string wp) {
 	TA_Smith_Fire(startHour, startMin + 00, startHour + 0, startMin + 10, wp);
 	TA_Smith_Anvil(startHour, startMin + 10, startHour + 0, startMin + 20, wp);
 	TA_Smith_Fire(startHour, startMin + 20, startHour + 0, startMin + 30, wp);
@@ -61,7 +60,7 @@ func void Rtn_start_1316()
 	//TODO: there is nothing to sit on next to this NPC anyway ... so TA_SitAround for **5** minutes does not make any sense
 	//NPC is working 24h a day ...
 	//There is an unused hut PSI_26_HUT_IN - where NPC could stay
-	
+
 	//[BugFix]: overlapping daily routines
 	//TA_Smith_Fire (08,00,08,10,"PSI_SMITH_01");
 	//TA_Smith_Anvil (08,10,08,20,"PSI_SMITH_01");
@@ -256,30 +255,30 @@ func void Rtn_start_1316()
 	//TA_SitAround (07,55,08,00,"PSI_SMITH_01");
 
 	//Use 'universal' smithing routine - full on smithing for 1 hour
-	NPC_SmithingRoutine_1316 (08, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (09, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (10, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (11, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (12, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (13, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (14, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (15, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (16, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (17, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (18, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (19, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (20, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (21, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (22, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (23, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (00, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (01, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (02, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (03, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (04, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (05, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (06, 00, "PSI_SMITH_01");
-	NPC_SmithingRoutine_1316 (07, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(08, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(09, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(10, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(11, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(12, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(13, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(14, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(15, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(16, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(17, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(18, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(19, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(20, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(21, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(22, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(23, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(00, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(01, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(02, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(03, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(04, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(05, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(06, 00, "PSI_SMITH_01");
+	NPC_SmithingRoutine_1316(07, 00, "PSI_SMITH_01");
 };
 
 func void Rtn_PrepareRitual_1316()
@@ -297,4 +296,3 @@ func void Rtn_FMTaken_1316()
 func void Rtn_OrcAssault_1316()
 {
 };
-

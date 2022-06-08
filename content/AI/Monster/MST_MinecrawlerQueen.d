@@ -1,8 +1,8 @@
 /*************************************************************************
-** Minecrawler QUEEN Prototype **
+** Minecrawler QUEEN prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_MinecrawlerQueen(C_Npc)
+prototype Mst_Default_MinecrawlerQueen(C_Npc)
 {
 	name = "Minecrawler Queen";
 	guild = GIL_MINECRAWLER;
@@ -49,19 +49,20 @@ PROTOTYPE Mst_Default_MinecrawlerQueen(C_Npc)
 //---------------------------------------------------
 	start_aistate = ZS_MM_AllScheduler;
 };
+
 //---------------------------------------------------
 func void Set_MinecrawlerQueen_Visuals()
 {
-	Mdl_SetVisual(self,"CrwQueen.mds");
+	Mdl_SetVisual(self, "CrwQueen.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"CrQ_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "CrQ_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** MinecrawlerQueen    **
+** MinecrawlerQueen **
 *************************************************************************/
 
-instance MinecrawlerQueen (Mst_Default_MinecrawlerQueen)
+instance MinecrawlerQueen(Mst_Default_MinecrawlerQueen)
 {
 	Set_MinecrawlerQueen_Visuals();
 	Npc_SetToFistMode(self);

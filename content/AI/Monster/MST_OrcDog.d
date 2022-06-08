@@ -1,8 +1,8 @@
 /*************************************************************************
-** OrcDog Prototype **
+** OrcDog prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_OrcDog(C_Npc)
+prototype Mst_Default_OrcDog(C_Npc)
 {
 	name = "Orc Dog";
 	guild = GIL_ORCDOG;
@@ -51,19 +51,20 @@ PROTOTYPE Mst_Default_OrcDog(C_Npc)
 
 	aivar[AIV_MM_RestStart] = OnlyRoutine;
 };
+
 //-------------------------------------------------------------
 func void Set_OrcDog_Visuals()
 {
-	Mdl_SetVisual(self,"Wolf.mds");
+	Mdl_SetVisual(self, "Wolf.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Dog_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Dog_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** OrcDog    **
+** OrcDog **
 *************************************************************************/
 
-instance OrcDog (Mst_Default_OrcDog)
+instance OrcDog(Mst_Default_OrcDog)
 {
 	Set_OrcDog_Visuals();
 	Npc_SetToFistMode(self);

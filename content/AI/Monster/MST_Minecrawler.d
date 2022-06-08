@@ -1,8 +1,8 @@
 /*************************************************************************
-** Minecrawler Prototype **
+** Minecrawler prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_Minecrawler(C_Npc)
+prototype Mst_Default_Minecrawler(C_Npc)
 {
 	name = "Minecrawler";
 	guild = GIL_MINECRAWLER;
@@ -51,21 +51,21 @@ PROTOTYPE Mst_Default_Minecrawler(C_Npc)
 
 	aivar[AIV_MM_WuselStart] = OnlyRoutine;
 };
+
 //---------------------------------------------------
 func void Set_Minecrawler_Visuals()
 {
-	Mdl_SetVisual(self,"Crawler.mds");
+	Mdl_SetVisual(self, "Crawler.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Crw_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Crw_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Minecrawler    **
+** Minecrawler **
 *************************************************************************/
 
-instance Minecrawler (Mst_Default_Minecrawler)
+instance Minecrawler(Mst_Default_Minecrawler)
 {
 	Set_Minecrawler_Visuals();
 	Npc_SetToFistMode(self);
 };
-

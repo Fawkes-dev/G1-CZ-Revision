@@ -1,57 +1,59 @@
 func void B_SitUp()
 {
-	if (self.attribute[ATR_HITPOINTS] <20)
+	if (self.attribute[ATR_HITPOINTS] < 20)
 	{
-		AI_PlayAniBS(self,"T_GUARDSLEEP_2_GUARDSIT",BS_SIT);
-		AI_Wait(self,1);
+		AI_PlayAniBS(self, "T_GUARDSLEEP_2_GUARDSIT", BS_SIT);
+		AI_Wait(self, 1);
 	};
-	AI_StartState(self,ZS_Talk,1,"");
+
+	AI_StartState(self, ZS_Talk, 1, "");
 };
 
 func void B_AwakeSit()
 {
-	AI_PlayAniBS(self,"T_GUARDSIT_2_STAND", BS_STAND);
-	AI_Wait(self,1);
-	if (Npc_GetDistToNpc(other,self) < 120)
+	AI_PlayAniBS(self, "T_GUARDSIT_2_STAND", BS_STAND);
+	AI_Wait(self, 1);
+	if (Npc_GetDistToNpc(other, self) < 120)
 	{
-		AI_Dodge (self);
+		AI_Dodge(self);
 	};
-	AI_StartState(self,ZS_Talk,1,"");
+
+	AI_StartState(self, ZS_Talk, 1, "");
 };
 
 func void ZS_WaitForRescue()
 {
-	Npc_PercEnable  (self,PERC_ASSESSMAGIC , B_AssessMagic);
-	Npc_PercEnable (self,PERC_ASSESSTALK , B_SitUp);
+	Npc_PercEnable(self, PERC_ASSESSMAGIC, B_AssessMagic);
+	Npc_PercEnable(self, PERC_ASSESSTALK, B_SitUp);
 
-	PrintDebugNpc(PD_ZS_FRAME,"WaitForRescue");
+	PrintDebugNpc(PD_ZS_FRAME, "WaitForRescue");
 
-	if ( !(C_BodystateContains(self,BS_SIT)))
+	if (!(C_BodystateContains(self, BS_SIT)))
 	{
-		PrintDebugNpc(PD_ZS_FRAME,"ZS_WaitForRescue: sitzt nicht....");
+		PrintDebugNpc(PD_ZS_FRAME, "ZS_WaitForRescue: sitzt nicht....");
 		Npc_ClearAIQueue(self);
-		AI_SetWalkmode(self,NPC_WALK); // Walkmode für den Zustand
-		AI_GotoWP(self,self.wp); // Gehe zum Tagesablaufstart
-		AI_AlignToWP (self);
-		AI_PlayAniBS(self,"T_STAND_2_GUARDSIT", BS_SIT);
-
+		AI_SetWalkMode(self, NPC_WALK); // Walkmode für den Zustand
+		AI_GotoWP(self, self.wp); // Gehe zum Tagesablaufstart
+		AI_AlignToWP(self);
+		AI_PlayAniBS(self, "T_STAND_2_GUARDSIT", BS_SIT);
 	};
-	if (self.attribute[ATR_HITPOINTS] <20)
+
+	if (self.attribute[ATR_HITPOINTS] < 20)
 	{
-		AI_PlayAniBS(self,"T_GUARDSIT_2_GUARDSLEEP",BS_SIT);
+		AI_PlayAniBS(self, "T_GUARDSIT_2_GUARDSLEEP", BS_SIT);
 	};
-
 };
+
 func void ZS_WaitForRescue_Loop()
 {
-	PrintDebugNpc( PD_ZS_FRAME, "ZS_WaitForRescue_Loop");
+	PrintDebugNpc(PD_ZS_FRAME, "ZS_WaitForRescue_Loop");
 };
 
 func void ZS_WaitForRescue_End()
 {
-	PrintDebugNpc(PD_ZS_FRAME,"ZS_WaitForRescue_End");
+	PrintDebugNpc(PD_ZS_FRAME, "ZS_WaitForRescue_End");
 	Npc_ClearAIQueue(self);
-	AI_PlayAniBS(self,"T_GUARDSIT_2_STAND", BS_STAND);
+	AI_PlayAniBS(self, "T_GUARDSIT_2_STAND", BS_STAND);
 };
 
 instance FreemineOrc(C_NPC)
@@ -63,9 +65,9 @@ instance FreemineOrc(C_NPC)
 	level = 3;
 	flags = NPC_FLAG_IMMORTAL;
 	voice = 17;
-	ID   = 2101;
+	ID = 2101;
 
-		//--------- abilities --------
+	//--------- abilities --------
 	attribute[ATR_STRENGTH] = 90;
 	attribute[ATR_DEXTERITY] = 20;
 
@@ -81,8 +83,8 @@ instance FreemineOrc(C_NPC)
 //	talents = 0;
 
 	//-------- visuals --------
-	Mdl_SetVisual(self,"orc.mds");
-	Mdl_SetVisualBody(self,"Orc_BodySlave",DEFAULT,DEFAULT,"Orc_HeadSlave", DEFAULT,  DEFAULT,-1);
+	Mdl_SetVisual(self, "orc.mds");
+	Mdl_SetVisualBody(self, "Orc_BodySlave", DEFAULT, DEFAULT, "Orc_HeadSlave", DEFAULT, DEFAULT, -1);
 
 	//-------- ai --------
 //	start_aistate = ZS_Orc_Stomper;//SN: wegen Überarbeitung Ork-AI entfernt
@@ -91,11 +93,10 @@ instance FreemineOrc(C_NPC)
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_FMstart_2101;
-
 };
 
 func void Rtn_FMstart_2101()
 {
-	TA_WaitForRescue ( 23,00, 12,00, "FM_RESCUE");
-	TA_WaitForRescue ( 12,00, 23,00, "FM_RESCUE");
+	TA_WaitForRescue(23, 00, 12, 00, "FM_RESCUE");
+	TA_WaitForRescue(12, 00, 23, 00, "FM_RESCUE");
 };

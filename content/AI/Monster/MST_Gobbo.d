@@ -1,8 +1,8 @@
 /*************************************************************************
-** GreenGobbo Prototype **
+** GreenGobbo prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_GreenGobbo(C_NPC)
+prototype Mst_Default_GreenGobbo(C_NPC)
 {
 	name = "Goblin";
 	guild = GIL_GOBBO;
@@ -51,36 +51,36 @@ PROTOTYPE Mst_Default_GreenGobbo(C_NPC)
 
 	aivar[AIV_MM_RestStart] = OnlyRoutine;
 };
+
 //------------------------------------------------------------------
 func void Set_GreenGobbo_Visuals()
 {
-	Mdl_SetVisual(self,"Gobbo.mds");
+	Mdl_SetVisual(self, "Gobbo.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Gob_Body", 0, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Gob_Body", 0, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
 ** Green Gobbo Club **
 *************************************************************************/
 
-instance GreenGobboClub (Mst_Default_GreenGobbo)
+instance GreenGobboClub(Mst_Default_GreenGobbo)
 {
 	Set_GreenGobbo_Visuals();
 
 	fight_tactic = FAI_MONSTER_COWARD;
 
-	Npc_SetToFightMode (self,ItMw_1h_Club_01); //+5
-	attribute[ATR_STRENGTH] = attribute [ATR_STRENGTH] + 5;// da technisch im Faustkampf
+	Npc_SetToFightMode(self, ItMw_1h_Club_01); //+5
+	attribute[ATR_STRENGTH] = attribute [ATR_STRENGTH] + 5; // da technisch im Faustkampf
 };
 
 /*************************************************************************
 ** Green Gobbo Sword **
 *************************************************************************/
 
-instance GreenGobboSword (Mst_Default_GreenGobbo)
+instance GreenGobboSword(Mst_Default_GreenGobbo)
 {
 	Set_GreenGobbo_Visuals();
-	Npc_SetToFightMode (self,ItMw_1H_Sword_Old_01); //+10
+	Npc_SetToFightMode(self, ItMw_1H_Sword_Old_01); //+10
 	attribute[ATR_STRENGTH] = attribute [ATR_STRENGTH] + 10; // da technisch im Faustkampf
 };
-

@@ -1,8 +1,8 @@
 /*************************************************************************
-** Bloodhound Prototype (Anims wie Shadowbeast) **
+** Bloodhound prototype(Anims wie Shadowbeast) **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_Bloodhound(C_Npc)
+prototype Mst_Default_Bloodhound(C_Npc)
 {
 	name = "Bloodhound";
 	guild = GIL_SHADOWBEAST;
@@ -52,19 +52,20 @@ PROTOTYPE Mst_Default_Bloodhound(C_Npc)
 
 	aivar[AIV_MM_RoamStart] = OnlyRoutine;
 };
+
 //-------------------------------------------------------------
 func void Set_Bloodhound_Visuals()
 {
-	Mdl_SetVisual(self,"Shadow.mds");
+	Mdl_SetVisual(self, "Shadow.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Bhd_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Bhd_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Bloodhound    **
+** Bloodhound **
 *************************************************************************/
 
-instance Bloodhound (Mst_Default_Bloodhound)
+instance Bloodhound(Mst_Default_Bloodhound)
 {
 	Set_Bloodhound_Visuals();
 	Npc_SetToFistMode(self);

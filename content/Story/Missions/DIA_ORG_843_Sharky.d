@@ -22,8 +22,8 @@ func void Org_843_Sharky_Exit_Info()
 };
 
 /*------------------------------------------------------------------------
-						HANDEL
-------------------------------------------------------------------------*/
+HANDEL
+------------------------------------------------------------------------ */
 
 instance Org_843_Sharky_Fisk(C_INFO)
 {
@@ -53,21 +53,21 @@ func void Org_843_Sharky_Fisk_Info()
 {
 //	AI_Output(other,self,"Org_843_Sharky_Fisk_Info_15_00"); //Fisk from the Old Camp is looking for a new trading partner.
 //	AI_Output(other,self,"Org_843_Sharky_Fisk_Info_15_00"); //Fisk aus dem Alten Lager ist auf der Suche nach einem neuen Handelspartner.
-	AI_Output(other,self,"Org_843_Sharky_Fisk_Info_15_00"); //Fisk ze Starého tábora hledá nového obchodního partnera.
+	AI_Output(other, self, "Org_843_Sharky_Fisk_Info_15_00"); //Fisk ze Starého tábora hledá nového obchodního partnera.
 //	AI_Output(self,other,"Org_843_Sharky_Fisk_Info_10_01"); //And why are you telling me about it?
 //	AI_Output(self,other,"Org_843_Sharky_Fisk_Info_10_01"); //Und warum erzählst du mir das?
-	AI_Output(self,other,"Org_843_Sharky_Fisk_Info_10_01"); //A proč mi to říkáš?
+	AI_Output(self, other, "Org_843_Sharky_Fisk_Info_10_01"); //A proč mi to říkáš?
 //	AI_Output(other,self,"Org_843_Sharky_Fisk_Info_15_02"); //I thought you might be interested in earning some ore.
 //	AI_Output(other,self,"Org_843_Sharky_Fisk_Info_15_02"); //Ich dachte, du hättest vielleicht Lust, ein bisschen Erz zu verdienen.
-	AI_Output(other,self,"Org_843_Sharky_Fisk_Info_15_02"); //Myslel jsem si, že bys mohl mít zájem vydělat si nějakou rudu.
+	AI_Output(other, self, "Org_843_Sharky_Fisk_Info_15_02"); //Myslel jsem si, že bys mohl mít zájem vydělat si nějakou rudu.
 //	AI_Output(self,other,"Org_843_Sharky_Fisk_Info_10_03"); //Why not... tell Fisk he can count on me in the next few days.
 //	AI_Output(self,other,"Org_843_Sharky_Fisk_Info_10_03"); //Warum nicht ... Sag Fisk, er kann in den nächsten Tagen mit mir rechnen.
-	AI_Output(self,other,"Org_843_Sharky_Fisk_Info_10_03"); //Proč ne... řekni Fiskovi, že se mnou může během pár dní počítat.
+	AI_Output(self, other, "Org_843_Sharky_Fisk_Info_10_03"); //Proč ne... řekni Fiskovi, že se mnou může během pár dní počítat.
 };
 
 /*------------------------------------------------------------------------
-						HANDEL
-------------------------------------------------------------------------*/
+HANDEL
+------------------------------------------------------------------------ */
 
 instance Org_843_Sharky_TRADE(C_INFO)
 {
@@ -84,7 +84,7 @@ instance Org_843_Sharky_TRADE(C_INFO)
 
 func int Org_843_Sharky_TRADE_Condition()
 {
-	if (Npc_KnowsInfo(hero,Org_843_Sharky_GREET))
+	if (Npc_KnowsInfo(hero, Org_843_Sharky_GREET))
 	{
 		return 1;
 	};
@@ -96,12 +96,12 @@ func void Org_843_Sharky_TRADE_Info()
 {
 //	AI_Output(other,self,"Org_843_Sharky_TRADE_Info_15_01"); //I need a few things...
 //	AI_Output(other,self,"Org_843_Sharky_TRADE_Info_15_01"); //Ich könnte ein paar Sachen gebrauchen ...
-	AI_Output(other,self,"Org_843_Sharky_TRADE_Info_15_01"); //Potřebuji pár věcí...
+	AI_Output(other, self, "Org_843_Sharky_TRADE_Info_15_01"); //Potřebuji pár věcí...
 };
 
 /*------------------------------------------------------------------------
-							TRADE BEGRÜßUNG
-------------------------------------------------------------------------*/
+TRADE BEGRÜßUNG
+------------------------------------------------------------------------ */
 
 instance Org_843_Sharky_GREET(C_INFO)
 {
@@ -124,12 +124,12 @@ func void Org_843_Sharky_GREET_Info()
 {
 //	AI_Output(other,self,"Org_843_Sharky_GREET_Info_15_01"); //Hey, how's it going?
 //	AI_Output(other,self,"Org_843_Sharky_GREET_Info_15_01"); //Hey, wie sieht's aus?
-	AI_Output(other,self,"Org_843_Sharky_GREET_Info_15_01"); //Hej, jak to jde?
+	AI_Output(other, self, "Org_843_Sharky_GREET_Info_15_01"); //Hej, jak to jde?
 //	AI_Output(self,other,"Org_843_Sharky_GREET_Info_10_02"); //Do you want to buy something?
 //	AI_Output(self,other,"Org_843_Sharky_GREET_Info_10_02"); //Willst du was kaufen?
-	AI_Output(self,other,"Org_843_Sharky_GREET_Info_10_02"); //Chceš si něco koupit?
-	Log_CreateTopic(GE_TraderNC,LOG_NOTE);
+	AI_Output(self, other, "Org_843_Sharky_GREET_Info_10_02"); //Chceš si něco koupit?
+	Log_CreateTopic(GE_TraderNC, LOG_NOTE);
 //	B_LogEntry(GE_TraderNC,"Sharky, the rogue, deals with WEAPONS and other goods. He is usually somewhere in the New Camp.");
 //	B_LogEntry(GE_TraderNC,"Sharky der Bandit, handelt mit WAFFEN und anderen Waren. Er hält sich meistens irgendwo im Neuen Lager auf.");
-	B_LogEntry(GE_TraderNC,"Bandita Sharky obchoduje se ZBRANĚMI a jiným zbožím. Obvykle je k nalezení v Novém táboře.");
+	B_LogEntry(GE_TraderNC, "Bandita Sharky obchoduje se ZBRANĚMI a jiným zbožím. Obvykle je k nalezení v Novém táboře.");
 };

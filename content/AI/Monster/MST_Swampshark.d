@@ -1,8 +1,8 @@
 /*************************************************************************
-** Swampshark Prototype **
+** Swampshark prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_Swampshark(C_Npc)
+prototype Mst_Default_Swampshark(C_Npc)
 {
 	name = "Swampshark";
 	guild = GIL_SWAMPSHARK;
@@ -51,19 +51,20 @@ PROTOTYPE Mst_Default_Swampshark(C_Npc)
 
 	aivar[AIV_MM_RoamStart] = OnlyRoutine;
 };
+
 //-------------------------------------------------------------
 func void Set_Swampshark_Visuals()
 {
-	Mdl_SetVisual(self,"Swampshark.mds");
+	Mdl_SetVisual(self, "Swampshark.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Swa_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Swa_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Swampshark    **
+** Swampshark **
 *************************************************************************/
 
-instance Swampshark (Mst_Default_Swampshark)
+instance Swampshark(Mst_Default_Swampshark)
 {
 	Set_Swampshark_Visuals();
 	Npc_SetToFistMode(self);

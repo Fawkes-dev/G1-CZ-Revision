@@ -21,7 +21,7 @@ func int NOV_1320_Novize_CALLSLEEPER_Condition()
 	&& (!Npc_KnowsInfo(hero,Tpl_1430_Templer_CALLSLEEPER))
 	&& (Npc_GetDisttoWP (Kalom,"PSI_TEMPLE_STAIRS_RIGHT") < 300))
 	{
-		return 1;;
+		return 1;
 //		PrintScreen("LET'S GO!", -1,-1,"font_old_20_white.tga",3);
 //		PrintScreen("JETZT IST ALLES KLAR", -1,-1,"font_old_20_white.tga",3);
 		PrintScreen("POJĎME!", -1,-1,"font_old_20_white.tga",3);

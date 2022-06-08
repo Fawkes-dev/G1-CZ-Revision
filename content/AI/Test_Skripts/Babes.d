@@ -5,7 +5,7 @@
 // Color 0: davon gibt's nur eine. PSI-Babe!? ;-)
 ///////////////////////////////////////////////////////
 
-instance Babe (Npc_Default)
+instance Babe(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -16,7 +16,7 @@ instance Babe (Npc_Default)
 
 	voice = 19;
 	id = 110;
-	flags       = NPC_FLAG_IMMORTAL;
+	flags = NPC_FLAG_IMMORTAL;
 
 	//-------- abilities --------
 	attribute[ATR_STRENGTH] = 6;
@@ -28,9 +28,9 @@ instance Babe (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"Babe.MDS");
+	Mdl_SetVisual(self, "Babe.MDS");
 	//							Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Bab_body_Naked0", 0, 0, "Bab_Head_Hair1", 0, DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Bab_body_Naked0", 0, 0, "Bab_Head_Hair1", 0, DEFAULT, -1);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
@@ -41,7 +41,7 @@ instance Babe (Npc_Default)
 // Color 1: drei Körpertexturen, vier Kopftexturen
 ///////////////////////////////////////////////////////
 
-instance Babe2 (Npc_Default)
+instance Babe2(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -52,7 +52,7 @@ instance Babe2 (Npc_Default)
 
 	voice = 19;
 	id = 110;
-	flags       = NPC_FLAG_IMMORTAL;
+	flags = NPC_FLAG_IMMORTAL;
 
 	//-------- abilities --------
 	attribute[ATR_STRENGTH] = 6;
@@ -64,20 +64,20 @@ instance Babe2 (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"Babe.MDS");
+	Mdl_SetVisual(self, "Babe.MDS");
 	//							Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Bab_body_Naked0", 0, 1, "Bab_Head_Hair1", 0, DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Bab_body_Naked0", 0, 1, "Bab_Head_Hair1", 0, DEFAULT, -1);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
-	CreateInvItem(self,BAB_ARMOR_NUDE);
-	CreateInvItem(self,BAB_ARMOR_BIKINI);
+	CreateInvItem(self, BAB_ARMOR_NUDE);
+	CreateInvItem(self, BAB_ARMOR_BIKINI);
 
 	//-------------Daily Routine-------------
 	start_aistate = ZS_Babe_Sweep;
 };
 
-instance Babe3 (Npc_Default)
+instance Babe3(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -88,7 +88,7 @@ instance Babe3 (Npc_Default)
 
 	voice = 19;
 	id = 110;
-	flags       = NPC_FLAG_IMMORTAL;
+	flags = NPC_FLAG_IMMORTAL;
 
 	//-------- abilities --------
 	attribute[ATR_STRENGTH] = 6;
@@ -100,9 +100,9 @@ instance Babe3 (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"Babe.MDS");
+	Mdl_SetVisual(self, "Babe.MDS");
 	//							Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Bab_body_Naked0", 1, 1, "Bab_Head_Hair1", 1, DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Bab_body_Naked0", 1, 1, "Bab_Head_Hair1", 1, DEFAULT, -1);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
@@ -110,7 +110,7 @@ instance Babe3 (Npc_Default)
 	start_aistate = ZS_Babe_SitAround;
 };
 
-instance Babe4 (Npc_Default)
+instance Babe4(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -121,7 +121,7 @@ instance Babe4 (Npc_Default)
 
 	voice = 19;
 	id = 110;
-	flags       = NPC_FLAG_IMMORTAL;
+	flags = NPC_FLAG_IMMORTAL;
 
 	//-------- abilities --------
 	attribute[ATR_STRENGTH] = 6;
@@ -133,9 +133,9 @@ instance Babe4 (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"Babe.MDS");
+	Mdl_SetVisual(self, "Babe.MDS");
 	//							Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Bab_body_Naked0", 2, 1, "Bab_Head_Hair1", 2, DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Bab_body_Naked0", 2, 1, "Bab_Head_Hair1", 2, DEFAULT, -1);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
@@ -143,7 +143,7 @@ instance Babe4 (Npc_Default)
 	start_aistate = ZS_Babe_Dance;
 };
 
-instance Babe5 (Npc_Default)
+instance Babe5(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -154,7 +154,7 @@ instance Babe5 (Npc_Default)
 
 	voice = 19;
 	id = 110;
-	flags       = NPC_FLAG_IMMORTAL;
+	flags = NPC_FLAG_IMMORTAL;
 
 	//-------- abilities --------
 	attribute[ATR_STRENGTH] = 6;
@@ -166,9 +166,9 @@ instance Babe5 (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"Babe.MDS");
+	Mdl_SetVisual(self, "Babe.MDS");
 	//							Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Bab_body_Naked0", 2, 1, "Bab_Head_Hair1", 3, DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Bab_body_Naked0", 2, 1, "Bab_Head_Hair1", 3, DEFAULT, -1);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
@@ -179,7 +179,7 @@ instance Babe5 (Npc_Default)
 // Color 2: nur eine Variante (Charlotte von VIVA 2)
 ///////////////////////////////////////////////////////
 
-instance Babe6 (Npc_Default)
+instance Babe6(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -190,7 +190,7 @@ instance Babe6 (Npc_Default)
 
 	voice = 19;
 	id = 110;
-	flags       = NPC_FLAG_IMMORTAL;
+	flags = NPC_FLAG_IMMORTAL;
 
 	//-------- abilities --------
 	attribute[ATR_STRENGTH] = 6;
@@ -202,9 +202,9 @@ instance Babe6 (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"Babe.MDS");
+	Mdl_SetVisual(self, "Babe.MDS");
 	//							Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Bab_body_Naked0", 0, 2, "Bab_Head_Hair1", 0, DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Bab_body_Naked0", 0, 2, "Bab_Head_Hair1", 0, DEFAULT, -1);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
@@ -215,7 +215,7 @@ instance Babe6 (Npc_Default)
 // Color 3: nur eine Variante
 ///////////////////////////////////////////////////////
 
-instance Babe7 (Npc_Default)
+instance Babe7(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -226,7 +226,7 @@ instance Babe7 (Npc_Default)
 
 	voice = 19;
 	id = 110;
-	flags       = NPC_FLAG_IMMORTAL;
+	flags = NPC_FLAG_IMMORTAL;
 
 	//-------- abilities --------
 	attribute[ATR_STRENGTH] = 6;
@@ -238,12 +238,11 @@ instance Babe7 (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"Babe.MDS");
+	Mdl_SetVisual(self, "Babe.MDS");
 	//							Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Bab_body_Naked0", 0, 3, "Bab_Head_Hair1", 0, DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Bab_body_Naked0", 0, 3, "Bab_Head_Hair1", 0, DEFAULT, -1);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
 	//-------------Daily Routine-------------
 };
-

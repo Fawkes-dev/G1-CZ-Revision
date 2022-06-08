@@ -1,8 +1,8 @@
 /*************************************************************************
-** Undead Orc Warrior Prototype **
+** Undead Orc Warrior prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_UndeadOrcWarrior (C_Npc)
+prototype Mst_Default_UndeadOrcWarrior(C_Npc)
 {
 	name = "Temple Guard";
 	guild = GIL_UNDEADORC;
@@ -51,28 +51,29 @@ PROTOTYPE Mst_Default_UndeadOrcWarrior (C_Npc)
 
 	//aivar[AIV_MM_RestStart] = OnlyRoutine;
 };
+
 //-------------------------------------------------------------
 
 func void Set_UndeadOrcWarrior_Visuals()
 {
-	Mdl_SetVisual(self,"Orc.mds");
+	Mdl_SetVisual(self, "Orc.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"UOW_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "UOW_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Orc Warrior Undead    **
+** Orc Warrior Undead **
 *************************************************************************/
 
 // in den Instanz-Scripten bitte NUR die Werte eintragen, die vom Prototyp abweichen sollen!
 
-instance UndeadOrcWarrior (Mst_Default_UndeadOrcWarrior)
+instance UndeadOrcWarrior(Mst_Default_UndeadOrcWarrior)
 {
 	Set_UndeadOrcWarrior_Visuals();
-	EquipItem(self,ItMw2hOrcMace01);
+	EquipItem(self, ItMw2hOrcMace01);
 };
 
-instance UndeadOWH (Mst_Default_UndeadOrcWarrior)
+instance UndeadOWH(Mst_Default_UndeadOrcWarrior)
 {
 	name = "High Temple Guard";
 	level = 40;
@@ -87,5 +88,5 @@ instance UndeadOWH (Mst_Default_UndeadOrcWarrior)
 	protection [PROT_MAGIC] = 70; //120;
 
 	Set_UndeadOrcWarrior_Visuals();
-	EquipItem(self,ItMw2hOrcMace01);
+	EquipItem(self, ItMw2hOrcMace01);
 };

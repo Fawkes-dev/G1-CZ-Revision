@@ -1,4 +1,4 @@
-instance NOV_1323_Novize (Npc_Default)
+instance NOV_1323_Novize(Npc_Default)
 {
 	//-------- primary data --------
 	name = Name_Novize;
@@ -19,13 +19,13 @@ instance NOV_1323_Novize (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Relaxed.mds");
-	//			body mesh     ,bdytex,skin,head mesh     ,headtex,teethtex,ruestung
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 1, 1,"Hum_Head_Bald", 34,  2, NOV_ARMOR_L);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Relaxed.mds");
+	//			body mesh ,bdytex,skin,head mesh ,headtex,teethtex,ruestung
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 1, 1, "Hum_Head_Bald", 34, 2, NOV_ARMOR_L);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,-1);
+	Mdl_SetModelFatness(self, -1);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
@@ -33,16 +33,16 @@ instance NOV_1323_Novize (Npc_Default)
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1H_Hatchet_01);
+	EquipItem(self, ItMw_1H_Hatchet_01);
 	//CreateInvItem(self,ItFoSoup);
 
-	EquipItem(self,ItMiLute);
+	EquipItem(self, ItMiLute);
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_Start_1323;
 };
 
 func void Rtn_Start_1323()
 {
-	TA_Sleep (01,00,08,00,"PSI_29_HUT_IN");
-	TA_SitCampfire (08,00,01,00,"PSI_PATH_4_CAMPFIRE_A");
+	TA_Sleep(01, 00, 08, 00, "PSI_29_HUT_IN");
+	TA_SitCampfire(08, 00, 01, 00, "PSI_PATH_4_CAMPFIRE_A");
 };

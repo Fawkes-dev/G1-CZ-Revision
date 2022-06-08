@@ -1,4 +1,4 @@
-instance SFB_1040_Schuerfer (Npc_Default)
+instance SFB_1040_Schuerfer(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -22,13 +22,13 @@ instance SFB_1040_Schuerfer (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Tired.mds");
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Tired.mds");
 	//				body mesh, head mesh, hairmesh, face-tex, hair-tex, skin
-	Mdl_SetVisualBody(self,"hum_body_Naked0",2,1,"Hum_Head_Pony", 43,  3,SFB_ARMOR_L);
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 2, 1, "Hum_Head_Pony", 43, 3, SFB_ARMOR_L);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
@@ -36,11 +36,11 @@ instance SFB_1040_Schuerfer (Npc_Default)
 
 	//-------- inventory --------
 
-	CreateInvItems(self,ItFoRice,2);
-	CreateInvItems(self,ItMiNugget, 6);
-	CreateInvItem(self,ItMi_Stuff_Plate_01);
-	EquipItem(self,ItMwPickaxe);
-	CreateInvItem(self,ItMw_1H_Sword_Short_01);
+	CreateInvItems(self, ItFoRice, 2);
+	CreateInvItems(self, ItMiNugget, 6);
+	CreateInvItem(self, ItMi_Stuff_Plate_01);
+	EquipItem(self, ItMwPickaxe);
+	CreateInvItem(self, ItMw_1H_Sword_Short_01);
 
 	//-------------Daily Routine-------------
 
@@ -51,7 +51,6 @@ instance SFB_1040_Schuerfer (Npc_Default)
 
 func void Rtn_FMCstart_1040()
 {
-	TA_SitAround (01,00,13,00, "FMC_HUT01_OUT");
-	TA_SitAround (13,00,01,00, "FMC_HUT01_OUT");
+	TA_SitAround(01, 00, 13, 00, "FMC_HUT01_OUT");
+	TA_SitAround(13, 00, 01, 00, "FMC_HUT01_OUT");
 };
-

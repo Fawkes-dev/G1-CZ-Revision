@@ -1,12 +1,12 @@
 /*************************************************************************
-** Orc SHAMAN Prototype **
+** Orc SHAMAN prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_OrcShaman(C_Npc)
+prototype Mst_Default_OrcShaman(C_Npc)
 {
 	name = "Orc Shaman";
 	guild = GIL_ORCSHAMAN;
-	npctype = NPCTYPE_GUARD;
+	npctype = NpcType_Guard;
 	level = 50;
 //----------------------------------------------------------
 	attribute [ATR_STRENGTH] = 100;
@@ -52,23 +52,23 @@ PROTOTYPE Mst_Default_OrcShaman(C_Npc)
 
 	aivar[AIV_MM_RestStart] = OnlyRoutine;
 };
+
 //-------------------------------------------------------------
 func void Set_OrcShaman_Visuals()
 {
-	Mdl_SetVisual(self,"Orc.mds");
-	Mdl_ApplyOverlayMds(self,"Orc_Shaman.mds");
+	Mdl_SetVisual(self, "Orc.mds");
+	Mdl_ApplyOverlayMDS(self, "Orc_Shaman.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Orc_BodyShaman",DEFAULT, DEFAULT, "Orc_HeadShaman", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Orc_BodyShaman", DEFAULT, DEFAULT, "Orc_HeadShaman", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Orc Shaman    **
+** Orc Shaman **
 *************************************************************************/
 
-instance OrcShaman (Mst_Default_OrcShaman)
+instance OrcShaman(Mst_Default_OrcShaman)
 {
 	Set_OrcShaman_Visuals();
-	CreateInvItem(self,ItArRuneFireball);
-	EquipItem(self,ItRwOrcstaff); // für Magiemodus
-
+	CreateInvItem(self, ItArRuneFireball);
+	EquipItem(self, ItRwOrcstaff); // für Magiemodus
 };

@@ -1,4 +1,4 @@
-instance TPL_1415_Templer (Npc_Default)
+instance TPL_1415_Templer(Npc_Default)
 {
 	//-------- primary data --------
 	name = Name_Templer;
@@ -19,25 +19,25 @@ instance TPL_1415_Templer (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Militia.mds");
-	//			Body-Mesh Body-Tex  Skin-Color Head-MMS    Head-Tex Teeth-Tex Armor-Tex
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 0, 1 ,"Hum_Head_Bald", 59 ,  1, TPL_ARMOR_M);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Militia.mds");
+	//			Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex Armor-Tex
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 0, 1, "Hum_Head_Bald", 59, 1, TPL_ARMOR_M);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,-1);
+	Mdl_SetModelFatness(self, -1);
 
 	fight_tactic = FAI_HUMAN_STRONG;
 
 	//-------- Talente --------
 
-	Npc_SetTalentSkill(self,NPC_TALENT_2H,1);
+	Npc_SetTalentSkill(self, NPC_TALENT_2H, 1);
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_2H_Sword_Light_02);
-	CreateInvItem(self,ItFoSoup);
-	CreateInvItem(self,ItMiJoint_1);
+	EquipItem(self, ItMw_2H_Sword_Light_02);
+	CreateInvItem(self, ItFoSoup);
+	CreateInvItem(self, ItMiJoint_1);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_1415;
@@ -45,7 +45,6 @@ instance TPL_1415_Templer (Npc_Default)
 
 func void Rtn_start_1415()
 {
-	TA_Guard (08,00,20,00,"PSI_GATE_GUARD_1");
-	TA_Guard (20,00,08,00,"PSI_GATE_GUARD_1");
+	TA_Guard(08, 00, 20, 00, "PSI_GATE_GUARD_1");
+	TA_Guard(20, 00, 08, 00, "PSI_GATE_GUARD_1");
 };
-

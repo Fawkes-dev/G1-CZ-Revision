@@ -1,9 +1,9 @@
-func void B_SpreadAndMemorize(VAR INT newsid, VAR INT source )
+func void B_SpreadAndMemorize(var int newsid, var int source)
 {
 	B_AssessAndMemorize(newsid,
-						source,
-						self,/*witness*/
-						other,/*offender*/
-						victim /*victim*/
-						);
+	source,
+	self, /*witness*/
+	other, /*offender*/
+	victim /*victim*/
+	);
 };

@@ -1,8 +1,8 @@
 /*************************************************************************
-** Shadowbeast Prototype **
+** Shadowbeast prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_Shadowbeast(C_Npc)
+prototype Mst_Default_Shadowbeast(C_Npc)
 {
 	name = "Shadowbeast";
 	guild = GIL_SHADOWBEAST;
@@ -52,21 +52,22 @@ PROTOTYPE Mst_Default_Shadowbeast(C_Npc)
 
 	aivar[AIV_MM_RoamStart] = OnlyRoutine;
 };
+
 //-------------------------------------------------------------
 func void Set_Shadowbeast_Visuals()
 {
-	Mdl_SetVisual(self,"Shadow.mds");
+	Mdl_SetVisual(self, "Shadow.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Sha_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Sha_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Shadowbeast    **
+** Shadowbeast **
 *************************************************************************/
 
-instance Shadowbeast (Mst_Default_Shadowbeast)
+instance Shadowbeast(Mst_Default_Shadowbeast)
 {
 	Set_Shadowbeast_Visuals();
 	Npc_SetToFistMode(self);
-	CreateInvItems(self,ItFoMuttonRaw,4);
+	CreateInvItems(self, ItFoMuttonRaw, 4);
 };

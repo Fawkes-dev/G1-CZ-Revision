@@ -1,4 +1,4 @@
-instance VLK_502_Buddler (Npc_Default)
+instance VLK_502_Buddler(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -21,15 +21,15 @@ instance VLK_502_Buddler (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Tired.mds");
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Tired.mds");
 	//				body mesh, head mesh, hairmesh, face-tex, hair-tex, skin
-	Mdl_SetVisualBody(self,"hum_body_Naked0",3,1,"Hum_Head_Pony", 68,  4, VLK_ARMOR_L);
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 3, 1, "Hum_Head_Pony", 68, 4, VLK_ARMOR_L);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,-1);
+	Mdl_SetModelFatness(self, -1);
 
-		self.aivar[AIV_IMPORTANT] = TRUE;
+	self.aivar[AIV_IMPORTANT] = TRUE;
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
@@ -37,9 +37,9 @@ instance VLK_502_Buddler (Npc_Default)
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1h_Club_01);
-	CreateInvItem(self,ItMiLute);
-	CreateInvItem(self,Itfo_Potion_Water_01);
+	EquipItem(self, ItMw_1h_Club_01);
+	CreateInvItem(self, ItMiLute);
+	CreateInvItem(self, Itfo_Potion_Water_01);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_502;
@@ -47,8 +47,7 @@ instance VLK_502_Buddler (Npc_Default)
 
 func void Rtn_start_502()
 {
-	TA_Sleep (22,00,07,00,"OCR_HUT_10");
-	TA_Cook (07,00,17,00,"OCR_COOK_AT_HUT_10");
-	TA_PlayTune (17,00,22,00,"OCR_OUTSIDE_HUT_10");
+	TA_Sleep(22, 00, 07, 00, "OCR_HUT_10");
+	TA_Cook(07, 00, 17, 00, "OCR_COOK_AT_HUT_10");
+	TA_PlayTune(17, 00, 22, 00, "OCR_OUTSIDE_HUT_10");
 };
-

@@ -23,7 +23,7 @@ func int NOV_1319_Novize_CALLSLEEPER_Condition()
 	&& (!Npc_KnowsInfo(hero,Tpl_1430_Templer_CALLSLEEPER))
 	&& (Npc_GetDisttoWP (Kalom,"PSI_TEMPLE_STAIRS_RIGHT") < 300))
 	{
-		return 1;;
+		return 1;
 	};
 
 	return 0;

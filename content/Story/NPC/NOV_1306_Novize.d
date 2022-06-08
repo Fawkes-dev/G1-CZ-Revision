@@ -1,4 +1,4 @@
-instance NOV_1306_Novize (Npc_Default)
+instance NOV_1306_Novize(Npc_Default)
 {
 	//-------- primary data --------
 	name = Name_Novize;
@@ -19,13 +19,13 @@ instance NOV_1306_Novize (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Mage.mds");
-	//			body mesh     ,bdytex,skin,head mesh     ,headtex,teethtex,ruestung
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 1 , 1 ,"Hum_Head_Bald", 23, 3, NOV_ARMOR_M);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Mage.mds");
+	//			body mesh ,bdytex,skin,head mesh ,headtex,teethtex,ruestung
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 1, 1, "Hum_Head_Bald", 23, 3, NOV_ARMOR_M);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
@@ -33,7 +33,7 @@ instance NOV_1306_Novize (Npc_Default)
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1H_Axe_Old_01);
+	EquipItem(self, ItMw_1H_Axe_Old_01);
 	//CreateInvItem(self,ItFoSoup);
 	//CreateInvItem(self,ItMiJoint);
 
@@ -43,7 +43,6 @@ instance NOV_1306_Novize (Npc_Default)
 
 func void Rtn_start_1306()
 {
-	TA_SitCampfire (08,00,01,00,"PSI_PATH_1_3");
-	TA_Sleep (01,00,08,00,"PSI_1_HUT_IN");
+	TA_SitCampfire(08, 00, 01, 00, "PSI_PATH_1_3");
+	TA_Sleep(01, 00, 08, 00, "PSI_1_HUT_IN");
 };
-

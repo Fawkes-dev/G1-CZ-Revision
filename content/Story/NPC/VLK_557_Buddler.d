@@ -1,4 +1,4 @@
-instance VLK_557_Buddler (Npc_Default)
+instance VLK_557_Buddler(Npc_Default)
 {
 	//-------- primary data --------
 
@@ -21,12 +21,12 @@ instance VLK_557_Buddler (Npc_Default)
 
 	//-------- visuals --------
 	// 				animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
+	Mdl_SetVisual(self, "HUMANS.MDS");
 	//				body mesh, head mesh, hairmesh, face-tex, hair-tex, skin
-	Mdl_SetVisualBody(self,"hum_body_Naked0",2,1,"Hum_Head_FatBald", 71,  1,VLK_ARMOR_L);
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 2, 1, "Hum_Head_FatBald", 71, 1, VLK_ARMOR_L);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
@@ -34,11 +34,11 @@ instance VLK_557_Buddler (Npc_Default)
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1h_Nailmace_01);
-	CreateInvItem(self,ItMwPickaxe);
+	EquipItem(self, ItMw_1h_Nailmace_01);
+	CreateInvItem(self, ItMwPickaxe);
 
-	CreateInvItem(self,ItFoBeer);
-	CreateInvItem(self,ItLsTorch);
+	CreateInvItem(self, ItFoBeer);
+	CreateInvItem(self, ItLsTorch);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_557;
@@ -46,13 +46,12 @@ instance VLK_557_Buddler (Npc_Default)
 
 func void Rtn_start_557()
 {
-	TA_Sleep (23,15,06,30,"OCR_HUT_75");
-	TA_WashSelf (06,30,07,06,"OCR_LAKE_4");
-	TA_StandAround (07,06,12,00,"OCR_OUTSIDE_HUT_77_MOVEMENT2");
-	TA_SitAround (12,00,13,00,"OCR_OUTSIDE_HUT_75");
-	TA_Cook (13,00,14,00,"OCR_OUTSIDE_HUT_75");
-	TA_StandAround (14,00,16,00,"OCR_OUTSIDE_HUT_77_MOVEMENT2");
-	TA_SitAround (16,00,17,55,"OCR_OUTSIDE_HUT_75");
-	TA_SitCampfire (17,55,23,15,"OCR_OUTSIDE_HUT_77_MOVEMENT2");
+	TA_Sleep(23, 15, 06, 30, "OCR_HUT_75");
+	TA_WashSelf(06, 30, 07, 06, "OCR_LAKE_4");
+	TA_StandAround(07, 06, 12, 00, "OCR_OUTSIDE_HUT_77_MOVEMENT2");
+	TA_SitAround(12, 00, 13, 00, "OCR_OUTSIDE_HUT_75");
+	TA_Cook(13, 00, 14, 00, "OCR_OUTSIDE_HUT_75");
+	TA_StandAround(14, 00, 16, 00, "OCR_OUTSIDE_HUT_77_MOVEMENT2");
+	TA_SitAround(16, 00, 17, 55, "OCR_OUTSIDE_HUT_75");
+	TA_SitCampfire(17, 55, 23, 15, "OCR_OUTSIDE_HUT_77_MOVEMENT2");
 };
-

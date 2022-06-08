@@ -1,8 +1,8 @@
-instance Stt_318_Schatten (Npc_Default)
+instance Stt_318_Schatten(Npc_Default)
 {
 	//-------- primary data --------
 	name = NAME_Schatten;
-	npctype = NPCTYPE_AMBIENT ;
+	npctype = NPCTYPE_AMBIENT;
 	guild = GIL_STT;
 	level = 7;
 
@@ -19,28 +19,28 @@ instance Stt_318_Schatten (Npc_Default)
 
 	//-------- visuals --------
 	// 			animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Relaxed.mds");
-	//			body mesh     ,bdytex,skin,head mesh     57,headtex,teethtex,ruestung
-	Mdl_SetVisualBody(self,"hum_body_Naked0", 0, 1,"Hum_Head_Psionic",108 ,  1, STT_ARMOR_M);
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Relaxed.mds");
+	//			body mesh ,bdytex,skin,head mesh 57,headtex,teethtex,ruestung
+	Mdl_SetVisualBody(self, "hum_body_Naked0", 0, 1, "Hum_Head_Psionic", 108, 1, STT_ARMOR_M);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+	Mdl_SetModelFatness(self, 0);
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
 	//-------- Talente --------
 
 	////Npc_SetTalentSkill(self,NPC_TALENT_BOW,1);
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,1);
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 1);
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1H_Sword_Short_04);
-	EquipItem(self,ItRw_Bow_Small_01);
-	CreateInvItems(self,ItAmArrow, 20);
-	CreateInvItem(self,ItKeLockpick);
-	CreateInvItem(self,ItFo_Potion_Water_01);
+	EquipItem(self, ItMw_1H_Sword_Short_04);
+	EquipItem(self, ItRw_Bow_Small_01);
+	CreateInvItems(self, ItAmArrow, 20);
+	CreateInvItem(self, ItKeLockpick);
+	CreateInvItem(self, ItFo_Potion_Water_01);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_318;
@@ -48,12 +48,11 @@ instance Stt_318_Schatten (Npc_Default)
 
 func void Rtn_start_318()
 {
-	TA_Sleep (23,00,07,00,"OCR_HUT_60");
-	TA_Boss (07,00,07,30,"OCR_OUTSIDE_HUT_60");
-	TA_StandAround (07,30,15,00,"OCR_CAMPFIRE_F_1");
+	TA_Sleep(23, 00, 07, 00, "OCR_HUT_60");
+	TA_Boss(07, 00, 07, 30, "OCR_OUTSIDE_HUT_60");
+	TA_StandAround(07, 30, 15, 00, "OCR_CAMPFIRE_F_1");
 	//[BugFix]: incomplete daily routine
 	//TA_RepairHut (15,00,17,00,"OCR_OUTSIDE_HUT_60");
-	TA_RepairHut (15,00,17,25,"OCR_OUTSIDE_HUT_60");
-	TA_StandAround (17,25,23,00,"OCR_CAMPFIRE_F_2");
+	TA_RepairHut(15, 00, 17, 25, "OCR_OUTSIDE_HUT_60");
+	TA_StandAround(17, 25, 23, 00, "OCR_CAMPFIRE_F_2");
 };
-

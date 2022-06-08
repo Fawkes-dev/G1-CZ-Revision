@@ -49,7 +49,7 @@ const int ID_RAZOR = 10;
 const int ID_LURKER = 11;
 const int ID_SWAMPSHARK = 12;
 const int ID_MINECRAWLER = 13;
-const int ID_MINECRAWLERWARRIOR= 14;
+const int ID_MINECRAWLERWARRIOR = 14;
 const int ID_BLOODFLY = 15;
 const int ID_BLACKGOBBO = 16;
 const int ID_GOBBO = 17;
@@ -72,12 +72,11 @@ const int ID_ICEGOLEM = 33;
 const int ID_MEATBUG = 34;
 const int ID_ZOMBIE = 35;
 // ----------------------------------------
-const int AIV_MM_PARTYMEMBER = 23; // SN:  (begleitet den Spieler - für XP-Vergabe)
-const int AIV_MM_DEATHINVGIVEN = 24; // SN:  da ZS_Dead auch nach jedem Load Game ausgeführt wird!
+const int AIV_MM_PARTYMEMBER = 23; // SN: (begleitet den Spieler - für XP-Vergabe)
+const int AIV_MM_DEATHINVGIVEN = 24; // SN: da ZS_Dead auch nach jedem Load Game ausgeführt wird!
 
 // IDs für Sezial-Monster
 const int MID_CANYONTROLL = 5000;
 const int MID_THEKEEPER = 5001;
 const int MID_DAMLURKER = 5002;
 const int MID_YOUNGTROLL = 5003;
-

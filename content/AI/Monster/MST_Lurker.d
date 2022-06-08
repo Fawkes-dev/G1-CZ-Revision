@@ -1,8 +1,8 @@
 /*************************************************************************
-** Lurker Prototype **
+** Lurker prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_Lurker(C_Npc)
+prototype Mst_Default_Lurker(C_Npc)
 {
 	name = "Lurker";
 	guild = GIL_LURKER;
@@ -51,19 +51,20 @@ PROTOTYPE Mst_Default_Lurker(C_Npc)
 
 	aivar[AIV_MM_RoamStart] = OnlyRoutine;
 };
+
 //---------------------------------------------------
 func void Set_Lurker_Visuals()
 {
-	Mdl_SetVisual(self,"Lurker.mds");
+	Mdl_SetVisual(self, "Lurker.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Lur_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Lur_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Lurker    **
+** Lurker **
 *************************************************************************/
 
-instance Lurker (Mst_Default_Lurker)
+instance Lurker(Mst_Default_Lurker)
 {
 	Set_Lurker_Visuals();
 	Npc_SetToFistMode(self);
@@ -80,7 +81,7 @@ instance DamLurker(Mst_Default_Lurker)
 	level = 20;
 
 	Set_Lurker_Visuals();
-	Npc_SetToFistMode (self);
+	Npc_SetToFistMode(self);
 
-	CreateInvItem(self,ItAt_DamLurker_01);
+	CreateInvItem(self, ItAt_DamLurker_01);
 };

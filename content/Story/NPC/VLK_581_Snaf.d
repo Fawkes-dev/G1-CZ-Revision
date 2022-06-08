@@ -1,4 +1,4 @@
-instance VLK_581_Snaf (Npc_Default)
+instance VLK_581_Snaf(Npc_Default)
 {
 	//-------- primary data --------
 	name = "Snaf";
@@ -19,26 +19,26 @@ instance VLK_581_Snaf (Npc_Default)
 
 	//-------- visuals --------
 	// 			animations
-	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_ApplyOverlayMds(self,"Humans_Relaxed.mds");
+	Mdl_SetVisual(self, "HUMANS.MDS");
+	Mdl_ApplyOverlayMDS(self, "Humans_Relaxed.mds");
 	//							Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Hum_Body_CookSmith", 0, 1, "Hum_Head_Fighter", 81, 1, -1);
+	Mdl_SetVisualBody(self, "Hum_Body_CookSmith", 0, 1, "Hum_Head_Fighter", 81, 1, -1);
 
 	B_Scale(self);
-	Mdl_SetModelFatness(self,2);
+	Mdl_SetModelFatness(self, 2);
 
-		self.aivar[AIV_IMPORTANT] = TRUE;
+	self.aivar[AIV_IMPORTANT] = TRUE;
 
 	fight_tactic = FAI_HUMAN_COWARD;
 
 	//-------- Talente --------
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,1);
-	Npc_SetTalentSkill(self,NPC_TALENT_SNEAK,1);
+	Npc_SetTalentSkill(self, NPC_TALENT_1H, 1);
+	Npc_SetTalentSkill(self, NPC_TALENT_SNEAK, 1);
 
 	//-------- inventory --------
 
-	EquipItem(self,ItMw_1H_Mace_Light_01);
-	CreateInvItem(self,ItMi_Stuff_Cup_01);
+	EquipItem(self, ItMw_1H_Mace_Light_01);
+	CreateInvItem(self, ItMi_Stuff_Cup_01);
 
 	//-------------Daily Routine-------------
 	daily_routine = Rtn_start_581;
@@ -46,7 +46,6 @@ instance VLK_581_Snaf (Npc_Default)
 
 func void Rtn_start_581()
 {
-	TA_Cook (08,00,22,00,"OCR_CAULDRON_2");
-	TA_Sleep (22,00,08,00,"OCR_HUT_14");
+	TA_Cook(08, 00, 22, 00, "OCR_CAULDRON_2");
+	TA_Sleep(22, 00, 08, 00, "OCR_HUT_14");
 };
-

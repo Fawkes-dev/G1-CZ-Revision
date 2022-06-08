@@ -1,9 +1,9 @@
 /*************************************************************************
- *  G_PrintScreen
+ * G_PrintScreen
  *************************************************************************
  * PRCONDITIONS: NONE
  *************************************************************************/
-func void G_PrintScreen(var string strMessage  )
+func void G_PrintScreen(var string strMessage)
 {
 	//
 	//	PRINT TO SCREEN

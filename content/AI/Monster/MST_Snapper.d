@@ -1,8 +1,8 @@
 /*************************************************************************
-** Snapper Prototype **
+** Snapper prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_Snapper(C_Npc)
+prototype Mst_Default_Snapper(C_Npc)
 {
 	name = "Snapper";
 	guild = GIL_SNAPPER;
@@ -51,21 +51,21 @@ PROTOTYPE Mst_Default_Snapper(C_Npc)
 
 	aivar[AIV_MM_RestStart] = OnlyRoutine;
 };
+
 //---------------------------------------------------------
 func void Set_Snapper_Visuals()
 {
-	Mdl_SetVisual(self,"Snapper.mds");
+	Mdl_SetVisual(self, "Snapper.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Sna_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Sna_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Snapper    **
+** Snapper **
 *************************************************************************/
 
-instance Snapper (Mst_Default_Snapper)
+instance Snapper(Mst_Default_Snapper)
 {
 	Set_Snapper_Visuals();
 	Npc_SetToFistMode(self);
-
 };

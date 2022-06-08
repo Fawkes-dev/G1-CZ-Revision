@@ -1,8 +1,8 @@
 /*************************************************************************
-** Bloodfly Prototype **
+** Bloodfly prototype **
 *************************************************************************/
 
-PROTOTYPE Mst_Default_Bloodfly(C_Npc)
+prototype Mst_Default_Bloodfly(C_Npc)
 {
 	name = "Bloodfly";
 	guild = GIL_BLOODFLY;
@@ -51,36 +51,37 @@ PROTOTYPE Mst_Default_Bloodfly(C_Npc)
 
 	aivar[AIV_MM_WuselStart] = OnlyRoutine;
 };
+
 //---------------------------------------------------------------
 func void Set_Bloodfly_Visuals()
 {
-	Mdl_SetVisual(self,"Bloodfly.mds");
+	Mdl_SetVisual(self, "Bloodfly.mds");
 	//								Body-Mesh Body-Tex Skin-Color Head-MMS Head-Tex Teeth-Tex ARMOR
-	Mdl_SetVisualBody(self,"Blo_Body", DEFAULT, DEFAULT, "", DEFAULT,  DEFAULT, -1);
+	Mdl_SetVisualBody(self, "Blo_Body", DEFAULT, DEFAULT, "", DEFAULT, DEFAULT, -1);
 };
 
 /*************************************************************************
-** Bloodfly    **
+** Bloodfly **
 *************************************************************************/
 
-instance Bloodfly (Mst_Default_Bloodfly)
+instance Bloodfly(Mst_Default_Bloodfly)
 {
 	Set_Bloodfly_Visuals();
 	Npc_SetToFistMode(self);
 
-	CreateInvItems(self,ItAt_Bloodfly_01, 2); // 2 Flügel
+	CreateInvItems(self, ItAt_Bloodfly_01, 2); // 2 Flügel
 };
 
 /*************************************************************************
 ** Bloodfly für Mission: Mis_1_Psi_HelpBrothers **
 *************************************************************************/
 
-instance HelpBrothers_Bloodfly (Mst_Default_Bloodfly)
+instance HelpBrothers_Bloodfly(Mst_Default_Bloodfly)
 {
 	Set_Bloodfly_Visuals();
 	Npc_SetToFistMode(self);
 
-	CreateInvItems(self,ItAt_Bloodfly_01, 2); // 2 Flügel
+	CreateInvItems(self, ItAt_Bloodfly_01, 2); // 2 Flügel
 
 	name = "Aggressive Bloodfly";
 };

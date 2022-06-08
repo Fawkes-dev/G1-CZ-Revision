@@ -52,10 +52,10 @@ const int Value_Steimwurzel = 20; const int Mana_Steinwurzel = 25;
 const int Value_Drachenwurzel = 23; const int Mana_Drachenwurzel = 30;
 
 /*******************************************************************************************
-** Essbares                                           **
+** Essbares **
 *******************************************************************************************/
 
-instance ItAt_Meatbug_01 (C_Item)
+instance ItAt_Meatbug_01(C_Item)
 {
 	name = "Bugmeat";
 
@@ -72,13 +72,12 @@ instance ItAt_Meatbug_01 (C_Item)
 	description = name;
 	TEXT[1] = NAME_Bonus_HP; COUNT[1] = HP_Bugmeat;
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Bugmeat;
-
 };
 
-	func void UseBugmeat()
-	{
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Bugmeat);
-	};
+func void UseBugmeat()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Bugmeat);
+};
 
 /******************************************************************************************/
 instance ItFoApple(C_Item)
@@ -100,10 +99,10 @@ instance ItFoApple(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Apfel;
 };
 
-	func void UseApple()
-	{
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Apfel);
-	};
+func void UseApple()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Apfel);
+};
 
 /******************************************************************************************/
 instance ItFo_wineberrys_01(C_Item)
@@ -116,7 +115,7 @@ instance ItFo_wineberrys_01(C_Item)
 	value = Value_Weintrauben;
 
 	visual = "ItFo_wineberrys_01.3ds";
-	on_state[0]         = Usewineberrys;
+	on_state[0] = Usewineberrys;
 	scemeName = "FOOD";
 
 	description = name;
@@ -124,10 +123,10 @@ instance ItFo_wineberrys_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Weintrauben;
 };
 
-	func void Usewineberrys()
-	{
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Weintrauben);
-	};
+func void Usewineberrys()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Weintrauben);
+};
 
 /******************************************************************************************/
 instance ItFoLoaf(C_Item)
@@ -146,16 +145,15 @@ instance ItFoLoaf(C_Item)
 	description = name;
 	TEXT[1] = NAME_Bonus_HP; COUNT[1] = HP_Brot;
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Brot;
-
 };
 
-	func void UseLoaf()
-	{
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Brot);
-	};
+func void UseLoaf()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Brot);
+};
 
 /******************************************************************************************/
-instance ItFoMutton (C_Item)
+instance ItFoMutton(C_Item)
 {
 	name = "Grilled meat";
 
@@ -173,13 +171,13 @@ instance ItFoMutton (C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Fleisch;
 };
 
-	func void UseMutton()
-	{
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Fleisch);
-	};
+func void UseMutton()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Fleisch);
+};
 
 /******************************************************************************************/
-instance ItFoMuttonRaw (C_Item)
+instance ItFoMuttonRaw(C_Item)
 {
 	name = "Raw Meat";
 
@@ -197,13 +195,13 @@ instance ItFoMuttonRaw (C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_FleischRoh;
 };
 
-	func void UseMuttonRaw()
-	{
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_FleischRoh);
-	};
+func void UseMuttonRaw()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_FleischRoh);
+};
 
 /******************************************************************************************/
-instance ItFo_mutton_01 (C_Item)
+instance ItFo_mutton_01(C_Item)
 {
 	name = "Ham";
 
@@ -219,13 +217,12 @@ instance ItFo_mutton_01 (C_Item)
 	description = name;
 	TEXT[1] = NAME_Bonus_HP; COUNT[1] = HP_Schinken;
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Schinken;
-
 };
 
-	func void UseMutton1()
-	{
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Schinken);
-	};
+func void UseMutton1()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Schinken);
+};
 
 /******************************************************************************************/
 instance ItFoCheese(C_Item)
@@ -246,10 +243,10 @@ instance ItFoCheese(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Käse;
 };
 
-	func void UseCheese()
-	{
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Käse);
-	};
+func void UseCheese()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Käse);
+};
 
 /******************************************************************************************/
 instance ItFoRice(C_Item)
@@ -270,10 +267,10 @@ instance ItFoRice(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Reis;
 };
 
-	func void UseRice()
-	{
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Reis);
-	};
+func void UseRice()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Reis);
+};
 
 /******************************************************************************************/
 instance ItFoSoup(C_Item)
@@ -294,10 +291,10 @@ instance ItFoSoup(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Wurzelsuppe;
 };
 
-	func void UseSoup()
-	{
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Wurzelsuppe);
-	};
+func void UseSoup()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Wurzelsuppe);
+};
 
 /******************************************************************************************/
 instance ItFoMeatbugragout(C_Item)
@@ -319,10 +316,10 @@ instance ItFoMeatbugragout(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Ragout;
 };
 
-	func void UseMeatbugragout()
-	{
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Ragout);
-	};
+func void UseMeatbugragout()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Ragout);
+};
 
 /******************************************************************************************/
 instance ItFoCrawlersoup(C_Item)
@@ -344,13 +341,13 @@ instance ItFoCrawlersoup(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_CrawlerSuppe;
 };
 
-	func void UseCrawlersoup()
-	{
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_CrawlerSuppe);
-	};
+func void UseCrawlersoup()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_CrawlerSuppe);
+};
 
 /*******************************************************************************************
-** Trinkbares                                           **
+** Trinkbares **
 *******************************************************************************************/
 
 /******************************************************************************************/
@@ -373,10 +370,10 @@ instance ItFo_Potion_Water_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Wasser;
 };
 
-	func void UseWaterPotion()
-	{
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Wasser);
-	};
+func void UseWaterPotion()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Wasser);
+};
 
 // FIXME: zs_Drunk für SC oder nicht?
 instance ItFoBeer(C_Item)
@@ -398,10 +395,10 @@ instance ItFoBeer(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Bier;
 };
 
-	func void UseBeer()
-	{
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Bier);
-	};
+func void UseBeer()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Bier);
+};
 
 /******************************************************************************************/
 
@@ -414,7 +411,7 @@ instance ItFoWine(C_Item)
 
 	value = Value_Wein;
 
-	visual  = "ItFo_Wine_01.3ds";
+	visual = "ItFo_Wine_01.3ds";
 	material = MAT_LEATHER;
 	on_state[0] = UseWine;
 	scemeName = "POTION";
@@ -424,10 +421,10 @@ instance ItFoWine(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Wein;
 };
 
-	func void UseWine()
-	{
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Wein);
-	};
+func void UseWine()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Wein);
+};
 
 /******************************************************************************************/
 
@@ -450,13 +447,13 @@ instance ItFoBooze(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Reisschnaps;
 };
 
-	func void UseBooze()
-	{
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Reisschnaps);
-	};
+func void UseBooze()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Reisschnaps);
+};
 
 //**************************************************************************************/
-//						PFLANZEN  PFLANZEN PFLANZEN
+//						PFLANZEN PFLANZEN PFLANZEN
 /******************************************************************************************/
 instance ItFo_Plants_Berrys_01(C_Item)
 {
@@ -477,11 +474,11 @@ instance ItFo_Plants_Berrys_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Waldbeeren;
 };
 
-		func void UseBerrys()
-		{
-			Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Waldbeeren);
-			PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse Beeren");
-		};
+func void UseBerrys()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Waldbeeren);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse Beeren");
+};
 
 /******************************************************************************************/
 instance ItFo_Plants_Flameberry_01(C_Item)
@@ -503,11 +500,11 @@ instance ItFo_Plants_Flameberry_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Flammendorn;
 };
 
-		func void Useflame()
-		{
-			Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Flammendorn);
-			PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse Flammendorn");
-		};
+func void Useflame()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Flammendorn);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse Flammendorn");
+};
 
 /******************************************************************************************/
 instance ItFo_Plants_Seraphis_01(C_Item)
@@ -529,11 +526,11 @@ instance ItFo_Plants_Seraphis_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Seraphis;
 };
 
-		func void Useseraphis()
-		{
-			Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Seraphis);
-			PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse Seraphis");
-		};
+func void Useseraphis()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Seraphis);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse Seraphis");
+};
 
 /******************************************************************************************/
 // Steigerung von Seraphis
@@ -557,11 +554,11 @@ instance ItFo_Plants_Velayis_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Velayis;
 };
 
-		func void UseVelayis()
-		{
-			Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Velayis);
-			PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse Velayis");
-		};
+func void UseVelayis()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Velayis);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse Velayis");
+};
 
 /******************************************************************************************/
 instance ItFo_Plants_mountainmoos_01(C_Item)
@@ -583,11 +580,11 @@ instance ItFo_Plants_mountainmoos_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Bergmoos;
 };
 
-		func void Usemoos()
-		{
-			Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Bergmoos);
-			PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse Moos");
-		};
+func void Usemoos()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Bergmoos);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse Moos");
+};
 
 /******************************************************************************************/
 instance ItFo_Plants_mountainmoos_02(C_Item)
@@ -609,11 +606,11 @@ instance ItFo_Plants_mountainmoos_02(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Grabmoos;
 };
 
-		func void Usemoos2()
-		{
-			Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Grabmoos);
-			PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse GrabMoos");
-		};
+func void Usemoos2()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Grabmoos);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse GrabMoos");
+};
 
 /******************************************************************************************/
 instance ItFo_Plants_Nightshadow_01(C_Item)
@@ -627,7 +624,7 @@ instance ItFo_Plants_Nightshadow_01(C_Item)
 
 	visual = "ItFo_Plants_Nightshadow_01.3ds";
 	material = MAT_WOOD;
-	on_state[0]         = Usenight;
+	on_state[0] = Usenight;
 	scemeName = "FOOD";
 
 	description = name;
@@ -635,11 +632,11 @@ instance ItFo_Plants_Nightshadow_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Nachtschatten;
 };
 
-		func void Usenight()
-		{
-			Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Nachtschatten);
-			PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse Nachtschatten");
-		};
+func void Usenight()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Nachtschatten);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse Nachtschatten");
+};
 
 /******************************************************************************************/
 instance ItFo_Plants_Nightshadow_02(C_Item)
@@ -653,7 +650,7 @@ instance ItFo_Plants_Nightshadow_02(C_Item)
 
 	visual = "ItFo_Plants_Nightshadow_01.3ds";
 	material = MAT_WOOD;
-	on_state[0]         = Usemoon;
+	on_state[0] = Usemoon;
 	scemeName = "FOOD";
 
 	description = name;
@@ -661,11 +658,11 @@ instance ItFo_Plants_Nightshadow_02(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Mondschatten;
 };
 
-		func void Usemoon()
-		{
-			Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Mondschatten);
-			PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse Mondschatten");
-		};
+func void Usemoon()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Mondschatten);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse Mondschatten");
+};
 
 /******************************************************************************************/
 instance ItFo_Plants_OrcHerb_01(C_Item)
@@ -687,11 +684,11 @@ instance ItFo_Plants_OrcHerb_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Orkblatt;
 };
 
-		func void Useorc()
-		{
-			Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Orkblatt);
-			PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse orkblatt");
-		};
+func void Useorc()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Orkblatt);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse orkblatt");
+};
 
 /******************************************************************************************/
 instance ItFo_Plants_OrcHerb_02(C_Item)
@@ -713,11 +710,11 @@ instance ItFo_Plants_OrcHerb_02(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Eichenblatt;
 };
 
-		func void Useorc2()
-		{
-			Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Eichenblatt);
-			PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse Eichenblatt");
-		};
+func void Useorc2()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Eichenblatt);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse Eichenblatt");
+};
 
 /*****************************************************************************************/
 //								PILZE
@@ -741,11 +738,11 @@ instance ItFo_Plants_mushroom_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Höllenpilz;
 };
 
-		func void Usemush()
-		{
-			Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Höllenpilz);
-			PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse Höllenpilz");
-		};
+func void Usemush()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Höllenpilz);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse Höllenpilz");
+};
 
 /*****************************************************************************************/
 instance ItFo_Plants_mushroom_02(C_Item)
@@ -767,11 +764,11 @@ instance ItFo_Plants_mushroom_02(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Sklavenbrot;
 };
 
-		func void Usemush2()
-		{
-			Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Sklavenbrot);
-			PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse Sklavenbrot");
-		};
+func void Usemush2()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Sklavenbrot);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse Sklavenbrot");
+};
 
 /*****************************************************************************************/
 //								HEILKRÄUTER
@@ -795,11 +792,11 @@ instance ItFo_Plants_Herb_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Heilkräuter1;
 };
 
-	func void UsePlants1()
-	{
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Heilkräuter1);
-		PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse Heilkräuter");
-	};
+func void UsePlants1()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Heilkräuter1);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse Heilkräuter");
+};
 
 /******************************************************************************************/
 instance ItFo_Plants_Herb_02(C_Item)
@@ -821,11 +818,11 @@ instance ItFo_Plants_Herb_02(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Heilkräuter2;
 };
 
-		func void UsePlants2()
-		{
-		Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Heilkräuter2);
-		PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse Heilpflanzen");
-	};
+func void UsePlants2()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Heilkräuter2);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse Heilpflanzen");
+};
 
 /******************************************************************************************/
 instance ItFo_Plants_Herb_03(C_Item)
@@ -847,16 +844,16 @@ instance ItFo_Plants_Herb_03(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Heilkräuter3;
 };
 
-	func void UsePlants3()
-	{
-			Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Heilkräuter3);
-			PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse Heilpflanzen");
-	};
+func void UsePlants3()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Heilkräuter3);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse Heilpflanzen");
+};
 
 /*****************************************************************************************/
 //							MANAREG. PFLANZEN
 /*****************************************************************************************/
-instance ItFo_Plants_Bloodwood_01 (C_ITEM)
+instance ItFo_Plants_Bloodwood_01(C_ITEM)
 {
 	name = "Copper Beech Seed";
 
@@ -875,14 +872,14 @@ instance ItFo_Plants_Bloodwood_01 (C_ITEM)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Blutbuche;
 };
 
-		func void Useblood()
-		{
-			Npc_ChangeAttribute(self,ATR_MANA, Mana_Blutbuche);
-			PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse Blutbuchensamen");
-		};
+func void Useblood()
+{
+	Npc_ChangeAttribute(self, ATR_MANA, Mana_Blutbuche);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse Blutbuchensamen");
+};
 
 /******************************************************************************************/
-instance ItFo_Plants_Towerwood_01 (C_ITEM)
+instance ItFo_Plants_Towerwood_01(C_ITEM)
 {
 	name = "Tower Oak Seed";
 
@@ -901,11 +898,11 @@ instance ItFo_Plants_Towerwood_01 (C_ITEM)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Turmeiche;
 };
 
-		func void Useblood2()
-		{
-			Npc_ChangeAttribute(self,ATR_MANA, Mana_Turmeiche);
-			PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse Turmeichensamen");
-		};
+func void Useblood2()
+{
+	Npc_ChangeAttribute(self, ATR_MANA, Mana_Turmeiche);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse Turmeichensamen");
+};
 
 /******************************************************************************************/
 instance ItFo_Plants_RavenHerb_01(C_Item)
@@ -927,11 +924,11 @@ instance ItFo_Plants_RavenHerb_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Rabenkraut;
 };
 
-		func void Useraven()
-		{
-			Npc_ChangeAttribute(self,ATR_MANA, Mana_Rabenkraut);
-			PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse Rabenkraut");
-		};
+func void Useraven()
+{
+	Npc_ChangeAttribute(self, ATR_MANA, Mana_Rabenkraut);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse Rabenkraut");
+};
 
 /******************************************************************************************/
 instance ItFo_Plants_RavenHerb_02(C_Item)
@@ -953,11 +950,11 @@ instance ItFo_Plants_RavenHerb_02(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Dunkelkraut;
 };
 
-		func void Useraven2()
-		{
-			Npc_ChangeAttribute(self,ATR_MANA, Mana_Dunkelkraut);
-			PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse Dunkelkraut");
-		};
+func void Useraven2()
+{
+	Npc_ChangeAttribute(self, ATR_MANA, Mana_Dunkelkraut);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse Dunkelkraut");
+};
 
 /******************************************************************************************/
 instance ItFo_Plants_Stoneroot_01(C_Item)
@@ -979,11 +976,11 @@ instance ItFo_Plants_Stoneroot_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Steimwurzel;
 };
 
-		func void Useroot()
-		{
-			Npc_ChangeAttribute(self,ATR_MANA, Mana_Steinwurzel);
-			PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse Steinwurzel");
-		};
+func void Useroot()
+{
+	Npc_ChangeAttribute(self, ATR_MANA, Mana_Steinwurzel);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse Steinwurzel");
+};
 
 /******************************************************************************************/
 instance ItFo_Plants_Stoneroot_02(C_Item)
@@ -1005,11 +1002,11 @@ instance ItFo_Plants_Stoneroot_02(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Drachenwurzel;
 };
 
-		func void Useroot2()
-		{
-			Npc_ChangeAttribute(self,ATR_MANA, Mana_Drachenwurzel);
-			PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse Drachenwurzel");
-		};
+func void Useroot2()
+{
+	Npc_ChangeAttribute(self, ATR_MANA, Mana_Drachenwurzel);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse Drachenwurzel");
+};
 
 /******************************************************************************************/
 //								GIFTPFLANZEN
@@ -1033,8 +1030,8 @@ instance ItFo_Plants_Trollberrys_01(C_Item)
 	TEXT[5] = NAME_Value; COUNT[5] = Value_Trollkirsche;
 };
 
-		func void UseTrollberrys()
-		{
-			Npc_ChangeAttribute(self,ATR_HITPOINTS, HP_Trollkirsche);
-			PrintDebugNpc (PD_ITEM_MOBSI, "Ich esse Trollkirschen");
-		};
+func void UseTrollberrys()
+{
+	Npc_ChangeAttribute(self, ATR_HITPOINTS, HP_Trollkirsche);
+	PrintDebugNpc(PD_ITEM_MOBSI, "Ich esse Trollkirschen");
+};

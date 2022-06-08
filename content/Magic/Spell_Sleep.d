@@ -5,15 +5,15 @@
 // SPL_SENDSTOP = 3; // Beende Zauber ohne Effekt
 // SPL_NEXTLEVEL = 4; // setze den Spruch auf den nächsten Level
 
-func int Spell_Logic_Sleep (var int manaInvested)
+func int Spell_Logic_Sleep(var int manaInvested)
 {
-	PrintDebugNpc (PD_MAGIC, "Spell_Logic_Sleep");
+	PrintDebugNpc(PD_MAGIC, "Spell_Logic_Sleep");
 
 	if (C_NpcIsHuman(other))
 	{
 		if (manaInvested >= SPL_SENDCAST_SLEEP)
 		{
-			AI_StartState(other,ZS_MagicSleep, 0, "");
+			AI_StartState(other, ZS_MagicSleep, 0, "");
 
 			return SPL_SENDCAST;
 		};
@@ -24,6 +24,4 @@ func int Spell_Logic_Sleep (var int manaInvested)
 	{
 		return SPL_DONTINVEST;
 	};
-
 };
-
